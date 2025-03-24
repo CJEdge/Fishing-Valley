@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Fish : MonoBehaviour
@@ -32,11 +33,26 @@ public class Fish : MonoBehaviour
     [SerializeField]
     private string fishName;
 
-    [SerializeField]
+	[SerializeField]
+	private bool isStrafer;
+
+	[SerializeField]
     private float fishSpeed;
 
     [SerializeField]
     private float strafeFrequency;
+
+	[SerializeField]
+	private float centreThreshold;
+
+	[SerializeField]
+	private float reelSpeed;
+
+	[SerializeField]
+	private float swimAwaySpeed;
+
+	[SerializeField]
+	private List<GameObject> reelAudioSources;
 
     [SerializeField]
     private Rigidbody rb;
@@ -56,12 +72,44 @@ public class Fish : MonoBehaviour
         set;
     }
 
-    #endregion
+	private bool IsCentred {
+		get {
+			if (transform.position.x > -centreThreshold && transform.position.x < centreThreshold) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+	}
+
+	private InputController InputController {
+		get {
+			return GameManager.Instance.InputController;
+		}
+	}
+
+	#endregion
 
 
-    #region Mono Behaviours
+	#region Mono Behaviours
 
-    public void Update() {
+	public void Start() {
+		switch (activityLevel) {
+			case ActivityLevel.none:
+				break;
+			case ActivityLevel.calm:
+				reelAudioSources[0].SetActive(true);
+				break;
+			case ActivityLevel.medium:
+				reelAudioSources[1].SetActive(true);
+				break;
+			case ActivityLevel.active:
+				reelAudioSources[2].SetActive(true);
+				break;
+		}
+	}
+
+	public void Update() {
         switch (fishState) {
             case FishState.none:
                 break;
@@ -73,7 +121,6 @@ public class Fish : MonoBehaviour
                     int randomDirection = Random.Range(0, 3) - 1;
                     AssignFishDirection(randomDirection);
                 }
-                Reel();
                 break;
             case FishState.caught:
                 break;
@@ -84,7 +131,12 @@ public class Fish : MonoBehaviour
 
 
     public void FixedUpdate() {
-        Move();
+		if(fishState == FishState.onHook) {
+			Reel();
+		}
+		if (isStrafer) {
+			Move();
+		}
     }
     #endregion
 
@@ -97,7 +149,7 @@ public class Fish : MonoBehaviour
     }
 
     private void Move() {
-        float horizontalSpeed = (fishSpeed * this.MovementDirection) + GameManager.Instance.InputController.MouseInput.x;
+        float horizontalSpeed = (fishSpeed * this.MovementDirection) + this.InputController.MouseInput.x;
         rb.AddForce(horizontalSpeed, 0, 0);
     }
 
@@ -106,11 +158,26 @@ public class Fish : MonoBehaviour
             case ActivityLevel.none:
                 break;
             case ActivityLevel.calm:
-                break;
+				if (this.InputController.reelState == InputController.ReelState.calmReeling && this.IsCentred) {
+					rb.AddForce(0, 0, -reelSpeed);
+				} else {
+					rb.AddForce(0, 0, swimAwaySpeed);
+				}
+				break;
             case ActivityLevel.medium:
-                break;
+				if (this.InputController.reelState == InputController.ReelState.normalReeling && this.IsCentred) {
+					rb.AddForce(0, 0, -reelSpeed);
+				} else {
+					rb.AddForce(0, 0, swimAwaySpeed);
+				}
+				break;
             case ActivityLevel.active:
-                break;
+				if(this.InputController.reelState == InputController.ReelState.fastReeling && this.IsCentred) {
+					rb.AddForce(0, 0, -reelSpeed);
+				} else {
+					rb.AddForce(0, 0, swimAwaySpeed);
+				}
+				break;
         }
     }
 
