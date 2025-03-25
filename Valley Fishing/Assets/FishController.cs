@@ -16,6 +16,12 @@ public class FishController : MonoBehaviour
 
     #region Properties
 
+	public Fish[] Level1Fish {
+		get {
+			return level1Fish;
+		}
+	}
+
     public int CurrentFishIndex {
         get;
         set;
@@ -36,9 +42,10 @@ public class FishController : MonoBehaviour
         level1Fish[this.CurrentFishIndex].gameObject.SetActive(true);
     }
 
-    public void HookFish() {
-        StartCoroutine(StartHookFish());
-    }
+	public void LandRod() {
+		level1Fish[this.CurrentFishIndex].EnableVisuals(true);
+		StartCoroutine(StartHookFish());
+	}
 
     #endregion
 
@@ -48,6 +55,7 @@ public class FishController : MonoBehaviour
     private IEnumerator StartHookFish() {
         yield return new WaitForSeconds(fishHookTime);
         level1Fish[this.CurrentFishIndex].HookFish();
+		GameManager.Instance.InputController.BeginReel();
     }
 
     #endregion

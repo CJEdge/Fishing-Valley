@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b9677c52d974d245a0f163f586f98c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debug: 0
+  loop: 1
   audioSources:
   - {fileID: 1225807207887653578}
   pitchVariation: 0.15
@@ -315,7 +315,7 @@ MonoBehaviour:
   fishState: 0
   activityLevel: 3
   fishName: 
-  isStrafer: 1
+  isStrafer: 0
   fishSpeed: 2000
   strafeFrequency: 2
   centreThreshold: 30
@@ -328,6 +328,7 @@ MonoBehaviour:
   caughtAudios:
   - {fileID: 6745044545433708866}
   rb: {fileID: 6682323996151832369}
+  visuals: {fileID: 1885243994461742159}
 --- !u!54 &6682323996151832369
 Rigidbody:
   m_ObjectHideFlags: 0

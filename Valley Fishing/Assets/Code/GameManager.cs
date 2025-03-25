@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour
         if (inputController.ClickTrigger) {
             if (menuUI.activeSelf) {
                 menuUI.SetActive(false);
+				VoiceOverManager.Instance.voiceOverstate = VoiceOverManager.VoiceOverState.inGameGreeting;
             }
         }
     }

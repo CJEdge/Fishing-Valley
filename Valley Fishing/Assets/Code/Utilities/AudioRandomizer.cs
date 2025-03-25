@@ -5,7 +5,7 @@ public class AudioRandomizer : MonoBehaviour
     #region Serialized Fields
 
     [SerializeField]
-    private bool debug;
+    private bool loop;
 
     [SerializeField]
     private AudioSource[] audioSources;
@@ -28,20 +28,15 @@ public class AudioRandomizer : MonoBehaviour
 
     #region Mono Behaviours
 
-    //public void Start() {
-    //    SetRandomAudioSource();
-    //    this.CurrentAudioSource.Play();
-    //}
-
     public void OnEnable() {
         SetRandomAudioSource();
         this.CurrentAudioSource.Play();
     }
 
     public void Update() {
-        if (debug) {
-            Debug.Log(this.CurrentAudioSource.isPlaying);
-        }
+		if (!loop) {
+			return;
+		}
         if (!this.CurrentAudioSource.isPlaying) {
             SetRandomAudioSource();
             RandomizePitch();

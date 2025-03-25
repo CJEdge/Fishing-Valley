@@ -76,9 +76,6 @@ public class VoiceOverManager : MonoBehaviour
             case VoiceOverState.none:
                 break;
             case VoiceOverState.menuIntro:
-                if (!menuGreeting.isPlaying) {
-                    PlayInGameGreeting(0); // TODO Gamemanager.levelindex
-                }
                 break;
             case VoiceOverState.inGameGreeting:
                 if (!inGameGreetings[0].isPlaying) { // TODO Gamemanager.levelindex
@@ -86,9 +83,6 @@ public class VoiceOverManager : MonoBehaviour
                 }
                 break;
             case VoiceOverState.castRodTutorial:
-                if (!castRodTutorial.isPlaying) { 
-                    PlayReelingTutorial(0);// TODO Gamemanager.levelindex
-                }
                 break;
             case VoiceOverState.reelingTutorial:
                 break;

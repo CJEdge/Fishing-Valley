@@ -44,6 +44,9 @@ public class InputController : MonoBehaviour
 	[SerializeField]
 	private AudioRandomizer[] reelAudio;
 
+	[SerializeField]
+	private PlayerArms playerArms;
+
 
     #endregion
 
@@ -85,6 +88,11 @@ public class InputController : MonoBehaviour
 		set;
     }
 
+	public AudioRandomizer CurrentReelAudio {
+		get;
+		set;
+	}
+
     #endregion
 
 
@@ -97,6 +105,7 @@ public class InputController : MonoBehaviour
 		CheckToResetReelInput();
 		ReduceReelRate();
 		SetReelState();
+		CastRod();
 	}
 
 	#endregion
@@ -107,9 +116,24 @@ public class InputController : MonoBehaviour
 	public void Click(InputAction.CallbackContext context) {
         if (context.performed) {
 			this.ClickTrigger = true;
-        } else {
+			CastRod();
+
+		} else {
 			this.ClickTrigger = false;
         }
+	}
+
+	public void CastRod() {
+		if(VoiceOverManager.Instance.voiceOverstate == VoiceOverManager.VoiceOverState.castRodTutorial ||
+			VoiceOverManager.Instance.voiceOverstate == VoiceOverManager.VoiceOverState.castRod) {
+			playerArms.ThrowRod();
+		}	
+	}
+
+	public void BeginReel() {
+		reelState = ReelState.notReeling;
+		VoiceOverManager.Instance.PlayReelingTutorial(0); // llevel int
+		playerArms.BeginReel();
 	}
 
 	public void MoveRod(InputAction.CallbackContext context) {
@@ -169,6 +193,7 @@ public class InputController : MonoBehaviour
 	}
 
 	private void SetReelAudio(AudioRandomizer audio) {
+		this.CurrentReelAudio = audio;
 		if (audio != null) {
 			if (audio.CurrentAudioSource != null) {
 				if (audio.CurrentAudioSource.isPlaying) {
@@ -176,7 +201,7 @@ public class InputController : MonoBehaviour
 				}
 			}
 		}
-        for (int i = 0; i < reelAudio.Length; i++) {
+		for (int i = 0; i < reelAudio.Length; i++) {
 			reelAudio[i].gameObject.SetActive(false);
         }
 		if (audio != null) {

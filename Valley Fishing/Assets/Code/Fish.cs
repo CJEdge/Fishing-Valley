@@ -60,6 +60,9 @@ public class Fish : MonoBehaviour
     [SerializeField]
     private Rigidbody rb;
 
+	[SerializeField]
+	private GameObject visuals;
+
     #endregion
 
 
@@ -117,7 +120,9 @@ public class Fish : MonoBehaviour
                 }
                 break;
             case FishState.caught:
-                break;
+				activityLevel = ActivityLevel.none;
+				PlayActivitySFX();
+				break;
             case FishState.escaped:
                 break;
         }
@@ -137,9 +142,12 @@ public class Fish : MonoBehaviour
 
     #region Public Methods
 
-    public void StartFishing() {
+    public void PlayActivitySFX() {
         switch (activityLevel) {
             case ActivityLevel.none:
+				for (int i = 0; i < reelAudioSources.Count; i++) {
+					reelAudioSources[i].SetActive(false);
+				}
                 break;
             case ActivityLevel.calm:
                 reelAudioSources[0].SetActive(true);
@@ -153,11 +161,17 @@ public class Fish : MonoBehaviour
         }
     }
 
+	public void EnableVisuals(bool enable) {
+		visuals.SetActive(enable);
+	}
+
     public void HookFish() {
         fishState = FishState.onHook;
-    }
+		PlayActivitySFX();
+	}
 
     public void FishCaught() {
+		fishState = FishState.caught;
         VoiceOverManager.Instance.CaughtFishAudio = caughtAudios[Random.Range(0,caughtAudios.Count)];
         VoiceOverManager.Instance.PlayCaughtFish();
         GameManager.Instance.FishController.SpawnNewFish();
@@ -213,5 +227,9 @@ public class Fish : MonoBehaviour
         }
     }
 
-    #endregion
+	private void Start() {
+		
+	}
+
+	#endregion
 }
