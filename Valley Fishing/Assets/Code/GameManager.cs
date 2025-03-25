@@ -23,6 +23,18 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private InputController inputController;
 
+    [SerializeField]
+    private FishController fishController;
+
+    [SerializeField]
+    private Transform leftFishTransform;
+
+    [SerializeField]
+    private Transform rightFishTransform;
+
+    [SerializeField]
+    private GameObject menuUI;
+
     #endregion
 
 
@@ -31,6 +43,37 @@ public class GameManager : MonoBehaviour
     public InputController InputController {
         get {
             return inputController;
+        }
+    }
+
+    public FishController FishController {
+        get { 
+            return fishController;
+        }
+    }
+
+    public Transform LeftFishTransform {
+        get {
+            return leftFishTransform;
+        }
+    }
+
+    public Transform RightFishTransform {
+        get {
+            return rightFishTransform;
+        }
+    }
+
+    #endregion
+
+
+    #region Public Methods
+
+    public void Update() {
+        if (inputController.ClickTrigger) {
+            if (menuUI.activeSelf) {
+                menuUI.SetActive(false);
+            }
         }
     }
 

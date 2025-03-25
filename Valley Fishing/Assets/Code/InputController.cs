@@ -41,11 +41,19 @@ public class InputController : MonoBehaviour
 	[SerializeField]
 	private List<float> reelStateThresholds;
 
+	[SerializeField]
+	private AudioRandomizer[] reelAudio;
+
 
     #endregion
 
 
     #region Properties
+
+	public bool ClickTrigger {
+		get;
+		set;
+    }
 
     public Vector2 MouseInput {
         get;
@@ -72,12 +80,20 @@ public class InputController : MonoBehaviour
 		set;
 	}
 
+	public bool StrafingEnabled {
+		get;
+		set;
+    }
+
     #endregion
 
 
     #region Mono Behaviours
 
     public void Update() {
+		if(reelState == ReelState.reelingLocked) {
+			return;
+        }
 		CheckToResetReelInput();
 		ReduceReelRate();
 		SetReelState();
@@ -87,6 +103,14 @@ public class InputController : MonoBehaviour
 
 
 	#region Public Methods
+
+	public void Click(InputAction.CallbackContext context) {
+        if (context.performed) {
+			this.ClickTrigger = true;
+        } else {
+			this.ClickTrigger = false;
+        }
+	}
 
 	public void MoveRod(InputAction.CallbackContext context) {
         this.MouseInput = context.ReadValue<Vector2>() * rodSpeed;
@@ -131,14 +155,36 @@ public class InputController : MonoBehaviour
 	private void SetReelState() {
 		if(this.ReelInput == reelStateThresholds[0]) {
 			reelState = ReelState.notReeling;
+			SetReelAudio(null);
 		} else if(this.ReelInput < reelStateThresholds[1]) {
 			reelState = ReelState.calmReeling;
+			SetReelAudio(reelAudio[0]);
 		} else if (this.ReelInput < reelStateThresholds[2]) {
 			reelState = ReelState.normalReeling;
+			SetReelAudio(reelAudio[1]);
 		} else{
 			reelState = ReelState.fastReeling;
+			SetReelAudio(reelAudio[2]);
 		}
 	}
+
+	private void SetReelAudio(AudioRandomizer audio) {
+		if (audio != null) {
+			if (audio.CurrentAudioSource != null) {
+				if (audio.CurrentAudioSource.isPlaying) {
+					return;
+				}
+			}
+		}
+        for (int i = 0; i < reelAudio.Length; i++) {
+			reelAudio[i].gameObject.SetActive(false);
+        }
+		if (audio != null) {
+			if (!audio.gameObject.activeSelf) {
+				audio.gameObject.SetActive(true);
+			}
+		}
+    }
 
 	#endregion
 
