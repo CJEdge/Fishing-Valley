@@ -55,6 +55,9 @@ public class Fish : MonoBehaviour
 	private List<GameObject> reelAudioSources;
 
     [SerializeField]
+    private List<AudioSource> caughtAudios;
+
+    [SerializeField]
     private Rigidbody rb;
 
     #endregion
@@ -138,6 +141,16 @@ public class Fish : MonoBehaviour
 			Move();
 		}
     }
+    #endregion
+
+
+    #region Public Methods
+
+    public void FishCaught() {
+        VoiceOverManager.Instance.CaughtFishAudio = caughtAudios[Random.Range(0,caughtAudios.Count)];
+        VoiceOverManager.Instance.PlayCaughtFish();
+    }
+
     #endregion
 
 

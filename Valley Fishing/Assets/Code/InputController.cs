@@ -9,6 +9,7 @@ public class InputController : MonoBehaviour
 	#region States
 
 	public enum ReelState {
+		reelingLocked,
 		notReeling,
 		calmReeling,
 		normalReeling,
@@ -92,6 +93,9 @@ public class InputController : MonoBehaviour
     }
 
     public void Reel(InputAction.CallbackContext context) {
+		if(reelState == ReelState.reelingLocked) {
+			return;
+        }
         this.ReelInput -= context.ReadValue<Vector2>().y;
 		StartCoroutine(SetLastReelInput());
 
