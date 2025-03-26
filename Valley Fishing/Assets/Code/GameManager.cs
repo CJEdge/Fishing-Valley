@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -35,6 +37,15 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject menuUI;
 
+    [SerializeField]
+    private float levelLoadWaitTime;
+
+    [SerializeField]
+    private GameObject level1Ambience;
+
+    [SerializeField]
+    private GameObject level2Ambience;
+
     #endregion
 
 
@@ -64,6 +75,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public int CurrentLevel {
+        get;
+        set;
+    } = 1;
+
     #endregion
 
 
@@ -76,6 +92,27 @@ public class GameManager : MonoBehaviour
 				VoiceOverManager.Instance.voiceOverstate = VoiceOverManager.VoiceOverState.inGameGreeting;
             }
         }
+    }
+
+    public void NextLevel() {
+        this.CurrentLevel++;
+        StartCoroutine(StartNextLevel());
+    }
+
+    #endregion
+
+
+    #region Private Methods
+
+    private IEnumerator StartNextLevel() {
+        InputController.reelState = InputController.ReelState.reelingLocked;
+        VoiceOverManager.Instance.CastRodIndex = 0;
+        VoiceOverManager.Instance.ReelTutorialIndex = 0;
+        yield return new WaitForSeconds(levelLoadWaitTime);
+        FadeManager.Instance.FadeToClear();
+        VoiceOverManager.Instance.voiceOverstate = VoiceOverManager.VoiceOverState.inGameGreeting;
+        level1Ambience.SetActive(false);
+        level2Ambience.SetActive(true);
     }
 
     #endregion

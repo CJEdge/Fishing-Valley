@@ -25,6 +25,14 @@ public class Fish : MonoBehaviour
 
     public ActivityLevel activityLevel;
 
+    public enum MovementDirection {
+        random,
+        left,
+        right
+    }
+
+    public MovementDirection movementDirection;
+
     #endregion
 
 
@@ -38,6 +46,9 @@ public class Fish : MonoBehaviour
 
 	[SerializeField]
     private float fishSpeed;
+
+    [SerializeField]
+    private int strafeCount;
 
     [SerializeField]
     private float strafeFrequency;
@@ -68,7 +79,7 @@ public class Fish : MonoBehaviour
 
     #region Properties
 
-    private int MovementDirection {
+    private int CurrentStrafeCount {
         get;
         set;
     }
@@ -104,18 +115,34 @@ public class Fish : MonoBehaviour
             case FishState.none:
                 break;
             case FishState.onHook:
+                if(strafeCount == 0) {
+                    return;
+                }
+                if(this.CurrentStrafeCount == strafeCount) {
+                    return;
+                }
                 if (isStrafer) {
                     if (this.CurrentStrafeTime < strafeFrequency) {
                         this.CurrentStrafeTime += Time.deltaTime;
                     } else {
                         this.CurrentStrafeTime = 0;
-                        int randomDirection = Random.Range(0, 2) * 2 - 1;
-                        if (randomDirection == 1) {
-                            Strafe(true);
-                        } else {
-                            Strafe(false);
+                        switch (movementDirection) {
+                            case MovementDirection.random:
+                                int randomDirection = Random.Range(0, 2) * 2 - 1;
+                                if (randomDirection == 1) {
+                                    Strafe(true);
+                                } else {
+                                    Strafe(false);
+                                }
+                                break;
+                            case MovementDirection.left:
+                                break;
+                            case MovementDirection.right:
+                                break;
+                            default:
+                                break;
                         }
-                        AssignFishDirection(randomDirection);
+                        this.CurrentStrafeCount++;
                     }
                 }
                 break;
@@ -174,18 +201,13 @@ public class Fish : MonoBehaviour
 		fishState = FishState.caught;
         VoiceOverManager.Instance.CaughtFishAudio = caughtAudios[Random.Range(0,caughtAudios.Count)];
         VoiceOverManager.Instance.PlayCaughtFish();
-        GameManager.Instance.FishController.SpawnNewFish();
+        GameManager.Instance.FishController.DisplayCaughtFish(fishName);
     }
 
     #endregion
 
 
     #region Private Methods
-
-    private void AssignFishDirection(int fishDirection) {
-        rb.linearVelocity = Vector3.zero;
-        this.MovementDirection = fishDirection;
-    }
 
     private void Strafe(bool strafeRight) {
         if (strafeRight) {

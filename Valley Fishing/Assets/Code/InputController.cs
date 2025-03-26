@@ -53,6 +53,7 @@ public class InputController : MonoBehaviour
 
     #region Properties
 
+	[field:SerializeField]
 	public bool ClickTrigger {
 		get;
 		set;
@@ -63,6 +64,8 @@ public class InputController : MonoBehaviour
         set;
     }
 
+
+	[field:SerializeField]
     public float ReelInput {
         get;
         set;
@@ -105,7 +108,6 @@ public class InputController : MonoBehaviour
 		CheckToResetReelInput();
 		ReduceReelRate();
 		SetReelState();
-		CastRod();
 	}
 
 	#endregion
@@ -132,7 +134,7 @@ public class InputController : MonoBehaviour
 
 	public void BeginReel() {
 		reelState = ReelState.notReeling;
-		VoiceOverManager.Instance.PlayReelingTutorial(0); // llevel int
+		VoiceOverManager.Instance.PlayReelingTutorial();
 		playerArms.BeginReel();
 	}
 

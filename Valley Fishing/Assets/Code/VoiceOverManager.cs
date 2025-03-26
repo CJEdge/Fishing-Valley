@@ -44,10 +44,16 @@ public class VoiceOverManager : MonoBehaviour
     private AudioSource[] inGameGreetings;
 
     [SerializeField]
-    private AudioSource castRodTutorial;
+    private AudioSource level1CastRodTutorial;
 
     [SerializeField]
-    private AudioSource[] reelingTutorial;
+    private AudioSource level2CastRodTutorial;
+
+    [SerializeField]
+    private AudioSource[] level1ReelingTutorial;
+
+    [SerializeField]
+    private AudioSource[] level2ReelingTutorial;
 
     [SerializeField]
     private AudioSource[] castRods;
@@ -58,6 +64,16 @@ public class VoiceOverManager : MonoBehaviour
     #region Properties
 
     public AudioSource CaughtFishAudio {
+        get;
+        set;
+    }
+
+    public int ReelTutorialIndex {
+        get;
+        set;
+    }
+
+    public int CastRodIndex {
         get;
         set;
     }
@@ -78,8 +94,17 @@ public class VoiceOverManager : MonoBehaviour
             case VoiceOverState.menuIntro:
                 break;
             case VoiceOverState.inGameGreeting:
-                if (!inGameGreetings[0].isPlaying) { // TODO Gamemanager.levelindex
-                    PlayCastRodTutorial();
+                if (GameManager.Instance.CurrentLevel == 0) {
+                    if (!inGameGreetings[0].isPlaying) {
+                        PlayCastRodTutorial();
+                    }
+                }
+                if (GameManager.Instance.CurrentLevel == 1) {
+                    Debug.Log("here");
+                    if (!inGameGreetings[1].isPlaying) {
+                        Debug.Log("here");
+                        PlayCastRodTutorial();
+                    }
                 }
                 break;
             case VoiceOverState.castRodTutorial:
@@ -111,13 +136,22 @@ public class VoiceOverManager : MonoBehaviour
     }
 
     public void PlayCastRodTutorial() {
-        castRodTutorial.Play();
+        if (GameManager.Instance.CurrentLevel == 0) {
+            level1CastRodTutorial.Play();
+        } else {
+            level2CastRodTutorial.Play();
+        }
         voiceOverstate = VoiceOverState.castRodTutorial;
     }
 
-    public void PlayReelingTutorial(int turotialIndex) {
-        reelingTutorial[turotialIndex].Play();
-        voiceOverstate = VoiceOverState.reelingTutorial;
+    public void PlayReelingTutorial() {
+        if (this.ReelTutorialIndex < 4) {
+            level1ReelingTutorial[this.ReelTutorialIndex].Play();
+            voiceOverstate = VoiceOverState.reelingTutorial;
+            this.ReelTutorialIndex++;
+        } else {
+            voiceOverstate = VoiceOverState.reelingTutorial;
+        }
     }
 
     public void PlayCaughtFish() {
@@ -125,8 +159,9 @@ public class VoiceOverManager : MonoBehaviour
         voiceOverstate = VoiceOverState.caughtFish;
     }
 
-    public void PlayCastRod(int castIndex) {
-        castRods[castIndex].Play();
+    public void PlayCastRod() {
+        castRods[this.CastRodIndex].Play();
+        voiceOverstate = VoiceOverState.castRod;
     }
 
     #endregion
