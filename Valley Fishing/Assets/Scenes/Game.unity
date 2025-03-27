@@ -696,11 +696,11 @@ PrefabInstance:
     - target: {fileID: 6745044545433708866, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 9f90ddc1f3e4b8d4d80ba6005089c29b, type: 3}
+      objectReference: {fileID: 8300000, guid: fa5716dd0d0464b48925dbc6be5ff842, type: 3}
     - target: {fileID: 6745044545433708866, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 9f90ddc1f3e4b8d4d80ba6005089c29b, type: 3}
+      objectReference: {fileID: 8300000, guid: fa5716dd0d0464b48925dbc6be5ff842, type: 3}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: fishName
       value: Salmon
@@ -8627,9 +8627,9 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 72457af72572e364cbf12ab0320a75ca, type: 3}
   m_Resource: {fileID: 8300000, guid: 72457af72572e364cbf12ab0320a75ca, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.075
+  m_Volume: 0.09
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -9682,6 +9682,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6745044545433708866, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: c3496c9cfce7b744088e79478aa8e0c1, type: 3}
+    - target: {fileID: 6745044545433708866, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c3496c9cfce7b744088e79478aa8e0c1, type: 3}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: fishName
       value: Trout
@@ -11059,11 +11067,11 @@ PrefabInstance:
     - target: {fileID: 6745044545433708866, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 9f90ddc1f3e4b8d4d80ba6005089c29b, type: 3}
+      objectReference: {fileID: 8300000, guid: f83a2da23cc4c254f90fa5dbdef0f516, type: 3}
     - target: {fileID: 6745044545433708866, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 9f90ddc1f3e4b8d4d80ba6005089c29b, type: 3}
+      objectReference: {fileID: 8300000, guid: f83a2da23cc4c254f90fa5dbdef0f516, type: 3}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: fishName
       value: Bass
@@ -12917,9 +12925,9 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: ad1e7a42bd93165458995d761c67339f, type: 3}
   m_Resource: {fileID: 8300000, guid: ad1e7a42bd93165458995d761c67339f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.025
+  m_Volume: 0.09
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
