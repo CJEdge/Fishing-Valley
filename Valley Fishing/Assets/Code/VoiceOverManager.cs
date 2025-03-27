@@ -94,15 +94,13 @@ public class VoiceOverManager : MonoBehaviour
             case VoiceOverState.menuIntro:
                 break;
             case VoiceOverState.inGameGreeting:
-                if (GameManager.Instance.CurrentLevel == 0) {
+                if (GameManager.Instance.CurrentLevel == 1) {
                     if (!inGameGreetings[0].isPlaying) {
                         PlayCastRodTutorial();
                     }
                 }
-                if (GameManager.Instance.CurrentLevel == 1) {
-                    Debug.Log("here");
+                if (GameManager.Instance.CurrentLevel == 2) {
                     if (!inGameGreetings[1].isPlaying) {
-                        Debug.Log("here");
                         PlayCastRodTutorial();
                     }
                 }
@@ -136,7 +134,8 @@ public class VoiceOverManager : MonoBehaviour
     }
 
     public void PlayCastRodTutorial() {
-        if (GameManager.Instance.CurrentLevel == 0) {
+		GameManager.Instance.InputController.DisableThrowing = false;
+        if (GameManager.Instance.CurrentLevel == 1) {
             level1CastRodTutorial.Play();
         } else {
             level2CastRodTutorial.Play();
@@ -145,13 +144,23 @@ public class VoiceOverManager : MonoBehaviour
     }
 
     public void PlayReelingTutorial() {
-        if (this.ReelTutorialIndex < 4) {
-            level1ReelingTutorial[this.ReelTutorialIndex].Play();
-            voiceOverstate = VoiceOverState.reelingTutorial;
-            this.ReelTutorialIndex++;
-        } else {
-            voiceOverstate = VoiceOverState.reelingTutorial;
-        }
+		if (GameManager.Instance.CurrentLevel == 1) {
+			if (this.ReelTutorialIndex < 4) {
+				level1ReelingTutorial[this.ReelTutorialIndex].Play();
+				voiceOverstate = VoiceOverState.reelingTutorial;
+				this.ReelTutorialIndex++;
+			} else {
+				voiceOverstate = VoiceOverState.reelingTutorial;
+			}
+		} else {
+			if (this.ReelTutorialIndex < 3) {
+				level2ReelingTutorial[this.ReelTutorialIndex].Play();
+				voiceOverstate = VoiceOverState.reelingTutorial;
+				this.ReelTutorialIndex++;
+			} else {
+				voiceOverstate = VoiceOverState.reelingTutorial;
+			}
+		}
     }
 
     public void PlayCaughtFish() {
@@ -160,7 +169,8 @@ public class VoiceOverManager : MonoBehaviour
     }
 
     public void PlayCastRod() {
-        castRods[this.CastRodIndex].Play();
+		GameManager.Instance.InputController.DisableThrowing = false;
+		castRods[this.CastRodIndex].Play();
         voiceOverstate = VoiceOverState.castRod;
     }
 

@@ -59,6 +59,7 @@ public class InputController : MonoBehaviour
 		set;
     }
 
+	[field:SerializeField]
     public Vector2 MouseInput {
         get;
         set;
@@ -89,9 +90,15 @@ public class InputController : MonoBehaviour
 	public bool StrafingEnabled {
 		get;
 		set;
-    }
+	}
 
 	public AudioRandomizer CurrentReelAudio {
+		get;
+		set;
+	}
+
+	[field:SerializeField]
+	public bool DisableThrowing {
 		get;
 		set;
 	}
@@ -101,13 +108,17 @@ public class InputController : MonoBehaviour
 
     #region Mono Behaviours
 
-    public void Update() {
-		if(reelState == ReelState.reelingLocked) {
+	public void Start() {
+		this.DisableThrowing = false;
+	}
+
+	public void Update() {
+		SetReelState();
+		if (reelState == ReelState.reelingLocked) {
 			return;
-        }
+		}
 		CheckToResetReelInput();
 		ReduceReelRate();
-		SetReelState();
 	}
 
 	#endregion
@@ -116,9 +127,10 @@ public class InputController : MonoBehaviour
 	#region Public Methods
 
 	public void Click(InputAction.CallbackContext context) {
-        if (context.performed) {
+		if (context.performed) {
 			this.ClickTrigger = true;
 			CastRod();
+			this.DisableThrowing = true;
 
 		} else {
 			this.ClickTrigger = false;
@@ -126,13 +138,20 @@ public class InputController : MonoBehaviour
 	}
 
 	public void CastRod() {
-		if(VoiceOverManager.Instance.voiceOverstate == VoiceOverManager.VoiceOverState.castRodTutorial ||
+		if (this.DisableThrowing) {
+			return;
+		}
+		if (VoiceOverManager.Instance.voiceOverstate == VoiceOverManager.VoiceOverState.castRodTutorial ||
 			VoiceOverManager.Instance.voiceOverstate == VoiceOverManager.VoiceOverState.castRod) {
 			playerArms.ThrowRod();
 		}	
 	}
 
 	public void BeginReel() {
+		if(GameManager.Instance.CurrentLevel == 2) {
+			this.StrafingEnabled = true;
+		}
+		this.DisableThrowing = false;
 		reelState = ReelState.notReeling;
 		VoiceOverManager.Instance.PlayReelingTutorial();
 		playerArms.BeginReel();

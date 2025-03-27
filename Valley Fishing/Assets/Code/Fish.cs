@@ -68,6 +68,9 @@ public class Fish : MonoBehaviour
     [SerializeField]
     private List<AudioSource> caughtAudios;
 
+	[SerializeField]
+	private AudioSource strafeAudio;
+
     [SerializeField]
     private Rigidbody rb;
 
@@ -90,13 +93,13 @@ public class Fish : MonoBehaviour
     }
 
 	private bool IsCentred {
-		get {
-			if (transform.position.x > -centreThreshold && transform.position.x < centreThreshold) {
-				return true;
-			} else {
-				return false;
-			}
-		}
+		get;
+		set;
+	}
+
+	private bool LastIsCentred {
+		get;
+		set;
 	}
 
 	private InputController InputController {
@@ -111,11 +114,12 @@ public class Fish : MonoBehaviour
 	#region Mono Behaviours
 
 	public void Update() {
-        switch (fishState) {
+		HandleCentering();
+		switch (fishState) {
             case FishState.none:
                 break;
             case FishState.onHook:
-                if(strafeCount == 0) {
+				if (strafeCount == 0) {
                     return;
                 }
                 if(this.CurrentStrafeCount == strafeCount) {
@@ -136,9 +140,11 @@ public class Fish : MonoBehaviour
                                 }
                                 break;
                             case MovementDirection.left:
-                                break;
+								Strafe(false);
+								break;
                             case MovementDirection.right:
-                                break;
+								Strafe(true);
+								break;
                             default:
                                 break;
                         }
@@ -185,7 +191,7 @@ public class Fish : MonoBehaviour
             case ActivityLevel.active:
                 reelAudioSources[2].SetActive(true);
                 break;
-        }
+		}
     }
 
 	public void EnableVisuals(bool enable) {
@@ -202,7 +208,11 @@ public class Fish : MonoBehaviour
         VoiceOverManager.Instance.CaughtFishAudio = caughtAudios[Random.Range(0,caughtAudios.Count)];
         VoiceOverManager.Instance.PlayCaughtFish();
         GameManager.Instance.FishController.DisplayCaughtFish(fishName);
-    }
+		GameManager.Instance.InputController.reelState = InputController.ReelState.reelingLocked;
+		if (GameManager.Instance.CurrentLevel == 2) {
+			GameManager.Instance.InputController.StrafingEnabled = false;
+		}
+	}
 
     #endregion
 
@@ -210,7 +220,8 @@ public class Fish : MonoBehaviour
     #region Private Methods
 
     private void Strafe(bool strafeRight) {
-        if (strafeRight) {
+		strafeAudio.Play();
+		if (strafeRight) {
             transform.position = new Vector3(GameManager.Instance.RightFishTransform.position.x, transform.position.y, transform.position.z);
         } else {
             transform.position = new Vector3(GameManager.Instance.LeftFishTransform.position.x, transform.position.y, transform.position.z);
@@ -218,7 +229,7 @@ public class Fish : MonoBehaviour
     }
 
     private void Move() {
-        rb.AddForce(this.InputController.MouseInput.x, 0, 0);
+        rb.AddForce(this.InputController.MouseInput.x * fishSpeed, 0, 0);
     }
 
     private void Reel() {
@@ -249,8 +260,19 @@ public class Fish : MonoBehaviour
         }
     }
 
-	private void Start() {
-		
+	private void HandleCentering() {
+		if (transform.position.x > -centreThreshold && transform.position.x < centreThreshold) {
+			this.IsCentred = true;
+		} else {
+			this.IsCentred = false;
+		}
+		if (this.IsCentred != this.LastIsCentred && !this.IsCentred) {
+			reelAudioSources[3].SetActive(true);
+		}
+		if (this.IsCentred) {
+			reelAudioSources[3].SetActive(false);
+		}
+		this.LastIsCentred = this.IsCentred;
 	}
 
 	#endregion

@@ -9,6 +9,9 @@ public class FishController : MonoBehaviour
     [SerializeField]
     private Fish[] level1Fish;
 
+	[SerializeField]
+	private Fish[] level2Fish;
+
     [SerializeField]
     private float fishHookTime;
 
@@ -56,7 +59,11 @@ public class FishController : MonoBehaviour
     }
 
 	public void LandRod() {
-		level1Fish[this.CurrentFishIndex].EnableVisuals(true);
+		if (GameManager.Instance.CurrentLevel == 1) {
+			level1Fish[this.CurrentFishIndex].gameObject.SetActive(true);
+		} else {
+			level2Fish[this.CurrentFishIndex].gameObject.SetActive(true);
+		}
 		StartCoroutine(StartHookFish());
 	}
 
@@ -80,27 +87,45 @@ public class FishController : MonoBehaviour
 
     private IEnumerator StartHookFish() {
         yield return new WaitForSeconds(fishHookTime);
-        level1Fish[this.CurrentFishIndex].HookFish();
+		if (GameManager.Instance.CurrentLevel == 1) {
+			level1Fish[this.CurrentFishIndex].HookFish();
+		} else {
+			level2Fish[this.CurrentFishIndex].HookFish();
+		}
 		GameManager.Instance.InputController.BeginReel();
     }
 
     private IEnumerator CloseCaughtFish(GameObject fishUiImage) {
-        if (this.CurrentFishIndex == 4) {
-            yield return new WaitForSeconds(caughtFishDisplayTime);
-            FadeManager.Instance.FadeToBlack();
-            fishUiImage.SetActive(false);
-            fishTextObject.SetActive(false);
-            this.CurrentFishIndex = 0;
-            GameManager.Instance.NextLevel();
+		if (this.CurrentFishIndex == 4) {
+        yield return new WaitForSeconds(caughtFishDisplayTime);
+			if (GameManager.Instance.CurrentLevel == 1) {
+				level1Fish[this.CurrentFishIndex].gameObject.SetActive(false);
+			} else {
+				yield return new WaitForSeconds(caughtFishDisplayTime/2);
+				level2Fish[this.CurrentFishIndex].gameObject.SetActive(false);
+				FadeManager.Instance.FadeToBlack();
+				yield break;
+			}
+			FadeManager.Instance.FadeToBlack();
+        fishUiImage.SetActive(false);
+        fishTextObject.SetActive(false);
+        this.CurrentFishIndex = 0;
+        GameManager.Instance.NextLevel();
         } else {
             yield return new WaitForSeconds(caughtFishDisplayTime);
-            fishUiImage.SetActive(false);
+			if (GameManager.Instance.CurrentLevel == 1) {
+				level1Fish[this.CurrentFishIndex].gameObject.SetActive(false);
+			} else {
+				level2Fish[this.CurrentFishIndex].gameObject.SetActive(false);
+			}
+			fishUiImage.SetActive(false);
             fishTextObject.SetActive(false);
             this.CurrentFishIndex++;
             GameManager.Instance.InputController.reelState = InputController.ReelState.reelingLocked;
             VoiceOverManager.Instance.PlayCastRod();
         }
-    }
+		
+	}
 
     #endregion
 }

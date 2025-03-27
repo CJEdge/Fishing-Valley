@@ -80,12 +80,16 @@ public class GameManager : MonoBehaviour
         set;
     } = 1;
 
-    #endregion
+	#endregion
 
 
-    #region Public Methods
+	#region Public Methods
 
-    public void Update() {
+	public void Start() {
+		Cursor.lockState = CursorLockMode.Locked;
+	}
+
+	public void Update() {
         if (inputController.ClickTrigger) {
             if (menuUI.activeSelf) {
                 menuUI.SetActive(false);
@@ -110,10 +114,11 @@ public class GameManager : MonoBehaviour
         VoiceOverManager.Instance.ReelTutorialIndex = 0;
         yield return new WaitForSeconds(levelLoadWaitTime);
         FadeManager.Instance.FadeToClear();
-        VoiceOverManager.Instance.voiceOverstate = VoiceOverManager.VoiceOverState.inGameGreeting;
         level1Ambience.SetActive(false);
         level2Ambience.SetActive(true);
-    }
+		VoiceOverManager.Instance.PlayInGameGreeting(1);
+		VoiceOverManager.Instance.voiceOverstate = VoiceOverManager.VoiceOverState.inGameGreeting;
+	}
 
     #endregion
 
