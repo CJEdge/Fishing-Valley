@@ -108,6 +108,12 @@ public class Fish : MonoBehaviour
 		}
 	}
 
+    public float CaughtFishTime {
+        get {
+            return caughtAudios[0].clip.length;
+        }
+    }
+
 	#endregion
 
 

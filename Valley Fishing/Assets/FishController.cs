@@ -43,6 +43,12 @@ public class FishController : MonoBehaviour
         set;
     }
 
+    public float CaughtFishDisplayTime {
+        get {
+            return this.Level1Fish[this.CurrentFishIndex].CaughtFishTime;
+        }
+    }
+
     #endregion
 
 
@@ -97,11 +103,11 @@ public class FishController : MonoBehaviour
 
     private IEnumerator CloseCaughtFish(GameObject fishUiImage) {
 		if (this.CurrentFishIndex == 4) {
-        yield return new WaitForSeconds(caughtFishDisplayTime);
+        yield return new WaitForSeconds(CaughtFishDisplayTime);
 			if (GameManager.Instance.CurrentLevel == 1) {
 				level1Fish[this.CurrentFishIndex].gameObject.SetActive(false);
 			} else {
-				yield return new WaitForSeconds(caughtFishDisplayTime/2);
+				yield return new WaitForSeconds(CaughtFishDisplayTime);
 				level2Fish[this.CurrentFishIndex].gameObject.SetActive(false);
 				FadeManager.Instance.FadeToBlack();
 				yield break;
@@ -112,7 +118,7 @@ public class FishController : MonoBehaviour
         this.CurrentFishIndex = 0;
         GameManager.Instance.NextLevel();
         } else {
-            yield return new WaitForSeconds(caughtFishDisplayTime);
+            yield return new WaitForSeconds(CaughtFishDisplayTime);
 			if (GameManager.Instance.CurrentLevel == 1) {
 				level1Fish[this.CurrentFishIndex].gameObject.SetActive(false);
 			} else {
