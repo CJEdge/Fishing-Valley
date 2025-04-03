@@ -94,6 +94,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Gaussian",
+                    "type": "Button",
+                    "id": "613b6973-5145-465b-93fa-c50f5bf17d43",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Black",
+                    "type": "Button",
+                    "id": "3faa631c-4524-4cca-9fbd-519afbc9d87f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -490,6 +508,28 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Reel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3349574f-315b-47df-8504-718a28ad5d97",
+                    "path": "<Keyboard>/g",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Gaussian",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "61322199-2eb8-4008-b631-204396a59726",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Black",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

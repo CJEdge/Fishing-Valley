@@ -47,6 +47,12 @@ public class InputController : MonoBehaviour
 	[SerializeField]
 	private PlayerArms playerArms;
 
+	[SerializeField]
+	private GameObject blurObject;
+
+	[SerializeField]
+	private GameObject blackObject;
+
 
     #endregion
 
@@ -170,10 +176,18 @@ public class InputController : MonoBehaviour
 
 	}
 
-    #endregion
+	public void Blur(InputAction.CallbackContext context) {
+		blurObject.SetActive(!blurObject.activeSelf);
+	}
+
+	public void Black(InputAction.CallbackContext context) {
+		blackObject.SetActive(!blackObject.activeSelf);
+	}
+
+	#endregion
 
 
-    #region Private Methods
+	#region Private Methods
 
 	private void CheckToResetReelInput() {
 		if (this.LastReelInput > this.ReelInput) {
