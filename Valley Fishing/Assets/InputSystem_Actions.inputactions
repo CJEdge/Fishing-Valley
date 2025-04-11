@@ -36,7 +36,7 @@
                     "name": "Interact",
                     "type": "Button",
                     "id": "852140f2-7766-474d-8707-702459ba45f3",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "Hold",
                     "initialStateCheck": false
@@ -87,13 +87,22 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Reel",
+                    "name": "ReelMouse",
                     "type": "Value",
                     "id": "7f530d5c-faaf-4b43-8b0f-55f0559c057b",
                     "expectedControlType": "Delta",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "ReelKeyboard",
+                    "type": "Button",
+                    "id": "a526f7dc-373c-46f6-a117-16a22fd2252d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Gaussian",
@@ -507,7 +516,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Reel",
+                    "action": "ReelMouse",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -519,6 +528,17 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Gaussian",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "83282307-bfb6-4d89-9f07-9e7e35efd1ff",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "ReelKeyboard",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

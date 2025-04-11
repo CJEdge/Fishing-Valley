@@ -29,7 +29,13 @@ public class InputController : MonoBehaviour
     [SerializeField]
     private float rodSpeed;
 
-    [SerializeField]
+	[SerializeField]
+	private float keyboardReelResetTime;
+
+	[SerializeField]
+	private int keyboardInputListLength;
+
+	[SerializeField]
     private float reelResetRate;
 
 	[SerializeField]
@@ -39,7 +45,10 @@ public class InputController : MonoBehaviour
     private float maxReelRate;
 
 	[SerializeField]
-	private List<float> reelStateThresholds;
+	private List<float> scrollReelStateThresholds;
+
+	[SerializeField]
+	private List<float> keyboardReelStateThresholds;
 
 	[SerializeField]
 	private AudioRandomizer[] reelAudio;
@@ -59,13 +68,11 @@ public class InputController : MonoBehaviour
 
     #region Properties
 
-	[field:SerializeField]
 	public bool ClickTrigger {
 		get;
 		set;
     }
 
-	[field:SerializeField]
     public Vector2 MouseInput {
         get;
         set;
@@ -82,6 +89,28 @@ public class InputController : MonoBehaviour
 		get;
 		set;
 	}
+
+	private float CurrentKeyboardReelInput {
+		get;
+		set;
+	}
+
+	[field:SerializeField]
+	private float AverageKeyboardReelInput {
+		get {
+			float total = 0;
+			for (int i = 0; i < this.ReelInputs.Count; i++) {
+				total += this.ReelInputs[i];
+			}
+			return total / this.ReelInputs.Count;
+		}
+	}
+
+	[field: SerializeField]
+	private List<float> ReelInputs {
+		get;
+		set;
+	} = new List<float>();
 
     private float CurrentReelResetRate {
         get;
@@ -119,6 +148,8 @@ public class InputController : MonoBehaviour
 	}
 
 	public void Update() {
+		Debug.Log(AverageKeyboardReelInput);
+		SetKeyboardReeling();
 		SetReelState();
 		if (reelState == ReelState.reelingLocked) {
 			return;
@@ -167,13 +198,22 @@ public class InputController : MonoBehaviour
         this.MouseInput = context.ReadValue<Vector2>() * rodSpeed;
     }
 
-    public void Reel(InputAction.CallbackContext context) {
+    public void ReelMouse(InputAction.CallbackContext context) {
 		if(reelState == ReelState.reelingLocked) {
 			return;
         }
         this.ReelInput -= context.ReadValue<Vector2>().y;
 		StartCoroutine(SetLastReelInput());
+	}
 
+	public void ReelKeyboard(InputAction.CallbackContext context) {
+		if (context.performed) {
+			if (this.ReelInputs.Count == keyboardInputListLength) {
+				this.ReelInputs.RemoveAt(0);
+			}
+			this.ReelInputs.Add(this.CurrentKeyboardReelInput);
+			this.CurrentKeyboardReelInput = 0;
+		}
 	}
 
 	public void Blur(InputAction.CallbackContext context) {
@@ -211,17 +251,26 @@ public class InputController : MonoBehaviour
 		}
 	}
 
+	private void SetKeyboardReeling() {
+		if (this.CurrentKeyboardReelInput < keyboardReelResetTime) {
+			this.CurrentKeyboardReelInput += Time.deltaTime;
+		} else {
+			this.CurrentKeyboardReelInput = 0;
+			this.ReelInputs.Clear();
+		}
+	}
+
 	private void SetReelState() {
-		if(this.ReelInput == reelStateThresholds[0]) {
+		if(this.ReelInput == scrollReelStateThresholds[0] && this.AverageKeyboardReelInput < keyboardReelStateThresholds[0]) {
 			reelState = ReelState.notReeling;
 			SetReelAudio(null);
-		} else if(this.ReelInput < reelStateThresholds[1]) {
+		} else if(this.ReelInput < scrollReelStateThresholds[1] || this.AverageKeyboardReelInput < keyboardReelStateThresholds[1]) {
 			reelState = ReelState.calmReeling;
 			SetReelAudio(reelAudio[0]);
-		} else if (this.ReelInput < reelStateThresholds[2]) {
+		} else if (this.ReelInput < scrollReelStateThresholds[2] || this.AverageKeyboardReelInput < keyboardReelStateThresholds[2]) {
 			reelState = ReelState.normalReeling;
 			SetReelAudio(reelAudio[1]);
-		} else{
+		} else if(this.ReelInput < scrollReelStateThresholds[3] || this.AverageKeyboardReelInput < keyboardReelStateThresholds[3]){
 			reelState = ReelState.fastReeling;
 			SetReelAudio(reelAudio[2]);
 		}

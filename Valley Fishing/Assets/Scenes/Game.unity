@@ -8183,13 +8183,20 @@ MonoBehaviour:
   reelState: 0
   playerInput: {fileID: 705276748}
   rodSpeed: 2
+  keyboardReelResetTime: 2
+  keyboardInputListLength: 5
   reelResetRate: 0.01
   completeReelResetTime: 0.3
   maxReelRate: 50
-  reelStateThresholds:
+  scrollReelStateThresholds:
   - 0
-  - 10
-  - 45
+  - 0
+  - 0
+  keyboardReelStateThresholds:
+  - 0
+  - 0.2
+  - 1
+  - 2
   reelAudio:
   - {fileID: 114896790}
   - {fileID: 372938268}
@@ -8197,9 +8204,8 @@ MonoBehaviour:
   playerArms: {fileID: 705276749}
   blurObject: {fileID: 515198709}
   blackObject: {fileID: 2071950620}
-  <ClickTrigger>k__BackingField: 0
-  <MouseInput>k__BackingField: {x: 0, y: 0}
   <ReelInput>k__BackingField: 0
+  <ReelInputs>k__BackingField: []
   <DisableThrowing>k__BackingField: 0
 --- !u!114 &705276748
 MonoBehaviour:
@@ -8374,6 +8380,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 3faa631c-4524-4cca-9fbd-519afbc9d87f
     m_ActionName: 'Player/Black[/Keyboard/b]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 705276747}
+        m_TargetAssemblyTypeName: InputController, Assembly-CSharp
+        m_MethodName: ReelKeyboard
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a526f7dc-373c-46f6-a117-16a22fd2252d
+    m_ActionName: 'Player/ReelKeyboard[/Keyboard/r]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
