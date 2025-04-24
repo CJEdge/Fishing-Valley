@@ -8180,33 +8180,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63d11d1087eca5c4082918c05d84d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reelState: 0
-  playerInput: {fileID: 705276748}
-  rodSpeed: 2
-  keyboardReelResetTime: 2
+  reelState: 1
   keyboardInputListLength: 5
-  reelResetRate: 0.01
-  completeReelResetTime: 0.3
-  maxReelRate: 50
-  scrollReelStateThresholds:
-  - 0
-  - 0
-  - 0
+  playerInput: {fileID: 705276748}
+  reelAudio:
+  - {fileID: 114896790}
+  - {fileID: 372938268}
+  - {fileID: 1860341690}
+  blurObject: {fileID: 515198709}
+  blackObject: {fileID: 2071950620}
+  playerArms: {fileID: 705276749}
   keyboardReelStateThresholds:
   - 0
   - 0.2
   - 1
   - 2
-  reelAudio:
-  - {fileID: 114896790}
-  - {fileID: 372938268}
-  - {fileID: 1860341690}
-  playerArms: {fileID: 705276749}
-  blurObject: {fileID: 515198709}
-  blackObject: {fileID: 2071950620}
-  <ReelInput>k__BackingField: 0
+  keyboardReelResetTime: 2
+  mouseReelStateThresholds:
+  - 10
+  - 45
+  mouseReelResetRate: 0.01
+  mouseCompleteReelResetTime: 0.3
+  mouseHorizontalSpeed: 2
+  maxMouseReelRate: 50
+  controllerReelStateThresholds:
+  - 0.3
+  - 2
+  controllerReelMultiplier: 1
+  controllerReelResetRate: 0.4
+  controllerCompleteReelResetTime: 0.5
+  controllerHorizontalSpeed: 200
+  maxControllerReelRate: 3
+  <HorizontalInput>k__BackingField: {x: 0, y: 0}
+  <MouseReelInput>k__BackingField: 0
+  <ControllerReelInput>k__BackingField: 0
   <ReelInputs>k__BackingField: []
-  <DisableThrowing>k__BackingField: 0
+  <DisableThrowing>k__BackingField: 1
 --- !u!114 &705276748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8233,7 +8242,19 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 705276747}
+        m_TargetAssemblyTypeName: InputController, Assembly-CSharp
+        m_MethodName: MoveHorizontalController
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 351f2ccd-1f9f-44bf-9bec-d62ac5c5f408
     m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
   - m_PersistentCalls:
@@ -8336,7 +8357,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 705276747}
         m_TargetAssemblyTypeName: InputController, Assembly-CSharp
-        m_MethodName: Reel
+        m_MethodName: ReelMouse
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8396,6 +8417,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: a526f7dc-373c-46f6-a117-16a22fd2252d
     m_ActionName: 'Player/ReelKeyboard[/Keyboard/r]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 705276747}
+        m_TargetAssemblyTypeName: InputController, Assembly-CSharp
+        m_MethodName: ReelController
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a8ac554a-3e57-4be0-9f5c-3ba5fc785ede
+    m_ActionName: 'Player/ReelController[/XInputControllerWindows/rightStick/right]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -12138,7 +12175,7 @@ Transform:
   m_GameObject: {fileID: 1715488062}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12175,7 +12212,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 20
+  m_Radius: 30
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1728472921
 GameObject:

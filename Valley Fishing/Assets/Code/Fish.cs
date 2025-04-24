@@ -235,7 +235,8 @@ public class Fish : MonoBehaviour
     }
 
     private void Move() {
-        rb.AddForce(this.InputController.MouseInput.x * fishSpeed, 0, 0);
+		Debug.Log(InputController.HorizontalInput);
+        rb.AddForce(this.InputController.HorizontalInput.x * fishSpeed, 0, 0);
     }
 
     private void Reel() {

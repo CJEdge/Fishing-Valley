@@ -23,38 +23,22 @@ public class InputController : MonoBehaviour
 
 	#region Serialized Fields
 
-	[SerializeField]
-    private PlayerInput playerInput;
-
-    [SerializeField]
-    private float rodSpeed;
-
-	[SerializeField]
-	private float keyboardReelResetTime;
+    
 
 	[SerializeField]
 	private int keyboardInputListLength;
 
-	[SerializeField]
-    private float reelResetRate;
+	
+
+   
+
+	[Header("Components")]
 
 	[SerializeField]
-	private float completeReelResetTime;
-
-    [SerializeField]
-    private float maxReelRate;
-
-	[SerializeField]
-	private List<float> scrollReelStateThresholds;
-
-	[SerializeField]
-	private List<float> keyboardReelStateThresholds;
+	private PlayerInput playerInput;
 
 	[SerializeField]
 	private AudioRandomizer[] reelAudio;
-
-	[SerializeField]
-	private PlayerArms playerArms;
 
 	[SerializeField]
 	private GameObject blurObject;
@@ -62,30 +46,90 @@ public class InputController : MonoBehaviour
 	[SerializeField]
 	private GameObject blackObject;
 
+	[SerializeField]
+	private PlayerArms playerArms;
 
-    #endregion
+	[Header("Variables")]
+
+	[Header("Keyboard Input")]
+
+	[SerializeField]
+	private List<float> keyboardReelStateThresholds;
+
+	[SerializeField]
+	private float keyboardReelResetTime;
+
+	[Header("Mouse Input")]
+
+	[SerializeField]
+	private List<float> mouseReelStateThresholds;
+
+	[SerializeField]
+	private float mouseReelResetRate;
+
+	[SerializeField]
+	private float mouseCompleteReelResetTime;
+
+	[SerializeField]
+	private float mouseHorizontalSpeed;
+
+	[SerializeField]
+	private float maxMouseReelRate;
+
+	[Header("Controller Input")]
+
+	[SerializeField]
+	private List<float> controllerReelStateThresholds;
+
+	[SerializeField]
+	private float controllerReelMultiplier;
+
+	[SerializeField]
+	private float controllerReelResetRate;
+
+	[SerializeField]
+	private float controllerCompleteReelResetTime;
+
+	[SerializeField]
+	private float controllerHorizontalSpeed;
+
+	[SerializeField]
+	private float maxControllerReelRate;
+
+	#endregion
 
 
-    #region Properties
+	#region Properties
 
 	public bool ClickTrigger {
 		get;
 		set;
     }
 
-    public Vector2 MouseInput {
+	[field:SerializeField]
+    public Vector2 HorizontalInput {
         get;
         set;
     }
-
 
 	[field:SerializeField]
-    public float ReelInput {
+    public float MouseReelInput {
         get;
         set;
     }
 
-	private float LastReelInput {
+	[field: SerializeField]
+	public float ControllerReelInput {
+		get;
+		set;
+	}
+
+	private float LastControllerReelInput {
+		get;
+		set;
+	}
+
+	private float LastMouseReelInput {
 		get;
 		set;
 	}
@@ -95,14 +139,17 @@ public class InputController : MonoBehaviour
 		set;
 	}
 
-	[field:SerializeField]
 	private float AverageKeyboardReelInput {
 		get {
-			float total = 0;
-			for (int i = 0; i < this.ReelInputs.Count; i++) {
-				total += this.ReelInputs[i];
+			if (this.ReelInputs.Count > 0) {
+				float total = 0;
+				for (int i = 0; i < this.ReelInputs.Count; i++) {
+					total += this.ReelInputs[i];
+				}
+				return total / this.ReelInputs.Count;
+			} else {
+				return 0;
 			}
-			return total / this.ReelInputs.Count;
 		}
 	}
 
@@ -112,12 +159,25 @@ public class InputController : MonoBehaviour
 		set;
 	} = new List<float>();
 
-    private float CurrentReelResetRate {
+	private Vector2 PreviousRightStickInput {
+		get;
+		set;
+	}
+
+	private float CurrentMouseReelResetRate {
         get;
         set;
     }
+	private float CurrentControllerReelResetRate {
+		get;
+		set;
+	}
 
-	private float CurrentCompleteReelResetTime {
+	private float CurrentMouseCompleteReelResetTime {
+		get;
+		set;
+	}
+	private float CurrentControllerCompleteReelResetTime {
 		get;
 		set;
 	}
@@ -148,7 +208,6 @@ public class InputController : MonoBehaviour
 	}
 
 	public void Update() {
-		Debug.Log(AverageKeyboardReelInput);
 		SetKeyboardReeling();
 		SetReelState();
 		if (reelState == ReelState.reelingLocked) {
@@ -185,7 +244,7 @@ public class InputController : MonoBehaviour
 	}
 
 	public void BeginReel() {
-		if(GameManager.Instance.CurrentLevel == 2) {
+		if(GameManager.Instance.CurrentLevel >= 1) {
 			this.StrafingEnabled = true;
 		}
 		this.DisableThrowing = false;
@@ -194,15 +253,15 @@ public class InputController : MonoBehaviour
 		playerArms.BeginReel();
 	}
 
-	public void MoveRod(InputAction.CallbackContext context) {
-        this.MouseInput = context.ReadValue<Vector2>() * rodSpeed;
+	public void MoveHorizontalMouse(InputAction.CallbackContext context) {
+        this.HorizontalInput = context.ReadValue<Vector2>() * mouseHorizontalSpeed;
     }
 
     public void ReelMouse(InputAction.CallbackContext context) {
 		if(reelState == ReelState.reelingLocked) {
 			return;
         }
-        this.ReelInput -= context.ReadValue<Vector2>().y;
+        this.MouseReelInput -= context.ReadValue<Vector2>().y;
 		StartCoroutine(SetLastReelInput());
 	}
 
@@ -214,6 +273,28 @@ public class InputController : MonoBehaviour
 			this.ReelInputs.Add(this.CurrentKeyboardReelInput);
 			this.CurrentKeyboardReelInput = 0;
 		}
+	}
+
+	public void ReelController(InputAction.CallbackContext context) {
+		Vector2 currentStick = context.ReadValue<Vector2>();
+		if (currentStick.magnitude < 0.5f) {
+			return;
+		}
+		Vector2 from = this.PreviousRightStickInput.normalized;
+		Vector2 to = currentStick.normalized;
+		float angle = Vector2.SignedAngle(from, to);
+		float rotationMagnitude = Mathf.Abs(angle);
+
+		if (angle > 0) {
+			this.ControllerReelInput = Mathf.Clamp(this.ControllerReelInput + rotationMagnitude / 360f, 0, maxControllerReelRate);
+		}
+
+		this.PreviousRightStickInput = currentStick;
+		StartCoroutine(SetLastReelInput());
+	}
+
+	public void MoveHorizontalController(InputAction.CallbackContext context) {
+		this.HorizontalInput = context.ReadValue<Vector2>() * controllerHorizontalSpeed;
 	}
 
 	public void Blur(InputAction.CallbackContext context) {
@@ -230,24 +311,43 @@ public class InputController : MonoBehaviour
 	#region Private Methods
 
 	private void CheckToResetReelInput() {
-		if (this.LastReelInput > this.ReelInput) {
-			if (this.CurrentCompleteReelResetTime < completeReelResetTime) {
-				this.CurrentCompleteReelResetTime += Time.deltaTime;
+
+		if (this.LastMouseReelInput > this.MouseReelInput) {
+			if (this.CurrentMouseCompleteReelResetTime < mouseCompleteReelResetTime) {
+				this.CurrentMouseCompleteReelResetTime += Time.deltaTime;
 			} else {
-				this.CurrentCompleteReelResetTime = 0;
-				this.ReelInput = 0;
+				this.CurrentMouseCompleteReelResetTime = 0;
+				this.MouseReelInput = 0;
 			}
 		} else {
-			this.CurrentCompleteReelResetTime = 0;
+			this.CurrentMouseCompleteReelResetTime = 0;
+		}
+
+		if (this.LastControllerReelInput > this.ControllerReelInput) {
+			if (this.CurrentControllerCompleteReelResetTime <controllerCompleteReelResetTime) {
+				this.CurrentControllerCompleteReelResetTime += Time.deltaTime;
+			} else {
+				this.CurrentControllerCompleteReelResetTime = 0;
+				this.ControllerReelInput = 0;
+			}
+		} else {
+			this.CurrentControllerCompleteReelResetTime = 0;
 		}
 	}
 
-    private void ReduceReelRate() {
-		if (this.CurrentReelResetRate < reelResetRate) {
-			this.CurrentReelResetRate += Time.deltaTime;
+	private void ReduceReelRate() {
+		if (this.CurrentMouseReelResetRate < mouseReelResetRate) {
+			this.CurrentMouseReelResetRate += Time.deltaTime;
 		} else {
-			this.CurrentReelResetRate = 0;
-			this.ReelInput = Mathf.Clamp(this.ReelInput - 1, 0, maxReelRate);
+			this.CurrentMouseReelResetRate = 0;
+			this.MouseReelInput = Mathf.Clamp(this.MouseReelInput - 1, 0, maxMouseReelRate);
+		}
+
+		if (this.CurrentControllerReelResetRate < controllerReelResetRate) {
+			this.CurrentControllerReelResetRate += Time.deltaTime;
+		} else {
+			this.CurrentControllerReelResetRate = 0;
+			this.ControllerReelInput = Mathf.Clamp(this.ControllerReelInput - 1, 0, maxControllerReelRate);
 		}
 	}
 
@@ -261,19 +361,45 @@ public class InputController : MonoBehaviour
 	}
 
 	private void SetReelState() {
-		if(this.ReelInput == scrollReelStateThresholds[0] && this.AverageKeyboardReelInput < keyboardReelStateThresholds[0]) {
+
+		if (this.MouseReelInput == 0 && this.ControllerReelInput == 0) {
+			if(this.ControllerReelInput > 0) {
+				return;
+			}
 			reelState = ReelState.notReeling;
 			SetReelAudio(null);
-		} else if(this.ReelInput < scrollReelStateThresholds[1] || this.AverageKeyboardReelInput < keyboardReelStateThresholds[1]) {
+		}
+
+		// Mouse
+		if (this.MouseReelInput < mouseReelStateThresholds[0] && this.MouseReelInput > 0) {
 			reelState = ReelState.calmReeling;
 			SetReelAudio(reelAudio[0]);
-		} else if (this.ReelInput < scrollReelStateThresholds[2] || this.AverageKeyboardReelInput < keyboardReelStateThresholds[2]) {
+		}
+		if (this.MouseReelInput < mouseReelStateThresholds[1] && this.MouseReelInput > mouseReelStateThresholds[0]) {
 			reelState = ReelState.normalReeling;
 			SetReelAudio(reelAudio[1]);
-		} else if(this.ReelInput < scrollReelStateThresholds[3] || this.AverageKeyboardReelInput < keyboardReelStateThresholds[3]){
+		}
+		if (this.MouseReelInput > mouseReelStateThresholds[1]) {
+				reelState = ReelState.fastReeling;
+			SetReelAudio(reelAudio[2]);
+		}
+
+		//Controller
+		if (this.ControllerReelInput < controllerReelStateThresholds[0] && this.ControllerReelInput > 0) {
+			reelState = ReelState.calmReeling;
+			SetReelAudio(reelAudio[0]);
+		}
+		if (this.ControllerReelInput < controllerReelStateThresholds[1] && this.ControllerReelInput > controllerReelStateThresholds[0]) {
+			reelState = ReelState.normalReeling;
+			SetReelAudio(reelAudio[1]);
+		}
+		if (this.ControllerReelInput > controllerReelStateThresholds[1]) {
 			reelState = ReelState.fastReeling;
 			SetReelAudio(reelAudio[2]);
 		}
+
+
+
 	}
 
 	private void SetReelAudio(AudioRandomizer audio) {
@@ -302,7 +428,8 @@ public class InputController : MonoBehaviour
 
 	private IEnumerator SetLastReelInput() {
 		yield return new WaitForEndOfFrame();
-		this.LastReelInput = this.ReelInput;
+		this.LastMouseReelInput = this.MouseReelInput;
+		this.LastControllerReelInput = this.ControllerReelInput;
 	}
 
 	#endregion
