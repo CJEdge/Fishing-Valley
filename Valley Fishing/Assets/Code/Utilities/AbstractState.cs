@@ -1,0 +1,61 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public abstract class AbstractState<T> : MonoBehaviour, IState<T> where T : Enum {
+
+
+	#region IState
+
+	[field: SerializeField]
+	public T CurrentState {
+		get;
+		private set;
+	}
+
+	#endregion
+
+
+	#region MonoBehaviour
+
+	public virtual void Awake() {
+		EnterState(this.CurrentState);
+	}
+
+	public virtual void Update() {
+		UpdateState(this.CurrentState);
+	}
+
+	#endregion
+
+
+	#region Abstract Methods
+
+	protected virtual void EnterState(T state) {
+
+	}
+
+	protected virtual void ExitState(T state) {
+
+	}
+	protected virtual void UpdateState(T state){
+
+	}
+
+	#endregion
+
+
+	#region Virtual Methods
+
+	public virtual void SetState(T state) {
+		if (!EqualityComparer<T>.Default.Equals(this.CurrentState, state)) {
+			ExitState(this.CurrentState);
+			this.CurrentState = state;
+			EnterState(this.CurrentState);
+		}
+	}
+
+	#endregion
+
+}

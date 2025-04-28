@@ -23,9 +23,6 @@ public class GameManager : MonoBehaviour
     #region Serialized Fields
 
     [SerializeField]
-    private InputController inputController;
-
-    [SerializeField]
     private FishController fishController;
 
     [SerializeField]
@@ -52,9 +49,8 @@ public class GameManager : MonoBehaviour
     #region Properties
 
     public InputController InputController {
-        get {
-            return inputController;
-        }
+		get;
+		set;
     }
 
     public FishController FishController {
@@ -86,11 +82,14 @@ public class GameManager : MonoBehaviour
 	#region Public Methods
 
 	public void Start() {
-		Cursor.lockState = CursorLockMode.Locked;
+		//Cursor.lockState = CursorLockMode.Locked;
 	}
 
 	public void Update() {
-        if (inputController.ClickTrigger) {
+        if (this.InputController.ClickTrigger) {
+			if(menuUI == null) {
+				return;
+			}
             if (menuUI.activeSelf) {
                 menuUI.SetActive(false);
 				VoiceOverManager.Instance.voiceOverstate = VoiceOverManager.VoiceOverState.inGameGreeting;

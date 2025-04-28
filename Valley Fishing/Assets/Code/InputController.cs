@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class InputController : MonoBehaviour
 {
@@ -198,16 +200,40 @@ public class InputController : MonoBehaviour
 		set;
 	}
 
-    #endregion
+	public Action OnPause {
+		get;
+		set;
+	}
+
+	private bool IsSwitchingScenes {
+		get;
+		set;
+	} = false;
+
+	private bool CanSwitchScenes {
+		get;
+		set;
+	} = false;
+
+	#endregion
 
 
-    #region Mono Behaviours
+	#region Mono Behaviours
+
+	public void Awake() {
+		GameManager.Instance.InputController = this;
+	}
+
 
 	public void Start() {
 		this.DisableThrowing = false;
+		StartCoroutine(EnableSceneSwitching());
 	}
 
 	public void Update() {
+		if(SceneManager.GetActiveScene().name == "Shop") {
+			return;
+		}
 		SetKeyboardReeling();
 		SetReelState();
 		if (reelState == ReelState.reelingLocked) {
@@ -305,10 +331,35 @@ public class InputController : MonoBehaviour
 		blackObject.SetActive(!blackObject.activeSelf);
 	}
 
+	public void Pause(InputAction.CallbackContext context) {
+		if (this.OnPause != null) {
+			this.OnPause.Invoke();
+		}
+	}
+
+	public void Shop(InputAction.CallbackContext context) {
+		if (context.performed) {
+			if (this.IsSwitchingScenes || !this.CanSwitchScenes) {
+				return;
+			}
+			this.IsSwitchingScenes = true;
+			if (SceneManager.GetActiveScene().name == "Shop") {
+				SceneManager.LoadScene("Game");
+			} else {
+				SceneManager.LoadScene("Shop");
+			}
+		}
+	}
+
 	#endregion
 
 
 	#region Private Methods
+
+	private IEnumerator EnableSceneSwitching() {
+		yield return new WaitForSeconds(1f);
+		this.CanSwitchScenes = true;
+	}
 
 	private void CheckToResetReelInput() {
 
