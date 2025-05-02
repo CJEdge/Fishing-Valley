@@ -20,6 +20,9 @@ public class PauseMenuUI : MonoBehaviour
 	}
 
 	public void OnDestroy() {
+		if(GameManager.Instance == null) {
+			return;
+		}
 		GameManager.Instance.InputController.OnPause -= PauseGame;
 	}
 

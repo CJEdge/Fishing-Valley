@@ -3,25 +3,74 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
+using System;
 
 public class AudioManager : Singleton<AudioManager>
 {
 
-	private EventInstance musicEventInstance;
+	#region Properties
 
-	private List<EventInstance> eventInstances;
-
-	public override void Awake() {
-		base.Awake();
-		eventInstances = new List<EventInstance>();
+	public EventInstance MusicEventInstance {
+		get;
+		set;
 	}
+
+	public EventInstance VoiceLineEventInstance {
+		get;
+		set;
+	}
+
+	public EventInstance LastVoiceLineEventInstance {
+		get;
+		set;
+	}
+
+	private List<EventInstance> eventInstances {
+		get;
+		set;
+	} = new List<EventInstance>();
+
+	public Action<EventInstance> VoiceLineOver {
+		get;
+		set;
+	}
+
+	#endregion
+
+
+	#region Mono Behaviours
 
 	public void OnDestroy() {
 		CleanUp();
 	}
 
+	#endregion
+
+
+	#region Public Methods
 	public void PlayOneShot(EventReference sound, Vector3 position) {
 		RuntimeManager.PlayOneShot(sound, position);
+	}
+
+	public void PlayVoiceOver(EventReference voiceLineReference) {
+		if (this.VoiceLineEventInstance.isValid()) {
+			this.VoiceLineEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+			this.VoiceLineEventInstance.release();
+			this.VoiceLineEventInstance.clearHandle();
+		}
+		this.VoiceLineEventInstance = CreateInstance(voiceLineReference);
+		this.LastVoiceLineEventInstance = this.VoiceLineEventInstance;
+		this.VoiceLineEventInstance.setParameterByName("Language", PlayerPrefsManager.Load(PlayerPrefsManager.Language));
+		this.VoiceLineEventInstance.start();
+		StartCoroutine(WaitForVoiceLineEnd());
+	}
+
+	public void SkipVoiceOver() {
+		this.VoiceLineEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+		this.VoiceLineEventInstance.release();
+		this.VoiceLineEventInstance.clearHandle();
+		this.VoiceLineOver?.Invoke(this.LastVoiceLineEventInstance);
+		StopCoroutine(WaitForVoiceLineEnd());
 	}
 
 	public EventInstance CreateInstance(EventReference eventReference) {
@@ -30,6 +79,21 @@ public class AudioManager : Singleton<AudioManager>
 		return eventInstance;
 	}
 
+	public void InitializeMusic(EventReference musicEventReference) {
+		CleanUp();
+		this.MusicEventInstance = CreateInstance(musicEventReference);
+		this.MusicEventInstance.start();
+	}
+
+	public void SetMusicParameter(string name, float value) {
+		this.MusicEventInstance.setParameterByName(name, value);
+	}
+
+	#endregion
+
+
+	#region Private Methods
+
 	private void CleanUp() {
 		foreach (EventInstance eventInstance in eventInstances) {
 			eventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
@@ -37,13 +101,20 @@ public class AudioManager : Singleton<AudioManager>
 		}
 	}
 
-	public void InitializeMusic(EventReference musicEventReference) {
-		CleanUp();
-		musicEventInstance = CreateInstance(musicEventReference);
-		musicEventInstance.start();
+	private IEnumerator WaitForVoiceLineEnd() {
+		PLAYBACK_STATE playbackState;
+		do {
+			if (this.VoiceLineEventInstance.isValid()) {
+				this.VoiceLineEventInstance.getPlaybackState(out playbackState);
+				yield return null;
+			} else {
+				yield break;
+			}
+		} while (playbackState != PLAYBACK_STATE.STOPPED);
+		this.VoiceLineEventInstance.release();
+		this.VoiceLineOver?.Invoke(this.LastVoiceLineEventInstance);
 	}
 
-	public void SetMusicParameter(string name, float value) {
-		musicEventInstance.setParameterByName(name, value);
-	}
+		#endregion
+
 }

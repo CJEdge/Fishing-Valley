@@ -211,13 +211,11 @@ public class Fish : MonoBehaviour
 
     public void FishCaught() {
 		fishState = FishState.caught;
-        VoiceOverManager.Instance.CaughtFishAudio = caughtAudios[Random.Range(0,caughtAudios.Count)];
-        VoiceOverManager.Instance.PlayCaughtFish();
-        GameManager.Instance.FishController.DisplayCaughtFish(fishName);
-		GameManager.Instance.InputController.reelState = InputController.ReelState.reelingLocked;
-		if (GameManager.Instance.CurrentLevel == 2) {
-			GameManager.Instance.InputController.StrafingEnabled = false;
-		}
+          //      GameManager.Instance.FishController.DisplayCaughtFish(fishName);
+		//GameManager.Instance.InputController.reelState = InputController.ReelState.reelingLocked;
+		//if (GameManager.Instance.CurrentLevel == 2) {
+		//	GameManager.Instance.InputController.StrafingEnabled = false;
+		//}
 	}
 
     #endregion
@@ -228,9 +226,9 @@ public class Fish : MonoBehaviour
     private void Strafe(bool strafeRight) {
 		strafeAudio.Play();
 		if (strafeRight) {
-            transform.position = new Vector3(GameManager.Instance.RightFishTransform.position.x, transform.position.y, transform.position.z);
+            //transform.position = new Vector3(GameManager.Instance.RightFishTransform.position.x, transform.position.y, transform.position.z);
         } else {
-            transform.position = new Vector3(GameManager.Instance.LeftFishTransform.position.x, transform.position.y, transform.position.z);
+            //transform.position = new Vector3(GameManager.Instance.LeftFishTransform.position.x, transform.position.y, transform.position.z);
         }
     }
 

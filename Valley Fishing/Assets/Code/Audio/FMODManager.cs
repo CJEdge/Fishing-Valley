@@ -6,30 +6,11 @@ using FMOD.Studio;
 
 public class FMODManager : Singleton<FMODManager>
 {
-	[SerializeField]
-	private EventReference leafSound;
+	public EventReference MenuGreeting;
 
-	[SerializeField]
-	private EventReference mainMenuMusic;
+	public EventReference Level1IntroCutscene;
 
-	[SerializeField]
-	private EventReference grassRootsMusic;
-
-	public EventReference LeafSound {
-		get {
-			return leafSound;
-		}
-	}
-
-	public EventReference MainMenuMusic {
-		get {
-			return mainMenuMusic;
-		}
-	}
-
-	public EventReference GrassRootsMusic {
-		get {
-			return grassRootsMusic;
-		}
-	}
+	public EventReference ApplyBaitTutorial;
+	
+	public EventReference CastRodTutorial;
 }

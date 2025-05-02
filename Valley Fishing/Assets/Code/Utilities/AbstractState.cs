@@ -17,6 +17,13 @@ public abstract class AbstractState<T> : MonoBehaviour, IState<T> where T : Enum
 	#endregion
 
 
+	#region Actions
+
+	public Action StateChanged;
+
+	#endregion
+
+
 	#region MonoBehaviour
 
 	public virtual void Awake() {
@@ -39,6 +46,7 @@ public abstract class AbstractState<T> : MonoBehaviour, IState<T> where T : Enum
 	protected virtual void ExitState(T state) {
 
 	}
+
 	protected virtual void UpdateState(T state){
 
 	}
@@ -53,6 +61,7 @@ public abstract class AbstractState<T> : MonoBehaviour, IState<T> where T : Enum
 			ExitState(this.CurrentState);
 			this.CurrentState = state;
 			EnterState(this.CurrentState);
+			StateChanged?.Invoke();
 		}
 	}
 

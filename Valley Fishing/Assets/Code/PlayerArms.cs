@@ -78,7 +78,7 @@ public class PlayerArms : MonoBehaviour
 		yield return new WaitForSeconds(throwWait);
 		landSfx.SetActive(false);
 		landSfx.SetActive(true);
-		GameManager.Instance.FishController.LandRod();
+		//GameManager.Instance.FishController.LandRod();
 	}
 
 }

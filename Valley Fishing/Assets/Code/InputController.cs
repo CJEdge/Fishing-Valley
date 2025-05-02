@@ -263,19 +263,15 @@ public class InputController : MonoBehaviour
 		if (this.DisableThrowing) {
 			return;
 		}
-		if (VoiceOverManager.Instance.voiceOverstate == VoiceOverManager.VoiceOverState.castRodTutorial ||
-			VoiceOverManager.Instance.voiceOverstate == VoiceOverManager.VoiceOverState.castRod) {
-			playerArms.ThrowRod();
-		}	
+		playerArms.ThrowRod();
 	}
 
 	public void BeginReel() {
-		if(GameManager.Instance.CurrentLevel >= 1) {
-			this.StrafingEnabled = true;
-		}
+		//if(GameManager.Instance.CurrentLevel >= 1) {
+		//	this.StrafingEnabled = true;
+		//}
 		this.DisableThrowing = false;
 		reelState = ReelState.notReeling;
-		VoiceOverManager.Instance.PlayReelingTutorial();
 		playerArms.BeginReel();
 	}
 
@@ -349,6 +345,15 @@ public class InputController : MonoBehaviour
 				SceneManager.LoadScene("Shop");
 			}
 		}
+	}
+
+	public void Skip(InputAction.CallbackContext context) {
+		if (!context.performed) {
+			return;
+		}
+		Debug.Log("skip");
+		AudioManager.Instance.SkipVoiceOver();
+		GameManager.Instance.LevelController.Skip();
 	}
 
 	#endregion

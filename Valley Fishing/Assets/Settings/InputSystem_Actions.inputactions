@@ -24,13 +24,13 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "LMB",
-                    "type": "Button",
-                    "id": "6c2ab1b8-8984-453a-af3d-a3c78ae1679a",
-                    "expectedControlType": "",
+                    "name": "ReelController",
+                    "type": "Value",
+                    "id": "a8ac554a-3e57-4be0-9f5c-3ba5fc785ede",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "ReelMouse",
@@ -51,9 +51,36 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Gaussian",
+                    "name": "LMB",
                     "type": "Button",
-                    "id": "613b6973-5145-465b-93fa-c50f5bf17d43",
+                    "id": "6c2ab1b8-8984-453a-af3d-a3c78ae1679a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "cc695439-b9d8-428d-a1dc-e57b2390a074",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Shop",
+                    "type": "Button",
+                    "id": "13258c80-e43a-44b3-8afa-d375f8935f75",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Skip",
+                    "type": "Button",
+                    "id": "890b7efa-b746-4a86-8d7e-a64c543a5bc4",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -69,27 +96,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ReelController",
-                    "type": "Value",
-                    "id": "a8ac554a-3e57-4be0-9f5c-3ba5fc785ede",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "Pause",
+                    "name": "Gaussian",
                     "type": "Button",
-                    "id": "cc695439-b9d8-428d-a1dc-e57b2390a074",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Shop",
-                    "type": "Button",
-                    "id": "13258c80-e43a-44b3-8afa-d375f8935f75",
+                    "id": "613b6973-5145-465b-93fa-c50f5bf17d43",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -424,6 +433,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Shop",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ab5c0044-c667-4f64-a526-f56cfb720ad9",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Skip",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
