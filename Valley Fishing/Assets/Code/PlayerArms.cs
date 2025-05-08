@@ -1,34 +1,74 @@
+using FMOD.Studio;
 using System.Collections;
 using UnityEngine;
 
 public class PlayerArms : MonoBehaviour
 {
-	[SerializeField]
-	private GameObject[]arms;
+	#region Serialized Fields
 
 	[SerializeField]
-	private InputController inputController;
-
-	[SerializeField]
-	private GameObject throwWindUpSfx;
+	private GameObject[] arms;
 
 	[SerializeField]
 	private float windUpLength;
 
 	[SerializeField]
-	private GameObject throwSfx;
-
-	[SerializeField]
 	private float throwWait;
 
-	[SerializeField]
-	private GameObject landSfx;
+	#endregion
 
-	public void ThrowRod() {
-		TurnOffAllArms();
-		StartCoroutine(StartThrowRod());
 
+	#region Properties
+
+	private LevelController LevelController {
+		get {
+			return GameManager.Instance.LevelController;
+		}
 	}
+
+	#endregion
+
+
+	#region Mono Behaviours
+
+	public void Start() {
+		GameManager.Instance.InputController.OnClick += Click;
+	}
+
+	#endregion
+
+
+	#region Private Methods
+
+	private void Click() {
+		switch (this.LevelController.CurrentState) {
+			case LevelController.State.Default:
+				break;
+			case LevelController.State.Cutscene:
+				break;
+			case LevelController.State.Idle:
+				break;
+			case LevelController.State.AttatchBait:
+				this.LevelController.SetState(LevelController.State.IdleWithBait);
+				break;
+			case LevelController.State.IdleWithBait:
+				TurnOffAllArms();
+				StartCoroutine(StartThrowRod());
+				break;
+			case LevelController.State.WaitingForBite:
+				break;
+			case LevelController.State.ReelingFish:
+				break;
+			case LevelController.State.FishCaught:
+				break;
+			default:
+				break;
+		}		
+	}
+
+	#endregion
+
+
 
 	public void BeginReel() {
 		TurnOffAllArms();
@@ -36,18 +76,12 @@ public class PlayerArms : MonoBehaviour
 	}
 
 	public void Reel() {
-		if (inputController.CurrentReelAudio == null) {
+		if(GameManager.Instance.InputController.reelState == InputController.ReelState.reelingLocked || GameManager.Instance.InputController.reelState == InputController.ReelState.notReeling) {
 			return;
 		}
-		if (!inputController.CurrentReelAudio.CurrentAudioSource.isPlaying) {
-			if (arms[2].activeSelf) {
-				TurnOffAllArms();
-				arms[3].SetActive(true);
-			} else {
-				TurnOffAllArms();
-				arms[2].SetActive(true);
-			}
-		}
+		PLAYBACK_STATE playbackState;
+		AudioManager.Instance.CurrentReelInstance.getPlaybackState(out playbackState);
+		Debug.Log(playbackState);
 	}
 
 	public void ResetArms() {
@@ -68,17 +102,13 @@ public class PlayerArms : MonoBehaviour
 	private IEnumerator StartThrowRod() {
 		TurnOffAllArms();
 		arms[1].SetActive(true);
-		throwWindUpSfx.SetActive(false);
-		throwWindUpSfx.SetActive(false);
+		AudioManager.Instance.PlayOneShot(FMODManager.Instance.ThrowRod,transform.position);
 		yield return new WaitForSeconds(windUpLength);
-		throwSfx.SetActive(false);
-		throwSfx.SetActive(true);
 		TurnOffAllArms();
 		arms[2].SetActive(true);
 		yield return new WaitForSeconds(throwWait);
-		landSfx.SetActive(false);
-		landSfx.SetActive(true);
-		//GameManager.Instance.FishController.LandRod();
+		AudioManager.Instance.PlayOneShot(FMODManager.Instance.LandRod, transform.position);
+		GameManager.Instance.LevelController.SetState(LevelController.State.WaitingForBite);
 	}
 
 }

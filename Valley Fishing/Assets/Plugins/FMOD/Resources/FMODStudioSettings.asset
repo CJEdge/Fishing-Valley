@@ -342,6 +342,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - SFX
   - VoiceLines
   BanksToLoad: []
   LiveUpdatePort: 9264

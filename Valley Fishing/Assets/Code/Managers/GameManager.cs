@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    #region Properties
+	#region Serialized Fields
 
-    public InputController InputController {
+	[SerializeField]
+	private List<Fish> fish;
+
+	#endregion
+
+
+	#region Properties
+
+	public InputController InputController {
 		get;
 		set;
     }
@@ -14,6 +22,12 @@ public class GameManager : Singleton<GameManager>
 	public LevelController LevelController {
 		get;
 		set;
+	}
+
+	public List<Fish> Fish {
+		get {
+			return fish;
+		}
 	}
 
 	#endregion

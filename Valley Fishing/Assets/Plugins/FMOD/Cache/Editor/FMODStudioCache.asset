@@ -48,6 +48,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-7876443682270912065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ThrowRod
+  m_EditorClassIdentifier: 
+  Path: event:/ThrowRod
+  Guid:
+    Data1: 815617258
+    Data2: 1078289329
+    Data3: 959533475
+    Data4: 1866417758
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5674214797675166295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +147,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2771572257022429482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ReelSound
+  m_EditorClassIdentifier: 
+  Path: event:/ReelSound
+  Guid:
+    Data1: 1721864051
+    Data2: 1315658186
+    Data3: -420499557
+    Data4: -533285298
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 3859954363161683041}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,17 +191,22 @@ MonoBehaviour:
   - {fileID: 1411835401192698514}
   - {fileID: 4198817137325428765}
   - {fileID: -5674214797675166295}
+  - {fileID: 4044576557258915901}
   EditorEvents:
   - {fileID: 8275348551447271378}
   - {fileID: 499214471770320581}
   - {fileID: -3446986194055164755}
   - {fileID: 9014083729698331932}
-  EditorParameters: []
+  - {fileID: 6131440335330445594}
+  - {fileID: -7876443682270912065}
+  - {fileID: -2771572257022429482}
+  EditorParameters:
+  - {fileID: 9051532304274249758}
   MasterBanks:
   - {fileID: 4198817137325428765}
   StringsBanks:
   - {fileID: 1411835401192698514}
-  cacheTime: 638818143008663580
+  cacheTime: 638821815393654411
   cacheVersion: 131624
 --- !u!114 &499214471770320581
 MonoBehaviour:
@@ -191,10 +251,54 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638818113805851603
+  lastModified: 638821815393365495
   FileSizes:
   - Name: Desktop
-    Value: 1018
+    Value: 1230
+  Exists: 1
+--- !u!114 &3859954363161683041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ReelSound/ReelRate
+  m_EditorClassIdentifier: 
+  Name: ReelRate
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 3569198777
+    data2: 789260755
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &4044576557258915901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638821815393654411
+  FileSizes:
+  - Name: Desktop
+    Value: 97664
   Exists: 1
 --- !u!114 &4198817137325428765
 MonoBehaviour:
@@ -211,10 +315,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638818113805831632
+  lastModified: 638821815393345550
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 1220
   Exists: 1
 --- !u!114 &5356618250590851719
 MonoBehaviour:
@@ -240,6 +344,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &6131440335330445594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/RodLand
+  m_EditorClassIdentifier: 
+  Path: event:/RodLand
+  Guid:
+    Data1: 1165659761
+    Data2: 1205779008
+    Data3: -640880454
+    Data4: -1017645718
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8275348551447271378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,3 +427,27 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &9051532304274249758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ReelRate
+  m_EditorClassIdentifier: 
+  Name: ReelRate
+  StudioPath: parameter:/ReelRate
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 3569198777
+    data2: 789260755
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1

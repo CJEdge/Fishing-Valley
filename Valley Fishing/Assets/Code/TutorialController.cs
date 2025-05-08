@@ -11,11 +11,13 @@ public class TutorialController : MonoBehaviour
 		set;
 	}
 
+	[field:SerializeField]
 	private bool AttatchBaitTutorialCompleted {
 		get;
 		set;
 	}
 
+	[field: SerializeField]
 	private bool CastRodTutorialCompleted {
 		get;
 		set;
@@ -35,6 +37,32 @@ public class TutorialController : MonoBehaviour
 	public void Start() {
 		this.LevelController.StateChanged += LevelStateChanged;
 		AudioManager.Instance.VoiceLineOver += VoiceOverFinished;
+		GameManager.Instance.InputController.OnClick += Click;
+	}
+
+	private void Click() {
+		switch (this.LevelController.CurrentState) {
+			case LevelController.State.Default:
+				break;
+			case LevelController.State.Cutscene:
+				break;
+			case LevelController.State.Idle:
+				this.AttatchBaitTutorialCompleted = true;
+				this.LevelController.SetState(LevelController.State.IdleWithBait);
+				break;
+			case LevelController.State.AttatchBait:
+				break;
+			case LevelController.State.IdleWithBait:
+				break;
+			case LevelController.State.WaitingForBite:
+				break;
+			case LevelController.State.ReelingFish:
+				break;
+			case LevelController.State.FishCaught:
+				break;
+			default:
+				break;
+		}
 	}
 
 	#endregion
@@ -56,6 +84,8 @@ public class TutorialController : MonoBehaviour
 				this.CurrentTutorialEventInstance = AudioManager.Instance.VoiceLineEventInstance;
 				break;
 			case LevelController.State.AttatchBait:
+				break;
+			case LevelController.State.IdleWithBait:
 				if (this.CastRodTutorialCompleted) {
 					return;
 				}
@@ -78,13 +108,12 @@ public class TutorialController : MonoBehaviour
 	#region Private Methods
 
 	private void VoiceOverFinished(EventInstance finishedEvent) {
-		if (this.CurrentTutorialEventInstance.handle != finishedEvent.handle) {
-			return;
-		}
 		switch (this.LevelController.CurrentState) {
+			case LevelController.State.Cutscene:
+				LevelController.SetState(LevelController.State.Idle);
+				break;
 			case LevelController.State.Idle:
-				this.AttatchBaitTutorialCompleted = true;
-				this.LevelController.SetState(LevelController.State.AttatchBait);
+				LevelController.SetState(LevelController.State.AttatchBait);
 				break;
 			case LevelController.State.AttatchBait:
 				break;

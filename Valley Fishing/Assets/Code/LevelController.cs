@@ -9,6 +9,12 @@ public class LevelController : AbstractState<LevelController.State> {
 	[SerializeField]
 	private TutorialController tutorialController;
 
+	[SerializeField]
+	private Transform gameplayContainer;
+
+	[SerializeField]
+	private Transform fishSpawnTransform;
+
 	#endregion
 
 
@@ -19,6 +25,7 @@ public class LevelController : AbstractState<LevelController.State> {
 		Cutscene,
 		Idle,
 		AttatchBait,
+		IdleWithBait,
 		WaitingForBite,
 		ReelingFish,
 		FishCaught
@@ -32,14 +39,16 @@ public class LevelController : AbstractState<LevelController.State> {
 				break;
 			case State.Cutscene:
 				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.Level1IntroCutscene);
-				StartCoroutine(WaitAndEndCutscene(10));
 				break;
 			case State.Idle:
 				tutorialController.LevelStateChanged();
 				break;
 			case State.AttatchBait:
 				break;
+			case State.IdleWithBait:
+				break;
 			case State.WaitingForBite:
+				StartCoroutine(WaitForBite());
 				break;
 			case State.ReelingFish:
 				break;
@@ -58,11 +67,12 @@ public class LevelController : AbstractState<LevelController.State> {
 			case State.Default:
 				break;
 			case State.Cutscene:
-				StartCoroutine(WaitAndEndCutscene(0));
 				break;
 			case State.Idle:
 				break;
 			case State.AttatchBait:
+				break;
+			case State.IdleWithBait:
 				break;
 			case State.WaitingForBite:
 				break;
@@ -78,12 +88,11 @@ public class LevelController : AbstractState<LevelController.State> {
 
 	#region Private Methods
 
-	private IEnumerator WaitAndEndCutscene(int waitTime) {
-		yield return new WaitForSeconds(waitTime);
-		AudioManager.Instance.SkipVoiceOver();
-		if (this.CurrentState == State.Cutscene) {
-			SetState(State.Idle);
-		}
+	private IEnumerator WaitForBite() {
+		yield return new WaitForSeconds(3);
+		Fish fishInstance = Instantiate(GameManager.Instance.Fish[0], fishSpawnTransform.position, Quaternion.identity);
+		fishInstance.transform.parent = gameplayContainer;
+		SetState(State.ReelingFish);
 	}
 
 	#endregion

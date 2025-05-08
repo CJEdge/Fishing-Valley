@@ -40,9 +40,6 @@ public class InputController : MonoBehaviour
 	private PlayerInput playerInput;
 
 	[SerializeField]
-	private AudioRandomizer[] reelAudio;
-
-	[SerializeField]
 	private GameObject blurObject;
 
 	[SerializeField]
@@ -103,10 +100,10 @@ public class InputController : MonoBehaviour
 
 	#region Properties
 
-	public bool ClickTrigger {
+	public Action OnClick {
 		get;
 		set;
-    }
+	}
 
 	[field:SerializeField]
     public Vector2 HorizontalInput {
@@ -189,11 +186,6 @@ public class InputController : MonoBehaviour
 		set;
 	}
 
-	public AudioRandomizer CurrentReelAudio {
-		get;
-		set;
-	}
-
 	[field:SerializeField]
 	public bool DisableThrowing {
 		get;
@@ -250,29 +242,15 @@ public class InputController : MonoBehaviour
 
 	public void Click(InputAction.CallbackContext context) {
 		if (context.performed) {
-			this.ClickTrigger = true;
+			OnClick?.Invoke();
 			CastRod();
-			this.DisableThrowing = true;
-
-		} else {
-			this.ClickTrigger = false;
-        }
+		}
 	}
 
 	public void CastRod() {
 		if (this.DisableThrowing) {
 			return;
 		}
-		playerArms.ThrowRod();
-	}
-
-	public void BeginReel() {
-		//if(GameManager.Instance.CurrentLevel >= 1) {
-		//	this.StrafingEnabled = true;
-		//}
-		this.DisableThrowing = false;
-		reelState = ReelState.notReeling;
-		playerArms.BeginReel();
 	}
 
 	public void MoveHorizontalMouse(InputAction.CallbackContext context) {
@@ -419,63 +397,36 @@ public class InputController : MonoBehaviour
 	private void SetReelState() {
 
 		if (this.MouseReelInput == 0 && this.ControllerReelInput == 0) {
-			if(this.ControllerReelInput > 0) {
-				return;
-			}
 			reelState = ReelState.notReeling;
-			SetReelAudio(null);
 		}
 
 		// Mouse
 		if (this.MouseReelInput < mouseReelStateThresholds[0] && this.MouseReelInput > 0) {
 			reelState = ReelState.calmReeling;
-			SetReelAudio(reelAudio[0]);
 		}
 		if (this.MouseReelInput < mouseReelStateThresholds[1] && this.MouseReelInput > mouseReelStateThresholds[0]) {
 			reelState = ReelState.normalReeling;
-			SetReelAudio(reelAudio[1]);
 		}
 		if (this.MouseReelInput > mouseReelStateThresholds[1]) {
-				reelState = ReelState.fastReeling;
-			SetReelAudio(reelAudio[2]);
+			reelState = ReelState.fastReeling;
 		}
 
 		//Controller
 		if (this.ControllerReelInput < controllerReelStateThresholds[0] && this.ControllerReelInput > 0) {
 			reelState = ReelState.calmReeling;
-			SetReelAudio(reelAudio[0]);
 		}
 		if (this.ControllerReelInput < controllerReelStateThresholds[1] && this.ControllerReelInput > controllerReelStateThresholds[0]) {
 			reelState = ReelState.normalReeling;
-			SetReelAudio(reelAudio[1]);
 		}
 		if (this.ControllerReelInput > controllerReelStateThresholds[1]) {
 			reelState = ReelState.fastReeling;
-			SetReelAudio(reelAudio[2]);
 		}
 
-
+		if(reelState == ReelState.notReeling) {
+			return;
+		}
 
 	}
-
-	private void SetReelAudio(AudioRandomizer audio) {
-		this.CurrentReelAudio = audio;
-		if (audio != null) {
-			if (audio.CurrentAudioSource != null) {
-				if (audio.CurrentAudioSource.isPlaying) {
-					return;
-				}
-			}
-		}
-		for (int i = 0; i < reelAudio.Length; i++) {
-			reelAudio[i].gameObject.SetActive(false);
-        }
-		if (audio != null) {
-			if (!audio.gameObject.activeSelf) {
-				audio.gameObject.SetActive(true);
-			}
-		}
-    }
 
 	#endregion
 

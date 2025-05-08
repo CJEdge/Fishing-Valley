@@ -6,6 +6,8 @@ using FMOD.Studio;
 
 public class FMODManager : Singleton<FMODManager>
 {
+	[Header("VoiceOver")]
+
 	public EventReference MenuGreeting;
 
 	public EventReference Level1IntroCutscene;
@@ -13,4 +15,12 @@ public class FMODManager : Singleton<FMODManager>
 	public EventReference ApplyBaitTutorial;
 	
 	public EventReference CastRodTutorial;
+
+	[Header("SFX")]
+
+	public EventReference ThrowRod;
+
+	public EventReference LandRod;
+
+	public EventReference ReelSound;
 }

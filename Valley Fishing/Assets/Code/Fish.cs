@@ -62,15 +62,6 @@ public class Fish : MonoBehaviour
 	[SerializeField]
 	private float swimAwaySpeed;
 
-	[SerializeField]
-	private List<GameObject> reelAudioSources;
-
-    [SerializeField]
-    private List<AudioSource> caughtAudios;
-
-	[SerializeField]
-	private AudioSource strafeAudio;
-
     [SerializeField]
     private Rigidbody rb;
 
@@ -107,12 +98,6 @@ public class Fish : MonoBehaviour
 			return GameManager.Instance.InputController;
 		}
 	}
-
-    public float CaughtFishTime {
-        get {
-            return caughtAudios[0].clip.length;
-        }
-    }
 
 	#endregion
 
@@ -182,22 +167,6 @@ public class Fish : MonoBehaviour
     #region Public Methods
 
     public void PlayActivitySFX() {
-        switch (activityLevel) {
-            case ActivityLevel.none:
-				for (int i = 0; i < reelAudioSources.Count; i++) {
-					reelAudioSources[i].SetActive(false);
-				}
-                break;
-            case ActivityLevel.calm:
-                reelAudioSources[0].SetActive(true);
-                break;
-            case ActivityLevel.medium:
-                reelAudioSources[1].SetActive(true);
-                break;
-            case ActivityLevel.active:
-                reelAudioSources[2].SetActive(true);
-                break;
-		}
     }
 
 	public void EnableVisuals(bool enable) {
@@ -224,7 +193,6 @@ public class Fish : MonoBehaviour
     #region Private Methods
 
     private void Strafe(bool strafeRight) {
-		strafeAudio.Play();
 		if (strafeRight) {
             //transform.position = new Vector3(GameManager.Instance.RightFishTransform.position.x, transform.position.y, transform.position.z);
         } else {
@@ -272,10 +240,8 @@ public class Fish : MonoBehaviour
 			this.IsCentred = false;
 		}
 		if (this.IsCentred != this.LastIsCentred && !this.IsCentred) {
-			reelAudioSources[3].SetActive(true);
 		}
 		if (this.IsCentred) {
-			reelAudioSources[3].SetActive(false);
 		}
 		this.LastIsCentred = this.IsCentred;
 	}
