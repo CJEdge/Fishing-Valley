@@ -192,6 +192,11 @@ public class InputController : MonoBehaviour
 		set;
 	}
 
+	public int ReelSpeed {
+		get;
+		set;
+	}
+
 	public Action OnPause {
 		get;
 		set;
@@ -422,10 +427,31 @@ public class InputController : MonoBehaviour
 			reelState = ReelState.fastReeling;
 		}
 
-		if(reelState == ReelState.notReeling) {
+		switch (reelState) {
+			case ReelState.reelingLocked:
+				this.ReelSpeed = 0;
+				break;
+			case ReelState.notReeling:
+				this.ReelSpeed = 0;
+				break;
+			case ReelState.calmReeling:
+				this.ReelSpeed = 1;
+				break;
+			case ReelState.normalReeling:
+				this.ReelSpeed = 2;
+				break;
+			case ReelState.fastReeling:
+				this.ReelSpeed = 3;
+				break;
+			default:
+				break;
+		}
+
+		if (reelState == ReelState.notReeling) {
 			return;
 		}
 
+		
 	}
 
 	#endregion

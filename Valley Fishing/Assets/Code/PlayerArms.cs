@@ -76,12 +76,7 @@ public class PlayerArms : MonoBehaviour
 	}
 
 	public void Reel() {
-		if(GameManager.Instance.InputController.reelState == InputController.ReelState.reelingLocked || GameManager.Instance.InputController.reelState == InputController.ReelState.notReeling) {
-			return;
-		}
-		PLAYBACK_STATE playbackState;
-		AudioManager.Instance.CurrentReelInstance.getPlaybackState(out playbackState);
-		Debug.Log(playbackState);
+		AudioManager.Instance.SetReelRate(GameManager.Instance.InputController.ReelSpeed);
 	}
 
 	public void ResetArms() {
@@ -109,6 +104,7 @@ public class PlayerArms : MonoBehaviour
 		yield return new WaitForSeconds(throwWait);
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.LandRod, transform.position);
 		GameManager.Instance.LevelController.SetState(LevelController.State.WaitingForBite);
+		AudioManager.Instance.PlayReelSound(FMODManager.Instance.ReelSound);
 	}
 
 }

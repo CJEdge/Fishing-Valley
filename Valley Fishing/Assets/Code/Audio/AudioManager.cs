@@ -81,26 +81,12 @@ public class AudioManager : Singleton<AudioManager>
 	public void PlayReelSound(EventReference reelSound) {
 		this.CurrentReelInstance = CreateInstance(reelSound);
 		int reelSpeed = 0;
-		switch (GameManager.Instance.InputController.reelState) {
-			case InputController.ReelState.reelingLocked:
-				break;
-			case InputController.ReelState.notReeling:
-				break;
-			case InputController.ReelState.calmReeling:
-				reelSpeed = 1;
-				break;
-			case InputController.ReelState.normalReeling:
-				reelSpeed = 2;
-				break;
-			case InputController.ReelState.fastReeling:
-				reelSpeed = 3;
-				break;
-			default:
-				break;
-		}
 		this.CurrentReelInstance.setParameterByName("ReelRate", reelSpeed);
-		this.VoiceLineEventInstance.start();
+		this.CurrentReelInstance.start();
+	}
 
+	public void SetReelRate(float reelSpeed) {
+		this.CurrentReelInstance.setParameterByName("ReelRate", reelSpeed);
 	}
 
 	public EventInstance CreateInstance(EventReference eventReference) {

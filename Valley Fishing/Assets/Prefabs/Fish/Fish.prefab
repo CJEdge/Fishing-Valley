@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cfea783698d71e4bbd349cdf5b0cf9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishState: 0
+  <CurrentState>k__BackingField: 0
   activityLevel: 3
   movementDirection: 0
   fishName: 
@@ -142,7 +142,7 @@ MonoBehaviour:
   strafeCount: 0
   strafeFrequency: 2
   centreThreshold: 30
-  reelSpeed: 500
+  reelSpeed: 300
   swimAwaySpeed: 100
   rb: {fileID: 6682323996151832369}
   visuals: {fileID: 1885243994461742159}

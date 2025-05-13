@@ -6794,7 +6794,7 @@ MonoBehaviour:
   maxMouseReelRate: 50
   controllerReelStateThresholds:
   - 0.3
-  - 2
+  - 1.8
   controllerReelMultiplier: 1
   controllerReelResetRate: 0.4
   controllerCompleteReelResetTime: 0.5
@@ -8935,6 +8935,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 636b13f6267cadc44b8fe4da555894e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <AttatchBaitTutorialCompleted>k__BackingField: 0
+  <CastRodTutorialCompleted>k__BackingField: 0
 --- !u!4 &1590889712
 Transform:
   m_ObjectHideFlags: 0
