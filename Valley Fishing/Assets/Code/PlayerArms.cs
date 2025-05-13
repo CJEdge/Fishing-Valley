@@ -99,6 +99,7 @@ public class PlayerArms : MonoBehaviour
 		arms[1].SetActive(true);
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.ThrowRod,transform.position);
 		yield return new WaitForSeconds(windUpLength);
+		AudioManager.Instance.SkipVoiceOver();
 		TurnOffAllArms();
 		arms[2].SetActive(true);
 		yield return new WaitForSeconds(throwWait);

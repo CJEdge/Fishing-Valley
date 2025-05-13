@@ -75,6 +75,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5880534265287757310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MenuMainMenu/Language
+  m_EditorClassIdentifier: 
+  Name: Language
+  StudioPath: 
+  Min: 0
+  Max: 11
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-5674214797675166295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,10 +114,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/VoiceLines.bank
   Name: VoiceLines
   StudioPath: bank:/VoiceLines
-  lastModified: 638818143008663580
+  lastModified: 638827743424428436
   FileSizes:
   - Name: Desktop
-    Value: 310400
+    Value: 337600
   Exists: 1
 --- !u!114 &-5398296364418139124
 MonoBehaviour:
@@ -175,6 +199,54 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4500
+--- !u!114 &-2727829228033174288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MenuPlay/Language
+  m_EditorClassIdentifier: 
+  Name: Language
+  StudioPath: 
+  Min: 0
+  Max: 11
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-1105329995548291969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MenuSettings/Language
+  m_EditorClassIdentifier: 
+  Name: Language
+  StudioPath: 
+  Min: 0
+  Max: 11
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,12 +272,15 @@ MonoBehaviour:
   - {fileID: 6131440335330445594}
   - {fileID: -7876443682270912065}
   - {fileID: -2771572257022429482}
+  - {fileID: 4706220048481617848}
+  - {fileID: 752209927725120716}
+  - {fileID: 5646414175186405039}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4198817137325428765}
   StringsBanks:
   - {fileID: 1411835401192698514}
-  cacheTime: 638826980067651898
+  cacheTime: 638827743424428436
   cacheVersion: 131624
 --- !u!114 &499214471770320581
 MonoBehaviour:
@@ -235,6 +310,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &752209927725120716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MenuPlay
+  m_EditorClassIdentifier: 
+  Path: event:/MenuPlay
+  Guid:
+    Data1: 421587335
+    Data2: 1296107241
+    Data3: -1961657963
+    Data4: -1472280975
+  Banks:
+  - {fileID: -5674214797675166295}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -2727829228033174288}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &1411835401192698514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,10 +353,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638826959534696017
+  lastModified: 638827743421686795
   FileSizes:
   - Name: Desktop
-    Value: 1230
+    Value: 1356
   Exists: 1
 --- !u!114 &3859954363161683041
 MonoBehaviour:
@@ -314,11 +417,39 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638826959534676096
+  lastModified: 638827743421665905
   FileSizes:
   - Name: Desktop
     Value: 1036
   Exists: 1
+--- !u!114 &4706220048481617848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MenuSettings
+  m_EditorClassIdentifier: 
+  Path: event:/MenuSettings
+  Guid:
+    Data1: 1901563736
+    Data2: 1170693328
+    Data3: 2107169184
+    Data4: 8689953
+  Banks:
+  - {fileID: -5674214797675166295}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -1105329995548291969}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &5356618250590851719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,6 +474,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &5646414175186405039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MenuMainMenu
+  m_EditorClassIdentifier: 
+  Path: event:/MenuMainMenu
+  Guid:
+    Data1: 711317199
+    Data2: 1260973778
+    Data3: 1212074132
+    Data4: -571899091
+  Banks:
+  - {fileID: -5674214797675166295}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5880534265287757310}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6131440335330445594
 MonoBehaviour:
   m_ObjectHideFlags: 0

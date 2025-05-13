@@ -24,25 +24,22 @@ public class GameManager : Singleton<GameManager>
 		set;
 	}
 
+	public MainMenuController MainMenuController {
+		get;
+		set;
+	}
+
 	public List<Fish> Fish {
 		get {
 			return fish;
 		}
 	}
 
-	#endregion
-
-
-	#region Mono Behaviours
-
-	public void Start() {
-
+	public string CurrentFishName {
+		get;
+		set;
 	}
 
-	public void Update() {
-
-    }
-
-    #endregion
+	#endregion
 
 }

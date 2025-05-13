@@ -71,6 +71,12 @@ public class Fish : AbstractState<Fish.State>
 
     #region Properties
 
+	public string FishName {
+		get {
+			return fishName;
+		}
+	}
+
     private int CurrentStrafeCount {
         get;
         set;
@@ -182,7 +188,7 @@ public class Fish : AbstractState<Fish.State>
 	}
 
 	public void FishCaught() {
-		GameManager.Instance.LevelController.SetState(LevelController.State.AttatchBait);
+		GameManager.Instance.LevelController.SetState(LevelController.State.FishCaught);
 		Destroy(gameObject);
 	}
 

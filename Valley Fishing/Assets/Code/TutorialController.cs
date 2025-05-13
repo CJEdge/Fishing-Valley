@@ -40,7 +40,7 @@ public class TutorialController : MonoBehaviour
 		GameManager.Instance.InputController.OnClick += Click;
 	}
 
-	private void Click() {
+	public void Click() {
 		switch (this.LevelController.CurrentState) {
 			case LevelController.State.Default:
 				break;
@@ -53,6 +53,7 @@ public class TutorialController : MonoBehaviour
 			case LevelController.State.AttatchBait:
 				break;
 			case LevelController.State.IdleWithBait:
+				this.CastRodTutorialCompleted = true;
 				break;
 			case LevelController.State.WaitingForBite:
 				break;

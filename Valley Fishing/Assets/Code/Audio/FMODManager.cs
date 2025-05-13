@@ -10,6 +10,12 @@ public class FMODManager : Singleton<FMODManager>
 
 	public EventReference MenuGreeting;
 
+	public EventReference MenuPlay;
+
+	public EventReference MenuSettings;
+
+	public EventReference MainMenu;
+
 	public EventReference Level1IntroCutscene;
 
 	public EventReference ApplyBaitTutorial;

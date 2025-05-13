@@ -71,6 +71,7 @@ public class AudioManager : Singleton<AudioManager>
 	}
 
 	public void SkipVoiceOver() {
+		Debug.Log("skipVoiceover");
 		this.VoiceLineEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 		this.VoiceLineEventInstance.release();
 		this.VoiceLineEventInstance.clearHandle();

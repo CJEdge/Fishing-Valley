@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85be8103c867a0c42a8041f53d94b16c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fish:
+  - {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
 --- !u!114 &1583213601024685545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,6 +79,27 @@ MonoBehaviour:
       Data3: -954455115
       Data4: -221744988
     Path: event:/MenuIntro
+  MenuPlay:
+    Guid:
+      Data1: 421587335
+      Data2: 1296107241
+      Data3: -1961657963
+      Data4: -1472280975
+    Path: event:/MenuPlay
+  MenuSettings:
+    Guid:
+      Data1: 1901563736
+      Data2: 1170693328
+      Data3: 2107169184
+      Data4: 8689953
+    Path: event:/MenuSettings
+  MainMenu:
+    Guid:
+      Data1: 711317199
+      Data2: 1260973778
+      Data3: 1212074132
+      Data4: -571899091
+    Path: event:/MenuMainMenu
   Level1IntroCutscene:
     Guid:
       Data1: -2051325276
@@ -98,3 +121,24 @@ MonoBehaviour:
       Data3: -2006409050
       Data4: 99920702
     Path: event:/CastRodTutorial
+  ThrowRod:
+    Guid:
+      Data1: 815617258
+      Data2: 1078289329
+      Data3: 959533475
+      Data4: 1866417758
+    Path: event:/ThrowRod
+  LandRod:
+    Guid:
+      Data1: 1165659761
+      Data2: 1205779008
+      Data3: -640880454
+      Data4: -1017645718
+    Path: event:/RodLand
+  ReelSound:
+    Guid:
+      Data1: 1721864051
+      Data2: 1315658186
+      Data3: -420499557
+      Data4: -533285298
+    Path: event:/ReelSound

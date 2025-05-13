@@ -136,7 +136,7 @@ MonoBehaviour:
   <CurrentState>k__BackingField: 0
   activityLevel: 3
   movementDirection: 0
-  fishName: 
+  fishName: Trout
   isStrafer: 0
   fishSpeed: 2
   strafeCount: 0
@@ -146,6 +146,8 @@ MonoBehaviour:
   swimAwaySpeed: 100
   rb: {fileID: 6682323996151832369}
   visuals: {fileID: 1885243994461742159}
+  <FailedCatchTime>k__BackingField: 0
+  <CatchStarted>k__BackingField: 0
 --- !u!54 &6682323996151832369
 Rigidbody:
   m_ObjectHideFlags: 0

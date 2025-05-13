@@ -105,6 +105,16 @@ public class InputController : MonoBehaviour
 		set;
 	}
 
+	public Action OnSkip {
+		get;
+		set;
+	}
+
+	public Action OnPause {
+		get;
+		set;
+	}
+
 	[field:SerializeField]
     public Vector2 HorizontalInput {
         get;
@@ -195,12 +205,7 @@ public class InputController : MonoBehaviour
 	public int ReelSpeed {
 		get;
 		set;
-	}
-
-	public Action OnPause {
-		get;
-		set;
-	}
+	}	
 
 	private bool IsSwitchingScenes {
 		get;
@@ -290,9 +295,7 @@ public class InputController : MonoBehaviour
 		float angle = Vector2.SignedAngle(from, to);
 		float rotationMagnitude = Mathf.Abs(angle);
 
-		if (angle > 0) {
-			this.ControllerReelInput = Mathf.Clamp(this.ControllerReelInput + rotationMagnitude / 360f, 0, maxControllerReelRate);
-		}
+		this.ControllerReelInput = Mathf.Clamp(this.ControllerReelInput + (rotationMagnitude / 360f), 0f, maxControllerReelRate);
 
 		this.PreviousRightStickInput = currentStick;
 		StartCoroutine(SetLastReelInput());
@@ -334,9 +337,9 @@ public class InputController : MonoBehaviour
 		if (!context.performed) {
 			return;
 		}
-		Debug.Log("skip");
 		AudioManager.Instance.SkipVoiceOver();
 		GameManager.Instance.LevelController.Skip();
+		OnSkip?.Invoke();
 	}
 
 	#endregion

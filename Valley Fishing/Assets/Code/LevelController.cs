@@ -15,6 +15,20 @@ public class LevelController : AbstractState<LevelController.State> {
 	[SerializeField]
 	private Transform fishSpawnTransform;
 
+	[SerializeField]
+	private FishView fishView;
+
+	#endregion
+
+
+	#region Properties
+
+	public TutorialController TutorialController {
+		get {
+			return tutorialController;
+		}
+	}
+
 	#endregion
 
 
@@ -53,6 +67,7 @@ public class LevelController : AbstractState<LevelController.State> {
 			case State.ReelingFish:
 				break;
 			case State.FishCaught:
+				fishView.EnableFishUI(true);
 				break;
 		}
 	}
@@ -91,6 +106,7 @@ public class LevelController : AbstractState<LevelController.State> {
 	private IEnumerator WaitForBite() {
 		yield return new WaitForSeconds(3);
 		Fish fishInstance = Instantiate(GameManager.Instance.Fish[0], fishSpawnTransform.position, Quaternion.identity);
+		GameManager.Instance.CurrentFishName = fishInstance.FishName;
 		fishInstance.transform.parent = gameplayContainer;
 		SetState(State.ReelingFish);
 	}
