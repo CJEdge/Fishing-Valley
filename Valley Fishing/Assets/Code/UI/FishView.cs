@@ -38,7 +38,7 @@ public class FishView : MonoBehaviour
 
 	public void EnableFishUI(bool enable) {
 		for (int i = 0; i < GameManager.Instance.Fish.Count; i++) {
-			if (GameManager.Instance.Fish[i].FishName == GameManager.Instance.CurrentFishName) {
+			if (GameManager.Instance.Fish[i].name == GameManager.Instance.CurrentFishName) {
 				fishUis[i].SetActive(enable);
 			}
 
@@ -63,8 +63,5 @@ public class FishView : MonoBehaviour
 	}
 
 	#endregion
-
-
-
 
 }

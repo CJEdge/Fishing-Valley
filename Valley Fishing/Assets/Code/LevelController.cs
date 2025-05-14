@@ -105,8 +105,19 @@ public class LevelController : AbstractState<LevelController.State> {
 
 	private IEnumerator WaitForBite() {
 		yield return new WaitForSeconds(3);
-		Fish fishInstance = Instantiate(GameManager.Instance.Fish[0], fishSpawnTransform.position, Quaternion.identity);
-		GameManager.Instance.CurrentFishName = fishInstance.FishName;
+		int fishIndex = 0;
+		float randomValue = UnityEngine.Random.value;
+		float cumulative = 0f;
+		for (int i = 0; i < GameManager.Instance.CurrentBait.CatchChances.Length; i++) {
+			cumulative += GameManager.Instance.CurrentBait.CatchChances[i];
+			if (randomValue < cumulative) {
+				fishIndex = i;
+				break;
+			}
+		}
+		Fish fishInstance = Instantiate(GameManager.Instance.Fish[fishIndex], fishSpawnTransform.position, Quaternion.identity);
+		fishInstance.name = GameManager.Instance.Fish[fishIndex].name;
+		GameManager.Instance.CurrentFishName = fishInstance.name;
 		fishInstance.transform.parent = gameplayContainer;
 		SetState(State.ReelingFish);
 	}

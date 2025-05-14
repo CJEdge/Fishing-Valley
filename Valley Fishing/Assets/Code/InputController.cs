@@ -228,7 +228,7 @@ public class InputController : MonoBehaviour
 
 
 	public void Start() {
-		this.DisableThrowing = false;
+		this.DisableThrowing = true;
 		StartCoroutine(EnableSceneSwitching());
 	}
 
@@ -253,13 +253,6 @@ public class InputController : MonoBehaviour
 	public void Click(InputAction.CallbackContext context) {
 		if (context.performed) {
 			OnClick?.Invoke();
-			CastRod();
-		}
-	}
-
-	public void CastRod() {
-		if (this.DisableThrowing) {
-			return;
 		}
 	}
 

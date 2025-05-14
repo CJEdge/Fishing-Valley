@@ -36,9 +36,6 @@ public class Fish : AbstractState<Fish.State>
 
     #region Serialized Fields
 
-    [SerializeField]
-    private string fishName;
-
 	[SerializeField]
 	private bool isStrafer;
 
@@ -70,12 +67,6 @@ public class Fish : AbstractState<Fish.State>
 
 
     #region Properties
-
-	public string FishName {
-		get {
-			return fishName;
-		}
-	}
 
     private int CurrentStrafeCount {
         get;

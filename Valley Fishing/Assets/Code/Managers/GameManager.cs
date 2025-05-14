@@ -40,6 +40,12 @@ public class GameManager : Singleton<GameManager>
 		set;
 	}
 
+	[field:SerializeField]
+	public Bait CurrentBait {
+		get;
+		set;
+	}
+
 	#endregion
 
 }

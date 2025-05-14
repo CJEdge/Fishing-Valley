@@ -15,6 +15,9 @@ public class PlayerArms : MonoBehaviour
 	[SerializeField]
 	private float throwWait;
 
+	[SerializeField]
+	private Bait bait;
+
 	#endregion
 
 
@@ -49,6 +52,7 @@ public class PlayerArms : MonoBehaviour
 			case LevelController.State.Idle:
 				break;
 			case LevelController.State.AttatchBait:
+				GameManager.Instance.CurrentBait = bait;
 				this.LevelController.SetState(LevelController.State.IdleWithBait);
 				break;
 			case LevelController.State.IdleWithBait:

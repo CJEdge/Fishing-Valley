@@ -47,7 +47,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fish:
-  - {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
+  - {fileID: 8874738652398643800, guid: d9a2cdbf59c0d1b4ab186e425e3d8be5, type: 3}
+  - {fileID: 3472080174443941622, guid: 56eb2018d3a3480448f2ea67b5b72728, type: 3}
+  <CurrentBait>k__BackingField: {fileID: 0}
 --- !u!114 &1583213601024685545
 MonoBehaviour:
   m_ObjectHideFlags: 0
