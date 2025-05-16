@@ -9,6 +9,9 @@ public class GameManager : Singleton<GameManager>
 	[SerializeField]
 	private List<Fish> fish;
 
+	[SerializeField]
+	private List<Bait> baits;
+
 	#endregion
 
 
@@ -32,6 +35,12 @@ public class GameManager : Singleton<GameManager>
 	public List<Fish> Fish {
 		get {
 			return fish;
+		}
+	}
+
+	public List<Bait> Baits {
+		get {
+			return baits;
 		}
 	}
 

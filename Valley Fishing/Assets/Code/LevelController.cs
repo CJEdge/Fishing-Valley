@@ -18,6 +18,9 @@ public class LevelController : AbstractState<LevelController.State> {
 	[SerializeField]
 	private FishView fishView;
 
+	[SerializeField]
+	private BaitView baitView;
+
 	#endregion
 
 
@@ -58,6 +61,7 @@ public class LevelController : AbstractState<LevelController.State> {
 				tutorialController.LevelStateChanged();
 				break;
 			case State.AttatchBait:
+				baitView.EnableBaitUI(true);
 				break;
 			case State.IdleWithBait:
 				break;

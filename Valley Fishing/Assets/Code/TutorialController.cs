@@ -48,7 +48,6 @@ public class TutorialController : MonoBehaviour
 				break;
 			case LevelController.State.Idle:
 				this.AttatchBaitTutorialCompleted = true;
-				this.LevelController.SetState(LevelController.State.IdleWithBait);
 				break;
 			case LevelController.State.AttatchBait:
 				break;

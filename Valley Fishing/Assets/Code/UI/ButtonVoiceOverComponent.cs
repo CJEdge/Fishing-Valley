@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISelectHandler 
 {
+	#region States
+
 	public enum ButtonType {
 		Play,
 		Settings,
@@ -12,6 +15,19 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 
 	public ButtonType buttonType;
 
+	#endregion
+
+
+	#region Properties
+
+	public Action SelectAction {
+		get;
+		set;
+	}
+
+	#endregion
+
+
 	public void OnPointerEnter(PointerEventData eventData) {
 		DoHoverEffect(); 
 	}
@@ -20,6 +36,7 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 		if (InputTracker.LastInputWasMouse) {
 			return;
 		}
+		SelectAction?.Invoke();
 		DoHoverEffect();
 	}
 
@@ -35,7 +52,6 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.MainMenu);
 				break;
 			case ButtonType.WormBait:
-				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.MenuSettings);
 				break;
 			default:
 				break;
