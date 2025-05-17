@@ -35,7 +35,7 @@ public class BaitView : MonoBehaviour
 	#region MonoBehaviours
 
 	public void Start() {
-		
+		buttonsGameobject.SetActive(false);
 	}
 
 	#endregion
@@ -48,19 +48,42 @@ public class BaitView : MonoBehaviour
 		if (enable == false) {
 			GameManager.Instance.LevelController.SetState(LevelController.State.IdleWithBait);
 			return;
+		} else {
+			bool firstButtonSelected = false;
+			for (int i = 0; i < baitButtons.Length; i++) {
+				baitButtons[i].gameObject.SetActive(false);
+			}
+			for (int i = 0; i < GameManager.Instance.CurrentBaits.Count; i++) {
+				if (GameManager.Instance.CurrentBaits[i] > 0) {
+					baitButtons[i].gameObject.SetActive(true);
+					if (!firstButtonSelected) {
+						StartCoroutine(SelectButtonAfterOneFrame(baitButtons[i].gameObject));
+						eventSystem.SetSelectedGameObject(baitButtons[i].gameObject);
+						firstButtonSelected = true;
+					}
+				}
+			}
 		}
 		eventSystem.SetSelectedGameObject(baitButtons[0].gameObject);
 	}
 
 	public void BaitSelected(int baitIndex) {
-		Debug.Log(baitIndex);
 		this.BaitIndex = baitIndex;
 	}
 
-	public void BaitClicked() {
-		Debug.Log(this.BaitIndex);
-		GameManager.Instance.CurrentBait = GameManager.Instance.Baits[this.BaitIndex];
+	public void BaitClicked(int baitIndex) {
+		GameManager.Instance.CurrentBait = GameManager.Instance.Baits[baitIndex];
+		GameManager.Instance.CurrentBaits[GameManager.Instance.CurrentBait.BaitIndex]--;
 		EnableBaitUI(false);
+	}
+
+	#endregion
+
+	#region Private Methods
+
+	private IEnumerator SelectButtonAfterOneFrame(GameObject button) {
+		yield return new WaitForEndOfFrame();
+		eventSystem.SetSelectedGameObject(button);
 	}
 
 	#endregion

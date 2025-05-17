@@ -5,7 +5,7 @@
 			<value>Level1IntroCutscene</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{977c4795-bda5-4eb9-94ae-0bfb77ae15a5}</destination>
@@ -42,8 +42,8 @@
 	</object>
 	<object class="MasterTrack" id="{d8569313-bac5-41ed-b578-a22730cfef34}">
 		<relationship name="modules">
-			<destination>{abb072da-3b77-4a15-bac4-7f44377e3652}</destination>
 			<destination>{392bfda6-e6bc-4795-b18f-4bfd0dc452cb}</destination>
+			<destination>{0a3bbcd5-dde7-4a0e-b3b8-242e52e35cdb}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{7f6b9f36-a35e-48ae-a10d-2fff505b5409}</destination>
@@ -69,8 +69,8 @@
 	</object>
 	<object class="ParameterProxy" id="{fa086d86-5a47-4779-ba11-6ba9239a572b}">
 		<relationship name="modules">
-			<destination>{abb072da-3b77-4a15-bac4-7f44377e3652}</destination>
 			<destination>{392bfda6-e6bc-4795-b18f-4bfd0dc452cb}</destination>
+			<destination>{0a3bbcd5-dde7-4a0e-b3b8-242e52e35cdb}</destination>
 		</relationship>
 		<relationship name="preset">
 			<destination>{2c9a9bb5-adcd-4ce7-8026-5c92b5e4d926}</destination>
@@ -87,17 +87,17 @@
 			<destination>{4821daf6-64b0-4840-8629-db9dd4d80c08}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{abb072da-3b77-4a15-bac4-7f44377e3652}">
-		<relationship name="audioFile">
-			<destination>{7e5876fe-bd31-44af-870e-ba0104bc0c1c}</destination>
-		</relationship>
-	</object>
 	<object class="SingleSound" id="{392bfda6-e6bc-4795-b18f-4bfd0dc452cb}">
 		<property name="start">
 			<value>1</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{a23759c4-35ac-425e-89b4-60f436c44b88}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{0a3bbcd5-dde7-4a0e-b3b8-242e52e35cdb}">
+		<relationship name="audioFile">
+			<destination>{7e5876fe-bd31-44af-870e-ba0104bc0c1c}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{18b2a17e-2aa4-432c-9121-2ea0a57920c8}">

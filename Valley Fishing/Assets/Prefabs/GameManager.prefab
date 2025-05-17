@@ -49,6 +49,10 @@ MonoBehaviour:
   fish:
   - {fileID: 8874738652398643800, guid: d9a2cdbf59c0d1b4ab186e425e3d8be5, type: 3}
   - {fileID: 3472080174443941622, guid: 56eb2018d3a3480448f2ea67b5b72728, type: 3}
+  baits:
+  - {fileID: 7779104066758528175, guid: b0fe451ad790c044784140f990fb4a6a, type: 3}
+  - {fileID: 5679352621735612818, guid: 3c0861e58491f484199c895cf2758efb, type: 3}
+  - {fileID: 7778841989186564110, guid: 142a9d4d143554a4b86112aad1f3a274, type: 3}
   <CurrentBait>k__BackingField: {fileID: 0}
 --- !u!114 &1583213601024685545
 MonoBehaviour:
@@ -62,6 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 044f3e02c288d9247a8f49a6ccf2a53c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <FishActivityLevelInstance>k__BackingField: {fileID: 0}
 --- !u!114 &4472528235016745865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,13 +114,25 @@ MonoBehaviour:
       Data3: -1565593455
       Data4: 1931711181
     Path: event:/Level1IntroCutscene
-  ApplyBaitTutorial:
-    Guid:
+  ApplyBaitTutorials:
+  - Guid:
       Data1: 736888570
       Data2: 1237845555
       Data3: 1302096006
       Data4: 997823191
     Path: event:/ApplyBaitTutorial
+  - Guid:
+      Data1: 1185227841
+      Data2: 1167473012
+      Data3: 1704720298
+      Data4: -1675436907
+    Path: event:/ApplyBaitTutorial 2
+  - Guid:
+      Data1: -1804177842
+      Data2: 1133100240
+      Data3: 1407829949
+      Data4: 30758483
+    Path: event:/ApplyBaitTutorial 3
   CastRodTutorial:
     Guid:
       Data1: -534209392
@@ -144,3 +161,10 @@ MonoBehaviour:
       Data3: -420499557
       Data4: -533285298
     Path: event:/ReelSound
+  ActivityLevelSplash:
+    Guid:
+      Data1: -202002278
+      Data2: 1292392546
+      Data3: -413234560
+      Data4: -1417980924
+    Path: event:/ActivitySplash

@@ -11,14 +11,19 @@ public class TutorialController : MonoBehaviour
 		set;
 	}
 
-	[field:SerializeField]
-	private bool AttatchBaitTutorialCompleted {
+	private bool[] AttatchBaitTutorialsCompleted {
 		get;
 		set;
 	}
 
 	[field: SerializeField]
-	private bool CastRodTutorialCompleted {
+	private bool[] CastRodTutorialsCompleted {
+		get;
+		set;
+	}
+
+	[field: SerializeField]
+	private bool[] ReelTutorialsCompleted {
 		get;
 		set;
 	}
@@ -38,6 +43,9 @@ public class TutorialController : MonoBehaviour
 		this.LevelController.StateChanged += LevelStateChanged;
 		AudioManager.Instance.VoiceLineOver += VoiceOverFinished;
 		GameManager.Instance.InputController.OnClick += Click;
+		this.AttatchBaitTutorialsCompleted = new bool[FMODManager.Instance.ApplyBaitTutorials.Length];
+		this.CastRodTutorialsCompleted = new bool[FMODManager.Instance.CastRodTutorials.Length];
+		this.ReelTutorialsCompleted = new bool[FMODManager.Instance.ReelTutorials.Length];
 	}
 
 	public void Click() {
@@ -47,12 +55,10 @@ public class TutorialController : MonoBehaviour
 			case LevelController.State.Cutscene:
 				break;
 			case LevelController.State.Idle:
-				this.AttatchBaitTutorialCompleted = true;
 				break;
 			case LevelController.State.AttatchBait:
 				break;
 			case LevelController.State.IdleWithBait:
-				this.CastRodTutorialCompleted = true;
 				break;
 			case LevelController.State.WaitingForBite:
 				break;
@@ -77,23 +83,83 @@ public class TutorialController : MonoBehaviour
 			case LevelController.State.Cutscene:
 				break;
 			case LevelController.State.Idle:
-				if (this.AttatchBaitTutorialCompleted) {
+				bool allTutorialsCompleted = true;
+				for (int i = 0; i < this.AttatchBaitTutorialsCompleted.Length; i++) {
+					if (!this.AttatchBaitTutorialsCompleted[i]) {
+						allTutorialsCompleted = false;
+					}
+				}
+				if (allTutorialsCompleted) {
+					this.LevelController.SetState(LevelController.State.AttatchBait);
 					return;
 				}
-				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.ApplyBaitTutorial);
+				for (int i = 0; i < this.AttatchBaitTutorialsCompleted.Length; i++) {
+					if (!this.AttatchBaitTutorialsCompleted[i]) {
+						GameManager.Instance.CurrentBaits[i] = 1;
+						AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.ApplyBaitTutorials[i]);
+						break;
+					}
+				}
 				this.CurrentTutorialEventInstance = AudioManager.Instance.VoiceLineEventInstance;
 				break;
 			case LevelController.State.AttatchBait:
+				for (int i = 0; i < this.AttatchBaitTutorialsCompleted.Length; i++) {
+					if (!this.AttatchBaitTutorialsCompleted[i]) {
+						this.AttatchBaitTutorialsCompleted[i] = true;
+						break;
+					}
+				}
 				break;
 			case LevelController.State.IdleWithBait:
-				if (this.CastRodTutorialCompleted) {
+				allTutorialsCompleted = true;
+				for (int i = 0; i < this.CastRodTutorialsCompleted.Length; i++) {
+					if (!this.CastRodTutorialsCompleted[i]) {
+						allTutorialsCompleted = false;
+					}
+				}
+				if (allTutorialsCompleted) {
 					return;
 				}
-				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.CastRodTutorial);
+				for (int i = 0; i < this.CastRodTutorialsCompleted.Length; i++) {
+					if (!this.CastRodTutorialsCompleted[i]) {
+						AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.CastRodTutorials[i]);
+						break;
+					}
+				}
+				this.CurrentTutorialEventInstance = AudioManager.Instance.VoiceLineEventInstance;
 				break;
 			case LevelController.State.WaitingForBite:
+				for (int i = 0; i < this.CastRodTutorialsCompleted.Length; i++) {
+					if (!this.CastRodTutorialsCompleted[i]) {
+						this.CastRodTutorialsCompleted[i] = true;
+						break;
+					}
+				}
 				break;
 			case LevelController.State.ReelingFish:
+				allTutorialsCompleted = true;
+				for (int i = 0; i < this.ReelTutorialsCompleted.Length; i++) {
+					if (!this.ReelTutorialsCompleted[i]) {
+						allTutorialsCompleted = false;
+					}
+				}
+				if (allTutorialsCompleted) {
+					return;
+				}
+				for (int i = 0; i < this.ReelTutorialsCompleted.Length; i++) {
+					if (!this.ReelTutorialsCompleted[i]) {
+						AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.ReelTutorials[i]);
+						break;
+					}
+				}
+				this.CurrentTutorialEventInstance = AudioManager.Instance.VoiceLineEventInstance;
+
+				for (int i = 0; i < this.ReelTutorialsCompleted.Length; i++) {
+					if (!this.ReelTutorialsCompleted[i]) {
+						this.ReelTutorialsCompleted[i] = true;
+						break;
+					}
+				}
 				break;
 			case LevelController.State.FishCaught:
 				break;

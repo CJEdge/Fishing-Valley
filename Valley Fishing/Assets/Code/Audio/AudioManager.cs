@@ -30,6 +30,12 @@ public class AudioManager : Singleton<AudioManager>
 		set;
 	}
 
+	[field:SerializeField]
+	public StudioEventEmitter FishActivityLevelInstance {
+		get;
+		set;
+	}
+
 	private List<EventInstance> eventInstances {
 		get;
 		set;
@@ -76,6 +82,16 @@ public class AudioManager : Singleton<AudioManager>
 		this.VoiceLineEventInstance.clearHandle();
 		this.VoiceLineOver?.Invoke(this.LastVoiceLineEventInstance);
 		StopCoroutine(WaitForVoiceLineEnd());
+	}
+
+	public void PlayFishActivitySound(Fish fish, int activityLevel, bool play) {
+		this.FishActivityLevelInstance = fish.ActivitySplashSFX;
+		this.FishActivityLevelInstance.SetParameter("ActivityLevel", activityLevel);
+		if (play && !this.FishActivityLevelInstance.IsPlaying()) {
+			this.FishActivityLevelInstance.Play();
+		} else if(!play) {
+			this.FishActivityLevelInstance.Stop();
+		}
 	}
 
 	public void PlayReelSound(EventReference reelSound) {

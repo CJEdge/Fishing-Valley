@@ -26,6 +26,6 @@ public class BaitButton : MonoBehaviour
 	}
 
 	public void ClickBait() {
-		baitView.BaitClicked();
+		baitView.BaitClicked(baitIndex);
 	}
 }

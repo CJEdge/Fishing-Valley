@@ -1,3 +1,5 @@
+using FMOD.Studio;
+using FMODUnity;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -63,6 +65,9 @@ public class Fish : AbstractState<Fish.State>
 	[SerializeField]
 	private GameObject visuals;
 
+	[SerializeField]
+	private StudioEventEmitter activitySplashSFX;
+
     #endregion
 
 
@@ -106,6 +111,12 @@ public class Fish : AbstractState<Fish.State>
 		set;
 	}
 
+	public StudioEventEmitter ActivitySplashSFX {
+		get {
+			return activitySplashSFX;
+		}
+	}
+
 	#endregion
 
 
@@ -113,6 +124,22 @@ public class Fish : AbstractState<Fish.State>
 
 	public void Start() {
 		SetState(State.onHook);
+		switch (activityLevel) {
+			case ActivityLevel.none:
+				AudioManager.Instance.PlayFishActivitySound(this, 0, true);
+				break;
+			case ActivityLevel.calm:
+				AudioManager.Instance.PlayFishActivitySound(this, 1, true);
+				break;
+			case ActivityLevel.medium:
+				AudioManager.Instance.PlayFishActivitySound(this, 2, true);
+				break;
+			case ActivityLevel.active:
+				AudioManager.Instance.PlayFishActivitySound(this, 3, true);
+				break;
+			default:
+				break;
+		}
 	}
 
 	public override void Update() {
@@ -180,6 +207,7 @@ public class Fish : AbstractState<Fish.State>
 
 	public void FishCaught() {
 		GameManager.Instance.LevelController.SetState(LevelController.State.FishCaught);
+		AudioManager.Instance.PlayFishActivitySound(this, 1, false);
 		Destroy(gameObject);
 	}
 
@@ -244,6 +272,7 @@ public class Fish : AbstractState<Fish.State>
 
 	private void FailedCatch() {
 		GameManager.Instance.LevelController.SetState(LevelController.State.AttatchBait);
+		AudioManager.Instance.PlayFishActivitySound(this, 0, false);
 		Destroy(gameObject);
 	}
 

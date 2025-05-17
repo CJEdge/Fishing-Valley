@@ -58,7 +58,7 @@ public class FishView : MonoBehaviour
 	private void DisableFishUI() {
 		EnableFishUI(false);
 		if(GameManager.Instance.LevelController.CurrentState == LevelController.State.FishCaught) {
-			GameManager.Instance.LevelController.SetState(LevelController.State.AttatchBait);
+			GameManager.Instance.LevelController.SetState(LevelController.State.Idle);
 		}
 	}
 

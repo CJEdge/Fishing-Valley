@@ -44,6 +44,12 @@ public class GameManager : Singleton<GameManager>
 		}
 	}
 
+	[field:SerializeField]
+	public List<int> CurrentBaits {
+		get;
+		set;
+	}
+
 	public string CurrentFishName {
 		get;
 		set;
@@ -53,6 +59,18 @@ public class GameManager : Singleton<GameManager>
 	public Bait CurrentBait {
 		get;
 		set;
+	}
+
+	#endregion
+
+
+	#region Mono Behaviours
+
+	public override void Awake() {
+		base.Awake();
+		for (int i = 0; i < this.Baits.Count; i++) {
+			this.CurrentBaits.Add(0);
+		}
 	}
 
 	#endregion

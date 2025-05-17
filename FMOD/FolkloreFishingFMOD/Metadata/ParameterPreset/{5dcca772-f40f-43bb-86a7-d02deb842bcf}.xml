@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="ParameterPreset" id="{5dcca772-f40f-43bb-86a7-d02deb842bcf}">
 		<property name="name">
-			<value>ReelRate</value>
+			<value>ActivityLevel</value>
 		</property>
 		<relationship name="folder">
 			<destination>{41f80124-56a0-4c02-a6e2-b03fc989f2d9}</destination>

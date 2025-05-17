@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &692561243916848511
+--- !u!1001 &2964185045859901980
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -50,7 +50,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3222220105798205689, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: m_Name
-      value: Fish
+      value: 1_Carp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
+      propertyPath: activityLevel
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

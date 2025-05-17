@@ -18,9 +18,11 @@ public class FMODManager : Singleton<FMODManager>
 
 	public EventReference Level1IntroCutscene;
 
-	public EventReference ApplyBaitTutorial;
+	public EventReference[] ApplyBaitTutorials;
 	
-	public EventReference CastRodTutorial;
+	public EventReference[] CastRodTutorials;
+
+	public EventReference[] ReelTutorials;
 
 	[Header("SFX")]
 
@@ -29,4 +31,6 @@ public class FMODManager : Singleton<FMODManager>
 	public EventReference LandRod;
 
 	public EventReference ReelSound;
+
+	public EventReference ActivityLevelSplash;
 }

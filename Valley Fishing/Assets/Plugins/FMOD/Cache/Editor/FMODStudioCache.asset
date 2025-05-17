@@ -1,5 +1,29 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8621265199984991985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CastRodTutorial 2/Language
+  m_EditorClassIdentifier: 
+  Name: Language
+  StudioPath: 
+  Min: 0
+  Max: 11
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-8438098638710084217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,6 +99,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5942849088604796572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ApplyBaitTutorial 2/Language
+  m_EditorClassIdentifier: 
+  Name: Language
+  StudioPath: 
+  Min: 0
+  Max: 11
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-5880534265287757310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,6 +147,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-5867487079261388662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CastRodTutorial 2
+  m_EditorClassIdentifier: 
+  Path: event:/CastRodTutorial 2
+  Guid:
+    Data1: 920292586
+    Data2: 1308191216
+    Data3: -1919537504
+    Data4: 1844583085
+  Banks:
+  - {fileID: -5674214797675166295}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -8621265199984991985}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5674214797675166295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,10 +190,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/VoiceLines.bank
   Name: VoiceLines
   StudioPath: bank:/VoiceLines
-  lastModified: 638827743424428436
+  lastModified: 638830285722629927
   FileSizes:
   - Name: Desktop
-    Value: 337600
+    Value: 818048
   Exists: 1
 --- !u!114 &-5398296364418139124
 MonoBehaviour:
@@ -199,6 +275,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4500
+--- !u!114 &-2746747141673755046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ReelTutorial 2/Language
+  m_EditorClassIdentifier: 
+  Name: Language
+  StudioPath: 
+  Min: 0
+  Max: 11
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-2727829228033174288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,6 +319,54 @@ MonoBehaviour:
   ID:
     data1: 4086690009
     data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-1873044246442132742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ApplyBaitTutorial 3/Language
+  m_EditorClassIdentifier: 
+  Name: Language
+  StudioPath: 
+  Min: 0
+  Max: 11
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-1847760155646398454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ActivitySplash/ActivityLevel
+  m_EditorClassIdentifier: 
+  Name: ActivityLevel
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 3569198777
+    data2: 789260755
   Type: 1
   IsGlobal: 0
   Labels: []
@@ -247,6 +395,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-699782810236658399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ReelTutorial 2
+  m_EditorClassIdentifier: 
+  Path: event:/ReelTutorial 2
+  Guid:
+    Data1: 2069845911
+    Data2: 1107104385
+    Data3: -1949121643
+    Data4: 593959438
+  Banks:
+  - {fileID: -5674214797675166295}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -2746747141673755046}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,12 +451,19 @@ MonoBehaviour:
   - {fileID: 4706220048481617848}
   - {fileID: 752209927725120716}
   - {fileID: 5646414175186405039}
+  - {fileID: 1318166040838635650}
+  - {fileID: 2625121769310352727}
+  - {fileID: 1091834150013785629}
+  - {fileID: 4760631056095594707}
+  - {fileID: -699782810236658399}
+  - {fileID: 6619767497194615898}
+  - {fileID: -5867487079261388662}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4198817137325428765}
   StringsBanks:
   - {fileID: 1411835401192698514}
-  cacheTime: 638827743424428436
+  cacheTime: 638830285722629927
   cacheVersion: 131624
 --- !u!114 &499214471770320581
 MonoBehaviour:
@@ -338,6 +521,86 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1091605674602816584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ReelTutorial 3/Language
+  m_EditorClassIdentifier: 
+  Name: Language
+  StudioPath: 
+  Min: 0
+  Max: 11
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &1091834150013785629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ApplyBaitTutorial 3
+  m_EditorClassIdentifier: 
+  Path: event:/ApplyBaitTutorial 3
+  Guid:
+    Data1: -1804177842
+    Data2: 1133100240
+    Data3: 1407829949
+    Data4: 30758483
+  Banks:
+  - {fileID: -5674214797675166295}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -1873044246442132742}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1318166040838635650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ActivitySplash
+  m_EditorClassIdentifier: 
+  Path: event:/ActivitySplash
+  Guid:
+    Data1: -202002278
+    Data2: 1292392546
+    Data3: -413234560
+    Data4: -1417980924
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -1847760155646398454}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 9534
 --- !u!114 &1411835401192698514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,11 +616,39 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638827743421686795
+  lastModified: 638830285718384511
   FileSizes:
   - Name: Desktop
-    Value: 1356
+    Value: 1688
   Exists: 1
+--- !u!114 &2625121769310352727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ApplyBaitTutorial 2
+  m_EditorClassIdentifier: 
+  Path: event:/ApplyBaitTutorial 2
+  Guid:
+    Data1: 1185227841
+    Data2: 1167473012
+    Data3: 1704720298
+    Data4: -1675436907
+  Banks:
+  - {fileID: -5674214797675166295}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5942849088604796572}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3859954363161683041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,9 +659,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/ReelSound/ReelRate
+  m_Name: parameter:/ReelSound/ActivityLevel
   m_EditorClassIdentifier: 
-  Name: ReelRate
+  Name: ActivityLevel
   StudioPath: 
   Min: 0
   Max: 3
@@ -397,10 +688,34 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638826980067651898
+  lastModified: 638830231053076091
   FileSizes:
   - Name: Desktop
-    Value: 100768
+    Value: 200384
+  Exists: 1
+--- !u!114 &4081471432938196841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ReelTutorial/Language
+  m_EditorClassIdentifier: 
+  Name: Language
+  StudioPath: 
+  Min: 0
+  Max: 11
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &4198817137325428765
 MonoBehaviour:
@@ -417,7 +732,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638827743421665905
+  lastModified: 638830285718364548
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -447,6 +762,34 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: -1105329995548291969}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4760631056095594707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ReelTutorial 3
+  m_EditorClassIdentifier: 
+  Path: event:/ReelTutorial 3
+  Guid:
+    Data1: -673632509
+    Data2: 1158322566
+    Data3: 196545185
+    Data4: -619117660
+  Banks:
+  - {fileID: -5674214797675166295}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 1091605674602816584}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -526,6 +869,34 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6619767497194615898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ReelTutorial
+  m_EditorClassIdentifier: 
+  Path: event:/ReelTutorial
+  Guid:
+    Data1: -1623877199
+    Data2: 1319586144
+    Data3: -437439302
+    Data4: 905470626
+  Banks:
+  - {fileID: -5674214797675166295}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 4081471432938196841}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
