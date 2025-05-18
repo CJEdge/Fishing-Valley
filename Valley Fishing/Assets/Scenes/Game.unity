@@ -2252,7 +2252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63d11d1087eca5c4082918c05d84d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reelState: 1
+  reelState: 0
   lastReelState: 0
   keyboardInputListLength: 5
   playerInput: {fileID: 705276748}
