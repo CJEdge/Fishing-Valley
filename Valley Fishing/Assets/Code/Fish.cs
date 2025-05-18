@@ -33,10 +33,16 @@ public class Fish : AbstractState<Fish.State>
 
     public MovementDirection movementDirection;
 
-    #endregion
+	#endregion
 
 
-    #region Serialized Fields
+	#region Serialized Fields
+
+	[SerializeField]
+	private string fishName;
+
+	[SerializeField]
+	private int fishIndex;
 
 	[SerializeField]
 	private bool isStrafer;
@@ -64,6 +70,9 @@ public class Fish : AbstractState<Fish.State>
 
 	[SerializeField]
 	private GameObject visuals;
+
+	[SerializeField]
+	private GameObject[] activityParticles;
 
 	[SerializeField]
 	private StudioEventEmitter activitySplashSFX;
@@ -117,6 +126,23 @@ public class Fish : AbstractState<Fish.State>
 		}
 	}
 
+	public string FishName {
+		get {
+			return fishName;
+		}
+	}
+
+	public int FishIndex {
+		get {
+			return fishIndex;
+		}
+	}
+
+	public bool IsFailable {
+		get;
+		set;
+	} = true;
+
 	#endregion
 
 
@@ -140,6 +166,7 @@ public class Fish : AbstractState<Fish.State>
 			default:
 				break;
 		}
+		EnableActivityLevelParticles();
 	}
 
 	public override void Update() {
@@ -228,9 +255,7 @@ public class Fish : AbstractState<Fish.State>
 				if (this.InputController.reelState == InputController.ReelState.calmReeling && this.IsCentred) {
 					rb.AddForce(0, 0, -reelSpeed);
 				} else {
-					if (this.CatchStarted) {
-						this.FailedCatchTime += Time.deltaTime;
-					}
+					IncreaseFailTime();
 					rb.AddForce(0, 0, swimAwaySpeed);
 				}
 				break;
@@ -238,9 +263,7 @@ public class Fish : AbstractState<Fish.State>
 				if (this.InputController.reelState == InputController.ReelState.normalReeling && this.IsCentred) {
 					rb.AddForce(0, 0, -reelSpeed);
 				} else {
-					if (this.CatchStarted) {
-						this.FailedCatchTime += Time.deltaTime;
-					}
+					IncreaseFailTime();
 					rb.AddForce(0, 0, swimAwaySpeed);
 				}
 				break;
@@ -248,9 +271,7 @@ public class Fish : AbstractState<Fish.State>
 				if (this.InputController.reelState == InputController.ReelState.fastReeling && this.IsCentred) {
 					rb.AddForce(0, 0, -reelSpeed);
 				} else {
-					if (this.CatchStarted) {
-						this.FailedCatchTime += Time.deltaTime;
-					}
+					IncreaseFailTime();
 					rb.AddForce(0, 0, swimAwaySpeed);
 				}
 				break;
@@ -270,10 +291,40 @@ public class Fish : AbstractState<Fish.State>
 		this.LastIsCentred = this.IsCentred;
 	}
 
+	private void IncreaseFailTime() {
+		if (!this.IsFailable) {
+			return;
+		}
+		if (this.CatchStarted) {
+			this.FailedCatchTime += Time.deltaTime;
+		}
+	}
+
 	private void FailedCatch() {
 		GameManager.Instance.LevelController.SetState(LevelController.State.AttatchBait);
 		AudioManager.Instance.PlayFishActivitySound(this, 0, false);
 		Destroy(gameObject);
+	}
+
+	private void EnableActivityLevelParticles() {
+		for (int i = 0; i < activityParticles.Length; i++) {
+			activityParticles[i].SetActive(false);
+		}
+		switch (activityLevel) {
+			case ActivityLevel.none:
+				break;
+			case ActivityLevel.calm:
+				activityParticles[0].SetActive(true);
+				break;
+			case ActivityLevel.medium:
+				activityParticles[1].SetActive(true);
+				break;
+			case ActivityLevel.active:
+				activityParticles[2].SetActive(true);
+				break;
+			default:
+				break;
+		}
 	}
 
 	#endregion

@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1025274234754108350, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/SFX/ActivitySplash
+      objectReference: {fileID: 0}
     - target: {fileID: 2899971684537990183, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -51,6 +55,14 @@ PrefabInstance:
     - target: {fileID: 3222220105798205689, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: m_Name
       value: 1_Carp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
+      propertyPath: fishName
+      value: Carp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
+      propertyPath: fishIndex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: activityLevel

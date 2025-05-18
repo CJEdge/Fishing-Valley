@@ -3,6 +3,15 @@ using UnityEngine;
 public class Bait : MonoBehaviour
 {
 	[SerializeField]
+	private bool isFailable;
+
+	public bool Isfailable {
+		get {
+			return isFailable;
+		}
+	}
+
+	[SerializeField]
 	private int baitIndex;
 
 	public int BaitIndex {

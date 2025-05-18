@@ -37,17 +37,22 @@ public class FishView : MonoBehaviour
 	#region Public Methods
 
 	public void EnableFishUI(bool enable) {
-		for (int i = 0; i < GameManager.Instance.Fish.Count; i++) {
-			if (GameManager.Instance.Fish[i].name == GameManager.Instance.CurrentFishName) {
+		if (enable) {
+			for (int i = 0; i < GameManager.Instance.Fish.Count; i++) {
+				if (GameManager.Instance.Fish[i].FishName == GameManager.Instance.CurrentFish.FishName) {
+					fishUis[i].SetActive(enable);
+				}
+			}
+		int randomCaughtTextIndex = Random.Range(0, fishCaughtTexts.Length);
+		fishText.text = fishCaughtTexts[randomCaughtTextIndex] + " " + GameManager.Instance.CurrentFish.FishName + "!";
+		fishText.gameObject.SetActive(enable);
+		}
+		else {
+			for (int i = 0; i < GameManager.Instance.Fish.Count; i++) {
 				fishUis[i].SetActive(enable);
 			}
-
-		}
-		if (enable) {
-			int randomCaughtTextIndex = Random.Range(0, fishCaughtTexts.Length);
-			fishText.text = fishCaughtTexts[randomCaughtTextIndex] + " " + GameManager.Instance.CurrentFishName + "!";
-		} 
 		fishText.gameObject.SetActive(enable);
+		}
 	}
 
 	#endregion

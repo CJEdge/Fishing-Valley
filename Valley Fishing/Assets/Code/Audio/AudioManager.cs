@@ -4,6 +4,7 @@ using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
 using System;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : Singleton<AudioManager>
 {
@@ -36,7 +37,12 @@ public class AudioManager : Singleton<AudioManager>
 		set;
 	}
 
-	private List<EventInstance> eventInstances {
+	private List<EventInstance> SFXEventInstances {
+		get;
+		set;
+	} = new List<EventInstance>();
+
+	private List<EventInstance> MusicEventInstances {
 		get;
 		set;
 	} = new List<EventInstance>();
@@ -51,8 +57,17 @@ public class AudioManager : Singleton<AudioManager>
 
 	#region Mono Behaviours
 
+	public void Start() {
+		if (this.MusicEventInstances.Count == 0) {
+			PlayMusic(FMODManager.Instance.LevelOneMusic);
+		}
+		SceneManager.sceneLoaded += PlayMusicOnSceneLoad;
+	}
+
 	public void OnDestroy() {
-		CleanUp();
+		CleanUpSFX();
+		CleanUpMusic();
+		SceneManager.sceneLoaded -= PlayMusicOnSceneLoad;
 	}
 
 	#endregion
@@ -69,7 +84,7 @@ public class AudioManager : Singleton<AudioManager>
 			this.VoiceLineEventInstance.release();
 			this.VoiceLineEventInstance.clearHandle();
 		}
-		this.VoiceLineEventInstance = CreateInstance(voiceLineReference);
+		this.VoiceLineEventInstance = CreateSFXInstance(voiceLineReference);
 		this.LastVoiceLineEventInstance = this.VoiceLineEventInstance;
 		this.VoiceLineEventInstance.setParameterByName("Language", PlayerPrefsManager.Load(PlayerPrefsManager.Language));
 		this.VoiceLineEventInstance.start();
@@ -95,25 +110,30 @@ public class AudioManager : Singleton<AudioManager>
 	}
 
 	public void PlayReelSound(EventReference reelSound) {
-		this.CurrentReelInstance = CreateInstance(reelSound);
+		this.CurrentReelInstance = CreateSFXInstance(reelSound);
 		int reelSpeed = 0;
-		this.CurrentReelInstance.setParameterByName("ReelRate", reelSpeed);
+		this.CurrentReelInstance.setParameterByName("ActivityLevel", reelSpeed);
 		this.CurrentReelInstance.start();
 	}
 
 	public void SetReelRate(float reelSpeed) {
-		this.CurrentReelInstance.setParameterByName("ReelRate", reelSpeed);
+		this.CurrentReelInstance.setParameterByName("ActivityLevel", reelSpeed);
 	}
 
-	public EventInstance CreateInstance(EventReference eventReference) {
+	public EventInstance CreateSFXInstance(EventReference eventReference) {
 		EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
-		eventInstances.Add(eventInstance);
+		SFXEventInstances.Add(eventInstance);
+		return eventInstance;
+	}
+
+	public EventInstance CreateMusicInstance(EventReference eventReference) {
+		EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
+		MusicEventInstances.Add(eventInstance);
 		return eventInstance;
 	}
 
 	public void InitializeMusic(EventReference musicEventReference) {
-		CleanUp();
-		this.MusicEventInstance = CreateInstance(musicEventReference);
+		this.MusicEventInstance = CreateMusicInstance(musicEventReference);
 		this.MusicEventInstance.start();
 	}
 
@@ -126,8 +146,15 @@ public class AudioManager : Singleton<AudioManager>
 
 	#region Private Methods
 
-	private void CleanUp() {
-		foreach (EventInstance eventInstance in eventInstances) {
+	private void CleanUpSFX() {
+		foreach (EventInstance eventInstance in SFXEventInstances) {
+			eventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+			eventInstance.release();
+		}
+	}
+
+	private void CleanUpMusic() {
+		foreach (EventInstance eventInstance in MusicEventInstances) {
 			eventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 			eventInstance.release();
 		}
@@ -148,6 +175,15 @@ public class AudioManager : Singleton<AudioManager>
 		this.VoiceLineOver?.Invoke(this.LastVoiceLineEventInstance);
 	}
 
-		#endregion
+	private void PlayMusicOnSceneLoad(Scene scene, LoadSceneMode mode) {
+		CleanUpMusic();
+		PlayMusic(FMODManager.Instance.LevelOneMusic);
+	}
+
+	private void PlayMusic(EventReference musicReference) {
+		InitializeMusic(FMODManager.Instance.LevelOneMusic);
+	}
+
+	#endregion
 
 }

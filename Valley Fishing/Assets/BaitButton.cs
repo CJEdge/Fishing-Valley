@@ -1,7 +1,10 @@
+using TMPro;
 using UnityEngine;
 
 public class BaitButton : MonoBehaviour
 {
+
+	#region Serialized Fields
 
 	[SerializeField]
 	private int baitIndex;
@@ -12,6 +15,13 @@ public class BaitButton : MonoBehaviour
 	[SerializeField]
 	private ButtonVoiceOverComponent buttonVoiceOverComponent;
 
+	[SerializeField]
+	private TMP_Text baitCountText;
+
+	#endregion
+
+
+
 	public void Start() {
 		buttonVoiceOverComponent.SelectAction -= SelectBait;
 		buttonVoiceOverComponent.SelectAction += SelectBait;
@@ -19,6 +29,10 @@ public class BaitButton : MonoBehaviour
 
 	public void OnDestroy() {
 		buttonVoiceOverComponent.SelectAction -= SelectBait;
+	}
+
+	public void OnEnable() {
+		baitCountText.text = "x" + GameManager.Instance.CurrentBaits[baitIndex];
 	}
 
 	public void SelectBait() {

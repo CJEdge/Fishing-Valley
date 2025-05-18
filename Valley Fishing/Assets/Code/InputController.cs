@@ -20,6 +20,8 @@ public class InputController : MonoBehaviour
 
 	public ReelState reelState;
 
+	public ReelState lastReelState;
+
 	#endregion
 
 
@@ -111,6 +113,11 @@ public class InputController : MonoBehaviour
 	}
 
 	public Action OnPause {
+		get;
+		set;
+	}
+
+	public Action OnReelStateChanged {
 		get;
 		set;
 	}
@@ -237,10 +244,14 @@ public class InputController : MonoBehaviour
 			return;
 		}
 		SetKeyboardReeling();
-		SetReelState();
 		if (reelState == ReelState.reelingLocked) {
+			if(lastReelState != ReelState.reelingLocked) {
+				this.ReelSpeed = 0;
+				OnReelStateChanged?.Invoke();
+			}
 			return;
 		}
+		SetReelState();
 		CheckToResetReelInput();
 		ReduceReelRate();
 	}
@@ -387,12 +398,12 @@ public class InputController : MonoBehaviour
 	}
 
 	private void SetKeyboardReeling() {
-		if (this.CurrentKeyboardReelInput < keyboardReelResetTime) {
-			this.CurrentKeyboardReelInput += Time.deltaTime;
-		} else {
-			this.CurrentKeyboardReelInput = 0;
-			this.ReelInputs.Clear();
-		}
+		//if (this.CurrentKeyboardReelInput < keyboardReelResetTime) {
+		//	this.CurrentKeyboardReelInput += Time.deltaTime;
+		//} else {
+		//	this.CurrentKeyboardReelInput = 0;
+		//	this.ReelInputs.Clear();
+		//}
 	}
 
 	private void SetReelState() {
@@ -443,11 +454,15 @@ public class InputController : MonoBehaviour
 				break;
 		}
 
+		if(lastReelState != reelState) {
+			this.OnReelStateChanged?.Invoke();
+		}
+
+		lastReelState = reelState;
+
 		if (reelState == ReelState.notReeling) {
 			return;
 		}
-
-		
 	}
 
 	#endregion

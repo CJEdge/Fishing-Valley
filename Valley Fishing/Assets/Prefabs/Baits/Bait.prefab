@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f00bbf1e78d2f1d43a9f9fd1fafcd418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFailable: 1
+  baitIndex: 0
   catchChances:
   - 0.5
   - 0.5

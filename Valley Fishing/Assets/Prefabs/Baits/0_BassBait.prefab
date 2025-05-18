@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3614361354684212053, guid: 3bb9af89310f9574686d41c346bf7ca7, type: 3}
+      propertyPath: isFailable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614361354684212053, guid: 3bb9af89310f9574686d41c346bf7ca7, type: 3}
       propertyPath: 'catchChances.Array.data[0]'
       value: 1
       objectReference: {fileID: 0}

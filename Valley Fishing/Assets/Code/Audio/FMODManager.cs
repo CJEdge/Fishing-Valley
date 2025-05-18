@@ -24,6 +24,10 @@ public class FMODManager : Singleton<FMODManager>
 
 	public EventReference[] ReelTutorials;
 
+	public EventReference[] TutorialCatchVoices;
+
+	public EventReference[] CatchVoices;
+
 	[Header("SFX")]
 
 	public EventReference ThrowRod;
@@ -33,4 +37,8 @@ public class FMODManager : Singleton<FMODManager>
 	public EventReference ReelSound;
 
 	public EventReference ActivityLevelSplash;
+
+	[Header("Music")]
+
+	public EventReference LevelOneMusic;
 }

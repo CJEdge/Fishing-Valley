@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EventFolder" id="{783e3988-6374-4ec3-8bc7-3ccb95930967}">
+		<property name="name">
+			<value>CastRodTutorials</value>
+		</property>
+		<relationship name="folder">
+			<destination>{b289aeaf-ac67-4853-ae39-fa241b96bc6b}</destination>
+		</relationship>
+	</object>
+</objects>

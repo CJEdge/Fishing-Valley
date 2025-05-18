@@ -50,7 +50,7 @@ public class GameManager : Singleton<GameManager>
 		set;
 	}
 
-	public string CurrentFishName {
+	public Fish CurrentFish {
 		get;
 		set;
 	}
