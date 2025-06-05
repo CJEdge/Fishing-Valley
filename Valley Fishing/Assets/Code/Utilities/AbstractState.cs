@@ -14,6 +14,11 @@ public abstract class AbstractState<T> : MonoBehaviour, IState<T> where T : Enum
 		private set;
 	}
 
+	public T LastState {
+		get;
+		private set;
+	}
+
 	#endregion
 
 
@@ -58,6 +63,7 @@ public abstract class AbstractState<T> : MonoBehaviour, IState<T> where T : Enum
 
 	public virtual void SetState(T state) {
 		if (!EqualityComparer<T>.Default.Equals(this.CurrentState, state)) {
+			this.LastState = state;
 			ExitState(this.CurrentState);
 			this.CurrentState = state;
 			EnterState(this.CurrentState);

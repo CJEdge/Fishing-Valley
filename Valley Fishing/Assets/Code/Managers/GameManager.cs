@@ -32,6 +32,11 @@ public class GameManager : Singleton<GameManager>
 		set;
 	}
 
+	public ShopController ShopController {
+		get;
+		set;
+	}
+
 	public List<Fish> Fish {
 		get {
 			return fish;
@@ -55,10 +60,26 @@ public class GameManager : Singleton<GameManager>
 		set;
 	}
 
+	[field: SerializeField]
+	public List<int> CaughtFish {
+		get;
+		set;
+	}
+
 	[field:SerializeField]
 	public Bait CurrentBait {
 		get;
 		set;
+	}
+
+	public int TotalCaughtFish {
+		get {
+			int totalCaughtFish = 0;
+			for (int i = 0; i < this.CaughtFish.Count; i++) {
+				totalCaughtFish += this.CaughtFish[i];
+			}
+			return totalCaughtFish;
+		}
 	}
 
 	#endregion
@@ -72,6 +93,18 @@ public class GameManager : Singleton<GameManager>
 			this.CurrentBaits.Add(0);
 		}
 	}
+
+	#endregion
+
+
+	#region Public Methods
+
+	public void AssignNewCaughtFish(int index) {
+		while (this.CaughtFish.Count <= index) {
+			this.CaughtFish.Add(0);
+		}
+		this.CaughtFish[index]++;
+	} 
 
 	#endregion
 

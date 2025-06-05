@@ -9,10 +9,10 @@ public class Fish : AbstractState<Fish.State>
     #region States
 
     public enum State {
-        none,
-        onHook,
-        caught,
-        escaped
+        Default,
+        OnHook,
+        Caught,
+        Escaped
     }
 
 
@@ -23,7 +23,14 @@ public class Fish : AbstractState<Fish.State>
         active
     }
 
-    public ActivityLevel activityLevel;
+	[field:SerializeField]
+    public ActivityLevel CurrentActivityLevel {
+		get;
+		set;
+	}
+
+	[SerializeField]
+	private List<ActivityLevel> activityLevels;
 
     public enum MovementDirection {
         random,
@@ -77,6 +84,15 @@ public class Fish : AbstractState<Fish.State>
 	[SerializeField]
 	private StudioEventEmitter activitySplashSFX;
 
+	[SerializeField]
+	private float reelStart;
+
+	[SerializeField]
+	private float reelEnd;
+
+	[SerializeField]
+	private float activityLevelChangeTime;
+
     #endregion
 
 
@@ -108,14 +124,28 @@ public class Fish : AbstractState<Fish.State>
 		}
 	}
 
-	[field:SerializeField]
 	private float FailedCatchTime {
 		get;
 		set;
 	}
-
-	[field:SerializeField]
 	private bool CatchStarted {
+		get;
+		set;
+	}
+
+	private List<float> ActivityLevelIntervals {
+		get;
+		set;
+	} = new List<float>();
+
+	[field: SerializeField]
+	private float CurrentLevelActivityChangeTime {
+		get;
+		set;
+	}
+
+	[field: SerializeField]
+	private bool ActivityLevelChanging {
 		get;
 		set;
 	}
@@ -141,45 +171,48 @@ public class Fish : AbstractState<Fish.State>
 	public bool IsFailable {
 		get;
 		set;
-	} = true;
+	}
+
+	public bool IsTutorial {
+		get;
+		set;
+	}
 
 	#endregion
 
 
 	#region Mono Behaviours
 
-	public void Start() {
-		SetState(State.onHook);
-		switch (activityLevel) {
-			case ActivityLevel.none:
-				AudioManager.Instance.PlayFishActivitySound(this, 0, true);
-				break;
-			case ActivityLevel.calm:
-				AudioManager.Instance.PlayFishActivitySound(this, 1, true);
-				break;
-			case ActivityLevel.medium:
-				AudioManager.Instance.PlayFishActivitySound(this, 2, true);
-				break;
-			case ActivityLevel.active:
-				AudioManager.Instance.PlayFishActivitySound(this, 3, true);
-				break;
-			default:
-				break;
-		}
-		EnableActivityLevelParticles();
-	}
-
 	public override void Update() {
 		HandleCentering();
 		switch (this.CurrentState) {
-			case State.none:
+			case State.Default:
 				break;
-			case State.onHook:
+			case State.OnHook:
 				if(this.InputController.ReelSpeed > 0) {
 					this.CatchStarted = true;
 				}
 				if (this.FailedCatchTime > 10) {
 					FailedCatch();
+				}
+				for (int i = this.ActivityLevelIntervals.Count - 1; i >= 0 ; i--) {
+					if(transform.position.z < (this.ActivityLevelIntervals[i])){
+						if (this.CurrentActivityLevel != activityLevels[i]) {
+							SetActivityLevel(activityLevels[i]);
+							if (i != 0) {
+								this.ActivityLevelChanging = true;
+							}
+						}
+						break;
+					}
+				}
+				if (this.ActivityLevelChanging) {
+					if (this.CurrentLevelActivityChangeTime <= activityLevelChangeTime) {
+						this.CurrentLevelActivityChangeTime += Time.deltaTime;
+					} else {
+						this.CurrentLevelActivityChangeTime = 0;
+						this.ActivityLevelChanging = false;
+					}
 				}
 				if (strafeCount == 0) {
 					return;
@@ -206,35 +239,41 @@ public class Fish : AbstractState<Fish.State>
 					}
 				}
 				break;
-			case State.caught:
-				activityLevel = ActivityLevel.none;
+			case State.Caught:
+				SetActivityLevel(ActivityLevel.none);
 				break;
-			case State.escaped:
+			case State.Escaped:
 				break;
 		}
 	}
 
 
     public void FixedUpdate() {
-		if(this.CurrentState == State.onHook) {
+		if(this.CurrentState == State.OnHook) {
 			Reel();
 		}
 		if (GameManager.Instance.InputController.StrafingEnabled) {
 			Move();
 		}
     }
-    #endregion
+	#endregion
 
 
-    #region Public Methods
+	#region Public Methods
 
-	public void EnableVisuals(bool enable) {
-		visuals.SetActive(enable);
+	public void Initialize() {
+		float activityLevelInterval = (reelStart - reelEnd) / activityLevels.Count;
+		for (int i = 0; i < activityLevels.Count; i++) {
+			this.ActivityLevelIntervals.Add(reelStart - (i * activityLevelInterval));
+		}
+		SetActivityLevel(activityLevels[0]);
+		SetState(State.OnHook);
 	}
 
 	public void FishCaught() {
+		GameManager.Instance.AssignNewCaughtFish(fishIndex);
 		GameManager.Instance.LevelController.SetState(LevelController.State.FishCaught);
-		AudioManager.Instance.PlayFishActivitySound(this, 1, false);
+		AudioManager.Instance.PlayFishActivitySound(this, 0, true);
 		Destroy(gameObject);
 	}
 
@@ -248,11 +287,14 @@ public class Fish : AbstractState<Fish.State>
     }
 
     private void Reel() {
-        switch (activityLevel) {
+		if (this.ActivityLevelChanging) {
+			return;
+		}
+        switch (CurrentActivityLevel) {
             case ActivityLevel.none:
                 break;
             case ActivityLevel.calm:
-				if (this.InputController.reelState == InputController.ReelState.calmReeling && this.IsCentred) {
+				if (this.InputController.CurrentState == InputController.State.CalmReeling && this.IsCentred) {
 					rb.AddForce(0, 0, -reelSpeed);
 				} else {
 					IncreaseFailTime();
@@ -260,7 +302,7 @@ public class Fish : AbstractState<Fish.State>
 				}
 				break;
             case ActivityLevel.medium:
-				if (this.InputController.reelState == InputController.ReelState.normalReeling && this.IsCentred) {
+				if (this.InputController.CurrentState == InputController.State.NormalReeling && this.IsCentred) {
 					rb.AddForce(0, 0, -reelSpeed);
 				} else {
 					IncreaseFailTime();
@@ -268,7 +310,7 @@ public class Fish : AbstractState<Fish.State>
 				}
 				break;
             case ActivityLevel.active:
-				if (this.InputController.reelState == InputController.ReelState.fastReeling && this.IsCentred) {
+				if (this.InputController.CurrentState == InputController.State.FastReeling && this.IsCentred) {
 					rb.AddForce(0, 0, -reelSpeed);
 				} else {
 					IncreaseFailTime();
@@ -306,21 +348,26 @@ public class Fish : AbstractState<Fish.State>
 		Destroy(gameObject);
 	}
 
-	private void EnableActivityLevelParticles() {
+	private void SetActivityLevel(ActivityLevel activityLevel) {
+		this.CurrentActivityLevel = activityLevel;
 		for (int i = 0; i < activityParticles.Length; i++) {
 			activityParticles[i].SetActive(false);
 		}
-		switch (activityLevel) {
+		switch (CurrentActivityLevel) {
 			case ActivityLevel.none:
+				AudioManager.Instance.PlayFishActivitySound(this, 0, true);
 				break;
 			case ActivityLevel.calm:
 				activityParticles[0].SetActive(true);
+				AudioManager.Instance.PlayFishActivitySound(this, 1, true);
 				break;
 			case ActivityLevel.medium:
 				activityParticles[1].SetActive(true);
+				AudioManager.Instance.PlayFishActivitySound(this, 2, true);
 				break;
 			case ActivityLevel.active:
 				activityParticles[2].SetActive(true);
+				AudioManager.Instance.PlayFishActivitySound(this, 3, true);
 				break;
 			default:
 				break;

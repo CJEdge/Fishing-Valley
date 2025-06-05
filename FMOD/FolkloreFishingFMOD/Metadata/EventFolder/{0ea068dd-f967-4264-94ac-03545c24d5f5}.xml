@@ -5,7 +5,7 @@
 			<value>CaughtFish</value>
 		</property>
 		<relationship name="folder">
-			<destination>{b289aeaf-ac67-4853-ae39-fa241b96bc6b}</destination>
+			<destination>{f254f42d-171d-4a00-99e9-503064e1fdbe}</destination>
 		</relationship>
 	</object>
 </objects>

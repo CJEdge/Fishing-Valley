@@ -6,7 +6,7 @@ using FMOD.Studio;
 
 public class FMODManager : Singleton<FMODManager>
 {
-	[Header("VoiceOver")]
+	[Header("MenuVoiceOver")]
 
 	public EventReference MenuGreeting;
 
@@ -15,6 +15,8 @@ public class FMODManager : Singleton<FMODManager>
 	public EventReference MenuSettings;
 
 	public EventReference MainMenu;
+
+	[Header("LevelVoiceOver")]
 
 	public EventReference Level1IntroCutscene;
 
@@ -27,6 +29,23 @@ public class FMODManager : Singleton<FMODManager>
 	public EventReference[] TutorialCatchVoices;
 
 	public EventReference[] CatchVoices;
+
+	[Header("ShopVoiceOver")]
+
+	public EventReference[] ShoreIntros;
+
+	public EventReference[] BaitShopIntros;
+
+	public EventReference[] BaitShopTutorialItemIntros;
+
+	public EventReference[] BaitShopItemIntros;
+
+	public EventReference[] BaitShopSellYourItems;
+
+	public EventReference[] BaitShopTutorialThanks;
+
+	public EventReference[] BaitShopThanks;
+
 
 	[Header("SFX")]
 

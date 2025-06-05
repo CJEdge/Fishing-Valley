@@ -50,14 +50,16 @@ MonoBehaviour:
   - {fileID: 3472080174443941622, guid: 56eb2018d3a3480448f2ea67b5b72728, type: 3}
   - {fileID: 6600018212874257723, guid: 031262a786fb3484a9d9a1131e2e7fed, type: 3}
   - {fileID: 8874738652398643800, guid: d9a2cdbf59c0d1b4ab186e425e3d8be5, type: 3}
+  - {fileID: 939318007809733827, guid: 46c47adee9d3bbf4d95dd38bcecd4afe, type: 3}
   baits:
   - {fileID: 1264329977150585429, guid: c070571afa0583f429615349cd46c82c, type: 3}
   - {fileID: 2644793683023306607, guid: deaf0af42497b3a49b1c60dfeb125c58, type: 3}
   - {fileID: 4581535848558131026, guid: 65de2ea77d29ca7438df5403e0cc0d38, type: 3}
   - {fileID: 7779104066758528175, guid: b0fe451ad790c044784140f990fb4a6a, type: 3}
-  - {fileID: 5679352621735612818, guid: 3c0861e58491f484199c895cf2758efb, type: 3}
+  - {fileID: 7896926226264258103, guid: 1e85570237b64c54ca570d11b21f4b97, type: 3}
   - {fileID: 7778841989186564110, guid: 142a9d4d143554a4b86112aad1f3a274, type: 3}
   <CurrentBaits>k__BackingField: 
+  <CaughtFish>k__BackingField: 
   <CurrentBait>k__BackingField: {fileID: 0}
 --- !u!114 &1583213601024685545
 MonoBehaviour:
@@ -125,51 +127,69 @@ MonoBehaviour:
       Data2: 1237845555
       Data3: 1302096006
       Data4: 997823191
-    Path: event:/ApplyBaitTutorial
+    Path: event:/VoiceOver/ApplyBaitTutorial/ApplyBaitTutorial
   - Guid:
       Data1: 1185227841
       Data2: 1167473012
       Data3: 1704720298
       Data4: -1675436907
-    Path: event:/ApplyBaitTutorial 2
+    Path: event:/VoiceOver/ApplyBaitTutorial/ApplyBaitTutorial 2
   - Guid:
       Data1: -1804177842
       Data2: 1133100240
       Data3: 1407829949
       Data4: 30758483
-    Path: event:/ApplyBaitTutorial 3
+    Path: event:/VoiceOver/ApplyBaitTutorial/ApplyBaitTutorial 3
+  - Guid:
+      Data1: 1133537527
+      Data2: 1077086034
+      Data3: -1670942325
+      Data4: -1588406641
+    Path: event:/VoiceOver/ApplyBaitTutorial/ApplyBaitTutorial 4
+  - Guid:
+      Data1: -561901699
+      Data2: 1148600959
+      Data3: -436482389
+      Data4: 45228382
+    Path: event:/VoiceOver/ApplyBaitTutorial/ApplyBaitTutorial 5
   CastRodTutorials:
   - Guid:
       Data1: -534209392
       Data2: 1319544061
       Data3: -2006409050
       Data4: 99920702
-    Path: event:/CastRodTutorial
+    Path: event:/VoiceOver/CastRodTutorials/CastRodTutorial
   - Guid:
       Data1: 920292586
       Data2: 1308191216
       Data3: -1919537504
       Data4: 1844583085
-    Path: event:/CastRodTutorial 2
+    Path: event:/VoiceOver/CastRodTutorials/CastRodTutorial 2
   ReelTutorials:
   - Guid:
       Data1: -1623877199
       Data2: 1319586144
       Data3: -437439302
       Data4: 905470626
-    Path: event:/ReelTutorial
+    Path: event:/VoiceOver/ReelTutorial/ReelTutorial
   - Guid:
       Data1: 2069845911
       Data2: 1107104385
       Data3: -1949121643
       Data4: 593959438
-    Path: event:/ReelTutorial 2
+    Path: event:/VoiceOver/ReelTutorial/ReelTutorial 2
   - Guid:
       Data1: -673632509
       Data2: 1158322566
       Data3: 196545185
       Data4: -619117660
-    Path: event:/ReelTutorial 3
+    Path: event:/VoiceOver/ReelTutorial/ReelTutorial 3
+  - Guid:
+      Data1: 388682248
+      Data2: 1103761903
+      Data3: 928888984
+      Data4: -286619100
+    Path: event:/VoiceOver/ReelTutorial/ReelTutorial 4
   TutorialCatchVoices:
   - Guid:
       Data1: 85320458
@@ -189,6 +209,12 @@ MonoBehaviour:
       Data3: 576283287
       Data4: 2029869952
     Path: event:/VoiceOver/CaughtFish/TutorialFish 3
+  - Guid:
+      Data1: 339093144
+      Data2: 1237211311
+      Data3: 1202464683
+      Data4: 183766607
+    Path: event:/VoiceOver/CaughtFish/TutorialFish 4
   CatchVoices:
   - Guid:
       Data1: 939592733
@@ -208,6 +234,61 @@ MonoBehaviour:
       Data3: 1588832440
       Data4: -1687215191
     Path: event:/VoiceOver/CaughtFish/2_Trout
+  ShoreIntros:
+  - Guid:
+      Data1: -99361396
+      Data2: 1191018595
+      Data3: -250523751
+      Data4: -1777294225
+    Path: event:/VoiceOver/Shop/Shore/ShopSceneIntros/ShopIntro
+  BaitShopIntros:
+  - Guid:
+      Data1: 2026100594
+      Data2: 1284065626
+      Data3: 1522154651
+      Data4: 2107786914
+    Path: event:/VoiceOver/Shop/BaitShop/ShopIntros/ShopIntro
+  BaitShopTutorialItemIntros:
+  - Guid:
+      Data1: 1662831763
+      Data2: 1177459567
+      Data3: -1590992981
+      Data4: -1277593302
+    Path: event:/VoiceOver/Shop/BaitShop/ItemIntros/TutorialSaleIntro
+  BaitShopItemIntros:
+  - Guid:
+      Data1: -709591002
+      Data2: 1232884569
+      Data3: -1665392750
+      Data4: -1355003857
+    Path: event:/VoiceOver/Shop/BaitShop/ItemIntros/WormBait
+  - Guid:
+      Data1: -1525828269
+      Data2: 1254480062
+      Data3: 424741795
+      Data4: -1104564924
+    Path: event:/VoiceOver/Shop/BaitShop/ItemIntros/RareBait
+  BaitShopSellYourItems:
+  - Guid:
+      Data1: -68930065
+      Data2: 1294906358
+      Data3: -1644371542
+      Data4: -1821348812
+    Path: event:/VoiceOver/Shop/BaitShop/ShopSoldItem/GenericSoldItem
+  BaitShopTutorialThanks:
+  - Guid:
+      Data1: 1511185493
+      Data2: 1172471537
+      Data3: 147129528
+      Data4: -1205613490
+    Path: event:/VoiceOver/Shop/BaitShop/Thanks/TutorialThanks
+  - Guid:
+      Data1: -1727683224
+      Data2: 1187569512
+      Data3: -1460193128
+      Data4: 1245851649
+    Path: event:/VoiceOver/Shop/BaitShop/Thanks/TutorialThanks 2
+  BaitShopThanks: []
   ThrowRod:
     Guid:
       Data1: 815617258

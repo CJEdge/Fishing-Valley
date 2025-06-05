@@ -17,6 +17,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3614361354684212053, guid: 3bb9af89310f9574686d41c346bf7ca7, type: 3}
+      propertyPath: isTutorial
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614361354684212053, guid: 3bb9af89310f9574686d41c346bf7ca7, type: 3}
       propertyPath: 'catchChances.Array.data[0]'
       value: 0
       objectReference: {fileID: 0}

@@ -1,6 +1,7 @@
 using FMODUnity;
 using FMOD.Studio;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VoiceOverController : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class VoiceOverController : MonoBehaviour
 		set;
 	}
 
+	[field: SerializeField]
 	private bool[] AttatchBaitTutorialsCompleted {
 		get;
 		set;
@@ -102,12 +104,10 @@ public class VoiceOverController : MonoBehaviour
 				}
 				for (int i = 0; i < this.AttatchBaitTutorialsCompleted.Length; i++) {
 					if (!this.AttatchBaitTutorialsCompleted[i]) {
-						if (i == 3) {
-							GameManager.Instance.CurrentBaits[i] = 6;
-						} else {
+						if (!AttatchBaitTutorialExtras(i)) {
 							GameManager.Instance.CurrentBaits[i] = 1;
+							AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.ApplyBaitTutorials[i]);
 						}
-						AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.ApplyBaitTutorials[i]);
 						break;
 					}
 				}
@@ -116,7 +116,9 @@ public class VoiceOverController : MonoBehaviour
 			case LevelController.State.AttatchBait:
 				for (int i = 0; i < this.AttatchBaitTutorialsCompleted.Length; i++) {
 					if (!this.AttatchBaitTutorialsCompleted[i]) {
-						this.AttatchBaitTutorialsCompleted[i] = true;
+						if (!AttatchBaitTutorialCompleteExtras(i)) {
+							this.AttatchBaitTutorialsCompleted[i] = true;
+						}
 						break;
 					}
 				}
@@ -157,6 +159,9 @@ public class VoiceOverController : MonoBehaviour
 				if (allTutorialsCompleted) {
 					return;
 				}
+				if (!GameManager.Instance.CurrentFish.IsTutorial) {
+					return;
+				}
 				for (int i = 0; i < this.ReelTutorialsCompleted.Length; i++) {
 					if (!this.ReelTutorialsCompleted[i]) {
 						AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.ReelTutorials[i]);
@@ -179,7 +184,7 @@ public class VoiceOverController : MonoBehaviour
 						allTutorialsCompleted = false;
 					}
 				}
-				if (allTutorialsCompleted) {
+				if (allTutorialsCompleted || !GameManager.Instance.CurrentFish.IsTutorial) {
 					AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.CatchVoices[GameManager.Instance.CurrentFish.FishIndex]);
 					this.CurrentTutorialEventInstance = AudioManager.Instance.VoiceLineEventInstance;
 					return;
@@ -223,9 +228,35 @@ public class VoiceOverController : MonoBehaviour
 			case LevelController.State.ReelingFish:
 				break;
 			case LevelController.State.FishCaught:
+				if(GameManager.Instance.CurrentFish.FishIndex == 3) {
+					SceneManager.LoadScene("Menu");
+				}
 				break;
 			default:
 				break;
+		}
+	}
+
+	private bool AttatchBaitTutorialExtras(int currentTutorialIndex) {
+		if (currentTutorialIndex == 3) {
+			if (GameManager.Instance.CurrentBaits[currentTutorialIndex] == 0 && GameManager.Instance.TotalCaughtFish < 10) {
+				GameManager.Instance.CurrentBaits[currentTutorialIndex] = 6;
+				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.ApplyBaitTutorials[currentTutorialIndex]);
+				return true;
+			} else {
+				GameManager.Instance.LevelController.SetState(LevelController.State.AttatchBait);
+				return true;
+			}
+		} else {
+			return false;
+		}
+	}
+
+	private bool AttatchBaitTutorialCompleteExtras(int currentTutorialIndex) {
+		if(currentTutorialIndex == 3 && GameManager.Instance.TotalCaughtFish < 8) {
+			return true;
+		} else {
+			return false;
 		}
 	}
 

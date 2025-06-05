@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: activityLevel
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
+      propertyPath: 'activityLevels.Array.data[0]'
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

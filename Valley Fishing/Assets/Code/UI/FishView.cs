@@ -27,6 +27,9 @@ public class FishView : MonoBehaviour
 	}
 
 	public void OnDestroy() {
+		if(GameManager.Instance == null) {
+			return;
+		}
 		GameManager.Instance.InputController.OnClick -= DisableFishUI;
 		GameManager.Instance.InputController.OnSkip -= DisableFishUI;
 	}
@@ -61,6 +64,15 @@ public class FishView : MonoBehaviour
 	#region Private Methods
 
 	private void DisableFishUI() {
+		bool allreadyDisabled = true;
+		for (int i = 0; i < GameManager.Instance.Fish.Count; i++) {
+			if (fishUis[i].activeSelf) {
+				allreadyDisabled = false;
+			}
+		}
+		if (allreadyDisabled) {
+			return;
+		}
 		EnableFishUI(false);
 		if(GameManager.Instance.LevelController.CurrentState == LevelController.State.FishCaught) {
 			GameManager.Instance.LevelController.SetState(LevelController.State.Idle);

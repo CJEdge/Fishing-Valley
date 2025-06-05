@@ -45,12 +45,15 @@ public class PlayerArms : MonoBehaviour
 
 	public void Start() {
 		GameManager.Instance.InputController.OnClick += Click;
-		GameManager.Instance.InputController.OnReelStateChanged += Reel;
+		GameManager.Instance.InputController.StateChanged += Reel;
 	}
 
 	public void OnDestroy() {
+		if(GameManager.Instance == null) {
+			return;
+		}
 		GameManager.Instance.InputController.OnClick -= Click;
-		GameManager.Instance.InputController.OnReelStateChanged -= Reel;
+		GameManager.Instance.InputController.StateChanged -= Reel;
 	}
 
 	#endregion
@@ -86,22 +89,20 @@ public class PlayerArms : MonoBehaviour
 
 	public void Reel() {
 		AudioManager.Instance.SetReelRate(GameManager.Instance.InputController.ReelSpeed);
-		switch (GameManager.Instance.InputController.reelState) {
-			case InputController.ReelState.reelingLocked:
-				Debug.Log("locked");
+		switch (GameManager.Instance.InputController.CurrentState) {
+			case InputController.State.ReelingLocked:
 				animator.Play(Idle);
 				break;
-			case InputController.ReelState.notReeling:
+			case InputController.State.NotReeling:
 				animator.Play(IdleReel);
 				break;
-			case InputController.ReelState.calmReeling:
+			case InputController.State.CalmReeling:
 				animator.Play(SlowReel);
 				break;
-			case InputController.ReelState.normalReeling:
+			case InputController.State.NormalReeling:
 				animator.Play(MediumReel);
 				break;
-			case InputController.ReelState.fastReeling:
-				Debug.Log("fast");
+			case InputController.State.FastReeling:
 				animator.Play(FastReel);
 				break;
 			default:
@@ -110,6 +111,7 @@ public class PlayerArms : MonoBehaviour
 	}
 
 	private IEnumerator StartThrowRod() {
+		Debug.Log("throw");
 		animator.Play(Throw);
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.ThrowRod,transform.position);
 		yield return new WaitForSeconds(windUpLength);

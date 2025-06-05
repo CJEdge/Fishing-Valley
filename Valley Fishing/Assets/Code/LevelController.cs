@@ -71,7 +71,6 @@ public class LevelController : AbstractState<LevelController.State> {
 				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.Level1IntroCutscene);
 				break;
 			case State.Idle:
-				voiceOverController.LevelStateChanged();
 				break;
 			case State.AttatchBait:
 				baitView.EnableBaitUI(true);
@@ -79,13 +78,13 @@ public class LevelController : AbstractState<LevelController.State> {
 			case State.IdleWithBait:
 				break;
 			case State.WaitingForBite:
-				StartCoroutine(WaitForBite());
+				SpawnFish();
 				break;
 			case State.ReelingFish:
-				GameManager.Instance.InputController.reelState = InputController.ReelState.notReeling;
+				GameManager.Instance.InputController.SetState(InputController.State.NotReeling);
 				break;
 			case State.FishCaught:
-				GameManager.Instance.InputController.reelState = InputController.ReelState.reelingLocked;
+				GameManager.Instance.InputController.SetState(InputController.State.ReelingLocked);
 				fishView.EnableFishUI(true);
 				break;
 		}
@@ -124,6 +123,11 @@ public class LevelController : AbstractState<LevelController.State> {
 
 	private IEnumerator WaitForBite() {
 		yield return new WaitForSeconds(3);
+		SetState(State.ReelingFish);
+		GameManager.Instance.CurrentFish.Initialize();
+	}
+
+	private void SpawnFish() {
 		int fishIndex = 0;
 		float randomValue = UnityEngine.Random.value;
 		float cumulative = 0f;
@@ -134,16 +138,13 @@ public class LevelController : AbstractState<LevelController.State> {
 				break;
 			}
 		}
-		SpawnFish(fishIndex);
-	}
-
-	private void SpawnFish(int fishIndex) {
 		Fish fishInstance = Instantiate(this.Fish[fishIndex], fishSpawnTransform.position, Quaternion.identity);
 		fishInstance.name = this.Fish[fishIndex].name;
 		fishInstance.transform.parent = gameplayContainer;
 		fishInstance.IsFailable = this.CurrentBait.Isfailable;
+		fishInstance.IsTutorial = this.CurrentBait.IsTutorial;
 		GameManager.Instance.CurrentFish = fishInstance;
-		SetState(State.ReelingFish);
+		StartCoroutine(WaitForBite());
 	}
 
 	#endregion
