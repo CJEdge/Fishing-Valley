@@ -102,3 +102,4 @@ fmod_editor.log
 # Ignore bank files in the StreamingAssets folder.
 /[Aa]ssets/StreamingAssets/**/*.bank
 /[Aa]ssets/StreamingAssets/**/*.bank.meta
+FMOD/FolkloreFishingFMOD/.cache/fsbcache/
