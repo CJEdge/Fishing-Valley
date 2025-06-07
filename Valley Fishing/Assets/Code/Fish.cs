@@ -52,6 +52,9 @@ public class Fish : AbstractState<Fish.State>
 	private int fishIndex;
 
 	[SerializeField]
+	private int sellPrice;
+
+	[SerializeField]
 	private bool isStrafer;
 
 	[SerializeField]
@@ -165,6 +168,12 @@ public class Fish : AbstractState<Fish.State>
 	public int FishIndex {
 		get {
 			return fishIndex;
+		}
+	}
+
+	public int SellPrice {
+		get {
+			return sellPrice;
 		}
 	}
 

@@ -30,6 +30,15 @@ public class Bait : MonoBehaviour
 	}
 
 	[SerializeField]
+	private int baitPrice;
+	
+	public int BaitPrice {
+		get {
+			return baitPrice;
+		}
+	}
+
+	[SerializeField]
 	private float[] catchChances;
 
 	public float[] CatchChances {

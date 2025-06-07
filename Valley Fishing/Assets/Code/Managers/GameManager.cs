@@ -53,7 +53,7 @@ public class GameManager : Singleton<GameManager>
 	public List<int> CurrentBaits {
 		get;
 		set;
-	}
+	} = new List<int>();
 
 	public Fish CurrentFish {
 		get;
@@ -64,10 +64,15 @@ public class GameManager : Singleton<GameManager>
 	public List<int> CaughtFish {
 		get;
 		set;
+	} = new List<int>();
+
+	public Bait CurrentBait {
+		get;
+		set;
 	}
 
 	[field:SerializeField]
-	public Bait CurrentBait {
+	public int Money {
 		get;
 		set;
 	}

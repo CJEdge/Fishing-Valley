@@ -8,8 +8,7 @@ public abstract class Shop : AbstractState<Shop.State>
 	public enum State {
 		Defualt,
 		Entering,
-		Selling,
-		Buying,
+		Trading,
 		Leaving
 	}
 

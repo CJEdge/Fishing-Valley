@@ -47,6 +47,10 @@ public class FMODManager : Singleton<FMODManager>
 	public EventReference[] BaitShopThanks;
 
 
+	[Header("Prices")]
+
+	public EventReference price;
+
 	[Header("SFX")]
 
 	public EventReference ThrowRod;
