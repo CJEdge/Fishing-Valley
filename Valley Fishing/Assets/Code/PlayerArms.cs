@@ -38,6 +38,11 @@ public class PlayerArms : MonoBehaviour
 		}
 	}
 
+	private bool IsCasting {
+		get;
+		set;
+	}
+
 	#endregion
 
 
@@ -72,7 +77,9 @@ public class PlayerArms : MonoBehaviour
 			case LevelController.State.AttatchBait:
 				break;
 			case LevelController.State.IdleWithBait:
-				StartCoroutine(StartThrowRod());
+				if (!this.IsCasting) {
+					StartCoroutine(StartThrowRod());
+				}
 				break;
 			case LevelController.State.WaitingForBite:
 				break;
@@ -111,7 +118,7 @@ public class PlayerArms : MonoBehaviour
 	}
 
 	private IEnumerator StartThrowRod() {
-		Debug.Log("throw");
+		this.IsCasting = true;
 		animator.Play(Throw);
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.ThrowRod,transform.position);
 		yield return new WaitForSeconds(windUpLength);
@@ -121,6 +128,7 @@ public class PlayerArms : MonoBehaviour
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.LandRod, transform.position);
 		GameManager.Instance.LevelController.SetState(LevelController.State.WaitingForBite);
 		AudioManager.Instance.PlayReelSound(FMODManager.Instance.ReelSound);
+		this.IsCasting = false;
 	}
 
 }

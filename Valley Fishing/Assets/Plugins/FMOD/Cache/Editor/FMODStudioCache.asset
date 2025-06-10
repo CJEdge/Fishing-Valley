@@ -215,7 +215,7 @@ MonoBehaviour:
   - {fileID: 1758708420110282350}
   MinDistance: 1
   MaxDistance: 20
-  Length: 3843
+  Length: 19877
 --- !u!114 &-6808323239486699356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,7 +390,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/VoiceLines.bank
   Name: VoiceLines
   StudioPath: bank:/VoiceLines
-  lastModified: 638836448595469602
+  lastModified: 638851918945296481
   FileSizes:
   - Name: Desktop
     Value: 2130400
@@ -939,12 +939,13 @@ MonoBehaviour:
   - {fileID: -6808323239486699356}
   - {fileID: -3181940076740209006}
   - {fileID: -7287051281053854580}
+  - {fileID: 7370825468267529560}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4198817137325428765}
   StringsBanks:
   - {fileID: 1411835401192698514}
-  cacheTime: 638836448595469602
+  cacheTime: 638851969968592561
   cacheVersion: 131624
 --- !u!114 &286293313135071889
 MonoBehaviour:
@@ -1097,10 +1098,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638836448589758604
+  lastModified: 638851966385573691
   FileSizes:
   - Name: Desktop
-    Value: 2870
+    Value: 2906
   Exists: 1
 --- !u!114 &1758708420110282350
 MonoBehaviour:
@@ -1289,10 +1290,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638833420619806263
+  lastModified: 638851969968592561
   FileSizes:
   - Name: Desktop
-    Value: 196352
+    Value: 370976
   Exists: 1
 --- !u!114 &4198817137325428765
 MonoBehaviour:
@@ -1309,7 +1310,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638836448589738660
+  lastModified: 638851966385553299
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -1504,7 +1505,7 @@ MonoBehaviour:
   - {fileID: 6249713314087398606}
   MinDistance: 1
   MaxDistance: 20
-  Length: 4500
+  Length: 4343
 --- !u!114 &5462802084644495578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1841,6 +1842,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &7370825468267529560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Bait0
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Bait0
+  Guid:
+    Data1: -1751036424
+    Data2: 1219677751
+    Data3: -754223217
+    Data4: -75916562
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2194
 --- !u!114 &7937724748396984246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1904,7 +1932,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638833409097469475
+  lastModified: 638851918939417905
   FileSizes:
   - Name: Desktop
     Value: 2401824

@@ -7,10 +7,12 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 	#region States
 
 	public enum ButtonType {
+		None,
 		Play,
 		Settings,
 		MainMenu,
-		WormBait,
+		FreeBait,
+		RareBait
 	}
 
 	public ButtonType buttonType;
@@ -42,6 +44,8 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 
 	private void DoHoverEffect() {
 		switch (buttonType) {
+			case ButtonType.None:
+				break;
 			case ButtonType.Play:
 				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.MenuPlay);
 				break;
@@ -51,7 +55,11 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 			case ButtonType.MainMenu:
 				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.MainMenu);
 				break;
-			case ButtonType.WormBait:
+			case ButtonType.FreeBait:
+				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitIntros[0]);
+				break;
+			case ButtonType.RareBait:
+				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitIntros[1]);
 				break;
 			default:
 				break;

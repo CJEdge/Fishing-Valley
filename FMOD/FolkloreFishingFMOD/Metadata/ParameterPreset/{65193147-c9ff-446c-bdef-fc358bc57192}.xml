@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{65193147-c9ff-446c-bdef-fc358bc57192}">
+		<property name="name">
+			<value>BaitType</value>
+		</property>
+		<relationship name="folder">
+			<destination>{41f80124-56a0-4c02-a6e2-b03fc989f2d9}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{0d649b0e-998a-4cc8-a6fd-af747af88dd4}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{0d649b0e-998a-4cc8-a6fd-af747af88dd4}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>11</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

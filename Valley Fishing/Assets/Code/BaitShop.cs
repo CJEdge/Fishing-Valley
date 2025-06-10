@@ -40,7 +40,8 @@ public class BaitShop : Shop {
 	private EventSystem eventSystem;
 
 	[SerializeField]
-	private int baitBundleSize;
+	private int[] baitQuantities;
+
 
 	#endregion
 
@@ -48,6 +49,11 @@ public class BaitShop : Shop {
 	#region Properties
 
 	private int FishSellPrice {
+		get;
+		set;
+	}
+
+	public bool TutorialBaitBought {
 		get;
 		set;
 	}
@@ -130,12 +136,23 @@ public class BaitShop : Shop {
 				break;
 		}
 	}
-
 	public void BuyBait(int baitIndex) {
-		if(GameManager.Instance.Baits[baitIndex].BaitPrice < GameManager.Instance.Money) {
+		if (GameManager.Instance.Baits[baitIndex].BaitPrice < GameManager.Instance.Money) {
 			GameManager.Instance.Money -= GameManager.Instance.Baits[baitIndex].BaitPrice;
-			GameManager.Instance.CurrentBaits[baitIndex] += baitBundleSize;
+			GameManager.Instance.CurrentBaits[baitIndex] += baitQuantities[baitIndex];
+
+			// override
+			if (!this.TutorialBaitBought) {
+				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopThanks[0]);
+				this.TutorialBaitBought = true;
+			} else {
+				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopThanks[1]);
+			}
 		}
+	}
+
+	public void LeaveBaitShop() {
+		GameManager.Instance.ShopController.SetState(ShopController.State.Shore);
 	}
 
 	#endregion

@@ -48,6 +48,7 @@ public class InputController : AbstractState<InputController.State> {
 	protected override void UpdateState(State state) {
 		switch (state) {
 			case State.ReelingLocked:
+				ReduceReelRate();
 				break;
 			case State.NotReeling:
 				Reel();
@@ -109,6 +110,7 @@ public class InputController : AbstractState<InputController.State> {
 
 		public float horizontalSpeed;
 
+		[field:SerializeField]
 		public float ReelInput {
 			get;
 			set;

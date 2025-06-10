@@ -30,6 +30,10 @@ public class AudioManager : Singleton<AudioManager>
 		get;
 		set;
 	}
+	public EventInstance BaitEventInstance {
+		get;
+		set;
+	}
 
 	[field:SerializeField]
 	public StudioEventEmitter FishActivityLevelInstance {
@@ -76,6 +80,17 @@ public class AudioManager : Singleton<AudioManager>
 	#region Public Methods
 	public void PlayOneShot(EventReference sound, Vector3 position) {
 		RuntimeManager.PlayOneShot(sound, position);
+	}
+
+	public void PlayBaitSound(bool play, int index) {
+		Debug.Log(play);
+		if (play) {
+			this.BaitEventInstance = CreateSFXInstance(FMODManager.Instance.BaitSounds[index]);
+			this.BaitEventInstance.start();
+		} else {
+			this.BaitEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+			this.BaitEventInstance.release();
+		}
 	}
 
 	public void PlayVoiceOver(EventReference voiceLineReference) {

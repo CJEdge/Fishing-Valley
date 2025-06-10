@@ -2419,6 +2419,7 @@ MonoBehaviour:
     maxReelRate: 50
     completeReelResetTime: 0.3
     horizontalSpeed: 2
+    <ReelInput>k__BackingField: 0
   controller:
     reelStateThresholds:
     - 0.3
@@ -2427,6 +2428,7 @@ MonoBehaviour:
     maxReelRate: 3
     completeReelResetTime: 0.5
     horizontalSpeed: 200
+    <ReelInput>k__BackingField: 0
 --- !u!114 &705276748
 MonoBehaviour:
   m_ObjectHideFlags: 0

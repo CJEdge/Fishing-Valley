@@ -65,13 +65,17 @@ public class BaitView : MonoBehaviour
 			}
 		}
 		eventSystem.SetSelectedGameObject(baitButtons[0].gameObject);
+		AudioManager.Instance.PlayBaitSound(false, 0);
+		AudioManager.Instance.PlayBaitSound(true, this.BaitIndex);
 	}
 
 	public void BaitSelected(int baitIndex) {
 		this.BaitIndex = baitIndex;
+		
 	}
 
 	public void BaitClicked(int baitIndex) {
+		AudioManager.Instance.PlayBaitSound(false, 0);
 		GameManager.Instance.CurrentBait = GameManager.Instance.Baits[baitIndex];
 		GameManager.Instance.CurrentBaits[GameManager.Instance.CurrentBait.BaitIndex]--;
 		EnableBaitUI(false);

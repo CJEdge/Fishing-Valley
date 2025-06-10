@@ -46,6 +46,8 @@ public class FMODManager : Singleton<FMODManager>
 
 	public EventReference[] BaitShopThanks;
 
+	public EventReference[] BaitIntros;
+
 
 	[Header("Prices")]
 
@@ -60,6 +62,8 @@ public class FMODManager : Singleton<FMODManager>
 	public EventReference ReelSound;
 
 	public EventReference ActivityLevelSplash;
+
+	public EventReference[] BaitSounds;
 
 	[Header("Music")]
 

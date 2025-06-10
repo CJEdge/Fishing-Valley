@@ -149,7 +149,7 @@
 			<value>3.8736734693877555</value>
 		</property>
 		<property name="length">
-			<value>0.62693877551020405</value>
+			<value>0.47020408163265304</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{e37d4bc7-27da-42e4-a0a1-309824f1d700}</destination>
@@ -286,7 +286,7 @@
 			<value>3.8736734693877555</value>
 		</property>
 		<property name="length">
-			<value>0.62693877551020361</value>
+			<value>0.47020408163265337</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{9fbad923-2f49-47ca-a7d0-1d936859373a}</destination>
@@ -474,7 +474,7 @@
 	</object>
 	<object class="TransitionMarker" id="{3033abd2-cbb5-440a-9b4a-e1ccbebb73a2}">
 		<property name="position">
-			<value>4.5</value>
+			<value>4.34326171875</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{9fbad923-2f49-47ca-a7d0-1d936859373a}</destination>
@@ -491,7 +491,7 @@
 	</object>
 	<object class="TransitionMarker" id="{3b5c44d8-9016-4f96-80da-31c2ae7ff8a6}">
 		<property name="position">
-			<value>4.5</value>
+			<value>4.34326171875</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{9fbad923-2f49-47ca-a7d0-1d936859373a}</destination>
@@ -508,7 +508,7 @@
 	</object>
 	<object class="TransitionMarker" id="{3f326369-501c-4137-a066-ce5ca91d95a6}">
 		<property name="position">
-			<value>4.5</value>
+			<value>4.34326171875</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{9fbad923-2f49-47ca-a7d0-1d936859373a}</destination>
