@@ -295,6 +295,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-6435390141900546391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/BaitIdle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/BaitIdle
+  Guid:
+    Data1: -1751036424
+    Data2: 1219677751
+    Data3: -754223217
+    Data4: -75916562
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2194
 --- !u!114 &-6404985153189706328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,6 +346,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-6324837116286082219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Fish Catch
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Fish Catch
+  Guid:
+    Data1: -1537860913
+    Data2: 1132541236
+    Data3: -390000235
+    Data4: 469100929
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6249773947489211620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -939,13 +993,15 @@ MonoBehaviour:
   - {fileID: -6808323239486699356}
   - {fileID: -3181940076740209006}
   - {fileID: -7287051281053854580}
-  - {fileID: 7370825468267529560}
+  - {fileID: 3031691276820013868}
+  - {fileID: -6324837116286082219}
+  - {fileID: -6435390141900546391}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4198817137325428765}
   StringsBanks:
   - {fileID: 1411835401192698514}
-  cacheTime: 638851969968592561
+  cacheTime: 638852520606509385
   cacheVersion: 131624
 --- !u!114 &286293313135071889
 MonoBehaviour:
@@ -1098,10 +1154,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638851966385573691
+  lastModified: 638852422588006605
   FileSizes:
   - Name: Desktop
-    Value: 2906
+    Value: 3002
   Exists: 1
 --- !u!114 &1758708420110282350
 MonoBehaviour:
@@ -1175,6 +1231,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &3031691276820013868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/AttatchBait
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/AttatchBait
+  Guid:
+    Data1: -1561571289
+    Data2: 1177583210
+    Data3: -336593267
+    Data4: 1816793257
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3050308661071630474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1290,10 +1373,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638851969968592561
+  lastModified: 638852422591389397
   FileSizes:
   - Name: Desktop
-    Value: 370976
+    Value: 425632
   Exists: 1
 --- !u!114 &4198817137325428765
 MonoBehaviour:
@@ -1310,7 +1393,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638851966385553299
+  lastModified: 638852422587986663
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -1842,33 +1925,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &7370825468267529560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Bait0
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Bait0
-  Guid:
-    Data1: -1751036424
-    Data2: 1219677751
-    Data3: -754223217
-    Data4: -75916562
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2194
 --- !u!114 &7937724748396984246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1932,7 +1988,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638851918939417905
+  lastModified: 638852520606509385
   FileSizes:
   - Name: Desktop
     Value: 2401824

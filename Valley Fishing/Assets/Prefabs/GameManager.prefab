@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3439270965734018076}
   - component: {fileID: 1583213601024685545}
   - component: {fileID: 4472528235016745865}
+  - component: {fileID: 7090412363966615903}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -60,7 +61,7 @@ MonoBehaviour:
   - {fileID: 7778841989186564110, guid: 142a9d4d143554a4b86112aad1f3a274, type: 3}
   <CurrentBaits>k__BackingField: 
   <CaughtFish>k__BackingField: 
-  <CurrentBait>k__BackingField: {fileID: 0}
+  <Money>k__BackingField: 0
 --- !u!114 &1583213601024685545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,7 +121,7 @@ MonoBehaviour:
       Data2: 1285507992
       Data3: -1565593455
       Data4: 1931711181
-    Path: event:/VoiceOver/Level1IntroCutscene
+    Path: event:/VoiceOver/Levels/Level1IntroCutscene
   ApplyBaitTutorials:
   - Guid:
       Data1: 736888570
@@ -289,6 +290,14 @@ MonoBehaviour:
       Data4: 1245851649
     Path: event:/VoiceOver/Shop/BaitShop/Thanks/TutorialThanks 2
   BaitShopThanks: []
+  BaitIntros: []
+  price:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   ThrowRod:
     Guid:
       Data1: 815617258
@@ -317,6 +326,15 @@ MonoBehaviour:
       Data3: -413234560
       Data4: -1417980924
     Path: event:/SFX/ActivitySplash
+  BaitSounds: []
+  AttatchBaitSounds: []
+  FishCatch:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   LevelOneMusic:
     Guid:
       Data1: 655083191
@@ -324,3 +342,22 @@ MonoBehaviour:
       Data3: -493826686
       Data4: 363304719
     Path: event:/Music/LevelOneMusic
+--- !u!114 &7090412363966615903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7393596337781405747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201d5e01e28e2d1449ee3be198843b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Menu: Menu
+  CatchTutorial_01: CatchTutorial_0
+  CatchTutorial_02: CatchTutorial_01
+  CatchTutorial_03: CatchTutorial_02
+  CatchTutorial_04: CatchTutorial_03
+  ShopTutorial_01: ShopTutorial_0
+  ShopTutorial_02: ShopTutorial_01

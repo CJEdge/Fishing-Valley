@@ -14,6 +14,7 @@ public abstract class Shop : AbstractState<Shop.State>
 
 	#endregion
 
+
 	#region Private Methods
 
 	public abstract void VoiceLineOver(EventInstance eventInstance);

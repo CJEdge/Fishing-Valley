@@ -21,7 +21,7 @@ public class BaitButton : MonoBehaviour
 	#endregion
 
 
-
+	#region Mono Behaviours
 	public void Start() {
 		buttonVoiceOverComponent.SelectAction -= SelectBait;
 		buttonVoiceOverComponent.SelectAction += SelectBait;
@@ -35,6 +35,11 @@ public class BaitButton : MonoBehaviour
 		baitCountText.text = "x" + GameManager.Instance.CurrentBaits[baitIndex];
 	}
 
+	#endregion
+
+
+	#region Public Methods
+
 	public void SelectBait() {
 		baitView.BaitSelected(baitIndex);
 	}
@@ -42,4 +47,7 @@ public class BaitButton : MonoBehaviour
 	public void ClickBait() {
 		baitView.BaitClicked(baitIndex);
 	}
+
+	#endregion
+
 }

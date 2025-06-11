@@ -229,7 +229,7 @@ public class VoiceOverController : MonoBehaviour
 				break;
 			case LevelController.State.FishCaught:
 				if(GameManager.Instance.CurrentFish.FishIndex == 3) {
-					SceneManager.LoadScene("Shop");
+					SceneManager.LoadScene(LevelManager.Instance.ShopTutorial_01);
 				}
 				break;
 			default:

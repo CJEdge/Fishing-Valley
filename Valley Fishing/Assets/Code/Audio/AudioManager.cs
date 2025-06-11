@@ -78,7 +78,7 @@ public class AudioManager : Singleton<AudioManager>
 
 
 	#region Public Methods
-	public void PlayOneShot(EventReference sound, Vector3 position) {
+	public void PlayOneShot(EventReference sound, Vector3 position = default) {
 		RuntimeManager.PlayOneShot(sound, position);
 	}
 

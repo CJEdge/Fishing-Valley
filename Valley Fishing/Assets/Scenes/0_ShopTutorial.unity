@@ -165,7 +165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &213367056
 RectTransform:
   m_ObjectHideFlags: 0
@@ -286,7 +286,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 895185098}
-        m_TargetAssemblyTypeName: BaitShop, Assembly-CSharp
+        m_TargetAssemblyTypeName: FisrstTutorialBaitShop, Assembly-CSharp
         m_MethodName: SellFish
         m_Mode: 1
         m_Arguments:
@@ -542,6 +542,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 890b7efa-b746-4a86-8d7e-a64c543a5bc4
+    m_ActionName: Player/Skip
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -586,12 +590,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 698265373}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1046724681}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &895185096
 GameObject:
@@ -639,7 +643,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 895185096}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88ef86715d1daa944805e0a04a250163, type: 3}
+  m_Script: {fileID: 11500000, guid: 49f5753c7495b3b43ace674e997beb3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   <CurrentState>k__BackingField: 0
@@ -913,7 +917,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 698265376}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1046724682
@@ -1080,6 +1085,8 @@ GameObject:
   - component: {fileID: 1369324399}
   - component: {fileID: 1369324398}
   - component: {fileID: 1369324401}
+  - component: {fileID: 1369324402}
+  - component: {fileID: 1369324403}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -1150,7 +1157,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1369324399}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1369324402}
+        m_TargetAssemblyTypeName: PlayButton, Assembly-CSharp
+        m_MethodName: LoadGameLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1369324399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1202,6 +1221,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonType: 0
+--- !u!114 &1369324402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369324396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05880924bac352544a27967ee7337503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <LevelToLoad>k__BackingField: 2
+--- !u!114 &1369324403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369324396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 16
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1369324402}
+          m_TargetAssemblyTypeName: PlayButton, Assembly-CSharp
+          m_MethodName: LoadGameLevel
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1395612270
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,6 +1358,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 895185098}
+    - target: {fileID: 1456574075976184987, guid: e861a55927367024c88a1bdf2ab72c41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyBait
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456574075976184987, guid: e861a55927367024c88a1bdf2ab72c41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FisrstTutorialBaitShop, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1456574075976184987, guid: e861a55927367024c88a1bdf2ab72c41, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 1
@@ -1587,6 +1656,8 @@ GameObject:
   - component: {fileID: 1774111744}
   - component: {fileID: 1774111743}
   - component: {fileID: 1774111746}
+  - component: {fileID: 1774111748}
+  - component: {fileID: 1774111747}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1659,7 +1730,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1808427007}
-        m_TargetAssemblyTypeName: ShoreMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: Shore, Assembly-CSharp
         m_MethodName: EnterBaitShop
         m_Mode: 1
         m_Arguments:
@@ -1721,6 +1792,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonType: 0
+--- !u!114 &1774111747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774111741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 16
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1774111748}
+          m_TargetAssemblyTypeName: PlayButton, Assembly-CSharp
+          m_MethodName: LoadGameLevel
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1774111748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774111741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05880924bac352544a27967ee7337503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <LevelToLoad>k__BackingField: 2
 --- !u!1 &1808427005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,7 +1880,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1808427005}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: decbd4321b6e1c046affae871fc3f71a, type: 3}
+  m_Script: {fileID: 11500000, guid: 650555aba169d614e8a786e02ef7059e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lastShopIndex: -1
@@ -1776,6 +1889,7 @@ MonoBehaviour:
   - {fileID: 1369324396}
   shoreMenuObject: {fileID: 213367055}
   eventSystem: {fileID: 1395612272}
+  <FinishedInShops>k__BackingField: 
 --- !u!1 &1819454898
 GameObject:
   m_ObjectHideFlags: 0
@@ -2126,6 +2240,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: LeaveShorePrompts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: BaitIntros.Array.data[0].Path
       value: event:/VoiceOver/Shop/BaitShop/ItemIntros/WormBait
       objectReference: {fileID: 0}
@@ -2174,6 +2292,10 @@ PrefabInstance:
       value: -1104564924
       objectReference: {fileID: 0}
     - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: LeaveShorePrompts.Array.data[0].Path
+      value: event:/VoiceOver/Shop/Shore/LeaveTutorials/LeaveTutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: BaitShopThanks.Array.data[0].Guid.Data1
       value: 1511185493
       objectReference: {fileID: 0}
@@ -2205,6 +2327,46 @@ PrefabInstance:
       propertyPath: BaitShopThanks.Array.data[1].Guid.Data4
       value: 1245851649
       objectReference: {fileID: 0}
+    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: LeaveShorePrompts.Array.data[0].Guid.Data1
+      value: -1414859070
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: LeaveShorePrompts.Array.data[0].Guid.Data2
+      value: 1267325431
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: LeaveShorePrompts.Array.data[0].Guid.Data3
+      value: 315434398
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: LeaveShorePrompts.Array.data[0].Guid.Data4
+      value: 1770385284
+      objectReference: {fileID: 0}
+    - target: {fileID: 7090412363966615903, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: ShopTutorial_01
+      value: 0_ShopTutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 7090412363966615903, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: ShopTutorial_02
+      value: 01_ShopTutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 7090412363966615903, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: CatchTutorial_01
+      value: 0_CatchTutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 7090412363966615903, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: CatchTutorial_02
+      value: 01_CatchTutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 7090412363966615903, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: CatchTutorial_03
+      value: 02_CatchTutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 7090412363966615903, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: CatchTutorial_04
+      value: 03_CatchTutorial
+      objectReference: {fileID: 0}
     - target: {fileID: 7393596337781405747, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -2230,6 +2392,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 895185098}
+    - target: {fileID: 1456574075976184987, guid: e861a55927367024c88a1bdf2ab72c41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyBait
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456574075976184987, guid: e861a55927367024c88a1bdf2ab72c41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FisrstTutorialBaitShop, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1937106899334370470, guid: e861a55927367024c88a1bdf2ab72c41, type: 3}
       propertyPath: m_Name
       value: Shop Bait Button
@@ -2329,7 +2499,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 918728922}
   - {fileID: 1819454900}
-  - {fileID: 698265376}
   - {fileID: 3609043040135961494}
   - {fileID: 196863434}
   - {fileID: 1046724681}

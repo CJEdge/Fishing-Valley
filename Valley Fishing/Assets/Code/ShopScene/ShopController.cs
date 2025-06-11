@@ -5,10 +5,21 @@ public class ShopController : AbstractState<ShopController.State>
 	#region Serialized Fields
 
 	[SerializeField]
-	private ShoreMenu shoreMenu;
+	private Shore shoreMenu;
 
 	[SerializeField]
 	private BaitShop baitShop;
+
+	#endregion
+
+
+	#region Properties
+
+	public Shore ShoreMenu {
+		get {
+			return shoreMenu;
+		}
+	}
 
 	#endregion
 

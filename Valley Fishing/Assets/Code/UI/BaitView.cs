@@ -76,6 +76,7 @@ public class BaitView : MonoBehaviour
 
 	public void BaitClicked(int baitIndex) {
 		AudioManager.Instance.PlayBaitSound(false, 0);
+		AudioManager.Instance.PlayOneShot(FMODManager.Instance.AttatchBaitSounds[baitIndex]);
 		GameManager.Instance.CurrentBait = GameManager.Instance.Baits[baitIndex];
 		GameManager.Instance.CurrentBaits[GameManager.Instance.CurrentBait.BaitIndex]--;
 		EnableBaitUI(false);

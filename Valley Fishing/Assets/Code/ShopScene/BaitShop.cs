@@ -70,7 +70,6 @@ public class BaitShop : Shop {
 				break;
 			case State.Entering:
 				baitShopObject.SetActive(true);
-				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopIntros[0]);
 				break;
 			case State.Trading:
 				eventSystem.SetSelectedGameObject(sellButton);
@@ -118,7 +117,7 @@ public class BaitShop : Shop {
 
 	#region Public Methods
 
-	public void SellFish() {
+	public virtual void SellFish() {
 		switch (sellTpye) {
 			case SellTpye.SellAllFish:
 				for (int i = 0; i < GameManager.Instance.CaughtFish.Count; i++) {
@@ -128,7 +127,6 @@ public class BaitShop : Shop {
 						GameManager.Instance.CaughtFish[i]--;
 					}
 				}
-				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopSellYourItems[0]);
 				break;
 			case SellTpye.SellIndividualFish:
 				break;
@@ -136,22 +134,16 @@ public class BaitShop : Shop {
 				break;
 		}
 	}
-	public void BuyBait(int baitIndex) {
+	public virtual void BuyBait(int baitIndex) {
 		if (GameManager.Instance.Baits[baitIndex].BaitPrice < GameManager.Instance.Money) {
 			GameManager.Instance.Money -= GameManager.Instance.Baits[baitIndex].BaitPrice;
 			GameManager.Instance.CurrentBaits[baitIndex] += baitQuantities[baitIndex];
-
-			// override
-			if (!this.TutorialBaitBought) {
-				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopThanks[0]);
-				this.TutorialBaitBought = true;
-			} else {
-				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopThanks[1]);
-			}
 		}
 	}
 
 	public void LeaveBaitShop() {
+		GameManager.Instance.ShopController.ShoreMenu.FinishedInShop(this);
+		baitShopObject.SetActive(false);
 		GameManager.Instance.ShopController.SetState(ShopController.State.Shore);
 	}
 

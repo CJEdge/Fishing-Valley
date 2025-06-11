@@ -46,9 +46,10 @@ public class FishView : MonoBehaviour
 					fishUis[i].SetActive(enable);
 				}
 			}
-		int randomCaughtTextIndex = Random.Range(0, fishCaughtTexts.Length);
-		fishText.text = fishCaughtTexts[randomCaughtTextIndex] + " " + GameManager.Instance.CurrentFish.FishName + "!";
-		fishText.gameObject.SetActive(enable);
+			int randomCaughtTextIndex = Random.Range(0, fishCaughtTexts.Length);
+			fishText.text = fishCaughtTexts[randomCaughtTextIndex] + " " + GameManager.Instance.CurrentFish.FishName + "!";
+			fishText.gameObject.SetActive(enable);
+			AudioManager.Instance.PlayOneShot(FMODManager.Instance.FishCatch);
 		}
 		else {
 			for (int i = 0; i < GameManager.Instance.Fish.Count; i++) {
