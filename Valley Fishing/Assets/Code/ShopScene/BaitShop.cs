@@ -48,7 +48,7 @@ public class BaitShop : Shop {
 
 	#region Properties
 
-	private int FishSellPrice {
+	public int FishSellPrice {
 		get;
 		set;
 	}
@@ -95,15 +95,6 @@ public class BaitShop : Shop {
 				SetState(State.Trading);
 				break;
 			case State.Trading:
-				if(this.FishSellPrice > 0) {
-					AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.price);
-					this.FishSellPrice = 0;
-					StartCoroutine(WaitOneFrameThenChangeSellState(TutorialState.BuyingTutorial));
-				}
-				if(tutorialState == TutorialState.BuyingTutorial) {
-					AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopTutorialItemIntros[0]);
-					StartCoroutine(WaitOneFrameThenChangeSellState(TutorialState.TutorialsOver));
-				}
 				break;
 			case State.Leaving:
 				break;
@@ -152,7 +143,7 @@ public class BaitShop : Shop {
 
 	#region Private Methods
 
-	private IEnumerator WaitOneFrameThenChangeSellState(TutorialState state) {
+	public IEnumerator WaitOneFrameThenChangeSellState(TutorialState state) {
 		yield return new WaitForEndOfFrame();
 		tutorialState = state;
 	}

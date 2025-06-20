@@ -5502,6 +5502,7 @@ MonoBehaviour:
   movementDirection: 0
   fishName: 
   fishIndex: 0
+  sellPrice: 0
   isStrafer: 0
   fishSpeed: 2
   strafeCount: 0

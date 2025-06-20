@@ -60,7 +60,7 @@ MonoBehaviour:
   - {fileID: 7896926226264258103, guid: 1e85570237b64c54ca570d11b21f4b97, type: 3}
   - {fileID: 7778841989186564110, guid: 142a9d4d143554a4b86112aad1f3a274, type: 3}
   <CurrentBaits>k__BackingField: 
-  <CaughtFish>k__BackingField: 
+  <CaughtFish>k__BackingField: 010000000100000001000000
   <Money>k__BackingField: 0
 --- !u!114 &1583213601024685545
 MonoBehaviour:
@@ -242,6 +242,13 @@ MonoBehaviour:
       Data3: -250523751
       Data4: -1777294225
     Path: event:/VoiceOver/Shop/Shore/ShopSceneIntros/ShopIntro
+  LeaveShorePrompts:
+  - Guid:
+      Data1: -1414859070
+      Data2: 1267325431
+      Data3: 315434398
+      Data4: 1770385284
+    Path: event:/VoiceOver/Shop/Shore/LeaveTutorials/LeaveTutorial
   BaitShopIntros:
   - Guid:
       Data1: 2026100594
@@ -289,15 +296,39 @@ MonoBehaviour:
       Data3: -1460193128
       Data4: 1245851649
     Path: event:/VoiceOver/Shop/BaitShop/Thanks/TutorialThanks 2
-  BaitShopThanks: []
-  BaitIntros: []
+  BaitShopThanks:
+  - Guid:
+      Data1: 1511185493
+      Data2: 1172471537
+      Data3: 147129528
+      Data4: -1205613490
+    Path: event:/VoiceOver/Shop/BaitShop/Thanks/TutorialThanks
+  - Guid:
+      Data1: -1727683224
+      Data2: 1187569512
+      Data3: -1460193128
+      Data4: 1245851649
+    Path: event:/VoiceOver/Shop/BaitShop/Thanks/TutorialThanks 2
+  BaitIntros:
+  - Guid:
+      Data1: -709591002
+      Data2: 1232884569
+      Data3: -1665392750
+      Data4: -1355003857
+    Path: event:/VoiceOver/Shop/BaitShop/ItemIntros/WormBait
+  - Guid:
+      Data1: -1525828269
+      Data2: 1254480062
+      Data3: 424741795
+      Data4: -1104564924
+    Path: event:/VoiceOver/Shop/BaitShop/ItemIntros/RareBait
   price:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -762506879
+      Data2: 1323342038
+      Data3: 1658031508
+      Data4: 1398234037
+    Path: event:/VoiceOver/Shop/ItemValues/TwoHundred
   ThrowRod:
     Guid:
       Data1: 815617258
@@ -326,15 +357,75 @@ MonoBehaviour:
       Data3: -413234560
       Data4: -1417980924
     Path: event:/SFX/ActivitySplash
-  BaitSounds: []
-  AttatchBaitSounds: []
+  BaitSounds:
+  - Guid:
+      Data1: -1751036424
+      Data2: 1219677751
+      Data3: -754223217
+      Data4: -75916562
+    Path: event:/SFX/BaitIdle
+  - Guid:
+      Data1: -1751036424
+      Data2: 1219677751
+      Data3: -754223217
+      Data4: -75916562
+    Path: event:/SFX/BaitIdle
+  - Guid:
+      Data1: -1751036424
+      Data2: 1219677751
+      Data3: -754223217
+      Data4: -75916562
+    Path: event:/SFX/BaitIdle
+  - Guid:
+      Data1: -1751036424
+      Data2: 1219677751
+      Data3: -754223217
+      Data4: -75916562
+    Path: event:/SFX/BaitIdle
+  - Guid:
+      Data1: -1751036424
+      Data2: 1219677751
+      Data3: -754223217
+      Data4: -75916562
+    Path: event:/SFX/BaitIdle
+  AttatchBaitSounds:
+  - Guid:
+      Data1: -1561571289
+      Data2: 1177583210
+      Data3: -336593267
+      Data4: 1816793257
+    Path: event:/SFX/AttatchBait
+  - Guid:
+      Data1: -1561571289
+      Data2: 1177583210
+      Data3: -336593267
+      Data4: 1816793257
+    Path: event:/SFX/AttatchBait
+  - Guid:
+      Data1: -1561571289
+      Data2: 1177583210
+      Data3: -336593267
+      Data4: 1816793257
+    Path: event:/SFX/AttatchBait
+  - Guid:
+      Data1: -1561571289
+      Data2: 1177583210
+      Data3: -336593267
+      Data4: 1816793257
+    Path: event:/SFX/AttatchBait
+  - Guid:
+      Data1: -1561571289
+      Data2: 1177583210
+      Data3: -336593267
+      Data4: 1816793257
+    Path: event:/SFX/AttatchBait
   FishCatch:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1537860913
+      Data2: 1132541236
+      Data3: -390000235
+      Data4: 469100929
+    Path: event:/SFX/Fish Catch
   LevelOneMusic:
     Guid:
       Data1: 655083191
@@ -355,9 +446,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Menu: Menu
-  CatchTutorial_01: CatchTutorial_0
-  CatchTutorial_02: CatchTutorial_01
-  CatchTutorial_03: CatchTutorial_02
-  CatchTutorial_04: CatchTutorial_03
-  ShopTutorial_01: ShopTutorial_0
-  ShopTutorial_02: ShopTutorial_01
+  CatchTutorial_01: 0_CatchTutorial
+  CatchTutorial_02: 01_CatchTutorial
+  CatchTutorial_03: 02_CatchTutorial
+  CatchTutorial_04: 03_CatchTutorial
+  ShopTutorial_01: 0_ShopTutorial
+  ShopTutorial_02: 01_ShopTutorial

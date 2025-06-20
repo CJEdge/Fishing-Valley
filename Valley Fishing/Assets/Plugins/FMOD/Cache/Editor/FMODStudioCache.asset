@@ -444,7 +444,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/VoiceLines.bank
   Name: VoiceLines
   StudioPath: bank:/VoiceLines
-  lastModified: 638851918945296481
+  lastModified: 638852585345237496
   FileSizes:
   - Name: Desktop
     Value: 2130400
@@ -1001,7 +1001,7 @@ MonoBehaviour:
   - {fileID: 4198817137325428765}
   StringsBanks:
   - {fileID: 1411835401192698514}
-  cacheTime: 638852520606509385
+  cacheTime: 638852628627700821
   cacheVersion: 131624
 --- !u!114 &286293313135071889
 MonoBehaviour:
@@ -1154,7 +1154,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638852422588006605
+  lastModified: 638852585331188300
   FileSizes:
   - Name: Desktop
     Value: 3002
@@ -1373,10 +1373,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638852422591389397
+  lastModified: 638852628627700821
   FileSizes:
   - Name: Desktop
-    Value: 425632
+    Value: 455616
   Exists: 1
 --- !u!114 &4198817137325428765
 MonoBehaviour:
@@ -1393,7 +1393,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638852422587986663
+  lastModified: 638852585331148394
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -1988,7 +1988,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638852520606509385
+  lastModified: 638852585333618025
   FileSizes:
   - Name: Desktop
     Value: 2401824
