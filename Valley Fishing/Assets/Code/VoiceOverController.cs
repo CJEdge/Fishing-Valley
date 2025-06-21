@@ -5,38 +5,42 @@ using UnityEngine.SceneManagement;
 
 public class VoiceOverController : MonoBehaviour
 {
+
+	#region Serialized Fields
+
+	[SerializeField]
+	protected EventReference[] applyBaitTutorials;
+
+	[SerializeField]
+	protected EventReference[] castRodTutorials;
+
+	[SerializeField]
+	protected EventReference[] reelTutorials;
+
+	[SerializeField]
+	protected EventReference[] tutorialCatchVoices;
+
+	#endregion
+
+
+	#region Protected Variables
+
+	protected EventInstance CurrentTutorialEventInstance;
+
+	protected bool[] AttatchBaitTutorialsCompleted;
+
+	protected bool[] CastRodTutorialsCompleted;
+
+	protected bool[] ReelTutorialsCompleted;
+
+	protected bool[] CaughtFishTutorialsCompleted;
+
+	#endregion
+
+
 	#region Properties
 
-	private EventInstance CurrentTutorialEventInstance {
-		get;
-		set;
-	}
-
-	[field: SerializeField]
-	private bool[] AttatchBaitTutorialsCompleted {
-		get;
-		set;
-	}
-
-	[field: SerializeField]
-	private bool[] CastRodTutorialsCompleted {
-		get;
-		set;
-	}
-
-	[field: SerializeField]
-	private bool[] ReelTutorialsCompleted {
-		get;
-		set;
-	}
-
-	[field: SerializeField]
-	private bool[] CaughtFishTutorialsCompleted {
-		get;
-		set;
-	}
-
-	private LevelController LevelController {
+	protected LevelController LevelController {
 		get {
 			return GameManager.Instance.LevelController;
 		}
@@ -50,40 +54,15 @@ public class VoiceOverController : MonoBehaviour
 	public void Start() {
 		this.LevelController.StateChanged += LevelStateChanged;
 		AudioManager.Instance.VoiceLineOver += VoiceOverFinished;
-		GameManager.Instance.InputController.OnClick += Click;
-		this.AttatchBaitTutorialsCompleted = new bool[FMODManager.Instance.ApplyBaitTutorials.Length];
-		this.CastRodTutorialsCompleted = new bool[FMODManager.Instance.CastRodTutorials.Length];
-		this.ReelTutorialsCompleted = new bool[FMODManager.Instance.ReelTutorials.Length];
-		this.CaughtFishTutorialsCompleted = new bool[FMODManager.Instance.TutorialCatchVoices.Length];
+		this.AttatchBaitTutorialsCompleted = new bool[applyBaitTutorials.Length];
+		this.CastRodTutorialsCompleted = new bool[castRodTutorials.Length];
+		this.ReelTutorialsCompleted = new bool[reelTutorials.Length];
+		this.CaughtFishTutorialsCompleted = new bool[tutorialCatchVoices.Length];
 	}
 
 	public void OnDestroy() {
 		this.LevelController.StateChanged -= LevelStateChanged;
 		AudioManager.Instance.VoiceLineOver -= VoiceOverFinished;
-		GameManager.Instance.InputController.OnClick -= Click;
-	}
-
-	public void Click() {
-		switch (this.LevelController.CurrentState) {
-			case LevelController.State.Default:
-				break;
-			case LevelController.State.Cutscene:
-				break;
-			case LevelController.State.Idle:
-				break;
-			case LevelController.State.AttatchBait:
-				break;
-			case LevelController.State.IdleWithBait:
-				break;
-			case LevelController.State.WaitingForBite:
-				break;
-			case LevelController.State.ReelingFish:
-				break;
-			case LevelController.State.FishCaught:
-				break;
-			default:
-				break;
-		}
 	}
 
 	#endregion
@@ -92,126 +71,53 @@ public class VoiceOverController : MonoBehaviour
 	#region Public Methods
 
 	public void LevelStateChanged() {
+		PerformStateSwitch();
+	}
+
+	public virtual bool PerformStateSwitch() {
 		switch (this.LevelController.CurrentState) {
-			case LevelController.State.Default:
-				break;
-			case LevelController.State.Cutscene:
-				break;
 			case LevelController.State.Idle:
-				bool allTutorialsCompleted = true;
-				for (int i = 0; i < this.AttatchBaitTutorialsCompleted.Length; i++) {
-					if (!this.AttatchBaitTutorialsCompleted[i]) {
-						allTutorialsCompleted = false;
-					}
-				}
-				if (allTutorialsCompleted) {
+				if (AllTutorialsCompleted(this.AttatchBaitTutorialsCompleted)) {
 					this.LevelController.SetState(LevelController.State.AttatchBait);
-					return;
+					return false;
 				}
-				for (int i = 0; i < this.AttatchBaitTutorialsCompleted.Length; i++) {
-					if (!this.AttatchBaitTutorialsCompleted[i]) {
-						if (!AttatchBaitTutorialExtras(i)) {
-							GameManager.Instance.CurrentBaits[i] = 1;
-							AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.ApplyBaitTutorials[i]);
-						}
-						break;
-					}
-				}
-				this.CurrentTutorialEventInstance = AudioManager.Instance.VoiceLineEventInstance;
-				break;
+				return true;
 			case LevelController.State.AttatchBait:
-				for (int i = 0; i < this.AttatchBaitTutorialsCompleted.Length; i++) {
-					if (!this.AttatchBaitTutorialsCompleted[i]) {
-						if (!AttatchBaitTutorialCompleteExtras(i)) {
-							this.AttatchBaitTutorialsCompleted[i] = true;
-						}
-						break;
-					}
-				}
-				break;
+				return true;
 			case LevelController.State.IdleWithBait:
-				allTutorialsCompleted = true;
-				for (int i = 0; i < this.CastRodTutorialsCompleted.Length; i++) {
-					if (!this.CastRodTutorialsCompleted[i]) {
-						allTutorialsCompleted = false;
-					}
+				if (AllTutorialsCompleted(this.CastRodTutorialsCompleted)) {
+					return false;
 				}
-				if (allTutorialsCompleted) {
-					return;
+				if(PlayNextTutotialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials)) {
+					return false;
 				}
-				for (int i = 0; i < this.CastRodTutorialsCompleted.Length; i++) {
-					if (!this.CastRodTutorialsCompleted[i]) {
-						AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.CastRodTutorials[i]);
-						break;
-					}
-				}
-				this.CurrentTutorialEventInstance = AudioManager.Instance.VoiceLineEventInstance;
-				break;
+				return true;
 			case LevelController.State.WaitingForBite:
-				for (int i = 0; i < this.CastRodTutorialsCompleted.Length; i++) {
-					if (!this.CastRodTutorialsCompleted[i]) {
-						this.CastRodTutorialsCompleted[i] = true;
-						break;
-					}
-				}
+				IncrementTutorial(this.CastRodTutorialsCompleted);
 				break;
 			case LevelController.State.ReelingFish:
-				allTutorialsCompleted = true;
-				for (int i = 0; i < this.ReelTutorialsCompleted.Length; i++) {
-					if (!this.ReelTutorialsCompleted[i]) {
-						allTutorialsCompleted = false;
-					}
-				}
-				if (allTutorialsCompleted) {
-					return;
+				if (AllTutorialsCompleted(this.ReelTutorialsCompleted)) {
+					return false;
 				}
 				if (!GameManager.Instance.CurrentFish.IsTutorial) {
-					return;
+					return false;
 				}
-				for (int i = 0; i < this.ReelTutorialsCompleted.Length; i++) {
-					if (!this.ReelTutorialsCompleted[i]) {
-						AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.ReelTutorials[i]);
-						break;
-					}
-				}
-				this.CurrentTutorialEventInstance = AudioManager.Instance.VoiceLineEventInstance;
-
-				for (int i = 0; i < this.ReelTutorialsCompleted.Length; i++) {
-					if (!this.ReelTutorialsCompleted[i]) {
-						this.ReelTutorialsCompleted[i] = true;
-						break;
-					}
-				}
-				break;
+				PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
+				IncrementTutorial(this.ReelTutorialsCompleted);
+				return true;
 			case LevelController.State.FishCaught:
-				allTutorialsCompleted = true;
-				for (int i = 0; i < this.CaughtFishTutorialsCompleted.Length; i++) {
-					if (!this.CaughtFishTutorialsCompleted[i]) {
-						allTutorialsCompleted = false;
-					}
-				}
-				if (allTutorialsCompleted || !GameManager.Instance.CurrentFish.IsTutorial) {
+				if (AllTutorialsCompleted(this.CaughtFishTutorialsCompleted) || !GameManager.Instance.CurrentFish.IsTutorial) {
 					AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.CatchVoices[GameManager.Instance.CurrentFish.FishIndex]);
 					this.CurrentTutorialEventInstance = AudioManager.Instance.VoiceLineEventInstance;
-					return;
+					return false;
 				}
-				for (int i = 0; i < this.CaughtFishTutorialsCompleted.Length; i++) {
-					if (!this.CaughtFishTutorialsCompleted[i]) {
-						AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.TutorialCatchVoices[i]);
-						break;
-					}
-				}
-				this.CurrentTutorialEventInstance = AudioManager.Instance.VoiceLineEventInstance;
-				for (int i = 0; i < this.CaughtFishTutorialsCompleted.Length; i++) {
-					if (!this.CaughtFishTutorialsCompleted[i]) {
-						this.CaughtFishTutorialsCompleted[i] = true;
-						break;
-					}
-				}
-				break;
+				PlayNextTutotialVoiceOver(this.CaughtFishTutorialsCompleted, tutorialCatchVoices);
+				IncrementTutorial(this.CaughtFishTutorialsCompleted);
+				return true;
 			default:
-				break;
+				return true;
 		}
+		return true;
 	}
 
 	#endregion
@@ -219,7 +125,38 @@ public class VoiceOverController : MonoBehaviour
 
 	#region Private Methods
 
-	private void VoiceOverFinished(EventInstance finishedEvent) {
+	private bool AllTutorialsCompleted(bool[] tutorials) {
+		bool allTutorialsComplete = true;
+		for (int i = 0; i < tutorials.Length; i++) {
+			if (!tutorials[i]) {
+				allTutorialsComplete = false;
+			}
+		}
+		return allTutorialsComplete;
+	}
+
+	private bool PlayNextTutotialVoiceOver(bool[] tutorialsCompleted, EventReference[] tutorialVoiceLines) {
+		for (int i = 0; i < tutorialsCompleted.Length; i++) {
+			if (!tutorialsCompleted[i]) {
+				AudioManager.Instance.PlayVoiceOver(tutorialVoiceLines[i]);
+				this.CurrentTutorialEventInstance = AudioManager.Instance.VoiceLineEventInstance;
+				return true;
+			}
+		}
+		return false;
+	}
+
+	private void IncrementTutorial(bool[] tutorial) {
+		for (int i = 0; i < tutorial.Length; i++) {
+			if (!tutorial[i]) {
+				tutorial[i] = true;
+				break;
+			}
+		}
+	}
+
+	public virtual void VoiceOverFinished(EventInstance finishedEvent) {
+		Debug.Log(finishedEvent);
 		switch (this.LevelController.CurrentState) {
 			case LevelController.State.Cutscene:
 				LevelController.SetState(LevelController.State.Idle);
@@ -227,45 +164,11 @@ public class VoiceOverController : MonoBehaviour
 			case LevelController.State.Idle:
 				LevelController.SetState(LevelController.State.AttatchBait);
 				break;
-			case LevelController.State.AttatchBait:
-				break;
-			case LevelController.State.WaitingForBite:
-				break;
-			case LevelController.State.ReelingFish:
-				break;
-			case LevelController.State.FishCaught:
-				if(GameManager.Instance.CurrentFish.FishIndex == 3) {
-					GameManager.Instance.LevelController.FishView.EnableFishUI(false);
-					SceneManager.LoadScene(LevelManager.Instance.ShopTutorial_01);
-				}
-				break;
 			default:
 				break;
 		}
 	}
 
-	private bool AttatchBaitTutorialExtras(int currentTutorialIndex) {
-		if (currentTutorialIndex == 3) {
-			if (GameManager.Instance.CurrentBaits[currentTutorialIndex] == 0 && GameManager.Instance.TotalCaughtFish < 10) {
-				GameManager.Instance.CurrentBaits[currentTutorialIndex] = 6;
-				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.ApplyBaitTutorials[currentTutorialIndex]);
-				return true;
-			} else {
-				GameManager.Instance.LevelController.SetState(LevelController.State.AttatchBait);
-				return true;
-			}
-		} else {
-			return false;
-		}
-	}
-
-	private bool AttatchBaitTutorialCompleteExtras(int currentTutorialIndex) {
-		if(currentTutorialIndex == 3 && GameManager.Instance.TotalCaughtFish < 8) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-
 	#endregion
+
 }

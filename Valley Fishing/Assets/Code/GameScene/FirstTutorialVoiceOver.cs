@@ -1,0 +1,76 @@
+using FMOD.Studio;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class FirstTutorialVoiceOver : VoiceOverController
+{
+	public override bool PerformStateSwitch() {
+		if (!base.PerformStateSwitch()) {
+			return false;
+		}
+		switch (this.LevelController.CurrentState) {
+			case LevelController.State.Idle:
+				for (int i = 0; i < this.AttatchBaitTutorialsCompleted.Length; i++) {
+					if (!this.AttatchBaitTutorialsCompleted[i]) {
+						if (!AttatchBaitTutorialExtras(i)) {
+							GameManager.Instance.CurrentBaits[i] = 1;
+							AudioManager.Instance.PlayVoiceOver(applyBaitTutorials[i]);
+						}
+						break;
+					}
+				}
+				this.CurrentTutorialEventInstance = AudioManager.Instance.VoiceLineEventInstance;
+				break;
+			case LevelController.State.AttatchBait:
+				for (int i = 0; i < this.AttatchBaitTutorialsCompleted.Length; i++) {
+					if (!this.AttatchBaitTutorialsCompleted[i]) {
+						if (!AttatchBaitTutorialCompleteExtras(i)) {
+							this.AttatchBaitTutorialsCompleted[i] = true;
+						}
+						break;
+					}
+				}
+				break;
+			default:
+				break;
+		}
+		return true;
+	}
+
+	public override void VoiceOverFinished(EventInstance finishedEvent) {
+		base.VoiceOverFinished(finishedEvent);
+		switch (this.LevelController.CurrentState) {
+			case LevelController.State.FishCaught:
+				if (GameManager.Instance.CurrentFish.FishIndex == 3) {
+					GameManager.Instance.LevelController.FishView.EnableFishUI(false);
+					SceneManager.LoadScene(LevelManager.Instance.ShopTutorial_01);
+				}
+				break;
+			default:
+				break;
+		}
+	}
+
+	private bool AttatchBaitTutorialExtras(int currentTutorialIndex) {
+		if (currentTutorialIndex == 3) {
+			if (GameManager.Instance.CurrentBaits[currentTutorialIndex] == 0 && GameManager.Instance.TotalCaughtFish < 10) {
+				GameManager.Instance.CurrentBaits[currentTutorialIndex] = 6;
+				AudioManager.Instance.PlayVoiceOver(applyBaitTutorials[currentTutorialIndex]);
+				return true;
+			} else {
+				GameManager.Instance.LevelController.SetState(LevelController.State.AttatchBait);
+				return true;
+			}
+		} else {
+			return false;
+		}
+	}
+
+	private bool AttatchBaitTutorialCompleteExtras(int currentTutorialIndex) {
+		if (currentTutorialIndex == 3 && GameManager.Instance.TotalCaughtFish < 8) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}

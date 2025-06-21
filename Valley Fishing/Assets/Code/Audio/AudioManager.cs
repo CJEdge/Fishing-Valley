@@ -197,7 +197,6 @@ public class AudioManager : Singleton<AudioManager>
 		} while (playbackState != PLAYBACK_STATE.STOPPED);
 		this.VoiceLineEventInstance.release();
 		this.VoiceLineEventInstance.clearHandle();
-		Debug.Log("here");
 		this.VoiceLineOver?.Invoke(this.LastVoiceLineEventInstance);
 	}
 

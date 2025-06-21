@@ -20,14 +20,6 @@ public class FMODManager : Singleton<FMODManager>
 
 	public EventReference Level1IntroCutscene;
 
-	public EventReference[] ApplyBaitTutorials;
-	
-	public EventReference[] CastRodTutorials;
-
-	public EventReference[] ReelTutorials;
-
-	public EventReference[] TutorialCatchVoices;
-
 	public EventReference[] CatchVoices;
 
 	[Header("ShopVoiceOver")]
