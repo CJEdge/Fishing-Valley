@@ -57,6 +57,12 @@ public class VoiceOverController : MonoBehaviour
 		this.CaughtFishTutorialsCompleted = new bool[FMODManager.Instance.TutorialCatchVoices.Length];
 	}
 
+	public void OnDestroy() {
+		this.LevelController.StateChanged -= LevelStateChanged;
+		AudioManager.Instance.VoiceLineOver -= VoiceOverFinished;
+		GameManager.Instance.InputController.OnClick -= Click;
+	}
+
 	public void Click() {
 		switch (this.LevelController.CurrentState) {
 			case LevelController.State.Default:
@@ -229,6 +235,7 @@ public class VoiceOverController : MonoBehaviour
 				break;
 			case LevelController.State.FishCaught:
 				if(GameManager.Instance.CurrentFish.FishIndex == 3) {
+					GameManager.Instance.LevelController.FishView.EnableFishUI(false);
 					SceneManager.LoadScene(LevelManager.Instance.ShopTutorial_01);
 				}
 				break;

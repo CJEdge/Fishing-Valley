@@ -5436,7 +5436,7 @@ MonoBehaviour:
       Data2: 1292392546
       Data3: -413234560
       Data4: -1417980924
-    Path: event:/SFX/ActivitySplash
+    Path: event:/SFX/LevelSFX/ActivitySplash
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0

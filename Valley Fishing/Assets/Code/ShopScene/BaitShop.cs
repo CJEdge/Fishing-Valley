@@ -42,6 +42,9 @@ public class BaitShop : Shop {
 	[SerializeField]
 	private int[] baitQuantities;
 
+	[SerializeField]
+	private float shopEnterTime;
+
 
 	#endregion
 
@@ -69,13 +72,12 @@ public class BaitShop : Shop {
 				AudioManager.Instance.VoiceLineOver += VoiceLineOver;
 				break;
 			case State.Entering:
-				baitShopObject.SetActive(true);
+				StartCoroutine(EnterShop(true));
 				break;
 			case State.Trading:
 				eventSystem.SetSelectedGameObject(sellButton);
 				break;
 			case State.Leaving:
-				baitShopObject.SetActive(false);
 				break;
 			default:
 				break;
@@ -112,12 +114,16 @@ public class BaitShop : Shop {
 		switch (sellTpye) {
 			case SellTpye.SellAllFish:
 				for (int i = 0; i < GameManager.Instance.CaughtFish.Count; i++) {
-					for (int j = 0; j < GameManager.Instance.CaughtFish[i]; j++) {
-						GameManager.Instance.Money += GameManager.Instance.Fish[GameManager.Instance.CaughtFish[i]].SellPrice;
-						this.FishSellPrice += GameManager.Instance.Fish[GameManager.Instance.CaughtFish[i]].SellPrice;
+					if (GameManager.Instance.CaughtFish[i] == 0) {
+						continue;
+					}
+					for (int j = GameManager.Instance.CaughtFish[i] - 1; j >= 0; j--) {
+						GameManager.Instance.Money += GameManager.Instance.Fish[i].SellPrice;
+						this.FishSellPrice += GameManager.Instance.Fish[i].SellPrice;
 						GameManager.Instance.CaughtFish[i]--;
 					}
 				}
+				AudioManager.Instance.PlayOneShot(FMODManager.Instance.MoneyEarnt);
 				break;
 			case SellTpye.SellIndividualFish:
 				break;
@@ -130,12 +136,11 @@ public class BaitShop : Shop {
 			GameManager.Instance.Money -= GameManager.Instance.Baits[baitIndex].BaitPrice;
 			GameManager.Instance.CurrentBaits[baitIndex] += baitQuantities[baitIndex];
 		}
+		AudioManager.Instance.PlayOneShot(FMODManager.Instance.ItemBuy);
 	}
 
 	public void LeaveBaitShop() {
-		GameManager.Instance.ShopController.ShoreMenu.FinishedInShop(this);
-		baitShopObject.SetActive(false);
-		GameManager.Instance.ShopController.SetState(ShopController.State.Shore);
+		StartCoroutine(EnterShop(false));
 	}
 
 	#endregion
@@ -146,6 +151,16 @@ public class BaitShop : Shop {
 	public IEnumerator WaitOneFrameThenChangeSellState(TutorialState state) {
 		yield return new WaitForEndOfFrame();
 		tutorialState = state;
+	}
+
+	public virtual IEnumerator EnterShop(bool enter) {
+		AudioManager.Instance.PlayOneShot(FMODManager.Instance.ShopEnter);
+		yield return new WaitForSeconds(shopEnterTime);
+		baitShopObject.SetActive(enter);
+		if (!enter) {
+			GameManager.Instance.ShopController.ShoreMenu.FinishedInShop(this);
+			GameManager.Instance.ShopController.SetState(ShopController.State.Shore);
+		}
 	}
 
 	#endregion

@@ -64,7 +64,7 @@ public class FishView : MonoBehaviour
 
 	#region Private Methods
 
-	private void DisableFishUI() {
+	public void DisableFishUI() {
 		bool allreadyDisabled = true;
 		for (int i = 0; i < GameManager.Instance.Fish.Count; i++) {
 			if (fishUis[i].activeSelf) {
@@ -74,6 +74,7 @@ public class FishView : MonoBehaviour
 		if (allreadyDisabled) {
 			return;
 		}
+		Debug.Log("here");
 		EnableFishUI(false);
 		if(GameManager.Instance.LevelController.CurrentState == LevelController.State.FishCaught) {
 			GameManager.Instance.LevelController.SetState(LevelController.State.Idle);

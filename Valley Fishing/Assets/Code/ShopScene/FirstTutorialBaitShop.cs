@@ -1,4 +1,5 @@
 using FMOD.Studio;
+using System.Collections;
 using UnityEngine;
 
 public class FisrstTutorialBaitShop : BaitShop
@@ -9,7 +10,6 @@ public class FisrstTutorialBaitShop : BaitShop
 			case State.Defualt:
 				break;
 			case State.Entering:
-				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopIntros[0]);
 				break;
 			case State.Trading:
 				break;
@@ -69,6 +69,13 @@ public class FisrstTutorialBaitShop : BaitShop
 			this.TutorialBaitBought = true;
 		} else {
 			AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopThanks[1]);
+		}
+	}
+
+	public override IEnumerator EnterShop(bool enter) {
+		yield return StartCoroutine(base.EnterShop(enter));
+		if (enter) {
+			AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopIntros[0]);
 		}
 	}
 }

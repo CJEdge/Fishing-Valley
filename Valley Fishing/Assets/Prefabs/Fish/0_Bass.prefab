@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1025274234754108350, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/SFX/LevelSFX/ActivitySplash
+      objectReference: {fileID: 0}
     - target: {fileID: 2899971684537990183, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

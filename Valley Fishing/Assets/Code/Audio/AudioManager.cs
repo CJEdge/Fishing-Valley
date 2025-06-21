@@ -83,7 +83,6 @@ public class AudioManager : Singleton<AudioManager>
 	}
 
 	public void PlayBaitSound(bool play, int index) {
-		Debug.Log(play);
 		if (play) {
 			this.BaitEventInstance = CreateSFXInstance(FMODManager.Instance.BaitSounds[index]);
 			this.BaitEventInstance.start();
@@ -156,6 +155,12 @@ public class AudioManager : Singleton<AudioManager>
 		this.MusicEventInstance.setParameterByName(name, value);
 	}
 
+	public void CleanUpEverything() {
+		CleanUpSFX();
+		CleanUpMusic();
+		CleanUpVoiceOver();
+	}
+
 	#endregion
 
 
@@ -175,6 +180,11 @@ public class AudioManager : Singleton<AudioManager>
 		}
 	}
 
+	private void CleanUpVoiceOver() {
+		this.VoiceLineEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+		this.VoiceLineEventInstance.release();
+	}
+
 	private IEnumerator WaitForVoiceLineEnd() {
 		PLAYBACK_STATE playbackState;
 		do {
@@ -187,6 +197,7 @@ public class AudioManager : Singleton<AudioManager>
 		} while (playbackState != PLAYBACK_STATE.STOPPED);
 		this.VoiceLineEventInstance.release();
 		this.VoiceLineEventInstance.clearHandle();
+		Debug.Log("here");
 		this.VoiceLineOver?.Invoke(this.LastVoiceLineEventInstance);
 	}
 

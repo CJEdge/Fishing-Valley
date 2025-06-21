@@ -60,7 +60,7 @@ MonoBehaviour:
   - {fileID: 7896926226264258103, guid: 1e85570237b64c54ca570d11b21f4b97, type: 3}
   - {fileID: 7778841989186564110, guid: 142a9d4d143554a4b86112aad1f3a274, type: 3}
   <CurrentBaits>k__BackingField: 
-  <CaughtFish>k__BackingField: 010000000100000001000000
+  <CaughtFish>k__BackingField: 00000000000000000000000000000000
   <Money>k__BackingField: 0
 --- !u!114 &1583213601024685545
 MonoBehaviour:
@@ -335,97 +335,125 @@ MonoBehaviour:
       Data2: 1078289329
       Data3: 959533475
       Data4: 1866417758
-    Path: event:/SFX/ThrowRod
+    Path: event:/SFX/ShopSFX/ItemBuy
   LandRod:
     Guid:
       Data1: 1165659761
       Data2: 1205779008
       Data3: -640880454
       Data4: -1017645718
-    Path: event:/SFX/RodLand
+    Path: event:/SFX/LevelSFX/RodLand
   ReelSound:
     Guid:
       Data1: 1721864051
       Data2: 1315658186
       Data3: -420499557
       Data4: -533285298
-    Path: event:/SFX/ReelSound
+    Path: event:/SFX/LevelSFX/ReelSound
   ActivityLevelSplash:
     Guid:
       Data1: -202002278
       Data2: 1292392546
       Data3: -413234560
       Data4: -1417980924
-    Path: event:/SFX/ActivitySplash
+    Path: event:/SFX/LevelSFX/ActivitySplash
+  BaitBoxOpen:
+    Guid:
+      Data1: 444266264
+      Data2: 1298998279
+      Data3: -1468737864
+      Data4: -939201927
+    Path: event:/SFX/LevelSFX/BaitBoxOpen
   BaitSounds:
   - Guid:
       Data1: -1751036424
       Data2: 1219677751
       Data3: -754223217
       Data4: -75916562
-    Path: event:/SFX/BaitIdle
+    Path: event:/SFX/WormBaitIdle
+  - Guid:
+      Data1: -2134130286
+      Data2: 1214591248
+      Data3: 585164988
+      Data4: -178165460
+    Path: event:/SFX/LeechBaitIdle
+  - Guid:
+      Data1: -306073775
+      Data2: 1283962052
+      Data3: -347803755
+      Data4: 818896552
+    Path: event:/SFX/CricketBaitIdle
   - Guid:
       Data1: -1751036424
       Data2: 1219677751
       Data3: -754223217
       Data4: -75916562
-    Path: event:/SFX/BaitIdle
+    Path: event:/SFX/WormBaitIdle
   - Guid:
-      Data1: -1751036424
-      Data2: 1219677751
-      Data3: -754223217
-      Data4: -75916562
-    Path: event:/SFX/BaitIdle
-  - Guid:
-      Data1: -1751036424
-      Data2: 1219677751
-      Data3: -754223217
-      Data4: -75916562
-    Path: event:/SFX/BaitIdle
-  - Guid:
-      Data1: -1751036424
-      Data2: 1219677751
-      Data3: -754223217
-      Data4: -75916562
-    Path: event:/SFX/BaitIdle
+      Data1: -2134130286
+      Data2: 1214591248
+      Data3: 585164988
+      Data4: -178165460
+    Path: event:/SFX/LeechBaitIdle
   AttatchBaitSounds:
   - Guid:
       Data1: -1561571289
       Data2: 1177583210
       Data3: -336593267
       Data4: 1816793257
-    Path: event:/SFX/AttatchBait
+    Path: event:/SFX/LevelSFX/AttatchBait
   - Guid:
       Data1: -1561571289
       Data2: 1177583210
       Data3: -336593267
       Data4: 1816793257
-    Path: event:/SFX/AttatchBait
+    Path: event:/SFX/LevelSFX/AttatchBait
   - Guid:
       Data1: -1561571289
       Data2: 1177583210
       Data3: -336593267
       Data4: 1816793257
-    Path: event:/SFX/AttatchBait
+    Path: event:/SFX/LevelSFX/AttatchBait
   - Guid:
       Data1: -1561571289
       Data2: 1177583210
       Data3: -336593267
       Data4: 1816793257
-    Path: event:/SFX/AttatchBait
+    Path: event:/SFX/LevelSFX/AttatchBait
   - Guid:
       Data1: -1561571289
       Data2: 1177583210
       Data3: -336593267
       Data4: 1816793257
-    Path: event:/SFX/AttatchBait
+    Path: event:/SFX/LevelSFX/AttatchBait
   FishCatch:
     Guid:
       Data1: -1537860913
       Data2: 1132541236
       Data3: -390000235
       Data4: 469100929
-    Path: event:/SFX/Fish Catch
+    Path: event:/SFX/LevelSFX/Fish Catch
+  MoneyEarnt:
+    Guid:
+      Data1: 1982487354
+      Data2: 1173658775
+      Data3: 1445627044
+      Data4: -1294180087
+    Path: event:/SFX/ShopSFX/MoneyEarnt
+  ItemBuy:
+    Guid:
+      Data1: 815617258
+      Data2: 1078289329
+      Data3: 959533475
+      Data4: 1866417758
+    Path: event:/SFX/ShopSFX/ItemBuy
+  ShopEnter:
+    Guid:
+      Data1: -620656940
+      Data2: 1243797251
+      Data3: -2119039865
+      Data4: -214391883
+    Path: event:/SFX/ShopSFX/ShopEnter
   LevelOneMusic:
     Guid:
       Data1: 655083191

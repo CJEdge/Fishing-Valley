@@ -55,7 +55,7 @@ public class FMODManager : Singleton<FMODManager>
 
 	public EventReference price;
 
-	[Header("SFX")]
+	[Header("LevelSFX")]
 
 	public EventReference ThrowRod;
 
@@ -65,11 +65,21 @@ public class FMODManager : Singleton<FMODManager>
 
 	public EventReference ActivityLevelSplash;
 
+	public EventReference BaitBoxOpen;
+
 	public EventReference[] BaitSounds;
 
 	public EventReference[] AttatchBaitSounds;
 
 	public EventReference FishCatch;
+
+	[Header("ShopSFX")]
+
+	public EventReference MoneyEarnt;
+
+	public EventReference ItemBuy;
+
+	public EventReference ShopEnter;
 
 	[Header("Music")]
 

@@ -45,6 +45,12 @@ public class LevelController : AbstractState<LevelController.State> {
 		}
 	}
 
+	public FishView FishView {
+		get {
+			return fishView;
+		}
+	}
+
 	#endregion
 
 

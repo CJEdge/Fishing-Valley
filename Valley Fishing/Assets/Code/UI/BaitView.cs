@@ -19,6 +19,9 @@ public class BaitView : MonoBehaviour
 	[SerializeField]
 	private float buttonMoveTime;
 
+	[SerializeField]
+	private float baitBoxOpeningTime;
+
 	#endregion
 
 
@@ -66,7 +69,8 @@ public class BaitView : MonoBehaviour
 		}
 		eventSystem.SetSelectedGameObject(baitButtons[0].gameObject);
 		AudioManager.Instance.PlayBaitSound(false, 0);
-		AudioManager.Instance.PlayBaitSound(true, this.BaitIndex);
+		AudioManager.Instance.PlayOneShot(FMODManager.Instance.BaitBoxOpen);
+		StartCoroutine(WaitToOpenBaitBox());
 	}
 
 	public void BaitSelected(int baitIndex) {
@@ -89,6 +93,11 @@ public class BaitView : MonoBehaviour
 	private IEnumerator SelectButtonAfterOneFrame(GameObject button) {
 		yield return new WaitForEndOfFrame();
 		eventSystem.SetSelectedGameObject(button);
+	}
+
+	private IEnumerator WaitToOpenBaitBox() {
+		yield return new WaitForSeconds(baitBoxOpeningTime);
+		AudioManager.Instance.PlayBaitSound(true, this.BaitIndex);
 	}
 
 	#endregion

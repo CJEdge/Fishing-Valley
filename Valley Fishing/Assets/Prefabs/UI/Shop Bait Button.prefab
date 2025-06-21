@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4287758863602185149}
   - component: {fileID: 1456574075976184987}
   - component: {fileID: 1244792288665271795}
-  - component: {fileID: 7573272068903627036}
   m_Layer: 5
   m_Name: Shop Bait Button
   m_TagString: Untagged
@@ -148,18 +147,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonType: 3
---- !u!114 &7573272068903627036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1937106899334370470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51f0a9f037534314882b9401266f5e15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7768273156501990409
 GameObject:
   m_ObjectHideFlags: 0

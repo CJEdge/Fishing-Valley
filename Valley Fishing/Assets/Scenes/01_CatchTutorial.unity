@@ -4324,7 +4324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: FishCatch.Path
-      value: event:/SFX/Fish Catch
+      value: event:/SFX/LevelSFX/Fish Catch
       objectReference: {fileID: 0}
     - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: FishCatch.Guid.Data1
@@ -5904,6 +5904,7 @@ MonoBehaviour:
   - {fileID: 1153808579}
   - {fileID: 75263367}
   buttonMoveTime: 0.1
+  baitBoxOpeningTime: 0
 --- !u!222 &1927175312
 CanvasRenderer:
   m_ObjectHideFlags: 0
