@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : Singleton<GameManager>
-{
+public class GameManager : Singleton<GameManager> {
 	#region Serialized Fields
 
 	[SerializeField]
@@ -20,7 +19,7 @@ public class GameManager : Singleton<GameManager>
 	public InputController InputController {
 		get;
 		set;
-    }
+	}
 
 	public LevelController LevelController {
 		get;
@@ -49,7 +48,7 @@ public class GameManager : Singleton<GameManager>
 		}
 	}
 
-	[field:SerializeField]
+	[field: SerializeField]
 	public List<int> CurrentBaits {
 		get;
 		set;
@@ -71,7 +70,7 @@ public class GameManager : Singleton<GameManager>
 		set;
 	}
 
-	[field:SerializeField]
+	[field: SerializeField]
 	public int Money {
 		get;
 		set;
@@ -86,6 +85,16 @@ public class GameManager : Singleton<GameManager>
 			return totalCaughtFish;
 		}
 	}
+
+	public int TotalBaitsLeft {
+		get {
+			int totalBaits = 0;
+			for (int i = 0; i < this.CurrentBaits.Count; i++) {
+				totalBaits += this.CurrentBaits[i];
+			}
+			return totalBaits;
+		}
+}
 
 	#endregion
 

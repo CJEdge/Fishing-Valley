@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class FirstTutorialVoiceOver : VoiceOverController
 {
+
 	public override bool PerformStateSwitch() {
 		if (!base.PerformStateSwitch()) {
 			return false;
@@ -31,6 +32,15 @@ public class FirstTutorialVoiceOver : VoiceOverController
 					}
 				}
 				break;
+			case LevelController.State.FishCaught:
+				if (AllTutorialsCompleted(this.CaughtFishTutorialsCompleted) || !GameManager.Instance.CurrentFish.IsTutorial) {
+					AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.CatchVoices[GameManager.Instance.CurrentFish.FishIndex]);
+					this.CurrentTutorialEventInstance = AudioManager.Instance.VoiceLineEventInstance;
+					break;
+				}
+				PlayNextTutotialVoiceOver(this.CaughtFishTutorialsCompleted, tutorialCatchVoices);
+				IncrementTutorial(this.CaughtFishTutorialsCompleted);
+				break;
 			default:
 				break;
 		}
@@ -41,6 +51,7 @@ public class FirstTutorialVoiceOver : VoiceOverController
 		base.VoiceOverFinished(finishedEvent);
 		switch (this.LevelController.CurrentState) {
 			case LevelController.State.FishCaught:
+
 				if (GameManager.Instance.CurrentFish.FishIndex == 3) {
 					GameManager.Instance.LevelController.FishView.EnableFishUI(false);
 					SceneManager.LoadScene(LevelManager.Instance.ShopTutorial_01);

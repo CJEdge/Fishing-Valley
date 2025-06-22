@@ -18,7 +18,7 @@ public class FMODManager : Singleton<FMODManager>
 
 	[Header("LevelVoiceOver")]
 
-	public EventReference Level1IntroCutscene;
+	public EventReference[] IntroCutscenes;
 
 	public EventReference[] CatchVoices;
 

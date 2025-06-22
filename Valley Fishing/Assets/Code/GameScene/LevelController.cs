@@ -74,7 +74,6 @@ public class LevelController : AbstractState<LevelController.State> {
 				SetState(State.Cutscene);
 				break;
 			case State.Cutscene:
-				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.Level1IntroCutscene);
 				break;
 			case State.Idle:
 				break;

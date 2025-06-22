@@ -20,6 +20,9 @@ public class VoiceOverController : MonoBehaviour
 	[SerializeField]
 	protected EventReference[] tutorialCatchVoices;
 
+	[SerializeField]
+	protected int levelIndex;
+
 	#endregion
 
 
@@ -58,9 +61,13 @@ public class VoiceOverController : MonoBehaviour
 		this.CastRodTutorialsCompleted = new bool[castRodTutorials.Length];
 		this.ReelTutorialsCompleted = new bool[reelTutorials.Length];
 		this.CaughtFishTutorialsCompleted = new bool[tutorialCatchVoices.Length];
+		AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.IntroCutscenes[levelIndex]);
 	}
 
 	public void OnDestroy() {
+		if(this.LevelController == null) {
+			return;
+		}
 		this.LevelController.StateChanged -= LevelStateChanged;
 		AudioManager.Instance.VoiceLineOver -= VoiceOverFinished;
 	}
@@ -106,13 +113,6 @@ public class VoiceOverController : MonoBehaviour
 				IncrementTutorial(this.ReelTutorialsCompleted);
 				return true;
 			case LevelController.State.FishCaught:
-				if (AllTutorialsCompleted(this.CaughtFishTutorialsCompleted) || !GameManager.Instance.CurrentFish.IsTutorial) {
-					AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.CatchVoices[GameManager.Instance.CurrentFish.FishIndex]);
-					this.CurrentTutorialEventInstance = AudioManager.Instance.VoiceLineEventInstance;
-					return false;
-				}
-				PlayNextTutotialVoiceOver(this.CaughtFishTutorialsCompleted, tutorialCatchVoices);
-				IncrementTutorial(this.CaughtFishTutorialsCompleted);
 				return true;
 			default:
 				return true;
@@ -125,7 +125,7 @@ public class VoiceOverController : MonoBehaviour
 
 	#region Private Methods
 
-	private bool AllTutorialsCompleted(bool[] tutorials) {
+	public bool AllTutorialsCompleted(bool[] tutorials) {
 		bool allTutorialsComplete = true;
 		for (int i = 0; i < tutorials.Length; i++) {
 			if (!tutorials[i]) {
@@ -135,7 +135,7 @@ public class VoiceOverController : MonoBehaviour
 		return allTutorialsComplete;
 	}
 
-	private bool PlayNextTutotialVoiceOver(bool[] tutorialsCompleted, EventReference[] tutorialVoiceLines) {
+	public bool PlayNextTutotialVoiceOver(bool[] tutorialsCompleted, EventReference[] tutorialVoiceLines) {
 		for (int i = 0; i < tutorialsCompleted.Length; i++) {
 			if (!tutorialsCompleted[i]) {
 				AudioManager.Instance.PlayVoiceOver(tutorialVoiceLines[i]);
@@ -146,7 +146,7 @@ public class VoiceOverController : MonoBehaviour
 		return false;
 	}
 
-	private void IncrementTutorial(bool[] tutorial) {
+	public void IncrementTutorial(bool[] tutorial) {
 		for (int i = 0; i < tutorial.Length; i++) {
 			if (!tutorial[i]) {
 				tutorial[i] = true;
@@ -156,7 +156,6 @@ public class VoiceOverController : MonoBehaviour
 	}
 
 	public virtual void VoiceOverFinished(EventInstance finishedEvent) {
-		Debug.Log(finishedEvent);
 		switch (this.LevelController.CurrentState) {
 			case LevelController.State.Cutscene:
 				LevelController.SetState(LevelController.State.Idle);

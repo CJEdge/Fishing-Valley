@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1583213601024685545}
   - component: {fileID: 4472528235016745865}
   - component: {fileID: 7090412363966615903}
+  - component: {fileID: 5253065142394802842}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -115,107 +116,19 @@ MonoBehaviour:
       Data3: 1212074132
       Data4: -571899091
     Path: event:/VoiceOver/MainMenu/MenuMainMenu
-  Level1IntroCutscene:
-    Guid:
+  IntroCutscenes:
+  - Guid:
       Data1: -2051325276
       Data2: 1285507992
       Data3: -1565593455
       Data4: 1931711181
     Path: event:/VoiceOver/Levels/Level1IntroCutscene
-  ApplyBaitTutorials:
   - Guid:
-      Data1: 736888570
-      Data2: 1237845555
-      Data3: 1302096006
-      Data4: 997823191
-    Path: event:/VoiceOver/ApplyBaitTutorial/ApplyBaitTutorial
-  - Guid:
-      Data1: 1185227841
-      Data2: 1167473012
-      Data3: 1704720298
-      Data4: -1675436907
-    Path: event:/VoiceOver/ApplyBaitTutorial/ApplyBaitTutorial 2
-  - Guid:
-      Data1: -1804177842
-      Data2: 1133100240
-      Data3: 1407829949
-      Data4: 30758483
-    Path: event:/VoiceOver/ApplyBaitTutorial/ApplyBaitTutorial 3
-  - Guid:
-      Data1: 1133537527
-      Data2: 1077086034
-      Data3: -1670942325
-      Data4: -1588406641
-    Path: event:/VoiceOver/ApplyBaitTutorial/ApplyBaitTutorial 4
-  - Guid:
-      Data1: -561901699
-      Data2: 1148600959
-      Data3: -436482389
-      Data4: 45228382
-    Path: event:/VoiceOver/ApplyBaitTutorial/ApplyBaitTutorial 5
-  CastRodTutorials:
-  - Guid:
-      Data1: -534209392
-      Data2: 1319544061
-      Data3: -2006409050
-      Data4: 99920702
-    Path: event:/VoiceOver/CastRodTutorials/CastRodTutorial
-  - Guid:
-      Data1: 920292586
-      Data2: 1308191216
-      Data3: -1919537504
-      Data4: 1844583085
-    Path: event:/VoiceOver/CastRodTutorials/CastRodTutorial 2
-  ReelTutorials:
-  - Guid:
-      Data1: -1623877199
-      Data2: 1319586144
-      Data3: -437439302
-      Data4: 905470626
-    Path: event:/VoiceOver/ReelTutorial/ReelTutorial
-  - Guid:
-      Data1: 2069845911
-      Data2: 1107104385
-      Data3: -1949121643
-      Data4: 593959438
-    Path: event:/VoiceOver/ReelTutorial/ReelTutorial 2
-  - Guid:
-      Data1: -673632509
-      Data2: 1158322566
-      Data3: 196545185
-      Data4: -619117660
-    Path: event:/VoiceOver/ReelTutorial/ReelTutorial 3
-  - Guid:
-      Data1: 388682248
-      Data2: 1103761903
-      Data3: 928888984
-      Data4: -286619100
-    Path: event:/VoiceOver/ReelTutorial/ReelTutorial 4
-  TutorialCatchVoices:
-  - Guid:
-      Data1: 85320458
-      Data2: 1087590643
-      Data3: 637180318
-      Data4: 234443076
-    Path: event:/VoiceOver/CaughtFish/TutorialFish
-  - Guid:
-      Data1: -1180846775
-      Data2: 1103305150
-      Data3: -1117546601
-      Data4: 1123308011
-    Path: event:/VoiceOver/CaughtFish/TutorialFish 2
-  - Guid:
-      Data1: 444597240
-      Data2: 1176086279
-      Data3: 576283287
-      Data4: 2029869952
-    Path: event:/VoiceOver/CaughtFish/TutorialFish 3
-  - Guid:
-      Data1: 339093144
-      Data2: 1237211311
-      Data3: 1202464683
-      Data4: 183766607
-    Path: event:/VoiceOver/CaughtFish/TutorialFish 4
+      Data1: 34057961
+      Data2: 1159149749
+      Data3: -2031331445
+      Data4: -799445008
+    Path: event:/VoiceOver/Levels/Level2IntroCutscene
   CatchVoices:
   - Guid:
       Data1: 939592733
@@ -331,11 +244,11 @@ MonoBehaviour:
     Path: event:/VoiceOver/Shop/ItemValues/TwoHundred
   ThrowRod:
     Guid:
-      Data1: 815617258
-      Data2: 1078289329
-      Data3: 959533475
-      Data4: 1866417758
-    Path: event:/SFX/ShopSFX/ItemBuy
+      Data1: 1108943515
+      Data2: 1297155993
+      Data3: 553058722
+      Data4: -1595256626
+    Path: event:/SFX/LevelSFX/ThrowRod
   LandRod:
     Guid:
       Data1: 1165659761
@@ -370,62 +283,62 @@ MonoBehaviour:
       Data2: 1219677751
       Data3: -754223217
       Data4: -75916562
-    Path: event:/SFX/WormBaitIdle
-  - Guid:
-      Data1: -2134130286
-      Data2: 1214591248
-      Data3: 585164988
-      Data4: -178165460
-    Path: event:/SFX/LeechBaitIdle
-  - Guid:
-      Data1: -306073775
-      Data2: 1283962052
-      Data3: -347803755
-      Data4: 818896552
-    Path: event:/SFX/CricketBaitIdle
+    Path: event:/SFX/BaitIdle
   - Guid:
       Data1: -1751036424
       Data2: 1219677751
       Data3: -754223217
       Data4: -75916562
-    Path: event:/SFX/WormBaitIdle
+    Path: event:/SFX/BaitIdle
   - Guid:
-      Data1: -2134130286
-      Data2: 1214591248
-      Data3: 585164988
-      Data4: -178165460
-    Path: event:/SFX/LeechBaitIdle
+      Data1: -1751036424
+      Data2: 1219677751
+      Data3: -754223217
+      Data4: -75916562
+    Path: event:/SFX/BaitIdle
+  - Guid:
+      Data1: -1751036424
+      Data2: 1219677751
+      Data3: -754223217
+      Data4: -75916562
+    Path: event:/SFX/BaitIdle
+  - Guid:
+      Data1: -1751036424
+      Data2: 1219677751
+      Data3: -754223217
+      Data4: -75916562
+    Path: event:/SFX/BaitIdle
   AttatchBaitSounds:
   - Guid:
       Data1: -1561571289
       Data2: 1177583210
       Data3: -336593267
       Data4: 1816793257
-    Path: event:/SFX/LevelSFX/AttatchBait
+    Path: event:/SFX/AttatchBait
   - Guid:
       Data1: -1561571289
       Data2: 1177583210
       Data3: -336593267
       Data4: 1816793257
-    Path: event:/SFX/LevelSFX/AttatchBait
+    Path: event:/SFX/AttatchBait
   - Guid:
       Data1: -1561571289
       Data2: 1177583210
       Data3: -336593267
       Data4: 1816793257
-    Path: event:/SFX/LevelSFX/AttatchBait
+    Path: event:/SFX/AttatchBait
   - Guid:
       Data1: -1561571289
       Data2: 1177583210
       Data3: -336593267
       Data4: 1816793257
-    Path: event:/SFX/LevelSFX/AttatchBait
+    Path: event:/SFX/AttatchBait
   - Guid:
       Data1: -1561571289
       Data2: 1177583210
       Data3: -336593267
       Data4: 1816793257
-    Path: event:/SFX/LevelSFX/AttatchBait
+    Path: event:/SFX/AttatchBait
   FishCatch:
     Guid:
       Data1: -1537860913
@@ -480,3 +393,16 @@ MonoBehaviour:
   CatchTutorial_04: 03_CatchTutorial
   ShopTutorial_01: 0_ShopTutorial
   ShopTutorial_02: 01_ShopTutorial
+--- !u!114 &5253065142394802842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7393596337781405747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f826d40152fef43a2a4d141a72bae0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScenesLoaded: 0
