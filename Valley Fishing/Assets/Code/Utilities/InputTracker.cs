@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.InputSystem.Utilities;
+using UnityEngine.UI;
 
 public static class InputTracker {
 	public static bool LastInputWasMouse { get; private set; }
@@ -17,6 +18,13 @@ public static class InputTracker {
 		if (device is Mouse || device is Pointer || device is Keyboard) {
 			LastInputWasMouse = true;
 		} else if (device is Gamepad) {
+			Debug.Log("g");
+			if (LastInputWasMouse) {
+				LastInputWasMouse = false;
+				if (GameManager.Instance.LastSelectedButton != null) {
+					GameManager.Instance.EventSystem.SetSelectedGameObject(GameManager.Instance.LastSelectedButton);
+				}
+			}
 			LastInputWasMouse = false;
 		}
 	}
@@ -28,6 +36,12 @@ public static class InputTracker {
 		if (device is Mouse || device is Pointer || device is Keyboard) {
 			LastInputWasMouse = true;
 		} else if (device is Gamepad) {
+			if (LastInputWasMouse) {
+				LastInputWasMouse = false;
+				if (GameManager.Instance.LastSelectedButton != null) {
+					GameManager.Instance.EventSystem.SetSelectedGameObject(GameManager.Instance.LastSelectedButton);
+				}
+			}
 			LastInputWasMouse = false;
 		}
 	}

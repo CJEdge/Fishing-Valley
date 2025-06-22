@@ -31,10 +31,12 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 
 
 	public void OnPointerEnter(PointerEventData eventData) {
+		GameManager.Instance.LastSelectedButton = gameObject;
 		DoHoverEffect(); 
 	}
 
 	public void OnSelect(BaseEventData eventData) {
+		GameManager.Instance.LastSelectedButton = gameObject;
 		if (InputTracker.LastInputWasMouse) {
 			return;
 		}

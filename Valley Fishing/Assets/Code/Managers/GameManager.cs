@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GameManager : Singleton<GameManager> {
 	#region Serialized Fields
@@ -15,6 +16,13 @@ public class GameManager : Singleton<GameManager> {
 
 
 	#region Properties
+
+	public EventSystem EventSystem {
+		get;
+		set;
+	}
+
+	public GameObject LastSelectedButton;
 
 	public InputController InputController {
 		get;
@@ -48,7 +56,6 @@ public class GameManager : Singleton<GameManager> {
 		}
 	}
 
-	[field: SerializeField]
 	public List<int> CurrentBaits {
 		get;
 		set;

@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class LevelManager : Singleton<LevelManager>
+public class LevelManager
 {
-	public string Menu;
-	public string CatchTutorial_01;
-	public string CatchTutorial_02;
-	public string CatchTutorial_03;
-	public string CatchTutorial_04;
-	public string ShopTutorial_01;
-	public string ShopTutorial_02;
+	public const string Menu = "Menu";
+	public const string CatchTutorial_00 = "0_CatchTutorial";
+	public const string CatchTutorial_01 = "01_CatchTutorial";
+	public const string CatchTutorial_02 = "02_CatchTutorial";
+	public const string CatchTutorial_03 = "03_CatchTutorial";
+	public const string ShopTutorial_01 = "0_ShopTutorial";
+	public const string ShopTutorial_02 = "0_ShopTutorial";
 }

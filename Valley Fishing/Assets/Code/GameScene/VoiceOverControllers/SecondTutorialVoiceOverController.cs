@@ -34,7 +34,7 @@ public class SecondTutorialVoiceOverController : VoiceOverController
 			case LevelController.State.FishCaught:
 				if (AllTutorialsCompleted(this.CaughtFishTutorialsCompleted)) {
 					GameManager.Instance.LevelController.FishView.EnableFishUI(false);
-					SceneManager.LoadScene(LevelManager.Instance.ShopTutorial_02);
+					SceneManager.LoadScene(LevelManager.ShopTutorial_02);
 				}
 				break;
 			default:

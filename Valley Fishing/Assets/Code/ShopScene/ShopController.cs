@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ShopController : AbstractState<ShopController.State>
 {
@@ -9,6 +10,9 @@ public class ShopController : AbstractState<ShopController.State>
 
 	[SerializeField]
 	private BaitShop baitShop;
+
+	[SerializeField]
+	private EventSystem eventSystem;
 
 	#endregion
 
@@ -40,6 +44,7 @@ public class ShopController : AbstractState<ShopController.State>
 		switch (state) {
 			case State.Default:
 				GameManager.Instance.ShopController = this;
+				GameManager.Instance.EventSystem = eventSystem;
 				SetState(State.CutsceneIn);
 				break;
 			case State.CutsceneIn:

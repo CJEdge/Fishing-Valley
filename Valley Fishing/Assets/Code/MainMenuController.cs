@@ -27,6 +27,7 @@ public class MainMenuController : MonoBehaviour
 	public void Awake()
     {
 		GameManager.Instance.MainMenuController = this;
+		GameManager.Instance.EventSystem = eventSystem;
 		eventSystem.SetSelectedGameObject(initialMenuButton);
 		AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.MenuGreeting);
     }

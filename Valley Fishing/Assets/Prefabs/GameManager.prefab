@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3439270965734018076}
   - component: {fileID: 1583213601024685545}
   - component: {fileID: 4472528235016745865}
-  - component: {fileID: 7090412363966615903}
   - component: {fileID: 5253065142394802842}
   m_Layer: 0
   m_Name: GameManager
@@ -53,6 +52,9 @@ MonoBehaviour:
   - {fileID: 6600018212874257723, guid: 031262a786fb3484a9d9a1131e2e7fed, type: 3}
   - {fileID: 8874738652398643800, guid: d9a2cdbf59c0d1b4ab186e425e3d8be5, type: 3}
   - {fileID: 939318007809733827, guid: 46c47adee9d3bbf4d95dd38bcecd4afe, type: 3}
+  - {fileID: 939318007809733827, guid: 0aae93f1b2ff9c6468aaaba31d6a2c98, type: 3}
+  - {fileID: 939318007809733827, guid: a8cc8612e0a8c114c8d2858421a9922c, type: 3}
+  - {fileID: 939318007809733827, guid: f000751d6d587734d824225b212e98d4, type: 3}
   baits:
   - {fileID: 1264329977150585429, guid: c070571afa0583f429615349cd46c82c, type: 3}
   - {fileID: 2644793683023306607, guid: deaf0af42497b3a49b1c60dfeb125c58, type: 3}
@@ -60,8 +62,6 @@ MonoBehaviour:
   - {fileID: 7779104066758528175, guid: b0fe451ad790c044784140f990fb4a6a, type: 3}
   - {fileID: 7896926226264258103, guid: 1e85570237b64c54ca570d11b21f4b97, type: 3}
   - {fileID: 7778841989186564110, guid: 142a9d4d143554a4b86112aad1f3a274, type: 3}
-  <CurrentBaits>k__BackingField: 
-  <CaughtFish>k__BackingField: 00000000000000000000000000000000
   <Money>k__BackingField: 0
 --- !u!114 &1583213601024685545
 MonoBehaviour:
@@ -142,6 +142,36 @@ MonoBehaviour:
       Data3: 1931285390
       Data4: -315869571
     Path: event:/VoiceOver/CaughtFish/1_Carp
+  - Guid:
+      Data1: -1519471312
+      Data2: 1103977819
+      Data3: 1588832440
+      Data4: -1687215191
+    Path: event:/VoiceOver/CaughtFish/2_Trout
+  - Guid:
+      Data1: -1519471312
+      Data2: 1103977819
+      Data3: 1588832440
+      Data4: -1687215191
+    Path: event:/VoiceOver/CaughtFish/2_Trout
+  - Guid:
+      Data1: -1519471312
+      Data2: 1103977819
+      Data3: 1588832440
+      Data4: -1687215191
+    Path: event:/VoiceOver/CaughtFish/2_Trout
+  - Guid:
+      Data1: -1519471312
+      Data2: 1103977819
+      Data3: 1588832440
+      Data4: -1687215191
+    Path: event:/VoiceOver/CaughtFish/2_Trout
+  - Guid:
+      Data1: -1519471312
+      Data2: 1103977819
+      Data3: 1588832440
+      Data4: -1687215191
+    Path: event:/VoiceOver/CaughtFish/2_Trout
   - Guid:
       Data1: -1519471312
       Data2: 1103977819
@@ -308,7 +338,19 @@ MonoBehaviour:
       Data3: -754223217
       Data4: -75916562
     Path: event:/SFX/BaitIdle
+  - Guid:
+      Data1: -1751036424
+      Data2: 1219677751
+      Data3: -754223217
+      Data4: -75916562
+    Path: event:/SFX/BaitIdle
   AttatchBaitSounds:
+  - Guid:
+      Data1: -1561571289
+      Data2: 1177583210
+      Data3: -336593267
+      Data4: 1816793257
+    Path: event:/SFX/AttatchBait
   - Guid:
       Data1: -1561571289
       Data2: 1177583210
@@ -374,25 +416,6 @@ MonoBehaviour:
       Data3: -493826686
       Data4: 363304719
     Path: event:/Music/LevelOneMusic
---- !u!114 &7090412363966615903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7393596337781405747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 201d5e01e28e2d1449ee3be198843b1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Menu: Menu
-  CatchTutorial_01: 0_CatchTutorial
-  CatchTutorial_02: 01_CatchTutorial
-  CatchTutorial_03: 02_CatchTutorial
-  CatchTutorial_04: 03_CatchTutorial
-  ShopTutorial_01: 0_ShopTutorial
-  ShopTutorial_02: 01_ShopTutorial
 --- !u!114 &5253065142394802842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,4 +428,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f826d40152fef43a2a4d141a72bae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScenesLoaded: 0
+  secondCatchTutorialCheats:
+    Baits:
+    - BaitIndex: 3
+      BaitAmount: 5
+    - BaitIndex: 5
+      BaitAmount: 5
+  firstShopTutorialCheats:
+    CaughtFish:
+    - FishIndex: 0
+      FishAmount: 3
+    - FishIndex: 1
+      FishAmount: 3
+    - FishIndex: 2
+      FishAmount: 3
+    - FishIndex: 3
+      FishAmount: 1

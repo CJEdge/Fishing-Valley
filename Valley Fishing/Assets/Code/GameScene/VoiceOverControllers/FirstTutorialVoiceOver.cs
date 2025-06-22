@@ -54,7 +54,7 @@ public class FirstTutorialVoiceOver : VoiceOverController
 
 				if (GameManager.Instance.CurrentFish.FishIndex == 3) {
 					GameManager.Instance.LevelController.FishView.EnableFishUI(false);
-					SceneManager.LoadScene(LevelManager.Instance.ShopTutorial_01);
+					SceneManager.LoadScene(LevelManager.ShopTutorial_01);
 				}
 				break;
 			default:

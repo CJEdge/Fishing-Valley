@@ -21,12 +21,6 @@ public class PlayButton : MonoBehaviour
 
 	#region Properties
 
-	public LevelManager LevelManager {
-		get {
-			return LevelManager.Instance;
-		}
-	}
-
 	[field:SerializeField]
 	public Level LevelToLoad {
 		get;
@@ -41,25 +35,25 @@ public class PlayButton : MonoBehaviour
 	public void LoadGameLevel() {
 		switch (LevelToLoad) {
 			case Level.Menu:
-				SceneManager.LoadScene(this.LevelManager.Menu);
+				SceneManager.LoadScene(LevelManager.Menu);
 				break;
 			case Level.CatchTutorial_01:
-				SceneManager.LoadScene(this.LevelManager.CatchTutorial_01);
+				SceneManager.LoadScene(LevelManager.CatchTutorial_00);
 				break;
 			case Level.CatchTutorial_02:
-				SceneManager.LoadScene(this.LevelManager.CatchTutorial_02);
+				SceneManager.LoadScene(LevelManager.CatchTutorial_01);
 				break;
 			case Level.CatchTutorial_03:
-				SceneManager.LoadScene(this.LevelManager.CatchTutorial_03);
+				SceneManager.LoadScene(LevelManager.CatchTutorial_02);
 				break;
 			case Level.CatchTutorial_04:
-				SceneManager.LoadScene(this.LevelManager.CatchTutorial_04);
+				SceneManager.LoadScene(LevelManager.CatchTutorial_03);
 				break;
 			case Level.ShopTutorial_01:
-				SceneManager.LoadScene(this.LevelManager.ShopTutorial_01);
+				SceneManager.LoadScene(LevelManager.ShopTutorial_01);
 				break;
 			case Level.ShopTutorial_02:
-				SceneManager.LoadScene(this.LevelManager.ShopTutorial_02);
+				SceneManager.LoadScene(LevelManager.ShopTutorial_02);
 				break;
 			default:
 				break;

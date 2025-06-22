@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class LevelController : AbstractState<LevelController.State> {
 
@@ -21,6 +22,9 @@ public class LevelController : AbstractState<LevelController.State> {
 
 	[SerializeField]
 	private BaitView baitView;
+
+	[SerializeField]
+	private EventSystem eventSystem;
 
 	#endregion
 
@@ -71,6 +75,7 @@ public class LevelController : AbstractState<LevelController.State> {
 		switch (state) {
 			case State.Default:
 				GameManager.Instance.LevelController = this;
+				GameManager.Instance.EventSystem = eventSystem;
 				SetState(State.Cutscene);
 				break;
 			case State.Cutscene:
