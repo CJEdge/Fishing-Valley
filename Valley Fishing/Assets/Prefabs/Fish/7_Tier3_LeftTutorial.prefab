@@ -5461,7 +5461,7 @@ GameObject:
   - component: {fileID: 6682323996151832369}
   - component: {fileID: 8801591923148606404}
   m_Layer: 0
-  m_Name: Fish
+  m_Name: 7_Tier3_LeftTutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5498,12 +5498,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <CurrentState>k__BackingField: 0
   <CurrentActivityLevel>k__BackingField: 0
-  activityLevels: 00000000
-  movementDirections: 00000000
-  movementDirection: 0
-  fishName: 
-  fishIndex: 0
+  activityLevels: 03000000
+  movementDirections: 010000000200000002000000
+  fishName: Tier3_Left_Tutorial
+  fishIndex: 7
   sellPrice: 0
+  failable: 0
   fishSpeed: 2
   centreThreshold: 30
   reelSpeed: 200

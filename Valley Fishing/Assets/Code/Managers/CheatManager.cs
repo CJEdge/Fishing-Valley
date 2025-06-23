@@ -27,6 +27,7 @@ public class CheatManager : Singleton<CheatManager>
 		}
 		ShowFirstShopTutorialCheats();
 		ShowSecondCatchTutorialCheats();
+		ShowThirdCatchTutorialCheats();
 	}
 
 	public void OnDestroy() {
@@ -61,7 +62,28 @@ public class CheatManager : Singleton<CheatManager>
 	#endregion
 
 
-	#region Second Catch Turotial
+	#region Third Catch Turotial
+
+	[System.Serializable]
+	public class ThirdCatchTutorialCheats {
+		public BaitCheatData[] Baits;
+	}
+
+	[SerializeField]
+	private ThirdCatchTutorialCheats thirdCatchTutorialCheats;
+
+	private void ShowThirdCatchTutorialCheats() {
+		if (SceneManager.GetActiveScene().name == LevelManager.CatchTutorial_02) {
+			for (int i = 0; i < thirdCatchTutorialCheats.Baits.Length; i++) {
+				GameManager.Instance.CurrentBaits[thirdCatchTutorialCheats.Baits[i].BaitIndex] = thirdCatchTutorialCheats.Baits[i].BaitAmount;
+			}
+		}
+	}
+
+	#endregion
+
+
+	#region First Shop Turotial
 
 	[System.Serializable]
 	public class FirstShopTutorialCheats {

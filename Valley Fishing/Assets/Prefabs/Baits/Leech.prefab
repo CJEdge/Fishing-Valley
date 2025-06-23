@@ -8,6 +8,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3614361354684212053, guid: 3bb9af89310f9574686d41c346bf7ca7, type: 3}
+      propertyPath: baitIndex
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614361354684212053, guid: 3bb9af89310f9574686d41c346bf7ca7, type: 3}
+      propertyPath: 'catchChances.Array.data[0]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614361354684212053, guid: 3bb9af89310f9574686d41c346bf7ca7, type: 3}
+      propertyPath: 'catchChances.Array.data[1]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614361354684212053, guid: 3bb9af89310f9574686d41c346bf7ca7, type: 3}
+      propertyPath: 'catchChances.Array.data[7]'
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3664815136598165349, guid: 3bb9af89310f9574686d41c346bf7ca7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -50,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9101075503799505956, guid: 3bb9af89310f9574686d41c346bf7ca7, type: 3}
       propertyPath: m_Name
-      value: Bait
+      value: Leech
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

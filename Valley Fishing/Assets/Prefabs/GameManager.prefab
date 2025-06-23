@@ -57,6 +57,7 @@ MonoBehaviour:
   - {fileID: 939318007809733827, guid: 0aae93f1b2ff9c6468aaaba31d6a2c98, type: 3}
   - {fileID: 939318007809733827, guid: a8cc8612e0a8c114c8d2858421a9922c, type: 3}
   - {fileID: 939318007809733827, guid: f000751d6d587734d824225b212e98d4, type: 3}
+  - {fileID: 8265546778158016295, guid: 443131680dc83cc46b32b16aec4f03da, type: 3}
   baits:
   - {fileID: 1264329977150585429, guid: c070571afa0583f429615349cd46c82c, type: 3}
   - {fileID: 2644793683023306607, guid: deaf0af42497b3a49b1c60dfeb125c58, type: 3}
@@ -64,6 +65,7 @@ MonoBehaviour:
   - {fileID: 7779104066758528175, guid: b0fe451ad790c044784140f990fb4a6a, type: 3}
   - {fileID: 7896926226264258103, guid: 1e85570237b64c54ca570d11b21f4b97, type: 3}
   - {fileID: 7778841989186564110, guid: 142a9d4d143554a4b86112aad1f3a274, type: 3}
+  - {fileID: 5679352621735612818, guid: 3c0861e58491f484199c895cf2758efb, type: 3}
   <EventSystem>k__BackingField: {fileID: 0}
   LastSelectedButton: {fileID: 0}
   <CaughtFish>k__BackingField: 
@@ -349,7 +351,19 @@ MonoBehaviour:
       Data3: -754223217
       Data4: -75916562
     Path: event:/SFX/BaitIdle
+  - Guid:
+      Data1: -1751036424
+      Data2: 1219677751
+      Data3: -754223217
+      Data4: -75916562
+    Path: event:/SFX/BaitIdle
   AttatchBaitSounds:
+  - Guid:
+      Data1: -1561571289
+      Data2: 1177583210
+      Data3: -336593267
+      Data4: 1816793257
+    Path: event:/SFX/AttatchBait
   - Guid:
       Data1: -1561571289
       Data2: 1177583210
@@ -438,6 +452,10 @@ MonoBehaviour:
     - BaitIndex: 3
       BaitAmount: 5
     - BaitIndex: 5
+      BaitAmount: 5
+  thirdCatchTutorialCheats:
+    Baits:
+    - BaitIndex: 6
       BaitAmount: 5
   firstShopTutorialCheats:
     CaughtFish:

@@ -950,6 +950,7 @@ MonoBehaviour:
   <CurrentState>k__BackingField: 0
   shoreMenu: {fileID: 1808427007}
   baitShop: {fileID: 895185098}
+  eventSystem: {fileID: 1395612272}
 --- !u!1 &1212762096
 GameObject:
   m_ObjectHideFlags: 0
@@ -2357,8 +2358,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 918728922}
   - {fileID: 1819454900}
-  - {fileID: 3609043040135961494}
   - {fileID: 196863434}
   - {fileID: 1046724681}
   - {fileID: 1507399596}
   - {fileID: 1395612273}
+  - {fileID: 3609043040135961494}

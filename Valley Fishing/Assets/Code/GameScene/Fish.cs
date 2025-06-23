@@ -33,12 +33,13 @@ public class Fish : AbstractState<Fish.State>
 	private List<ActivityLevel> activityLevels;
 
     public enum MovementDirection {
-        random,
+        none,
         left,
         right
     }
 
-    public MovementDirection movementDirection;
+	[SerializeField]
+	private List<MovementDirection> movementDirections;
 
 	#endregion
 
@@ -55,16 +56,10 @@ public class Fish : AbstractState<Fish.State>
 	private int sellPrice;
 
 	[SerializeField]
-	private bool isStrafer;
+	private bool failable;
 
 	[SerializeField]
     private float fishSpeed;
-
-    [SerializeField]
-    private int strafeCount;
-
-    [SerializeField]
-    private float strafeFrequency;
 
 	[SerializeField]
 	private float centreThreshold;
@@ -96,20 +91,18 @@ public class Fish : AbstractState<Fish.State>
 	[SerializeField]
 	private float activityLevelChangeTime;
 
-    #endregion
+	[SerializeField]
+	private float movementChangeTime;
+
+	#endregion
 
 
-    #region Properties
+	#region Properties
 
-    private int CurrentStrafeCount {
-        get;
-        set;
-    }
-
-    private float CurrentStrafeTime {
-        get;
-        set;
-    }
+	private bool IsStrafer {
+		get;
+		set;
+	}
 
 	private bool IsCentred {
 		get;
@@ -141,14 +134,32 @@ public class Fish : AbstractState<Fish.State>
 		set;
 	} = new List<float>();
 
-	[field: SerializeField]
+	private List<float> MovementIntervals {
+		get;
+		set;
+	} = new List<float>();
+
+	[field:SerializeField]
+	private int MovementIntervalsCompleted {
+		get;
+		set;
+	}
+
 	private float CurrentLevelActivityChangeTime {
 		get;
 		set;
 	}
 
-	[field: SerializeField]
 	private bool ActivityLevelChanging {
+		get;
+		set;
+	}
+	private float CurrentMovemetChangeTime {
+		get;
+		set;
+	}
+
+	private bool MovementDirectionChanging {
 		get;
 		set;
 	}
@@ -201,52 +212,13 @@ public class Fish : AbstractState<Fish.State>
 				if(this.InputController.ReelSpeed > 0) {
 					this.CatchStarted = true;
 				}
-				if (this.FailedCatchTime > 10) {
-					FailedCatch();
-				}
-				for (int i = this.ActivityLevelIntervals.Count - 1; i >= 0 ; i--) {
-					if(transform.position.z < (this.ActivityLevelIntervals[i])){
-						if (this.CurrentActivityLevel != activityLevels[i]) {
-							SetActivityLevel(activityLevels[i]);
-							if (i != 0) {
-								this.ActivityLevelChanging = true;
-							}
-						}
-						break;
+				if (failable) {
+					if (this.FailedCatchTime > 10) {
+						FailedCatch();
 					}
 				}
-				if (this.ActivityLevelChanging) {
-					if (this.CurrentLevelActivityChangeTime <= activityLevelChangeTime) {
-						this.CurrentLevelActivityChangeTime += Time.deltaTime;
-					} else {
-						this.CurrentLevelActivityChangeTime = 0;
-						this.ActivityLevelChanging = false;
-					}
-				}
-				if (strafeCount == 0) {
-					return;
-				}
-				if (this.CurrentStrafeCount == strafeCount) {
-					return;
-				}
-				if (isStrafer) {
-					if (this.CurrentStrafeTime < strafeFrequency) {
-						this.CurrentStrafeTime += Time.deltaTime;
-					} else {
-						this.CurrentStrafeTime = 0;
-						switch (movementDirection) {
-							case MovementDirection.random:
-								break;
-							case MovementDirection.left:
-								break;
-							case MovementDirection.right:
-								break;
-							default:
-								break;
-						}
-						this.CurrentStrafeCount++;
-					}
-				}
+				ChangeActivityLevels();
+				ChangeMovementDirection();
 				break;
 			case State.Caught:
 				SetActivityLevel(ActivityLevel.none);
@@ -261,7 +233,7 @@ public class Fish : AbstractState<Fish.State>
 		if(this.CurrentState == State.OnHook) {
 			Reel();
 		}
-		if (GameManager.Instance.InputController.StrafingEnabled) {
+		if (this.IsStrafer) {
 			Move();
 		}
     }
@@ -275,6 +247,15 @@ public class Fish : AbstractState<Fish.State>
 		for (int i = 0; i < activityLevels.Count; i++) {
 			this.ActivityLevelIntervals.Add(reelStart - (i * activityLevelInterval));
 		}
+		float movementInterval = (reelStart - reelEnd) / movementDirections.Count;
+		bool isStrafer = false;
+		for (int i = 0; i < movementDirections.Count; i++) {
+			if(movementDirections[i]!= MovementDirection.none) {
+				isStrafer = true;
+			}
+			this.MovementIntervals.Add(reelStart - (i * movementInterval));
+		}
+		this.IsStrafer = isStrafer;
 		SetActivityLevel(activityLevels[0]);
 		SetState(State.OnHook);
 	}
@@ -299,6 +280,9 @@ public class Fish : AbstractState<Fish.State>
 
     private void Reel() {
 		if (this.ActivityLevelChanging) {
+			return;
+		}
+		if (this.MovementDirectionChanging) {
 			return;
 		}
         switch (CurrentActivityLevel) {
@@ -342,6 +326,49 @@ public class Fish : AbstractState<Fish.State>
 				break;
         }
     }
+
+	private void ChangeActivityLevels() {
+		for (int i = this.ActivityLevelIntervals.Count - 1; i >= 0; i--) {
+			if (transform.position.z < (this.ActivityLevelIntervals[i])) {
+				if (this.CurrentActivityLevel != activityLevels[i]) {
+					SetActivityLevel(activityLevels[i]);
+					if (i != 0) {
+						this.ActivityLevelChanging = true;
+					}
+				}
+				break;
+			}
+		}
+		if (this.ActivityLevelChanging) {
+			if (this.CurrentLevelActivityChangeTime <= activityLevelChangeTime) {
+				this.CurrentLevelActivityChangeTime += Time.deltaTime;
+			} else {
+				this.CurrentLevelActivityChangeTime = 0;
+				this.ActivityLevelChanging = false;
+			}
+		}
+	}
+
+	private void ChangeMovementDirection() {
+		for (int i = this.MovementIntervals.Count - 1; i >= 0; i--) {
+			if (transform.position.z < (this.MovementIntervals[i])) {
+				if (this.MovementIntervalsCompleted > i) {
+					break;
+				}
+				SetStrafePosition(movementDirections[i]);
+				this.MovementIntervalsCompleted++;
+				this.MovementDirectionChanging = true;
+			}
+		}
+		if (this.MovementDirectionChanging) {
+			if (this.CurrentMovemetChangeTime <= movementChangeTime) {
+				this.CurrentMovemetChangeTime += Time.deltaTime;
+			} else {
+				this.CurrentMovemetChangeTime = 0;
+				this.MovementDirectionChanging = false;
+			}
+		}
+	}
 
 	private void HandleCentering() {
 		if (transform.position.x > -centreThreshold && transform.position.x < centreThreshold) {
@@ -393,6 +420,21 @@ public class Fish : AbstractState<Fish.State>
 			case ActivityLevel.active:
 				activityParticles[2].SetActive(true);
 				AudioManager.Instance.PlayFishActivitySound(this, 3, true);
+				break;
+			default:
+				break;
+		}
+	}
+
+	private void SetStrafePosition(MovementDirection movementDirection) {
+		switch (movementDirection) {
+			case MovementDirection.none:
+				break;
+			case MovementDirection.left:
+				transform.position = new Vector3(GameManager.Instance.LevelController.LeftStrafeTransform.position.x,transform.position.y,transform.position.z);
+				break;
+			case MovementDirection.right:
+				transform.position = new Vector3(GameManager.Instance.LevelController.RightStrafeTransform.position.x, transform.position.y, transform.position.z);
 				break;
 			default:
 				break;

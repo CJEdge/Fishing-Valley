@@ -12,6 +12,9 @@ public class CheatManagerEditor : Editor {
 		if (currentScene == LevelManager.CatchTutorial_01) {
 			EditorGUILayout.PropertyField(serializedObject.FindProperty("secondCatchTutorialCheats"));
 		}
+		if (currentScene == LevelManager.CatchTutorial_02) {
+			EditorGUILayout.PropertyField(serializedObject.FindProperty("thirdCatchTutorialCheats"));
+		}
 		if (currentScene == LevelManager.ShopTutorial_01) {
 			EditorGUILayout.PropertyField(serializedObject.FindProperty("firstShopTutorialCheats"));
 		}

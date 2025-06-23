@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: fishIndex
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: activityLevels.Array.size

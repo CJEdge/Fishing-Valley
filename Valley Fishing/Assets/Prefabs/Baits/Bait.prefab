@@ -47,8 +47,13 @@ MonoBehaviour:
   isFailable: 1
   isTutorial: 0
   baitIndex: 0
+  baitPrice: 0
   catchChances:
   - 0.5
   - 0.5
+  - 0
+  - 0
+  - 0
+  - 0
   - 0
   - 0

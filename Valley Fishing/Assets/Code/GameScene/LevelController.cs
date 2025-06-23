@@ -24,6 +24,12 @@ public class LevelController : AbstractState<LevelController.State> {
 	private BaitView baitView;
 
 	[SerializeField]
+	private Transform leftStrafeTransform;
+
+	[SerializeField]
+	private Transform rightStrafeTransform;
+
+	[SerializeField]
 	private EventSystem eventSystem;
 
 	#endregion
@@ -52,6 +58,18 @@ public class LevelController : AbstractState<LevelController.State> {
 	public FishView FishView {
 		get {
 			return fishView;
+		}
+	}
+
+	public Transform LeftStrafeTransform {
+		get {
+			return leftStrafeTransform;
+		}
+	}
+
+	public Transform RightStrafeTransform {
+		get {
+			return rightStrafeTransform;
 		}
 	}
 
