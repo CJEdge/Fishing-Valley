@@ -17,6 +17,7 @@ public class GameManager : Singleton<GameManager> {
 
 	#region Properties
 
+	[field:SerializeField]
 	public EventSystem EventSystem {
 		get;
 		set;

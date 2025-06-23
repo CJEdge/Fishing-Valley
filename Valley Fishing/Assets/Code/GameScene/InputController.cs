@@ -72,6 +72,9 @@ public class InputController : AbstractState<InputController.State> {
 
 	#region Serialized Fields
 
+	[SerializeField]
+	private Vector2 clickVibration;
+
 	[Header("Components")]
 
 	[SerializeField]
@@ -203,6 +206,9 @@ public class InputController : AbstractState<InputController.State> {
 
 	public void Click(InputAction.CallbackContext context) {
 		if (context.performed) {
+			if (!InputTracker.LastInputWasMouse) {
+				VibrationManager.Instance.SetVibrationFrequency(true, clickVibration.x, clickVibration.y);
+			}
 			OnClick?.Invoke();
 		}
 	}
@@ -271,6 +277,7 @@ public class InputController : AbstractState<InputController.State> {
 		if (!context.performed) {
 			return;
 		}
+		VibrationManager.Instance.SetVibrationFrequency(true, clickVibration.x, clickVibration.y);
 		AudioManager.Instance.SkipVoiceOver();
 		GameManager.Instance.LevelController.Skip();
 		OnSkip?.Invoke();

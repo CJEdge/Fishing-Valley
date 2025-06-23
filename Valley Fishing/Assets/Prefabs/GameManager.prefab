@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 1583213601024685545}
   - component: {fileID: 4472528235016745865}
   - component: {fileID: 5253065142394802842}
+  - component: {fileID: 2564529053801086033}
+  - component: {fileID: 7855195024462587192}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -62,6 +64,9 @@ MonoBehaviour:
   - {fileID: 7779104066758528175, guid: b0fe451ad790c044784140f990fb4a6a, type: 3}
   - {fileID: 7896926226264258103, guid: 1e85570237b64c54ca570d11b21f4b97, type: 3}
   - {fileID: 7778841989186564110, guid: 142a9d4d143554a4b86112aad1f3a274, type: 3}
+  <EventSystem>k__BackingField: {fileID: 0}
+  LastSelectedButton: {fileID: 0}
+  <CaughtFish>k__BackingField: 
   <Money>k__BackingField: 0
 --- !u!114 &1583213601024685545
 MonoBehaviour:
@@ -444,3 +449,27 @@ MonoBehaviour:
       FishAmount: 3
     - FishIndex: 3
       FishAmount: 1
+--- !u!114 &2564529053801086033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7393596337781405747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9c3c6a2486e274aa854a60354d3075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7855195024462587192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7393596337781405747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc789e279ee1a42a655df102a22012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

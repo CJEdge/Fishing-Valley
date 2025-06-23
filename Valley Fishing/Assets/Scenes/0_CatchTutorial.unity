@@ -167,6 +167,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1827627906022144295, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
+      propertyPath: clickVibration.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827627906022144295, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
+      propertyPath: clickVibration.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827627906022144295, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
+      propertyPath: 'mouse.reelStateThresholds.Array.data[0]'
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827627906022144295, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
+      propertyPath: 'controller.reelStateThresholds.Array.data[0]'
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5794655492895963625, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
       propertyPath: m_Name
       value: '[Gameplay]'
@@ -476,6 +492,7 @@ MonoBehaviour:
   fishSpawnTransform: {fileID: 1007970973}
   fishView: {fileID: 1379353193}
   baitView: {fileID: 1379353191}
+  eventSystem: {fileID: 1015315668}
 --- !u!4 &582599907
 Transform:
   m_ObjectHideFlags: 0

@@ -18,7 +18,6 @@ public static class InputTracker {
 		if (device is Mouse || device is Pointer || device is Keyboard) {
 			LastInputWasMouse = true;
 		} else if (device is Gamepad) {
-			Debug.Log("g");
 			if (LastInputWasMouse) {
 				LastInputWasMouse = false;
 				if (GameManager.Instance.LastSelectedButton != null) {
@@ -38,11 +37,11 @@ public static class InputTracker {
 		} else if (device is Gamepad) {
 			if (LastInputWasMouse) {
 				LastInputWasMouse = false;
-				if (GameManager.Instance.LastSelectedButton != null) {
+				if (GameManager.Instance.LastSelectedButton != null) 
 					GameManager.Instance.EventSystem.SetSelectedGameObject(GameManager.Instance.LastSelectedButton);
 				}
 			}
-			LastInputWasMouse = false;
-		}
+		LastInputWasMouse = false;
 	}
 }
+

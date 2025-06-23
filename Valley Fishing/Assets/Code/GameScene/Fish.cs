@@ -283,6 +283,8 @@ public class Fish : AbstractState<Fish.State>
 		GameManager.Instance.AssignNewCaughtFish(fishIndex);
 		GameManager.Instance.LevelController.SetState(LevelController.State.FishCaught);
 		AudioManager.Instance.PlayFishActivitySound(this, 0, true);
+		VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);
+		VibrationManager.Instance.SetVibrationFrequency(false, 0, Mathf.Infinity);
 		Destroy(gameObject);
 	}
 
@@ -304,25 +306,37 @@ public class Fish : AbstractState<Fish.State>
                 break;
             case ActivityLevel.calm:
 				if (this.InputController.CurrentState == InputController.State.CalmReeling && this.IsCentred) {
+					VibrationManager.Instance.SetVibrationFrequency(true, DistanceAsPercentage(), Mathf.Infinity);
+					VibrationManager.Instance.SetVibrationFrequency(false, 0, Mathf.Infinity);
 					rb.AddForce(0, 0, -reelSpeed);
 				} else {
 					IncreaseFailTime();
+					VibrationManager.Instance.SetVibrationFrequency(false, (1/DistanceAsPercentage())/2, Mathf.Infinity);
+					VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);
 					rb.AddForce(0, 0, swimAwaySpeed);
 				}
 				break;
             case ActivityLevel.medium:
 				if (this.InputController.CurrentState == InputController.State.NormalReeling && this.IsCentred) {
+					VibrationManager.Instance.SetVibrationFrequency(true, DistanceAsPercentage(), Mathf.Infinity);
+					VibrationManager.Instance.SetVibrationFrequency(false, 0, Mathf.Infinity);
 					rb.AddForce(0, 0, -reelSpeed);
 				} else {
 					IncreaseFailTime();
+					VibrationManager.Instance.SetVibrationFrequency(false, (1 / DistanceAsPercentage()) / 2, Mathf.Infinity);
+					VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);
 					rb.AddForce(0, 0, swimAwaySpeed);
 				}
 				break;
             case ActivityLevel.active:
 				if (this.InputController.CurrentState == InputController.State.FastReeling && this.IsCentred) {
+					VibrationManager.Instance.SetVibrationFrequency(true, DistanceAsPercentage(), Mathf.Infinity);
+					VibrationManager.Instance.SetVibrationFrequency(false, 0, Mathf.Infinity);
 					rb.AddForce(0, 0, -reelSpeed);
 				} else {
 					IncreaseFailTime();
+					VibrationManager.Instance.SetVibrationFrequency(false, (1 / DistanceAsPercentage()) / 2, Mathf.Infinity);
+					VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);
 					rb.AddForce(0, 0, swimAwaySpeed);
 				}
 				break;
@@ -354,6 +368,8 @@ public class Fish : AbstractState<Fish.State>
 	private void FailedCatch() {
 		GameManager.Instance.LevelController.SetState(LevelController.State.AttatchBait);
 		AudioManager.Instance.PlayFishActivitySound(this, 0, false);
+		VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);
+		VibrationManager.Instance.SetVibrationFrequency(false, 0, Mathf.Infinity);
 		Destroy(gameObject);
 	}
 
@@ -381,6 +397,12 @@ public class Fish : AbstractState<Fish.State>
 			default:
 				break;
 		}
+	}
+
+	private float DistanceAsPercentage() {
+		float totalLength = reelStart - reelEnd;
+		float distanceAlongLength = transform.position.z - reelStart;
+		return -(distanceAlongLength / totalLength)/2;
 	}
 
 	#endregion
