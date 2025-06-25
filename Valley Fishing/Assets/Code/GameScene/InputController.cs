@@ -89,6 +89,9 @@ public class InputController : AbstractState<InputController.State> {
 	[SerializeField]
 	private PlayerArms playerArms;
 
+	[SerializeField]
+	private RodLineComponent rodLineComponent;
+
 	[Header("ReelTypes")]
 
 	[SerializeField] private InputType mouse = new InputType();

@@ -28,6 +28,7 @@ public class CheatManager : Singleton<CheatManager>
 		ShowFirstShopTutorialCheats();
 		ShowSecondCatchTutorialCheats();
 		ShowThirdCatchTutorialCheats();
+		ShowFourthCatchTutorialCheats();
 	}
 
 	public void OnDestroy() {
@@ -36,6 +37,9 @@ public class CheatManager : Singleton<CheatManager>
 
 	private void SceneLoaded(Scene scene, LoadSceneMode loadSceneMode) {
 		ScenesLoaded++;
+		if (GameManager.Instance.TotalBaitsLeft == 0) {
+			ShowThirdCatchTutorialCheats();
+		}
 	}
 
 	#endregion
@@ -83,6 +87,27 @@ public class CheatManager : Singleton<CheatManager>
 	#endregion
 
 
+	#region Third Catch Turotial
+
+	[System.Serializable]
+	public class FourthCatchTutorialCheats {
+		public BaitCheatData[] Baits;
+	}
+
+	[SerializeField]
+	private FourthCatchTutorialCheats fourthCatchTutorialCheats;
+
+	private void ShowFourthCatchTutorialCheats() {
+		if (SceneManager.GetActiveScene().name == LevelManager.CatchTutorial_03) {
+			for (int i = 0; i < fourthCatchTutorialCheats.Baits.Length; i++) {
+				GameManager.Instance.CurrentBaits[fourthCatchTutorialCheats.Baits[i].BaitIndex] = fourthCatchTutorialCheats.Baits[i].BaitAmount;
+			}
+		}
+	}
+
+	#endregion
+
+
 	#region First Shop Turotial
 
 	[System.Serializable]
@@ -94,7 +119,7 @@ public class CheatManager : Singleton<CheatManager>
 	private FirstShopTutorialCheats firstShopTutorialCheats;
 
 	private void ShowFirstShopTutorialCheats() {
-		if (SceneManager.GetActiveScene().name == LevelManager.ShopTutorial_01) {
+		if (SceneManager.GetActiveScene().name == LevelManager.ShopTutorial_00) {
 			for (int i = 0; i < firstShopTutorialCheats.CaughtFish.Length; i++) {
 				foreach (var fish in firstShopTutorialCheats.CaughtFish) {
 					while (GameManager.Instance.CaughtFish.Count <= fish.FishIndex) {

@@ -34,7 +34,7 @@ public class FirstTutorialVoiceOver : VoiceOverController
 				break;
 			case LevelController.State.FishCaught:
 				if(GameManager.Instance.TotalCaughtFish == 10) {
-					SceneManager.LoadScene(LevelManager.ShopTutorial_01);
+					SceneManager.LoadScene(LevelManager.ShopTutorial_00);
 				}
 				if (AllTutorialsCompleted(this.CaughtFishTutorialsCompleted) || !GameManager.Instance.CurrentFish.IsTutorial) {
 					AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.CatchVoices[GameManager.Instance.CurrentFish.FishIndex]);
@@ -57,7 +57,7 @@ public class FirstTutorialVoiceOver : VoiceOverController
 
 				if (GameManager.Instance.CurrentFish.FishIndex == 3) {
 					GameManager.Instance.LevelController.FishView.EnableFishUI(false);
-					SceneManager.LoadScene(LevelManager.ShopTutorial_01);
+					SceneManager.LoadScene(LevelManager.ShopTutorial_00);
 				}
 				break;
 			default:

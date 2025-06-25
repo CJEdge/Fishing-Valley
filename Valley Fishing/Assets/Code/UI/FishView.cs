@@ -75,6 +75,7 @@ public class FishView : MonoBehaviour
 			return;
 		}
 		EnableFishUI(false);
+		AudioManager.Instance.SkipVoiceOver();
 		if(GameManager.Instance.LevelController.CurrentState == LevelController.State.FishCaught) {
 			GameManager.Instance.LevelController.SetState(LevelController.State.Idle);
 		}

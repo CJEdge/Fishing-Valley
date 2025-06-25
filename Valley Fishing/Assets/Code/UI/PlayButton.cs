@@ -50,10 +50,10 @@ public class PlayButton : MonoBehaviour
 				SceneManager.LoadScene(LevelManager.CatchTutorial_03);
 				break;
 			case Level.ShopTutorial_01:
-				SceneManager.LoadScene(LevelManager.ShopTutorial_01);
+				SceneManager.LoadScene(LevelManager.ShopTutorial_00);
 				break;
 			case Level.ShopTutorial_02:
-				SceneManager.LoadScene(LevelManager.ShopTutorial_02);
+				SceneManager.LoadScene(LevelManager.ShopTutorial_01);
 				break;
 			default:
 				break;

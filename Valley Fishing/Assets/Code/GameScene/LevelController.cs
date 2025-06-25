@@ -73,6 +73,11 @@ public class LevelController : AbstractState<LevelController.State> {
 		}
 	}
 
+	public Action OnFishSpawned {
+		get;
+		set;
+	}
+
 	#endregion
 
 
@@ -172,6 +177,7 @@ public class LevelController : AbstractState<LevelController.State> {
 		fishInstance.IsFailable = this.CurrentBait.Isfailable;
 		fishInstance.IsTutorial = this.CurrentBait.IsTutorial;
 		GameManager.Instance.CurrentFish = fishInstance;
+		this.OnFishSpawned?.Invoke();
 		StartCoroutine(WaitForBite());
 	}
 

@@ -50,7 +50,7 @@ public class PlayerArms : MonoBehaviour
 
 	public void Start() {
 		GameManager.Instance.InputController.OnClick += Click;
-		GameManager.Instance.InputController.StateChanged += Reel;
+		GameManager.Instance.InputController.OnStateChanged += Reel;
 	}
 
 	public void OnDestroy() {
@@ -58,7 +58,7 @@ public class PlayerArms : MonoBehaviour
 			return;
 		}
 		GameManager.Instance.InputController.OnClick -= Click;
-		GameManager.Instance.InputController.StateChanged -= Reel;
+		GameManager.Instance.InputController.OnStateChanged -= Reel;
 	}
 
 	#endregion

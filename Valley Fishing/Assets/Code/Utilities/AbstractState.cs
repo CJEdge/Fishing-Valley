@@ -25,7 +25,7 @@ public abstract class AbstractState<T> : MonoBehaviour, IState<T> where T : Enum
 
 	#region Actions
 
-	public Action StateChanged;
+	public Action OnStateChanged;
 
 	#endregion
 
@@ -68,7 +68,7 @@ public abstract class AbstractState<T> : MonoBehaviour, IState<T> where T : Enum
 			ExitState(this.CurrentState);
 			this.CurrentState = state;
 			EnterState(this.CurrentState);
-			StateChanged?.Invoke();
+			OnStateChanged?.Invoke();
 		}
 	}
 

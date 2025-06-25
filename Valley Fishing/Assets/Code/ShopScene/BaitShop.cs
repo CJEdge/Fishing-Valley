@@ -69,7 +69,7 @@ public class BaitShop : Shop {
 	protected override void EnterState(State state) {
 		switch (state) {
 			case State.Defualt:
-				AudioManager.Instance.VoiceLineOver += VoiceLineOver;
+				AudioManager.Instance.OnVoiceLineOver += VoiceLineOver;
 				break;
 			case State.Entering:
 				StartCoroutine(EnterShop(true));

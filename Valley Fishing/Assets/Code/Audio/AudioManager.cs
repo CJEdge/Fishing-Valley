@@ -51,7 +51,7 @@ public class AudioManager : Singleton<AudioManager>
 		set;
 	} = new List<EventInstance>();
 
-	public Action<EventInstance> VoiceLineOver {
+	public Action<EventInstance> OnVoiceLineOver {
 		get;
 		set;
 	}
@@ -109,7 +109,7 @@ public class AudioManager : Singleton<AudioManager>
 		this.VoiceLineEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 		this.VoiceLineEventInstance.release();
 		this.VoiceLineEventInstance.clearHandle();
-		this.VoiceLineOver?.Invoke(this.LastVoiceLineEventInstance);
+		this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventInstance);
 		StopCoroutine(WaitForVoiceLineEnd());
 	}
 
@@ -197,7 +197,7 @@ public class AudioManager : Singleton<AudioManager>
 		} while (playbackState != PLAYBACK_STATE.STOPPED);
 		this.VoiceLineEventInstance.release();
 		this.VoiceLineEventInstance.clearHandle();
-		this.VoiceLineOver?.Invoke(this.LastVoiceLineEventInstance);
+		this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventInstance);
 	}
 
 	private void PlayMusicOnSceneLoad(Scene scene, LoadSceneMode mode) {

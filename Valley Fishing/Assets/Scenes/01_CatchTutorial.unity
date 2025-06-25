@@ -424,6 +424,9 @@ MonoBehaviour:
   fishSpawnTransform: {fileID: 1296795434}
   fishView: {fileID: 723462215}
   baitView: {fileID: 1927175311}
+  leftStrafeTransform: {fileID: 0}
+  rightStrafeTransform: {fileID: 0}
+  eventSystem: {fileID: 0}
 --- !u!4 &582599907
 Transform:
   m_ObjectHideFlags: 0
@@ -646,6 +649,14 @@ PrefabInstance:
     - target: {fileID: 2536111126999484089, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: secondCatchTutorialCheats.Baits.Array.data[0].BaitAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: secondCatchTutorialCheats.Baits.Array.data[1].BaitAmount
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7393596337781405747, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: m_Name

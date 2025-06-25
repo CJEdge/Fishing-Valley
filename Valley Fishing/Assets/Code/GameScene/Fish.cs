@@ -1,5 +1,6 @@
 using FMOD.Studio;
 using FMODUnity;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,8 +30,7 @@ public class Fish : AbstractState<Fish.State>
 		set;
 	}
 
-	[SerializeField]
-	private List<ActivityLevel> activityLevels;
+	public List<ActivityLevel> ActivityLevels;
 
     public enum MovementDirection {
         none,
@@ -38,8 +38,7 @@ public class Fish : AbstractState<Fish.State>
         right
     }
 
-	[SerializeField]
-	private List<MovementDirection> movementDirections;
+	public List<MovementDirection> movementDirections;
 
 	#endregion
 
@@ -70,6 +69,9 @@ public class Fish : AbstractState<Fish.State>
 	[SerializeField]
 	private float swimAwaySpeed;
 
+	[SerializeField]
+	private float strafedSwimAwaySpeed;
+
     [SerializeField]
     private Rigidbody rb;
 
@@ -94,6 +96,12 @@ public class Fish : AbstractState<Fish.State>
 	[SerializeField]
 	private float movementChangeTime;
 
+	[SerializeField]
+	private GameObject strafeAudio;
+
+	[SerializeField]
+	private Transform lineEnd;
+
 	#endregion
 
 
@@ -105,11 +113,6 @@ public class Fish : AbstractState<Fish.State>
 	}
 
 	private bool IsCentred {
-		get;
-		set;
-	}
-
-	private bool LastIsCentred {
 		get;
 		set;
 	}
@@ -188,12 +191,29 @@ public class Fish : AbstractState<Fish.State>
 		}
 	}
 
+
+	public Transform LineEnd {
+		get {
+			return lineEnd;
+		}
+	}
+
 	public bool IsFailable {
 		get;
 		set;
 	}
 
 	public bool IsTutorial {
+		get;
+		set;
+	}
+
+	public Action<MovementDirection> Strafe {
+		get;
+		set;
+	}
+
+	public RodLineComponent RodLineComponent {
 		get;
 		set;
 	}
@@ -243,8 +263,8 @@ public class Fish : AbstractState<Fish.State>
 	#region Public Methods
 
 	public void Initialize() {
-		float activityLevelInterval = (reelStart - reelEnd) / activityLevels.Count;
-		for (int i = 0; i < activityLevels.Count; i++) {
+		float activityLevelInterval = (reelStart - reelEnd) / this.ActivityLevels.Count;
+		for (int i = 0; i < this.ActivityLevels.Count; i++) {
 			this.ActivityLevelIntervals.Add(reelStart - (i * activityLevelInterval));
 		}
 		float movementInterval = (reelStart - reelEnd) / movementDirections.Count;
@@ -256,7 +276,7 @@ public class Fish : AbstractState<Fish.State>
 			this.MovementIntervals.Add(reelStart - (i * movementInterval));
 		}
 		this.IsStrafer = isStrafer;
-		SetActivityLevel(activityLevels[0]);
+		SetActivityLevel(this.ActivityLevels[0]);
 		SetState(State.OnHook);
 	}
 
@@ -289,49 +309,45 @@ public class Fish : AbstractState<Fish.State>
             case ActivityLevel.none:
                 break;
             case ActivityLevel.calm:
-				if (this.InputController.CurrentState == InputController.State.CalmReeling && this.IsCentred) {
-					VibrationManager.Instance.SetVibrationFrequency(true, DistanceAsPercentage(), Mathf.Infinity);
-					VibrationManager.Instance.SetVibrationFrequency(false, 0, Mathf.Infinity);
-					rb.AddForce(0, 0, -reelSpeed);
-				} else {
-					IncreaseFailTime();
-					VibrationManager.Instance.SetVibrationFrequency(false, (1/DistanceAsPercentage())/2, Mathf.Infinity);
-					VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);
-					rb.AddForce(0, 0, swimAwaySpeed);
-				}
+				ReelingSuccesfully(this.InputController.CurrentState == InputController.State.CalmReeling);
 				break;
             case ActivityLevel.medium:
-				if (this.InputController.CurrentState == InputController.State.NormalReeling && this.IsCentred) {
-					VibrationManager.Instance.SetVibrationFrequency(true, DistanceAsPercentage(), Mathf.Infinity);
-					VibrationManager.Instance.SetVibrationFrequency(false, 0, Mathf.Infinity);
-					rb.AddForce(0, 0, -reelSpeed);
-				} else {
-					IncreaseFailTime();
-					VibrationManager.Instance.SetVibrationFrequency(false, (1 / DistanceAsPercentage()) / 2, Mathf.Infinity);
-					VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);
-					rb.AddForce(0, 0, swimAwaySpeed);
-				}
+				ReelingSuccesfully(this.InputController.CurrentState == InputController.State.NormalReeling);
 				break;
             case ActivityLevel.active:
-				if (this.InputController.CurrentState == InputController.State.FastReeling && this.IsCentred) {
-					VibrationManager.Instance.SetVibrationFrequency(true, DistanceAsPercentage(), Mathf.Infinity);
-					VibrationManager.Instance.SetVibrationFrequency(false, 0, Mathf.Infinity);
-					rb.AddForce(0, 0, -reelSpeed);
-				} else {
-					IncreaseFailTime();
-					VibrationManager.Instance.SetVibrationFrequency(false, (1 / DistanceAsPercentage()) / 2, Mathf.Infinity);
-					VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);
-					rb.AddForce(0, 0, swimAwaySpeed);
-				}
+				ReelingSuccesfully(this.InputController.CurrentState == InputController.State.FastReeling);
 				break;
         }
     }
 
+	private void ReelingSuccesfully(bool reelingSuccesfully) {
+		this.RodLineComponent.IsStraight = reelingSuccesfully;
+		if (reelingSuccesfully) {
+			this.RodLineComponent.CurveAmount = Mathf.MoveTowards(this.RodLineComponent.CurveAmount, 0f, Time.deltaTime);
+			if (!this.IsCentred) {
+				return;
+			}
+			VibrationManager.Instance.SetVibrationFrequency(true, DistanceAsPercentage(), Mathf.Infinity);
+			VibrationManager.Instance.SetVibrationFrequency(false, 0, Mathf.Infinity);
+			rb.AddForce(0, 0, -reelSpeed);
+		} else {
+			this.RodLineComponent.CurveAmount = Mathf.MoveTowards(this.RodLineComponent.CurveAmount, 1, Time.deltaTime);
+			IncreaseFailTime();
+			VibrationManager.Instance.SetVibrationFrequency(false, (1 / DistanceAsPercentage()) / 2, Mathf.Infinity);
+			VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);
+			if (this.IsCentred) {
+				rb.AddForce(0, 0, swimAwaySpeed);
+			} else {
+				rb.AddForce(0, 0, strafedSwimAwaySpeed);
+			}
+		}
+	}
+
 	private void ChangeActivityLevels() {
 		for (int i = this.ActivityLevelIntervals.Count - 1; i >= 0; i--) {
 			if (transform.position.z < (this.ActivityLevelIntervals[i])) {
-				if (this.CurrentActivityLevel != activityLevels[i]) {
-					SetActivityLevel(activityLevels[i]);
+				if (this.CurrentActivityLevel != ActivityLevels[i]) {
+					SetActivityLevel(ActivityLevels[i]);
 					if (i != 0) {
 						this.ActivityLevelChanging = true;
 					}
@@ -376,11 +392,9 @@ public class Fish : AbstractState<Fish.State>
 		} else {
 			this.IsCentred = false;
 		}
-		if (this.IsCentred != this.LastIsCentred && !this.IsCentred) {
+		if(strafeAudio.activeSelf == this.IsCentred) {
+			strafeAudio.SetActive(!this.IsCentred);
 		}
-		if (this.IsCentred) {
-		}
-		this.LastIsCentred = this.IsCentred;
 	}
 
 	private void IncreaseFailTime() {
@@ -431,9 +445,11 @@ public class Fish : AbstractState<Fish.State>
 			case MovementDirection.none:
 				break;
 			case MovementDirection.left:
+				Strafe?.Invoke(movementDirection);
 				transform.position = new Vector3(GameManager.Instance.LevelController.LeftStrafeTransform.position.x,transform.position.y,transform.position.z);
 				break;
 			case MovementDirection.right:
+				Strafe?.Invoke(movementDirection);
 				transform.position = new Vector3(GameManager.Instance.LevelController.RightStrafeTransform.position.x, transform.position.y, transform.position.z);
 				break;
 			default:

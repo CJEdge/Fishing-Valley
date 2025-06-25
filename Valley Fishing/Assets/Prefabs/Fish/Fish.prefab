@@ -4975,6 +4975,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8531579837912319491}
+  - {fileID: 5972517356931033480}
   m_Father: {fileID: 2899971684537990183}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &797123351826058658
@@ -5180,8 +5181,72 @@ Transform:
   m_Children:
   - {fileID: 6925135540364191823}
   - {fileID: 8157927790949860280}
+  - {fileID: 5132849399768412513}
   m_Father: {fileID: 2899971684537990183}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2211003099072869323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5972517356931033480}
+  - component: {fileID: 1445562685680736827}
+  m_Layer: 0
+  m_Name: StrafeSplash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &5972517356931033480
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2211003099072869323}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6983712407460286837}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1445562685680736827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2211003099072869323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 78199899
+      Data2: 1158532160
+      Data3: 1302710919
+      Data4: -802973126
+    Path: event:/SFX/LevelSFX/StrafeSplash
+  Event: 
+  EventPlayTrigger: 11
+  EventStopTrigger: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 50
+  OverrideMaxDistance: 200
 --- !u!1 &2585739966151606858
 GameObject:
   m_ObjectHideFlags: 0
@@ -5498,16 +5563,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <CurrentState>k__BackingField: 0
   <CurrentActivityLevel>k__BackingField: 0
-  activityLevels: 00000000
+  ActivityLevels: 
   movementDirections: 00000000
-  movementDirection: 0
   fishName: 
   fishIndex: 0
   sellPrice: 0
+  failable: 0
   fishSpeed: 2
   centreThreshold: 30
-  reelSpeed: 200
+  reelSpeed: 100
   swimAwaySpeed: 100
+  strafedSwimAwaySpeed: 30
   rb: {fileID: 6682323996151832369}
   visuals: {fileID: 1885243994461742159}
   activityParticles:
@@ -5519,6 +5585,9 @@ MonoBehaviour:
   reelEnd: 16
   activityLevelChangeTime: 2
   movementChangeTime: 0
+  strafeAudio: {fileID: 2211003099072869323}
+  lineEnd: {fileID: 5132849399768412513}
+  <MovementIntervalsCompleted>k__BackingField: 0
 --- !u!54 &6682323996151832369
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10944,6 +11013,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &5733076471250416927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5132849399768412513}
+  m_Layer: 0
+  m_Name: LineEnd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5132849399768412513
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5733076471250416927}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.33, y: 2.73, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8822152152654779974}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5836786355868156678
 GameObject:
   m_ObjectHideFlags: 0

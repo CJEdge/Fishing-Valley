@@ -43,9 +43,15 @@ public class VoiceOverController : MonoBehaviour
 
 	#region Properties
 
-	protected LevelController LevelController {
+	public LevelController LevelController {
 		get {
 			return GameManager.Instance.LevelController;
+		}
+	}
+
+	public Fish CurrentFish {
+		get {
+			return GameManager.Instance.CurrentFish;
 		}
 	}
 
@@ -55,8 +61,9 @@ public class VoiceOverController : MonoBehaviour
 	#region Mono Behaviours
 
 	public void Start() {
-		this.LevelController.StateChanged += LevelStateChanged;
-		AudioManager.Instance.VoiceLineOver += VoiceOverFinished;
+		this.LevelController.OnStateChanged += LevelStateChanged;
+		this.LevelController.OnFishSpawned += FishSpawned;
+		AudioManager.Instance.OnVoiceLineOver += VoiceOverFinished;
 		this.AttatchBaitTutorialsCompleted = new bool[applyBaitTutorials.Length];
 		this.CastRodTutorialsCompleted = new bool[castRodTutorials.Length];
 		this.ReelTutorialsCompleted = new bool[reelTutorials.Length];
@@ -68,8 +75,10 @@ public class VoiceOverController : MonoBehaviour
 		if(this.LevelController == null) {
 			return;
 		}
-		this.LevelController.StateChanged -= LevelStateChanged;
-		AudioManager.Instance.VoiceLineOver -= VoiceOverFinished;
+		this.LevelController.OnStateChanged -= LevelStateChanged;
+		this.LevelController.OnFishSpawned += FishSpawned;
+		AudioManager.Instance.OnVoiceLineOver -= VoiceOverFinished;
+		this.CurrentFish.Strafe -= FishStrafed;
 	}
 
 	#endregion
@@ -103,6 +112,8 @@ public class VoiceOverController : MonoBehaviour
 				IncrementTutorial(this.CastRodTutorialsCompleted);
 				break;
 			case LevelController.State.ReelingFish:
+				this.CurrentFish.Strafe -= FishStrafed;
+				this.CurrentFish.Strafe += FishStrafed;
 				if (AllTutorialsCompleted(this.ReelTutorialsCompleted)) {
 					return false;
 				}
@@ -166,6 +177,14 @@ public class VoiceOverController : MonoBehaviour
 			default:
 				break;
 		}
+	}
+
+	public virtual void FishStrafed(Fish.MovementDirection movementDirection) {
+
+	}
+
+	public virtual void FishSpawned() {
+
 	}
 
 	#endregion
