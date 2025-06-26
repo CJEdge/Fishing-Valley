@@ -24,6 +24,7 @@ public class ShopController : AbstractState<ShopController.State>
 			return shoreMenu;
 		}
 	}
+	
 
 	#endregion
 

@@ -1,9 +1,21 @@
+using FMOD.Studio;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Shore : MonoBehaviour
 {
+	#region Levels
+
+	public enum LevelToLoad {
+		CatchTutorial_00,
+		CatchTutorial_01,
+		CatchTutorial_02,
+		CatchTutorial_03,
+	}
+
+	#endregion
+
 
 	#region Serialized Fields
 
@@ -11,13 +23,13 @@ public class Shore : MonoBehaviour
 	private int lastShopIndex = -1;
 
 	[SerializeField]
-	private GameObject[] shopButtons;
+	protected GameObject[] shopButtons;
 
 	[SerializeField]
 	private GameObject shoreMenuObject;
 
 	[SerializeField]
-	private EventSystem eventSystem;
+	protected EventSystem eventSystem;
 
 	#endregion
 
@@ -30,20 +42,21 @@ public class Shore : MonoBehaviour
 		set;
 	} = new List<bool>();
 
+	[field: SerializeField]
 	public bool AllShopsFinished {
 		get;
 		set;
 	}
 
-	#endregion
+	public int CurrentButtonIndex {
+		get;
+		set;
+	}
 
-
-	#region Mono Behaviours
-
-	public void Awake() {
-		for (int i = 0; i < shopButtons.Length -1; i++) {
-			this.FinishedInShops.Add(false);
-		}
+	[field: SerializeField]
+	public int TimesSkipped {
+		get;
+		set;
 	}
 
 	#endregion
@@ -52,15 +65,23 @@ public class Shore : MonoBehaviour
 	#region Public Methods
 
 	public virtual void Initialize() {
+		if(this.FinishedInShops.Count == 0) {
+			for (int i = 0; i < shopButtons.Length - 1; i++) {
+				this.FinishedInShops.Add(false);
+			}
+			AudioManager.Instance.OnVoiceLineOver += VoiceOverSkipped;
+		}
+
+		bool allShopsFinished = true;
 		for (int i = 0; i < this.FinishedInShops.Count; i++) {
 			if (!this.FinishedInShops[i]) {
-				this.AllShopsFinished = false;
+				allShopsFinished = false;
 				break;
 			}
 		}
-		this.AllShopsFinished = true;
-		shoreMenuObject.SetActive(true);		
-		eventSystem.SetSelectedGameObject(shopButtons[lastShopIndex + 1]);
+		this.AllShopsFinished = allShopsFinished;
+		this.TimesSkipped = 0;
+		shoreMenuObject.SetActive(true);
 	}
 
 	public void EnterBaitShop() {
@@ -71,6 +92,21 @@ public class Shore : MonoBehaviour
 	public void FinishedInShop(Shop shopType) {
 		if(shopType is BaitShop) {
 			this.FinishedInShops[0] = true;
+		}
+	}
+
+	public virtual void ButtonSelected(int buttonIndex) {
+		this.CurrentButtonIndex = buttonIndex;
+	}
+
+	public virtual void VoiceOverSkipped(EventInstance eventInstance) {
+		if (!gameObject.activeInHierarchy) {
+			return;
+		}
+		if (this.TimesSkipped == 0) {
+			this.TimesSkipped = 1;
+		} else if (this.TimesSkipped == 1) {
+			this.TimesSkipped = 0;
 		}
 	}
 

@@ -126,32 +126,6 @@ public class LevelController : AbstractState<LevelController.State> {
 	#endregion
 
 
-	#region Public Methods
-
-	public void Skip() {
-		switch (this.CurrentState) {
-			case State.Default:
-				break;
-			case State.Cutscene:
-				break;
-			case State.Idle:
-				break;
-			case State.AttatchBait:
-				break;
-			case State.IdleWithBait:
-				break;
-			case State.WaitingForBite:
-				break;
-			case State.ReelingFish:
-				break;
-			case State.FishCaught:
-				break;
-		}
-	}
-
-	#endregion
-
-
 	#region Private Methods
 
 	private IEnumerator WaitForBite() {
