@@ -1227,7 +1227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1456574075976184987, guid: e861a55927367024c88a1bdf2ab72c41, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1937106899334370470, guid: e861a55927367024c88a1bdf2ab72c41, type: 3}
       propertyPath: m_Name
@@ -2068,6 +2068,7 @@ MonoBehaviour:
   eventSystem: {fileID: 1395612272}
   <FinishedInShops>k__BackingField: 
   <AllShopsFinished>k__BackingField: 0
+  <TimesSkipped>k__BackingField: 0
 --- !u!1 &1819454898
 GameObject:
   m_ObjectHideFlags: 0
@@ -2405,6 +2406,10 @@ PrefabInstance:
     - target: {fileID: 1456574075976184987, guid: e861a55927367024c88a1bdf2ab72c41, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: FisrstTutorialBaitShop, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456574075976184987, guid: e861a55927367024c88a1bdf2ab72c41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1937106899334370470, guid: e861a55927367024c88a1bdf2ab72c41, type: 3}
       propertyPath: m_Name

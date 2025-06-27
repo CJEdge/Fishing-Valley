@@ -61,13 +61,13 @@ public class BaitView : MonoBehaviour
 					baitButtons[i].gameObject.SetActive(true);
 					if (!firstButtonSelected) {
 						StartCoroutine(SelectButtonAfterOneFrame(baitButtons[i].gameObject));
-						eventSystem.SetSelectedGameObject(baitButtons[i].gameObject);
+						GameManager.Instance.InputController.SelectButton(baitButtons[i].gameObject);
 						firstButtonSelected = true;
 					}
 				}
 			}
 		}
-		eventSystem.SetSelectedGameObject(baitButtons[0].gameObject);
+		GameManager.Instance.InputController.SelectButton(baitButtons[0].gameObject);
 		AudioManager.Instance.PlayBaitSound(false, 0);
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.BaitBoxOpen);
 		StartCoroutine(WaitToOpenBaitBox());
@@ -92,7 +92,7 @@ public class BaitView : MonoBehaviour
 
 	private IEnumerator SelectButtonAfterOneFrame(GameObject button) {
 		yield return new WaitForEndOfFrame();
-		eventSystem.SetSelectedGameObject(button);
+		GameManager.Instance.InputController.SelectButton(button);
 	}
 
 	private IEnumerator WaitToOpenBaitBox() {

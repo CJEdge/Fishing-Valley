@@ -26,7 +26,7 @@ public class Shore : MonoBehaviour
 	protected GameObject[] shopButtons;
 
 	[SerializeField]
-	private GameObject shoreMenuObject;
+	protected GameObject shoreMenuObject;
 
 	[SerializeField]
 	protected EventSystem eventSystem;
@@ -99,7 +99,7 @@ public class Shore : MonoBehaviour
 		this.CurrentButtonIndex = buttonIndex;
 	}
 
-	public virtual void VoiceOverSkipped(EventInstance eventInstance) {
+	public virtual void VoiceOverSkipped(EventInstance eventInstance, bool skipped) {
 		if (!gameObject.activeInHierarchy) {
 			return;
 		}

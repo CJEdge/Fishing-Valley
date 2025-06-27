@@ -21,7 +21,7 @@ public static class InputTracker {
 			if (LastInputWasMouse) {
 				LastInputWasMouse = false;
 				if (GameManager.Instance.LastSelectedButton != null) {
-					GameManager.Instance.EventSystem.SetSelectedGameObject(GameManager.Instance.LastSelectedButton);
+					GameManager.Instance.InputController.SelectButton(GameManager.Instance.LastSelectedButton);
 				}
 			}
 			LastInputWasMouse = false;
@@ -37,9 +37,9 @@ public static class InputTracker {
 		} else if (device is Gamepad) {
 			if (LastInputWasMouse) {
 				LastInputWasMouse = false;
-				if (GameManager.Instance.LastSelectedButton != null) 
-					GameManager.Instance.EventSystem.SetSelectedGameObject(GameManager.Instance.LastSelectedButton);
-				}
+				if (GameManager.Instance.LastSelectedButton != null)
+					GameManager.Instance.InputController.SelectButton(GameManager.Instance.LastSelectedButton);
+			}
 			}
 		LastInputWasMouse = false;
 	}

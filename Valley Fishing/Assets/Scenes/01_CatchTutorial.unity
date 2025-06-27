@@ -426,7 +426,7 @@ MonoBehaviour:
   baitView: {fileID: 1927175311}
   leftStrafeTransform: {fileID: 0}
   rightStrafeTransform: {fileID: 0}
-  eventSystem: {fileID: 0}
+  eventSystem: {fileID: 1015315668}
 --- !u!4 &582599907
 Transform:
   m_ObjectHideFlags: 0

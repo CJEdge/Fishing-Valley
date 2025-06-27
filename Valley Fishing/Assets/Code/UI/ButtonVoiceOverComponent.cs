@@ -36,6 +36,10 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 	}
 
 	public void OnSelect(BaseEventData eventData) {
+		if (GameManager.Instance.InputController.SelectionManuallySet) {
+			GameManager.Instance.InputController.SelectionManuallySet = false;
+			return;
+		}
 		GameManager.Instance.LastSelectedButton = gameObject;
 		if (InputTracker.LastInputWasMouse) {
 			return;
@@ -61,6 +65,7 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitIntros[0]);
 				break;
 			case ButtonType.RareBait:
+				Debug.Log("here");
 				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitIntros[1]);
 				break;
 			default:

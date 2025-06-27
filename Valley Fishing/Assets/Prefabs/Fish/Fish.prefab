@@ -5570,7 +5570,7 @@ MonoBehaviour:
   sellPrice: 0
   failable: 0
   fishSpeed: 2
-  centreThreshold: 30
+  centreThreshold: 20
   reelSpeed: 100
   swimAwaySpeed: 100
   strafedSwimAwaySpeed: 30

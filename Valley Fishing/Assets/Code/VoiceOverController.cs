@@ -166,7 +166,7 @@ public class VoiceOverController : MonoBehaviour
 		}
 	}
 
-	public virtual void VoiceOverFinished(EventInstance finishedEvent) {
+	public virtual void VoiceOverFinished(EventInstance eventInstance, bool skipped) {
 		switch (this.LevelController.CurrentState) {
 			case LevelController.State.Cutscene:
 				LevelController.SetState(LevelController.State.Idle);

@@ -1,5 +1,8 @@
 using FMOD.Studio;
+using FMODUnity;
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -34,10 +37,10 @@ public class BaitShop : Shop {
 	private GameObject sellButton;
 
 	[SerializeField]
-	private GameObject initialBaitButton;
+	protected GameObject initialBaitButton;
 
 	[SerializeField]
-	private EventSystem eventSystem;
+	protected EventSystem eventSystem;
 
 	[SerializeField]
 	private int[] baitQuantities;
@@ -61,6 +64,21 @@ public class BaitShop : Shop {
 		set;
 	}
 
+	public Coroutine RunEnterShop {
+		get;
+		set;
+	}
+
+	public List<EventReference> CurrentVoiceOverChain {
+		get;
+		set;
+	} = new List<EventReference>();
+
+	public int ChainVoiceOverPosition {
+		get;
+		set;
+	}
+
 	#endregion
 
 
@@ -72,10 +90,10 @@ public class BaitShop : Shop {
 				AudioManager.Instance.OnVoiceLineOver += VoiceLineOver;
 				break;
 			case State.Entering:
-				StartCoroutine(EnterShop(true));
+				this.RunEnterShop = StartCoroutine(EnterShop(true));
 				break;
 			case State.Trading:
-				eventSystem.SetSelectedGameObject(sellButton);
+				GameManager.Instance.InputController.SelectButton(sellButton);
 				break;
 			case State.Leaving:
 				break;
@@ -89,11 +107,18 @@ public class BaitShop : Shop {
 
 	#region Private Methods
 
-	public override void VoiceLineOver(EventInstance eventInstance) {
-		switch (this.CurrentState) {
+	public override void VoiceLineOver(EventInstance eventInstance, bool skipped) {
+		if (skipped) {
+			VoiceOverChainFinished();
+		}
+		if (this.ChainVoiceOverPosition == this.CurrentVoiceOverChain.Count) {
+			VoiceOverChainFinished();
+		}
+			switch (this.CurrentState) {
 			case State.Defualt:
 				break;
 			case State.Entering:
+				StopCoroutine(this.RunEnterShop);
 				SetState(State.Trading);
 				break;
 			case State.Trading:
@@ -140,18 +165,17 @@ public class BaitShop : Shop {
 	}
 
 	public void LeaveBaitShop() {
-		StartCoroutine(EnterShop(false));
+		Debug.Log(AudioManager.Instance.VoiceLineInProgress);
+		if (AudioManager.Instance.VoiceLineInProgress) {
+			return;
+		}
+		this.RunEnterShop = StartCoroutine(EnterShop(false));
 	}
 
 	#endregion
 
 
 	#region Private Methods
-
-	public IEnumerator WaitOneFrameThenChangeSellState(TutorialState state) {
-		yield return new WaitForEndOfFrame();
-		tutorialState = state;
-	}
 
 	public virtual IEnumerator EnterShop(bool enter) {
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.ShopEnter);
@@ -161,6 +185,20 @@ public class BaitShop : Shop {
 			GameManager.Instance.ShopController.ShoreMenu.FinishedInShop(this);
 			GameManager.Instance.ShopController.SetState(ShopController.State.Shore);
 		}
+	}
+
+	public virtual void PlayVoiceOverChain() {
+		AudioManager.Instance.PlayVoiceOver(this.CurrentVoiceOverChain[this.ChainVoiceOverPosition]);
+		this.ChainVoiceOverPosition++;
+	}
+
+	public virtual void VoiceOverChainFinished() {
+		this.CurrentVoiceOverChain.Clear();
+	}
+
+	public virtual IEnumerator WaitOneFrame(Action callback) {
+		yield return new WaitForEndOfFrame();
+		callback?.Invoke();
 	}
 
 	#endregion

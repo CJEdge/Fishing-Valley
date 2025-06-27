@@ -725,7 +725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <CurrentState>k__BackingField: 0
-  clickVibration: {x: 0, y: 0}
+  clickVibration: {x: 0.06, y: 0.01}
   playerInput: {fileID: 678207496438668995}
   blurObject: {fileID: 0}
   blackObject: {fileID: 0}
@@ -733,7 +733,7 @@ MonoBehaviour:
   rodLineComponent: {fileID: 0}
   mouse:
     reelStateThresholds:
-    - 4
+    - 8
     - 40
     reelResetRate: 0.01
     maxReelRate: 50
@@ -742,11 +742,11 @@ MonoBehaviour:
     <ReelInput>k__BackingField: 0
   controller:
     reelStateThresholds:
-    - 0.2
+    - 0.1
     - 1.8
-    reelResetRate: 0.5
+    reelResetRate: 0.7
     maxReelRate: 3
-    completeReelResetTime: 0.7
+    completeReelResetTime: 0.9
     horizontalSpeed: 200
     <ReelInput>k__BackingField: 0
 --- !u!114 &8858956207034941920

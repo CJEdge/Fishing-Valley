@@ -57,6 +57,7 @@ public class GameManager : Singleton<GameManager> {
 		}
 	}
 
+	[field: SerializeField]
 	public List<int> CurrentBaits {
 		get;
 		set;

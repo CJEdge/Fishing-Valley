@@ -163,6 +163,11 @@ public class InputController : AbstractState<InputController.State> {
 		set;
 	}
 
+	public bool SelectionManuallySet {
+		get;
+		set;
+	}
+
 	public Vector2 HorizontalInput {
 		get;
 		set;
@@ -283,6 +288,11 @@ public class InputController : AbstractState<InputController.State> {
 		VibrationManager.Instance.SetVibrationFrequency(true, clickVibration.x, clickVibration.y);
 		AudioManager.Instance.SkipVoiceOver();
 		OnSkip?.Invoke();
+	}
+
+	public void SelectButton(GameObject button) {
+		this.SelectionManuallySet = true;
+		GameManager.Instance.EventSystem.SetSelectedGameObject(button);
 	}
 
 	#endregion

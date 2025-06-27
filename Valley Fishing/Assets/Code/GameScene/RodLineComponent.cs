@@ -42,7 +42,6 @@ public class RodLineComponent : MonoBehaviour
 		GameManager.Instance.LevelController.OnFishSpawned -= AssignToFish;
 		GameManager.Instance.LevelController.OnFishSpawned += AssignToFish;
 		lineRenderer.positionCount = segmentCount;
-		GameManager.Instance.CurrentFish.RodLineComponent = this;
 	}
 
 	public void OnDestroy() {

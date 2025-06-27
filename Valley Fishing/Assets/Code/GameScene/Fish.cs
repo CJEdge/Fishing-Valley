@@ -371,9 +371,11 @@ public class Fish : AbstractState<Fish.State>
 				if (this.MovementIntervalsCompleted > i) {
 					break;
 				}
-				SetStrafePosition(movementDirections[i]);
+				if(movementDirections[i] != MovementDirection.none) {
+					SetStrafePosition(movementDirections[i]);
+					this.MovementDirectionChanging = true;
+				}
 				this.MovementIntervalsCompleted++;
-				this.MovementDirectionChanging = true;
 			}
 		}
 		if (this.MovementDirectionChanging) {

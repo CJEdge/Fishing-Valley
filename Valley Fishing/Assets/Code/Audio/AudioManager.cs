@@ -51,7 +51,12 @@ public class AudioManager : Singleton<AudioManager>
 		set;
 	} = new List<EventInstance>();
 
-	public Action<EventInstance> OnVoiceLineOver {
+	public Action<EventInstance,bool> OnVoiceLineOver {
+		get;
+		set;
+	}
+
+	public bool VoiceLineInProgress {
 		get;
 		set;
 	}
@@ -102,6 +107,7 @@ public class AudioManager : Singleton<AudioManager>
 		this.LastVoiceLineEventInstance = this.VoiceLineEventInstance;
 		this.VoiceLineEventInstance.setParameterByName("Language", PlayerPrefsManager.Load(PlayerPrefsManager.Language));
 		this.VoiceLineEventInstance.start();
+		this.VoiceLineInProgress = true;
 		StartCoroutine(WaitForVoiceLineEnd());
 	}
 
@@ -109,7 +115,7 @@ public class AudioManager : Singleton<AudioManager>
 		this.VoiceLineEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 		this.VoiceLineEventInstance.release();
 		this.VoiceLineEventInstance.clearHandle();
-		this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventInstance);
+		this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventInstance,true);
 		StopCoroutine(WaitForVoiceLineEnd());
 	}
 
@@ -192,12 +198,14 @@ public class AudioManager : Singleton<AudioManager>
 				this.VoiceLineEventInstance.getPlaybackState(out playbackState);
 				yield return null;
 			} else {
+				this.VoiceLineInProgress = false;
 				yield break;
 			}
 		} while (playbackState != PLAYBACK_STATE.STOPPED);
 		this.VoiceLineEventInstance.release();
 		this.VoiceLineEventInstance.clearHandle();
-		this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventInstance);
+		this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventInstance,false);
+		this.VoiceLineInProgress = false;
 	}
 
 	private void PlayMusicOnSceneLoad(Scene scene, LoadSceneMode mode) {

@@ -14,7 +14,6 @@ public class FirstShoreTutorial : Shore
 			}
 			AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.ShoreIntros[0]);
 		} else {
-			Debug.Log("init");
 			AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.LeaveShorePrompts[0]);
 			for (int i = 0; i < shopButtons.Length; i++) {
 				if (i == 0 || i == shopButtons.Length - 1) {
@@ -24,17 +23,23 @@ public class FirstShoreTutorial : Shore
 		}
 	}
 
-	public override void VoiceOverSkipped(EventInstance eventInstance) {
-		base.VoiceOverSkipped(eventInstance);
+	public override void VoiceOverSkipped(EventInstance eventInstance, bool skipped) {
+		if(shoreMenuObject == null) {
+			return;
+		}
+		if (!shoreMenuObject.activeInHierarchy) {
+			return;
+		}
+		base.VoiceOverSkipped(eventInstance,skipped);
 		if(this.TimesSkipped == 0) { 
 			if (this.AllShopsFinished) {
 				SceneManager.LoadScene(LevelManager.CatchTutorial_01);
 			}
 		} else {
 			if (!this.AllShopsFinished) {
-				eventSystem.SetSelectedGameObject(shopButtons[this.CurrentButtonIndex]);
+				GameManager.Instance.InputController.SelectButton(shopButtons[this.CurrentButtonIndex]);
 			} else {
-				eventSystem.SetSelectedGameObject(shopButtons[shopButtons.Length - 1]);
+				GameManager.Instance.InputController.SelectButton(shopButtons[shopButtons.Length - 1]);
 			}
 		}
 	}

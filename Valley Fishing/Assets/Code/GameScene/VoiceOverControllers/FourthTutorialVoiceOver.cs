@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class FourthTutorialVoiceOver : VoiceOverController
 {
-	public override void VoiceOverFinished(EventInstance finishedEvent) {
-		base.VoiceOverFinished(finishedEvent);
+	public override void VoiceOverFinished(EventInstance eventInstance, bool skipped) {
+		base.VoiceOverFinished(eventInstance, skipped);
 		switch (this.LevelController.CurrentState) {
 			case LevelController.State.FishCaught:
 				if (GameManager.Instance.TotalBaitsLeft == 0) {

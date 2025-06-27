@@ -28,19 +28,19 @@ public class MainMenuController : MonoBehaviour
     {
 		GameManager.Instance.MainMenuController = this;
 		GameManager.Instance.EventSystem = eventSystem;
-		eventSystem.SetSelectedGameObject(initialMenuButton);
+		GameManager.Instance.InputController.SelectButton(initialMenuButton);
 		AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.MenuGreeting);
     }
 
 	public void EnterMainMenu() {
 		mainMenuObject.SetActive(true);
 		settingsMenuObject.SetActive(false);
-		eventSystem.SetSelectedGameObject(initialMenuButton);
+		GameManager.Instance.InputController.SelectButton(initialMenuButton);
 	}
 
 	public void EnterSettingsMenu() {
 		mainMenuObject.SetActive(false);
 		settingsMenuObject.SetActive(true);
-		eventSystem.SetSelectedGameObject(initialSettingsMenuButton);
+		GameManager.Instance.InputController.SelectButton(initialSettingsMenuButton);
 	}
 }
