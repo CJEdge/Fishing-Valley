@@ -295,6 +295,12 @@ public class InputController : AbstractState<InputController.State> {
 		GameManager.Instance.EventSystem.SetSelectedGameObject(button);
 	}
 
+	public void ResetReelInput() {
+		for (int i = 0; i < this.InputTypes.Count; i++) {
+			this.InputTypes[i].ReelInput = 0;
+		}
+	}
+
 	#endregion
 
 

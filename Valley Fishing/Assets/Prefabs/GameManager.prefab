@@ -62,6 +62,7 @@ MonoBehaviour:
   - {fileID: 2527023402062999775, guid: 4cd3dc4e28e39004e93a031fb18c6e0d, type: 3}
   - {fileID: 2527023402062999775, guid: 4a0d91e17fddd2b4b8ba2da45ad40849, type: 3}
   - {fileID: 2527023402062999775, guid: 2454385763472fc41832f0d8e90dccac, type: 3}
+  - {fileID: 2527023402062999775, guid: d41ca6726843f6c44b624fdf0ff23f80, type: 3}
   baits:
   - {fileID: 1264329977150585429, guid: c070571afa0583f429615349cd46c82c, type: 3}
   - {fileID: 2644793683023306607, guid: deaf0af42497b3a49b1c60dfeb125c58, type: 3}
@@ -71,8 +72,10 @@ MonoBehaviour:
   - {fileID: 7778841989186564110, guid: 142a9d4d143554a4b86112aad1f3a274, type: 3}
   - {fileID: 5679352621735612818, guid: 3c0861e58491f484199c895cf2758efb, type: 3}
   - {fileID: 5679352621735612818, guid: 22785c3d167a5f3408b4ddbf8e1444e2, type: 3}
+  - {fileID: 5679352621735612818, guid: 8ad5d209cb18e9a43bb4b94d63fcc74f, type: 3}
   <EventSystem>k__BackingField: {fileID: 0}
   LastSelectedButton: {fileID: 0}
+  <CurrentBaits>k__BackingField: 
   <CaughtFish>k__BackingField: 
   <Money>k__BackingField: 0
 --- !u!114 &1583213601024685545
@@ -374,7 +377,31 @@ MonoBehaviour:
       Data3: -754223217
       Data4: -75916562
     Path: event:/SFX/BaitIdle
+  - Guid:
+      Data1: -1751036424
+      Data2: 1219677751
+      Data3: -754223217
+      Data4: -75916562
+    Path: event:/SFX/BaitIdle
+  - Guid:
+      Data1: -1751036424
+      Data2: 1219677751
+      Data3: -754223217
+      Data4: -75916562
+    Path: event:/SFX/BaitIdle
   AttatchBaitSounds:
+  - Guid:
+      Data1: -1561571289
+      Data2: 1177583210
+      Data3: -336593267
+      Data4: 1816793257
+    Path: event:/SFX/AttatchBait
+  - Guid:
+      Data1: -1561571289
+      Data2: 1177583210
+      Data3: -336593267
+      Data4: 1816793257
+    Path: event:/SFX/AttatchBait
   - Guid:
       Data1: -1561571289
       Data2: 1177583210
@@ -488,6 +515,10 @@ MonoBehaviour:
       FishAmount: 3
     - FishIndex: 3
       FishAmount: 1
+  firstBossTutorialCheats:
+    Baits:
+    - BaitIndex: 8
+      BaitAmount: 1
 --- !u!114 &2564529053801086033
 MonoBehaviour:
   m_ObjectHideFlags: 0

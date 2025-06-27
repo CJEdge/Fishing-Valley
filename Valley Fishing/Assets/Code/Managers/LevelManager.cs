@@ -11,4 +11,5 @@ public class LevelManager
 	public const string ShopTutorial_01 = "01_ShopTutorial";
 	public const string ShopTutorial_02 = "02_ShopTutorial";
 	public const string ShopTutorial_03 = "03_ShopTutorial";
+	public const string BossTutorial_00 = "04_FirstBoss";
 }

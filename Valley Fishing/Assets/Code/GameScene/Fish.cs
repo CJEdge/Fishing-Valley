@@ -421,6 +421,7 @@ public class Fish : AbstractState<Fish.State>
 		for (int i = 0; i < activityParticles.Length; i++) {
 			activityParticles[i].SetActive(false);
 		}
+		GameManager.Instance.InputController.ResetReelInput();
 		switch (CurrentActivityLevel) {
 			case ActivityLevel.none:
 				AudioManager.Instance.PlayFishActivitySound(this, 0, true);

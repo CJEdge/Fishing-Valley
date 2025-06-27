@@ -29,6 +29,7 @@ public class CheatManager : Singleton<CheatManager>
 		ShowSecondCatchTutorialCheats();
 		ShowThirdCatchTutorialCheats();
 		ShowFourthCatchTutorialCheats();
+		ShowFirstBossTutorialCheats();
 	}
 
 	public void OnDestroy() {
@@ -127,6 +128,27 @@ public class CheatManager : Singleton<CheatManager>
 					}
 					GameManager.Instance.CaughtFish[fish.FishIndex] = fish.FishAmount;
 				}
+			}
+		}
+	}
+
+	#endregion
+
+
+	#region First Boss Turotial
+
+	[System.Serializable]
+	public class FirstBossTutorialCheats {
+		public BaitCheatData[] Baits;
+	}
+
+	[SerializeField]
+	private FirstBossTutorialCheats firstBossTutorialCheats;
+
+	private void ShowFirstBossTutorialCheats() {
+		if (SceneManager.GetActiveScene().name == LevelManager.BossTutorial_00) {
+			for (int i = 0; i < firstBossTutorialCheats.Baits.Length; i++) {
+				GameManager.Instance.CurrentBaits[firstBossTutorialCheats.Baits[i].BaitIndex] = firstBossTutorialCheats.Baits[i].BaitAmount;
 			}
 		}
 	}

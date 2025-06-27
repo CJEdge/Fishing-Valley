@@ -25,6 +25,9 @@ public class CheatManagerEditor : Editor {
 		if (currentScene == LevelManager.ShopTutorial_00) {
 			EditorGUILayout.PropertyField(serializedObject.FindProperty("firstShopTutorialCheats"));
 		}
+		if (currentScene == LevelManager.BossTutorial_00) {
+			EditorGUILayout.PropertyField(serializedObject.FindProperty("firstBossTutorialCheats"));
+		}
 		serializedObject.ApplyModifiedProperties();
 	}
 }
