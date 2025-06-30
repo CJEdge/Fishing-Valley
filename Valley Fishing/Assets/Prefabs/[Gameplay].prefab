@@ -742,10 +742,10 @@ MonoBehaviour:
     <ReelInput>k__BackingField: 0
   controller:
     reelStateThresholds:
-    - 0.1
-    - 1.8
+    - 0.4
+    - 4
     reelResetRate: 0.7
-    maxReelRate: 3
+    maxReelRate: 5
     completeReelResetTime: 0.9
     horizontalSpeed: 200
     <ReelInput>k__BackingField: 0

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{94766e4e-bcd0-4389-bdc7-e9535356d501}">
 		<property name="name">
-			<value>ApplyBaitTutorial 3</value>
+			<value>ApplyBaitTutorial 2</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -43,7 +43,7 @@
 	<object class="MasterTrack" id="{65296161-e3d8-4ffc-ad12-1aff7a342d8b}">
 		<relationship name="modules">
 			<destination>{e4709dec-b627-47c9-b6a0-797c08dcdb37}</destination>
-			<destination>{310d236e-85c8-4192-94fe-13f2a6c6ed4a}</destination>
+			<destination>{beb4be6a-074d-4966-90d7-c51d30319d5c}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{a624ad16-65d2-4132-9329-3a908763a4ea}</destination>
@@ -70,7 +70,7 @@
 	<object class="ParameterProxy" id="{cc4dcf5c-045c-4e8f-a09a-119dd304bbdf}">
 		<relationship name="modules">
 			<destination>{e4709dec-b627-47c9-b6a0-797c08dcdb37}</destination>
-			<destination>{310d236e-85c8-4192-94fe-13f2a6c6ed4a}</destination>
+			<destination>{beb4be6a-074d-4966-90d7-c51d30319d5c}</destination>
 		</relationship>
 		<relationship name="preset">
 			<destination>{2c9a9bb5-adcd-4ce7-8026-5c92b5e4d926}</destination>
@@ -95,9 +95,9 @@
 			<destination>{c69db689-b5da-4010-800f-5cf771230885}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{310d236e-85c8-4192-94fe-13f2a6c6ed4a}">
+	<object class="SingleSound" id="{beb4be6a-074d-4966-90d7-c51d30319d5c}">
 		<relationship name="audioFile">
-			<destination>{60c850ee-aa18-48d8-ac96-db5fe97c82d1}</destination>
+			<destination>{1bfd7a3c-54ac-4385-aee7-bcdbf98b4054}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{31313f2e-5699-41aa-a3f6-57949ffd1e67}">

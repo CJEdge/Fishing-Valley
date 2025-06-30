@@ -285,7 +285,6 @@ public class InputController : AbstractState<InputController.State> {
 		if (!context.performed) {
 			return;
 		}
-		VibrationManager.Instance.SetVibrationFrequency(true, clickVibration.x, clickVibration.y);
 		AudioManager.Instance.SkipVoiceOver();
 		OnSkip?.Invoke();
 	}

@@ -651,12 +651,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: secondCatchTutorialCheats.Baits.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: secondCatchTutorialCheats.Baits.Array.data[0].BaitIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: secondCatchTutorialCheats.Baits.Array.data[1].BaitIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: secondCatchTutorialCheats.Baits.Array.data[2].BaitIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: secondCatchTutorialCheats.Baits.Array.data[0].BaitAmount
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: secondCatchTutorialCheats.Baits.Array.data[1].BaitAmount
-      value: 5
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: secondCatchTutorialCheats.Baits.Array.data[2].BaitAmount
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7393596337781405747, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: m_Name

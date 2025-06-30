@@ -20,6 +20,7 @@ public class FirstShoreTutorial : Shore
 					shopButtons[shopButtons.Length - 1].SetActive(true);
 				}
 			}
+			shopButtons[0].SetActive(false);
 		}
 	}
 

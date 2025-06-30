@@ -333,7 +333,6 @@ public class Fish : AbstractState<Fish.State>
 		} else {
 			this.RodLineComponent.CurveAmount = Mathf.MoveTowards(this.RodLineComponent.CurveAmount, 1, Time.deltaTime);
 			IncreaseFailTime();
-			VibrationManager.Instance.SetVibrationFrequency(false, (1 / DistanceAsPercentage()) / 2, Mathf.Infinity);
 			VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);
 			if (this.IsCentred) {
 				rb.AddForce(0, 0, swimAwaySpeed);

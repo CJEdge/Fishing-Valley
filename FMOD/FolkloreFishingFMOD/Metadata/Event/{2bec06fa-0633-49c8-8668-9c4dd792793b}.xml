@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{2bec06fa-0633-49c8-8668-9c4dd792793b}">
 		<property name="name">
-			<value>ApplyBaitTutorial</value>
+			<value>ApplyBaitTutorial 0</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -42,8 +42,8 @@
 	</object>
 	<object class="MasterTrack" id="{4b7aa076-b4d2-4293-abc4-c728f17f7f47}">
 		<relationship name="modules">
-			<destination>{b4a36fba-6350-4e6f-ab15-aaa0ee166424}</destination>
 			<destination>{db9daf76-e099-4b9b-8935-c90842524cb8}</destination>
+			<destination>{e0115e58-2cd1-48e7-b5a7-b90b80b88644}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{4ace5fa4-543b-4fa2-917f-a3e4b61ba728}</destination>
@@ -69,8 +69,8 @@
 	</object>
 	<object class="ParameterProxy" id="{c7d42a50-b596-40cc-bef7-b144caf6d4c1}">
 		<relationship name="modules">
-			<destination>{b4a36fba-6350-4e6f-ab15-aaa0ee166424}</destination>
 			<destination>{db9daf76-e099-4b9b-8935-c90842524cb8}</destination>
+			<destination>{e0115e58-2cd1-48e7-b5a7-b90b80b88644}</destination>
 		</relationship>
 		<relationship name="preset">
 			<destination>{2c9a9bb5-adcd-4ce7-8026-5c92b5e4d926}</destination>
@@ -87,17 +87,17 @@
 			<destination>{27af8eb4-f559-4d3f-9615-e2d89fbdc135}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{b4a36fba-6350-4e6f-ab15-aaa0ee166424}">
-		<relationship name="audioFile">
-			<destination>{a8708e17-8206-44a7-b004-fe8263875792}</destination>
-		</relationship>
-	</object>
 	<object class="SingleSound" id="{db9daf76-e099-4b9b-8935-c90842524cb8}">
 		<property name="start">
 			<value>1</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{c69db689-b5da-4010-800f-5cf771230885}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{e0115e58-2cd1-48e7-b5a7-b90b80b88644}">
+		<relationship name="audioFile">
+			<destination>{702675fa-7351-4ab1-a112-83a74221e229}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{282e2ab5-704e-459f-a738-882f0ad19f0d}">
