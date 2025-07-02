@@ -1,3 +1,6 @@
+using FMOD.Studio;
+using FMODUnity;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -22,7 +25,7 @@ public class BaitButton : MonoBehaviour
 
 
 	#region Mono Behaviours
-	public void Start() {
+	public void Awake() {
 		buttonVoiceOverComponent.SelectAction -= SelectBait;
 		buttonVoiceOverComponent.SelectAction += SelectBait;
 	}
@@ -42,6 +45,15 @@ public class BaitButton : MonoBehaviour
 
 	public void SelectBait() {
 		baitView.BaitSelected(baitIndex);
+		if (!GameManager.Instance.Baits[baitIndex].IsTutorial) {
+			if (GameManager.Instance.CurrentBaits[baitIndex] <= FMODManager.Instance.BaitNumbers.Length) {
+				List<EventReference> voiceOverChain = new List<EventReference>();
+				voiceOverChain.Add(FMODManager.Instance.YouHave);
+				voiceOverChain.Add(FMODManager.Instance.BaitNumbers[GameManager.Instance.CurrentBaits[baitIndex] - 1]);
+				voiceOverChain.Add(FMODManager.Instance.Left);
+				AudioManager.Instance.PlayVoiceOverChain(voiceOverChain);
+			}
+		}
 	}
 
 	public void ClickBait() {

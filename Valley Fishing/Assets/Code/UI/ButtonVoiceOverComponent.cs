@@ -11,6 +11,7 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 		Play,
 		Settings,
 		MainMenu,
+		LevelBaitButton,
 		FreeBait,
 		RareBait
 	}
@@ -36,6 +37,9 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 	}
 
 	public void OnSelect(BaseEventData eventData) {
+		if (buttonType == ButtonType.LevelBaitButton) {
+			SelectAction?.Invoke();
+		}
 		if (GameManager.Instance.InputController.SelectionManuallySet) {
 			GameManager.Instance.InputController.SelectionManuallySet = false;
 			return;
@@ -65,7 +69,6 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitIntros[0]);
 				break;
 			case ButtonType.RareBait:
-				Debug.Log("here");
 				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitIntros[1]);
 				break;
 			default:

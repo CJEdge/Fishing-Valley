@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{a56eb530-5d5b-41cd-b8a8-b35ea9236f9b}">
 		<property name="name">
-			<value>2_Trout</value>
+			<value>2_StoneLoach</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -43,7 +43,7 @@
 	<object class="MasterTrack" id="{37aa16f8-a424-4f75-a68e-097d1c0c317b}">
 		<relationship name="modules">
 			<destination>{2db1164b-c3d9-40f6-9c96-dc32913a6da1}</destination>
-			<destination>{feacf574-3564-4df7-b971-35cef9b4c1bb}</destination>
+			<destination>{46f5d1a7-dea3-43e4-a23d-273261de94e1}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{35503f3e-ce01-47c8-8572-47b643ae264e}</destination>
@@ -70,7 +70,7 @@
 	<object class="ParameterProxy" id="{6590b8b9-ccac-496c-94f1-c8afe3b2478b}">
 		<relationship name="modules">
 			<destination>{2db1164b-c3d9-40f6-9c96-dc32913a6da1}</destination>
-			<destination>{feacf574-3564-4df7-b971-35cef9b4c1bb}</destination>
+			<destination>{46f5d1a7-dea3-43e4-a23d-273261de94e1}</destination>
 		</relationship>
 		<relationship name="preset">
 			<destination>{2c9a9bb5-adcd-4ce7-8026-5c92b5e4d926}</destination>
@@ -95,9 +95,9 @@
 			<destination>{c69db689-b5da-4010-800f-5cf771230885}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{feacf574-3564-4df7-b971-35cef9b4c1bb}">
+	<object class="SingleSound" id="{46f5d1a7-dea3-43e4-a23d-273261de94e1}">
 		<relationship name="audioFile">
-			<destination>{b36d60dc-3861-4175-aef9-65cdc4cc1c3d}</destination>
+			<destination>{b673a65a-2b14-49c1-97f0-1da6a16e6fce}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{f1160540-f5d5-4973-a5ac-e0883723c829}">

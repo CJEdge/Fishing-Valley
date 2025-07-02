@@ -52,6 +52,9 @@ public class Fish : AbstractState<Fish.State>
 	private int fishIndex;
 
 	[SerializeField]
+	private EventReference caughtVoiceLine;
+
+	[SerializeField]
 	private int sellPrice;
 
 	[SerializeField]
@@ -106,6 +109,12 @@ public class Fish : AbstractState<Fish.State>
 
 
 	#region Properties
+
+	public EventReference CaughtVoiceLine {
+		get {
+			return caughtVoiceLine;
+		}
+	}
 
 	private bool IsStrafer {
 		get;

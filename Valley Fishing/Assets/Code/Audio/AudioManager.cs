@@ -61,6 +61,21 @@ public class AudioManager : Singleton<AudioManager>
 		set;
 	}
 
+	public List<EventReference> VoiceOverChain {
+		get;
+		set;
+	} = new List<EventReference>();
+
+	public int VoiceOverChainPosition {
+		get;
+		set;
+	}
+
+	public bool InVoiceOverChain {
+		get;
+		set;
+	}
+
 	#endregion
 
 
@@ -112,11 +127,21 @@ public class AudioManager : Singleton<AudioManager>
 	}
 
 	public void SkipVoiceOver() {
+		if (this.InVoiceOverChain) {
+			this.VoiceOverChainPosition = this.VoiceOverChain.Count;
+		}
 		this.VoiceLineEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 		this.VoiceLineEventInstance.release();
 		this.VoiceLineEventInstance.clearHandle();
 		this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventInstance,true);
 		StopCoroutine(WaitForVoiceLineEnd());
+	}
+
+	public void PlayVoiceOverChain(List<EventReference> voiceOverChain) {
+		this.VoiceOverChainPosition = 0;
+		this.VoiceOverChain = voiceOverChain;
+		this.InVoiceOverChain = true;
+		PlayVoiceOver(voiceOverChain[this.VoiceOverChainPosition]);
 	}
 
 	public void PlayFishActivitySound(Fish fish, int activityLevel, bool play) {
@@ -202,10 +227,28 @@ public class AudioManager : Singleton<AudioManager>
 				yield break;
 			}
 		} while (playbackState != PLAYBACK_STATE.STOPPED);
-		this.VoiceLineEventInstance.release();
-		this.VoiceLineEventInstance.clearHandle();
-		this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventInstance,false);
-		this.VoiceLineInProgress = false;
+		if (this.VoiceLineInProgress) {
+			this.VoiceLineEventInstance.release();
+			this.VoiceLineEventInstance.clearHandle();
+			this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventInstance, false);
+			this.VoiceLineInProgress = false;
+			if (this.InVoiceOverChain) {
+				this.VoiceOverChainPosition++;
+				StartCoroutine(ContinueVoiceOverChain());
+			}
+		}
+	}
+
+	private IEnumerator ContinueVoiceOverChain() {
+		yield return new WaitForEndOfFrame();
+		if (this.VoiceOverChainPosition < this.VoiceOverChain.Count) {
+			this.VoiceOverChain = this.VoiceOverChain;
+			this.InVoiceOverChain = true;
+			Debug.Log(this.VoiceOverChain[this.VoiceOverChainPosition]);
+			PlayVoiceOver(this.VoiceOverChain[this.VoiceOverChainPosition]);
+		} else {
+			this.InVoiceOverChain = false;
+		}
 	}
 
 	private void PlayMusicOnSceneLoad(Scene scene, LoadSceneMode mode) {

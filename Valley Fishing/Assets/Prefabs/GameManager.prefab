@@ -205,6 +205,45 @@ MonoBehaviour:
       Data3: 1588832440
       Data4: -1687215191
     Path: event:/VoiceOver/CaughtFish/2_Trout
+  YouHave:
+    Guid:
+      Data1: -825399506
+      Data2: 1308438927
+      Data3: -779545667
+      Data4: 1500991846
+    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/YouHave
+  BaitNumbers:
+  - Guid:
+      Data1: 1645698580
+      Data2: 1295627140
+      Data3: 1356951985
+      Data4: -1167137069
+    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitNumbers/1
+  - Guid:
+      Data1: 1874453143
+      Data2: 1301520856
+      Data3: -642265184
+      Data4: -1082616872
+    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitNumbers/2
+  - Guid:
+      Data1: -1087745248
+      Data2: 1076652533
+      Data3: -1389090941
+      Data4: 818282589
+    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitNumbers/3
+  - Guid:
+      Data1: 851288751
+      Data2: 1292278583
+      Data3: 525415315
+      Data4: -1016955718
+    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitNumbers/4
+  Left:
+    Guid:
+      Data1: -303319995
+      Data2: 1204891824
+      Data3: 254053769
+      Data4: -1215693277
+    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitsLeft
   ShoreIntros:
   - Guid:
       Data1: -99361396

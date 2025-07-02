@@ -25,6 +25,12 @@ public class ThirdTutorialVoiceOver : VoiceOverController
 				if (GameManager.Instance.TotalBaitsLeft == 0) {
 					PlayNextTutotialVoiceOver(this.CaughtFishTutorialsCompleted, tutorialCatchVoices);
 					IncrementTutorial(this.CaughtFishTutorialsCompleted);
+				} else {
+					if (this.CurrentFish.IsTutorial) {
+						//AudioManager.Instance.PlayVoiceOver(this.CurrentFish.TutorialCaughtVoiceLine);
+					} else {
+						AudioManager.Instance.PlayVoiceOver(this.CurrentFish.CaughtVoiceLine);
+					}
 				}
 				break;
 			default:

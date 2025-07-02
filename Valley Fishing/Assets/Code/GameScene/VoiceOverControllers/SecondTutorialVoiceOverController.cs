@@ -15,11 +15,22 @@ public class SecondTutorialVoiceOverController : VoiceOverController
 					IncrementTutorial(this.AttatchBaitTutorialsCompleted);
 				}
 				break;
+			case LevelController.State.ReelingFish:
+				if (GameManager.Instance.CurrentFish.IsTutorial || GameManager.Instance.TotalCaughtFish == 3) {
+					PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
+					IncrementTutorial(this.ReelTutorialsCompleted);
+				}
+				break;
 			case LevelController.State.FishCaught:
-				Debug.Log(GameManager.Instance.TotalBaitsLeft);
 				if(GameManager.Instance.TotalBaitsLeft == 0) {
 					PlayNextTutotialVoiceOver(this.CaughtFishTutorialsCompleted, tutorialCatchVoices);
 					IncrementTutorial(this.CaughtFishTutorialsCompleted);
+				} else {
+					if (this.CurrentFish.IsTutorial) {
+						//AudioManager.Instance.PlayVoiceOver(this.CurrentFish.TutorialCaughtVoiceLine);
+					} else {
+						AudioManager.Instance.PlayVoiceOver(this.CurrentFish.CaughtVoiceLine);
+					}
 				}
 				break;
 			default:

@@ -117,11 +117,6 @@ public class VoiceOverController : MonoBehaviour
 				if (AllTutorialsCompleted(this.ReelTutorialsCompleted)) {
 					return false;
 				}
-				if (!GameManager.Instance.CurrentFish.IsTutorial) {
-					return false;
-				}
-				PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
-				IncrementTutorial(this.ReelTutorialsCompleted);
 				return true;
 			case LevelController.State.FishCaught:
 				return true;

@@ -482,11 +482,11 @@ MonoBehaviour:
     Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 7
   tutorialCatchVoices:
   - Guid:
-      Data1: -261545283
-      Data2: 1091930301
-      Data3: -2121187961
-      Data4: 938264281
-    Path: event:/VoiceOver/Levels/CaughtFish/TutorialFish 6
+      Data1: -1464831895
+      Data2: 1164210065
+      Data3: 102848188
+      Data4: -1661009784
+    Path: event:/VoiceOver/Levels/CaughtFish/TutorialFish 4
   levelIndex: 2
 --- !u!4 &641266736 stripped
 Transform:
@@ -669,7 +669,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: thirdCatchTutorialCheats.Baits.Array.data[0].BaitAmount
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7393596337781405747, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: m_Name
