@@ -739,11 +739,11 @@ MonoBehaviour:
       Data3: -1960769622
       Data4: 191476268
     Path: event:/VoiceOver/Levels/CaughtFish/0_BrownTrout
-  sellPrice: 0
+  sellPrice: 10
   failable: 0
   fishSpeed: 2
   centreThreshold: 20
-  reelSpeed: 1000
+  reelSpeed: 100
   swimAwaySpeed: 100
   strafedSwimAwaySpeed: 30
   rb: {fileID: 6682323996151832369}
@@ -755,7 +755,7 @@ MonoBehaviour:
   activitySplashSFX: {fileID: 1025274234754108350}
   reelStart: 63
   reelEnd: 16
-  activityLevelChangeTime: 2
+  activityLevelChangeTime: 3
   movementChangeTime: 0
   strafeAudio: {fileID: 2211003099072869323}
   lineEnd: {fileID: 5132849399768412513}

@@ -459,27 +459,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aa4ebc323a905b48901bfe833dd664f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  applyBaitTutorials: []
+  applyBaitTutorials:
+  - Guid:
+      Data1: -224155338
+      Data2: 1213396564
+      Data3: -2092656734
+      Data4: -1297569701
+    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/ApplyBaitTutorial 6
   castRodTutorials: []
   reelTutorials:
   - Guid:
-      Data1: 1654056158
-      Data2: 1214252947
-      Data3: 1276687795
-      Data4: 2115403206
-    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 5
+      Data1: 1694011849
+      Data2: 1219964329
+      Data3: -261061971
+      Data4: -1733548315
+    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 8
   - Guid:
-      Data1: 1111676978
-      Data2: 1215941556
-      Data3: 412345509
-      Data4: 2017433008
-    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 6
+      Data1: 630586459
+      Data2: 1299545659
+      Data3: 1567785874
+      Data4: -1735779561
+    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 9
   - Guid:
-      Data1: -1465139869
-      Data2: 1232753864
-      Data3: 612080037
-      Data4: 1023993747
-    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 7
+      Data1: -357923053
+      Data2: 1209324813
+      Data3: -441343573
+      Data4: -1984244675
+    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 10
   tutorialCatchVoices:
   - Guid:
       Data1: -1464831895

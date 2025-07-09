@@ -11,6 +11,7 @@ public class FisrstTutorialBaitShop : BaitShop
 		base.EnterState(state);
 		switch (state) {
 			case State.Defualt:
+				leaveShopButton.SetActive(false);
 				break;
 			case State.Entering:
 				break;
@@ -33,13 +34,23 @@ public class FisrstTutorialBaitShop : BaitShop
             case State.Entering:
                 break;
             case State.Trading:
-				if(this.CurrentVoiceOverChain.Count > 0 && this.ChainVoiceOverPosition < this.CurrentVoiceOverChain.Count) {
-					PlayVoiceOverChain();
+				switch (tutorialState) {
+					case TutorialState.SellingTutorial:
+						Debug.Log(GameManager.Instance.TotalCaughtFish);
+						Debug.Log(AudioManager.Instance.InVoiceOverChain);
+						if (GameManager.Instance.TotalCaughtFish == 0 && !AudioManager.Instance.InVoiceOverChain) {
+							StartCoroutine(WaitOneFrame(SetBuyState));
+						}
+						break;
+					case TutorialState.BuyingTutorial:
+						//GameManager.Instance.InputController.SelectButton(initialBaitButton);
+						//tutorialState = TutorialState.TutorialsOver;
+						break;
+					case TutorialState.TutorialsOver:
+						break;
+					default:
+						break;
 				}
-                if (tutorialState == TutorialState.BuyingTutorial) {
-					GameManager.Instance.InputController.SelectButton(initialBaitButton);
-                    tutorialState = TutorialState.TutorialsOver;
-                }
                 break;
             case State.Leaving:
                 break;
@@ -52,10 +63,12 @@ public class FisrstTutorialBaitShop : BaitShop
 		base.SellFish();
 		switch (sellTpye) {
 			case SellTpye.SellAllFish:
-				this.CurrentVoiceOverChain.Clear();
-				this.CurrentVoiceOverChain.Add(FMODManager.Instance.BaitShopSellYourItems[0]);
-				this.CurrentVoiceOverChain.Add(FMODManager.Instance.price);
-				PlayVoiceOverChain();
+				//List<EventReference> voiceOverChain = new List<EventReference>();
+				//voiceOverChain.Add(FMODManager.Instance.BaitShopSellYourItems[0]);
+				//voiceOverChain.Add(FMODManager.Instance.price);
+				//AudioManager.Instance.PlayVoiceOverChain(voiceOverChain);
+				sellButton.SetActive(false);
+				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopTutorialItemIntros[0]);
 				break;
 			case SellTpye.SellIndividualFish:
 				break;
@@ -66,36 +79,33 @@ public class FisrstTutorialBaitShop : BaitShop
 
 	public override void BuyBait(int baitIndex) {
 		base.BuyBait(baitIndex);
-		if (!this.TutorialBaitBought) {
-			AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopThanks[0]);
-			this.TutorialBaitBought = true;
-		} else {
-			AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopThanks[1]);
-		}
+		initialBaitButton.SetActive(false);
+		leaveShopButton.SetActive(true);
+		GameManager.Instance.InputController.SelectButton(leaveShopButton);
+		AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.LeaveShopPrompts[0]);
+
+		//if (!this.TutorialBaitBought) {
+		//	AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopThanks[0]);
+		//	this.TutorialBaitBought = true;
+		//} else {
+		//	AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopThanks[1]);
+		//}
 	}
 
 	public override IEnumerator EnterShop(bool enter) {
 		yield return StartCoroutine(base.EnterShop(enter));
 		if (enter) {
 			AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopIntros[0]);
+			initialBaitButton.SetActive(false);
 		}
-	}
-
-	public override void PlayVoiceOverChain() {
-		base.PlayVoiceOverChain();
-	}
-
-	public override void VoiceOverChainFinished() {
-		if (this.CurrentVoiceOverChain.Count == 0) {
-			return;
-		}
-		AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopTutorialItemIntros[0]);
-		base.VoiceOverChainFinished();
-		StartCoroutine(WaitOneFrame(SetBuyState));
 	}
 
 	private void SetBuyState() {
 		tutorialState = TutorialState.BuyingTutorial;
+		initialBaitButton.SetActive(true);
+		GameManager.Instance.InputController.SelectButton(initialBaitButton);
+		tutorialState = TutorialState.TutorialsOver;
+		//AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopTutorialItemIntros[0]);
 	}
 
 }

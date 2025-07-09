@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <FishActivityLevelInstance>k__BackingField: {fileID: 0}
+  <InVoiceOverChain>k__BackingField: 0
 --- !u!114 &4472528235016745865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,11 +152,17 @@ MonoBehaviour:
       Data4: -35801480
     Path: event:/VoiceOver/Levels/Level3IntroCutscene
   - Guid:
-      Data1: -1427230422
-      Data2: 1180601217
-      Data3: 221454254
-      Data4: -35801480
-    Path: event:/VoiceOver/Levels/Level3IntroCutscene
+      Data1: 1322760010
+      Data2: 1131173313
+      Data3: -1961681008
+      Data4: 1020907356
+    Path: event:/VoiceOver/Levels/Level4IntroCutscene
+  - Guid:
+      Data1: 1906869585
+      Data2: 1233512109
+      Data3: -1325823104
+      Data4: 1120191466
+    Path: event:/VoiceOver/Levels/BossIntroCutscene
   CatchVoices:
   - Guid:
       Data1: 939592733
@@ -250,7 +257,19 @@ MonoBehaviour:
       Data2: 1191018595
       Data3: -250523751
       Data4: -1777294225
-    Path: event:/VoiceOver/Shop/Shore/ShopSceneIntros/ShopIntro
+    Path: event:/VoiceOver/Shop/Shore/ShopSceneIntros/ShopIntro 0
+  - Guid:
+      Data1: 1339770265
+      Data2: 1201517270
+      Data3: -1802642763
+      Data4: -1325746280
+    Path: event:/VoiceOver/Shop/Shore/ShopSceneIntros/ShopIntro 1
+  - Guid:
+      Data1: -336033461
+      Data2: 1151154036
+      Data3: 1985901978
+      Data4: -366889491
+    Path: event:/VoiceOver/Shop/Shore/ShopSceneIntros/ShopIntro 2
   LeaveShorePrompts:
   - Guid:
       Data1: -1414859070
@@ -258,6 +277,37 @@ MonoBehaviour:
       Data3: 315434398
       Data4: 1770385284
     Path: event:/VoiceOver/Shop/Shore/LeaveTutorials/LeaveTutorial
+  - Guid:
+      Data1: 247525448
+      Data2: 1232182876
+      Data3: 1698894226
+      Data4: 456891209
+    Path: event:/VoiceOver/Shop/Shore/LeaveTutorials/LeaveTutorial 2
+  - Guid:
+      Data1: 523544258
+      Data2: 1239594969
+      Data3: 2027002556
+      Data4: -1984431690
+    Path: event:/VoiceOver/Shop/Shore/LeaveTutorials/LeaveTutorial 3
+  LeaveShopPrompts:
+  - Guid:
+      Data1: 83235433
+      Data2: 1113136694
+      Data3: 891327386
+      Data4: -1526096964
+    Path: event:/VoiceOver/Shop/BaitShop/LeaveShopPrompt/LeaveShopPrompt 0
+  - Guid:
+      Data1: -1139834866
+      Data2: 1160598040
+      Data3: -248789370
+      Data4: 486288163
+    Path: event:/VoiceOver/Shop/BaitShop/LeaveShopPrompt/LeaveShopPrompt 1
+  - Guid:
+      Data1: -1139834866
+      Data2: 1160598040
+      Data3: -248789370
+      Data4: 486288163
+    Path: event:/VoiceOver/Shop/BaitShop/LeaveShopPrompt/LeaveShopPrompt 1
   BaitShopIntros:
   - Guid:
       Data1: 2026100594
@@ -265,13 +315,37 @@ MonoBehaviour:
       Data3: 1522154651
       Data4: 2107786914
     Path: event:/VoiceOver/Shop/BaitShop/ShopIntros/ShopIntro
+  - Guid:
+      Data1: 1823110428
+      Data2: 1073998412
+      Data3: -1240993116
+      Data4: 1476132017
+    Path: event:/VoiceOver/Shop/BaitShop/ShopIntros/ShopIntro 2
+  - Guid:
+      Data1: 962300239
+      Data2: 1079666433
+      Data3: -432020091
+      Data4: 92826224
+    Path: event:/VoiceOver/Shop/BaitShop/ShopIntros/ShopIntro 3
   BaitShopTutorialItemIntros:
   - Guid:
       Data1: 1662831763
       Data2: 1177459567
       Data3: -1590992981
       Data4: -1277593302
-    Path: event:/VoiceOver/Shop/BaitShop/ItemIntros/TutorialSaleIntro
+    Path: event:/VoiceOver/Shop/BaitShop/ItemIntros/SoldFish 0
+  - Guid:
+      Data1: -977912986
+      Data2: 1301859922
+      Data3: -249633656
+      Data4: -1347455261
+    Path: event:/VoiceOver/Shop/BaitShop/ItemIntros/SoldFish 1
+  - Guid:
+      Data1: -1208275200
+      Data2: 1169199887
+      Data3: 1884707738
+      Data4: 1521005066
+    Path: event:/VoiceOver/Shop/BaitShop/ItemIntros/SoldFish 2
   BaitShopItemIntros:
   - Guid:
       Data1: -709591002
@@ -379,49 +453,49 @@ MonoBehaviour:
       Data2: 1219677751
       Data3: -754223217
       Data4: -75916562
-    Path: event:/SFX/BaitIdle
+    Path: event:/SFX/WormBaitIdle
   - Guid:
       Data1: -1751036424
       Data2: 1219677751
       Data3: -754223217
       Data4: -75916562
-    Path: event:/SFX/BaitIdle
+    Path: event:/SFX/WormBaitIdle
   - Guid:
       Data1: -1751036424
       Data2: 1219677751
       Data3: -754223217
       Data4: -75916562
-    Path: event:/SFX/BaitIdle
+    Path: event:/SFX/WormBaitIdle
   - Guid:
       Data1: -1751036424
       Data2: 1219677751
       Data3: -754223217
       Data4: -75916562
-    Path: event:/SFX/BaitIdle
+    Path: event:/SFX/WormBaitIdle
   - Guid:
-      Data1: -1751036424
-      Data2: 1219677751
-      Data3: -754223217
-      Data4: -75916562
-    Path: event:/SFX/BaitIdle
+      Data1: -306073775
+      Data2: 1283962052
+      Data3: -347803755
+      Data4: 818896552
+    Path: event:/SFX/CricketBaitIdle
   - Guid:
-      Data1: -1751036424
-      Data2: 1219677751
-      Data3: -754223217
-      Data4: -75916562
-    Path: event:/SFX/BaitIdle
+      Data1: -306073775
+      Data2: 1283962052
+      Data3: -347803755
+      Data4: 818896552
+    Path: event:/SFX/CricketBaitIdle
   - Guid:
-      Data1: -1751036424
-      Data2: 1219677751
-      Data3: -754223217
-      Data4: -75916562
-    Path: event:/SFX/BaitIdle
+      Data1: -2134130286
+      Data2: 1214591248
+      Data3: 585164988
+      Data4: -178165460
+    Path: event:/SFX/LeechBaitIdle
   - Guid:
-      Data1: -1751036424
-      Data2: 1219677751
-      Data3: -754223217
-      Data4: -75916562
-    Path: event:/SFX/BaitIdle
+      Data1: 1812193420
+      Data2: 1175040479
+      Data3: 1880725685
+      Data4: -455227078
+    Path: event:/SFX/Mussel
   - Guid:
       Data1: -1751036424
       Data2: 1219677751
@@ -518,6 +592,13 @@ MonoBehaviour:
       Data3: -493826686
       Data4: 363304719
     Path: event:/Music/LevelOneMusic
+  BossMusic:
+    Guid:
+      Data1: 1322761572
+      Data2: 1172901353
+      Data3: 1985929359
+      Data4: 942631019
+    Path: event:/Music/Boss Music
 --- !u!114 &5253065142394802842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,7 +624,7 @@ MonoBehaviour:
   fourthCatchTutorialCheats:
     Baits:
     - BaitIndex: 7
-      BaitAmount: 10
+      BaitAmount: 5
   firstShopTutorialCheats:
     CaughtFish:
     - FishIndex: 0
@@ -554,6 +635,16 @@ MonoBehaviour:
       FishAmount: 3
     - FishIndex: 3
       FishAmount: 1
+  secondShopTutorialCheats:
+    CaughtFish:
+    - FishIndex: 4
+      FishAmount: 2
+    - FishIndex: 5
+      FishAmount: 2
+    - FishIndex: 6
+      FishAmount: 1
+  thirdShopTutorialCheats:
+    CaughtFish: []
   firstBossTutorialCheats:
     Baits:
     - BaitIndex: 8

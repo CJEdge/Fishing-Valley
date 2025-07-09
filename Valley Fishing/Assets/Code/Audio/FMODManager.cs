@@ -34,6 +34,8 @@ public class FMODManager : Singleton<FMODManager>
 
 	public EventReference[] LeaveShorePrompts;
 
+	public EventReference[] LeaveShopPrompts;
+
 	public EventReference[] BaitShopIntros;
 
 	public EventReference[] BaitShopTutorialItemIntros;
@@ -82,4 +84,6 @@ public class FMODManager : Singleton<FMODManager>
 	[Header("Music")]
 
 	public EventReference LevelOneMusic;
+
+	public EventReference BossMusic;
 }

@@ -15,8 +15,15 @@ public class SecondTutorialVoiceOverController : VoiceOverController
 					IncrementTutorial(this.AttatchBaitTutorialsCompleted);
 				}
 				break;
+			case LevelController.State.AttatchBait:
+				if (GameManager.Instance.TotalCaughtFish == 5) {
+					GameManager.Instance.LevelController.FishView.EnableFishUI(false);
+					SceneManager.LoadScene(LevelManager.ShopTutorial_01);
+					return false;
+				}
+				break;
 			case LevelController.State.ReelingFish:
-				if (GameManager.Instance.CurrentFish.IsTutorial || GameManager.Instance.TotalCaughtFish == 3) {
+				if (GameManager.Instance.CurrentFish.IsTutorial || GameManager.Instance.TotalCaughtFish == 0 || GameManager.Instance.TotalCaughtFish == 1 || GameManager.Instance.TotalCaughtFish == 4) {
 					PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
 					IncrementTutorial(this.ReelTutorialsCompleted);
 				}
@@ -37,19 +44,5 @@ public class SecondTutorialVoiceOverController : VoiceOverController
 				break;
 		}
 		return true;
-	}
-
-	public override void VoiceOverFinished(EventInstance eventInstance, bool skipped) {
-		base.VoiceOverFinished(eventInstance,skipped);
-		switch (this.LevelController.CurrentState) {
-			case LevelController.State.FishCaught:
-				if (AllTutorialsCompleted(this.CaughtFishTutorialsCompleted)) {
-					GameManager.Instance.LevelController.FishView.EnableFishUI(false);
-					SceneManager.LoadScene(LevelManager.CatchTutorial_02);
-				}
-				break;
-			default:
-				break;
-		}
 	}
 }

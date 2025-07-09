@@ -3835,6 +3835,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2681863597549086485, guid: 273a31a86d8f78c4fa412fa2abf0269e, type: 3}
+      propertyPath: buttonType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4817887414331190154, guid: 273a31a86d8f78c4fa412fa2abf0269e, type: 3}
       propertyPath: m_Name
       value: BaitButton (8)

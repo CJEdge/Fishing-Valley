@@ -460,9 +460,33 @@ MonoBehaviour:
       Data2: 1252645824
       Data3: -212891771
       Data4: 182768815
-    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/ApplyBaitTutorial 6
-  castRodTutorials: []
-  reelTutorials: []
+    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/ApplyBaitTutorial 5
+  castRodTutorials:
+  - Guid:
+      Data1: 676423759
+      Data2: 1328956856
+      Data3: -652405619
+      Data4: 267341289
+    Path: event:/VoiceOver/Levels/CastRodTutorials/CastRodTutorial 2
+  reelTutorials:
+  - Guid:
+      Data1: 1111676978
+      Data2: 1215941556
+      Data3: 412345509
+      Data4: 2017433008
+    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 5
+  - Guid:
+      Data1: -1465139869
+      Data2: 1232753864
+      Data3: 612080037
+      Data4: 1023993747
+    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 6
+  - Guid:
+      Data1: 1654056158
+      Data2: 1214252947
+      Data3: 1276687795
+      Data4: 2115403206
+    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 7
   tutorialCatchVoices:
   - Guid:
       Data1: -1464831895

@@ -23,6 +23,11 @@ public class FirstTutorialVoiceOver : VoiceOverController
 				this.CurrentTutorialEventInstance = AudioManager.Instance.VoiceLineEventInstance;
 				break;
 			case LevelController.State.AttatchBait:
+				if (GameManager.Instance.TotalCaughtFish == 9) {
+					GameManager.Instance.LevelController.FishView.EnableFishUI(false);
+					SceneManager.LoadScene(LevelManager.ShopTutorial_00);
+					return false;
+				}
 				for (int i = 0; i < this.AttatchBaitTutorialsCompleted.Length; i++) {
 					if (!this.AttatchBaitTutorialsCompleted[i]) {
 						if (!AttatchBaitTutorialCompleteExtras(i)) {
@@ -33,15 +38,12 @@ public class FirstTutorialVoiceOver : VoiceOverController
 				}
 				break;
 			case LevelController.State.ReelingFish:
-				if (GameManager.Instance.CurrentFish.IsTutorial || GameManager.Instance.TotalCaughtFish == 3) {
+				if (GameManager.Instance.CurrentFish.IsTutorial || GameManager.Instance.TotalCaughtFish == 3 || GameManager.Instance.TotalCaughtFish == 8) {
 					PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
 					IncrementTutorial(this.ReelTutorialsCompleted);
 				}
 				break;
 			case LevelController.State.FishCaught:
-				if(GameManager.Instance.TotalCaughtFish == 9) {
-					SceneManager.LoadScene(LevelManager.ShopTutorial_00);
-				}
 				if (AllTutorialsCompleted(this.CaughtFishTutorialsCompleted) || !GameManager.Instance.CurrentFish.IsTutorial) {
 					AudioManager.Instance.PlayVoiceOver(this.CurrentFish.CaughtVoiceLine);
 					this.CurrentTutorialEventInstance = AudioManager.Instance.VoiceLineEventInstance;
@@ -59,16 +61,6 @@ public class FirstTutorialVoiceOver : VoiceOverController
 
 	public override void VoiceOverFinished(EventInstance eventInstance, bool skipped) {
 		base.VoiceOverFinished(eventInstance,skipped);
-		switch (this.LevelController.CurrentState) {
-			case LevelController.State.FishCaught:
-				if (GameManager.Instance.CurrentFish.FishIndex == 3) {
-					GameManager.Instance.LevelController.FishView.EnableFishUI(false);
-					SceneManager.LoadScene(LevelManager.ShopTutorial_00);
-				}
-				break;
-			default:
-				break;
-		}
 	}
 
 	private bool AttatchBaitTutorialExtras(int currentTutorialIndex) {

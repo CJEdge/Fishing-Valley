@@ -71,6 +71,7 @@ public class AudioManager : Singleton<AudioManager>
 		set;
 	}
 
+	[field:SerializeField]
 	public bool InVoiceOverChain {
 		get;
 		set;
@@ -82,7 +83,10 @@ public class AudioManager : Singleton<AudioManager>
 	#region Mono Behaviours
 
 	public void Start() {
-		if (this.MusicEventInstances.Count == 0) {
+		CleanUpMusic();
+		if (SceneManager.GetActiveScene().name == LevelManager.BossTutorial_00) {
+			PlayMusic(FMODManager.Instance.BossMusic);
+		} else {
 			PlayMusic(FMODManager.Instance.LevelOneMusic);
 		}
 		SceneManager.sceneLoaded += PlayMusicOnSceneLoad;
@@ -129,6 +133,7 @@ public class AudioManager : Singleton<AudioManager>
 	public void SkipVoiceOver() {
 		if (this.InVoiceOverChain) {
 			this.VoiceOverChainPosition = this.VoiceOverChain.Count;
+			this.InVoiceOverChain = false;
 		}
 		this.VoiceLineEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 		this.VoiceLineEventInstance.release();
@@ -228,15 +233,15 @@ public class AudioManager : Singleton<AudioManager>
 			}
 		} while (playbackState != PLAYBACK_STATE.STOPPED);
 		if (this.VoiceLineInProgress) {
-			this.VoiceLineEventInstance.release();
-			this.VoiceLineEventInstance.clearHandle();
-			this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventInstance, false);
-			this.VoiceLineInProgress = false;
-			if (this.InVoiceOverChain) {
+			if (this.VoiceOverChainPosition < this.VoiceOverChain.Count) {
 				this.VoiceOverChainPosition++;
 				StartCoroutine(ContinueVoiceOverChain());
 			}
 		}
+		this.VoiceLineEventInstance.release();
+		this.VoiceLineEventInstance.clearHandle();
+		this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventInstance, false);
+		this.VoiceLineInProgress = false;
 	}
 
 	private IEnumerator ContinueVoiceOverChain() {
@@ -244,20 +249,24 @@ public class AudioManager : Singleton<AudioManager>
 		if (this.VoiceOverChainPosition < this.VoiceOverChain.Count) {
 			this.VoiceOverChain = this.VoiceOverChain;
 			this.InVoiceOverChain = true;
-			Debug.Log(this.VoiceOverChain[this.VoiceOverChainPosition]);
 			PlayVoiceOver(this.VoiceOverChain[this.VoiceOverChainPosition]);
-		} else {
+		}
+		if(this.VoiceOverChainPosition == this.VoiceOverChain.Count - 1) {
 			this.InVoiceOverChain = false;
 		}
 	}
 
 	private void PlayMusicOnSceneLoad(Scene scene, LoadSceneMode mode) {
 		CleanUpMusic();
-		PlayMusic(FMODManager.Instance.LevelOneMusic);
+		if (scene.name == LevelManager.BossTutorial_00) {
+			PlayMusic(FMODManager.Instance.BossMusic);
+		} else {
+			PlayMusic(FMODManager.Instance.LevelOneMusic);
+		}
 	}
 
 	private void PlayMusic(EventReference musicReference) {
-		InitializeMusic(FMODManager.Instance.LevelOneMusic);
+		InitializeMusic(musicReference);
 	}
 
 	#endregion

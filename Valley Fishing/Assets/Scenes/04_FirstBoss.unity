@@ -456,14 +456,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 582599905}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 469e6cccfcf817041a012a6e43713be7, type: 3}
+  m_Script: {fileID: 11500000, guid: 34f8ba43273332b48b9ebe37dbae3cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  applyBaitTutorials: []
-  castRodTutorials: []
-  reelTutorials: []
-  tutorialCatchVoices: []
-  levelIndex: 3
+  applyBaitTutorials:
+  - Guid:
+      Data1: 1833660026
+      Data2: 1237045637
+      Data3: 1882319747
+      Data4: 1823827495
+    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/ApplyBaitTutorial 8
+  castRodTutorials:
+  - Guid:
+      Data1: 1296854281
+      Data2: 1273810558
+      Data3: -1442321992
+      Data4: 751147981
+    Path: event:/VoiceOver/Levels/CastRodTutorials/CastRodTutorial 3
+  reelTutorials:
+  - Guid:
+      Data1: 1836328105
+      Data2: 1317358970
+      Data3: 535918270
+      Data4: -867471255
+    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 12
+  tutorialCatchVoices:
+  - Guid:
+      Data1: -1205123130
+      Data2: 1246212123
+      Data3: 467569580
+      Data4: 1513978623
+    Path: event:/VoiceOver/Levels/CaughtFish/TutorialFish 6
+  levelIndex: 4
 --- !u!4 &641266736 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 79709411686699167, guid: 854055ca5fe87dc4981440c052de869d, type: 3}

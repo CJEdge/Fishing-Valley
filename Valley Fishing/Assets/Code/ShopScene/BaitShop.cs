@@ -34,10 +34,13 @@ public class BaitShop : Shop {
 	private GameObject baitShopObject;
 
 	[SerializeField]
-	private GameObject sellButton;
+	protected GameObject sellButton;
 
 	[SerializeField]
 	protected GameObject initialBaitButton;
+
+	[SerializeField]
+	protected GameObject leaveShopButton;
 
 	[SerializeField]
 	protected EventSystem eventSystem;
@@ -65,16 +68,6 @@ public class BaitShop : Shop {
 	}
 
 	public Coroutine RunEnterShop {
-		get;
-		set;
-	}
-
-	public List<EventReference> CurrentVoiceOverChain {
-		get;
-		set;
-	} = new List<EventReference>();
-
-	public int ChainVoiceOverPosition {
 		get;
 		set;
 	}
@@ -108,13 +101,7 @@ public class BaitShop : Shop {
 	#region Private Methods
 
 	public override void VoiceLineOver(EventInstance eventInstance, bool skipped) {
-		if (skipped) {
-			VoiceOverChainFinished();
-		}
-		if (this.ChainVoiceOverPosition == this.CurrentVoiceOverChain.Count) {
-			VoiceOverChainFinished();
-		}
-			switch (this.CurrentState) {
+		switch (this.CurrentState) {
 			case State.Defualt:
 				break;
 			case State.Entering:
@@ -165,7 +152,6 @@ public class BaitShop : Shop {
 	}
 
 	public void LeaveBaitShop() {
-		Debug.Log(AudioManager.Instance.VoiceLineInProgress);
 		if (AudioManager.Instance.VoiceLineInProgress) {
 			return;
 		}
@@ -185,15 +171,6 @@ public class BaitShop : Shop {
 			GameManager.Instance.ShopController.ShoreMenu.FinishedInShop(this);
 			GameManager.Instance.ShopController.SetState(ShopController.State.Shore);
 		}
-	}
-
-	public virtual void PlayVoiceOverChain() {
-		AudioManager.Instance.PlayVoiceOver(this.CurrentVoiceOverChain[this.ChainVoiceOverPosition]);
-		this.ChainVoiceOverPosition++;
-	}
-
-	public virtual void VoiceOverChainFinished() {
-		this.CurrentVoiceOverChain.Clear();
 	}
 
 	public virtual IEnumerator WaitOneFrame(Action callback) {

@@ -26,6 +26,8 @@ public class CheatManager : Singleton<CheatManager>
 			return;
 		}
 		ShowFirstShopTutorialCheats();
+		ShowSecondShopTutorialCheats();
+		ShowThirdShopTutorialCheats();
 		ShowSecondCatchTutorialCheats();
 		ShowThirdCatchTutorialCheats();
 		ShowFourthCatchTutorialCheats();
@@ -123,6 +125,58 @@ public class CheatManager : Singleton<CheatManager>
 		if (SceneManager.GetActiveScene().name == LevelManager.ShopTutorial_00) {
 			for (int i = 0; i < firstShopTutorialCheats.CaughtFish.Length; i++) {
 				foreach (var fish in firstShopTutorialCheats.CaughtFish) {
+					while (GameManager.Instance.CaughtFish.Count <= fish.FishIndex) {
+						GameManager.Instance.CaughtFish.Add(0);
+					}
+					GameManager.Instance.CaughtFish[fish.FishIndex] = fish.FishAmount;
+				}
+			}
+		}
+	}
+
+	#endregion
+
+
+	#region  Second Shop Turotial
+
+	[System.Serializable]
+	public class SecondShopTutorialCheats {
+		public CaughtFishCheatData[] CaughtFish;
+	}
+
+	[SerializeField]
+	private SecondShopTutorialCheats secondShopTutorialCheats;
+
+	private void ShowSecondShopTutorialCheats() {
+		if (SceneManager.GetActiveScene().name == LevelManager.ShopTutorial_01) {
+			for (int i = 0; i < secondShopTutorialCheats.CaughtFish.Length; i++) {
+				foreach (var fish in secondShopTutorialCheats.CaughtFish) {
+					while (GameManager.Instance.CaughtFish.Count <= fish.FishIndex) {
+						GameManager.Instance.CaughtFish.Add(0);
+					}
+					GameManager.Instance.CaughtFish[fish.FishIndex] = fish.FishAmount;
+				}
+			}
+		}
+	}
+
+	#endregion
+
+
+	#region  Third Shop Turotial
+
+	[System.Serializable]
+	public class SThirdShopTutorialCheats {
+		public CaughtFishCheatData[] CaughtFish;
+	}
+
+	[SerializeField]
+	private SThirdShopTutorialCheats thirdShopTutorialCheats;
+
+	private void ShowThirdShopTutorialCheats() {
+		if (SceneManager.GetActiveScene().name == LevelManager.ShopTutorial_02) {
+			for (int i = 0; i < thirdShopTutorialCheats.CaughtFish.Length; i++) {
+				foreach (var fish in thirdShopTutorialCheats.CaughtFish) {
 					while (GameManager.Instance.CaughtFish.Count <= fish.FishIndex) {
 						GameManager.Instance.CaughtFish.Add(0);
 					}

@@ -74,8 +74,12 @@ public class BaitView : MonoBehaviour
 	}
 
 	public void BaitSelected(int baitIndex) {
+		if(baitIndex == this.BaitIndex) {
+			return;
+		}
+		AudioManager.Instance.PlayBaitSound(false, this.BaitIndex);
 		this.BaitIndex = baitIndex;
-		
+		AudioManager.Instance.PlayBaitSound(true, this.BaitIndex);
 	}
 
 	public void BaitClicked(int baitIndex) {

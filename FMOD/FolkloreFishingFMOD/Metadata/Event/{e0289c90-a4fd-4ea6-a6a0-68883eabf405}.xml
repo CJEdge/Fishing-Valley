@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{e0289c90-a4fd-4ea6-a6a0-68883eabf405}">
 		<property name="name">
-			<value>CastRodTutorial</value>
+			<value>CastRodTutorial 0</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>

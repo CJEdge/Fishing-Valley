@@ -459,16 +459,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469e6cccfcf817041a012a6e43713be7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  applyBaitTutorials: []
+  applyBaitTutorials:
+  - Guid:
+      Data1: 741372942
+      Data2: 1301025098
+      Data3: -564085585
+      Data4: -935877879
+    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/ApplyBaitTutorial 7
   castRodTutorials: []
-  reelTutorials: []
+  reelTutorials:
+  - Guid:
+      Data1: 551391661
+      Data2: 1203060119
+      Data3: -271643980
+      Data4: 2088816803
+    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 11
   tutorialCatchVoices:
   - Guid:
-      Data1: -1464831895
-      Data2: 1164210065
-      Data3: 102848188
-      Data4: -1661009784
-    Path: event:/VoiceOver/Levels/CaughtFish/TutorialFish 4
+      Data1: -261545283
+      Data2: 1091930301
+      Data3: -2121187961
+      Data4: 938264281
+    Path: event:/VoiceOver/Levels/CaughtFish/TutorialFish 5
   levelIndex: 3
 --- !u!4 &641266736 stripped
 Transform:
@@ -648,58 +660,6 @@ PrefabInstance:
     - target: {fileID: 2536111126999484089, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: BaitSounds.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: AttatchBaitSounds.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: BaitSounds.Array.data[7].Path
-      value: event:/SFX/BaitIdle
-      objectReference: {fileID: 0}
-    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: BaitSounds.Array.data[7].Guid.Data1
-      value: -1751036424
-      objectReference: {fileID: 0}
-    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: BaitSounds.Array.data[7].Guid.Data2
-      value: 1219677751
-      objectReference: {fileID: 0}
-    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: BaitSounds.Array.data[7].Guid.Data3
-      value: -754223217
-      objectReference: {fileID: 0}
-    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: BaitSounds.Array.data[7].Guid.Data4
-      value: -75916562
-      objectReference: {fileID: 0}
-    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: AttatchBaitSounds.Array.data[7].Path
-      value: event:/SFX/AttatchBait
-      objectReference: {fileID: 0}
-    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: AttatchBaitSounds.Array.data[7].Guid.Data1
-      value: -1561571289
-      objectReference: {fileID: 0}
-    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: AttatchBaitSounds.Array.data[7].Guid.Data2
-      value: 1177583210
-      objectReference: {fileID: 0}
-    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: AttatchBaitSounds.Array.data[7].Guid.Data3
-      value: -336593267
-      objectReference: {fileID: 0}
-    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: AttatchBaitSounds.Array.data[7].Guid.Data4
-      value: 1816793257
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: fourthCatchTutorialCheats.Baits.Array.data[0].BaitAmount
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7393596337781405747, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: m_Name
