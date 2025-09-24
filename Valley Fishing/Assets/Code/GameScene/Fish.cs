@@ -238,7 +238,7 @@ public class Fish : AbstractState<Fish.State>
 			case State.Default:
 				break;
 			case State.OnHook:
-				if(this.InputController.ReelSpeed > 0) {
+				if(this.InputController.ReelLevel > 0) {
 					this.CatchStarted = true;
 				}
 				if (failable) {

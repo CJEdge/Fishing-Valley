@@ -95,7 +95,7 @@ public class PlayerArms : MonoBehaviour
 	#endregion
 
 	public void Reel() {
-		AudioManager.Instance.SetReelRate(GameManager.Instance.InputController.ReelSpeed);
+		AudioManager.Instance.SetReelRate(GameManager.Instance.InputController.ReelLevel);
 		switch (GameManager.Instance.InputController.CurrentState) {
 			case InputController.State.ReelingLocked:
 				animator.Play(Idle);

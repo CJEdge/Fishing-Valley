@@ -23,22 +23,23 @@ public class InputController : AbstractState<InputController.State> {
 			case State.Default:
 				GameManager.Instance.InputController = this;
 				this.InputTypes = new List<InputType> { mouse, controller };
+				StartCoroutine(EnableSceneSwitching());
 				SetState(State.ReelingLocked);
 				break;
 			case State.ReelingLocked:
-				this.ReelSpeed = 0;
+				this.ReelLevel = 0;
 				break;
 			case State.NotReeling:
-				this.ReelSpeed = 0;
+				this.ReelLevel = 0;
 				break;
 			case State.CalmReeling:
-				this.ReelSpeed = 1;
+				this.ReelLevel = 1;
 				break;
 			case State.NormalReeling:
-				this.ReelSpeed = 2;
+				this.ReelLevel = 2;
 				break;
 			case State.FastReeling:
-				this.ReelSpeed = 3;
+				this.ReelLevel = 3;
 				break;
 			default:
 				break;
@@ -48,7 +49,6 @@ public class InputController : AbstractState<InputController.State> {
 	protected override void UpdateState(State state) {
 		switch (state) {
 			case State.ReelingLocked:
-				ReduceReelRate();
 				break;
 			case State.NotReeling:
 				Reel();
@@ -72,8 +72,13 @@ public class InputController : AbstractState<InputController.State> {
 
 	#region Serialized Fields
 
+	[Header("Variables")]
+
 	[SerializeField]
 	private Vector2 clickVibration;
+
+	[SerializeField]
+	private float reelCalculationTime;
 
 	[Header("Components")]
 
@@ -108,34 +113,17 @@ public class InputController : AbstractState<InputController.State> {
 
 		public List<float> reelStateThresholds;
 
-		public float reelResetRate;
+		public float HorizontalSpeed { get; set; }
 
-		public float maxReelRate;
+		public float ReelInput;
 
-		public float completeReelResetTime;
+		public float LastReelInput { get; set; }
 
-		public float horizontalSpeed;
+		public float CurrentReelResetRate { get; set; }
 
-		[field:SerializeField]
-		public float ReelInput {
-			get;
-			set;
-		}
+		public float CurrentCompleteReelResetTime { get; set; }
 
-		public float LastReelInput {
-			get;
-			set;
-		}
-
-		public float CurrentReelResetRate {
-			get;
-			set;
-		}
-
-		public float CurrentCompleteReelResetTime {
-			get;
-			set;
-		}
+		public float ReelSpeed;
 	}
 
 	#endregion
@@ -143,69 +131,29 @@ public class InputController : AbstractState<InputController.State> {
 
 	#region Properties
 
-	private List<InputType> InputTypes {
-		get;
-		set;
-	}
+	private List<InputType> InputTypes { get; set; }
 
-	public Action OnClick {
-		get;
-		set;
-	}
+	public Action OnClick { get; set; }
 
-	public Action OnSkip {
-		get;
-		set;
-	}
+	public Action OnSkip { get; set; }
 
-	public Action OnPause {
-		get;
-		set;
-	}
+	public Action OnPause { get; set; }
 
-	public bool SelectionManuallySet {
-		get;
-		set;
-	}
+	public bool SelectionManuallySet { get; set; }
 
-	public Vector2 HorizontalInput {
-		get;
-		set;
-	}
+	public Vector2 HorizontalInput { get; set; }
 
-	private Vector2 PreviousRightStickInput {
-		get;
-		set;
-	}
+	private Vector2 PreviousRightStickInput { get; set; }
 
-	public bool StrafingEnabled {
-		get;
-		set;
-	}
+	public bool StrafingEnabled { get; set; }
 
-	public int ReelSpeed {
-		get;
-		set;
-	}
+	public int ReelLevel { get; set; }
 
-	private bool IsSwitchingScenes {
-		get;
-		set;
-	} = false;
+	private bool IsSwitchingScenes { get;set; } = false;
 
-	private bool CanSwitchScenes {
-		get;
-		set;
-	} = false;
+	private bool CanSwitchScenes { get; set; } = false;
 
-	#endregion
-
-
-	#region Mono Behaviours
-
-	public void Start() {
-		StartCoroutine(EnableSceneSwitching());
-	}
+	public float CurrentReelResetTime { get; set; }
 
 	#endregion
 
@@ -214,15 +162,12 @@ public class InputController : AbstractState<InputController.State> {
 
 	public void Click(InputAction.CallbackContext context) {
 		if (context.performed) {
-			if (!InputTracker.LastInputWasMouse) {
-				VibrationManager.Instance.SetVibrationFrequency(true, clickVibration.x, clickVibration.y);
-			}
 			OnClick?.Invoke();
 		}
 	}
 
 	public void MoveHorizontalMouse(InputAction.CallbackContext context) {
-		this.HorizontalInput = context.ReadValue<Vector2>() * mouse.horizontalSpeed;
+		this.HorizontalInput = context.ReadValue<Vector2>() * mouse.HorizontalSpeed;
 	}
 
 	public void ReelMouse(InputAction.CallbackContext context) {
@@ -243,14 +188,15 @@ public class InputController : AbstractState<InputController.State> {
 		float angle = Vector2.SignedAngle(from, to);
 		float rotationMagnitude = Mathf.Abs(angle);
 
-		controller.ReelInput = Mathf.Clamp(controller.ReelInput + (rotationMagnitude / 360f), 0f, controller.maxReelRate);
+		controller.ReelInput = controller.ReelInput + (rotationMagnitude / 360f);
 
 		this.PreviousRightStickInput = currentStick;
+		//TODO set previous magnitude
 		StartCoroutine(SetLastReelInput());
 	}
 
 	public void MoveHorizontalController(InputAction.CallbackContext context) {
-		this.HorizontalInput = context.ReadValue<Vector2>() * controller.horizontalSpeed;
+		this.HorizontalInput = context.ReadValue<Vector2>() * controller.HorizontalSpeed;
 	}
 
 	public void Blur(InputAction.CallbackContext context) {
@@ -282,11 +228,10 @@ public class InputController : AbstractState<InputController.State> {
 	}
 
 	public void Skip(InputAction.CallbackContext context) {
-		if (!context.performed) {
-			return;
+		if (context.performed) {
+			AudioManager.Instance.SkipVoiceOver();
+			OnSkip?.Invoke();
 		}
-		AudioManager.Instance.SkipVoiceOver();
-		OnSkip?.Invoke();
 	}
 
 	public void SelectButton(GameObject button) {
@@ -312,50 +257,28 @@ public class InputController : AbstractState<InputController.State> {
 
 	private void Reel() {
 		SetReelState();
-		CheckToResetReelInput();
-		ReduceReelRate();
-	}
-
-	private void CheckToResetReelInput() {
-		for (int i = 0; i < this.InputTypes.Count; i++) {
-			if (this.InputTypes[i].LastReelInput > this.InputTypes[i].ReelInput) {
-				if (this.InputTypes[i].CurrentCompleteReelResetTime < this.InputTypes[i].completeReelResetTime) {
-					this.InputTypes[i].CurrentCompleteReelResetTime += Time.deltaTime;
-				} else {
-					this.InputTypes[i].CurrentCompleteReelResetTime = 0;
-					this.InputTypes[i].ReelInput = 0;
-				}
-			} else {
-				this.InputTypes[i].CurrentCompleteReelResetTime = 0;
-			}
+		if(CurrentReelResetTime < reelCalculationTime) {
+			CurrentReelResetTime += Time.deltaTime;
+		} else {
+			CurrentReelResetTime = 0;
+			controller.ReelSpeed = controller.ReelInput / reelCalculationTime;
+			controller.ReelInput = 0;
 		}
 	}
-
-	private void ReduceReelRate() {
-		for (int i = 0; i < this.InputTypes.Count; i++) {
-			if (this.InputTypes[i].CurrentReelResetRate < this.InputTypes[i].reelResetRate) {
-				this.InputTypes[i].CurrentReelResetRate += Time.deltaTime;
-			} else {
-				this.InputTypes[i].CurrentReelResetRate = 0;
-				this.InputTypes[i].ReelInput = Mathf.Clamp(this.InputTypes[i].ReelInput - 1, 0, this.InputTypes[i].maxReelRate);
-			}
-		}
-	}
-
 
 	private void SetReelState() {
 		bool allInputTypesNotReeling = true;
 		for (int i = 0; i < this.InputTypes.Count; i++) {
-			if(this.InputTypes[i].ReelInput > 0) {
+			if(controller.ReelSpeed > 0) {
 				allInputTypesNotReeling = false;
 			}
-			if (this.InputTypes[i].ReelInput < this.InputTypes[i].reelStateThresholds[0] && this.InputTypes[i].ReelInput > 0) {
+			if (controller.ReelSpeed < controller.reelStateThresholds[0] && controller.ReelInput > 0) {
 				SetState(State.CalmReeling);
 			}
-			if (this.InputTypes[i].ReelInput < this.InputTypes[i].reelStateThresholds[1] && this.InputTypes[i].ReelInput > this.InputTypes[i].reelStateThresholds[0]) {
+			if (controller.ReelSpeed < controller.reelStateThresholds[1] && controller.ReelInput > controller.reelStateThresholds[0]) {
 				SetState(State.NormalReeling);
 			}
-			if (this.InputTypes[i].ReelInput > this.InputTypes[i].reelStateThresholds[1]) {
+			if (controller.ReelSpeed > controller.reelStateThresholds[1]) {
 				SetState(State.FastReeling);
 			}
 		}
