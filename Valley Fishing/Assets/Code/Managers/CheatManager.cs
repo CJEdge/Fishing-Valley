@@ -17,13 +17,22 @@ public class CheatManager : Singleton<CheatManager>
 
 	private int ScenesLoaded;
 
+	[field:SerializeField]
+	private bool useCheats = true;
+
+	[field: SerializeField]
+	private bool superFastCatch;
+
 	#region Mono Behaviours
 
 	public void Start() {
 		SceneManager.sceneLoaded -= SceneLoaded;
 		SceneManager.sceneLoaded += SceneLoaded;
-		if (ScenesLoaded > 0) {
+		if (ScenesLoaded > 0 && !useCheats) {
 			return;
+		}
+		if (superFastCatch) {
+			GameManager.Instance.LevelController.OnFishSpawned += SetFishSpeed;
 		}
 		ShowFirstShopTutorialCheats();
 		ShowSecondShopTutorialCheats();
@@ -43,6 +52,27 @@ public class CheatManager : Singleton<CheatManager>
 		if (GameManager.Instance.TotalBaitsLeft == 0) {
 			ShowThirdCatchTutorialCheats();
 		}
+		if (superFastCatch) {
+			GameManager.Instance.LevelController.OnFishSpawned += SetFishSpeed;
+		}
+		if (useCheats) {
+			ShowFirstShopTutorialCheats();
+			ShowSecondShopTutorialCheats();
+			ShowThirdShopTutorialCheats();
+			ShowSecondCatchTutorialCheats();
+			ShowThirdCatchTutorialCheats();
+			ShowFourthCatchTutorialCheats();
+			ShowFirstBossTutorialCheats();
+		}
+	}
+
+	#endregion
+
+
+	#region Private Methods
+
+	private void SetFishSpeed() {
+		GameManager.Instance.CurrentFish.ReelSpeed = 1000;
 	}
 
 	#endregion
@@ -81,6 +111,7 @@ public class CheatManager : Singleton<CheatManager>
 
 	private void ShowThirdCatchTutorialCheats() {
 		if (SceneManager.GetActiveScene().name == LevelManager.CatchTutorial_02) {
+			Debug.Log("here");
 			for (int i = 0; i < thirdCatchTutorialCheats.Baits.Length; i++) {
 				GameManager.Instance.CurrentBaits[thirdCatchTutorialCheats.Baits[i].BaitIndex] = thirdCatchTutorialCheats.Baits[i].BaitAmount;
 			}
@@ -166,12 +197,12 @@ public class CheatManager : Singleton<CheatManager>
 	#region  Third Shop Turotial
 
 	[System.Serializable]
-	public class SThirdShopTutorialCheats {
+	public class ThirdShopTutorialCheats {
 		public CaughtFishCheatData[] CaughtFish;
 	}
 
 	[SerializeField]
-	private SThirdShopTutorialCheats thirdShopTutorialCheats;
+	private ThirdShopTutorialCheats thirdShopTutorialCheats;
 
 	private void ShowThirdShopTutorialCheats() {
 		if (SceneManager.GetActiveScene().name == LevelManager.ShopTutorial_02) {

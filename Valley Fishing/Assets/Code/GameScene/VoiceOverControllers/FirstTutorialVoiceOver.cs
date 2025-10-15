@@ -1,9 +1,76 @@
 using FMOD.Studio;
+using FMODUnity;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class FirstTutorialVoiceOver : VoiceOverController
 {
+	[SerializeField]
+	private float initialPracticeReelTime;
+
+	[SerializeField]
+	private float reelPracticeTime;
+
+	[SerializeField]
+	private float reelFailTime;
+
+	//[HideInInspector]
+	[SerializeField]
+	private float CurrentPracticeReelTime;
+
+	private int LastReelLevel;
+
+
+	public override void Start() {
+		base.Start();
+		AudioManager.Instance.PlayReelSound(FMODManager.Instance.ReelSound);
+	}
+
+	public void Update() {
+		if (!this.ReelTutorialsCompleted[0]) {
+			if (GameManager.Instance.InputController.ReelLevel > 0) {
+				if (this.CurrentPracticeReelTime < initialPracticeReelTime) {
+					this.CurrentPracticeReelTime += Time.deltaTime;
+				} else {
+					this.CurrentPracticeReelTime = 0;
+					IncrementTutorial(this.ReelTutorialsCompleted);
+					PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
+				}
+			}
+		}
+		else if(GameManager.Instance.InputController.ReelLevel == this.LastReelLevel && GameManager.Instance.InputController.ReelLevel != 0) {
+			if (GameManager.Instance.CurrentFish != null) {
+				switch (GameManager.Instance.CurrentFish.CurrentActivityLevel) {
+					case Fish.ActivityLevel.calm:
+						CountReelInput(1);
+						break;
+					case Fish.ActivityLevel.medium:
+						CountReelInput(2);
+						break;
+					case Fish.ActivityLevel.active:
+						Debug.Log("active");
+						CountReelInput(3);
+						break;
+					default:
+						break;
+				}
+			}
+			if (this.ReelTutorialsCompleted[3]) {
+				return;
+			}
+			if (!this.ReelTutorialsCompleted[1]) {
+				CountReelInput(3);
+			} else if (!this.ReelTutorialsCompleted[2]) {
+				CountReelInput(1);
+			} else if (!this.ReelTutorialsCompleted[3]) {
+				CountReelInput(2);
+			}
+		} else {
+			this.CurrentPracticeReelTime = 0;
+		}
+		this.LastReelLevel = GameManager.Instance.InputController.ReelLevel;
+	}
 
 	public override bool PerformStateSwitch() {
 		if (!base.PerformStateSwitch()) {
@@ -11,40 +78,51 @@ public class FirstTutorialVoiceOver : VoiceOverController
 		}
 		switch (this.LevelController.CurrentState) {
 			case LevelController.State.Idle:
-				for (int i = 0; i < this.AttatchBaitTutorialsCompleted.Length; i++) {
-					if (!this.AttatchBaitTutorialsCompleted[i]) {
-						if (!AttatchBaitTutorialExtras(i)) {
-							GameManager.Instance.CurrentBaits[i] = 1;
-							AudioManager.Instance.PlayVoiceOver(applyBaitTutorials[i]);
-						}
+				if (!this.ReelTutorialsCompleted[2]) {
+					PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
+					LevelController.SetState(LevelController.State.ReelingFish);
+				} else {
+					if(GameManager.Instance.TotalCaughtFish == 8) {
+						SceneManager.LoadScene(LevelManager.CatchTutorial_01);
+					}
+					if (this.ReelTutorialsCompleted[6]) {
+						GameManager.Instance.CurrentBait = GameManager.Instance.Baits[3];
+						LevelController.SetState(LevelController.State.IdleWithBait);
 						break;
 					}
+					if (this.ReelTutorialsCompleted[5]) {
+						GameManager.Instance.CurrentBait = GameManager.Instance.Baits[2];
+						LevelController.SetState(LevelController.State.IdleWithBait);
+						break;
+					}
+					if (this.ReelTutorialsCompleted[4]) {
+						GameManager.Instance.CurrentBait = GameManager.Instance.Baits[1];
+						LevelController.SetState(LevelController.State.IdleWithBait);
+					}
 				}
-				this.CurrentTutorialEventInstance = AudioManager.Instance.VoiceLineEventInstance;
 				break;
-			case LevelController.State.AttatchBait:
-				if (GameManager.Instance.TotalCaughtFish == 9) {
-					GameManager.Instance.LevelController.FishView.EnableFishUI(false);
-					SceneManager.LoadScene(LevelManager.ShopTutorial_00);
-					return false;
-				}
-				for (int i = 0; i < this.AttatchBaitTutorialsCompleted.Length; i++) {
-					if (!this.AttatchBaitTutorialsCompleted[i]) {
-						if (!AttatchBaitTutorialCompleteExtras(i)) {
-							this.AttatchBaitTutorialsCompleted[i] = true;
-						}
-						break;
-					}
+			case LevelController.State.IdleWithBait:
+				if (this.CastRodTutorialsCompleted[0]) {
+					PlayNextTutotialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
+				} else {
+					IncrementTutorial(this.CastRodTutorialsCompleted);
 				}
 				break;
 			case LevelController.State.ReelingFish:
-				if (GameManager.Instance.CurrentFish.IsTutorial || GameManager.Instance.TotalCaughtFish == 3 || GameManager.Instance.TotalCaughtFish == 8) {
+				if (this.ReelTutorialsCompleted[2]) {
 					PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
 					IncrementTutorial(this.ReelTutorialsCompleted);
 				}
 				break;
 			case LevelController.State.FishCaught:
 				if (AllTutorialsCompleted(this.CaughtFishTutorialsCompleted) || !GameManager.Instance.CurrentFish.IsTutorial) {
+					if (GameManager.Instance.TotalCaughtFish == 8) {
+						List<EventReference> voiceLines = new List<EventReference>();
+						voiceLines.Add(this.CurrentFish.CaughtVoiceLine);
+						voiceLines.Add(FMODManager.Instance.LeaveBoatPrompts[0]);
+						AudioManager.Instance.PlayVoiceOverChain(voiceLines);
+						break;
+					}
 					AudioManager.Instance.PlayVoiceOver(this.CurrentFish.CaughtVoiceLine);
 					this.CurrentTutorialEventInstance = AudioManager.Instance.VoiceLineEventInstance;
 
@@ -61,28 +139,44 @@ public class FirstTutorialVoiceOver : VoiceOverController
 
 	public override void VoiceOverFinished(EventInstance eventInstance, bool skipped) {
 		base.VoiceOverFinished(eventInstance,skipped);
-	}
-
-	private bool AttatchBaitTutorialExtras(int currentTutorialIndex) {
-		if (currentTutorialIndex == 3) {
-			if (GameManager.Instance.CurrentBaits[currentTutorialIndex] == 0 && GameManager.Instance.TotalCaughtFish < 9) {
-				GameManager.Instance.CurrentBaits[currentTutorialIndex] = 5;
-				AudioManager.Instance.PlayVoiceOver(applyBaitTutorials[currentTutorialIndex]);
-				return true;
-			} else {
-				GameManager.Instance.LevelController.SetState(LevelController.State.AttatchBait);
-				return true;
-			}
-		} else {
-			return false;
+		if(LevelController.CurrentState == LevelController.State.ReelingFish) {
+			GameManager.Instance.InputController.SetState(InputController.State.NotReeling);
 		}
 	}
 
-	private bool AttatchBaitTutorialCompleteExtras(int currentTutorialIndex) {
-		if (currentTutorialIndex == 3 && GameManager.Instance.TotalCaughtFish < 7) {
-			return true;
+	private void CountReelInput(int desiredReelLevel) {
+		if (GameManager.Instance.InputController.ReelLevel == desiredReelLevel) {
+			if (this.CurrentPracticeReelTime < reelPracticeTime) {
+				this.CurrentPracticeReelTime += Time.deltaTime;
+			} else {
+				this.CurrentPracticeReelTime = 0;
+				if (GameManager.Instance.CurrentFish != null) {
+					return;
+				}
+				if(this.ReelTutorialsCompleted[2] == true) {
+					IncrementTutorial(this.ReelTutorialsCompleted);
+					PlayNextTutotialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
+					GameManager.Instance.CurrentBait = GameManager.Instance.Baits[0];
+					LevelController.SetState(LevelController.State.IdleWithBait);
+					return;
+				}
+				IncrementTutorial(this.ReelTutorialsCompleted);
+				PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
+			}
 		} else {
-			return false;
+			if (this.CurrentPracticeReelTime < reelFailTime) {
+				this.CurrentPracticeReelTime += Time.deltaTime;
+			} else {
+				if(GameManager.Instance.InputController.ReelLevel < desiredReelLevel) {
+					if (AudioManager.Instance.VoiceLineInProgress) {
+						return;
+					}
+					AudioManager.Instance.PlayVoiceOver(tooSlowPrompt);
+				} else {
+					AudioManager.Instance.PlayVoiceOver(tooFastPrompt);
+				}
+				this.CurrentPracticeReelTime = 0;
+			}
 		}
 	}
 }

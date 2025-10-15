@@ -67,9 +67,6 @@ public class Fish : AbstractState<Fish.State>
 	private float centreThreshold;
 
 	[SerializeField]
-	private float reelSpeed;
-
-	[SerializeField]
 	private float swimAwaySpeed;
 
 	[SerializeField]
@@ -97,6 +94,9 @@ public class Fish : AbstractState<Fish.State>
 	private float activityLevelChangeTime;
 
 	[SerializeField]
+	private float correctActivityChangeTime;
+
+	[SerializeField]
 	private float movementChangeTime;
 
 	[SerializeField]
@@ -116,6 +116,7 @@ public class Fish : AbstractState<Fish.State>
 		}
 	}
 
+	[field:SerializeField]
 	private bool IsStrafer {
 		get;
 		set;
@@ -162,6 +163,8 @@ public class Fish : AbstractState<Fish.State>
 		set;
 	}
 
+	private float CurrentCorrectActivityChangeTime { get; set; }
+
 	private bool ActivityLevelChanging {
 		get;
 		set;
@@ -176,61 +179,43 @@ public class Fish : AbstractState<Fish.State>
 		set;
 	}
 
-	public StudioEventEmitter ActivitySplashSFX {
-		get {
-			return activitySplashSFX;
-		}
-	}
+	public StudioEventEmitter ActivitySplashSFX { get => activitySplashSFX; }
 
-	public string FishName {
-		get {
-			return fishName;
-		}
-	}
+	public string FishName { get => fishName; }
 
-	public int FishIndex {
-		get {
-			return fishIndex;
-		}
-	}
+	public int FishIndex { get => fishIndex; }
 
-	public int SellPrice {
-		get {
-			return sellPrice;
-		}
-	}
+	public int SellPrice { get => sellPrice; }
 
+	public Transform LineEnd { get => lineEnd; }
 
-	public Transform LineEnd {
-		get {
-			return lineEnd;
-		}
-	}
+	public bool IsFailable { get; set; }
 
-	public bool IsFailable {
-		get;
-		set;
-	}
+	public bool IsTutorial { get; set; }
 
-	public bool IsTutorial {
-		get;
-		set;
-	}
+	public Action<MovementDirection> Strafe { get; set; }
 
-	public Action<MovementDirection> Strafe {
-		get;
-		set;
-	}
+	public Action BecameCentered { get; set; }
 
-	public RodLineComponent RodLineComponent {
-		get;
-		set;
-	}
+	public RodLineComponent RodLineComponent { get; set; }
+
+	[field:SerializeField]
+	public float ReelSpeed { get; set; }
 
 	#endregion
 
 
 	#region Mono Behaviours
+
+	public void Start() {
+		AudioManager.Instance.OnVoiceLineStarted += FreezeFish;
+		AudioManager.Instance.OnVoiceLineOver += UnFreezeFish;
+	}
+
+	public void OnDestroy() {
+		AudioManager.Instance.OnVoiceLineStarted -= FreezeFish;
+		AudioManager.Instance.OnVoiceLineOver -= UnFreezeFish;
+	}
 
 	public override void Update() {
 		HandleCentering();
@@ -338,7 +323,7 @@ public class Fish : AbstractState<Fish.State>
 			}
 			VibrationManager.Instance.SetVibrationFrequency(true, DistanceAsPercentage(), Mathf.Infinity);
 			VibrationManager.Instance.SetVibrationFrequency(false, 0, Mathf.Infinity);
-			rb.AddForce(0, 0, -reelSpeed);
+			rb.AddForce(0, 0, -this.ReelSpeed);
 		} else {
 			this.RodLineComponent.CurveAmount = Mathf.MoveTowards(this.RodLineComponent.CurveAmount, 1, Time.deltaTime);
 			IncreaseFailTime();
@@ -356,6 +341,7 @@ public class Fish : AbstractState<Fish.State>
 			if (transform.position.z < (this.ActivityLevelIntervals[i])) {
 				if (this.CurrentActivityLevel != ActivityLevels[i]) {
 					SetActivityLevel(ActivityLevels[i]);
+					GameManager.Instance.InputController.PauseReelSFX(correctActivityChangeTime * 2);
 					if (i != 0) {
 						this.ActivityLevelChanging = true;
 					}
@@ -366,7 +352,17 @@ public class Fish : AbstractState<Fish.State>
 		if (this.ActivityLevelChanging) {
 			if (this.CurrentLevelActivityChangeTime <= activityLevelChangeTime) {
 				this.CurrentLevelActivityChangeTime += Time.deltaTime;
+				if (GameManager.Instance.InputController.ReelLevel == (int)this.CurrentActivityLevel) {
+					if (this.CurrentCorrectActivityChangeTime < correctActivityChangeTime) {
+						this.CurrentCorrectActivityChangeTime += Time.deltaTime;
+					} else {
+						this.CurrentCorrectActivityChangeTime = 0;
+						this.CurrentLevelActivityChangeTime = 0;
+						this.ActivityLevelChanging = false;
+					}
+				}
 			} else {
+				this.CurrentCorrectActivityChangeTime = 0;
 				this.CurrentLevelActivityChangeTime = 0;
 				this.ActivityLevelChanging = false;
 			}
@@ -398,6 +394,9 @@ public class Fish : AbstractState<Fish.State>
 
 	private void HandleCentering() {
 		if (transform.position.x > -centreThreshold && transform.position.x < centreThreshold) {
+			if (!this.IsCentred) {
+				this.BecameCentered?.Invoke();
+			}
 			this.IsCentred = true;
 		} else {
 			this.IsCentred = false;
@@ -472,6 +471,14 @@ public class Fish : AbstractState<Fish.State>
 		float totalLength = reelStart - reelEnd;
 		float distanceAlongLength = transform.position.z - reelStart;
 		return -(distanceAlongLength / totalLength)/2;
+	}
+
+	private void FreezeFish() {
+		rb.constraints = RigidbodyConstraints.FreezePosition;
+	}
+
+	private void UnFreezeFish(EventInstance eventInstance, bool skipped) {
+		rb.constraints = RigidbodyConstraints.FreezeRotation;
 	}
 
 	#endregion

@@ -743,7 +743,6 @@ MonoBehaviour:
   failable: 0
   fishSpeed: 2
   centreThreshold: 20
-  reelSpeed: 100
   swimAwaySpeed: 100
   strafedSwimAwaySpeed: 30
   rb: {fileID: 6682323996151832369}
@@ -756,10 +755,13 @@ MonoBehaviour:
   reelStart: 63
   reelEnd: 16
   activityLevelChangeTime: 3
+  correctActivityChangeTime: 0.6
   movementChangeTime: 0
   strafeAudio: {fileID: 2211003099072869323}
   lineEnd: {fileID: 5132849399768412513}
+  <IsStrafer>k__BackingField: 0
   <MovementIntervalsCompleted>k__BackingField: 0
+  <ReelSpeed>k__BackingField: 100
 --- !u!54 &6682323996151832369
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -424,8 +424,8 @@ MonoBehaviour:
   fishSpawnTransform: {fileID: 1296795434}
   fishView: {fileID: 723462215}
   baitView: {fileID: 1927175311}
-  leftStrafeTransform: {fileID: 0}
-  rightStrafeTransform: {fileID: 0}
+  leftStrafeTransform: {fileID: 2023917415}
+  rightStrafeTransform: {fileID: 741194808}
   eventSystem: {fileID: 1015315668}
 --- !u!4 &582599907
 Transform:
@@ -463,30 +463,30 @@ MonoBehaviour:
     Path: event:/VoiceOver/Levels/ApplyBaitTutorial/ApplyBaitTutorial 5
   castRodTutorials:
   - Guid:
-      Data1: 676423759
-      Data2: 1328956856
-      Data3: -652405619
-      Data4: 267341289
-    Path: event:/VoiceOver/Levels/CastRodTutorials/CastRodTutorial 2
+      Data1: 920292586
+      Data2: 1308191216
+      Data3: -1919537504
+      Data4: 1844583085
+    Path: event:/VoiceOver/Levels/CastRodTutorials/CastRodTutorial 1
   reelTutorials:
   - Guid:
-      Data1: 1111676978
-      Data2: 1215941556
-      Data3: 412345509
-      Data4: 2017433008
-    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 5
+      Data1: 1694011849
+      Data2: 1219964329
+      Data3: -261061971
+      Data4: -1733548315
+    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 8
   - Guid:
-      Data1: -1465139869
-      Data2: 1232753864
-      Data3: 612080037
-      Data4: 1023993747
-    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 6
+      Data1: 630586459
+      Data2: 1299545659
+      Data3: 1567785874
+      Data4: -1735779561
+    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 9
   - Guid:
-      Data1: 1654056158
-      Data2: 1214252947
-      Data3: 1276687795
-      Data4: 2115403206
-    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 7
+      Data1: -357923053
+      Data2: 1209324813
+      Data3: -441343573
+      Data4: -1984244675
+    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 10
   tutorialCatchVoices:
   - Guid:
       Data1: -1464831895
@@ -494,6 +494,20 @@ MonoBehaviour:
       Data3: 102848188
       Data4: -1661009784
     Path: event:/VoiceOver/Levels/CaughtFish/TutorialFish 5
+  tooFastPrompt:
+    Guid:
+      Data1: 1660095589
+      Data2: 1230346209
+      Data3: 784428195
+      Data4: -364368937
+    Path: event:/VoiceOver/Levels/ReelTutorial/ReelPrompts/Too Fast
+  tooSlowPrompt:
+    Guid:
+      Data1: -614330866
+      Data2: 1322106238
+      Data3: 623403159
+      Data4: -1650983258
+    Path: event:/VoiceOver/Levels/ReelTutorial/ReelPrompts/Too Slow
   levelIndex: 1
 --- !u!4 &641266736 stripped
 Transform:
@@ -511,6 +525,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367633640b1dc5549bf99ee813cdb04b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &741194808 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6826164371171645414, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
+  m_PrefabInstance: {fileID: 4197993320271460983}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,34 +693,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: secondCatchTutorialCheats.Baits.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: secondCatchTutorialCheats.Baits.Array.data[0].BaitIndex
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: secondCatchTutorialCheats.Baits.Array.data[1].BaitIndex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: secondCatchTutorialCheats.Baits.Array.data[2].BaitIndex
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: secondCatchTutorialCheats.Baits.Array.data[0].BaitAmount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: secondCatchTutorialCheats.Baits.Array.data[1].BaitAmount
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: secondCatchTutorialCheats.Baits.Array.data[2].BaitAmount
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 7393596337781405747, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -757,6 +748,11 @@ Transform:
   - {fileID: 1015315669}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2023917415 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2863019415998918703, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
+  m_PrefabInstance: {fileID: 4197993320271460983}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2071950620 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8469524166252715534, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
@@ -1091,6 +1087,10 @@ PrefabInstance:
       propertyPath: blackObject
       value: 
       objectReference: {fileID: 2071950620}
+    - target: {fileID: 1827627906022144295, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
+      propertyPath: controller.HorizontalSpeed
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 5794655492895963625, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
       propertyPath: m_Name
       value: '[Gameplay]'

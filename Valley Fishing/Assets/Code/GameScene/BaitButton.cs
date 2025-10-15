@@ -47,10 +47,13 @@ public class BaitButton : MonoBehaviour
 		baitView.BaitSelected(baitIndex);
 		if (!GameManager.Instance.Baits[baitIndex].IsTutorial) {
 			if (GameManager.Instance.CurrentBaits[baitIndex] <= FMODManager.Instance.BaitNumbers.Length) {
+				if (AudioManager.Instance.VoiceLineInProgress) {
+					return;
+				}
 				List<EventReference> voiceOverChain = new List<EventReference>();
 				voiceOverChain.Add(FMODManager.Instance.YouHave);
 				voiceOverChain.Add(FMODManager.Instance.BaitNumbers[GameManager.Instance.CurrentBaits[baitIndex] - 1]);
-				voiceOverChain.Add(FMODManager.Instance.Left);
+				voiceOverChain.Add(FMODManager.Instance.BaitTypeLeft[baitIndex]);
 				AudioManager.Instance.PlayVoiceOverChain(voiceOverChain);
 			}
 		}
@@ -58,6 +61,7 @@ public class BaitButton : MonoBehaviour
 
 	public void ClickBait() {
 		baitView.BaitClicked(baitIndex);
+		Debug.Log(baitIndex);
 	}
 
 	#endregion

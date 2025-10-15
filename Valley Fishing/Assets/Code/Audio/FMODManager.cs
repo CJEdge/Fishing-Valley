@@ -22,11 +22,13 @@ public class FMODManager : Singleton<FMODManager>
 
 	public EventReference[] CatchVoices;
 
+	public EventReference[] LeaveBoatPrompts;
+
 	public EventReference YouHave;
 
 	public EventReference[] BaitNumbers;
 
-	public EventReference Left;
+	public EventReference[] BaitTypeLeft;
 
 	[Header("ShopVoiceOver")]
 

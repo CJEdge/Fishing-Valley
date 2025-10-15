@@ -172,10 +172,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1827627906022144295, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
-      propertyPath: reelCalculationTime
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 5794655492895963625, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
       propertyPath: m_Name
       value: '[Gameplay]'
@@ -520,44 +516,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24ab7308f58aa34e9d5f2bc85718a69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  applyBaitTutorials:
-  - Guid:
-      Data1: 736888570
-      Data2: 1237845555
-      Data3: 1302096006
-      Data4: 997823191
-    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/ApplyBaitTutorial 0
-  - Guid:
-      Data1: 1185227841
-      Data2: 1167473012
-      Data3: 1704720298
-      Data4: -1675436907
-    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/ApplyBaitTutorial 1
-  - Guid:
-      Data1: -1804177842
-      Data2: 1133100240
-      Data3: 1407829949
-      Data4: 30758483
-    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/ApplyBaitTutorial 2
-  - Guid:
-      Data1: 1133537527
-      Data2: 1077086034
-      Data3: -1670942325
-      Data4: -1588406641
-    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/ApplyBaitTutorial 3
-  - Guid:
-      Data1: -561901699
-      Data2: 1148600959
-      Data3: -436482389
-      Data4: 45228382
-    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/ApplyBaitTutorial 4
+  applyBaitTutorials: []
   castRodTutorials:
   - Guid:
-      Data1: -534209392
-      Data2: 1319544061
-      Data3: -2006409050
-      Data4: 99920702
-    Path: event:/VoiceOver/Levels/CastRodTutorials/CastRodTutorial 0
+      Data1: -1210429963
+      Data2: 1205281890
+      Data3: -2138524270
+      Data4: -1305558416
+    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 3.1
   - Guid:
       Data1: 920292586
       Data2: 1308191216
@@ -590,11 +556,29 @@ MonoBehaviour:
       Data4: -286619100
     Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 3
   - Guid:
-      Data1: 1788111280
-      Data2: 1128273546
-      Data3: -1650726488
-      Data4: -1971983764
-    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 4
+      Data1: -675855944
+      Data2: 1171917578
+      Data3: -1379401807
+      Data4: 1777225753
+    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 3.2
+  - Guid:
+      Data1: -584608662
+      Data2: 1121065935
+      Data3: -1561617021
+      Data4: -1109119656
+    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 3.3
+  - Guid:
+      Data1: -1257206681
+      Data2: 1310649157
+      Data3: -1113750864
+      Data4: 399374485
+    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 3.4
+  - Guid:
+      Data1: -1465139869
+      Data2: 1232753864
+      Data3: 612080037
+      Data4: 1023993747
+    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 6
   tutorialCatchVoices:
   - Guid:
       Data1: 85320458
@@ -614,13 +598,25 @@ MonoBehaviour:
       Data3: 576283287
       Data4: 2029869952
     Path: event:/VoiceOver/Levels/CaughtFish/TutorialFish 2
-  - Guid:
-      Data1: 339093144
-      Data2: 1237211311
-      Data3: 1202464683
-      Data4: 183766607
-    Path: event:/VoiceOver/Levels/CaughtFish/TutorialFish 3
+  tooFastPrompt:
+    Guid:
+      Data1: 1660095589
+      Data2: 1230346209
+      Data3: 784428195
+      Data4: -364368937
+    Path: event:/VoiceOver/Levels/ReelTutorial/ReelPrompts/Too Fast
+  tooSlowPrompt:
+    Guid:
+      Data1: -614330866
+      Data2: 1322106238
+      Data3: 623403159
+      Data4: -1650983258
+    Path: event:/VoiceOver/Levels/ReelTutorial/ReelPrompts/Too Slow
   levelIndex: 0
+  initialPracticeReelTime: 10
+  reelPracticeTime: 3
+  reelFailTime: 2
+  CurrentPracticeReelTime: 0
 --- !u!1 &816014742 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5340243576401240924, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
@@ -979,6 +975,10 @@ PrefabInstance:
     - target: {fileID: 2536111126999484089, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: superFastCatch
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7393596337781405747, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: m_Name

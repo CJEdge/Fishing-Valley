@@ -21,6 +21,12 @@ public class VoiceOverController : MonoBehaviour
 	protected EventReference[] tutorialCatchVoices;
 
 	[SerializeField]
+	protected EventReference tooFastPrompt;
+
+	[SerializeField]
+	protected EventReference tooSlowPrompt;
+
+	[SerializeField]
 	protected int levelIndex;
 
 	#endregion
@@ -60,7 +66,7 @@ public class VoiceOverController : MonoBehaviour
 
 	#region Mono Behaviours
 
-	public void Start() {
+	public virtual void Start() {
 		this.LevelController.OnStateChanged += LevelStateChanged;
 		this.LevelController.OnFishSpawned += FishSpawned;
 		AudioManager.Instance.OnVoiceLineOver += VoiceOverFinished;
@@ -71,14 +77,16 @@ public class VoiceOverController : MonoBehaviour
 		AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.IntroCutscenes[levelIndex]);
 	}
 
-	public void OnDestroy() {
+	public virtual void OnDestroy() {
 		if(this.LevelController == null) {
 			return;
 		}
 		this.LevelController.OnStateChanged -= LevelStateChanged;
-		this.LevelController.OnFishSpawned += FishSpawned;
+		this.LevelController.OnFishSpawned -= FishSpawned;
 		AudioManager.Instance.OnVoiceLineOver -= VoiceOverFinished;
-		this.CurrentFish.Strafe -= FishStrafed;
+		if (this.CurrentFish != null) {
+			this.CurrentFish.Strafe -= FishStrafed;
+		}
 	}
 
 	#endregion
@@ -112,8 +120,10 @@ public class VoiceOverController : MonoBehaviour
 				IncrementTutorial(this.CastRodTutorialsCompleted);
 				break;
 			case LevelController.State.ReelingFish:
-				this.CurrentFish.Strafe -= FishStrafed;
-				this.CurrentFish.Strafe += FishStrafed;
+				if (this.CurrentFish != null) {
+					this.CurrentFish.Strafe -= FishStrafed;
+					this.CurrentFish.Strafe += FishStrafed;
+				}
 				if (AllTutorialsCompleted(this.ReelTutorialsCompleted)) {
 					return false;
 				}
@@ -133,6 +143,9 @@ public class VoiceOverController : MonoBehaviour
 
 	public bool AllTutorialsCompleted(bool[] tutorials) {
 		bool allTutorialsComplete = true;
+		if(tutorials.Length == 0) {
+			return false;
+		}
 		for (int i = 0; i < tutorials.Length; i++) {
 			if (!tutorials[i]) {
 				allTutorialsComplete = false;

@@ -112,7 +112,10 @@
 			<value>3.9561082840144057</value>
 		</property>
 		<property name="length">
-			<value>1.5438917159855943</value>
+			<value>0.4046068380264729</value>
+		</property>
+		<property name="timelockedOffset">
+			<value>0.15820955881340051</value>
 		</property>
 		<property name="volume">
 			<value>10</value>
@@ -132,7 +135,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>1.3311082840144048</value>
+			<value>0.625</value>
 		</property>
 		<property name="pitch">
 			<value>-2</value>
@@ -184,7 +187,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>1.3311082840144048</value>
+			<value>0.625</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{9fbad923-2f49-47ca-a7d0-1d936859373a}</destination>
@@ -212,7 +215,7 @@
 			<value>3.9561082840144057</value>
 		</property>
 		<property name="length">
-			<value>1.5438917159855947</value>
+			<value>0.40460683802647335</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{9fbad923-2f49-47ca-a7d0-1d936859373a}</destination>
@@ -286,7 +289,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>1.3311082840144048</value>
+			<value>0.625</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{9fbad923-2f49-47ca-a7d0-1d936859373a}</destination>
@@ -306,7 +309,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>1.3311082840144048</value>
+			<value>0.625</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{9fbad923-2f49-47ca-a7d0-1d936859373a}</destination>
@@ -366,7 +369,7 @@
 			<value>3.9561082840144057</value>
 		</property>
 		<property name="length">
-			<value>1.5438917159855938</value>
+			<value>0.40460683802647335</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{9fbad923-2f49-47ca-a7d0-1d936859373a}</destination>
@@ -386,7 +389,7 @@
 			<value>3.9561082840144057</value>
 		</property>
 		<property name="length">
-			<value>1.5438917159855938</value>
+			<value>0.40460683802647424</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{9fbad923-2f49-47ca-a7d0-1d936859373a}</destination>
@@ -406,7 +409,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>1.3311082840144048</value>
+			<value>0.625</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{9fbad923-2f49-47ca-a7d0-1d936859373a}</destination>
@@ -446,7 +449,7 @@
 			<value>3.9561082840144057</value>
 		</property>
 		<property name="length">
-			<value>1.5438917159855938</value>
+			<value>0.40460683802647424</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{9fbad923-2f49-47ca-a7d0-1d936859373a}</destination>
@@ -472,7 +475,7 @@
 			<value>pitch</value>
 		</property>
 		<property name="amount">
-			<value>4</value>
+			<value>1.5</value>
 		</property>
 	</object>
 	<object class="RandomizerModulator" id="{7e7f545a-9028-4af5-9c95-6ebaae5ed0fc}">
@@ -480,7 +483,7 @@
 			<value>pitch</value>
 		</property>
 		<property name="amount">
-			<value>4</value>
+			<value>1.5</value>
 		</property>
 	</object>
 	<object class="ADSRModulator" id="{80ab8575-1431-40af-ab90-a0f89a519c5e}">
@@ -493,7 +496,7 @@
 			<value>pitch</value>
 		</property>
 		<property name="amount">
-			<value>4</value>
+			<value>1.5</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{797e4add-d20e-4df0-aa17-a966f2691ebd}" />

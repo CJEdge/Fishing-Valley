@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EventFolder" id="{4637be40-b1db-4128-9e0e-2f131ce48d91}">
+		<property name="name">
+			<value>LeaveBoatPrompt</value>
+		</property>
+		<relationship name="folder">
+			<destination>{f254f42d-171d-4a00-99e9-503064e1fdbe}</destination>
+		</relationship>
+	</object>
+</objects>

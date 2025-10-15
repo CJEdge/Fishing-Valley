@@ -56,6 +56,8 @@ public class AudioManager : Singleton<AudioManager>
 		set;
 	}
 
+	public Action OnVoiceLineStarted { get; set; }
+
 	public bool VoiceLineInProgress {
 		get;
 		set;
@@ -127,6 +129,7 @@ public class AudioManager : Singleton<AudioManager>
 		this.VoiceLineEventInstance.setParameterByName("Language", PlayerPrefsManager.Load(PlayerPrefsManager.Language));
 		this.VoiceLineEventInstance.start();
 		this.VoiceLineInProgress = true;
+		this.OnVoiceLineStarted?.Invoke();
 		StartCoroutine(WaitForVoiceLineEnd());
 	}
 
@@ -138,6 +141,7 @@ public class AudioManager : Singleton<AudioManager>
 		this.VoiceLineEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 		this.VoiceLineEventInstance.release();
 		this.VoiceLineEventInstance.clearHandle();
+		this.VoiceLineInProgress = false;
 		this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventInstance,true);
 		StopCoroutine(WaitForVoiceLineEnd());
 	}

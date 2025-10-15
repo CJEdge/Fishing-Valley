@@ -27,6 +27,9 @@ public class InputController : AbstractState<InputController.State> {
 				SetState(State.ReelingLocked);
 				break;
 			case State.ReelingLocked:
+				controller.ReelSpeed = 0;
+				controller.ReelInput = 0;
+				controller.LastReelInput = 0;
 				this.ReelLevel = 0;
 				break;
 			case State.NotReeling:
@@ -113,7 +116,7 @@ public class InputController : AbstractState<InputController.State> {
 
 		public List<float> reelStateThresholds;
 
-		public float HorizontalSpeed { get; set; }
+		public float HorizontalSpeed;
 
 		public float ReelInput;
 
@@ -145,8 +148,7 @@ public class InputController : AbstractState<InputController.State> {
 
 	private Vector2 PreviousRightStickInput { get; set; }
 
-	public bool StrafingEnabled { get; set; }
-
+	[field:SerializeField]
 	public int ReelLevel { get; set; }
 
 	private bool IsSwitchingScenes { get;set; } = false;
@@ -154,6 +156,17 @@ public class InputController : AbstractState<InputController.State> {
 	private bool CanSwitchScenes { get; set; } = false;
 
 	public float CurrentReelResetTime { get; set; }
+
+	public bool IsSFXMuted { get; set; }
+
+	#endregion
+
+
+	#region Mono Behaviours
+
+	public void Start() {
+		AudioManager.Instance.OnVoiceLineStarted += VoiceLineStarted;
+	}
 
 	#endregion
 
@@ -179,6 +192,9 @@ public class InputController : AbstractState<InputController.State> {
 	}
 
 	public void ReelController(InputAction.CallbackContext context) {
+		if(this.CurrentState == State.ReelingLocked) {
+			return;
+		}
 		Vector2 currentStick = context.ReadValue<Vector2>();
 		if (currentStick.magnitude < 0.5f) {
 			return;
@@ -245,10 +261,25 @@ public class InputController : AbstractState<InputController.State> {
 		}
 	}
 
+	public void PauseReelSFX(float time) {
+		StartCoroutine(RunPauseReelSFX(time));
+	}
+
 	#endregion
 
 
 	#region Private Methods
+
+	private IEnumerator RunPauseReelSFX(float time) {
+		this.IsSFXMuted = true;
+		float currentTime = 0;
+		while (currentTime < time) {
+			currentTime += Time.deltaTime;
+			yield return null;
+		}
+		this.IsSFXMuted = false;
+		playerArms.Reel();
+	}
 
 	private IEnumerator EnableSceneSwitching() {
 		yield return new WaitForSeconds(1f);
@@ -275,7 +306,7 @@ public class InputController : AbstractState<InputController.State> {
 			if (controller.ReelSpeed < controller.reelStateThresholds[0] && controller.ReelInput > 0) {
 				SetState(State.CalmReeling);
 			}
-			if (controller.ReelSpeed < controller.reelStateThresholds[1] && controller.ReelInput > controller.reelStateThresholds[0]) {
+			if (controller.ReelSpeed < controller.reelStateThresholds[1] && controller.ReelSpeed > controller.reelStateThresholds[0]) {
 				SetState(State.NormalReeling);
 			}
 			if (controller.ReelSpeed > controller.reelStateThresholds[1]) {
@@ -297,6 +328,10 @@ public class InputController : AbstractState<InputController.State> {
 		for (int i = 0; i < this.InputTypes.Count; i++) {
 			this.InputTypes[i].LastReelInput = this.InputTypes[i].ReelInput;
 		}
+	}
+
+	private void VoiceLineStarted() {
+		SetState(State.ReelingLocked);
 	}
 
 	#endregion

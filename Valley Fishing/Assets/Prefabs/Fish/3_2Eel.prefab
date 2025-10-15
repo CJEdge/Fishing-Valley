@@ -50,19 +50,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3222220105798205689, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: m_Name
-      value: 8_3Pike
+      value: 3_2Eel
       objectReference: {fileID: 0}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: fishName
-      value: Pike
+      value: Eel
       objectReference: {fileID: 0}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: fishIndex
-      value: 8
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: caughtVoiceLine.Path
-      value: event:/VoiceOver/Levels/CaughtFish/8_Pike
+      value: event:/VoiceOver/Levels/CaughtFish/7_Eel
       objectReference: {fileID: 0}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: ActivityLevels.Array.size
@@ -70,31 +70,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: caughtVoiceLine.Guid.Data1
-      value: 406005264
+      value: -2007728146
       objectReference: {fileID: 0}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: caughtVoiceLine.Guid.Data2
-      value: 1174642325
+      value: 1341215824
       objectReference: {fileID: 0}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: caughtVoiceLine.Guid.Data3
-      value: 312116871
+      value: -1582757745
       objectReference: {fileID: 0}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: caughtVoiceLine.Guid.Data4
-      value: 1998295607
+      value: -1955610266
       objectReference: {fileID: 0}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: 'ActivityLevels.Array.data[0]'
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: 'activityLevels.Array.data[0]'
-      value: 1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
+      propertyPath: tutorialCaughtVoiceLine.Path
+      value: event:/VoiceOver/Levels/CaughtFish/7_Eel
       objectReference: {fileID: 0}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: 'movementDirections.Array.data[0]'
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
+      propertyPath: tutorialCaughtVoiceLine.Guid.Data1
+      value: -2007728146
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
+      propertyPath: tutorialCaughtVoiceLine.Guid.Data2
+      value: 1341215824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
+      propertyPath: tutorialCaughtVoiceLine.Guid.Data3
+      value: -1582757745
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
+      propertyPath: tutorialCaughtVoiceLine.Guid.Data4
+      value: -1955610266
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

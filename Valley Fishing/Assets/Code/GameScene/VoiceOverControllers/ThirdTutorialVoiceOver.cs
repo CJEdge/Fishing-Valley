@@ -15,25 +15,13 @@ public class ThirdTutorialVoiceOver : VoiceOverController
 				}
 				break;
 			case LevelController.State.AttatchBait:
-				if (GameManager.Instance.TotalCaughtFish == 5) {
+				if (GameManager.Instance.TotalBaitsLeft == 0) {
 					GameManager.Instance.LevelController.FishView.EnableFishUI(false);
-					SceneManager.LoadScene(LevelManager.ShopTutorial_02);
+					SceneManager.LoadScene(LevelManager.BossTutorial_00);
 					return false;
 				}
 				break;
 			case LevelController.State.ReelingFish:
-				if(this.ReelTutorialsCompleted[0] == false) {
-					this.CurrentFish.movementDirections.Clear(); ;
-					this.CurrentFish.movementDirections.Add(Fish.MovementDirection.left);
-					this.CurrentFish.CurrentActivityLevel = Fish.ActivityLevel.active;
-				} else if (this.ReelTutorialsCompleted[1] == false ) {
-					this.CurrentFish.movementDirections.Clear(); ;
-					this.CurrentFish.movementDirections.Add(Fish.MovementDirection.right);
-					this.CurrentFish.CurrentActivityLevel = Fish.ActivityLevel.calm;
-				} else if (this.ReelTutorialsCompleted[2] == false) {
-					PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
-					IncrementTutorial(this.ReelTutorialsCompleted);
-				}
 				break;
 			case LevelController.State.FishCaught:
 				if (GameManager.Instance.TotalBaitsLeft == 0) {
@@ -59,20 +47,20 @@ public class ThirdTutorialVoiceOver : VoiceOverController
 	}
 
 	public override void FishStrafed(Fish.MovementDirection movementDirection) {
-		if (AllTutorialsCompleted(this.ReelTutorialsCompleted)) {
-			return;
-		}
-		PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
-		IncrementTutorial(this.ReelTutorialsCompleted);
+		//if (AllTutorialsCompleted(this.ReelTutorialsCompleted)) {
+		//	return;
+		//}
+		//PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
+		//IncrementTutorial(this.ReelTutorialsCompleted);
 	}
 
 	public override void FishSpawned() {
-		if (this.ReelTutorialsCompleted[0] == false) {
-			this.CurrentFish.ActivityLevels.Clear();
-			this.CurrentFish.ActivityLevels.Add(Fish.ActivityLevel.active);
-		} else if (this.ReelTutorialsCompleted[1] == false) {
-			this.CurrentFish.ActivityLevels.Clear();
-			this.CurrentFish.ActivityLevels.Add(Fish.ActivityLevel.calm);
-		}
+		//if (this.ReelTutorialsCompleted[0] == false) {
+		//	this.CurrentFish.ActivityLevels.Clear();
+		//	this.CurrentFish.ActivityLevels.Add(Fish.ActivityLevel.active);
+		//} else if (this.ReelTutorialsCompleted[1] == false) {
+		//	this.CurrentFish.ActivityLevels.Clear();
+		//	this.CurrentFish.ActivityLevels.Add(Fish.ActivityLevel.calm);
+		//}
 	}
 }

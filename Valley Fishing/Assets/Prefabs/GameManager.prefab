@@ -53,30 +53,29 @@ MonoBehaviour:
   - {fileID: 3472080174443941622, guid: 56eb2018d3a3480448f2ea67b5b72728, type: 3}
   - {fileID: 6600018212874257723, guid: 031262a786fb3484a9d9a1131e2e7fed, type: 3}
   - {fileID: 8874738652398643800, guid: d9a2cdbf59c0d1b4ab186e425e3d8be5, type: 3}
-  - {fileID: 939318007809733827, guid: 46c47adee9d3bbf4d95dd38bcecd4afe, type: 3}
-  - {fileID: 939318007809733827, guid: 0aae93f1b2ff9c6468aaaba31d6a2c98, type: 3}
-  - {fileID: 939318007809733827, guid: a8cc8612e0a8c114c8d2858421a9922c, type: 3}
-  - {fileID: 939318007809733827, guid: f000751d6d587734d824225b212e98d4, type: 3}
   - {fileID: 2527023402062999775, guid: ac24d428c36c51b4f8f120e72fdb758d, type: 3}
   - {fileID: 2527023402062999775, guid: 0b2dd00ecbcb0f24da171d6af4abc201, type: 3}
+  - {fileID: 939318007809733827, guid: f000751d6d587734d824225b212e98d4, type: 3}
+  - {fileID: 939318007809733827, guid: a8cc8612e0a8c114c8d2858421a9922c, type: 3}
+  - {fileID: 939318007809733827, guid: 0aae93f1b2ff9c6468aaaba31d6a2c98, type: 3}
   - {fileID: 2527023402062999775, guid: 4cd3dc4e28e39004e93a031fb18c6e0d, type: 3}
   - {fileID: 2527023402062999775, guid: 4a0d91e17fddd2b4b8ba2da45ad40849, type: 3}
   - {fileID: 2527023402062999775, guid: 2454385763472fc41832f0d8e90dccac, type: 3}
-  - {fileID: 2527023402062999775, guid: d41ca6726843f6c44b624fdf0ff23f80, type: 3}
   baits:
   - {fileID: 1264329977150585429, guid: c070571afa0583f429615349cd46c82c, type: 3}
   - {fileID: 2644793683023306607, guid: deaf0af42497b3a49b1c60dfeb125c58, type: 3}
   - {fileID: 4581535848558131026, guid: 65de2ea77d29ca7438df5403e0cc0d38, type: 3}
   - {fileID: 7779104066758528175, guid: b0fe451ad790c044784140f990fb4a6a, type: 3}
-  - {fileID: 7896926226264258103, guid: 1e85570237b64c54ca570d11b21f4b97, type: 3}
   - {fileID: 7778841989186564110, guid: 142a9d4d143554a4b86112aad1f3a274, type: 3}
   - {fileID: 5679352621735612818, guid: 3c0861e58491f484199c895cf2758efb, type: 3}
   - {fileID: 5679352621735612818, guid: 22785c3d167a5f3408b4ddbf8e1444e2, type: 3}
   - {fileID: 5679352621735612818, guid: 8ad5d209cb18e9a43bb4b94d63fcc74f, type: 3}
+  - {fileID: 7896926226264258103, guid: 1e85570237b64c54ca570d11b21f4b97, type: 3}
   <EventSystem>k__BackingField: {fileID: 0}
   LastSelectedButton: {fileID: 0}
   <CurrentBaits>k__BackingField: 
   <CaughtFish>k__BackingField: 
+  <CurrentBait>k__BackingField: {fileID: 0}
   <Money>k__BackingField: 0
 --- !u!114 &1583213601024685545
 MonoBehaviour:
@@ -212,6 +211,13 @@ MonoBehaviour:
       Data3: 1588832440
       Data4: -1687215191
     Path: event:/VoiceOver/CaughtFish/2_Trout
+  LeaveBoatPrompts:
+  - Guid:
+      Data1: -1663164235
+      Data2: 1260862910
+      Data3: -482018403
+      Data4: -192290849
+    Path: event:/VoiceOver/Levels/LeaveBoatPrompt/LeaveBoatPrompt0
   YouHave:
     Guid:
       Data1: -825399506
@@ -244,13 +250,55 @@ MonoBehaviour:
       Data3: 525415315
       Data4: -1016955718
     Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitNumbers/4
-  Left:
-    Guid:
-      Data1: -303319995
-      Data2: 1204891824
-      Data3: 254053769
-      Data4: -1215693277
-    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitsLeft
+  - Guid:
+      Data1: -1492368557
+      Data2: 1137126527
+      Data3: -1324225367
+      Data4: 30447279
+    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitNumbers/5
+  BaitTypeLeft:
+  - Guid:
+      Data1: 525390172
+      Data2: 1339443731
+      Data3: 235784324
+      Data4: -1113339892
+    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitTypes/WormBait
+  - Guid:
+      Data1: 525390172
+      Data2: 1339443731
+      Data3: 235784324
+      Data4: -1113339892
+    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitTypes/WormBait
+  - Guid:
+      Data1: 525390172
+      Data2: 1339443731
+      Data3: 235784324
+      Data4: -1113339892
+    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitTypes/WormBait
+  - Guid:
+      Data1: 525390172
+      Data2: 1339443731
+      Data3: 235784324
+      Data4: -1113339892
+    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitTypes/WormBait
+  - Guid:
+      Data1: -1514225095
+      Data2: 1321247618
+      Data3: 587371199
+      Data4: -1531709641
+    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitTypes/CrankBait
+  - Guid:
+      Data1: 1241091762
+      Data2: 1276523665
+      Data3: 235597710
+      Data4: 913918482
+    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitTypes/LeechBait
+  - Guid:
+      Data1: -1792646665
+      Data2: 1263809097
+      Data3: 1375794837
+      Data4: -806062786
+    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitTypes/MuscleBait
   ShoreIntros:
   - Guid:
       Data1: -99361396
@@ -611,16 +659,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f826d40152fef43a2a4d141a72bae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useCheats: 1
+  superFastCatch: 0
   secondCatchTutorialCheats:
     Baits:
-    - BaitIndex: 3
-      BaitAmount: 1
-    - BaitIndex: 5
-      BaitAmount: 1
+    - BaitIndex: 4
+      BaitAmount: 5
   thirdCatchTutorialCheats:
     Baits:
+    - BaitIndex: 5
+      BaitAmount: 5
     - BaitIndex: 6
-      BaitAmount: 10
+      BaitAmount: 5
   fourthCatchTutorialCheats:
     Baits:
     - BaitIndex: 7
