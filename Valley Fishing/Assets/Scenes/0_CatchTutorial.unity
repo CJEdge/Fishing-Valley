@@ -613,7 +613,7 @@ MonoBehaviour:
       Data4: -1650983258
     Path: event:/VoiceOver/Levels/ReelTutorial/ReelPrompts/Too Slow
   levelIndex: 0
-  initialPracticeReelTime: 10
+  initialPracticeReelTime: 6
   reelPracticeTime: 3
   reelFailTime: 2
   CurrentPracticeReelTime: 0
@@ -978,7 +978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: superFastCatch
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7393596337781405747, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: m_Name
