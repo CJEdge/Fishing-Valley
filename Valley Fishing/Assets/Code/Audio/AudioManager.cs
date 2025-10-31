@@ -11,29 +11,12 @@ public class AudioManager : Singleton<AudioManager>
 
 	#region Properties
 
-	public EventInstance MusicEventInstance {
-		get;
-		set;
-	}
-
-	public EventInstance VoiceLineEventInstance {
-		get;
-		set;
-	}
-
-	public EventInstance LastVoiceLineEventInstance {
-		get;
-		set;
-	}
-
-	public EventInstance CurrentReelInstance {
-		get;
-		set;
-	}
-	public EventInstance BaitEventInstance {
-		get;
-		set;
-	}
+	public EventInstance MusicEventInstance;
+	public EventInstance VoiceLineEventInstance;
+	public EventReference LastVoiceLineEventReference;
+	public EventInstance CurrentReelInstance;
+	public EventInstance BaitEventInstance;
+	public EventInstance UnspoolEventInstance;
 
 	[field:SerializeField]
 	public StudioEventEmitter FishActivityLevelInstance {
@@ -51,7 +34,7 @@ public class AudioManager : Singleton<AudioManager>
 		set;
 	} = new List<EventInstance>();
 
-	public Action<EventInstance,bool> OnVoiceLineOver {
+	public Action<EventReference,bool> OnVoiceLineOver {
 		get;
 		set;
 	}
@@ -118,6 +101,16 @@ public class AudioManager : Singleton<AudioManager>
 		}
 	}
 
+	public void PlayUnspoolSound(bool play, int speed) {
+		if (play) {
+			this.UnspoolEventInstance = CreateSFXInstance(FMODManager.Instance.Unspool);
+			this.UnspoolEventInstance.start();
+		} else {
+			this.UnspoolEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+			this.UnspoolEventInstance.release();
+		}
+	}
+
 	public void PlayVoiceOver(EventReference voiceLineReference) {
 		if (this.VoiceLineEventInstance.isValid()) {
 			this.VoiceLineEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
@@ -125,7 +118,7 @@ public class AudioManager : Singleton<AudioManager>
 			this.VoiceLineEventInstance.clearHandle();
 		}
 		this.VoiceLineEventInstance = CreateSFXInstance(voiceLineReference);
-		this.LastVoiceLineEventInstance = this.VoiceLineEventInstance;
+		this.LastVoiceLineEventReference = voiceLineReference;
 		this.VoiceLineEventInstance.setParameterByName("Language", PlayerPrefsManager.Load(PlayerPrefsManager.Language));
 		this.VoiceLineEventInstance.start();
 		this.VoiceLineInProgress = true;
@@ -142,7 +135,7 @@ public class AudioManager : Singleton<AudioManager>
 		this.VoiceLineEventInstance.release();
 		this.VoiceLineEventInstance.clearHandle();
 		this.VoiceLineInProgress = false;
-		this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventInstance,true);
+		this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventReference, true);
 		StopCoroutine(WaitForVoiceLineEnd());
 	}
 
@@ -150,7 +143,7 @@ public class AudioManager : Singleton<AudioManager>
 		this.VoiceOverChainPosition = 0;
 		this.VoiceOverChain = voiceOverChain;
 		this.InVoiceOverChain = true;
-		PlayVoiceOver(voiceOverChain[this.VoiceOverChainPosition]);
+		PlayVoiceOver(voiceOverChain[0]);
 	}
 
 	public void PlayFishActivitySound(Fish fish, int activityLevel, bool play) {
@@ -227,31 +220,41 @@ public class AudioManager : Singleton<AudioManager>
 
 	private IEnumerator WaitForVoiceLineEnd() {
 		PLAYBACK_STATE playbackState;
-		do {
-			if (this.VoiceLineEventInstance.isValid()) {
-				this.VoiceLineEventInstance.getPlaybackState(out playbackState);
-				yield return null;
-			} else {
+		while (true) {
+			if (!this.VoiceLineEventInstance.isValid()) {
 				this.VoiceLineInProgress = false;
 				yield break;
 			}
-		} while (playbackState != PLAYBACK_STATE.STOPPED);
-		if (this.VoiceLineInProgress) {
-			if (this.VoiceOverChainPosition < this.VoiceOverChain.Count) {
-				this.VoiceOverChainPosition++;
-				StartCoroutine(ContinueVoiceOverChain());
-			}
+
+			this.VoiceLineEventInstance.getPlaybackState(out playbackState);
+			if (playbackState == PLAYBACK_STATE.STOPPED)
+				break;
+
+			yield return null;
 		}
+
 		this.VoiceLineEventInstance.release();
 		this.VoiceLineEventInstance.clearHandle();
-		this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventInstance, false);
+
 		this.VoiceLineInProgress = false;
+		this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventReference, false);
+
+		// Proceed to next in chain
+		if (this.InVoiceOverChain) {
+			this.VoiceOverChainPosition++;
+			if (this.VoiceOverChainPosition < this.VoiceOverChain.Count) {
+				yield return new WaitForEndOfFrame(); // ensures previous event is fully released
+				PlayVoiceOver(this.VoiceOverChain[this.VoiceOverChainPosition]);
+			} else {
+				this.InVoiceOverChain = false;
+			}
+		}
 	}
 
 	private IEnumerator ContinueVoiceOverChain() {
 		yield return new WaitForEndOfFrame();
 		if (this.VoiceOverChainPosition < this.VoiceOverChain.Count) {
-			this.VoiceOverChain = this.VoiceOverChain;
+			Debug.Log(this.VoiceOverChain[this.VoiceOverChainPosition]);
 			this.InVoiceOverChain = true;
 			PlayVoiceOver(this.VoiceOverChain[this.VoiceOverChainPosition]);
 		}

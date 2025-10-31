@@ -331,7 +331,7 @@ public class InputController : AbstractState<InputController.State> {
 	}
 
 	private void VoiceLineStarted() {
-		SetState(State.ReelingLocked);
+		//SetState(State.ReelingLocked);
 	}
 
 	#endregion

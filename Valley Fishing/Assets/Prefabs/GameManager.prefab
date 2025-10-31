@@ -61,6 +61,7 @@ MonoBehaviour:
   - {fileID: 2527023402062999775, guid: 4cd3dc4e28e39004e93a031fb18c6e0d, type: 3}
   - {fileID: 2527023402062999775, guid: 4a0d91e17fddd2b4b8ba2da45ad40849, type: 3}
   - {fileID: 2527023402062999775, guid: 2454385763472fc41832f0d8e90dccac, type: 3}
+  - {fileID: 2527023402062999775, guid: d41ca6726843f6c44b624fdf0ff23f80, type: 3}
   baits:
   - {fileID: 1264329977150585429, guid: c070571afa0583f429615349cd46c82c, type: 3}
   - {fileID: 2644793683023306607, guid: deaf0af42497b3a49b1c60dfeb125c58, type: 3}
@@ -70,10 +71,9 @@ MonoBehaviour:
   - {fileID: 5679352621735612818, guid: 3c0861e58491f484199c895cf2758efb, type: 3}
   - {fileID: 5679352621735612818, guid: 22785c3d167a5f3408b4ddbf8e1444e2, type: 3}
   - {fileID: 5679352621735612818, guid: 8ad5d209cb18e9a43bb4b94d63fcc74f, type: 3}
-  - {fileID: 7896926226264258103, guid: 1e85570237b64c54ca570d11b21f4b97, type: 3}
   <EventSystem>k__BackingField: {fileID: 0}
   LastSelectedButton: {fileID: 0}
-  <CurrentBaits>k__BackingField: 
+  <CurrentBaits>k__BackingField: 0000000000000000000000000000000000000000000000000000000000000000
   <CaughtFish>k__BackingField: 
   <CurrentBait>k__BackingField: {fileID: 0}
   <Money>k__BackingField: 0
@@ -89,6 +89,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 044f3e02c288d9247a8f49a6ccf2a53c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LastVoiceLineEventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <FishActivityLevelInstance>k__BackingField: {fileID: 0}
   <InVoiceOverChain>k__BackingField: 0
 --- !u!114 &4472528235016745865
@@ -299,6 +306,12 @@ MonoBehaviour:
       Data3: 1375794837
       Data4: -806062786
     Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitTypes/MuscleBait
+  - Guid:
+      Data1: 525390172
+      Data2: 1339443731
+      Data3: 235784324
+      Data4: -1113339892
+    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitTypes/WormBait
   ShoreIntros:
   - Guid:
       Data1: -99361396
@@ -521,23 +534,23 @@ MonoBehaviour:
       Data4: -75916562
     Path: event:/SFX/WormBaitIdle
   - Guid:
-      Data1: -306073775
-      Data2: 1283962052
-      Data3: -347803755
-      Data4: 818896552
-    Path: event:/SFX/CricketBaitIdle
-  - Guid:
-      Data1: -306073775
-      Data2: 1283962052
-      Data3: -347803755
-      Data4: 818896552
-    Path: event:/SFX/CricketBaitIdle
-  - Guid:
       Data1: -2134130286
       Data2: 1214591248
       Data3: 585164988
       Data4: -178165460
     Path: event:/SFX/LeechBaitIdle
+  - Guid:
+      Data1: 1812193420
+      Data2: 1175040479
+      Data3: 1880725685
+      Data4: -455227078
+    Path: event:/SFX/Mussel
+  - Guid:
+      Data1: -1751036424
+      Data2: 1219677751
+      Data3: -754223217
+      Data4: -75916562
+    Path: event:/SFX/WormBaitIdle
   - Guid:
       Data1: 1812193420
       Data2: 1175040479
@@ -612,6 +625,13 @@ MonoBehaviour:
       Data3: -390000235
       Data4: 469100929
     Path: event:/SFX/LevelSFX/Fish Catch
+  Unspool:
+    Guid:
+      Data1: 2066811122
+      Data2: 1314893420
+      Data3: -1916274767
+      Data4: -1599929813
+    Path: event:/SFX/LevelSFX/Unspool
   MoneyEarnt:
     Guid:
       Data1: 1982487354
@@ -661,20 +681,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useCheats: 1
   superFastCatch: 0
-  secondCatchTutorialCheats:
+  level_01_Catch_Tutorial:
     Baits:
     - BaitIndex: 4
       BaitAmount: 5
-  thirdCatchTutorialCheats:
+  level_02_Catch_Tutorial:
     Baits:
     - BaitIndex: 5
-      BaitAmount: 5
+      BaitAmount: 3
     - BaitIndex: 6
-      BaitAmount: 5
-  fourthCatchTutorialCheats:
-    Baits:
-    - BaitIndex: 7
-      BaitAmount: 5
+      BaitAmount: 3
+  level_03_Boss:
+    Baits: []
   firstShopTutorialCheats:
     CaughtFish:
     - FishIndex: 0
@@ -695,10 +713,6 @@ MonoBehaviour:
       FishAmount: 1
   thirdShopTutorialCheats:
     CaughtFish: []
-  firstBossTutorialCheats:
-    Baits:
-    - BaitIndex: 8
-      BaitAmount: 1
 --- !u!114 &2564529053801086033
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
 using FMOD.Studio;
+using FMODUnity;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -99,7 +100,7 @@ public class Shore : MonoBehaviour
 		this.CurrentButtonIndex = buttonIndex;
 	}
 
-	public virtual void VoiceOverSkipped(EventInstance eventInstance, bool skipped) {
+	public virtual void VoiceOverSkipped(EventReference eventReference, bool skipped) {
 		if (!gameObject.activeInHierarchy) {
 			return;
 		}

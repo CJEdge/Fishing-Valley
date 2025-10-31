@@ -1,4 +1,7 @@
+using FMOD.Studio;
+using FMODUnity;
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -39,6 +42,12 @@ public class BaitView : MonoBehaviour
 
 	public void Start() {
 		buttonsGameobject.SetActive(false);
+		AudioManager.Instance.OnVoiceLineOver -= SkipBaitSelection;
+		AudioManager.Instance.OnVoiceLineOver += SkipBaitSelection;
+	}
+
+	public void OnDestroy() {
+		AudioManager.Instance.OnVoiceLineOver -= SkipBaitSelection;
 	}
 
 	#endregion
@@ -50,6 +59,7 @@ public class BaitView : MonoBehaviour
 		buttonsGameobject.SetActive(enable);
 		if (enable == false) {
 			GameManager.Instance.LevelController.SetState(LevelController.State.IdleWithBait);
+			GameManager.Instance.EventSystem.SetSelectedGameObject(null);
 			return;
 		} else {
 			bool firstButtonSelected = false;
@@ -83,7 +93,6 @@ public class BaitView : MonoBehaviour
 	}
 
 	public void BaitClicked(int baitIndex) {
-		Debug.Log(baitIndex);
 		AudioManager.Instance.PlayBaitSound(false, 0);
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.AttatchBaitSounds[baitIndex]);
 		GameManager.Instance.CurrentBait = GameManager.Instance.Baits[baitIndex];
@@ -94,6 +103,25 @@ public class BaitView : MonoBehaviour
 	#endregion
 
 	#region Private Methods
+
+	private void SkipBaitSelection(EventReference eventReference, bool value) {
+		if(GameManager.Instance.LevelController.CurrentState != LevelController.State.AttatchBait) {
+			return;
+		}
+		if (!FMODManager.Instance.BaitTypeLeft.Contains(eventReference)){
+			return;
+		}
+		int activeButtons = 0;
+		for (int i = 0; i < baitButtons.Length; i++) {
+			if (baitButtons[i].isActiveAndEnabled) {
+				activeButtons++;
+				if(activeButtons == 2) {
+					return;
+				}
+			}
+		}
+		BaitClicked(this.BaitIndex);
+	}
 
 	private IEnumerator SelectButtonAfterOneFrame(GameObject button) {
 		yield return new WaitForEndOfFrame();

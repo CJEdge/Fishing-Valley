@@ -61,7 +61,6 @@ public class BaitButton : MonoBehaviour
 
 	public void ClickBait() {
 		baitView.BaitClicked(baitIndex);
-		Debug.Log(baitIndex);
 	}
 
 	#endregion

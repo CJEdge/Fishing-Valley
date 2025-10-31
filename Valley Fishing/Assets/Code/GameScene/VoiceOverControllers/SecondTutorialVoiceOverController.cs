@@ -9,10 +9,16 @@ public class SecondTutorialVoiceOverController : VoiceOverController
 	public override bool PerformStateSwitch() {
 		switch (this.LevelController.CurrentState) {
 			case LevelController.State.Idle:
-				if (!AllTutorialsCompleted(this.AttatchBaitTutorialsCompleted)) {
+				if (GameManager.Instance.TotalBaitsLeft == 5) {
+					AudioManager.Instance.PlayOneShot(FMODManager.Instance.AttatchBaitSounds[4]);
+					AudioManager.Instance.PlayBaitSound(true, 4);
+					GameManager.Instance.CurrentBait = GameManager.Instance.Baits[4];
+					GameManager.Instance.CurrentBaits[4]--;
 					PlayNextTutotialVoiceOver(this.AttatchBaitTutorialsCompleted, applyBaitTutorials);
-					IncrementTutorial(this.AttatchBaitTutorialsCompleted);
+					LevelController.SetState(LevelController.State.IdleWithBait);
+					return false;
 				}
+				LevelController.SetState(LevelController.State.AttatchBait);
 				break;
 			case LevelController.State.AttatchBait:
 				if (GameManager.Instance.TotalBaitsLeft == 0) {
@@ -38,9 +44,10 @@ public class SecondTutorialVoiceOverController : VoiceOverController
 				break;
 			case LevelController.State.FishCaught:
 				if (GameManager.Instance.TotalBaitsLeft == 0) {
+					LevelController.StateLocked = true;
 					List<EventReference> voiceOverChain = new List<EventReference>();
 					voiceOverChain.Add(this.CurrentFish.CaughtVoiceLine);
-					voiceOverChain.Add(tutorialCatchVoices[0]);
+					voiceOverChain.Add(FMODManager.Instance.LeaveBoatPrompts[0]);
 					AudioManager.Instance.PlayVoiceOverChain(voiceOverChain);
 				} else {
 					if (this.CurrentFish.IsTutorial) {
@@ -77,8 +84,9 @@ public class SecondTutorialVoiceOverController : VoiceOverController
 		}
 	}
 
-	public override void VoiceOverFinished(EventInstance eventInstance, bool skipped) {
-		base.VoiceOverFinished(eventInstance, skipped);
+	public override void VoiceOverFinished(EventReference eventReference, bool skipped) {
+
+		base.VoiceOverFinished(eventReference, skipped);
 		if (LevelController.CurrentState == LevelController.State.ReelingFish) {
 			GameManager.Instance.InputController.SetState(InputController.State.NotReeling);
 		}

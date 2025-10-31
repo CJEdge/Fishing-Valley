@@ -38,10 +38,12 @@ public class VoiceOverController : MonoBehaviour
 
 	protected bool[] AttatchBaitTutorialsCompleted;
 
+	[field:SerializeField]
 	protected bool[] CastRodTutorialsCompleted;
 
 	protected bool[] ReelTutorialsCompleted;
 
+	[field:SerializeField]
 	protected bool[] CaughtFishTutorialsCompleted;
 
 	#endregion
@@ -174,7 +176,7 @@ public class VoiceOverController : MonoBehaviour
 		}
 	}
 
-	public virtual void VoiceOverFinished(EventInstance eventInstance, bool skipped) {
+	public virtual void VoiceOverFinished(EventReference eventReference, bool skipped) {
 		switch (this.LevelController.CurrentState) {
 			case LevelController.State.Cutscene:
 				LevelController.SetState(LevelController.State.Idle);

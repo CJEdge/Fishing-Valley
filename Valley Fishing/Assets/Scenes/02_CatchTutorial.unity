@@ -426,12 +426,13 @@ MonoBehaviour:
   <CurrentState>k__BackingField: 0
   voiceOverController: {fileID: 582599908}
   gameplayContainer: {fileID: 641266736}
-  fishSpawnTransform: {fileID: 1296795434}
   fishView: {fileID: 723462215}
   baitView: {fileID: 1927175311}
   leftStrafeTransform: {fileID: 138858724}
   rightStrafeTransform: {fileID: 1474992087}
   eventSystem: {fileID: 1015315668}
+  LastSpawnedFishes: 
+  FishSpawnTransform: {fileID: 1296795434}
 --- !u!4 &582599907
 Transform:
   m_ObjectHideFlags: 0
@@ -674,14 +675,6 @@ PrefabInstance:
     - target: {fileID: 2536111126999484089, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: thirdCatchTutorialCheats.Baits.Array.data[0].BaitAmount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: thirdCatchTutorialCheats.Baits.Array.data[1].BaitAmount
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7393596337781405747, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: m_Name

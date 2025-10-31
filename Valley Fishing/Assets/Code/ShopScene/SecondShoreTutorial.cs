@@ -1,4 +1,5 @@
 using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -23,14 +24,14 @@ public class SecondShoreTutorial : Shore {
 		}
 	}
 
-	public override void VoiceOverSkipped(EventInstance eventInstance, bool skipped) {
+	public override void VoiceOverSkipped(EventReference eventReference, bool skipped) {
 		if (shoreMenuObject == null) {
 			return;
 		}
 		if (!shoreMenuObject.activeInHierarchy) {
 			return;
 		}
-		base.VoiceOverSkipped(eventInstance, skipped);
+		base.VoiceOverSkipped(eventReference, skipped);
 		if (this.TimesSkipped == 0) {
 			if (this.AllShopsFinished) {
 				SceneManager.LoadScene(LevelManager.CatchTutorial_02);

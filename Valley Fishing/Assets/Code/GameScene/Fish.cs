@@ -122,10 +122,7 @@ public class Fish : AbstractState<Fish.State>
 		set;
 	}
 
-	private bool IsCentred {
-		get;
-		set;
-	}
+	private bool IsCentred;
 
 	private InputController InputController {
 		get {
@@ -133,24 +130,12 @@ public class Fish : AbstractState<Fish.State>
 		}
 	}
 
-	private float FailedCatchTime {
-		get;
-		set;
-	}
-	private bool CatchStarted {
-		get;
-		set;
-	}
+	private float FailedCatchTime;
+	private bool CatchStarted;
 
-	private List<float> ActivityLevelIntervals {
-		get;
-		set;
-	} = new List<float>();
+	private List<float> ActivityLevelIntervals = new List<float>();
 
-	private List<float> MovementIntervals {
-		get;
-		set;
-	} = new List<float>();
+	private List<float> MovementIntervals = new List<float>();
 
 	[field:SerializeField]
 	private int MovementIntervalsCompleted {
@@ -158,26 +143,12 @@ public class Fish : AbstractState<Fish.State>
 		set;
 	}
 
-	private float CurrentLevelActivityChangeTime {
-		get;
-		set;
-	}
-
-	private float CurrentCorrectActivityChangeTime { get; set; }
-
-	private bool ActivityLevelChanging {
-		get;
-		set;
-	}
-	private float CurrentMovemetChangeTime {
-		get;
-		set;
-	}
-
-	private bool MovementDirectionChanging {
-		get;
-		set;
-	}
+	private float CurrentLevelActivityChangeTime;
+	private float CurrentCorrectActivityChangeTime;
+	private bool ActivityLevelChanging;
+	private float CurrentMovemetChangeTime;
+	private bool MovementDirectionChanging;
+	private bool IsUnspooling;
 
 	public StudioEventEmitter ActivitySplashSFX { get => activitySplashSFX; }
 
@@ -208,13 +179,13 @@ public class Fish : AbstractState<Fish.State>
 	#region Mono Behaviours
 
 	public void Start() {
-		AudioManager.Instance.OnVoiceLineStarted += FreezeFish;
-		AudioManager.Instance.OnVoiceLineOver += UnFreezeFish;
+		//AudioManager.Instance.OnVoiceLineStarted += FreezeFish;
+		//AudioManager.Instance.OnVoiceLineOver += UnFreezeFish;
 	}
 
 	public void OnDestroy() {
-		AudioManager.Instance.OnVoiceLineStarted -= FreezeFish;
-		AudioManager.Instance.OnVoiceLineOver -= UnFreezeFish;
+		//AudioManager.Instance.OnVoiceLineStarted -= FreezeFish;
+		//AudioManager.Instance.OnVoiceLineOver -= UnFreezeFish;
 	}
 
 	public override void Update() {
@@ -272,9 +243,11 @@ public class Fish : AbstractState<Fish.State>
 		this.IsStrafer = isStrafer;
 		SetActivityLevel(this.ActivityLevels[0]);
 		SetState(State.OnHook);
+		AudioManager.Instance.PlayUnspoolSound(false, 2);
 	}
 
 	public void FishCaught() {
+		AudioManager.Instance.PlayUnspoolSound(false, 2);
 		GameManager.Instance.AssignNewCaughtFish(fishIndex);
 		GameManager.Instance.LevelController.SetState(LevelController.State.FishCaught);
 		AudioManager.Instance.PlayFishActivitySound(this, 0, true);
@@ -299,9 +272,9 @@ public class Fish : AbstractState<Fish.State>
 		if (this.MovementDirectionChanging) {
 			return;
 		}
-        switch (CurrentActivityLevel) {
+        switch (this.CurrentActivityLevel) {
             case ActivityLevel.none:
-                break;
+				break;
             case ActivityLevel.calm:
 				ReelingSuccesfully(this.InputController.CurrentState == InputController.State.CalmReeling);
 				break;
@@ -317,6 +290,9 @@ public class Fish : AbstractState<Fish.State>
 	private void ReelingSuccesfully(bool reelingSuccesfully) {
 		this.RodLineComponent.IsStraight = reelingSuccesfully;
 		if (reelingSuccesfully) {
+			if (this.IsUnspooling) {
+				AudioManager.Instance.PlayUnspoolSound(false, 1);
+			}
 			this.RodLineComponent.CurveAmount = Mathf.MoveTowards(this.RodLineComponent.CurveAmount, 0f, Time.deltaTime);
 			if (!this.IsCentred) {
 				return;
@@ -324,15 +300,28 @@ public class Fish : AbstractState<Fish.State>
 			VibrationManager.Instance.SetVibrationFrequency(true, DistanceAsPercentage(), Mathf.Infinity);
 			VibrationManager.Instance.SetVibrationFrequency(false, 0, Mathf.Infinity);
 			rb.AddForce(0, 0, -this.ReelSpeed);
+			this.IsUnspooling = false;
 		} else {
 			this.RodLineComponent.CurveAmount = Mathf.MoveTowards(this.RodLineComponent.CurveAmount, 1, Time.deltaTime);
 			IncreaseFailTime();
 			VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);
+			if (GameManager.Instance.LevelController.FishSpawnTransform.position.z - transform.position.z < 0) {
+				AudioManager.Instance.PlayUnspoolSound(false, 2);
+				this.IsUnspooling = false;
+				return;
+			}
 			if (this.IsCentred) {
+				if (!this.IsUnspooling && !AudioManager.Instance.VoiceLineInProgress) {
+					AudioManager.Instance.PlayUnspoolSound(true, 2);
+				}
 				rb.AddForce(0, 0, swimAwaySpeed);
 			} else {
+				if (!this.IsUnspooling && !AudioManager.Instance.VoiceLineInProgress) {
+					AudioManager.Instance.PlayUnspoolSound(true, 1);
+				}
 				rb.AddForce(0, 0, strafedSwimAwaySpeed);
 			}
+			this.IsUnspooling = true;
 		}
 	}
 
@@ -416,6 +405,7 @@ public class Fish : AbstractState<Fish.State>
 	}
 
 	private void FailedCatch() {
+		AudioManager.Instance.PlayUnspoolSound(false, 2);
 		GameManager.Instance.LevelController.SetState(LevelController.State.AttatchBait);
 		AudioManager.Instance.PlayFishActivitySound(this, 0, false);
 		VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);
@@ -477,7 +467,7 @@ public class Fish : AbstractState<Fish.State>
 		rb.constraints = RigidbodyConstraints.FreezePosition;
 	}
 
-	private void UnFreezeFish(EventInstance eventInstance, bool skipped) {
+	private void UnFreezeFish(EventReference eventReference, bool skipped) {
 		rb.constraints = RigidbodyConstraints.FreezeRotation;
 	}
 

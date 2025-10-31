@@ -75,6 +75,8 @@ public class FMODManager : Singleton<FMODManager>
 
 	public EventReference FishCatch;
 
+	public EventReference Unspool;
+
 	[Header("ShopSFX")]
 
 	public EventReference MoneyEarnt;

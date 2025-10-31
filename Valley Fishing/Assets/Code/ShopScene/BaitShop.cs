@@ -100,7 +100,7 @@ public class BaitShop : Shop {
 
 	#region Private Methods
 
-	public override void VoiceLineOver(EventInstance eventInstance, bool skipped) {
+	public override void VoiceLineOver(EventReference eventReference, bool skipped) {
 		switch (this.CurrentState) {
 			case State.Defualt:
 				break;

@@ -23,8 +23,8 @@ public class SecondTutorialBaitShop : BaitShop {
 		}
 	}
 
-	public override void VoiceLineOver(EventInstance eventInstance, bool skipped) {
-		base.VoiceLineOver(eventInstance, skipped);
+	public override void VoiceLineOver(EventReference eventReference, bool skipped) {
+		base.VoiceLineOver(eventReference, skipped);
 		switch (this.CurrentState) {
 			case State.Defualt:
 				break;

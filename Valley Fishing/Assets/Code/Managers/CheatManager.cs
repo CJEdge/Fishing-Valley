@@ -39,7 +39,6 @@ public class CheatManager : Singleton<CheatManager>
 		ShowThirdShopTutorialCheats();
 		ShowSecondCatchTutorialCheats();
 		ShowThirdCatchTutorialCheats();
-		ShowFourthCatchTutorialCheats();
 		ShowFirstBossTutorialCheats();
 	}
 
@@ -61,7 +60,6 @@ public class CheatManager : Singleton<CheatManager>
 			ShowThirdShopTutorialCheats();
 			ShowSecondCatchTutorialCheats();
 			ShowThirdCatchTutorialCheats();
-			ShowFourthCatchTutorialCheats();
 			ShowFirstBossTutorialCheats();
 		}
 	}
@@ -78,20 +76,20 @@ public class CheatManager : Singleton<CheatManager>
 	#endregion
 
 
-	#region Second Catch Turotial
+	#region Level 01 Catch Tutorial
 
 	[System.Serializable]
-	public class SecondCatchTutorialCheats {
+	public class Level_01_Catch_Tutorial {
 		public BaitCheatData[] Baits;
 	}
 
 	[SerializeField]
-	private SecondCatchTutorialCheats secondCatchTutorialCheats;
+	private Level_01_Catch_Tutorial level_01_Catch_Tutorial;
 
 	private void ShowSecondCatchTutorialCheats() {
 		if (SceneManager.GetActiveScene().name == LevelManager.CatchTutorial_01) {
-			for (int i = 0; i < secondCatchTutorialCheats.Baits.Length; i++) {
-				GameManager.Instance.CurrentBaits[secondCatchTutorialCheats.Baits[i].BaitIndex] = secondCatchTutorialCheats.Baits[i].BaitAmount;
+			for (int i = 0; i < level_01_Catch_Tutorial.Baits.Length; i++) {
+				GameManager.Instance.CurrentBaits[level_01_Catch_Tutorial.Baits[i].BaitIndex] = level_01_Catch_Tutorial.Baits[i].BaitAmount;
 			}
 		}
 	}
@@ -99,21 +97,20 @@ public class CheatManager : Singleton<CheatManager>
 	#endregion
 
 
-	#region Third Catch Turotial
+	#region Level_02_Catch_Tutorial
 
 	[System.Serializable]
-	public class ThirdCatchTutorialCheats {
+	public class Level_02_Catch_Tutorial {
 		public BaitCheatData[] Baits;
 	}
 
 	[SerializeField]
-	private ThirdCatchTutorialCheats thirdCatchTutorialCheats;
+	private Level_02_Catch_Tutorial level_02_Catch_Tutorial;
 
 	private void ShowThirdCatchTutorialCheats() {
 		if (SceneManager.GetActiveScene().name == LevelManager.CatchTutorial_02) {
-			Debug.Log("here");
-			for (int i = 0; i < thirdCatchTutorialCheats.Baits.Length; i++) {
-				GameManager.Instance.CurrentBaits[thirdCatchTutorialCheats.Baits[i].BaitIndex] = thirdCatchTutorialCheats.Baits[i].BaitAmount;
+			for (int i = 0; i < level_02_Catch_Tutorial.Baits.Length; i++) {
+				GameManager.Instance.CurrentBaits[level_02_Catch_Tutorial.Baits[i].BaitIndex] = level_02_Catch_Tutorial.Baits[i].BaitAmount;
 			}
 		}
 	}
@@ -121,20 +118,20 @@ public class CheatManager : Singleton<CheatManager>
 	#endregion
 
 
-	#region Third Catch Turotial
+	#region Level_03_Boss
 
 	[System.Serializable]
-	public class FourthCatchTutorialCheats {
+	public class Level_03_Boss {
 		public BaitCheatData[] Baits;
 	}
 
 	[SerializeField]
-	private FourthCatchTutorialCheats fourthCatchTutorialCheats;
+	private Level_03_Boss level_03_Boss;
 
-	private void ShowFourthCatchTutorialCheats() {
-		if (SceneManager.GetActiveScene().name == LevelManager.CatchTutorial_03) {
-			for (int i = 0; i < fourthCatchTutorialCheats.Baits.Length; i++) {
-				GameManager.Instance.CurrentBaits[fourthCatchTutorialCheats.Baits[i].BaitIndex] = fourthCatchTutorialCheats.Baits[i].BaitAmount;
+	private void ShowFirstBossTutorialCheats() {
+		if (SceneManager.GetActiveScene().name == LevelManager.BossTutorial_00) {
+			for (int i = 0; i < level_03_Boss.Baits.Length; i++) {
+				GameManager.Instance.CurrentBaits[level_03_Boss.Baits[i].BaitIndex] = level_03_Boss.Baits[i].BaitAmount;
 			}
 		}
 	}
@@ -213,27 +210,6 @@ public class CheatManager : Singleton<CheatManager>
 					}
 					GameManager.Instance.CaughtFish[fish.FishIndex] = fish.FishAmount;
 				}
-			}
-		}
-	}
-
-	#endregion
-
-
-	#region First Boss Turotial
-
-	[System.Serializable]
-	public class FirstBossTutorialCheats {
-		public BaitCheatData[] Baits;
-	}
-
-	[SerializeField]
-	private FirstBossTutorialCheats firstBossTutorialCheats;
-
-	private void ShowFirstBossTutorialCheats() {
-		if (SceneManager.GetActiveScene().name == LevelManager.BossTutorial_00) {
-			for (int i = 0; i < firstBossTutorialCheats.Baits.Length; i++) {
-				GameManager.Instance.CurrentBaits[firstBossTutorialCheats.Baits[i].BaitIndex] = firstBossTutorialCheats.Baits[i].BaitAmount;
 			}
 		}
 	}

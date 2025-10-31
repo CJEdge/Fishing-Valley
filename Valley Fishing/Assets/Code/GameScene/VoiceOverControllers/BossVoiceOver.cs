@@ -1,3 +1,5 @@
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,7 +11,7 @@ public class BossVoiceOver : VoiceOverController
 		}
 		switch (this.LevelController.CurrentState) {
 			case LevelController.State.Idle:
-				GameManager.Instance.CurrentBaits[8] = 1;
+				GameManager.Instance.CurrentBaits[7] = 1;
 				if (!AllTutorialsCompleted(this.AttatchBaitTutorialsCompleted)) {
 					PlayNextTutotialVoiceOver(this.AttatchBaitTutorialsCompleted, applyBaitTutorials);
 					IncrementTutorial(this.AttatchBaitTutorialsCompleted);
@@ -33,5 +35,12 @@ public class BossVoiceOver : VoiceOverController
 				break;
 		}
 		return true;
+	}
+
+	public override void VoiceOverFinished(EventReference eventReference, bool skipped) {
+		base.VoiceOverFinished(eventReference, skipped);
+		if (LevelController.CurrentState == LevelController.State.ReelingFish) {
+			GameManager.Instance.InputController.SetState(InputController.State.NotReeling);
+		}
 	}
 }

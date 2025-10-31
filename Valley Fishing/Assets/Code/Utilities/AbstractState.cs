@@ -30,6 +30,13 @@ public abstract class AbstractState<T> : MonoBehaviour, IState<T> where T : Enum
 	#endregion
 
 
+	#region Properties
+
+	public bool StateLocked { get; set; }
+
+	#endregion
+
+
 	#region MonoBehaviour
 
 	public virtual void Awake() {
@@ -63,6 +70,9 @@ public abstract class AbstractState<T> : MonoBehaviour, IState<T> where T : Enum
 	#region Virtual Methods
 
 	public virtual void SetState(T state) {
+		if (this.StateLocked) {
+			return;
+		}
 		if (!EqualityComparer<T>.Default.Equals(this.CurrentState, state)) {
 			this.LastState = state;
 			ExitState(this.CurrentState);

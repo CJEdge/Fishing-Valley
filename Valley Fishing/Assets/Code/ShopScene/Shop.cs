@@ -1,4 +1,4 @@
-using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 
 public abstract class Shop : AbstractState<Shop.State>
@@ -17,7 +17,7 @@ public abstract class Shop : AbstractState<Shop.State>
 
 	#region Private Methods
 
-	public abstract void VoiceLineOver(EventInstance eventInstance, bool skipped);
+	public abstract void VoiceLineOver(EventReference eventReference, bool skipped);
 
 	#endregion
 }

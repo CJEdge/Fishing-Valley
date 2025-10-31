@@ -24,9 +24,9 @@ public class FisrstTutorialBaitShop : BaitShop
 		}
 	}
 
-    public override void VoiceLineOver(EventInstance eventInstance, bool skipped)
+    public override void VoiceLineOver(EventReference eventReference, bool skipped)
     {
-		base.VoiceLineOver(eventInstance,skipped);
+		base.VoiceLineOver(eventReference, skipped);
         switch (this.CurrentState)
         {
             case State.Defualt:

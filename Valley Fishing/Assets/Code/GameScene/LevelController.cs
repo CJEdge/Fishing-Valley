@@ -15,9 +15,6 @@ public class LevelController : AbstractState<LevelController.State> {
 	private Transform gameplayContainer;
 
 	[SerializeField]
-	private Transform fishSpawnTransform;
-
-	[SerializeField]
 	private FishView fishView;
 
 	[SerializeField]
@@ -78,6 +75,10 @@ public class LevelController : AbstractState<LevelController.State> {
 		set;
 	}
 
+	public List<int> LastSpawnedFishes = new List<int>();
+
+	public Transform FishSpawnTransform;
+
 	#endregion
 
 
@@ -99,6 +100,9 @@ public class LevelController : AbstractState<LevelController.State> {
 			case State.Default:
 				GameManager.Instance.LevelController = this;
 				GameManager.Instance.EventSystem = eventSystem;
+				for (int i = 0; i < GameManager.Instance.Fish.Count; i++) {
+					this.LastSpawnedFishes.Add(0);
+				}
 				SetState(State.Cutscene);
 				break;
 			case State.Cutscene:
@@ -138,6 +142,12 @@ public class LevelController : AbstractState<LevelController.State> {
 		int fishIndex = 0;
 		float randomValue = UnityEngine.Random.value;
 		float cumulative = 0f;
+		bool currentBaitAlreadyUsed = false;
+		for (int i = 0; i < this.CurrentBait.CatchChances.Length; i++) {
+			if(this.CurrentBait.CatchChances[i] > 0 && this.LastSpawnedFishes[i] > 0) {
+				currentBaitAlreadyUsed = true;
+			}
+		}
 		for (int i = 0; i < this.CurrentBait.CatchChances.Length; i++) {
 			cumulative += this.CurrentBait.CatchChances[i];
 			if (randomValue < cumulative) {
@@ -145,7 +155,11 @@ public class LevelController : AbstractState<LevelController.State> {
 				break;
 			}
 		}
-		Fish fishInstance = Instantiate(this.Fish[fishIndex], fishSpawnTransform.position, Quaternion.identity);
+		if(this.LastSpawnedFishes[fishIndex] == 1) {
+
+		}
+		this.LastSpawnedFishes[fishIndex] = 1;
+		Fish fishInstance = Instantiate(this.Fish[fishIndex], this.FishSpawnTransform.position, Quaternion.identity);
 		fishInstance.name = this.Fish[fishIndex].name;
 		fishInstance.transform.parent = gameplayContainer;
 		fishInstance.IsFailable = this.CurrentBait.Isfailable;

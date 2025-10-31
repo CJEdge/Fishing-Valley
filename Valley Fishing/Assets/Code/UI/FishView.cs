@@ -1,3 +1,6 @@
+using FMOD.Studio;
+using FMODUnity;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -24,6 +27,8 @@ public class FishView : MonoBehaviour
 		GameManager.Instance.InputController.OnSkip -= DisableFishUI;
 		GameManager.Instance.InputController.OnClick += DisableFishUI;
 		GameManager.Instance.InputController.OnSkip += DisableFishUI;
+		AudioManager.Instance.OnVoiceLineOver -= DisableUI;
+		AudioManager.Instance.OnVoiceLineOver += DisableUI;
 	}
 
 	public void OnDestroy() {
@@ -32,6 +37,7 @@ public class FishView : MonoBehaviour
 		}
 		GameManager.Instance.InputController.OnClick -= DisableFishUI;
 		GameManager.Instance.InputController.OnSkip -= DisableFishUI;
+		AudioManager.Instance.OnVoiceLineOver -= DisableUI;
 	}
 
 	#endregion
@@ -64,7 +70,14 @@ public class FishView : MonoBehaviour
 
 	#region Private Methods
 
+	private void DisableUI(EventReference eventReference, bool value) {
+		DisableFishUI();
+	}
+
 	public void DisableFishUI() {
+		if (GameManager.Instance.LevelController.StateLocked) {
+			return;
+		}
 		bool allreadyDisabled = true;
 		for (int i = 0; i < GameManager.Instance.Fish.Count; i++) {
 			if (fishUis[i].activeSelf) {
@@ -77,6 +90,7 @@ public class FishView : MonoBehaviour
 		EnableFishUI(false);
 		AudioManager.Instance.SkipVoiceOver();
 		if(GameManager.Instance.LevelController.CurrentState == LevelController.State.FishCaught) {
+			AudioManager.Instance.PlayOneShot(FMODManager.Instance.BaitBoxOpen);
 			GameManager.Instance.LevelController.SetState(LevelController.State.Idle);
 		}
 	}

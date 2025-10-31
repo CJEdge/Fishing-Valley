@@ -736,12 +736,14 @@ MonoBehaviour:
     reelStateThresholds:
     - 8
     - 40
+    HorizontalSpeed: 0
     ReelInput: 0
     ReelSpeed: 0
   controller:
     reelStateThresholds:
     - 0.5
     - 2
+    HorizontalSpeed: 200
     ReelInput: 0
     ReelSpeed: 0
   <ReelLevel>k__BackingField: 0
