@@ -421,12 +421,13 @@ MonoBehaviour:
   <CurrentState>k__BackingField: 0
   voiceOverController: {fileID: 582599908}
   gameplayContainer: {fileID: 641266736}
-  fishSpawnTransform: {fileID: 1296795434}
   fishView: {fileID: 723462215}
   baitView: {fileID: 1927175311}
   leftStrafeTransform: {fileID: 138858724}
   rightStrafeTransform: {fileID: 1474992087}
   eventSystem: {fileID: 1015315668}
+  LastSpawnedFishes: 
+  FishSpawnTransform: {fileID: 1296795434}
 --- !u!4 &582599907
 Transform:
   m_ObjectHideFlags: 0
@@ -497,6 +498,8 @@ MonoBehaviour:
       Data4: 0
     Path: 
   levelIndex: 4
+  CastRodTutorialsCompleted: 
+  CaughtFishTutorialsCompleted: 
 --- !u!4 &641266736 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 79709411686699167, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
