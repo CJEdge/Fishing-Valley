@@ -90,4 +90,7 @@ public class FMODManager : Singleton<FMODManager>
 	public EventReference LevelOneMusic;
 
 	public EventReference BossMusic;
+
+	[Header("DebugRoom")]
+	public EventReference DebugRoomEnter;
 }
