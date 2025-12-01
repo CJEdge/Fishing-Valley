@@ -5,7 +5,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SecondTutorialBaitShop : BaitShop {
+public class SecondTutorialBaitShop : BaitShop
+{
 	protected override void EnterState(State state) {
 		base.EnterState(state);
 		switch (state) {
@@ -23,16 +24,20 @@ public class SecondTutorialBaitShop : BaitShop {
 		}
 	}
 
-	public override void VoiceLineOver(EventReference eventReference, bool skipped) {
+    public override void VoiceLineOver(EventReference eventReference, bool skipped)
+    {
 		base.VoiceLineOver(eventReference, skipped);
-		switch (this.CurrentState) {
-			case State.Defualt:
-				break;
-			case State.Entering:
-				break;
-			case State.Trading:
+        switch (this.CurrentState)
+        {
+            case State.Defualt:
+                break;
+            case State.Entering:
+                break;
+            case State.Trading:
 				switch (tutorialState) {
 					case TutorialState.SellingTutorial:
+						Debug.Log(GameManager.Instance.TotalCaughtFish);
+						Debug.Log(AudioManager.Instance.InVoiceOverChain);
 						if (GameManager.Instance.TotalCaughtFish == 0 && !AudioManager.Instance.InVoiceOverChain) {
 							StartCoroutine(WaitOneFrame(SetBuyState));
 						}
@@ -46,15 +51,15 @@ public class SecondTutorialBaitShop : BaitShop {
 					default:
 						break;
 				}
-				break;
-			case State.Leaving:
-				break;
-			default:
-				break;
-		}
-	}
+                break;
+            case State.Leaving:
+                break;
+            default:
+                break;
+        }
+    }
 
-	public override void SellFish() {
+    public override void SellFish() {
 		base.SellFish();
 		switch (sellTpye) {
 			case SellTpye.SellAllFish:
@@ -63,7 +68,7 @@ public class SecondTutorialBaitShop : BaitShop {
 				//voiceOverChain.Add(FMODManager.Instance.price);
 				//AudioManager.Instance.PlayVoiceOverChain(voiceOverChain);
 				sellButton.SetActive(false);
-				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopTutorialItemIntros[1]);
+				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopTutorialItemIntros[0]);
 				break;
 			case SellTpye.SellIndividualFish:
 				break;
@@ -77,7 +82,7 @@ public class SecondTutorialBaitShop : BaitShop {
 		initialBaitButton.SetActive(false);
 		leaveShopButton.SetActive(true);
 		GameManager.Instance.InputController.SelectButton(leaveShopButton);
-		AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.LeaveShopPrompts[1]);
+		AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.LeaveShopPrompts[0]);
 
 		//if (!this.TutorialBaitBought) {
 		//	AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopThanks[0]);
@@ -90,8 +95,10 @@ public class SecondTutorialBaitShop : BaitShop {
 	public override IEnumerator EnterShop(bool enter) {
 		yield return StartCoroutine(base.EnterShop(enter));
 		if (enter) {
-			AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopIntros[1]);
+			
+			AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopIntros[0]);
 			initialBaitButton.SetActive(false);
+			SetState(State.Trading);
 		}
 	}
 

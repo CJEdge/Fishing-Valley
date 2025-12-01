@@ -243,6 +243,14 @@ public class InputController : AbstractState<InputController.State> {
 		}
 	}
 
+	public void NorthGamepad(InputAction.CallbackContext context) {
+		if (context.performed) {
+			if(GameManager.Instance.ShopController != null) {
+				GameManager.Instance.ShopController.BaitShop.OpenFishBoard();
+			}
+		}
+	}
+
 	public void Skip(InputAction.CallbackContext context) {
 		if (context.performed) {
 			AudioManager.Instance.SkipVoiceOver();

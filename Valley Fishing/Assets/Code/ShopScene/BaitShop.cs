@@ -30,8 +30,9 @@ public class BaitShop : Shop {
 
 	#region Serialized Fields
 
-	[SerializeField]
-	private GameObject baitShopObject;
+	[SerializeField] private GameObject baitShopObject;
+
+	[SerializeField] private FishBoard fishBoard;
 
 	[SerializeField]
 	protected GameObject sellButton;
@@ -105,8 +106,8 @@ public class BaitShop : Shop {
 			case State.Defualt:
 				break;
 			case State.Entering:
-				StopCoroutine(this.RunEnterShop);
-				SetState(State.Trading);
+				//StopCoroutine(this.RunEnterShop);
+				//SetState(State.Trading);
 				break;
 			case State.Trading:
 				break;
@@ -176,6 +177,10 @@ public class BaitShop : Shop {
 	public virtual IEnumerator WaitOneFrame(Action callback) {
 		yield return new WaitForEndOfFrame();
 		callback?.Invoke();
+	}
+
+	public virtual void OpenFishBoard() {
+		fishBoard.OpenFishBoard();
 	}
 
 	#endregion

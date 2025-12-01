@@ -70,9 +70,8 @@ public class Shore : MonoBehaviour
 			for (int i = 0; i < shopButtons.Length - 1; i++) {
 				this.FinishedInShops.Add(false);
 			}
-			AudioManager.Instance.OnVoiceLineOver += VoiceOverSkipped;
+			AudioManager.Instance.OnVoiceLineOver += VoiceLineOver;
 		}
-
 		bool allShopsFinished = true;
 		for (int i = 0; i < this.FinishedInShops.Count; i++) {
 			if (!this.FinishedInShops[i]) {
@@ -100,7 +99,7 @@ public class Shore : MonoBehaviour
 		this.CurrentButtonIndex = buttonIndex;
 	}
 
-	public virtual void VoiceOverSkipped(EventReference eventReference, bool skipped) {
+	public virtual void VoiceLineOver(EventReference eventReference, bool skipped) {
 		if (!gameObject.activeInHierarchy) {
 			return;
 		}

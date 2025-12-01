@@ -1,12 +1,8 @@
-using FMOD.Studio;
 using FMODUnity;
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class FisrstTutorialBaitShop : BaitShop
-{
+public class FirstTutorialBaitShop : BaitShop {
 	protected override void EnterState(State state) {
 		base.EnterState(state);
 		switch (state) {
@@ -24,16 +20,14 @@ public class FisrstTutorialBaitShop : BaitShop
 		}
 	}
 
-    public override void VoiceLineOver(EventReference eventReference, bool skipped)
-    {
+	public override void VoiceLineOver(EventReference eventReference, bool skipped) {
 		base.VoiceLineOver(eventReference, skipped);
-        switch (this.CurrentState)
-        {
-            case State.Defualt:
-                break;
-            case State.Entering:
-                break;
-            case State.Trading:
+		switch (this.CurrentState) {
+			case State.Defualt:
+				break;
+			case State.Entering:
+				break;
+			case State.Trading:
 				switch (tutorialState) {
 					case TutorialState.SellingTutorial:
 						Debug.Log(GameManager.Instance.TotalCaughtFish);
@@ -51,15 +45,15 @@ public class FisrstTutorialBaitShop : BaitShop
 					default:
 						break;
 				}
-                break;
-            case State.Leaving:
-                break;
-            default:
-                break;
-        }
-    }
+				break;
+			case State.Leaving:
+				break;
+			default:
+				break;
+		}
+	}
 
-    public override void SellFish() {
+	public override void SellFish() {
 		base.SellFish();
 		switch (sellTpye) {
 			case SellTpye.SellAllFish:

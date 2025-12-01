@@ -19,12 +19,10 @@ public class ShopController : AbstractState<ShopController.State>
 
 	#region Properties
 
-	public Shore ShoreMenu {
-		get {
-			return shoreMenu;
-		}
-	}
-	
+	public Shore ShoreMenu { get => shoreMenu; }
+	public BaitShop BaitShop { get => baitShop; }
+
+
 
 	#endregion
 

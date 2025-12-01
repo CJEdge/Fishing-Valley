@@ -314,11 +314,11 @@ MonoBehaviour:
     Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitTypes/WormBait
   ShoreIntros:
   - Guid:
-      Data1: -99361396
-      Data2: 1191018595
-      Data3: -250523751
-      Data4: -1777294225
-    Path: event:/VoiceOver/Shop/Shore/ShopSceneIntros/ShopIntro 0
+      Data1: -996136634
+      Data2: 1295277087
+      Data3: 679284877
+      Data4: 1160258266
+    Path: event:/VoiceOver/Shop/Shore/ShopSceneIntros/ShoreTutorial 0
   - Guid:
       Data1: 1339770265
       Data2: 1201517270

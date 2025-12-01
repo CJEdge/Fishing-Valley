@@ -13,7 +13,8 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 		MainMenu,
 		LevelBaitButton,
 		FreeBait,
-		RareBait
+		RareBait,
+		FishBoard
 	}
 
 	public ButtonType buttonType;
@@ -31,12 +32,14 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 	#endregion
 
 
-	public void OnPointerEnter(PointerEventData eventData) {
+	public virtual void OnPointerEnter(PointerEventData eventData) {
 		GameManager.Instance.LastSelectedButton = gameObject;
+		Debug.Log("pointer enter");
 		DoHoverEffect(); 
 	}
 
-	public void OnSelect(BaseEventData eventData) {
+	public virtual void OnSelect(BaseEventData eventData) {
+		Debug.Log("select");
 		if (buttonType == ButtonType.LevelBaitButton) {
 			SelectAction?.Invoke();
 		}
@@ -49,10 +52,11 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 			return;
 		}
 		SelectAction?.Invoke();
+		Debug.Log("select end");
 		DoHoverEffect();
 	}
 
-	private void DoHoverEffect() {
+	public virtual void DoHoverEffect() {
 		switch (buttonType) {
 			case ButtonType.None:
 				break;

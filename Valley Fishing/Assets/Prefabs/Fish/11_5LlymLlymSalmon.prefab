@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3222220105798205689, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: m_Name
-      value: 12_4LlymLlymSalmon
+      value: 11_5LlymLlymSalmon
       objectReference: {fileID: 0}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: fishName
@@ -134,6 +134,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: 'movementDirections.Array.data[3]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
+      propertyPath: 'movementDirections.Array.data[4]'
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
