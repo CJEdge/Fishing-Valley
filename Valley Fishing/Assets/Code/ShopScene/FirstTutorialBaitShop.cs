@@ -30,8 +30,6 @@ public class FirstTutorialBaitShop : BaitShop {
 			case State.Trading:
 				switch (tutorialState) {
 					case TutorialState.SellingTutorial:
-						Debug.Log(GameManager.Instance.TotalCaughtFish);
-						Debug.Log(AudioManager.Instance.InVoiceOverChain);
 						if (GameManager.Instance.TotalCaughtFish == 0 && !AudioManager.Instance.InVoiceOverChain) {
 							StartCoroutine(WaitOneFrame(SetBuyState));
 						}
@@ -84,6 +82,11 @@ public class FirstTutorialBaitShop : BaitShop {
 		//} else {
 		//	AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopThanks[1]);
 		//}
+	}
+
+	public override void OpenFishBoard() {
+		base.OpenFishBoard();
+		PlayNextTutotialVoiceOver(this.FishboardIntrosCompleted,fishboardIntros);
 	}
 
 	public override IEnumerator EnterShop(bool enter) {

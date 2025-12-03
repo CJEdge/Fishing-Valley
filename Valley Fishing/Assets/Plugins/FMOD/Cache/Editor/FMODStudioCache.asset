@@ -461,6 +461,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8210008016747887974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Shop/BaitShop/Fishboard/AreWorth
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Shop/BaitShop/Fishboard/AreWorth
+  Guid:
+    Data1: -149834504
+    Data2: 1083555879
+    Data3: 1521662353
+    Data4: 1452021076
+  Banks:
+  - {fileID: -5674214797675166295}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -3538903450536189571}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8177982136033261261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -540,6 +568,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7607715713656312107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/StoneLoaches/Language
+  m_EditorClassIdentifier: 
+  Name: Language
+  StudioPath: 
+  Min: 0
+  Max: 11
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-7486686057757504628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1216,10 +1268,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/VoiceLines.bank
   Name: VoiceLines
   StudioPath: bank:/VoiceLines
-  lastModified: 638996252931015875
+  lastModified: 639003243242926322
   FileSizes:
   - Name: Desktop
-    Value: 7691712
+    Value: 7934080
   Exists: 1
 --- !u!114 &-5408854543385909189
 MonoBehaviour:
@@ -1653,6 +1705,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-3538903450536189571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AreWorth/Language
+  m_EditorClassIdentifier: 
+  Name: Language
+  StudioPath: 
+  Min: 0
+  Max: 11
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-3509602368390223642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1941,6 +2017,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2399169738393334119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Shop/BaitShop/Fishboard/Fishs/BrownTrouts
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Shop/BaitShop/Fishboard/Fishs/BrownTrouts
+  Guid:
+    Data1: 689430516
+    Data2: 1180275496
+    Data3: -748291173
+    Data4: 816933496
+  Banks:
+  - {fileID: -5674214797675166295}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 8371248896039206177}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2303175233703740041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1966,6 +2070,34 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: -4225585842815142863}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2023115743716864325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Shop/BaitShop/Fishboard/Fishs/StoneLoaches
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Shop/BaitShop/Fishboard/Fishs/StoneLoaches
+  Guid:
+    Data1: -1864033762
+    Data2: 1272187679
+    Data3: 1601915028
+    Data4: 1137487123
+  Banks:
+  - {fileID: -5674214797675166295}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -7607715713656312107}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -2461,6 +2593,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-293212400320172253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CommonCarps/Language
+  m_EditorClassIdentifier: 
+  Name: Language
+  StudioPath: 
+  Min: 0
+  Max: 11
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-259080242922946436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2509,6 +2665,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-186914726122394228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Shop/BaitShop/Fishboard/Fishs/CommonCarps
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Shop/BaitShop/Fishboard/Fishs/CommonCarps
+  Guid:
+    Data1: -1444365287
+    Data2: 1183918570
+    Data3: 183735209
+    Data4: 536203139
+  Banks:
+  - {fileID: -5674214797675166295}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -293212400320172253}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2642,12 +2826,18 @@ MonoBehaviour:
   - {fileID: -7309827889407250142}
   - {fileID: -6899570419973302261}
   - {fileID: 8074848038592277652}
+  - {fileID: 4706204526218368705}
+  - {fileID: -186914726122394228}
+  - {fileID: -2023115743716864325}
+  - {fileID: 5354524690780081771}
+  - {fileID: -2399169738393334119}
+  - {fileID: -8210008016747887974}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4198817137325428765}
   StringsBanks:
   - {fileID: 1411835401192698514}
-  cacheTime: 638996252931015875
+  cacheTime: 639003243242926322
   cacheVersion: 131624
 --- !u!114 &22982600956307489
 MonoBehaviour:
@@ -2716,6 +2906,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/ReelTutorial 10/Language
+  m_EditorClassIdentifier: 
+  Name: Language
+  StudioPath: 
+  Min: 0
+  Max: 11
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &329603981928592624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AndYouHave/Language
   m_EditorClassIdentifier: 
   Name: Language
   StudioPath: 
@@ -3112,10 +3326,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638996252926772913
+  lastModified: 639003241138182858
   FileSizes:
   - Name: Desktop
-    Value: 6052
+    Value: 6356
   Exists: 1
 --- !u!114 &1489091543754472347
 MonoBehaviour:
@@ -4148,7 +4362,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638996252926742995
+  lastModified: 639003241138146612
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -4264,6 +4478,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &4706204526218368705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Shop/BaitShop/Fishboard/OpenFishboard0
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Shop/BaitShop/Fishboard/OpenFishboard0
+  Guid:
+    Data1: -1686980007
+    Data2: 1285526235
+    Data3: 1583455378
+    Data4: -342189943
+  Banks:
+  - {fileID: -5674214797675166295}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 6723974926612295880}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4875641930977000199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4341,6 +4583,34 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: -5709709911467742106}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5354524690780081771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Shop/BaitShop/Fishboard/AndYouHave
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Shop/BaitShop/Fishboard/AndYouHave
+  Guid:
+    Data1: -634847333
+    Data2: 1216476049
+    Data3: -1197503831
+    Data4: -787264255
+  Banks:
+  - {fileID: -5674214797675166295}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 329603981928592624}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -4887,6 +5157,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/MenuSettings/Language
+  m_EditorClassIdentifier: 
+  Name: Language
+  StudioPath: 
+  Min: 0
+  Max: 11
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &6723974926612295880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/OpenFishboard0/Language
   m_EditorClassIdentifier: 
   Name: Language
   StudioPath: 
@@ -5482,6 +5776,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8371248896039206177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BrownTrouts/Language
+  m_EditorClassIdentifier: 
+  Name: Language
+  StudioPath: 
+  Min: 0
+  Max: 11
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &8416483519855477386
 MonoBehaviour:
   m_ObjectHideFlags: 0

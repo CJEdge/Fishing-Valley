@@ -466,6 +466,39 @@ MonoBehaviour:
       Data3: 424741795
       Data4: -1104564924
     Path: event:/VoiceOver/Shop/BaitShop/ItemIntros/RareBait
+  FishBoardFish:
+  - Guid:
+      Data1: 689430516
+      Data2: 1180275496
+      Data3: -748291173
+      Data4: 816933496
+    Path: event:/VoiceOver/Shop/BaitShop/Fishboard/Fishs/BrownTrouts
+  - Guid:
+      Data1: -1444365287
+      Data2: 1183918570
+      Data3: 183735209
+      Data4: 536203139
+    Path: event:/VoiceOver/Shop/BaitShop/Fishboard/Fishs/CommonCarps
+  - Guid:
+      Data1: -1864033762
+      Data2: 1272187679
+      Data3: 1601915028
+      Data4: 1137487123
+    Path: event:/VoiceOver/Shop/BaitShop/Fishboard/Fishs/StoneLoaches
+  AreWorth:
+    Guid:
+      Data1: -149834504
+      Data2: 1083555879
+      Data3: 1521662353
+      Data4: 1452021076
+    Path: event:/VoiceOver/Shop/BaitShop/Fishboard/AreWorth
+  AndYouHave:
+    Guid:
+      Data1: -634847333
+      Data2: 1216476049
+      Data3: -1197503831
+      Data4: -787264255
+    Path: event:/VoiceOver/Shop/BaitShop/Fishboard/AndYouHave
   price:
     Guid:
       Data1: -762506879

@@ -779,6 +779,27 @@ MonoBehaviour:
   eventSystem: {fileID: 1395612272}
   baitQuantities: 05000000050000000500000005000000050000000500000005000000050000000500000005000000050000000500000005000000
   shopEnterTime: 1
+  areWorth:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  andYouHave:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  fishboardIntros:
+  - Guid:
+      Data1: -1686980007
+      Data2: 1285526235
+      Data3: 1583455378
+      Data4: -342189943
+    Path: event:/VoiceOver/Shop/BaitShop/Fishboard/OpenFishboard0
 --- !u!1 &918728919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2491,25 +2512,6 @@ MonoBehaviour:
   - {fileID: 276873567}
   - {fileID: 539947647}
   - {fileID: 656606134}
-  fishNames:
-  - Guid:
-      Data1: 939592733
-      Data2: 1121045764
-      Data3: -1960769622
-      Data4: 191476268
-    Path: event:/VoiceOver/Levels/CaughtFish/0_BrownTrout
-  - Guid:
-      Data1: -953698523
-      Data2: 1243577777
-      Data3: 1931285390
-      Data4: -315869571
-    Path: event:/VoiceOver/Levels/CaughtFish/1_CommonCarp
-  - Guid:
-      Data1: -1519471312
-      Data2: 1103977819
-      Data3: 1588832440
-      Data4: -1687215191
-    Path: event:/VoiceOver/Levels/CaughtFish/2_StoneLoach
 --- !u!1 &1709173820
 GameObject:
   m_ObjectHideFlags: 0

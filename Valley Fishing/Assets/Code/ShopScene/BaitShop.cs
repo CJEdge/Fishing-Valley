@@ -19,6 +19,7 @@ public class BaitShop : Shop {
 
 	public enum TutorialState {
 		SellingTutorial,
+		FishboardTutorial,
 		BuyingTutorial,
 		TutorialsOver
 	}
@@ -31,47 +32,24 @@ public class BaitShop : Shop {
 	#region Serialized Fields
 
 	[SerializeField] private GameObject baitShopObject;
-
 	[SerializeField] private FishBoard fishBoard;
-
-	[SerializeField]
-	protected GameObject sellButton;
-
-	[SerializeField]
-	protected GameObject initialBaitButton;
-
-	[SerializeField]
-	protected GameObject leaveShopButton;
-
-	[SerializeField]
-	protected EventSystem eventSystem;
-
-	[SerializeField]
-	private int[] baitQuantities;
-
-	[SerializeField]
-	private float shopEnterTime;
-
+	[SerializeField] protected GameObject sellButton;
+	[SerializeField] protected GameObject initialBaitButton;
+	[SerializeField] protected GameObject leaveShopButton;
+	[SerializeField] protected EventSystem eventSystem;
+	[SerializeField] private int[] baitQuantities;
+	[SerializeField] private float shopEnterTime;
+	[SerializeField] protected EventReference[] fishboardIntros;
 
 	#endregion
 
 
 	#region Properties
 
-	public int FishSellPrice {
-		get;
-		set;
-	}
-
-	public bool TutorialBaitBought {
-		get;
-		set;
-	}
-
-	public Coroutine RunEnterShop {
-		get;
-		set;
-	}
+	public int FishSellPrice { get;	set; }
+	public bool TutorialBaitBought { get; set; }
+	public Coroutine RunEnterShop {	get; set; }
+	public bool[] FishboardIntrosCompleted { get; set; }
 
 	#endregion
 
@@ -82,6 +60,9 @@ public class BaitShop : Shop {
 		switch (state) {
 			case State.Defualt:
 				AudioManager.Instance.OnVoiceLineOver += VoiceLineOver;
+				for (int i = 0; i < fishboardIntros.Length; i++) {
+					this.FishboardIntrosCompleted = new bool[fishboardIntros.Length];
+				}
 				break;
 			case State.Entering:
 				this.RunEnterShop = StartCoroutine(EnterShop(true));
@@ -159,6 +140,10 @@ public class BaitShop : Shop {
 		this.RunEnterShop = StartCoroutine(EnterShop(false));
 	}
 
+	public void OpenFishboard() {
+
+	}
+
 	#endregion
 
 
@@ -180,6 +165,7 @@ public class BaitShop : Shop {
 	}
 
 	public virtual void OpenFishBoard() {
+		tutorialState = TutorialState.FishboardTutorial;
 		fishBoard.OpenFishBoard();
 	}
 

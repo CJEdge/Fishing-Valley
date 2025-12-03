@@ -9,48 +9,34 @@ public class FMODManager : Singleton<FMODManager>
 	[Header("MenuVoiceOver")]
 
 	public EventReference MenuGreeting;
-
 	public EventReference MenuPlay;
-
 	public EventReference MenuSettings;
-
 	public EventReference MainMenu;
 
 	[Header("LevelVoiceOver")]
 
 	public EventReference[] IntroCutscenes;
-
 	public EventReference[] CatchVoices;
-
 	public EventReference[] LeaveBoatPrompts;
-
 	public EventReference YouHave;
-
 	public EventReference[] BaitNumbers;
-
 	public EventReference[] BaitTypeLeft;
 
 	[Header("ShopVoiceOver")]
 
 	public EventReference[] ShoreIntros;
-
 	public EventReference[] LeaveShorePrompts;
-
 	public EventReference[] LeaveShopPrompts;
-
 	public EventReference[] BaitShopIntros;
-
 	public EventReference[] BaitShopTutorialItemIntros;
-
 	public EventReference[] BaitShopItemIntros;
-
 	public EventReference[] BaitShopSellYourItems;
-
 	public EventReference[] BaitShopTutorialThanks;
-
 	public EventReference[] BaitShopThanks;
-
 	public EventReference[] BaitIntros;
+	public EventReference[] FishBoardFish;
+	public EventReference AreWorth;
+	public EventReference AndYouHave;
 
 
 	[Header("Prices")]
@@ -60,34 +46,22 @@ public class FMODManager : Singleton<FMODManager>
 	[Header("LevelSFX")]
 
 	public EventReference ThrowRod;
-
 	public EventReference LandRod;
-
 	public EventReference ReelSound;
-
 	public EventReference ActivityLevelSplash;
-
 	public EventReference BaitBoxOpen;
-
 	public EventReference[] BaitSounds;
-
 	public EventReference[] AttatchBaitSounds;
-
 	public EventReference FishCatch;
-
 	public EventReference Unspool;
 
 	[Header("ShopSFX")]
 
 	public EventReference MoneyEarnt;
-
 	public EventReference ItemBuy;
-
 	public EventReference ShopEnter;
-
 	[Header("Music")]
 
 	public EventReference LevelOneMusic;
-
 	public EventReference BossMusic;
 }
