@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class DebugRoomVoiceOver : VoiceOverController
 {
+	[SerializeField]
+	private Bait startingBait;
 	//[SerializeField]
 	//private float initialPracticeReelTime;
 
@@ -157,6 +159,12 @@ public class DebugRoomVoiceOver : VoiceOverController
 		//	}
 		//}
 		base.VoiceOverFinished(eventReference, skipped);
+		if(LevelController.CurrentState == LevelController.State.Idle)
+		{
+			LevelController.SetState(LevelController.State.IdleWithBait);
+			GameManager.Instance.InputController.SetState(InputController.State.NotReeling);
+			GameManager.Instance.CurrentBait = startingBait;
+        }
 		//if (LevelController.CurrentState == LevelController.State.ReelingFish)
 		//{
 			//GameManager.Instance.InputController.SetState(InputController.State.NotReeling);

@@ -666,6 +666,7 @@ MonoBehaviour:
   levelIndex: 0
   CastRodTutorialsCompleted: 
   CaughtFishTutorialsCompleted: 
+  startingBait: {fileID: 7778841989186564110, guid: 142a9d4d143554a4b86112aad1f3a274, type: 3}
 --- !u!1 &816014742 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5340243576401240924, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
