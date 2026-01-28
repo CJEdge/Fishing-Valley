@@ -754,14 +754,23 @@ MonoBehaviour:
   activitySplashSFX: {fileID: 1025274234754108350}
   reelStart: 63
   reelEnd: 16
-  activityLevelChangeTime: 3
+  activityLevelChangeTime: 10
   correctActivityChangeTime: 0.6
   movementChangeTime: 0
   strafeAudio: {fileID: 2211003099072869323}
   lineEnd: {fileID: 5132849399768412513}
+  seagull: {fileID: 5964882648534607008, guid: da0b5fbd888aeec49a19ec3b7b0a49c2, type: 3}
+  seagullIntervalTime: 0
+  seagullWarningTime: 0
+  seagullFailTime: 0
+  duckingTime: 0.3
+  duckCooldown: 0
+  avoidanceThreshold: 0
   <IsStrafer>k__BackingField: 0
   <MovementIntervalsCompleted>k__BackingField: 0
   <ReelSpeed>k__BackingField: 100
+  <Ducking>k__BackingField: 0
+  <CanDuck>k__BackingField: 1
 --- !u!54 &6682323996151832369
 Rigidbody:
   m_ObjectHideFlags: 0

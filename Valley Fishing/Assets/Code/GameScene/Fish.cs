@@ -1,6 +1,7 @@
 using FMOD.Studio;
 using FMODUnity;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -45,90 +46,43 @@ public class Fish : AbstractState<Fish.State>
 
 	#region Serialized Fields
 
-	[SerializeField]
-	private string fishName;
-
-	[SerializeField]
-	private int fishIndex;
-
-	[SerializeField]
-	private EventReference caughtVoiceLine;
-
-	[SerializeField]
-	private int sellPrice;
-
-	[SerializeField]
-	private bool failable;
-
-	[SerializeField]
-    private float fishSpeed;
-
-	[SerializeField]
-	private float centreThreshold;
-
-	[SerializeField]
-	private float swimAwaySpeed;
-
-	[SerializeField]
-	private float strafedSwimAwaySpeed;
-
-    [SerializeField]
-    private Rigidbody rb;
-
-	[SerializeField]
-	private GameObject visuals;
-
-	[SerializeField]
-	private GameObject[] activityParticles;
-
-	[SerializeField]
-	private StudioEventEmitter activitySplashSFX;
-
-	[SerializeField]
-	private float reelStart;
-
-	[SerializeField]
-	private float reelEnd;
-
-	[SerializeField]
-	private float activityLevelChangeTime;
-
-	[SerializeField]
-	private float correctActivityChangeTime;
-
-	[SerializeField]
-	private float movementChangeTime;
-
-	[SerializeField]
-	private GameObject strafeAudio;
-
-	[SerializeField]
-	private Transform lineEnd;
+	[SerializeField] private string fishName;
+	[SerializeField] private int fishIndex;
+	[SerializeField] private EventReference caughtVoiceLine;
+	[SerializeField] private int sellPrice;
+	[SerializeField] private bool failable;
+	[SerializeField] private float fishSpeed;
+	[SerializeField] private float centreThreshold;
+	[SerializeField] private float swimAwaySpeed;
+	[SerializeField] private float strafedSwimAwaySpeed;
+    [SerializeField] private Rigidbody rb;
+	[SerializeField] private GameObject visuals;
+	[SerializeField] private GameObject[] activityParticles;
+	[SerializeField] private StudioEventEmitter activitySplashSFX;
+	[SerializeField] private float reelStart;
+	[SerializeField] private float reelEnd;
+	[SerializeField] private float activityLevelChangeTime;
+	[SerializeField] private float correctActivityChangeTime;
+	[SerializeField] private float movementChangeTime;
+	[SerializeField] private GameObject strafeAudio;
+	[SerializeField] private Transform lineEnd;
+	[SerializeField] private Seagull seagull;
+	[SerializeField] private float seagullIntervalTime;
+	[SerializeField] private float seagullWarningTime;
+	[SerializeField] private float seagullFailTime;
+	[SerializeField] private float duckingTime;
+	[SerializeField] private float duckCooldown;
+	[SerializeField] private float avoidanceThreshold;
 
 	#endregion
 
 
 	#region Properties
 
-	public EventReference CaughtVoiceLine {
-		get {
-			return caughtVoiceLine;
-		}
-	}
-
-	[field:SerializeField]
-	private bool IsStrafer {
-		get;
-		set;
-	}
-
-	private bool IsCentred;
-
-	private InputController InputController {
-		get {
-			return GameManager.Instance.InputController;
-		}
-	}
+	public EventReference CaughtVoiceLine {	get => caughtVoiceLine;	}
+	[field:SerializeField] private bool IsStrafer { get; set; }
+	private bool IsCentred { get; set; }
+	private InputController InputController { get => GameManager.Instance.InputController; }
 
 	private float FailedCatchTime;
 	private bool CatchStarted;
@@ -149,44 +103,27 @@ public class Fish : AbstractState<Fish.State>
 	private float CurrentMovemetChangeTime;
 	private bool MovementDirectionChanging;
 	private bool IsUnspooling;
+	private bool HitBySeagull;
 
 	public StudioEventEmitter ActivitySplashSFX { get => activitySplashSFX; }
 
 	public string FishName { get => fishName; }
-
 	public int FishIndex { get => fishIndex; }
-
 	public int SellPrice { get => sellPrice; }
-
 	public Transform LineEnd { get => lineEnd; }
-
 	public bool IsFailable { get; set; }
-
 	public bool IsTutorial { get; set; }
-
 	public Action<MovementDirection> Strafe { get; set; }
-
 	public Action BecameCentered { get; set; }
-
 	public RodLineComponent RodLineComponent { get; set; }
-
-	[field:SerializeField]
-	public float ReelSpeed { get; set; }
+	[field:SerializeField] public float ReelSpeed { get; set; }
+	[field: SerializeField] private bool Ducking { get; set; }
+	[field: SerializeField] private bool CanDuck { get; set; } = true;
 
 	#endregion
 
 
 	#region Mono Behaviours
-
-	public void Start() {
-		//AudioManager.Instance.OnVoiceLineStarted += FreezeFish;
-		//AudioManager.Instance.OnVoiceLineOver += UnFreezeFish;
-	}
-
-	public void OnDestroy() {
-		//AudioManager.Instance.OnVoiceLineStarted -= FreezeFish;
-		//AudioManager.Instance.OnVoiceLineOver -= UnFreezeFish;
-	}
 
 	public override void Update() {
 		HandleCentering();
@@ -216,11 +153,15 @@ public class Fish : AbstractState<Fish.State>
 
     public void FixedUpdate() {
 		if(this.CurrentState == State.OnHook) {
+			if (this.HitBySeagull) {
+				ReelingSuccesfully(false);
+				return;
+			}
 			Reel();
 		}
 		if (this.IsStrafer) {
 			Move();
-		}
+		}		
     }
 	#endregion
 
@@ -243,6 +184,10 @@ public class Fish : AbstractState<Fish.State>
 		this.IsStrafer = isStrafer;
 		SetActivityLevel(this.ActivityLevels[0]);
 		SetState(State.OnHook);
+		if(seagullIntervalTime != 0) {
+			Seagull seagullInstance = Instantiate(seagull);
+			seagullInstance.Initialize(seagullIntervalTime, seagullWarningTime);
+		}
 		AudioManager.Instance.PlayUnspoolSound(false, 2);
 	}
 
@@ -254,6 +199,17 @@ public class Fish : AbstractState<Fish.State>
 		VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);
 		VibrationManager.Instance.SetVibrationFrequency(false, 0, Mathf.Infinity);
 		Destroy(gameObject);
+	}
+
+	public void Duck() {
+		if (!this.CanDuck) {
+			return;
+		}
+		StartCoroutine(PerformDuck());
+	}
+
+	public void SeagullAttack() {
+		StartCoroutine(PerformSeagullAttack());
 	}
 
 	#endregion
@@ -469,6 +425,31 @@ public class Fish : AbstractState<Fish.State>
 
 	private void UnFreezeFish(EventReference eventReference, bool skipped) {
 		rb.constraints = RigidbodyConstraints.FreezeRotation;
+	}
+
+	private IEnumerator PerformDuck() {
+		this.Ducking = true;
+		this.CanDuck = false;
+		yield return new WaitForSeconds(duckingTime);
+		this.Ducking = false;
+		yield return new WaitForSeconds(duckCooldown);
+		this.CanDuck = true;
+	}
+
+	private IEnumerator PerformSeagullAttack() {
+		float currentTime = 0;
+		while (currentTime < avoidanceThreshold) {
+			currentTime += Time.deltaTime;
+			yield return new();
+			if (this.Ducking) {
+				Debug.Log("hit");
+				yield break;
+			}
+		}
+		Debug.Log("hit");
+		this.HitBySeagull = true;
+		yield return new WaitForSeconds(seagullFailTime);
+		this.HitBySeagull = false;
 	}
 
 	#endregion

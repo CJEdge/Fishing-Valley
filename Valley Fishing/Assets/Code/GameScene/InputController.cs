@@ -78,33 +78,20 @@ public class InputController : AbstractState<InputController.State> {
 
 	[Header("Variables")]
 
-	[SerializeField]
-	private Vector2 clickVibration;
-
-	[SerializeField]
-	private float reelCalculationTime;
+	[SerializeField] private Vector2 clickVibration;
+	[SerializeField] private float reelCalculationTime;
 
 	[Header("Components")]
 
-	[SerializeField]
-	private PlayerInput playerInput;
-
-	[SerializeField]
-	private GameObject blurObject;
-
-	[SerializeField]
-	private GameObject blackObject;
-
-	[SerializeField]
-	private PlayerArms playerArms;
-
-	[SerializeField]
-	private RodLineComponent rodLineComponent;
+	[SerializeField] private PlayerInput playerInput;
+	[SerializeField] private GameObject blurObject;
+	[SerializeField] private GameObject blackObject;
+	[SerializeField] private PlayerArms playerArms;
+	[SerializeField] private RodLineComponent rodLineComponent;
 
 	[Header("ReelTypes")]
 
 	[SerializeField] private InputType mouse = new InputType();
-
 	[SerializeField] private InputType controller = new InputType();
 
 	#endregion
@@ -116,17 +103,11 @@ public class InputController : AbstractState<InputController.State> {
 	public class InputType {
 
 		public List<float> reelStateThresholds;
-
 		public float HorizontalSpeed;
-
 		public float ReelInput;
-
 		public float LastReelInput { get; set; }
-
 		public float CurrentReelResetRate { get; set; }
-
 		public float CurrentCompleteReelResetTime { get; set; }
-
 		public float ReelSpeed;
 	}
 
@@ -143,20 +124,10 @@ public class InputController : AbstractState<InputController.State> {
 	public Vector2 HorizontalInput { get; set; }
 	private Vector2 PreviousRightStickInput { get; set; }
 	[field:SerializeField] public int ReelLevel { get; set; }
-
 	private bool IsSwitchingScenes { get;set; } = false;
 	private bool CanSwitchScenes { get; set; } = false;
 	public float CurrentReelResetTime { get; set; }
 	public bool IsSFXMuted { get; set; }
-
-	#endregion
-
-
-	#region Mono Behaviours
-
-	public void Start() {
-		AudioManager.Instance.OnVoiceLineStarted += VoiceLineStarted;
-	}
 
 	#endregion
 
@@ -236,7 +207,16 @@ public class InputController : AbstractState<InputController.State> {
 	public void NorthGamepad(InputAction.CallbackContext context) {
 		if (context.performed) {
 			if(GameManager.Instance.ShopController != null) {
-				//GameManager.Instance.ShopController.BaitShop.OpenFishBoard();
+			}
+		}
+	}
+
+	public void SouthGamepad(InputAction.CallbackContext context) {
+		if (context.performed) {
+			if (GameManager.Instance.LevelController != null) {
+				if (GameManager.Instance.CurrentFish != null) {
+					GameManager.Instance.CurrentFish.Duck();
+				}
 			}
 		}
 	}
@@ -328,10 +308,6 @@ public class InputController : AbstractState<InputController.State> {
 		for (int i = 0; i < this.InputTypes.Count; i++) {
 			this.InputTypes[i].LastReelInput = this.InputTypes[i].ReelInput;
 		}
-	}
-
-	private void VoiceLineStarted() {
-		//SetState(State.ReelingLocked);
 	}
 
 	#endregion

@@ -259,6 +259,12 @@ MonoBehaviour:
       Data3: 1354205082
       Data4: -1720165158
     Path: event:/VoiceLines/Misc/Captain/Bait Names/Muscle
+  - Guid:
+      Data1: 245993063
+      Data2: 1117766133
+      Data3: -1805141313
+      Data4: -1711578853
+    Path: event:/VoiceLines/Misc/Captain/Bait Names/Worm
   FishBoardFish:
   - Guid:
       Data1: 689430516
@@ -749,6 +755,20 @@ MonoBehaviour:
       Data3: -1916274767
       Data4: -1599929813
     Path: event:/SFX/LevelSFX/Rod Sounds/Unspool
+  SeagullWarning:
+    Guid:
+      Data1: 595644067
+      Data2: 1108216077
+      Data3: -730336597
+      Data4: -54611442
+    Path: event:/SFX/LevelSFX/Seagull/SeagullWarning
+  SeagullAttack:
+    Guid:
+      Data1: 709301830
+      Data2: 1289651429
+      Data3: 90536069
+      Data4: 2110932389
+    Path: event:/SFX/LevelSFX/Seagull/SeagullAttack
   MoneyEarnt:
     Guid:
       Data1: 1982487354

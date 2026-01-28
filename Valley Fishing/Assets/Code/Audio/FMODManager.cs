@@ -79,6 +79,8 @@ public class FMODManager : Singleton<FMODManager>
 	public EventReference[] AttatchBaitSounds;
 	public EventReference FishCatch;
 	public EventReference Unspool;
+	public EventReference SeagullWarning;
+	public EventReference SeagullAttack;
 
 	[Header("ShopSFX")]
 

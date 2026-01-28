@@ -87,6 +87,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Button South",
+                    "type": "Button",
+                    "id": "f826465d-658a-4fc7-a069-6b0bd14e05ae",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Black",
                     "type": "Button",
                     "id": "3faa631c-4524-4cca-9fbd-519afbc9d87f",
@@ -444,6 +453,17 @@
                     "processors": "",
                     "groups": ";Gamepad",
                     "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "87d11f08-36aa-463c-bb41-02e4f7b6e1f2",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Button South",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
