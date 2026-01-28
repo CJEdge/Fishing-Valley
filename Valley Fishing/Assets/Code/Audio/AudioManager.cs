@@ -19,68 +19,26 @@ public class AudioManager : Singleton<AudioManager>
 	public EventInstance UnspoolEventInstance;
 
 	[field:SerializeField]
-	public StudioEventEmitter FishActivityLevelInstance {
-		get;
-		set;
-	}
-
-	private List<EventInstance> SFXEventInstances {
-		get;
-		set;
-	} = new List<EventInstance>();
-
-	private List<EventInstance> MusicEventInstances {
-		get;
-		set;
-	} = new List<EventInstance>();
-
-	public Action<EventReference,bool> OnVoiceLineOver {
-		get;
-		set;
-	}
-
+	public StudioEventEmitter FishActivityLevelInstance { get; set;	}
+	private List<EventInstance> SFXEventInstances {	get; set; } = new List<EventInstance>();
+	private List<EventInstance> MusicEventInstances { get; set; } = new List<EventInstance>();
+	public Action<EventReference,bool> OnVoiceLineOver { get; set; }
 	public Action OnVoiceLineStarted { get; set; }
-
-	public bool VoiceLineInProgress {
-		get;
-		set;
-	}
-
-	public List<EventReference> VoiceOverChain {
-		get;
-		set;
-	} = new List<EventReference>();
-
-	public int VoiceOverChainPosition {
-		get;
-		set;
-	}
-
-	[field:SerializeField]
-	public bool InVoiceOverChain {
-		get;
-		set;
-	}
+	public bool VoiceLineInProgress { get; set;	}
+	public bool LastVoiceLineWasInChain { get; set; }
+	public List<EventReference> VoiceOverChain { get; set; } = new List<EventReference>();
+	public int VoiceOverChainPosition {	get; set; }
+	[field:SerializeField] public bool InVoiceOverChain { get; set;	}
+	private bool CanSkip { get; set; } = true;
 
 	#endregion
 
 
 	#region Mono Behaviours
 
-	public void Start() {
-		CleanUpMusic();
-		if (SceneManager.GetActiveScene().name == LevelManager.BossTutorial_00) {
-			PlayMusic(FMODManager.Instance.BossMusic);
-		} else {
-			PlayMusic(FMODManager.Instance.LevelOneMusic);
-		}
-		SceneManager.sceneLoaded += PlayMusicOnSceneLoad;
-	}
-
 	public void OnDestroy() {
 		CleanUpSFX();
 		CleanUpMusic();
-		SceneManager.sceneLoaded -= PlayMusicOnSceneLoad;
 	}
 
 	#endregion
@@ -127,16 +85,23 @@ public class AudioManager : Singleton<AudioManager>
 	}
 
 	public void SkipVoiceOver() {
-		if (this.InVoiceOverChain) {
-			this.VoiceOverChainPosition = this.VoiceOverChain.Count;
-			this.InVoiceOverChain = false;
+		if (!this.CanSkip) {
+			return;
 		}
 		this.VoiceLineEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 		this.VoiceLineEventInstance.release();
 		this.VoiceLineEventInstance.clearHandle();
 		this.VoiceLineInProgress = false;
 		this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventReference, true);
+		if (this.InVoiceOverChain) {
+			this.VoiceOverChainPosition = this.VoiceOverChain.Count;
+			this.InVoiceOverChain = false;
+		}
 		StopCoroutine(WaitForVoiceLineEnd());
+	}
+
+	public void DisableSkipping() {
+		StartCoroutine(RunDisableSkipping());
 	}
 
 	public void PlayVoiceOverChain(List<EventReference> voiceOverChain) {
@@ -180,6 +145,7 @@ public class AudioManager : Singleton<AudioManager>
 	}
 
 	public void InitializeMusic(EventReference musicEventReference) {
+		CleanUpMusic();
 		this.MusicEventInstance = CreateMusicInstance(musicEventReference);
 		this.MusicEventInstance.start();
 	}
@@ -237,42 +203,28 @@ public class AudioManager : Singleton<AudioManager>
 		this.VoiceLineEventInstance.clearHandle();
 
 		this.VoiceLineInProgress = false;
-		this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventReference, false);
 
-		// Proceed to next in chain
 		if (this.InVoiceOverChain) {
 			this.VoiceOverChainPosition++;
 			if (this.VoiceOverChainPosition < this.VoiceOverChain.Count) {
-				yield return new WaitForEndOfFrame(); // ensures previous event is fully released
+				yield return new WaitForEndOfFrame();
 				PlayVoiceOver(this.VoiceOverChain[this.VoiceOverChainPosition]);
-			} else {
+			} else {				
+				this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventReference, false);
 				this.InVoiceOverChain = false;
 			}
+		} else { 
+			this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventReference, false);
 		}
 	}
 
-	private IEnumerator ContinueVoiceOverChain() {
+	private IEnumerator RunDisableSkipping() {
+		this.CanSkip = false;
 		yield return new WaitForEndOfFrame();
-		if (this.VoiceOverChainPosition < this.VoiceOverChain.Count) {
-			Debug.Log(this.VoiceOverChain[this.VoiceOverChainPosition]);
-			this.InVoiceOverChain = true;
-			PlayVoiceOver(this.VoiceOverChain[this.VoiceOverChainPosition]);
-		}
-		if(this.VoiceOverChainPosition == this.VoiceOverChain.Count - 1) {
-			this.InVoiceOverChain = false;
-		}
+		this.CanSkip = true;
 	}
 
-	private void PlayMusicOnSceneLoad(Scene scene, LoadSceneMode mode) {
-		CleanUpMusic();
-		if (scene.name == LevelManager.BossTutorial_00) {
-			PlayMusic(FMODManager.Instance.BossMusic);
-		} else {
-			PlayMusic(FMODManager.Instance.LevelOneMusic);
-		}
-	}
-
-	private void PlayMusic(EventReference musicReference) {
+	public void PlayMusic(EventReference musicReference) {
 		InitializeMusic(musicReference);
 	}
 

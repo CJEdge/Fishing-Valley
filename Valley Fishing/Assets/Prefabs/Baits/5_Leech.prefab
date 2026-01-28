@@ -13,6 +13,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3614361354684212053, guid: 3bb9af89310f9574686d41c346bf7ca7, type: 3}
+      propertyPath: baitPrice
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614361354684212053, guid: 3bb9af89310f9574686d41c346bf7ca7, type: 3}
       propertyPath: catchChances.Array.size
       value: 8
       objectReference: {fileID: 0}

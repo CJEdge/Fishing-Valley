@@ -116,541 +116,625 @@ MonoBehaviour:
       Data2: 1340342605
       Data3: -954455115
       Data4: -221744988
-    Path: event:/VoiceOver/MainMenu/MenuIntro
+    Path: event:/VoiceLines/MainMenu/MenuIntro
   MenuPlay:
     Guid:
       Data1: 421587335
       Data2: 1296107241
       Data3: -1961657963
       Data4: -1472280975
-    Path: event:/VoiceOver/MainMenu/MenuPlay
+    Path: event:/VoiceLines/MainMenu/MenuPlay
   MenuSettings:
     Guid:
       Data1: 1901563736
       Data2: 1170693328
       Data3: 2107169184
       Data4: 8689953
-    Path: event:/VoiceOver/MainMenu/MenuSettings
+    Path: event:/VoiceLines/MainMenu/MenuSettings
   MainMenu:
     Guid:
       Data1: 711317199
       Data2: 1260973778
       Data3: 1212074132
       Data4: -571899091
-    Path: event:/VoiceOver/MainMenu/MenuMainMenu
+    Path: event:/VoiceLines/MainMenu/MenuMainMenu
   IntroCutscenes:
   - Guid:
       Data1: -2051325276
       Data2: 1285507992
       Data3: -1565593455
       Data4: 1931711181
-    Path: event:/VoiceOver/Levels/Level1IntroCutscene
+    Path: event:/VoiceLines/Level Scene/Intro Cutscenes/Level 0
   - Guid:
       Data1: 34057961
       Data2: 1159149749
       Data3: -2031331445
       Data4: -799445008
-    Path: event:/VoiceOver/Levels/Level2IntroCutscene
+    Path: event:/VoiceLines/Level Scene/Intro Cutscenes/Level 1
   - Guid:
       Data1: -1427230422
       Data2: 1180601217
       Data3: 221454254
       Data4: -35801480
-    Path: event:/VoiceOver/Levels/Level3IntroCutscene
-  - Guid:
-      Data1: 1322760010
-      Data2: 1131173313
-      Data3: -1961681008
-      Data4: 1020907356
-    Path: event:/VoiceOver/Levels/Level4IntroCutscene
+    Path: event:/VoiceLines/Level Scene/Intro Cutscenes/Level 2
   - Guid:
       Data1: 1906869585
       Data2: 1233512109
       Data3: -1325823104
       Data4: 1120191466
-    Path: event:/VoiceOver/Levels/BossIntroCutscene
-  CatchVoices:
-  - Guid:
-      Data1: 939592733
-      Data2: 1121045764
-      Data3: -1960769622
-      Data4: 191476268
-    Path: event:/VoiceOver/CaughtFish/0_Bass
-  - Guid:
-      Data1: -953698523
-      Data2: 1243577777
-      Data3: 1931285390
-      Data4: -315869571
-    Path: event:/VoiceOver/CaughtFish/1_Carp
-  - Guid:
-      Data1: -1519471312
-      Data2: 1103977819
-      Data3: 1588832440
-      Data4: -1687215191
-    Path: event:/VoiceOver/CaughtFish/2_Trout
-  - Guid:
-      Data1: -1519471312
-      Data2: 1103977819
-      Data3: 1588832440
-      Data4: -1687215191
-    Path: event:/VoiceOver/CaughtFish/2_Trout
-  - Guid:
-      Data1: -1519471312
-      Data2: 1103977819
-      Data3: 1588832440
-      Data4: -1687215191
-    Path: event:/VoiceOver/CaughtFish/2_Trout
-  - Guid:
-      Data1: -1519471312
-      Data2: 1103977819
-      Data3: 1588832440
-      Data4: -1687215191
-    Path: event:/VoiceOver/CaughtFish/2_Trout
-  - Guid:
-      Data1: -1519471312
-      Data2: 1103977819
-      Data3: 1588832440
-      Data4: -1687215191
-    Path: event:/VoiceOver/CaughtFish/2_Trout
-  - Guid:
-      Data1: -1519471312
-      Data2: 1103977819
-      Data3: 1588832440
-      Data4: -1687215191
-    Path: event:/VoiceOver/CaughtFish/2_Trout
+    Path: event:/VoiceLines/Level Scene/Intro Cutscenes/Boss 0
   LeaveBoatPrompts:
   - Guid:
       Data1: -1663164235
       Data2: 1260862910
       Data3: -482018403
       Data4: -192290849
-    Path: event:/VoiceOver/Levels/LeaveBoatPrompt/LeaveBoatPrompt0
-  YouHave:
-    Guid:
-      Data1: -825399506
-      Data2: 1308438927
-      Data3: -779545667
-      Data4: 1500991846
-    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/YouHave
-  BaitNumbers:
-  - Guid:
-      Data1: 1645698580
-      Data2: 1295627140
-      Data3: 1356951985
-      Data4: -1167137069
-    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitNumbers/1
-  - Guid:
-      Data1: 1874453143
-      Data2: 1301520856
-      Data3: -642265184
-      Data4: -1082616872
-    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitNumbers/2
-  - Guid:
-      Data1: -1087745248
-      Data2: 1076652533
-      Data3: -1389090941
-      Data4: 818282589
-    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitNumbers/3
-  - Guid:
-      Data1: 851288751
-      Data2: 1292278583
-      Data3: 525415315
-      Data4: -1016955718
-    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitNumbers/4
-  - Guid:
-      Data1: -1492368557
-      Data2: 1137126527
-      Data3: -1324225367
-      Data4: 30447279
-    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitNumbers/5
-  BaitTypeLeft:
-  - Guid:
-      Data1: 525390172
-      Data2: 1339443731
-      Data3: 235784324
-      Data4: -1113339892
-    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitTypes/WormBait
-  - Guid:
-      Data1: 525390172
-      Data2: 1339443731
-      Data3: 235784324
-      Data4: -1113339892
-    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitTypes/WormBait
-  - Guid:
-      Data1: 525390172
-      Data2: 1339443731
-      Data3: 235784324
-      Data4: -1113339892
-    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitTypes/WormBait
-  - Guid:
-      Data1: 525390172
-      Data2: 1339443731
-      Data3: 235784324
-      Data4: -1113339892
-    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitTypes/WormBait
-  - Guid:
-      Data1: -1514225095
-      Data2: 1321247618
-      Data3: 587371199
-      Data4: -1531709641
-    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitTypes/CrankBait
-  - Guid:
-      Data1: 1241091762
-      Data2: 1276523665
-      Data3: 235597710
-      Data4: 913918482
-    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitTypes/LeechBait
-  - Guid:
-      Data1: -1792646665
-      Data2: 1263809097
-      Data3: 1375794837
-      Data4: -806062786
-    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitTypes/MuscleBait
-  - Guid:
-      Data1: 525390172
-      Data2: 1339443731
-      Data3: 235784324
-      Data4: -1113339892
-    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/BaitCount/BaitTypes/WormBait
+    Path: event:/VoiceLines/Level Scene/LeaveBoatPrompt/0 Head Back To Shore
   ShoreIntros:
   - Guid:
       Data1: -996136634
       Data2: 1295277087
       Data3: 679284877
       Data4: 1160258266
-    Path: event:/VoiceOver/Shop/Shore/ShopSceneIntros/ShoreTutorial 0
+    Path: event:/VoiceLines/Shop Scene/Shore/Shore Intros/0 The Bait Shop
   - Guid:
-      Data1: 1339770265
-      Data2: 1201517270
-      Data3: -1802642763
-      Data4: -1325746280
-    Path: event:/VoiceOver/Shop/Shore/ShopSceneIntros/ShopIntro 1
-  - Guid:
-      Data1: -336033461
-      Data2: 1151154036
-      Data3: 1985901978
-      Data4: -366889491
-    Path: event:/VoiceOver/Shop/Shore/ShopSceneIntros/ShopIntro 2
+      Data1: -99361396
+      Data2: 1191018595
+      Data3: -250523751
+      Data4: -1777294225
+    Path: event:/VoiceLines/Shop Scene/Shore/Shore Intros/1 Head To Bait Shop
   LeaveShorePrompts:
   - Guid:
       Data1: -1414859070
       Data2: 1267325431
       Data3: 315434398
       Data4: 1770385284
-    Path: event:/VoiceOver/Shop/Shore/LeaveTutorials/LeaveTutorial
+    Path: event:/VoiceLines/Shop Scene/Shore/LeaveTutorials/LeaveTutorial
   - Guid:
-      Data1: 247525448
-      Data2: 1232182876
-      Data3: 1698894226
-      Data4: 456891209
-    Path: event:/VoiceOver/Shop/Shore/LeaveTutorials/LeaveTutorial 2
-  - Guid:
-      Data1: 523544258
-      Data2: 1239594969
-      Data3: 2027002556
-      Data4: -1984431690
-    Path: event:/VoiceOver/Shop/Shore/LeaveTutorials/LeaveTutorial 3
-  LeaveShopPrompts:
-  - Guid:
-      Data1: 83235433
-      Data2: 1113136694
-      Data3: 891327386
-      Data4: -1526096964
-    Path: event:/VoiceOver/Shop/BaitShop/LeaveShopPrompt/LeaveShopPrompt 0
-  - Guid:
-      Data1: -1139834866
-      Data2: 1160598040
-      Data3: -248789370
-      Data4: 486288163
-    Path: event:/VoiceOver/Shop/BaitShop/LeaveShopPrompt/LeaveShopPrompt 1
-  - Guid:
-      Data1: -1139834866
-      Data2: 1160598040
-      Data3: -248789370
-      Data4: 486288163
-    Path: event:/VoiceOver/Shop/BaitShop/LeaveShopPrompt/LeaveShopPrompt 1
+      Data1: -1414859070
+      Data2: 1267325431
+      Data3: 315434398
+      Data4: 1770385284
+    Path: event:/VoiceLines/Shop Scene/Shore/LeaveTutorials/LeaveTutorial
   BaitShopIntros:
   - Guid:
       Data1: 2026100594
       Data2: 1284065626
       Data3: 1522154651
       Data4: 2107786914
-    Path: event:/VoiceOver/Shop/BaitShop/ShopIntros/ShopIntro
-  - Guid:
-      Data1: 1823110428
-      Data2: 1073998412
-      Data3: -1240993116
-      Data4: 1476132017
-    Path: event:/VoiceOver/Shop/BaitShop/ShopIntros/ShopIntro 2
+    Path: event:/VoiceLines/Shop Scene/BaitShop/Intros/Intro 0
   - Guid:
       Data1: 962300239
       Data2: 1079666433
       Data3: -432020091
       Data4: 92826224
-    Path: event:/VoiceOver/Shop/BaitShop/ShopIntros/ShopIntro 3
-  BaitShopTutorialItemIntros:
-  - Guid:
-      Data1: 1662831763
-      Data2: 1177459567
-      Data3: -1590992981
-      Data4: -1277593302
-    Path: event:/VoiceOver/Shop/BaitShop/ItemIntros/SoldFish 0
-  - Guid:
-      Data1: -977912986
-      Data2: 1301859922
-      Data3: -249633656
-      Data4: -1347455261
-    Path: event:/VoiceOver/Shop/BaitShop/ItemIntros/SoldFish 1
-  - Guid:
-      Data1: -1208275200
-      Data2: 1169199887
-      Data3: 1884707738
-      Data4: 1521005066
-    Path: event:/VoiceOver/Shop/BaitShop/ItemIntros/SoldFish 2
-  BaitShopItemIntros:
-  - Guid:
-      Data1: -709591002
-      Data2: 1232884569
-      Data3: -1665392750
-      Data4: -1355003857
-    Path: event:/VoiceOver/Shop/BaitShop/ItemIntros/WormBait
-  - Guid:
-      Data1: -1525828269
-      Data2: 1254480062
-      Data3: 424741795
-      Data4: -1104564924
-    Path: event:/VoiceOver/Shop/BaitShop/ItemIntros/RareBait
-  BaitShopSellYourItems:
+    Path: event:/VoiceLines/Shop Scene/BaitShop/Intros/Intro 1
+  BaitShopSoldItem:
   - Guid:
       Data1: -68930065
       Data2: 1294906358
       Data3: -1644371542
       Data4: -1821348812
-    Path: event:/VoiceOver/Shop/BaitShop/ShopSoldItem/GenericSoldItem
-  BaitShopTutorialThanks:
+    Path: event:/VoiceLines/Shop Scene/BaitShop/ShopSoldItem/GenericSoldItem
+  BaitNames:
   - Guid:
-      Data1: 1511185493
-      Data2: 1172471537
-      Data3: 147129528
-      Data4: -1205613490
-    Path: event:/VoiceOver/Shop/BaitShop/Thanks/TutorialThanks
+      Data1: 245993063
+      Data2: 1117766133
+      Data3: -1805141313
+      Data4: -1711578853
+    Path: event:/VoiceLines/Misc/Captain/Bait Names/Worm
   - Guid:
-      Data1: -1727683224
-      Data2: 1187569512
-      Data3: -1460193128
-      Data4: 1245851649
-    Path: event:/VoiceOver/Shop/BaitShop/Thanks/TutorialThanks 2
-  BaitShopThanks:
+      Data1: 245993063
+      Data2: 1117766133
+      Data3: -1805141313
+      Data4: -1711578853
+    Path: event:/VoiceLines/Misc/Captain/Bait Names/Worm
   - Guid:
-      Data1: 1511185493
-      Data2: 1172471537
-      Data3: 147129528
-      Data4: -1205613490
-    Path: event:/VoiceOver/Shop/BaitShop/Thanks/TutorialThanks
+      Data1: 245993063
+      Data2: 1117766133
+      Data3: -1805141313
+      Data4: -1711578853
+    Path: event:/VoiceLines/Misc/Captain/Bait Names/Worm
   - Guid:
-      Data1: -1727683224
-      Data2: 1187569512
-      Data3: -1460193128
-      Data4: 1245851649
-    Path: event:/VoiceOver/Shop/BaitShop/Thanks/TutorialThanks 2
-  BaitIntros:
+      Data1: 245993063
+      Data2: 1117766133
+      Data3: -1805141313
+      Data4: -1711578853
+    Path: event:/VoiceLines/Misc/Captain/Bait Names/Worm
   - Guid:
-      Data1: -709591002
-      Data2: 1232884569
-      Data3: -1665392750
-      Data4: -1355003857
-    Path: event:/VoiceOver/Shop/BaitShop/ItemIntros/WormBait
+      Data1: -1355715995
+      Data2: 1315992175
+      Data3: -1510785399
+      Data4: 394297395
+    Path: event:/VoiceLines/Misc/Captain/Bait Names/Cricket
   - Guid:
-      Data1: -1525828269
-      Data2: 1254480062
-      Data3: 424741795
-      Data4: -1104564924
-    Path: event:/VoiceOver/Shop/BaitShop/ItemIntros/RareBait
+      Data1: 211142096
+      Data2: 1157686694
+      Data3: -367484491
+      Data4: 1296364603
+    Path: event:/VoiceLines/Misc/Captain/Bait Names/Leech
+  - Guid:
+      Data1: 39496552
+      Data2: 1099246703
+      Data3: 1354205082
+      Data4: -1720165158
+    Path: event:/VoiceLines/Misc/Captain/Bait Names/Muscle
   FishBoardFish:
   - Guid:
       Data1: 689430516
       Data2: 1180275496
       Data3: -748291173
       Data4: 816933496
-    Path: event:/VoiceOver/Shop/BaitShop/Fishboard/Fishs/BrownTrouts
+    Path: event:/VoiceLines/Misc/Captain/Fish Names/BrownTrouts
   - Guid:
       Data1: -1444365287
       Data2: 1183918570
       Data3: 183735209
       Data4: 536203139
-    Path: event:/VoiceOver/Shop/BaitShop/Fishboard/Fishs/CommonCarps
+    Path: event:/VoiceLines/Misc/Captain/Fish Names/CommonCarps
   - Guid:
       Data1: -1864033762
       Data2: 1272187679
       Data3: 1601915028
       Data4: 1137487123
-    Path: event:/VoiceOver/Shop/BaitShop/Fishboard/Fishs/StoneLoaches
-  AreWorth:
-    Guid:
-      Data1: -149834504
-      Data2: 1083555879
-      Data3: 1521662353
-      Data4: 1452021076
-    Path: event:/VoiceOver/Shop/BaitShop/Fishboard/AreWorth
-  AndYouHave:
+    Path: event:/VoiceLines/Misc/Captain/Fish Names/StoneLoaches
+  - Guid:
+      Data1: 1146006814
+      Data2: 1103422383
+      Data3: 2118669996
+      Data4: -500227148
+    Path: event:/VoiceLines/Misc/Captain/Fish Names/Eels
+  - Guid:
+      Data1: -259922885
+      Data2: 1249522367
+      Data3: 777684923
+      Data4: 1620817878
+    Path: event:/VoiceLines/Misc/Captain/Fish Names/Pikes
+  - Guid:
+      Data1: -1035222830
+      Data2: 1216350848
+      Data3: 54859155
+      Data4: -819554457
+    Path: event:/VoiceLines/Misc/Captain/Fish Names/Breams
+  - Guid:
+      Data1: -1747735741
+      Data2: 1138281000
+      Data3: -1962287998
+      Data4: 680678659
+    Path: event:/VoiceLines/Misc/Captain/Fish Names/Chubs
+  - Guid:
+      Data1: 1257171957
+      Data2: 1257535922
+      Data3: 59105195
+      Data4: -970968916
+    Path: event:/VoiceLines/Misc/Captain/Fish Names/Perches
+  - Guid:
+      Data1: -1743984045
+      Data2: 1241039516
+      Data3: -1097936752
+      Data4: 640936890
+    Path: event:/VoiceLines/Misc/Captain/Fish Names/BullHeads
+  - Guid:
+      Data1: -872550873
+      Data2: 1085466938
+      Data3: -2023241557
+      Data4: 1260402147
+    Path: event:/VoiceLines/Misc/Captain/Fish Names/Gudgeons
+  - Guid:
+      Data1: 251110404
+      Data2: 1242563578
+      Data3: 1913501118
+      Data4: 63233210
+    Path: event:/VoiceLines/Misc/Captain/Fish Names/Roaches
+  - Guid:
+      Data1: -449038532
+      Data2: 1280758308
+      Data3: -1433694552
+      Data4: -474234592
+    Path: event:/VoiceLines/Level Scene/Caught Fish/Boss 0/0 Llyn Llyn Salmon
+  YouHave:
     Guid:
       Data1: -634847333
       Data2: 1216476049
       Data3: -1197503831
       Data4: -787264255
-    Path: event:/VoiceOver/Shop/BaitShop/Fishboard/AndYouHave
-  price:
+    Path: event:/VoiceLines/Shop Scene/BaitShop/Fishboard/You Have
+  Left:
     Guid:
-      Data1: -762506879
-      Data2: 1323342038
-      Data3: 1658031508
-      Data4: 1398234037
-    Path: event:/VoiceOver/Shop/ItemValues/TwoHundred
+      Data1: -1405782403
+      Data2: 1198478423
+      Data3: 1652036792
+      Data4: 408325238
+    Path: event:/VoiceLines/Shop Scene/BaitShop/BaitBoard/Left
+  Gold:
+    Guid:
+      Data1: -1396596423
+      Data2: 1241522444
+      Data3: -683758192
+      Data4: -1134429201
+    Path: event:/VoiceLines/Misc/Captain/Numbers/Gold
+  And:
+    Guid:
+      Data1: 1535514320
+      Data2: 1189184976
+      Data3: -1613659
+      Data4: -1892116324
+    Path: event:/VoiceLines/Misc/Captain/Numbers/And
+  SoldOut:
+    Guid:
+      Data1: 2001654591
+      Data2: 1207170656
+      Data3: 822507704
+      Data4: -1547051263
+    Path: event:/VoiceLines/Misc/Captain/Numbers/SoldOut
+  Numbers:
+  - Guid:
+      Data1: 1856446533
+      Data2: 1194123683
+      Data3: -917733445
+      Data4: 1411494770
+    Path: event:/VoiceLines/Misc/Captain/Numbers/0
+  - Guid:
+      Data1: 1027186024
+      Data2: 1309398352
+      Data3: 142435731
+      Data4: 380572125
+    Path: event:/VoiceLines/Misc/Captain/Numbers/1
+  - Guid:
+      Data1: -699348668
+      Data2: 1165382601
+      Data3: 1166981
+      Data4: -1942479447
+    Path: event:/VoiceLines/Misc/Captain/Numbers/2
+  - Guid:
+      Data1: 1530960239
+      Data2: 1116757314
+      Data3: -1033395540
+      Data4: 2114578522
+    Path: event:/VoiceLines/Misc/Captain/Numbers/3
+  - Guid:
+      Data1: 1119177603
+      Data2: 1234267492
+      Data3: 2093068457
+      Data4: -1307930329
+    Path: event:/VoiceLines/Misc/Captain/Numbers/4
+  - Guid:
+      Data1: 2109627169
+      Data2: 1197877141
+      Data3: -525550705
+      Data4: 337572895
+    Path: event:/VoiceLines/Misc/Captain/Numbers/5
+  - Guid:
+      Data1: -246552607
+      Data2: 1237123836
+      Data3: 2137590923
+      Data4: -416692693
+    Path: event:/VoiceLines/Misc/Captain/Numbers/6
+  - Guid:
+      Data1: -1820632085
+      Data2: 1252158645
+      Data3: -327228754
+      Data4: 1986686486
+    Path: event:/VoiceLines/Misc/Captain/Numbers/7
+  - Guid:
+      Data1: 1189583949
+      Data2: 1313805355
+      Data3: -2112091474
+      Data4: -1822851936
+    Path: event:/VoiceLines/Misc/Captain/Numbers/8
+  - Guid:
+      Data1: -406888540
+      Data2: 1307878144
+      Data3: 1127038108
+      Data4: -1755971956
+    Path: event:/VoiceLines/Misc/Captain/Numbers/9
+  - Guid:
+      Data1: 2045496534
+      Data2: 1195743884
+      Data3: 462182027
+      Data4: -517437605
+    Path: event:/VoiceLines/Misc/Captain/Numbers/10
+  - Guid:
+      Data1: -1462212755
+      Data2: 1294528865
+      Data3: -1528836730
+      Data4: 352432259
+    Path: event:/VoiceLines/Misc/Captain/Numbers/11
+  - Guid:
+      Data1: 990291685
+      Data2: 1091456315
+      Data3: -80581228
+      Data4: -1099444654
+    Path: event:/VoiceLines/Misc/Captain/Numbers/12
+  - Guid:
+      Data1: -1425754279
+      Data2: 1156301123
+      Data3: -763326561
+      Data4: 447991623
+    Path: event:/VoiceLines/Misc/Captain/Numbers/13
+  - Guid:
+      Data1: -1584091325
+      Data2: 1094659541
+      Data3: 73538454
+      Data4: -1794947585
+    Path: event:/VoiceLines/Misc/Captain/Numbers/14
+  - Guid:
+      Data1: 2102567865
+      Data2: 1335303068
+      Data3: 68543384
+      Data4: 1197692114
+    Path: event:/VoiceLines/Misc/Captain/Numbers/15
+  - Guid:
+      Data1: 1297408707
+      Data2: 1119361569
+      Data3: -701199978
+      Data4: 939412141
+    Path: event:/VoiceLines/Misc/Captain/Numbers/16
+  - Guid:
+      Data1: -1443686414
+      Data2: 1279033898
+      Data3: 1702955438
+      Data4: 1703990049
+    Path: event:/VoiceLines/Misc/Captain/Numbers/17
+  - Guid:
+      Data1: -1746877603
+      Data2: 1251469052
+      Data3: -1538664547
+      Data4: 598248264
+    Path: event:/VoiceLines/Misc/Captain/Numbers/18
+  - Guid:
+      Data1: 1846309256
+      Data2: 1292749796
+      Data3: -248059264
+      Data4: 1351548832
+    Path: event:/VoiceLines/Misc/Captain/Numbers/19
+  - Guid:
+      Data1: -164883153
+      Data2: 1140595124
+      Data3: 2089426323
+      Data4: 208357726
+    Path: event:/VoiceLines/Misc/Captain/Numbers/20
+  - Guid:
+      Data1: -1625761217
+      Data2: 1147498904
+      Data3: 1261750176
+      Data4: 1271533875
+    Path: event:/VoiceLines/Misc/Captain/Numbers/30
+  - Guid:
+      Data1: 88702410
+      Data2: 1197787651
+      Data3: -913272147
+      Data4: 671826511
+    Path: event:/VoiceLines/Misc/Captain/Numbers/40
+  - Guid:
+      Data1: 892299673
+      Data2: 1313531872
+      Data3: -2041373035
+      Data4: -1090021717
+    Path: event:/VoiceLines/Misc/Captain/Numbers/50
+  - Guid:
+      Data1: 1965603400
+      Data2: 1177065268
+      Data3: -1956771437
+      Data4: -1794522465
+    Path: event:/VoiceLines/Misc/Captain/Numbers/60
+  - Guid:
+      Data1: -962665099
+      Data2: 1300159567
+      Data3: 1332790704
+      Data4: -778852787
+    Path: event:/VoiceLines/Misc/Captain/Numbers/70
+  - Guid:
+      Data1: 80407427
+      Data2: 1223990637
+      Data3: 1895256225
+      Data4: -924912113
+    Path: event:/VoiceLines/Misc/Captain/Numbers/80
+  - Guid:
+      Data1: 1075790005
+      Data2: 1101906469
+      Data3: -1326892890
+      Data4: -1008071549
+    Path: event:/VoiceLines/Misc/Captain/Numbers/90
+  - Guid:
+      Data1: 127077381
+      Data2: 1339175962
+      Data3: 2068500883
+      Data4: -1697862437
+    Path: event:/VoiceLines/Misc/Captain/Numbers/100
+  - Guid:
+      Data1: 510980021
+      Data2: 1251070312
+      Data3: 488244893
+      Data4: -2105120357
+    Path: event:/VoiceLines/Misc/Captain/Numbers/200
+  - Guid:
+      Data1: 31346404
+      Data2: 1234780847
+      Data3: -1500162889
+      Data4: -1605714012
+    Path: event:/VoiceLines/Misc/Captain/Numbers/300
+  - Guid:
+      Data1: 1811413477
+      Data2: 1279098571
+      Data3: -1973982075
+      Data4: -1768457287
+    Path: event:/VoiceLines/Misc/Captain/Numbers/400
+  - Guid:
+      Data1: 583989114
+      Data2: 1187425812
+      Data3: 353031853
+      Data4: 806658839
+    Path: event:/VoiceLines/Misc/Captain/Numbers/500
+  - Guid:
+      Data1: 1396612727
+      Data2: 1316214482
+      Data3: 557512601
+      Data4: -1940293150
+    Path: event:/VoiceLines/Misc/Captain/Numbers/600
+  - Guid:
+      Data1: -1038040809
+      Data2: 1210072756
+      Data3: -748660836
+      Data4: -11077205
+    Path: event:/VoiceLines/Misc/Captain/Numbers/700
+  - Guid:
+      Data1: -1063728910
+      Data2: 1304889363
+      Data3: 744502972
+      Data4: -972239958
+    Path: event:/VoiceLines/Misc/Captain/Numbers/800
+  - Guid:
+      Data1: -1025332154
+      Data2: 1187208315
+      Data3: -1305369965
+      Data4: 21027484
+    Path: event:/VoiceLines/Misc/Captain/Numbers/900
   ThrowRod:
     Guid:
       Data1: 1108943515
       Data2: 1297155993
       Data3: 553058722
       Data4: -1595256626
-    Path: event:/SFX/LevelSFX/ThrowRod
+    Path: event:/SFX/LevelSFX/Rod Sounds/ThrowRod
   LandRod:
     Guid:
       Data1: 1165659761
       Data2: 1205779008
       Data3: -640880454
       Data4: -1017645718
-    Path: event:/SFX/LevelSFX/RodLand
+    Path: event:/SFX/LevelSFX/Splashes/RodLandSplash
   ReelSound:
     Guid:
       Data1: 1721864051
       Data2: 1315658186
       Data3: -420499557
       Data4: -533285298
-    Path: event:/SFX/LevelSFX/ReelSound
+    Path: event:/SFX/LevelSFX/Rod Sounds/ReelSound
   ActivityLevelSplash:
     Guid:
       Data1: -202002278
       Data2: 1292392546
       Data3: -413234560
       Data4: -1417980924
-    Path: event:/SFX/LevelSFX/ActivitySplash
+    Path: event:/SFX/LevelSFX/Splashes/ActivitySplash
   BaitBoxOpen:
     Guid:
       Data1: 444266264
       Data2: 1298998279
       Data3: -1468737864
       Data4: -939201927
-    Path: event:/SFX/LevelSFX/BaitBoxOpen
+    Path: event:/SFX/BaitSFX/BaitBoxOpen
   BaitSounds:
   - Guid:
       Data1: -1751036424
       Data2: 1219677751
       Data3: -754223217
       Data4: -75916562
-    Path: event:/SFX/WormBaitIdle
+    Path: event:/SFX/BaitSFX/WormBaitIdle
   - Guid:
       Data1: -1751036424
       Data2: 1219677751
       Data3: -754223217
       Data4: -75916562
-    Path: event:/SFX/WormBaitIdle
+    Path: event:/SFX/BaitSFX/WormBaitIdle
   - Guid:
       Data1: -1751036424
       Data2: 1219677751
       Data3: -754223217
       Data4: -75916562
-    Path: event:/SFX/WormBaitIdle
+    Path: event:/SFX/BaitSFX/WormBaitIdle
   - Guid:
       Data1: -1751036424
       Data2: 1219677751
       Data3: -754223217
       Data4: -75916562
-    Path: event:/SFX/WormBaitIdle
+    Path: event:/SFX/BaitSFX/WormBaitIdle
+  - Guid:
+      Data1: -306073775
+      Data2: 1283962052
+      Data3: -347803755
+      Data4: 818896552
+    Path: event:/SFX/BaitSFX/CricketBaitIdle
   - Guid:
       Data1: -2134130286
       Data2: 1214591248
       Data3: 585164988
       Data4: -178165460
-    Path: event:/SFX/LeechBaitIdle
+    Path: event:/SFX/BaitSFX/LeechBaitIdle
   - Guid:
       Data1: 1812193420
       Data2: 1175040479
       Data3: 1880725685
       Data4: -455227078
-    Path: event:/SFX/Mussel
+    Path: event:/SFX/BaitSFX/Mussel
   - Guid:
       Data1: -1751036424
       Data2: 1219677751
       Data3: -754223217
       Data4: -75916562
-    Path: event:/SFX/WormBaitIdle
+    Path: event:/SFX/BaitSFX/WormBaitIdle
   - Guid:
       Data1: 1812193420
       Data2: 1175040479
       Data3: 1880725685
       Data4: -455227078
-    Path: event:/SFX/Mussel
-  - Guid:
-      Data1: -1751036424
-      Data2: 1219677751
-      Data3: -754223217
-      Data4: -75916562
-    Path: event:/SFX/BaitIdle
+    Path: event:/SFX/BaitSFX/Mussel
   AttatchBaitSounds:
   - Guid:
       Data1: -1561571289
       Data2: 1177583210
       Data3: -336593267
       Data4: 1816793257
-    Path: event:/SFX/AttatchBait
+    Path: event:/SFX/BaitSFX/AttatchBait
   - Guid:
       Data1: -1561571289
       Data2: 1177583210
       Data3: -336593267
       Data4: 1816793257
-    Path: event:/SFX/AttatchBait
+    Path: event:/SFX/BaitSFX/AttatchBait
   - Guid:
       Data1: -1561571289
       Data2: 1177583210
       Data3: -336593267
       Data4: 1816793257
-    Path: event:/SFX/AttatchBait
+    Path: event:/SFX/BaitSFX/AttatchBait
   - Guid:
       Data1: -1561571289
       Data2: 1177583210
       Data3: -336593267
       Data4: 1816793257
-    Path: event:/SFX/AttatchBait
+    Path: event:/SFX/BaitSFX/AttatchBait
   - Guid:
       Data1: -1561571289
       Data2: 1177583210
       Data3: -336593267
       Data4: 1816793257
-    Path: event:/SFX/AttatchBait
+    Path: event:/SFX/BaitSFX/AttatchBait
   - Guid:
       Data1: -1561571289
       Data2: 1177583210
       Data3: -336593267
       Data4: 1816793257
-    Path: event:/SFX/AttatchBait
+    Path: event:/SFX/BaitSFX/AttatchBait
   - Guid:
       Data1: -1561571289
       Data2: 1177583210
       Data3: -336593267
       Data4: 1816793257
-    Path: event:/SFX/AttatchBait
+    Path: event:/SFX/BaitSFX/AttatchBait
   - Guid:
       Data1: -1561571289
       Data2: 1177583210
       Data3: -336593267
       Data4: 1816793257
-    Path: event:/SFX/AttatchBait
+    Path: event:/SFX/BaitSFX/AttatchBait
   - Guid:
       Data1: -1561571289
       Data2: 1177583210
       Data3: -336593267
       Data4: 1816793257
-    Path: event:/SFX/AttatchBait
+    Path: event:/SFX/BaitSFX/AttatchBait
   FishCatch:
     Guid:
       Data1: -1537860913
@@ -664,7 +748,7 @@ MonoBehaviour:
       Data2: 1314893420
       Data3: -1916274767
       Data4: -1599929813
-    Path: event:/SFX/LevelSFX/Unspool
+    Path: event:/SFX/LevelSFX/Rod Sounds/Unspool
   MoneyEarnt:
     Guid:
       Data1: 1982487354
@@ -679,6 +763,13 @@ MonoBehaviour:
       Data3: 959533475
       Data4: 1866417758
     Path: event:/SFX/ShopSFX/ItemBuy
+  NavigationError:
+    Guid:
+      Data1: -2021822312
+      Data2: 1191596676
+      Data3: 2125792927
+      Data4: 1366034535
+    Path: event:/SFX/UI/Error
   ShopEnter:
     Guid:
       Data1: -620656940
@@ -686,20 +777,6 @@ MonoBehaviour:
       Data3: -2119039865
       Data4: -214391883
     Path: event:/SFX/ShopSFX/ShopEnter
-  LevelOneMusic:
-    Guid:
-      Data1: 655083191
-      Data2: 1176885309
-      Data3: -493826686
-      Data4: 363304719
-    Path: event:/Music/LevelOneMusic
-  BossMusic:
-    Guid:
-      Data1: 1322761572
-      Data2: 1172901353
-      Data3: 1985929359
-      Data4: 942631019
-    Path: event:/Music/Boss Music
 --- !u!114 &5253065142394802842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -734,16 +811,12 @@ MonoBehaviour:
       FishAmount: 3
     - FishIndex: 2
       FishAmount: 3
-    - FishIndex: 3
-      FishAmount: 1
   secondShopTutorialCheats:
     CaughtFish:
+    - FishIndex: 3
+      FishAmount: 3
     - FishIndex: 4
       FishAmount: 2
-    - FishIndex: 5
-      FishAmount: 2
-    - FishIndex: 6
-      FishAmount: 1
   thirdShopTutorialCheats:
     CaughtFish: []
 --- !u!114 &2564529053801086033

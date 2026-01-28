@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -135,28 +136,17 @@ public class InputController : AbstractState<InputController.State> {
 	#region Properties
 
 	private List<InputType> InputTypes { get; set; }
-
 	public Action OnClick { get; set; }
-
 	public Action OnSkip { get; set; }
-
 	public Action OnPause { get; set; }
-
-	public bool SelectionManuallySet { get; set; }
-
+	[field:SerializeField] public bool SelectionManuallySet { get; set; }
 	public Vector2 HorizontalInput { get; set; }
-
 	private Vector2 PreviousRightStickInput { get; set; }
-
-	[field:SerializeField]
-	public int ReelLevel { get; set; }
+	[field:SerializeField] public int ReelLevel { get; set; }
 
 	private bool IsSwitchingScenes { get;set; } = false;
-
 	private bool CanSwitchScenes { get; set; } = false;
-
 	public float CurrentReelResetTime { get; set; }
-
 	public bool IsSFXMuted { get; set; }
 
 	#endregion
@@ -246,15 +236,17 @@ public class InputController : AbstractState<InputController.State> {
 	public void NorthGamepad(InputAction.CallbackContext context) {
 		if (context.performed) {
 			if(GameManager.Instance.ShopController != null) {
-				GameManager.Instance.ShopController.BaitShop.OpenFishBoard();
+				//GameManager.Instance.ShopController.BaitShop.OpenFishBoard();
 			}
 		}
 	}
 
 	public void Skip(InputAction.CallbackContext context) {
 		if (context.performed) {
-			AudioManager.Instance.SkipVoiceOver();
-			OnSkip?.Invoke();
+			if (!AudioManager.Instance.VoiceLineInProgress) {
+				OnSkip?.Invoke();
+			}
+			AudioManager.Instance.SkipVoiceOver();			
 		}
 	}
 

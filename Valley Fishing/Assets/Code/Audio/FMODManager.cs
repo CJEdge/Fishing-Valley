@@ -16,32 +16,57 @@ public class FMODManager : Singleton<FMODManager>
 	[Header("LevelVoiceOver")]
 
 	public EventReference[] IntroCutscenes;
-	public EventReference[] CatchVoices;
 	public EventReference[] LeaveBoatPrompts;
-	public EventReference YouHave;
-	public EventReference[] BaitNumbers;
-	public EventReference[] BaitTypeLeft;
 
 	[Header("ShopVoiceOver")]
 
 	public EventReference[] ShoreIntros;
 	public EventReference[] LeaveShorePrompts;
-	public EventReference[] LeaveShopPrompts;
 	public EventReference[] BaitShopIntros;
-	public EventReference[] BaitShopTutorialItemIntros;
-	public EventReference[] BaitShopItemIntros;
-	public EventReference[] BaitShopSellYourItems;
-	public EventReference[] BaitShopTutorialThanks;
-	public EventReference[] BaitShopThanks;
-	public EventReference[] BaitIntros;
+	public EventReference[] BaitShopSoldItem;
+	public EventReference[] BaitNames;
 	public EventReference[] FishBoardFish;
-	public EventReference AreWorth;
-	public EventReference AndYouHave;
+
+	//captain
+	public EventReference YouHave;
+
+	//shop keeper
+	public EventReference Left;
 
 
 	[Header("Prices")]
 
-	public EventReference price;
+	public EventReference Gold;
+	public EventReference And;
+	public EventReference SoldOut;
+	public EventReference[] Numbers;
+	public List<EventReference> GetNumber (int number) {
+		List<EventReference> numbers = new List<EventReference>();
+		if(number <= 20) {
+			numbers.Add(this.Numbers[number]);
+		} else if(number <= 99) {
+			int firstDigit = int.Parse(number.ToString()[0].ToString());
+			int secondDigit = int.Parse(number.ToString()[1].ToString());
+			numbers.Add(this.Numbers[firstDigit + 18]);
+			numbers.Add(this.Numbers[secondDigit]);
+		} else if (number >= 100 && number <= 999) {
+			int firstDigit = int.Parse(number.ToString()[0].ToString());
+			numbers.Add(this.Numbers[firstDigit + 28]);
+			numbers.Add(this.And);
+			int lastTwo = number % 100;
+			if (lastTwo <= 20) {
+				numbers.Add(this.Numbers[lastTwo]);
+			} else {
+			int secondDigit = int.Parse(number.ToString()[1].ToString());
+			int thirdDigit = int.Parse(number.ToString()[2].ToString());
+			if (secondDigit != 0) {
+				numbers.Add(this.Numbers[secondDigit + 19]);
+				}
+			numbers.Add(this.Numbers[thirdDigit]);
+			}
+		}
+		return numbers;
+	}
 
 	[Header("LevelSFX")]
 
@@ -59,9 +84,7 @@ public class FMODManager : Singleton<FMODManager>
 
 	public EventReference MoneyEarnt;
 	public EventReference ItemBuy;
+	public EventReference NavigationError;
 	public EventReference ShopEnter;
-	[Header("Music")]
 
-	public EventReference LevelOneMusic;
-	public EventReference BossMusic;
 }

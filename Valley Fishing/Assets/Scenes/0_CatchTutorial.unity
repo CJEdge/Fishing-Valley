@@ -181,6 +181,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
+--- !u!4 &301620153 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6826164371171645414, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
+  m_PrefabInstance: {fileID: 301620152}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &301620154 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2863019415998918703, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
+  m_PrefabInstance: {fileID: 301620152}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,15 +491,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <CurrentState>k__BackingField: 0
-  voiceOverController: {fileID: 582599908}
-  gameplayContainer: {fileID: 884090771}
-  fishView: {fileID: 1379353193}
-  baitView: {fileID: 1379353191}
-  leftStrafeTransform: {fileID: 0}
-  rightStrafeTransform: {fileID: 0}
   eventSystem: {fileID: 1015315668}
-  LastSpawnedFishes: 
-  FishSpawnTransform: {fileID: 1007970973}
+  levelMusic:
+    Guid:
+      Data1: 655083191
+      Data2: 1176885309
+      Data3: -493826686
+      Data4: 363304719
+    Path: event:/Music/LevelOneMusic
+  gameplayContainer: {fileID: 884090771}
+  VoiceOverController: {fileID: 582599908}
+  <FishView>k__BackingField: {fileID: 1379353193}
+  <BaitView>k__BackingField: {fileID: 1379353191}
+  <LeftStrafeTransform>k__BackingField: {fileID: 301620154}
+  <RightStrafeTransform>k__BackingField: {fileID: 301620153}
+  <FishSpawnTransform>k__BackingField: {fileID: 1007970973}
 --- !u!4 &582599907
 Transform:
   m_ObjectHideFlags: 0
@@ -520,111 +536,111 @@ MonoBehaviour:
   applyBaitTutorials: []
   castRodTutorials:
   - Guid:
-      Data1: -1210429963
-      Data2: 1205281890
-      Data3: -2138524270
-      Data4: -1305558416
-    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 3.1
+      Data1: -534209392
+      Data2: 1319544061
+      Data3: -2006409050
+      Data4: 99920702
+    Path: event:/VoiceLines/Level Scene/Cast Rod/Level 0/0 All Fish Sounds
   - Guid:
       Data1: 920292586
       Data2: 1308191216
       Data3: -1919537504
       Data4: 1844583085
-    Path: event:/VoiceOver/Levels/CastRodTutorials/CastRodTutorial 1
+    Path: event:/VoiceLines/Level Scene/Cast Rod/Level 0/1 Bait Attatched Now Cast
   - Guid:
       Data1: 920292586
       Data2: 1308191216
       Data3: -1919537504
       Data4: 1844583085
-    Path: event:/VoiceOver/Levels/CastRodTutorials/CastRodTutorial 1
+    Path: event:/VoiceLines/Level Scene/Cast Rod/Level 0/1 Bait Attatched Now Cast
   - Guid:
       Data1: 676423759
       Data2: 1328956856
       Data3: -652405619
       Data4: 267341289
-    Path: event:/VoiceOver/Levels/CastRodTutorials/CastRodTutorial 2
+    Path: event:/VoiceLines/Level Scene/Cast Rod/Level 0/2 Do This Five Times
   reelTutorials:
   - Guid:
       Data1: -1623877199
       Data2: 1319586144
       Data3: -437439302
       Data4: 905470626
-    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 0
+    Path: event:/VoiceLines/Level Scene/Reel/Level 0/0 Feel Reeling
   - Guid:
       Data1: 2069845911
       Data2: 1107104385
       Data3: -1949121643
       Data4: 593959438
-    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 1
+    Path: event:/VoiceLines/Level Scene/Reel/Level 0/1 Practice Fast Reel
   - Guid:
-      Data1: -673632509
-      Data2: 1158322566
-      Data3: 196545185
-      Data4: -619117660
-    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 2
+      Data1: 667443246
+      Data2: 1090525968
+      Data3: -1033435729
+      Data4: 1347868590
+    Path: event:/VoiceLines/Level Scene/Reel/Level 0/2 Practice Slow Reel
   - Guid:
-      Data1: 388682248
-      Data2: 1103761903
-      Data3: 928888984
-      Data4: -286619100
-    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 3
+      Data1: 343761268
+      Data2: 1220211255
+      Data3: -1666963040
+      Data4: 434498258
+    Path: event:/VoiceLines/Level Scene/Reel/Level 0/3 Practice Meduim Reel
   - Guid:
-      Data1: -675855944
-      Data2: 1171917578
-      Data3: -1379401807
-      Data4: 1777225753
-    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 3.2
+      Data1: 2006666932
+      Data2: 1162522216
+      Data3: -1003206984
+      Data4: -1372490622
+    Path: event:/VoiceLines/Level Scene/Reel/Level 0/4 Fast Fish
   - Guid:
-      Data1: -584608662
-      Data2: 1121065935
-      Data3: -1561617021
-      Data4: -1109119656
-    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 3.3
+      Data1: -462347499
+      Data2: 1246321228
+      Data3: -1806481998
+      Data4: -1955770530
+    Path: event:/VoiceLines/Level Scene/Reel/Level 0/5 Slow Fish
   - Guid:
-      Data1: -1257206681
-      Data2: 1310649157
-      Data3: -1113750864
-      Data4: 399374485
-    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 3.4
+      Data1: 918275658
+      Data2: 1278355713
+      Data3: -1141109600
+      Data4: 2028011740
+    Path: event:/VoiceLines/Level Scene/Reel/Level 0/6 Medium Fish
   - Guid:
-      Data1: -1465139869
-      Data2: 1232753864
-      Data3: 612080037
-      Data4: 1023993747
-    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 6
+      Data1: 918275658
+      Data2: 1278355713
+      Data3: -1141109600
+      Data4: 2028011740
+    Path: event:/VoiceLines/Level Scene/Reel/Level 0/6 Medium Fish
   tutorialCatchVoices:
   - Guid:
       Data1: 85320458
       Data2: 1087590643
       Data3: 637180318
       Data4: 234443076
-    Path: event:/VoiceOver/Levels/CaughtFish/TutorialFish 0
+    Path: event:/VoiceLines/Level Scene/Caught Fish/Level 0/0 First Fish
   - Guid:
       Data1: -1180846775
       Data2: 1103305150
       Data3: -1117546601
       Data4: 1123308011
-    Path: event:/VoiceOver/Levels/CaughtFish/TutorialFish 1
+    Path: event:/VoiceLines/Level Scene/Caught Fish/Level 0/1 Second Fish
   - Guid:
       Data1: 444597240
       Data2: 1176086279
       Data3: 576283287
       Data4: 2029869952
-    Path: event:/VoiceOver/Levels/CaughtFish/TutorialFish 2
+    Path: event:/VoiceLines/Level Scene/Caught Fish/Level 0/2 Third Fish
   tooFastPrompt:
     Guid:
       Data1: 1660095589
       Data2: 1230346209
       Data3: 784428195
       Data4: -364368937
-    Path: event:/VoiceOver/Levels/ReelTutorial/ReelPrompts/Too Fast
+    Path: event:/VoiceLines/Level Scene/Reel/ReelPrompts/Too Fast
   tooSlowPrompt:
     Guid:
       Data1: -614330866
       Data2: 1322106238
       Data3: 623403159
       Data4: -1650983258
-    Path: event:/VoiceOver/Levels/ReelTutorial/ReelPrompts/Too Slow
+    Path: event:/VoiceLines/Level Scene/Reel/ReelPrompts/Too Slow
   levelIndex: 0
   CastRodTutorialsCompleted: 
   CaughtFishTutorialsCompleted: 

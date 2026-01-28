@@ -84,6 +84,10 @@ public class Shore : MonoBehaviour
 		shoreMenuObject.SetActive(true);
 	}
 
+	public void OnDestroy() {
+		AudioManager.Instance.OnVoiceLineOver -= VoiceLineOver;
+	}
+
 	public void EnterBaitShop() {
 		shoreMenuObject.SetActive(false);
 		GameManager.Instance.ShopController.SetState(ShopController.State.BaitShop);

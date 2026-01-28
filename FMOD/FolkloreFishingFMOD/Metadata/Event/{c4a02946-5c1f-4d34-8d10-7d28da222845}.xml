@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{c4a02946-5c1f-4d34-8d10-7d28da222845}">
 		<property name="name">
-			<value>ShoreTutorial 0</value>
+			<value>0 The Bait Shop</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -42,8 +42,9 @@
 	</object>
 	<object class="MasterTrack" id="{c887f9e0-4c76-4a7d-b5c3-7a895a4cc2b2}">
 		<relationship name="modules">
-			<destination>{5875a588-9dd0-4b1a-9ec5-9072be9abf56}</destination>
-			<destination>{ef985c0a-b90d-4015-af09-c41350f1c984}</destination>
+			<destination>{c7c3389e-2afe-4c82-901b-ca7ce977ae12}</destination>
+			<destination>{326d31db-3e20-486a-91ab-d22b30b38f37}</destination>
+			<destination>{70eae2df-c783-4e1d-84df-a02b2d150326}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{e9bde0ba-3adf-449f-bb2b-95a2824a9489}</destination>
@@ -69,8 +70,9 @@
 	</object>
 	<object class="ParameterProxy" id="{4cc33f0a-b297-4148-bd39-592a24cfff8d}">
 		<relationship name="modules">
-			<destination>{5875a588-9dd0-4b1a-9ec5-9072be9abf56}</destination>
-			<destination>{ef985c0a-b90d-4015-af09-c41350f1c984}</destination>
+			<destination>{c7c3389e-2afe-4c82-901b-ca7ce977ae12}</destination>
+			<destination>{326d31db-3e20-486a-91ab-d22b30b38f37}</destination>
+			<destination>{70eae2df-c783-4e1d-84df-a02b2d150326}</destination>
 		</relationship>
 		<relationship name="preset">
 			<destination>{2c9a9bb5-adcd-4ce7-8026-5c92b5e4d926}</destination>
@@ -87,17 +89,25 @@
 			<destination>{cc2c2e33-66f8-4fa2-a88f-a86c913e1184}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{5875a588-9dd0-4b1a-9ec5-9072be9abf56}">
+	<object class="SingleSound" id="{c7c3389e-2afe-4c82-901b-ca7ce977ae12}">
+		<relationship name="audioFile">
+			<destination>{137bb13c-f883-48cf-b3bf-d38260fc7ff0}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{326d31db-3e20-486a-91ab-d22b30b38f37}">
 		<property name="start">
 			<value>1</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{c69db689-b5da-4010-800f-5cf771230885}</destination>
+			<destination>{137bb13c-f883-48cf-b3bf-d38260fc7ff0}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{ef985c0a-b90d-4015-af09-c41350f1c984}">
+	<object class="SingleSound" id="{70eae2df-c783-4e1d-84df-a02b2d150326}">
+		<property name="start">
+			<value>2</value>
+		</property>
 		<relationship name="audioFile">
-			<destination>{0efc9ada-15bb-4359-a9b4-dfb3a06ba186}</destination>
+			<destination>{137bb13c-f883-48cf-b3bf-d38260fc7ff0}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{cbc8945a-9b7b-4fba-a2ba-c28d7ae0b2c9}">

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{a6d90431-737d-4607-8b5d-e1f6c78b0885}">
+		<property name="assetPath">
+			<value>Voice Lines/Shop Scene/Bait Shop/Baitboard/Level 1/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8947bfd8-85a4-4658-892e-65752c94929b}</destination>
+		</relationship>
+	</object>
+</objects>

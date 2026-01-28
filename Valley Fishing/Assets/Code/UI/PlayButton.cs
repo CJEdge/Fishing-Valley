@@ -41,6 +41,7 @@ public class PlayButton : MonoBehaviour
 				SceneManager.LoadScene(LevelManager.CatchTutorial_00);
 				break;
 			case Level.CatchTutorial_02:
+				Debug.Log("here");
 				SceneManager.LoadScene(LevelManager.CatchTutorial_01);
 				break;
 			case Level.CatchTutorial_03:

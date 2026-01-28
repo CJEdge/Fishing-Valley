@@ -4,27 +4,20 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class BaitButton : MonoBehaviour
-{
+public class BaitButton : MonoBehaviour {
 
 	#region Serialized Fields
 
-	[SerializeField]
-	private int baitIndex;
-
-	[SerializeField]
-	private BaitView baitView;
-
-	[SerializeField]
-	private ButtonVoiceOverComponent buttonVoiceOverComponent;
-
-	[SerializeField]
-	private TMP_Text baitCountText;
+	[SerializeField] private int baitIndex;
+	[SerializeField] private BaitView baitView;
+	[SerializeField] private ButtonVoiceOverComponent buttonVoiceOverComponent;
+	[SerializeField] private TMP_Text baitCountText;
 
 	#endregion
 
 
 	#region Mono Behaviours
+	
 	public void Awake() {
 		buttonVoiceOverComponent.SelectAction -= SelectBait;
 		buttonVoiceOverComponent.SelectAction += SelectBait;
@@ -46,16 +39,16 @@ public class BaitButton : MonoBehaviour
 	public void SelectBait() {
 		baitView.BaitSelected(baitIndex);
 		if (!GameManager.Instance.Baits[baitIndex].IsTutorial) {
-			if (GameManager.Instance.CurrentBaits[baitIndex] <= FMODManager.Instance.BaitNumbers.Length) {
-				if (AudioManager.Instance.VoiceLineInProgress) {
-					return;
-				}
-				List<EventReference> voiceOverChain = new List<EventReference>();
-				voiceOverChain.Add(FMODManager.Instance.YouHave);
-				voiceOverChain.Add(FMODManager.Instance.BaitNumbers[GameManager.Instance.CurrentBaits[baitIndex] - 1]);
-				voiceOverChain.Add(FMODManager.Instance.BaitTypeLeft[baitIndex]);
-				AudioManager.Instance.PlayVoiceOverChain(voiceOverChain);
+			if (AudioManager.Instance.VoiceLineInProgress) {
+				return;
 			}
+			List<EventReference> voiceOverChain = new List<EventReference>();
+			voiceOverChain.Add(FMODManager.Instance.BaitNames[baitIndex]);
+			for (int i = 0; i < FMODManager.Instance.GetNumber(GameManager.Instance.CurrentBaits[baitIndex]).Count; i++) {
+				voiceOverChain.Add(FMODManager.Instance.GetNumber(GameManager.Instance.CurrentBaits[baitIndex])[i]);
+			}
+			voiceOverChain.Add(FMODManager.Instance.Left);
+			AudioManager.Instance.PlayVoiceOverChain(voiceOverChain);
 		}
 	}
 

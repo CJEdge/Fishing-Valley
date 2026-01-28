@@ -1,8 +1,9 @@
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISelectHandler 
+public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISelectHandler, IMoveHandler 
 {
 	#region States
 
@@ -11,10 +12,7 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 		Play,
 		Settings,
 		MainMenu,
-		LevelBaitButton,
-		FreeBait,
-		RareBait,
-		FishBoard
+		LevelBaitButton
 	}
 
 	public ButtonType buttonType;
@@ -24,9 +22,15 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 
 	#region Properties
 
-	public Action SelectAction {
-		get;
-		set;
+	public Action SelectAction { get; set; }
+	private Button ButtonReference { get; set; }
+	private Button Button {
+		get {
+			if (this.ButtonReference == null)
+				this.ButtonReference = GetComponent<Button>();
+
+			return this.ButtonReference;
+		}
 	}
 
 	#endregion
@@ -34,14 +38,12 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 
 	public virtual void OnPointerEnter(PointerEventData eventData) {
 		GameManager.Instance.LastSelectedButton = gameObject;
-		Debug.Log("pointer enter");
 		DoHoverEffect(); 
 	}
 
 	public virtual void OnSelect(BaseEventData eventData) {
-		Debug.Log("select");
 		if (buttonType == ButtonType.LevelBaitButton) {
-			SelectAction?.Invoke();
+			this.SelectAction?.Invoke();
 		}
 		if (GameManager.Instance.InputController.SelectionManuallySet) {
 			GameManager.Instance.InputController.SelectionManuallySet = false;
@@ -52,7 +54,6 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 			return;
 		}
 		SelectAction?.Invoke();
-		Debug.Log("select end");
 		DoHoverEffect();
 	}
 
@@ -69,14 +70,39 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 			case ButtonType.MainMenu:
 				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.MainMenu);
 				break;
-			case ButtonType.FreeBait:
-				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitIntros[0]);
-				break;
-			case ButtonType.RareBait:
-				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitIntros[1]);
-				break;
 			default:
 				break;
+		}
+	}
+
+	public void OnMove(AxisEventData eventData) {
+		if (eventData.moveDir == MoveDirection.Down) {
+			if (this.Button.navigation.selectOnDown == null) {
+				AudioManager.Instance.PlayOneShot(FMODManager.Instance.NavigationError);
+			}else if(!this.Button.navigation.selectOnDown.gameObject.activeSelf) {
+				AudioManager.Instance.PlayOneShot(FMODManager.Instance.NavigationError);
+			}
+		}
+		if (eventData.moveDir == MoveDirection.Up) {
+			if (this.Button.navigation.selectOnUp == null) {
+				AudioManager.Instance.PlayOneShot(FMODManager.Instance.NavigationError);
+			} else if (!this.Button.navigation.selectOnUp.gameObject.activeSelf) {
+				AudioManager.Instance.PlayOneShot(FMODManager.Instance.NavigationError);
+			}
+		}
+		if (eventData.moveDir == MoveDirection.Left) {
+			if (this.Button.navigation.selectOnLeft == null) {
+				AudioManager.Instance.PlayOneShot(FMODManager.Instance.NavigationError);
+			} else if (!this.Button.navigation.selectOnLeft.gameObject.activeSelf) {
+				AudioManager.Instance.PlayOneShot(FMODManager.Instance.NavigationError);
+			}
+		}
+		if (eventData.moveDir == MoveDirection.Right) {
+			if (this.Button.navigation.selectOnRight == null) {
+				AudioManager.Instance.PlayOneShot(FMODManager.Instance.NavigationError);
+			} else if (!this.Button.navigation.selectOnRight.gameObject.activeSelf) {
+				AudioManager.Instance.PlayOneShot(FMODManager.Instance.NavigationError);
+			}
 		}
 	}
 }

@@ -151,7 +151,7 @@ public class FirstTutorialVoiceOver : VoiceOverController
 	public override void VoiceOverFinished(EventReference eventReference, bool skipped) {
 		if (LevelController.CurrentState == LevelController.State.FishCaught) {
 			if (GameManager.Instance.TotalCaughtFish == 8) {
-				SceneManager.LoadScene(LevelManager.CatchTutorial_01);
+				SceneManager.LoadScene(LevelManager.ShopTutorial_00);
 				return;
 			}
 		}

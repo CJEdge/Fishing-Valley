@@ -108,7 +108,7 @@ public class BaitView : MonoBehaviour
 		if(GameManager.Instance.LevelController.CurrentState != LevelController.State.AttatchBait) {
 			return;
 		}
-		if (!FMODManager.Instance.BaitTypeLeft.Contains(eventReference)){
+		if (!AudioManager.Instance.VoiceLineInProgress){
 			return;
 		}
 		int activeButtons = 0;

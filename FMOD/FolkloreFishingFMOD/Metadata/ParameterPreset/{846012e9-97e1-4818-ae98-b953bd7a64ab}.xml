@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{846012e9-97e1-4818-ae98-b953bd7a64ab}">
+		<property name="name">
+			<value>FishBoardVolume</value>
+		</property>
+		<relationship name="folder">
+			<destination>{41f80124-56a0-4c02-a6e2-b03fc989f2d9}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{74d70f2b-94c3-416f-9050-7e3e4c7061ac}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{74d70f2b-94c3-416f-9050-7e3e4c7061ac}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -5,14 +6,10 @@ public class ShopController : AbstractState<ShopController.State>
 {
 	#region Serialized Fields
 
-	[SerializeField]
-	private Shore shoreMenu;
-
-	[SerializeField]
-	private BaitShop baitShop;
-
-	[SerializeField]
-	private EventSystem eventSystem;
+	[SerializeField] private Shore shoreMenu;
+	[SerializeField] private BaitShop baitShop;
+	[SerializeField] private EventSystem eventSystem;
+	[SerializeField] private EventReference levelMusic;
 
 	#endregion
 
@@ -45,6 +42,7 @@ public class ShopController : AbstractState<ShopController.State>
 				GameManager.Instance.ShopController = this;
 				GameManager.Instance.EventSystem = eventSystem;
 				SetState(State.CutsceneIn);
+				AudioManager.Instance.PlayMusic(levelMusic);
 				break;
 			case State.CutsceneIn:
 				SetState(State.Shore);

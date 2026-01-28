@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1025274234754108350, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: EventReference.Path
-      value: event:/SFX/LevelSFX/ActivitySplash
+      value: event:/SFX/LevelSFX/Splashes/ActivitySplash
       objectReference: {fileID: 0}
     - target: {fileID: 2899971684537990183, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: m_LocalPosition.x
@@ -66,11 +66,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: sellPrice
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: movementChangeTime
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
+      propertyPath: caughtVoiceLine.Path
+      value: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/0_BrownTrout
       objectReference: {fileID: 0}
     - target: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
       propertyPath: ActivityLevels.Array.size

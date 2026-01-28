@@ -419,15 +419,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <CurrentState>k__BackingField: 0
-  voiceOverController: {fileID: 582599908}
-  gameplayContainer: {fileID: 641266736}
-  fishView: {fileID: 723462215}
-  baitView: {fileID: 1927175311}
-  leftStrafeTransform: {fileID: 138858724}
-  rightStrafeTransform: {fileID: 1474992087}
   eventSystem: {fileID: 1015315668}
-  LastSpawnedFishes: 
-  FishSpawnTransform: {fileID: 1296795434}
+  levelMusic:
+    Guid:
+      Data1: 1322761572
+      Data2: 1172901353
+      Data3: 1985929359
+      Data4: 942631019
+    Path: event:/Music/Boss Music
+  gameplayContainer: {fileID: 641266736}
+  VoiceOverController: {fileID: 582599908}
+  <FishView>k__BackingField: {fileID: 723462215}
+  <BaitView>k__BackingField: {fileID: 1927175311}
+  <LeftStrafeTransform>k__BackingField: {fileID: 138858724}
+  <RightStrafeTransform>k__BackingField: {fileID: 1474992087}
+  <FishSpawnTransform>k__BackingField: {fileID: 1296795434}
 --- !u!4 &582599907
 Transform:
   m_ObjectHideFlags: 0
@@ -457,47 +463,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   applyBaitTutorials:
   - Guid:
-      Data1: 1833660026
-      Data2: 1237045637
-      Data3: 1882319747
-      Data4: 1823827495
-    Path: event:/VoiceOver/Levels/ApplyBaitTutorial/ApplyBaitTutorial 8
+      Data1: 1853584114
+      Data2: 1321168871
+      Data3: 711349933
+      Data4: -315404842
+    Path: event:/VoiceLines/Level Scene/Attatch Bait/Boss 0/0 Hardest Fish
   castRodTutorials:
   - Guid:
       Data1: 1296854281
       Data2: 1273810558
       Data3: -1442321992
       Data4: 751147981
-    Path: event:/VoiceOver/Levels/CastRodTutorials/CastRodTutorial 3
+    Path: event:/VoiceLines/Level Scene/Cast Rod/Boss 0/0 Youve Got This
   reelTutorials:
   - Guid:
-      Data1: 1836328105
-      Data2: 1317358970
-      Data3: 535918270
-      Data4: -867471255
-    Path: event:/VoiceOver/Levels/ReelTutorial/ReelTutorial 12
+      Data1: -920332497
+      Data2: 1278699893
+      Data3: -1822985085
+      Data4: -119660938
+    Path: event:/VoiceLines/Level Scene/Reel/Boss 0/0 First Boss
   tutorialCatchVoices:
   - Guid:
-      Data1: -1205123130
-      Data2: 1246212123
-      Data3: 467569580
-      Data4: 1513978623
-    Path: event:/VoiceOver/Levels/CaughtFish/TutorialFish 6
+      Data1: -449038532
+      Data2: 1280758308
+      Data3: -1433694552
+      Data4: -474234592
+    Path: event:/VoiceLines/Level Scene/Caught Fish/Boss 0/0 Llyn Llyn Salmon
   tooFastPrompt:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1660095589
+      Data2: 1230346209
+      Data3: 784428195
+      Data4: -364368937
+    Path: event:/VoiceLines/Level Scene/Reel/ReelPrompts/Too Fast
   tooSlowPrompt:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  levelIndex: 4
+      Data1: -614330866
+      Data2: 1322106238
+      Data3: 623403159
+      Data4: -1650983258
+    Path: event:/VoiceLines/Level Scene/Reel/ReelPrompts/Too Slow
+  levelIndex: 3
   CastRodTutorialsCompleted: 
   CaughtFishTutorialsCompleted: 
 --- !u!4 &641266736 stripped
