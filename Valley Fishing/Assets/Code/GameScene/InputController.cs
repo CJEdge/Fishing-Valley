@@ -176,14 +176,6 @@ public class InputController : AbstractState<InputController.State> {
 		this.HorizontalInput = context.ReadValue<Vector2>() * controller.HorizontalSpeed;
 	}
 
-	public void Blur(InputAction.CallbackContext context) {
-		blurObject.SetActive(!blurObject.activeSelf);
-	}
-
-	public void Black(InputAction.CallbackContext context) {
-		blackObject.SetActive(!blackObject.activeSelf);
-	}
-
 	public void Pause(InputAction.CallbackContext context) {
 		if (this.OnPause != null) {
 			this.OnPause.Invoke();
@@ -213,10 +205,8 @@ public class InputController : AbstractState<InputController.State> {
 
 	public void SouthGamepad(InputAction.CallbackContext context) {
 		if (context.performed) {
-			if (GameManager.Instance.LevelController != null) {
-				if (GameManager.Instance.CurrentFish != null) {
-					GameManager.Instance.CurrentFish.Duck();
-				}
+			if (GameManager.Instance.EventController != null) {
+				GameManager.Instance.EventController.Duck();
 			}
 		}
 	}

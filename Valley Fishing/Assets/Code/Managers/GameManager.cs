@@ -6,86 +6,28 @@ using UnityEngine.EventSystems;
 public class GameManager : Singleton<GameManager> {
 	#region Serialized Fields
 
-	[SerializeField]
-	private List<Fish> fish;
-
-	[SerializeField]
-	private List<Bait> baits;
+	[SerializeField] private List<Fish> fish;
+	[SerializeField] private List<Bait> baits;
 
 	#endregion
 
 
 	#region Properties
 
-	[field:SerializeField]
-	public EventSystem EventSystem {
-		get;
-		set;
-	}
-
-	public GameObject LastSelectedButton;
-
-	public InputController InputController {
-		get;
-		set;
-	}
-
-	public LevelController LevelController {
-		get;
-		set;
-	}
-
-	public MainMenuController MainMenuController {
-		get;
-		set;
-	}
-
-	public ShopController ShopController {
-		get;
-		set;
-	}
-
-	public List<Fish> Fish {
-		get {
-			return fish;
-		}
-	}
-
-	public List<Bait> Baits {
-		get {
-			return baits;
-		}
-	}
-
-	[field: SerializeField]
-	public List<int> CurrentBaits {
-		get;
-		set;
-	} = new List<int>();
-
-	public Fish CurrentFish {
-		get;
-		set;
-	}
-
-	[field: SerializeField]
-	public List<int> CaughtFish {
-		get;
-		set;
-	} = new List<int>();
-
-	[field: SerializeField]
-	public Bait CurrentBait {
-		get;
-		set;
-	}
-
-	[field: SerializeField]
-	public int Money {
-		get;
-		set;
-	}
-
+	[field:SerializeField] public EventSystem EventSystem {	get; set; }
+	public GameObject LastSelectedButton { get; set; }
+	public InputController InputController { get; set; }
+	public LevelController LevelController { get; set; }
+	public EventController EventController { get; set; }
+	public MainMenuController MainMenuController { get;	set; }
+	public ShopController ShopController { get;	set; }
+	public List<Fish> Fish { get => fish; }
+	public List<Bait> Baits { get => baits; }
+	[field: SerializeField]	public List<int> CurrentBaits {	get; set; } = new List<int>();
+	public Fish CurrentFish { get; set; }
+	[field: SerializeField] public List<int> CaughtFish { get; set;	} = new List<int>();
+	[field: SerializeField]	public Bait CurrentBait { get; set;	}
+	[field: SerializeField]	public int Money { get;	set; }
 	public int TotalCaughtFish {
 		get {
 			int totalCaughtFish = 0;
@@ -95,7 +37,6 @@ public class GameManager : Singleton<GameManager> {
 			return totalCaughtFish;
 		}
 	}
-
 	public int TotalBaitsLeft {
 		get {
 			int totalBaits = 0;

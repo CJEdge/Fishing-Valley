@@ -40,6 +40,7 @@ public class CheatManager : Singleton<CheatManager>
 		ShowSecondCatchTutorialCheats();
 		ShowThirdCatchTutorialCheats();
 		ShowFirstBossTutorialCheats();
+		ShowGameScenneCheats();
 	}
 
 	public void OnDestroy() {
@@ -61,6 +62,7 @@ public class CheatManager : Singleton<CheatManager>
 			ShowSecondCatchTutorialCheats();
 			ShowThirdCatchTutorialCheats();
 			ShowFirstBossTutorialCheats();
+			ShowGameScenneCheats();
 		}
 	}
 
@@ -132,6 +134,27 @@ public class CheatManager : Singleton<CheatManager>
 		if (SceneManager.GetActiveScene().name == LevelManager.BossTutorial_00) {
 			for (int i = 0; i < level_03_Boss.Baits.Length; i++) {
 				GameManager.Instance.CurrentBaits[level_03_Boss.Baits[i].BaitIndex] = level_03_Boss.Baits[i].BaitAmount;
+			}
+		}
+	}
+
+	#endregion
+
+
+	#region Level 01 Catch Tutorial
+
+	[System.Serializable]
+	public class GameSceneCheats {
+		public BaitCheatData[] Baits;
+	}
+
+	[SerializeField]
+	private GameSceneCheats gameSceneCheats;
+
+	private void ShowGameScenneCheats() {
+		if (SceneManager.GetActiveScene().name == LevelManager.GameSence) {
+			for (int i = 0; i < gameSceneCheats.Baits.Length; i++) {
+				GameManager.Instance.CurrentBaits[gameSceneCheats.Baits[i].BaitIndex] = gameSceneCheats.Baits[i].BaitAmount;
 			}
 		}
 	}

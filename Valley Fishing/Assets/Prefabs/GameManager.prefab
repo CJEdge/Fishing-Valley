@@ -72,7 +72,6 @@ MonoBehaviour:
   - {fileID: 5679352621735612818, guid: 22785c3d167a5f3408b4ddbf8e1444e2, type: 3}
   - {fileID: 5679352621735612818, guid: 8ad5d209cb18e9a43bb4b94d63fcc74f, type: 3}
   <EventSystem>k__BackingField: {fileID: 0}
-  LastSelectedButton: {fileID: 0}
   <CurrentBaits>k__BackingField: 0000000000000000000000000000000000000000000000000000000000000000
   <CaughtFish>k__BackingField: 
   <CurrentBait>k__BackingField: {fileID: 0}
@@ -769,6 +768,13 @@ MonoBehaviour:
       Data3: 90536069
       Data4: 2110932389
     Path: event:/SFX/LevelSFX/Seagull/SeagullAttack
+  SeagullMiss:
+    Guid:
+      Data1: 999368361
+      Data2: 1223184575
+      Data3: -690521927
+      Data4: -276461464
+    Path: event:/SFX/LevelSFX/Seagull/SeagullMiss
   Duck:
     Guid:
       Data1: -1832721167
@@ -830,6 +836,10 @@ MonoBehaviour:
       BaitAmount: 3
   level_03_Boss:
     Baits: []
+  gameSceneCheats:
+    Baits:
+    - BaitIndex: 4
+      BaitAmount: 5
   firstShopTutorialCheats:
     CaughtFish:
     - FishIndex: 0

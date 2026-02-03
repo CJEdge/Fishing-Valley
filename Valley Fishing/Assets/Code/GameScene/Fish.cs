@@ -66,13 +66,6 @@ public class Fish : AbstractState<Fish.State>
 	[SerializeField] private float movementChangeTime;
 	[SerializeField] private GameObject strafeAudio;
 	[SerializeField] private Transform lineEnd;
-	[SerializeField] private Seagull seagull;
-	[SerializeField] private float seagullIntervalTime;
-	[SerializeField] private float seagullWarningTime;
-	[SerializeField] private float seagullFailTime;
-	[SerializeField] private float duckingTime;
-	[SerializeField] private float duckCooldown;
-	[SerializeField] private float avoidanceThreshold;
 
 	#endregion
 
@@ -102,9 +95,7 @@ public class Fish : AbstractState<Fish.State>
 	private bool ActivityLevelChanging;
 	private float CurrentMovemetChangeTime;
 	private bool MovementDirectionChanging;
-	private bool IsUnspooling;
-	private bool HitBySeagull;
-
+	private bool IsUnspooling;	
 	public StudioEventEmitter ActivitySplashSFX { get => activitySplashSFX; }
 
 	public string FishName { get => fishName; }
@@ -113,12 +104,12 @@ public class Fish : AbstractState<Fish.State>
 	public Transform LineEnd { get => lineEnd; }
 	public bool IsFailable { get; set; }
 	public bool IsTutorial { get; set; }
+	public Action OnInitialized { get; set; }
 	public Action<MovementDirection> Strafe { get; set; }
 	public Action BecameCentered { get; set; }
 	public RodLineComponent RodLineComponent { get; set; }
 	[field:SerializeField] public float ReelSpeed { get; set; }
-	[field: SerializeField] private bool Ducking { get; set; }
-	[field: SerializeField] private bool CanDuck { get; set; } = true;
+	public bool HitBySeagull { get; set; }
 
 	#endregion
 
@@ -184,10 +175,7 @@ public class Fish : AbstractState<Fish.State>
 		this.IsStrafer = isStrafer;
 		SetActivityLevel(this.ActivityLevels[0]);
 		SetState(State.OnHook);
-		if(seagullIntervalTime != 0) {
-			Seagull seagullInstance = Instantiate(seagull);
-			seagullInstance.Initialize(seagullIntervalTime, seagullWarningTime);
-		}
+		GameManager.Instance.EventController.NewFishSpawned();
 		AudioManager.Instance.PlayUnspoolSound(false, 2);
 	}
 
@@ -199,18 +187,6 @@ public class Fish : AbstractState<Fish.State>
 		VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);
 		VibrationManager.Instance.SetVibrationFrequency(false, 0, Mathf.Infinity);
 		Destroy(gameObject);
-	}
-
-	public void Duck() {
-		if (!this.CanDuck) {
-			return;
-		}
-		AudioManager.Instance.PlayOneShot(FMODManager.Instance.Duck);
-		StartCoroutine(PerformDuck());
-	}
-
-	public void SeagullAttack() {
-		StartCoroutine(PerformSeagullAttack());
 	}
 
 	#endregion
@@ -418,31 +394,6 @@ public class Fish : AbstractState<Fish.State>
 		float totalLength = reelStart - reelEnd;
 		float distanceAlongLength = transform.position.z - reelStart;
 		return -(distanceAlongLength / totalLength)/2;
-	}
-
-	private IEnumerator PerformDuck() {
-		this.Ducking = true;
-		this.CanDuck = false;
-		yield return new WaitForSeconds(duckingTime);
-		this.Ducking = false;
-		yield return new WaitForSeconds(duckCooldown);
-		this.CanDuck = true;
-	}
-
-	private IEnumerator PerformSeagullAttack() {
-		float currentTime = 0;
-		while (currentTime < avoidanceThreshold) {
-			currentTime += Time.deltaTime;
-			yield return new();
-			if (this.Ducking) {
-				Debug.Log("hit");
-				yield break;
-			}
-		}
-		Debug.Log("hit");
-		this.HitBySeagull = true;
-		yield return new WaitForSeconds(seagullFailTime);
-		this.HitBySeagull = false;
 	}
 
 	#endregion

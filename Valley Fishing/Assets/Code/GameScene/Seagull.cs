@@ -7,7 +7,7 @@ public class Seagull : MonoBehaviour
 
     public void Initialize(float intervalRate, float warningTime) {
 		this.WarningTime = warningTime;
-		InvokeRepeating("SeagullAttack", intervalRate, intervalRate );
+		InvokeRepeating("SeagullAttack", intervalRate, intervalRate + 4 * this.WarningTime);
 	}
 
 	private void SeagullAttack() {
@@ -19,7 +19,6 @@ public class Seagull : MonoBehaviour
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.SeagullWarning);
 			yield return new WaitForSeconds(this.WarningTime);
 		}
-		AudioManager.Instance.PlayOneShot(FMODManager.Instance.SeagullAttack);
-		GameManager.Instance.CurrentFish.SeagullAttack();
+		GameManager.Instance.EventController.SeagullAttack();
 	} 
 }
