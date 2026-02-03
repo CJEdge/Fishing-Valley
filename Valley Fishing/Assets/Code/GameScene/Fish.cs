@@ -205,6 +205,7 @@ public class Fish : AbstractState<Fish.State>
 		if (!this.CanDuck) {
 			return;
 		}
+		AudioManager.Instance.PlayOneShot(FMODManager.Instance.Duck);
 		StartCoroutine(PerformDuck());
 	}
 
@@ -417,14 +418,6 @@ public class Fish : AbstractState<Fish.State>
 		float totalLength = reelStart - reelEnd;
 		float distanceAlongLength = transform.position.z - reelStart;
 		return -(distanceAlongLength / totalLength)/2;
-	}
-
-	private void FreezeFish() {
-		rb.constraints = RigidbodyConstraints.FreezePosition;
-	}
-
-	private void UnFreezeFish(EventReference eventReference, bool skipped) {
-		rb.constraints = RigidbodyConstraints.FreezeRotation;
 	}
 
 	private IEnumerator PerformDuck() {

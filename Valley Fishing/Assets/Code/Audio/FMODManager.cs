@@ -81,6 +81,7 @@ public class FMODManager : Singleton<FMODManager>
 	public EventReference Unspool;
 	public EventReference SeagullWarning;
 	public EventReference SeagullAttack;
+	public EventReference Duck;
 
 	[Header("ShopSFX")]
 

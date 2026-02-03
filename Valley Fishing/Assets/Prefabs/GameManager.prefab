@@ -769,6 +769,13 @@ MonoBehaviour:
       Data3: 90536069
       Data4: 2110932389
     Path: event:/SFX/LevelSFX/Seagull/SeagullAttack
+  Duck:
+    Guid:
+      Data1: -1832721167
+      Data2: 1118083288
+      Data3: 918996358
+      Data4: -1012808492
+    Path: event:/SFX/LevelSFX/Seagull/Duck
   MoneyEarnt:
     Guid:
       Data1: 1982487354
