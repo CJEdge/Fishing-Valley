@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class EventController : MonoBehaviour
 {
-	#region Serialized Fields
+	#region Seagull
+
+	[Header("Seagull")]
 
 	[SerializeField] private Seagull seagull;
 	[SerializeField] private float seagullIntervalTime;
@@ -13,28 +15,9 @@ public class EventController : MonoBehaviour
 	[SerializeField] private float duckCooldown;
 	[SerializeField] private float avoidanceThreshold;
 
-	#endregion
-
-
-	#region Properties
-
 	[field: SerializeField] private bool Ducking { get; set; }
 	[field: SerializeField] private bool CanDuck { get; set; } = true;
-
-	#endregion
-
-
-	#region Mono Behaviours
-
-	public void Start() {
-		GameManager.Instance.EventController = this;
-	}
-
-	#endregion
-
-
-	#region Public Methods
-
+	
 	public void Duck() {
 		if (!this.CanDuck) {
 			return;
@@ -45,18 +28,6 @@ public class EventController : MonoBehaviour
 
 	public void SeagullAttack() {
 		StartCoroutine(PerformSeagullAttack());
-	}
-
-	#endregion
-
-
-	#region Private Methods
-
-	public void NewFishSpawned() {
-		if (seagullIntervalTime != 0) {
-			Seagull seagullInstance = Instantiate(seagull);
-			seagullInstance.Initialize(seagullIntervalTime, seagullWarningTime);
-		}
 	}
 
 	private IEnumerator PerformDuck() {
@@ -82,6 +53,50 @@ public class EventController : MonoBehaviour
 		GameManager.Instance.CurrentFish.HitBySeagull = true;
 		yield return new WaitForSeconds(seagullFailTime);
 		GameManager.Instance.CurrentFish.HitBySeagull = false;
+	}
+
+	#endregion
+
+
+	#region Flies
+
+	[Header("Flies")]
+
+	[SerializeField] private Flies flies;
+	[SerializeField] private float fliesIntervalTime;
+	[SerializeField] private int fliesToSwat;
+	[SerializeField] private float fliesEffectTime;
+
+
+	#endregion
+
+
+	#region Mono Behaviours
+
+	public void Start() {
+		GameManager.Instance.EventController = this;
+	}
+
+	#endregion
+
+
+	#region Public Methods
+
+
+	#endregion
+
+
+	#region Private Methods
+
+	public void NewFishSpawned() {
+		if (seagullIntervalTime != 0) {
+			Seagull seagullInstance = Instantiate(seagull);
+			seagullInstance.Initialize(seagullIntervalTime, seagullWarningTime);
+		}
+		if(fliesIntervalTime != 0) {
+			Flies fliesInstance = Instantiate(flies);
+			flies.Initialize(seagullIntervalTime);
+		}
 	}
 
 	#endregion
