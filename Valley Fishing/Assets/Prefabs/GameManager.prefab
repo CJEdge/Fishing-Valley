@@ -802,7 +802,14 @@ MonoBehaviour:
       Data2: 1191596676
       Data3: 2125792927
       Data4: 1366034535
-    Path: event:/SFX/UI/Error
+    Path: event:/SFX/UI/NavigationError
+  ClickError:
+    Guid:
+      Data1: 945747673
+      Data2: 1159966070
+      Data3: -645524591
+      Data4: 164685518
+    Path: event:/SFX/UI/ClickError
   ShopEnter:
     Guid:
       Data1: -620656940
