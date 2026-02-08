@@ -53,7 +53,6 @@ public class ShopController : AbstractState<ShopController.State>
 			case State.CutsceneOut:
 				break;
 			case State.BaitShop:
-				baitShop.SetState(Shop.State.Entering);
 				break;
 			case State.RodShop:
 				break;

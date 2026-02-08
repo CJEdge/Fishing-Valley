@@ -38,39 +38,59 @@ public class BaitShop : Shop {
 	public bool[] BaitboardTutorialsCompleted { get; set; }
 	[field:SerializeField] public int[] BaitQuantities { get; set; }
 
-	#endregion
+    #endregion
 
 
-	#region Shop
+    #region Shop
 
-	protected override void EnterState(State state) {
-		switch (state) {
-			case State.Defualt:
-				for (int i = 0; i < fishboardTutorials.Length; i++) {
-					this.FishboardTutorialsCompleted = new bool[fishboardTutorials.Length];
-				}
-				for (int i = 0; i < baitboardTutorials.Length; i++) {
-					this.BaitboardTutorialsCompleted = new bool[baitboardTutorials.Length];
-				}
-				fishBoardButton.SelectAction += FishBoardSelected;
-				fishBasketButton.SelectAction += FishBasketSelected;
-				baitBoardButton.SelectAction += BaitBoardSelected;
-				leaveShopButton.SelectAction += LeaveShopSelected;
-				break;
-			case State.Entering:
-				this.RunEnterShop = StartCoroutine(EnterShop(true));
-				break;
-			case State.Trading:
-				GameManager.Instance.InputController.SelectButton(fishBoardButton.gameObject);
-				break;
-			case State.Leaving:
-				break;
-			default:
-				break;
+    public override void Awake()
+    {
+		base.Start();
+		for (int i = 0; i < fishboardTutorials.Length; i++)
+		{
+			this.FishboardTutorialsCompleted = new bool[fishboardTutorials.Length];
 		}
-	}
+		for (int i = 0; i < baitboardTutorials.Length; i++)
+		{
+			this.BaitboardTutorialsCompleted = new bool[baitboardTutorials.Length];
+		}
+		fishBoardButton.SelectAction += FishBoardSelected;
+		fishBasketButton.SelectAction += FishBasketSelected;
+		baitBoardButton.SelectAction += BaitBoardSelected;
+		leaveShopButton.SelectAction += LeaveShopSelected;
+        this.RunEnterShop = StartCoroutine(EnterShop(true));
+        //		case State.Trading:
+        //			GameManager.Instance.InputController.SelectButton(fishBoardButton.gameObject);
+        //			break;
+    }
+    //protected override void EnterState(State state) {
+    //	switch (state) {
+    //		case State.Defualt:
+    //			for (int i = 0; i < fishboardTutorials.Length; i++) {
+    //				this.FishboardTutorialsCompleted = new bool[fishboardTutorials.Length];
+    //			}
+    //			for (int i = 0; i < baitboardTutorials.Length; i++) {
+    //				this.BaitboardTutorialsCompleted = new bool[baitboardTutorials.Length];
+    //			}
+    //			fishBoardButton.SelectAction += FishBoardSelected;
+    //			fishBasketButton.SelectAction += FishBasketSelected;
+    //			baitBoardButton.SelectAction += BaitBoardSelected;
+    //			leaveShopButton.SelectAction += LeaveShopSelected;
+    //			break;
+    //		case State.Entering:
+    //			this.RunEnterShop = StartCoroutine(EnterShop(true));
+    //			break;
+    //		case State.Trading:
+    //			GameManager.Instance.InputController.SelectButton(fishBoardButton.gameObject);
+    //			break;
+    //		case State.Leaving:
+    //			break;
+    //		default:
+    //			break;
+    //	}
+    //}
 
-	public override void OnDestroy() {
+    public override void OnDestroy() {
 		base.OnDestroy();
 		fishBoardButton.SelectAction -= FishBoardSelected;
 		fishBasketButton.SelectAction -= FishBasketSelected;
@@ -84,18 +104,18 @@ public class BaitShop : Shop {
 	#region Private Methods
 
 	public override void VoiceLineOver(EventReference eventReference, bool skipped) {
-		switch (this.CurrentState) {
-			case State.Defualt:
-				break;
-			case State.Entering:
-				break;
-			case State.Trading:
-				break;
-			case State.Leaving:
-				break;
-			default:
-				break;
-		}
+		//switch (this.CurrentState) {
+		//	case State.Defualt:
+		//		break;
+		//	case State.Entering:
+		//		break;
+		//	case State.Trading:
+		//		break;
+		//	case State.Leaving:
+		//		break;
+		//	default:
+		//		break;
+		//}
 	}
 
 	#endregion

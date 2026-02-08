@@ -10,27 +10,19 @@ public class SecondTutorialBaitShop : BaitShop {
 	private bool FishBoardNotClosedForFirstTime { get; set; }
 
 
-	#endregion
+    #endregion
 
+    //public void Awake()
+    //{
 
+    //}
 
-	protected override void EnterState(State state) {
-		base.EnterState(state);
-		switch (state) {
-			case State.Defualt:
-				leaveShopButton.gameObject.SetActive(false);
-				GameManager.Instance.InputController.SelectButton(fishBasketButton.gameObject);
-				break;
-			case State.Entering:
-				break;
-			case State.Trading:
-				break;
-			case State.Leaving:
-				break;
-			default:
-				break;
-		}
-	}
+	public override void Awake()
+	{
+		base.Awake();
+        leaveShopButton.gameObject.SetActive(false);
+        GameManager.Instance.InputController.SelectButton(fishBasketButton.gameObject);
+    }
 
 	public override void VoiceLineOver(EventReference eventReference, bool skipped) {
 		base.VoiceLineOver(eventReference, skipped);
