@@ -603,11 +603,11 @@ MonoBehaviour:
       Data4: 2028011740
     Path: event:/VoiceLines/Level Scene/Reel/Level 0/6 Medium Fish
   - Guid:
-      Data1: 918275658
-      Data2: 1278355713
-      Data3: -1141109600
-      Data4: 2028011740
-    Path: event:/VoiceLines/Level Scene/Reel/Level 0/6 Medium Fish
+      Data1: 1354928872
+      Data2: 1310640256
+      Data3: -485987398
+      Data4: 1278384155
+    Path: event:/VoiceLines/Level Scene/Reel/Level 0/7 Listen For Yourself
   tutorialCatchVoices:
   - Guid:
       Data1: 85320458

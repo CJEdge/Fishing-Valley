@@ -1641,10 +1641,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/VoiceLines.bank
   Name: VoiceLines
   StudioPath: bank:/VoiceLines
-  lastModified: 639061632737096275
+  lastModified: 639061699035764258
   FileSizes:
   - Name: Desktop
-    Value: 6239296
+    Value: 7433472
   Exists: 1
 --- !u!114 &-5639815281841851900
 MonoBehaviour:
@@ -2249,6 +2249,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-3571231542132611481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/7 Listen For Yourself/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-3534439038419571958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2629,34 +2653,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-2946938449078290415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceLines/Level Scene/Reel/Level 0/7 Medium Fish
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceLines/Level Scene/Reel/Level 0/7 Medium Fish
-  Guid:
-    Data1: 1354928872
-    Data2: 1310640256
-    Data3: -485987398
-    Data4: 1278384155
-  Banks:
-  - {fileID: -5674214797675166295}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 6970924351374902526}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-2867298080012926626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4047,7 +4043,6 @@ MonoBehaviour:
   - {fileID: -8435500359669996070}
   - {fileID: -2182435878550792741}
   - {fileID: 9176679071901724185}
-  - {fileID: -2946938449078290415}
   - {fileID: 2606335521635968783}
   - {fileID: -7242636325781042408}
   - {fileID: -7327723531966256427}
@@ -4058,12 +4053,13 @@ MonoBehaviour:
   - {fileID: 7333474757277820640}
   - {fileID: 2371743055081917019}
   - {fileID: 6249032038967598274}
+  - {fileID: 4229632158575620577}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4198817137325428765}
   StringsBanks:
   - {fileID: 1411835401192698514}
-  cacheTime: 639061632737096275
+  cacheTime: 639061699035764258
   cacheVersion: 131624
 --- !u!114 &41380767982811075
 MonoBehaviour:
@@ -4631,10 +4627,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639061632731723100
+  lastModified: 639061657681563135
   FileSizes:
   - Name: Desktop
-    Value: 8666
+    Value: 8674
   Exists: 1
 --- !u!114 &1443842087743583922
 MonoBehaviour:
@@ -6288,7 +6284,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639061632731693167
+  lastModified: 639061657681526075
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -6317,6 +6313,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &4229632158575620577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceLines/Level Scene/Reel/Level 0/7 Listen For Yourself
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceLines/Level Scene/Reel/Level 0/7 Listen For Yourself
+  Guid:
+    Data1: 1354928872
+    Data2: 1310640256
+    Data3: -485987398
+    Data4: 1278384155
+  Banks:
+  - {fileID: -5674214797675166295}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -3571231542132611481}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4246760294027492205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7166,30 +7190,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &6970924351374902526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/7 Medium Fish/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &7040159615893052037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7916,7 +7916,7 @@ MonoBehaviour:
     Data4: -1274126869
   Banks:
   - {fileID: -5674214797675166295}
-  IsStream: 1
+  IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
