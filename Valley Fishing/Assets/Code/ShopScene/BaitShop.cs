@@ -105,7 +105,7 @@ public class BaitShop : Shop {
 
 	public virtual void SellFish(int fishIndex) {
 		if(GameManager.Instance.CaughtFish[fishIndex] == 0) {
-			AudioManager.Instance.PlayOneShot(FMODManager.Instance.NavigationError);
+			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
 			return;
 		}
 		AudioManager.Instance.SkipVoiceOver();
@@ -128,7 +128,7 @@ public class BaitShop : Shop {
 
 	public virtual void SellAllFish() {
 		if(GameManager.Instance.TotalCaughtFish == 0) {
-			AudioManager.Instance.PlayOneShot(FMODManager.Instance.NavigationError);
+			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
 			return;
 		}
 		for (int i = 0; i < GameManager.Instance.CaughtFish.Count; i++) {

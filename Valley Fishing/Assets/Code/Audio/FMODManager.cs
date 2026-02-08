@@ -89,6 +89,7 @@ public class FMODManager : Singleton<FMODManager>
 	public EventReference MoneyEarnt;
 	public EventReference ItemBuy;
 	public EventReference NavigationError;
+	public EventReference ClickError;
 	public EventReference ShopEnter;
 
 }
