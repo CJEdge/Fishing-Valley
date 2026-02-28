@@ -23,27 +23,15 @@ public class FirstTutorialBaitShop : BaitShop {
 	private bool FishSold { get; set; }
 
 
-	#endregion
+    #endregion
 
 
-
-	protected override void EnterState(State state) {
-		base.EnterState(state);
-		switch (state) {
-			case State.Defualt:
-				leaveShopButton.gameObject.SetActive(false);
-				GameManager.Instance.InputController.SelectButton(lockedFishBoardButton.gameObject);
-				break;
-			case State.Entering:
-				break;
-			case State.Trading:
-				break;
-			case State.Leaving:
-				break;
-			default:
-				break;
-		}
-	}
+    public override void Awake()
+    {
+		base.Awake();
+        leaveShopButton.gameObject.SetActive(false);
+        GameManager.Instance.InputController.SelectButton(lockedFishBoardButton.gameObject);
+    }
 
 	public override void VoiceLineOver(EventReference eventReference, bool skipped) {
 		base.VoiceLineOver(eventReference, skipped);

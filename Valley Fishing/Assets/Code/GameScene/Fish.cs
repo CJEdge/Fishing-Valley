@@ -5,18 +5,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fish : AbstractState<Fish.State>
+public class Fish : MonoBehaviour
 {
 
     #region States
-
-    public enum State {
-        Default,
-        OnHook,
-        Caught,
-        Escaped
-    }
-
 
     public enum ActivityLevel {
         none,
@@ -113,54 +105,36 @@ public class Fish : AbstractState<Fish.State>
 	[field:SerializeField] public float ReelSpeed { get; set; }
 	public bool HitBySeagull { get; set; }
 
+	private bool Initialized { get; set; }
 	public bool HitByFlies { get; set; }
 
 	#endregion
 
+	#endregion
 
 	#region Mono Behaviours
 
-	public override void Update() {
-		HandleCentering();
-		switch (this.CurrentState) {
-			case State.Default:
-				break;
-			case State.OnHook:
-				if(this.InputController.ReelLevel > 0) {
-					this.CatchStarted = true;
-				}
-				if (failable) {
-					if (this.FailedCatchTime > 10) {
-						FailedCatch();
-					}
-				}
-				ChangeActivityLevels();
-				ChangeMovementDirection();
-				break;
-			case State.Caught:
-				SetActivityLevel(ActivityLevel.none);
-				break;
-			case State.Escaped:
-				break;
+	public void Update() {
+        HandleCentering();
+		if(this.InputController.ReelLevel > 0) {
+			this.CatchStarted = true;
 		}
-		Debug.Log(IsUnspooling);
-		if (this.IsUnspooling) {
-			this.CurrentUnspoolPitch += Time.deltaTime * unspoolRate;
-		} else {
-			this.CurrentUnspoolPitch = 0;
-			AudioManager.Instance.PlayUnspoolSound(false, 0);
+		if (failable) {
+			if (this.FailedCatchTime > 10) {
+				FailedCatch();
+			}
 		}
+		ChangeActivityLevels();
+		ChangeMovementDirection();
 	}
 
 
     public void FixedUpdate() {
-		if(this.CurrentState == State.OnHook) {
-			if (this.HitBySeagull || this.HitByFlies) {
-				ReelingSuccesfully(false);
-				return;
-			}
-			Reel();
+		if (this.HitBySeagull) {
+			ReelingSuccesfully(false);
+			return;
 		}
+		Reel();
 		if (this.IsStrafer) {
 			Move();
 		}		
@@ -185,7 +159,6 @@ public class Fish : AbstractState<Fish.State>
 		}
 		this.IsStrafer = isStrafer;
 		SetActivityLevel(this.ActivityLevels[0]);
-		SetState(State.OnHook);
 		GameManager.Instance.EventController.NewFishSpawned();
 		AudioManager.Instance.PlayUnspoolSound(false, 0);
 	}
@@ -197,7 +170,8 @@ public class Fish : AbstractState<Fish.State>
 		AudioManager.Instance.PlayFishActivitySound(this, 0, true);
 		VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);
 		VibrationManager.Instance.SetVibrationFrequency(false, 0, Mathf.Infinity);
-		Destroy(gameObject);
+        //SetActivityLevel(ActivityLevel.none);
+        Destroy(gameObject);
 	}
 
 	#endregion

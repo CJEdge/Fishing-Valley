@@ -96,4 +96,6 @@ public class FMODManager : Singleton<FMODManager>
 	public EventReference ClickError;
 	public EventReference ShopEnter;
 
+	[Header("ShoreMenuButtons")]
+	public EventReference BaitShopButton;
 }

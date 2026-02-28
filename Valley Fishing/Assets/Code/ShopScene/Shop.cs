@@ -2,19 +2,8 @@ using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
 
-public abstract class Shop : AbstractState<Shop.State>
+public abstract class Shop : MonoBehaviour
 {
-	#region States
-
-	public enum State {
-		Defualt,
-		Entering,
-		Trading,
-		Leaving
-	}
-
-	#endregion
-
 
 	#region Protected Variables
 
@@ -25,7 +14,12 @@ public abstract class Shop : AbstractState<Shop.State>
 
 	#region Mono Behaviours
 
-	public void Start() {
+	public virtual void Awake()
+	{
+
+	}
+
+	public virtual void Start() {
 		GameManager.Instance.InputController.OnSkip += Skip;
 		AudioManager.Instance.OnVoiceLineOver += VoiceLineOver;		
 	}
