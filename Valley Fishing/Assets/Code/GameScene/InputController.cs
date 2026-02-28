@@ -132,6 +132,17 @@ public class InputController : AbstractState<InputController.State> {
 	#endregion
 
 
+	#region Mono Behaviours
+
+	public void Start() {
+		if (Mouse.current != null) {
+			InputSystem.DisableDevice(Mouse.current);
+		}
+	}
+
+	#endregion
+
+
 	#region Public Methods
 
 	public void Click(InputAction.CallbackContext context) {
@@ -203,7 +214,7 @@ public class InputController : AbstractState<InputController.State> {
 		}
 	}
 
-	public void SouthGamepad(InputAction.CallbackContext context) {
+	public void RT(InputAction.CallbackContext context) {
 		if (context.performed) {
 			if (GameManager.Instance.EventController != null) {
 				GameManager.Instance.EventController.Duck();

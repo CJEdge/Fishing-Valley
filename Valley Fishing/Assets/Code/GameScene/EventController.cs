@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class EventController : MonoBehaviour
 {
-	#region Serialized Fields
+	#region Seagull
+
+	[Header("Seagull")]
 
 	[SerializeField] private Seagull seagull;
 	[SerializeField] private float seagullIntervalTime;
@@ -11,15 +13,42 @@ public class EventController : MonoBehaviour
 	[SerializeField] private float seagullFailTime;
 	[SerializeField] private float duckingTime;
 	[SerializeField] private float duckCooldown;
-	[SerializeField] private float avoidanceThreshold;
+
+	[field: SerializeField] public float SeagullAvoidanceThreshold;
+	public bool Ducking { get; set; }
+	private bool CanDuck { get; set; } = true;
+	private Seagull CurrentSeagull { get; set; }
+	
+	public void Duck() {
+		if (!this.CanDuck) {
+			return;
+		}
+		AudioManager.Instance.PlayOneShot(FMODManager.Instance.Duck);
+		StartCoroutine(PerformDuck());
+	}
+
+	private IEnumerator PerformDuck() {
+		this.Ducking = true;
+		this.CanDuck = false;
+		yield return new WaitForSeconds(duckingTime);
+		this.Ducking = false;
+		yield return new WaitForSeconds(duckCooldown);
+		this.CanDuck = true;
+	}
 
 	#endregion
 
 
-	#region Properties
+	#region Flies
 
-	[field: SerializeField] private bool Ducking { get; set; }
-	[field: SerializeField] private bool CanDuck { get; set; } = true;
+	[Header("Flies")]
+
+	[SerializeField] private Flies flies;
+	[SerializeField] private float fliesIntervalTime;
+	[SerializeField] private int fliesToSwat;
+	[SerializeField] private float fliesEffectTime;
+	[SerializeField] private float fliesFailTime;
+	private Flies CurrentFlies { get; set; }
 
 	#endregion
 
@@ -35,53 +64,25 @@ public class EventController : MonoBehaviour
 
 	#region Public Methods
 
-	public void Duck() {
-		if (!this.CanDuck) {
-			return;
-		}
-		AudioManager.Instance.PlayOneShot(FMODManager.Instance.Duck);
-		StartCoroutine(PerformDuck());
-	}
-
-	public void SeagullAttack() {
-		StartCoroutine(PerformSeagullAttack());
-	}
-
-	#endregion
-
-
-	#region Private Methods
-
 	public void NewFishSpawned() {
 		if (seagullIntervalTime != 0) {
 			Seagull seagullInstance = Instantiate(seagull);
-			seagullInstance.Initialize(seagullIntervalTime, seagullWarningTime);
+			seagullInstance.Initialize(seagullIntervalTime, seagullWarningTime, seagullFailTime);
+		}
+		if (fliesIntervalTime != 0) {
+			Flies fliesInstance = Instantiate(flies);
+			fliesInstance.Initialize(fliesIntervalTime, fliesToSwat, fliesEffectTime, fliesFailTime);
+			this.CurrentFlies = fliesInstance;
 		}
 	}
 
-	private IEnumerator PerformDuck() {
-		this.Ducking = true;
-		this.CanDuck = false;
-		yield return new WaitForSeconds(duckingTime);
-		this.Ducking = false;
-		yield return new WaitForSeconds(duckCooldown);
-		this.CanDuck = true;
-	}
-
-	private IEnumerator PerformSeagullAttack() {
-		float currentTime = 0;
-		while (currentTime < avoidanceThreshold) {
-			currentTime += Time.deltaTime;
-			yield return new();
-			if (this.Ducking) {
-				AudioManager.Instance.PlayOneShot(FMODManager.Instance.SeagullMiss);
-				yield break;
-			}
+	public void FishCaught() {
+		if (this.CurrentFlies != null) {
+			Destroy(this.CurrentFlies);
 		}
-		AudioManager.Instance.PlayOneShot(FMODManager.Instance.SeagullAttack);
-		GameManager.Instance.CurrentFish.HitBySeagull = true;
-		yield return new WaitForSeconds(seagullFailTime);
-		GameManager.Instance.CurrentFish.HitBySeagull = false;
+		if (this.CurrentSeagull != null) {
+			Destroy(this.CurrentSeagull);
+		}
 	}
 
 	#endregion

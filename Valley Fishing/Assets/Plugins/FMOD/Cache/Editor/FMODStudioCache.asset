@@ -66,12 +66,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/1 Bait Board Intro/ControlSceme
+  m_Name: parameter:/1 Bait Board Intro/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -90,12 +90,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/StoneLoaches/ControlSceme
+  m_Name: parameter:/StoneLoaches/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -142,12 +142,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/0/ControlSceme
+  m_Name: parameter:/0/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -194,12 +194,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/NavigateShopPrompt/ControlSceme
+  m_Name: parameter:/NavigateShopPrompt/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -218,12 +218,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/9/ControlSceme
+  m_Name: parameter:/9/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -242,12 +242,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/70/ControlSceme
+  m_Name: parameter:/70/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -322,12 +322,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/4_Perch/ControlSceme
+  m_Name: parameter:/4_Perch/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -346,36 +346,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SoldOut/ControlSceme
+  m_Name: parameter:/SoldOut/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-8318890505510890245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/BaitShopButton/ControlSceme
-  m_EditorClassIdentifier: 
-  Name: ControlSceme
-  StudioPath: 
-  Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -422,12 +398,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/BrownTrouts/ControlSceme
+  m_Name: parameter:/BrownTrouts/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -530,12 +506,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/6 Medium Fish/ControlSceme
+  m_Name: parameter:/6 Medium Fish/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -694,12 +670,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/6/ControlSceme
+  m_Name: parameter:/6/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -887,12 +863,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/0 Feel Reeling/ControlSceme
+  m_Name: parameter:/0 Feel Reeling/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -966,12 +942,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/0 Hardest Fish/ControlSceme
+  m_Name: parameter:/0 Hardest Fish/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -1018,12 +994,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/40/ControlSceme
+  m_Name: parameter:/40/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -1042,12 +1018,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/50/ControlSceme
+  m_Name: parameter:/50/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -1066,12 +1042,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Worm/ControlSceme
+  m_Name: parameter:/Worm/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -1117,12 +1093,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/2 Third Fish/ControlSceme
+  m_Name: parameter:/2 Third Fish/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -1169,12 +1145,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/7/ControlSceme
+  m_Name: parameter:/7/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -1221,12 +1197,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/1 Head To Bait Shop/ControlSceme
+  m_Name: parameter:/1 Head To Bait Shop/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -1300,12 +1276,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/7_Eel/ControlSceme
+  m_Name: parameter:/7_Eel/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -1324,12 +1300,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/3 Practice Meduim Reel/ControlSceme
+  m_Name: parameter:/3 Practice Meduim Reel/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -1348,12 +1324,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bait Board Prompt/ControlSceme
+  m_Name: parameter:/Bait Board Prompt/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -1418,33 +1394,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-6474755646698491282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LevelSFX/Seagull/Duck
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/LevelSFX/Seagull/Duck
-  Guid:
-    Data1: -1832721167
-    Data2: 1118083288
-    Data3: 918996358
-    Data4: -1012808492
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-6455731049919985426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1455,12 +1404,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/0_BrownTrout/ControlSceme
+  m_Name: parameter:/0_BrownTrout/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -1469,34 +1418,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-6414418147839695262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceLines/Shop Scene/Shore/ShopButtons/BaitShopButton
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceLines/Shop Scene/Shore/ShopButtons/BaitShopButton
-  Guid:
-    Data1: 1706060077
-    Data2: 1127479823
-    Data3: 1340699794
-    Data4: -532687059
-  Banks:
-  - {fileID: -5674214797675166295}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -8318890505510890245}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-6371592914164736750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1507,12 +1428,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/80/ControlSceme
+  m_Name: parameter:/80/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -1587,12 +1508,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/12/ControlSceme
+  m_Name: parameter:/12/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -1639,12 +1560,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/19/ControlSceme
+  m_Name: parameter:/19/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -1691,12 +1612,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/10/ControlSceme
+  m_Name: parameter:/10/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -1720,10 +1641,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/VoiceLines.bank
   Name: VoiceLines
   StudioPath: bank:/VoiceLines
-  lastModified: 639061721941803205
+  lastModified: 639061699035764258
   FileSizes:
   - Name: Desktop
-    Value: 5992000
+    Value: 7433472
   Exists: 1
 --- !u!114 &-5639815281841851900
 MonoBehaviour:
@@ -1763,12 +1684,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/GenericSoldItem/ControlSceme
+  m_Name: parameter:/GenericSoldItem/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -1843,12 +1764,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/0 Llyn Llyn Salmon/ControlSceme
+  m_Name: parameter:/0 Llyn Llyn Salmon/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -1979,12 +1900,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/LeaveTutorial/ControlSceme
+  m_Name: parameter:/LeaveTutorial/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -2055,12 +1976,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/0 Choose Bait/ControlSceme
+  m_Name: parameter:/0 Choose Bait/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -2135,12 +2056,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/15/ControlSceme
+  m_Name: parameter:/15/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -2187,12 +2108,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Cricket/ControlSceme
+  m_Name: parameter:/Cricket/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -2211,12 +2132,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/20/ControlSceme
+  m_Name: parameter:/20/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -2225,33 +2146,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-3819775922727860118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LevelSFX/Seagull/SeagullMiss
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/LevelSFX/Seagull/SeagullMiss
-  Guid:
-    Data1: 999368361
-    Data2: 1223184575
-    Data3: -690521927
-    Data4: -276461464
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-3792318546744390403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2262,12 +2156,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/1 Sell Rest Of Fish/ControlSceme
+  m_Name: parameter:/1 Sell Rest Of Fish/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -2286,12 +2180,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Gudgeons/ControlSceme
+  m_Name: parameter:/Gudgeons/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -2323,7 +2217,8 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 156352336944398545}
   MinDistance: 1
   MaxDistance: 20
   Length: 441
@@ -2355,6 +2250,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-3571231542132611481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/7 Listen For Yourself/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-3534439038419571958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2393,12 +2312,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/100/ControlSceme
+  m_Name: parameter:/100/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -2407,6 +2326,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-3425329453236069037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Splashes/StrafeSplash 2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Splashes/StrafeSplash 2
+  Guid:
+    Data1: 613892827
+    Data2: 1302839519
+    Data3: 1783748492
+    Data4: 206556608
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 801
 --- !u!114 &-3385705801714027109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2417,12 +2363,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Eels/ControlSceme
+  m_Name: parameter:/Eels/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -2441,12 +2387,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/0 Used All Bait/ControlSceme
+  m_Name: parameter:/0 Used All Bait/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -2465,12 +2411,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Pikes/ControlSceme
+  m_Name: parameter:/Pikes/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -2517,12 +2463,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Roaches/ControlSceme
+  m_Name: parameter:/Roaches/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -2569,12 +2515,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/0 Bait Board Intro/ControlSceme
+  m_Name: parameter:/0 Bait Board Intro/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -2593,12 +2539,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/MenuMainMenu/ControlSceme
+  m_Name: parameter:/MenuMainMenu/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -2617,12 +2563,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/2 Leave You To It/ControlSceme
+  m_Name: parameter:/2 Leave You To It/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -2669,12 +2615,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/1 Practice Fast Reel/ControlSceme
+  m_Name: parameter:/1 Practice Fast Reel/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -2711,33 +2657,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-3035294753414788374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LevelSFX/Seagull/SeagullAttack
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/LevelSFX/Seagull/SeagullAttack
-  Guid:
-    Data1: 709301830
-    Data2: 1289651429
-    Data3: 90536069
-    Data4: 2110932389
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-2960479860579093361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2748,12 +2667,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/And/ControlSceme
+  m_Name: parameter:/And/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -2762,34 +2681,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-2946938449078290415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceLines/Level Scene/Reel/Level 0/7 Medium Fish
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceLines/Level Scene/Reel/Level 0/7 Medium Fish
-  Guid:
-    Data1: 1354928872
-    Data2: 1310640256
-    Data3: -485987398
-    Data4: 1278384155
-  Banks:
-  - {fileID: -5674214797675166295}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 6970924351374902526}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-2867298080012926626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2800,12 +2691,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/1 Close Bait Board/ControlSceme
+  m_Name: parameter:/1 Close Bait Board/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -2852,12 +2743,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/0 Youve Got This/ControlSceme
+  m_Name: parameter:/0 Youve Got This/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -2876,12 +2767,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Intro 1/ControlSceme
+  m_Name: parameter:/Intro 1/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -2900,12 +2791,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/0 The Bait Shop/ControlSceme
+  m_Name: parameter:/0 The Bait Shop/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -2952,12 +2843,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/1/ControlSceme
+  m_Name: parameter:/1/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -2976,12 +2867,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Leech/ControlSceme
+  m_Name: parameter:/Leech/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -3000,12 +2891,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/1 Bait Attatched Now Cast/ControlSceme
+  m_Name: parameter:/1 Bait Attatched Now Cast/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -3024,12 +2915,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/5/ControlSceme
+  m_Name: parameter:/5/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -3058,7 +2949,7 @@ MonoBehaviour:
     Data4: -221744988
   Banks:
   - {fileID: -5674214797675166295}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
@@ -3160,12 +3051,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 0/ControlSceme
+  m_Name: parameter:/Level 0/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -3212,12 +3103,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/2 Leave Shop Prompt/ControlSceme
+  m_Name: parameter:/2 Leave Shop Prompt/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -3264,12 +3155,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/4 Fast Fish/ControlSceme
+  m_Name: parameter:/4 Fast Fish/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -3390,6 +3281,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1472736283513982597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Seagull/Duck
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Seagull/Duck
+  Guid:
+    Data1: -1832721167
+    Data2: 1118083288
+    Data3: 918996358
+    Data4: -1012808492
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1458697252239911904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3400,12 +3318,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/8_Pike/ControlSceme
+  m_Name: parameter:/8_Pike/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -3424,12 +3342,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/800/ControlSceme
+  m_Name: parameter:/800/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -3522,6 +3440,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1205996898118213840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Seagull/SeagullMiss
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Seagull/SeagullMiss
+  Guid:
+    Data1: 999368361
+    Data2: 1223184575
+    Data3: -690521927
+    Data4: -276461464
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1142919738998197258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3560,12 +3505,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/6_Bream/ControlSceme
+  m_Name: parameter:/6_Bream/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -3584,12 +3529,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/4/ControlSceme
+  m_Name: parameter:/4/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -3636,12 +3581,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 2/ControlSceme
+  m_Name: parameter:/Level 2/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -3688,12 +3633,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/1 Second Fish/ControlSceme
+  m_Name: parameter:/1 Second Fish/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -3712,12 +3657,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/1 Close Fish Board/ControlSceme
+  m_Name: parameter:/1 Close Fish Board/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -3764,12 +3709,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/13/ControlSceme
+  m_Name: parameter:/13/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -3844,12 +3789,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/2 Close Bait Board/ControlSceme
+  m_Name: parameter:/2 Close Bait Board/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -3923,12 +3868,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 1/ControlSceme
+  m_Name: parameter:/Level 1/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -3947,12 +3892,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Muscle/ControlSceme
+  m_Name: parameter:/Muscle/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -3992,7 +3937,6 @@ MonoBehaviour:
   - {fileID: -3984256246763343649}
   - {fileID: -6923229218904469711}
   - {fileID: 8533266585146180633}
-  - {fileID: 1866258020822761170}
   - {fileID: 722838868881661896}
   - {fileID: 3750646667868464174}
   - {fileID: 210735143966534208}
@@ -4127,50 +4071,29 @@ MonoBehaviour:
   - {fileID: -8435500359669996070}
   - {fileID: -2182435878550792741}
   - {fileID: 9176679071901724185}
-  - {fileID: -2946938449078290415}
   - {fileID: 2606335521635968783}
   - {fileID: -7242636325781042408}
   - {fileID: -7327723531966256427}
   - {fileID: -1583643400089694543}
-  - {fileID: -3035294753414788374}
-  - {fileID: 35304872576399441}
-  - {fileID: -3819775922727860118}
-  - {fileID: -6474755646698491282}
-  - {fileID: -6414418147839695262}
+  - {fileID: 1964344869953382586}
+  - {fileID: -1472736283513982597}
+  - {fileID: -1205996898118213840}
+  - {fileID: 7333474757277820640}
+  - {fileID: 2371743055081917019}
+  - {fileID: 6249032038967598274}
+  - {fileID: 4229632158575620577}
+  - {fileID: 6778013221596843756}
+  - {fileID: 3355624438712499183}
+  - {fileID: 2904734129327376047}
+  - {fileID: -3425329453236069037}
+  - {fileID: 6230098890829791348}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4198817137325428765}
   StringsBanks:
   - {fileID: 1411835401192698514}
-  cacheTime: 639061721941803205
+  cacheTime: 639075629449029953
   cacheVersion: 131624
---- !u!114 &35304872576399441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LevelSFX/Seagull/SeagullWarning
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/LevelSFX/Seagull/SeagullWarning
-  Guid:
-    Data1: 595644067
-    Data2: 1108216077
-    Data3: -730336597
-    Data4: -54611442
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &41380767982811075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4209,12 +4132,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/MenuIntro/ControlSceme
+  m_Name: parameter:/MenuIntro/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -4279,6 +4202,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &156352336944398545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Unspool/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1310734593
+    data2: 3558953973
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &202797313524603999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4289,12 +4236,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/0 Secret Bait/ControlSceme
+  m_Name: parameter:/0 Secret Bait/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -4340,12 +4287,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Perches/ControlSceme
+  m_Name: parameter:/Perches/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -4392,12 +4339,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Breams/ControlSceme
+  m_Name: parameter:/Breams/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -4444,12 +4391,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/10_Gudgeon/ControlSceme
+  m_Name: parameter:/10_Gudgeon/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -4485,7 +4432,7 @@ MonoBehaviour:
   - {fileID: 5523852968597833240}
   MinDistance: 1
   MaxDistance: 20
-  Length: 21159
+  Length: 28000
 --- !u!114 &729112097252001460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4496,12 +4443,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/90/ControlSceme
+  m_Name: parameter:/90/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -4520,12 +4467,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Leave Shop/ControlSceme
+  m_Name: parameter:/Leave Shop/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -4600,12 +4547,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/1_CommonCarp/ControlSceme
+  m_Name: parameter:/1_CommonCarp/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -4624,12 +4571,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fish Basket/ControlSceme
+  m_Name: parameter:/Fish Basket/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -4737,10 +4684,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639061721929539215
+  lastModified: 639075583422490580
   FileSizes:
   - Name: Desktop
-    Value: 8668
+    Value: 8936
   Exists: 1
 --- !u!114 &1443842087743583922
 MonoBehaviour:
@@ -4920,12 +4867,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/900/ControlSceme
+  m_Name: parameter:/900/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -4972,12 +4919,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/14/ControlSceme
+  m_Name: parameter:/14/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -4996,12 +4943,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/3 Leave Shop Prompt/ControlSceme
+  m_Name: parameter:/3 Leave Shop Prompt/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -5020,12 +4967,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Gold/ControlSceme
+  m_Name: parameter:/Gold/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -5044,12 +4991,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/2_StoneLoach/ControlSceme
+  m_Name: parameter:/2_StoneLoach/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -5085,33 +5032,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &1866258020822761170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/UI/Error
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/UI/Error
-  Guid:
-    Data1: -2021822312
-    Data2: 1191596676
-    Data3: 2125792927
-    Data4: 1366034535
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1203
 --- !u!114 &1917597685375347095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5150,12 +5070,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/3/ControlSceme
+  m_Name: parameter:/3/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -5164,6 +5084,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &1964344869953382586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Seagull/SeagullAttack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Seagull/SeagullAttack
+  Guid:
+    Data1: 709301830
+    Data2: 1289651429
+    Data3: 90536069
+    Data4: 2110932389
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &1992443961646256457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5285,12 +5232,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/FishBoardPrompt/ControlSceme
+  m_Name: parameter:/FishBoardPrompt/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -5337,12 +5284,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/60/ControlSceme
+  m_Name: parameter:/60/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -5361,12 +5308,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fish Board/ControlSceme
+  m_Name: parameter:/Fish Board/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -5385,12 +5332,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/0 Head Back To Shore/ControlSceme
+  m_Name: parameter:/0 Head Back To Shore/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -5399,6 +5346,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &2371743055081917019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/NavigationError
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/NavigationError
+  Guid:
+    Data1: -2021822312
+    Data2: 1191596676
+    Data3: 2125792927
+    Data4: 1366034535
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1203
 --- !u!114 &2497333839763162237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5409,12 +5383,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/2 Close Fishboard/ControlSceme
+  m_Name: parameter:/2 Close Fishboard/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -5433,12 +5407,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/9_Bullhead/ControlSceme
+  m_Name: parameter:/9_Bullhead/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -5513,12 +5487,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bait Board/ControlSceme
+  m_Name: parameter:/Bait Board/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -5566,12 +5540,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/8/ControlSceme
+  m_Name: parameter:/8/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -5580,6 +5554,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &2904734129327376047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Flies/FliesIdle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Flies/FliesIdle
+  Guid:
+    Data1: 1819487815
+    Data2: 1105552908
+    Data3: 1056258203
+    Data4: 2089940217
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1973
 --- !u!114 &2962270107877859721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5590,12 +5591,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/500/ControlSceme
+  m_Name: parameter:/500/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -5614,12 +5615,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/CommonCarps/ControlSceme
+  m_Name: parameter:/CommonCarps/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -5638,12 +5639,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/You Have/ControlSceme
+  m_Name: parameter:/You Have/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -5690,12 +5691,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/200/ControlSceme
+  m_Name: parameter:/200/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -5770,12 +5771,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/BullHeads/ControlSceme
+  m_Name: parameter:/BullHeads/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -5849,12 +5850,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/3 Navigate Shop Prompt/ControlSceme
+  m_Name: parameter:/3 Navigate Shop Prompt/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -5919,6 +5920,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &3355624438712499183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Flies/FliesAttack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Flies/FliesAttack
+  Guid:
+    Data1: -1322636004
+    Data2: 1178726990
+    Data3: -2089260127
+    Data4: 575393874
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3368215944304600941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5929,12 +5957,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/0 Navigate To Baitboard/ControlSceme
+  m_Name: parameter:/0 Navigate To Baitboard/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -5953,12 +5981,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Too Slow/ControlSceme
+  m_Name: parameter:/Too Slow/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -5977,12 +6005,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/0 Sell Your Fish/ControlSceme
+  m_Name: parameter:/0 Sell Your Fish/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -6083,12 +6111,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/5_Chub/ControlSceme
+  m_Name: parameter:/5_Chub/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -6107,12 +6135,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/0 All Fish Sounds/ControlSceme
+  m_Name: parameter:/0 All Fish Sounds/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -6187,12 +6215,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/0 Sell Your Fish/ControlSceme
+  m_Name: parameter:/0 Sell Your Fish/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -6266,12 +6294,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Chubs/ControlSceme
+  m_Name: parameter:/Chubs/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -6295,10 +6323,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639061721935187980
+  lastModified: 639075629449029953
   FileSizes:
   - Name: Desktop
-    Value: 921536
+    Value: 1018144
   Exists: 1
 --- !u!114 &4126877669039242813
 MonoBehaviour:
@@ -6310,12 +6338,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/17/ControlSceme
+  m_Name: parameter:/17/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -6367,7 +6395,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639061721929477203
+  lastModified: 639075583422454736
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -6382,12 +6410,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/2 Practice Slow Reel/ControlSceme
+  m_Name: parameter:/2 Practice Slow Reel/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -6396,6 +6424,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &4229632158575620577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceLines/Level Scene/Reel/Level 0/7 Listen For Yourself
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceLines/Level Scene/Reel/Level 0/7 Listen For Yourself
+  Guid:
+    Data1: 1354928872
+    Data2: 1310640256
+    Data3: -485987398
+    Data4: 1278384155
+  Banks:
+  - {fileID: -5674214797675166295}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -3571231542132611481}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4246760294027492205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6406,12 +6462,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/1 Right Fish/ControlSceme
+  m_Name: parameter:/1 Right Fish/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -6458,12 +6514,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/MenuPlay/ControlSceme
+  m_Name: parameter:/MenuPlay/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -6482,12 +6538,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/30/ControlSceme
+  m_Name: parameter:/30/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -6506,12 +6562,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Left/ControlSceme
+  m_Name: parameter:/Left/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -6610,12 +6666,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/MenuSettings/ControlSceme
+  m_Name: parameter:/MenuSettings/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -6634,12 +6690,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/0 Left Fish/ControlSceme
+  m_Name: parameter:/0 Left Fish/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -6658,12 +6714,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/300/ControlSceme
+  m_Name: parameter:/300/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -6766,12 +6822,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/2 Do This Five Times/ControlSceme
+  m_Name: parameter:/2 Do This Five Times/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -6814,12 +6870,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Intro 0/ControlSceme
+  m_Name: parameter:/Intro 0/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -6893,12 +6949,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/11/ControlSceme
+  m_Name: parameter:/11/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -6944,12 +7000,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fish BasketPrompt/ControlSceme
+  m_Name: parameter:/Fish BasketPrompt/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -6968,12 +7024,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/0_BrownTrout/ControlSceme
+  m_Name: parameter:/0_BrownTrout/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -7020,12 +7076,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/18/ControlSceme
+  m_Name: parameter:/18/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -7034,6 +7090,60 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &6230098890829791348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Flies/FliesDead
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Flies/FliesDead
+  Guid:
+    Data1: -1848672274
+    Data2: 1276233027
+    Data3: 1222757014
+    Data4: 1983304655
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6249032038967598274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/ClickError
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/ClickError
+  Guid:
+    Data1: 945747673
+    Data2: 1159966070
+    Data3: -645524591
+    Data4: 164685518
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2328
 --- !u!114 &6295824028832555979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7156,12 +7266,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/5 Slow Fish/ControlSceme
+  m_Name: parameter:/5 Slow Fish/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -7180,12 +7290,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/0 First Fish/ControlSceme
+  m_Name: parameter:/0 First Fish/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -7194,6 +7304,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &6778013221596843756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/CorrectSFX
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/CorrectSFX
+  Guid:
+    Data1: 1746112363
+    Data2: 1116740273
+    Data3: -565658736
+    Data4: 67525630
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6789282477973437898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7204,36 +7341,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/600/ControlSceme
+  m_Name: parameter:/600/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &6970924351374902526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/7 Medium Fish/ControlSceme
-  m_EditorClassIdentifier: 
-  Name: ControlSceme
-  StudioPath: 
-  Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -7280,12 +7393,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/400/ControlSceme
+  m_Name: parameter:/400/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -7304,12 +7417,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Crank/ControlSceme
+  m_Name: parameter:/Crank/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -7328,12 +7441,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/700/ControlSceme
+  m_Name: parameter:/700/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -7342,6 +7455,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &7333474757277820640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Seagull/SeagullWarning
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Seagull/SeagullWarning
+  Guid:
+    Data1: 595644067
+    Data2: 1108216077
+    Data3: -730336597
+    Data4: -54611442
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7466131690475219232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7352,12 +7492,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/0 First Boss/ControlSceme
+  m_Name: parameter:/0 First Boss/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -7428,12 +7568,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/11_ Roach/ControlSceme
+  m_Name: parameter:/11_ Roach/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -7564,12 +7704,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/16/ControlSceme
+  m_Name: parameter:/16/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -7649,7 +7789,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639061721931374620
+  lastModified: 639061734296082501
   FileSizes:
   - Name: Desktop
     Value: 8566336
@@ -7664,12 +7804,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/2/ControlSceme
+  m_Name: parameter:/2/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -7771,12 +7911,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Too Fast/ControlSceme
+  m_Name: parameter:/Too Fast/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -7851,12 +7991,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Boss 0/ControlSceme
+  m_Name: parameter:/Boss 0/ControlScheme
   m_EditorClassIdentifier: 
-  Name: ControlSceme
+  Name: ControlScheme
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 4086690009
@@ -7941,7 +8081,7 @@ MonoBehaviour:
     Data4: -1274126869
   Banks:
   - {fileID: -5674214797675166295}
-  IsStream: 1
+  IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:

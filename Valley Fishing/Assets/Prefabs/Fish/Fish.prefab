@@ -396,7 +396,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5972517356931033480
 Transform:
   m_ObjectHideFlags: 0
@@ -441,8 +441,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 50
-  OverrideMaxDistance: 100
+  OverrideMinDistance: 40
+  OverrideMaxDistance: 150
 --- !u!1 &2585739966151606858
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,8 +676,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 100
-  OverrideMaxDistance: 200
+  OverrideMinDistance: 30
+  OverrideMaxDistance: 85
 --- !u!1 &3222220105798205689
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,18 +759,10 @@ MonoBehaviour:
   movementChangeTime: 0
   strafeAudio: {fileID: 2211003099072869323}
   lineEnd: {fileID: 5132849399768412513}
-  seagull: {fileID: 5964882648534607008, guid: da0b5fbd888aeec49a19ec3b7b0a49c2, type: 3}
-  seagullIntervalTime: 0
-  seagullWarningTime: 0
-  seagullFailTime: 0
-  duckingTime: 0.3
-  duckCooldown: 0
-  avoidanceThreshold: 0
+  unspoolRate: 0.05
   <IsStrafer>k__BackingField: 0
   <MovementIntervalsCompleted>k__BackingField: 0
   <ReelSpeed>k__BackingField: 100
-  <Ducking>k__BackingField: 0
-  <CanDuck>k__BackingField: 1
 --- !u!54 &6682323996151832369
 Rigidbody:
   m_ObjectHideFlags: 0

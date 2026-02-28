@@ -125,7 +125,7 @@ public class BaitShop : Shop {
 
 	public virtual void SellFish(int fishIndex) {
 		if(GameManager.Instance.CaughtFish[fishIndex] == 0) {
-			AudioManager.Instance.PlayOneShot(FMODManager.Instance.NavigationError);
+			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
 			return;
 		}
 		AudioManager.Instance.SkipVoiceOver();
@@ -148,7 +148,7 @@ public class BaitShop : Shop {
 
 	public virtual void SellAllFish() {
 		if(GameManager.Instance.TotalCaughtFish == 0) {
-			AudioManager.Instance.PlayOneShot(FMODManager.Instance.NavigationError);
+			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
 			return;
 		}
 		for (int i = 0; i < GameManager.Instance.CaughtFish.Count; i++) {
@@ -175,11 +175,11 @@ public class BaitShop : Shop {
 	public virtual void BuyBait(int baitIndex, int sellQuantity) {
 		Debug.Log(this.BaitQuantities[baitIndex]);
 		if(this.BaitQuantities[baitIndex] == 0) {
-			AudioManager.Instance.PlayOneShot(FMODManager.Instance.NavigationError);
+			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
 			return;
 		}
 		if (GameManager.Instance.Baits[baitIndex].BaitPrice * sellQuantity > GameManager.Instance.Money) {
-			AudioManager.Instance.PlayOneShot(FMODManager.Instance.NavigationError);
+			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
 			return;
 		}
 		GameManager.Instance.Money -= GameManager.Instance.Baits[baitIndex].BaitPrice * sellQuantity;

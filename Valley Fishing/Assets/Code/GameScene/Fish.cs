@@ -58,6 +58,7 @@ public class Fish : MonoBehaviour
 	[SerializeField] private float movementChangeTime;
 	[SerializeField] private GameObject strafeAudio;
 	[SerializeField] private Transform lineEnd;
+	[SerializeField] private float unspoolRate;
 
 	#endregion
 
@@ -66,7 +67,7 @@ public class Fish : MonoBehaviour
 
 	public EventReference CaughtVoiceLine {	get => caughtVoiceLine;	}
 	[field:SerializeField] private bool IsStrafer { get; set; }
-	private bool IsCentred { get; set; }
+	private bool IsCentred { get; set; } = true;
 	private InputController InputController { get => GameManager.Instance.InputController; }
 
 	private float FailedCatchTime;
@@ -87,7 +88,8 @@ public class Fish : MonoBehaviour
 	private bool ActivityLevelChanging;
 	private float CurrentMovemetChangeTime;
 	private bool MovementDirectionChanging;
-	private bool IsUnspooling;	
+	[field: SerializeField] private bool IsUnspooling = true;
+	[field:SerializeField] private float CurrentUnspoolPitch { get; set; }
 	public StudioEventEmitter ActivitySplashSFX { get => activitySplashSFX; }
 
 	public string FishName { get => fishName; }
@@ -104,6 +106,9 @@ public class Fish : MonoBehaviour
 	public bool HitBySeagull { get; set; }
 
 	private bool Initialized { get; set; }
+	public bool HitByFlies { get; set; }
+
+	#endregion
 
 	#endregion
 
@@ -155,11 +160,11 @@ public class Fish : MonoBehaviour
 		this.IsStrafer = isStrafer;
 		SetActivityLevel(this.ActivityLevels[0]);
 		GameManager.Instance.EventController.NewFishSpawned();
-		AudioManager.Instance.PlayUnspoolSound(false, 2);
+		AudioManager.Instance.PlayUnspoolSound(false, 0);
 	}
 
 	public void FishCaught() {
-		AudioManager.Instance.PlayUnspoolSound(false, 2);
+		AudioManager.Instance.PlayUnspoolSound(false, 0);
 		GameManager.Instance.AssignNewCaughtFish(fishIndex);
 		GameManager.Instance.LevelController.SetState(LevelController.State.FishCaught);
 		AudioManager.Instance.PlayFishActivitySound(this, 0, true);
@@ -203,9 +208,6 @@ public class Fish : MonoBehaviour
 	private void ReelingSuccesfully(bool reelingSuccesfully) {
 		this.RodLineComponent.IsStraight = reelingSuccesfully;
 		if (reelingSuccesfully) {
-			if (this.IsUnspooling) {
-				AudioManager.Instance.PlayUnspoolSound(false, 1);
-			}
 			this.RodLineComponent.CurveAmount = Mathf.MoveTowards(this.RodLineComponent.CurveAmount, 0f, Time.deltaTime);
 			if (!this.IsCentred) {
 				return;
@@ -219,19 +221,12 @@ public class Fish : MonoBehaviour
 			IncreaseFailTime();
 			VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);
 			if (GameManager.Instance.LevelController.FishSpawnTransform.position.z - transform.position.z < 0) {
-				AudioManager.Instance.PlayUnspoolSound(false, 2);
 				this.IsUnspooling = false;
 				return;
 			}
 			if (this.IsCentred) {
-				if (!this.IsUnspooling && !AudioManager.Instance.VoiceLineInProgress) {
-					AudioManager.Instance.PlayUnspoolSound(true, 2);
-				}
 				rb.AddForce(0, 0, swimAwaySpeed);
 			} else {
-				if (!this.IsUnspooling && !AudioManager.Instance.VoiceLineInProgress) {
-					AudioManager.Instance.PlayUnspoolSound(true, 1);
-				}
 				rb.AddForce(0, 0, strafedSwimAwaySpeed);
 			}
 			this.IsUnspooling = true;
@@ -298,6 +293,7 @@ public class Fish : MonoBehaviour
 		if (transform.position.x > -centreThreshold && transform.position.x < centreThreshold) {
 			if (!this.IsCentred) {
 				this.BecameCentered?.Invoke();
+				AudioManager.Instance.PlayOneShot(FMODManager.Instance.CorrectSFX);
 			}
 			this.IsCentred = true;
 		} else {
@@ -318,7 +314,7 @@ public class Fish : MonoBehaviour
 	}
 
 	private void FailedCatch() {
-		AudioManager.Instance.PlayUnspoolSound(false, 2);
+		AudioManager.Instance.PlayUnspoolSound(false, 0);
 		GameManager.Instance.LevelController.SetState(LevelController.State.AttatchBait);
 		AudioManager.Instance.PlayFishActivitySound(this, 0, false);
 		VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);

@@ -5,6 +5,7 @@ using FMODUnity;
 using FMOD.Studio;
 using System;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class AudioManager : Singleton<AudioManager>
 {
@@ -17,6 +18,7 @@ public class AudioManager : Singleton<AudioManager>
 	public EventInstance CurrentReelInstance;
 	public EventInstance BaitEventInstance;
 	public EventInstance UnspoolEventInstance;
+	public EventInstance FliesEventInstance;
 
 	[field:SerializeField]
 	public StudioEventEmitter FishActivityLevelInstance { get; set;	}
@@ -59,13 +61,24 @@ public class AudioManager : Singleton<AudioManager>
 		}
 	}
 
-	public void PlayUnspoolSound(bool play, int speed) {
+	public void PlayUnspoolSound(bool play, float pitch) {
 		if (play) {
 			this.UnspoolEventInstance = CreateSFXInstance(FMODManager.Instance.Unspool);
+			this.UnspoolEventInstance.setParameterByName("Pitch", pitch);
 			this.UnspoolEventInstance.start();
 		} else {
 			this.UnspoolEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 			this.UnspoolEventInstance.release();
+		}
+	}
+
+	public void PlayFliesSound(bool play) {
+		if (play) {
+			this.FliesEventInstance = CreateSFXInstance(FMODManager.Instance.FliesWarning);
+			this.FliesEventInstance.start();
+		} else {
+			this.FliesEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+			this.FliesEventInstance.release();
 		}
 	}
 
@@ -77,7 +90,13 @@ public class AudioManager : Singleton<AudioManager>
 		}
 		this.VoiceLineEventInstance = CreateSFXInstance(voiceLineReference);
 		this.LastVoiceLineEventReference = voiceLineReference;
-		this.VoiceLineEventInstance.setParameterByName("Language", PlayerPrefsManager.Load(PlayerPrefsManager.Language));
+		if(Gamepad.current.layout == "XInputController" || Gamepad.current.layout == "XInputControllerWindows" || Gamepad.current.layout == "XboxGamepadMacOS" || Gamepad.current.layout == "XboxOneGamepadMacOSWireless" || Gamepad.current.layout == "XboxOneGamepadiOS") {
+			this.VoiceLineEventInstance.setParameterByName("ControlScheme", 0);
+		} else if (Gamepad.current.layout == "DualShock3GamepadHID" || Gamepad.current.layout == "DualShock4GamepadHID" || Gamepad.current.layout == "DualShock4GamepadiOS" || Gamepad.current.layout == "DualSenseGamepadHID" ) {
+			this.VoiceLineEventInstance.setParameterByName("ControlScheme", 1);
+		} else if (Gamepad.current.layout == "SwitchProControllerHID") {
+			this.VoiceLineEventInstance.setParameterByName("ControlScheme", 1);
+		}
 		this.VoiceLineEventInstance.start();
 		this.VoiceLineInProgress = true;
 		this.OnVoiceLineStarted?.Invoke();

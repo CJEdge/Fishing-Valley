@@ -10,30 +10,18 @@ public class BaitView : MonoBehaviour
 {
 	#region Serialized Fields
 
-	[SerializeField]
-	private EventSystem eventSystem;
-
-	[SerializeField]
-	private GameObject buttonsGameobject;
-
-	[SerializeField]
-	private Button[] baitButtons;
-
-	[SerializeField]
-	private float buttonMoveTime;
-
-	[SerializeField]
-	private float baitBoxOpeningTime;
+	[SerializeField] private EventSystem eventSystem;
+	[SerializeField] private GameObject buttonsGameobject;
+	[SerializeField] private Button[] baitButtons;
+	[SerializeField] private float buttonMoveTime;
+	[SerializeField] private float baitBoxOpeningTime;
 
 	#endregion
 
 
 	#region Properties
 
-	private int BaitIndex {
-		get;
-		set;
-	}
+	private int BaitIndex {	get; set; }
 
 	#endregion
 
@@ -108,17 +96,17 @@ public class BaitView : MonoBehaviour
 		if(GameManager.Instance.LevelController.CurrentState != LevelController.State.AttatchBait) {
 			return;
 		}
-		if (!AudioManager.Instance.VoiceLineInProgress){
+		if (AudioManager.Instance.VoiceLineInProgress){
 			return;
 		}
 		int activeButtons = 0;
 		for (int i = 0; i < baitButtons.Length; i++) {
 			if (baitButtons[i].isActiveAndEnabled) {
 				activeButtons++;
-				if(activeButtons == 2) {
-					return;
-				}
 			}
+		}
+		if (activeButtons > 1) {
+			return;
 		}
 		BaitClicked(this.BaitIndex);
 	}

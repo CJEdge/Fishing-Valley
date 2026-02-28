@@ -57,9 +57,6 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 			return;
 		}
 		GameManager.Instance.LastSelectedButton = gameObject;
-		if (InputTracker.LastInputWasMouse) {
-			return;
-		}
 		SelectAction?.Invoke();
 		DoHoverEffect();
 	}
