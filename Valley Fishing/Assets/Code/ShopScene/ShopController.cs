@@ -2,12 +2,10 @@ using FMODUnity;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ShopController : AbstractState<ShopController.State>
+public class ShopController : MonoBehaviour
 {
 	#region Serialized Fields
 
-	[SerializeField] private Shore shoreMenu;
-	[SerializeField] private BaitShop baitShop;
 	[SerializeField] private EventSystem eventSystem;
 	[SerializeField] private EventReference levelMusic;
 
@@ -16,52 +14,25 @@ public class ShopController : AbstractState<ShopController.State>
 
 	#region Properties
 
-	public Shore ShoreMenu { get => shoreMenu; }
-	public BaitShop BaitShop { get => baitShop; }
+	[field: SerializeField] public Shore Shore { get; set; }
+    [field: SerializeField] public BaitShop BaitShop { get; set; }
+    [field: SerializeField] public RodShop RodShop { get; set; }
+    [field: SerializeField] public Icthyologists Icthyologists { get; set; }
+    [field: SerializeField] public InventorsLab InventorsLab { get; set; }
+
+    #endregion
 
 
+    #region Mono Behaviours
 
-	#endregion
-
-
-	#region State Behaviour
-
-	public enum State {
-		Default,
-		CutsceneIn,
-		Shore,
-		CutsceneOut,
-		BaitShop,
-		RodShop,
-		StorageShop
-	}
-
-	protected override void EnterState(State state) {
-		switch (state) {
-			case State.Default:
-				GameManager.Instance.ShopController = this;
-				GameManager.Instance.EventSystem = eventSystem;
-				SetState(State.CutsceneIn);
-				AudioManager.Instance.PlayMusic(levelMusic);
-				break;
-			case State.CutsceneIn:
-				SetState(State.Shore);
-				break;
-			case State.Shore:
-				shoreMenu.Initialize();
-				break;
-			case State.CutsceneOut:
-				break;
-			case State.BaitShop:
-				break;
-			case State.RodShop:
-				break;
-			case State.StorageShop:
-				break;
-			default:
-				break;
-		}
-	}
+    public void Awake()
+    {
+        GameManager.Instance.ShopController = this;
+        GameManager.Instance.EventSystem = eventSystem;
+        AudioManager.Instance.PlayMusic(levelMusic);
+        this.Shore.gameObject.SetActive(true);
+        this.BaitShop.gameObject.SetActive(false);
+    }
 
 	#endregion
 }

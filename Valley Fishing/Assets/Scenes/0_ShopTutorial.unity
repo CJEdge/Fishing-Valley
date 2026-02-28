@@ -172,6 +172,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonType: 0
+  HoverButtonSoundEventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   fishBoard: {fileID: 1663309061}
 --- !u!114 &151935763
 MonoBehaviour:
@@ -525,6 +532,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonType: 0
+  HoverButtonSoundEventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &276873570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -672,6 +686,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonType: 0
+  HoverButtonSoundEventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   fishBoard: {fileID: 1663309061}
 --- !u!114 &277512107
 MonoBehaviour:
@@ -1065,6 +1086,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonType: 0
+  HoverButtonSoundEventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &619114414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1232,6 +1260,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonType: 0
+  HoverButtonSoundEventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &656606138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1343,7 +1378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &699254827
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1454,6 +1489,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonType: 0
+  HoverButtonSoundEventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   baitBoard: {fileID: 2075049568}
   baitIndex: 4
   sellQuantity: 5
@@ -1738,7 +1780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 407879e25b301f24b975a1bcdfeaf783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <CurrentState>k__BackingField: 0
+  shopEnterTime: 1
   baitShopObject: {fileID: 527688152}
   fishBoard: {fileID: 1663309061}
   baitBoard: {fileID: 2075049568}
@@ -2304,9 +2346,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4adecd51514aa5a40a5dde96844246c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <CurrentState>k__BackingField: 0
-  shoreMenu: {fileID: 1808427007}
-  baitShop: {fileID: 895185098}
   eventSystem: {fileID: 1395612272}
   levelMusic:
     Guid:
@@ -2315,6 +2354,11 @@ MonoBehaviour:
       Data3: -193610308
       Data4: -1712786068
     Path: event:/Music/ShopScene
+  <Shore>k__BackingField: {fileID: 0}
+  <BaitShop>k__BackingField: {fileID: 0}
+  <RodShop>k__BackingField: {fileID: 0}
+  <Icthyologists>k__BackingField: {fileID: 0}
+  <InventorsLab>k__BackingField: {fileID: 0}
 --- !u!1 &1212762096
 GameObject:
   m_ObjectHideFlags: 0
@@ -2991,6 +3035,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonType: 0
+  HoverButtonSoundEventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &1369324403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3755,6 +3806,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonType: 0
+  HoverButtonSoundEventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &1774111747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3853,7 +3911,6 @@ MonoBehaviour:
   shopButtons:
   - {fileID: 1774111741}
   - {fileID: 1369324396}
-  shoreMenuObject: {fileID: 213367055}
   eventSystem: {fileID: 1395612272}
   <FinishedInShops>k__BackingField: 
   <AllShopsFinished>k__BackingField: 0
@@ -4289,6 +4346,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonType: 0
+  HoverButtonSoundEventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &1909034983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4867,6 +4931,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonType: 0
+  HoverButtonSoundEventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   fishBoard: {fileID: 1663309061}
 --- !u!1 &2063497089
 GameObject:
@@ -4921,6 +4992,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonType: 0
+  HoverButtonSoundEventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &2063497092
 MonoBehaviour:
   m_ObjectHideFlags: 0

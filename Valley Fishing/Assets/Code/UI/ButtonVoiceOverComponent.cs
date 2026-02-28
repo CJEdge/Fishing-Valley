@@ -20,12 +20,14 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 
 	#endregion
 
+
 	#region Serialised Fields
 
     [SerializeField] 
 	protected EventReference HoverButtonSoundEventReference;
 
     #endregion
+
 
     #region Properties
 

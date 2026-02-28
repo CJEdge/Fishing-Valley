@@ -110,7 +110,6 @@ public class Fish : MonoBehaviour
 
 	#endregion
 
-	#endregion
 
 	#region Mono Behaviours
 

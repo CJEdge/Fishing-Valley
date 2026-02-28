@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ShoreMenuManager : MonoBehaviour
+public class ShoreMenuManager : Shore
 {
     //[SerializeField] protected ButtonVoiceOverComponent ;
     [SerializeField] protected ButtonVoiceOverComponent fishBasketButton;

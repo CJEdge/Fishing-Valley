@@ -20,45 +20,20 @@ public class Shore : MonoBehaviour
 
 	#region Serialized Fields
 
-	[SerializeField]
-	private int lastShopIndex = -1;
-
-	[SerializeField]
-	protected GameObject[] shopButtons;
-
-	[SerializeField]
-	protected GameObject shoreMenuObject;
-
-	[SerializeField]
-	protected EventSystem eventSystem;
+	[SerializeField] private int lastShopIndex = -1;
+	[SerializeField] protected GameObject[] shopButtons;
+	[SerializeField] protected EventSystem eventSystem;
 
 	#endregion
 
 
 	#region Properties
 
-	[field:SerializeField]
-	public List<bool> FinishedInShops {
-		get;
-		set;
-	} = new List<bool>();
-
-	[field: SerializeField]
-	public bool AllShopsFinished {
-		get;
-		set;
-	}
-
-	public int CurrentButtonIndex {
-		get;
-		set;
-	}
-
-	[field: SerializeField]
-	public int TimesSkipped {
-		get;
-		set;
-	}
+	[field:SerializeField] public List<bool> FinishedInShops { get;	set; } = new List<bool>();
+	[field: SerializeField] public bool AllShopsFinished { get; set; }
+	public int CurrentButtonIndex {	get; set; }
+	[field: SerializeField]	public int TimesSkipped { get; set; }
+	private ShopController ShopController { get => GameManager.Instance.ShopController; }
 
 	#endregion
 
@@ -81,7 +56,7 @@ public class Shore : MonoBehaviour
 		}
 		this.AllShopsFinished = allShopsFinished;
 		this.TimesSkipped = 0;
-		shoreMenuObject.SetActive(true);
+		this.ShopController.Shore.gameObject.SetActive(true);
 	}
 
 	public void OnDestroy() {
@@ -89,11 +64,24 @@ public class Shore : MonoBehaviour
 	}
 
 	public void EnterBaitShop() {
-		shoreMenuObject.SetActive(false);
-		GameManager.Instance.ShopController.SetState(ShopController.State.BaitShop);
+        this.ShopController.Shore.gameObject.SetActive(false);
+        this.ShopController.BaitShop.EnterShop(true);
 	}
 
-	public void FinishedInShop(Shop shopType) {
+	public void EnterRodShop()
+	{
+        this.ShopController.Shore.gameObject.SetActive(false);
+    }
+    public void EnterIcthyologists()
+    {
+        this.ShopController.Shore.gameObject.SetActive(false);
+    }
+    public void EneterInventorsLab()
+    {
+        this.ShopController.Shore.gameObject.SetActive(false);
+    }
+
+    public void FinishedInShop(Shop shopType) {
 		if(shopType is BaitShop) {
 			this.FinishedInShops[0] = true;
 		}
@@ -115,4 +103,5 @@ public class Shore : MonoBehaviour
 	}
 
 	#endregion
+
 }

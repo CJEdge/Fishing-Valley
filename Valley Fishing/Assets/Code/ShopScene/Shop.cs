@@ -1,13 +1,28 @@
 using FMOD.Studio;
 using FMODUnity;
+using System.Collections;
 using UnityEngine;
 
 public abstract class Shop : MonoBehaviour
 {
 
-	#region Protected Variables
+	#region Serialized Fields
 
-	protected EventInstance CurrentTutorialEventInstance;
+	[SerializeField] private float shopEnterTime;
+
+    #endregion
+
+
+    #region Properties
+
+    public Coroutine RunEnterShop { get; set; }
+
+    #endregion
+
+
+    #region Protected Variables
+
+    protected EventInstance CurrentTutorialEventInstance;
 
 	#endregion
 
@@ -29,12 +44,28 @@ public abstract class Shop : MonoBehaviour
 		GameManager.Instance.InputController.OnSkip -= Skip;
 	}
 
-	#endregion
+    public virtual IEnumerator EnterShop(bool enter)
+    {
+        if (enter)
+        {
+            AudioManager.Instance.PlayOneShot(FMODManager.Instance.ShopEnter);
+            yield return new WaitForSeconds(shopEnterTime);
+        }
+        else
+        {
+            AudioManager.Instance.PlayOneShot(FMODManager.Instance.ShopEnter);
+            GameManager.Instance.ShopController.Shore.FinishedInShops[0] = true;
+            GameManager.Instance.ShopController.Shore.gameObject.SetActive(true);
+        }
+        gameObject.SetActive(enter);
+    }
+
+    #endregion
 
 
-	#region Public Methods
+    #region Public Methods
 
-	public abstract void VoiceLineOver(EventReference eventReference, bool skipped);
+    public abstract void VoiceLineOver(EventReference eventReference, bool skipped);
 
 	public bool PlayNextTutotialVoiceOver(bool[] tutorialsCompleted, EventReference[] tutorialVoiceLines) {
 		if(tutorialsCompleted == null) {
@@ -65,6 +96,10 @@ public abstract class Shop : MonoBehaviour
 	public virtual void Skip() {
 
 	}
+    public virtual void LeaveShop()
+    {
+        this.RunEnterShop = StartCoroutine(EnterShop(false));
+    }
 
-	#endregion
+    #endregion
 }
