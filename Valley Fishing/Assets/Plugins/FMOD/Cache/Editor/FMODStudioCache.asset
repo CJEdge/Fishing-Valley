@@ -2217,7 +2217,8 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 156352336944398545}
   MinDistance: 1
   MaxDistance: 20
   Length: 441
@@ -2325,6 +2326,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-3425329453236069037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Splashes/StrafeSplash 2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Splashes/StrafeSplash 2
+  Guid:
+    Data1: 613892827
+    Data2: 1302839519
+    Data3: 1783748492
+    Data4: 206556608
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 801
 --- !u!114 &-3385705801714027109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4054,12 +4082,17 @@ MonoBehaviour:
   - {fileID: 2371743055081917019}
   - {fileID: 6249032038967598274}
   - {fileID: 4229632158575620577}
+  - {fileID: 6778013221596843756}
+  - {fileID: 3355624438712499183}
+  - {fileID: 2904734129327376047}
+  - {fileID: -3425329453236069037}
+  - {fileID: 6230098890829791348}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4198817137325428765}
   StringsBanks:
   - {fileID: 1411835401192698514}
-  cacheTime: 639061699035764258
+  cacheTime: 639075629449029953
   cacheVersion: 131624
 --- !u!114 &41380767982811075
 MonoBehaviour:
@@ -4169,6 +4202,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &156352336944398545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Unspool/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1310734593
+    data2: 3558953973
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &202797313524603999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4375,7 +4432,7 @@ MonoBehaviour:
   - {fileID: 5523852968597833240}
   MinDistance: 1
   MaxDistance: 20
-  Length: 21159
+  Length: 28000
 --- !u!114 &729112097252001460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4627,10 +4684,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639061657681563135
+  lastModified: 639075583422490580
   FileSizes:
   - Name: Desktop
-    Value: 8674
+    Value: 8936
   Exists: 1
 --- !u!114 &1443842087743583922
 MonoBehaviour:
@@ -5497,6 +5554,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &2904734129327376047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Flies/FliesIdle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Flies/FliesIdle
+  Guid:
+    Data1: 1819487815
+    Data2: 1105552908
+    Data3: 1056258203
+    Data4: 2089940217
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1973
 --- !u!114 &2962270107877859721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5833,6 +5917,33 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: 3411298057827991189}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3355624438712499183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Flies/FliesAttack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Flies/FliesAttack
+  Guid:
+    Data1: -1322636004
+    Data2: 1178726990
+    Data3: -2089260127
+    Data4: 575393874
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -6212,10 +6323,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639061632482337516
+  lastModified: 639075629449029953
   FileSizes:
   - Name: Desktop
-    Value: 948928
+    Value: 1018144
   Exists: 1
 --- !u!114 &4126877669039242813
 MonoBehaviour:
@@ -6284,7 +6395,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639061657681526075
+  lastModified: 639075583422454736
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -6979,6 +7090,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &6230098890829791348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Flies/FliesDead
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Flies/FliesDead
+  Guid:
+    Data1: -1848672274
+    Data2: 1276233027
+    Data3: 1222757014
+    Data4: 1983304655
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6249032038967598274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7166,6 +7304,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &6778013221596843756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/CorrectSFX
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/CorrectSFX
+  Guid:
+    Data1: 1746112363
+    Data2: 1116740273
+    Data3: -565658736
+    Data4: 67525630
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6789282477973437898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7624,7 +7789,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639051618969133998
+  lastModified: 639061734296082501
   FileSizes:
   - Name: Desktop
     Value: 8566336

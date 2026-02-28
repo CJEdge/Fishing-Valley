@@ -69,6 +69,7 @@ public class LevelController : AbstractState<LevelController.State> {
 				break;
 			case State.FishCaught:
 				GameManager.Instance.InputController.SetState(InputController.State.ReelingLocked);
+				GameManager.Instance.EventController.FishCaught();
 				this.FishView.EnableFishUI(true);
 				break;
 		}

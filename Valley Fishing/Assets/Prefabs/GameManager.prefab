@@ -259,11 +259,11 @@ MonoBehaviour:
       Data4: -1720165158
     Path: event:/VoiceLines/Misc/Captain/Bait Names/Muscle
   - Guid:
-      Data1: 245993063
-      Data2: 1117766133
-      Data3: -1805141313
-      Data4: -1711578853
-    Path: event:/VoiceLines/Misc/Captain/Bait Names/Worm
+      Data1: 700839174
+      Data2: 1225928950
+      Data3: -376815206
+      Data4: 158853214
+    Path: event:/VoiceLines/Misc/Captain/Bait Names/Crank
   FishBoardFish:
   - Guid:
       Data1: 689430516
@@ -740,6 +740,13 @@ MonoBehaviour:
       Data3: -336593267
       Data4: 1816793257
     Path: event:/SFX/BaitSFX/AttatchBait
+  CorrectSFX:
+    Guid:
+      Data1: 1746112363
+      Data2: 1116740273
+      Data3: -565658736
+      Data4: 67525630
+    Path: event:/SFX/LevelSFX/CorrectSFX
   FishCatch:
     Guid:
       Data1: -1537860913
@@ -775,6 +782,27 @@ MonoBehaviour:
       Data3: -690521927
       Data4: -276461464
     Path: event:/SFX/LevelSFX/Seagull/SeagullMiss
+  FliesWarning:
+    Guid:
+      Data1: 1819487815
+      Data2: 1105552908
+      Data3: 1056258203
+      Data4: 2089940217
+    Path: event:/SFX/LevelSFX/Flies/FliesIdle
+  FliesAttack:
+    Guid:
+      Data1: -1322636004
+      Data2: 1178726990
+      Data3: -2089260127
+      Data4: 575393874
+    Path: event:/SFX/LevelSFX/Flies/FliesAttack
+  FliesMiss:
+    Guid:
+      Data1: -1848672274
+      Data2: 1276233027
+      Data3: 1222757014
+      Data4: 1983304655
+    Path: event:/SFX/LevelSFX/Flies/FliesDead
   Duck:
     Guid:
       Data1: -1832721167
@@ -829,7 +857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f826d40152fef43a2a4d141a72bae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useCheats: 1
+  useCheats: 0
   superFastCatch: 0
   level_01_Catch_Tutorial:
     Baits:
@@ -844,9 +872,7 @@ MonoBehaviour:
   level_03_Boss:
     Baits: []
   gameSceneCheats:
-    Baits:
-    - BaitIndex: 4
-      BaitAmount: 5
+    Baits: []
   firstShopTutorialCheats:
     CaughtFish:
     - FishIndex: 0
@@ -882,7 +908,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7393596337781405747}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4dc789e279ee1a42a655df102a22012, type: 3}
   m_Name: 

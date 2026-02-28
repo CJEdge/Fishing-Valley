@@ -520,12 +520,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seagull: {fileID: 5964882648534607008, guid: da0b5fbd888aeec49a19ec3b7b0a49c2, type: 3}
-  seagullIntervalTime: 4
-  seagullWarningTime: 0.7
-  seagullFailTime: 1
-  duckingTime: 0.2
-  duckCooldown: 0.5
-  avoidanceThreshold: 0.2
+  seagullIntervalTime: 0
+  seagullWarningTime: 0
+  seagullFailTime: 0
+  duckingTime: 0
+  duckCooldown: 0
+  avoidanceThreshold: 0
   <Ducking>k__BackingField: 0
   <CanDuck>k__BackingField: 1
   flies: {fileID: 0}

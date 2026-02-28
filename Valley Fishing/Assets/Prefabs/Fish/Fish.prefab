@@ -396,7 +396,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5972517356931033480
 Transform:
   m_ObjectHideFlags: 0
@@ -441,7 +441,7 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 75
+  OverrideMinDistance: 40
   OverrideMaxDistance: 150
 --- !u!1 &2585739966151606858
 GameObject:
@@ -676,8 +676,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 100
-  OverrideMaxDistance: 200
+  OverrideMinDistance: 30
+  OverrideMaxDistance: 85
 --- !u!1 &3222220105798205689
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,6 +759,7 @@ MonoBehaviour:
   movementChangeTime: 0
   strafeAudio: {fileID: 2211003099072869323}
   lineEnd: {fileID: 5132849399768412513}
+  unspoolRate: 0.05
   <IsStrafer>k__BackingField: 0
   <MovementIntervalsCompleted>k__BackingField: 0
   <ReelSpeed>k__BackingField: 100

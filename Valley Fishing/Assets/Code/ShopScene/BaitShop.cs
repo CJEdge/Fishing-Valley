@@ -155,11 +155,11 @@ public class BaitShop : Shop {
 	public virtual void BuyBait(int baitIndex, int sellQuantity) {
 		Debug.Log(this.BaitQuantities[baitIndex]);
 		if(this.BaitQuantities[baitIndex] == 0) {
-			AudioManager.Instance.PlayOneShot(FMODManager.Instance.NavigationError);
+			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
 			return;
 		}
 		if (GameManager.Instance.Baits[baitIndex].BaitPrice * sellQuantity > GameManager.Instance.Money) {
-			AudioManager.Instance.PlayOneShot(FMODManager.Instance.NavigationError);
+			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
 			return;
 		}
 		GameManager.Instance.Money -= GameManager.Instance.Baits[baitIndex].BaitPrice * sellQuantity;

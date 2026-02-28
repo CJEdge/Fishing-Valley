@@ -18,6 +18,7 @@ public class AudioManager : Singleton<AudioManager>
 	public EventInstance CurrentReelInstance;
 	public EventInstance BaitEventInstance;
 	public EventInstance UnspoolEventInstance;
+	public EventInstance FliesEventInstance;
 
 	[field:SerializeField]
 	public StudioEventEmitter FishActivityLevelInstance { get; set;	}
@@ -60,13 +61,24 @@ public class AudioManager : Singleton<AudioManager>
 		}
 	}
 
-	public void PlayUnspoolSound(bool play, int speed) {
+	public void PlayUnspoolSound(bool play, float pitch) {
 		if (play) {
 			this.UnspoolEventInstance = CreateSFXInstance(FMODManager.Instance.Unspool);
+			this.UnspoolEventInstance.setParameterByName("Pitch", pitch);
 			this.UnspoolEventInstance.start();
 		} else {
 			this.UnspoolEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 			this.UnspoolEventInstance.release();
+		}
+	}
+
+	public void PlayFliesSound(bool play) {
+		if (play) {
+			this.FliesEventInstance = CreateSFXInstance(FMODManager.Instance.FliesWarning);
+			this.FliesEventInstance.start();
+		} else {
+			this.FliesEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+			this.FliesEventInstance.release();
 		}
 	}
 
