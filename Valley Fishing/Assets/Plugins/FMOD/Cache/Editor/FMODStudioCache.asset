@@ -360,6 +360,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-8318890505510890245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BaitShopButton/ControlSceme
+  m_EditorClassIdentifier: 
+  Name: ControlSceme
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-8157546172207423934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1394,6 +1418,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6474755646698491282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Seagull/Duck
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Seagull/Duck
+  Guid:
+    Data1: -1832721167
+    Data2: 1118083288
+    Data3: 918996358
+    Data4: -1012808492
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6455731049919985426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1418,6 +1469,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-6414418147839695262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceLines/Shop Scene/Shore/ShopButtons/BaitShopButton
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceLines/Shop Scene/Shore/ShopButtons/BaitShopButton
+  Guid:
+    Data1: 1706060077
+    Data2: 1127479823
+    Data3: 1340699794
+    Data4: -532687059
+  Banks:
+  - {fileID: -5674214797675166295}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -8318890505510890245}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6371592914164736750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1641,10 +1720,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/VoiceLines.bank
   Name: VoiceLines
   StudioPath: bank:/VoiceLines
-  lastModified: 639056565877391323
+  lastModified: 639061721941803205
   FileSizes:
   - Name: Desktop
-    Value: 5978464
+    Value: 5992000
   Exists: 1
 --- !u!114 &-5639815281841851900
 MonoBehaviour:
@@ -2146,6 +2225,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-3819775922727860118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Seagull/SeagullMiss
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Seagull/SeagullMiss
+  Guid:
+    Data1: 999368361
+    Data2: 1223184575
+    Data3: -690521927
+    Data4: -276461464
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3792318546744390403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2602,6 +2708,33 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: 4860494601797695304}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3035294753414788374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Seagull/SeagullAttack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Seagull/SeagullAttack
+  Guid:
+    Data1: 709301830
+    Data2: 1289651429
+    Data3: 90536069
+    Data4: 2110932389
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -3999,13 +4132,45 @@ MonoBehaviour:
   - {fileID: -7242636325781042408}
   - {fileID: -7327723531966256427}
   - {fileID: -1583643400089694543}
+  - {fileID: -3035294753414788374}
+  - {fileID: 35304872576399441}
+  - {fileID: -3819775922727860118}
+  - {fileID: -6474755646698491282}
+  - {fileID: -6414418147839695262}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4198817137325428765}
   StringsBanks:
   - {fileID: 1411835401192698514}
-  cacheTime: 639056565877391323
+  cacheTime: 639061721941803205
   cacheVersion: 131624
+--- !u!114 &35304872576399441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Seagull/SeagullWarning
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Seagull/SeagullWarning
+  Guid:
+    Data1: 595644067
+    Data2: 1108216077
+    Data3: -730336597
+    Data4: -54611442
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &41380767982811075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4572,10 +4737,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639056565859949166
+  lastModified: 639061721929539215
   FileSizes:
   - Name: Desktop
-    Value: 8406
+    Value: 8668
   Exists: 1
 --- !u!114 &1443842087743583922
 MonoBehaviour:
@@ -6130,10 +6295,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639056565862110311
+  lastModified: 639061721935187980
   FileSizes:
   - Name: Desktop
-    Value: 878816
+    Value: 921536
   Exists: 1
 --- !u!114 &4126877669039242813
 MonoBehaviour:
@@ -6202,7 +6367,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639056565859912440
+  lastModified: 639061721929477203
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -7484,7 +7649,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639056565861000746
+  lastModified: 639061721931374620
   FileSizes:
   - Name: Desktop
     Value: 8566336

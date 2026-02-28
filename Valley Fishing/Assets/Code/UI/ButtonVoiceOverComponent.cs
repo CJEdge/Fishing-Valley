@@ -1,3 +1,4 @@
+using FMODUnity;
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -19,10 +20,16 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 
 	#endregion
 
+	#region Serialised Fields
 
-	#region Properties
+    [SerializeField] 
+	protected EventReference HoverButtonSoundEventReference;
 
-	public Action SelectAction { get; set; }
+    #endregion
+
+    #region Properties
+
+    public Action SelectAction { get; set; }
 	private Button ButtonReference { get; set; }
 	private Button Button {
 		get {
@@ -60,6 +67,10 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 	public virtual void DoHoverEffect() {
 		switch (buttonType) {
 			case ButtonType.None:
+				if(!HoverButtonSoundEventReference.IsNull)
+				{
+					AudioManager.Instance.PlayVoiceOver(HoverButtonSoundEventReference);
+				}
 				break;
 			case ButtonType.Play:
 				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.MenuPlay);
