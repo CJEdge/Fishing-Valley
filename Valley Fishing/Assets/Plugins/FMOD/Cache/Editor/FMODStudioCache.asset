@@ -28,6 +28,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8998512513248077563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Rod Sounds/ReelSound
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Rod Sounds/ReelSound
+  Guid:
+    Data1: 1721864051
+    Data2: 1315658186
+    Data3: -420499557
+    Data4: -533285298
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -6548022604766006217}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3779
 --- !u!114 &-8915131343997971693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,6 +160,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8799019913155886887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RodShopButton/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-8780243333115881633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,6 +572,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-7916245762101021206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/BaitSFX/Mussel
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/BaitSFX/Mussel
+  Guid:
+    Data1: 1812193420
+    Data2: 1175040479
+    Data3: 1880725685
+    Data4: -455227078
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1933
 --- !u!114 &-7886105362511000386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -632,6 +711,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7645307869213621391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/ShopSFX/ItemBuy
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/ShopSFX/ItemBuy
+  Guid:
+    Data1: 815617258
+    Data2: 1078289329
+    Data3: 959533475
+    Data4: 1866417758
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7631959851788757791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -741,33 +847,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 64052
---- !u!114 &-7380915710591648312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/BaitSFX/CricketBaitIdle
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/BaitSFX/CricketBaitIdle
-  Guid:
-    Data1: -306073775
-    Data2: 1283962052
-    Data3: -347803755
-    Data4: 818896552
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 500
 --- !u!114 &-7327723531966256427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -825,6 +904,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7262778131298741968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Flies/FliesDead
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Flies/FliesDead
+  Guid:
+    Data1: -1848672274
+    Data2: 1276233027
+    Data3: 1222757014
+    Data4: 1983304655
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7242636325781042408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -877,33 +983,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-7151027241018258095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LevelSFX/Splashes/StrafeSplash
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/LevelSFX/Splashes/StrafeSplash
-  Guid:
-    Data1: 78199899
-    Data2: 1158532160
-    Data3: 1302710919
-    Data4: -802973126
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 13949
 --- !u!114 &-7126709581823095874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -984,6 +1063,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6949461111551426085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Fish Catch
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Fish Catch
+  Guid:
+    Data1: -1537860913
+    Data2: 1132541236
+    Data3: -390000235
+    Data4: 469100929
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6949230059280724388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1056,33 +1162,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-6923229218904469711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/BaitSFX/Mussel
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/BaitSFX/Mussel
-  Guid:
-    Data1: 1812193420
-    Data2: 1175040479
-    Data3: 1880725685
-    Data4: -455227078
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1933
 --- !u!114 &-6858731039471466145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1211,33 +1290,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-6621674356098560280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/ShopSFX/MoneyEarnt
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/ShopSFX/MoneyEarnt
-  Guid:
-    Data1: 1982487354
-    Data2: 1173658775
-    Data3: 1445627044
-    Data4: -1294180087
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-6616063715642411015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1366,6 +1418,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6548022604766006217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ReelSound/ActivityLevel
+  m_EditorClassIdentifier: 
+  Name: ActivityLevel
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 3569198777
+    data2: 789260755
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-6490644422342869916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1391,6 +1467,33 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: -6933448587538770738}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6489527960462970897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Flies/FliesAttack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Flies/FliesAttack
+  Guid:
+    Data1: -1322636004
+    Data2: 1178726990
+    Data3: -2089260127
+    Data4: 575393874
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -1574,6 +1677,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-5830667529672220941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Unspool/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1310734593
+    data2: 3558953973
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-5701980223413556219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1641,10 +1768,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/VoiceLines.bank
   Name: VoiceLines
   StudioPath: bank:/VoiceLines
-  lastModified: 639081675346602976
+  lastModified: 639086182575596022
   FileSizes:
   - Name: Desktop
-    Value: 7433472
+    Value: 7490080
   Exists: 1
 --- !u!114 &-5639815281841851900
 MonoBehaviour:
@@ -1726,6 +1853,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5574456839221313700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/BaitSFX/LeechBaitIdle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/BaitSFX/LeechBaitIdle
+  Guid:
+    Data1: -2134130286
+    Data2: 1214591248
+    Data3: 585164988
+    Data4: -178165460
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4022
 --- !u!114 &-5479275639608182610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1942,30 +2096,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-4205445540292124326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/ReelSound/ActivityLevel
-  m_EditorClassIdentifier: 
-  Name: ActivityLevel
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 3569198777
-    data2: 789260755
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-4178213101232652249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2070,34 +2200,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-3984256246763343649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LevelSFX/Rod Sounds/ReelSound
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/LevelSFX/Rod Sounds/ReelSound
-  Guid:
-    Data1: 1721864051
-    Data2: 1315658186
-    Data3: -420499557
-    Data4: -533285298
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -4205445540292124326}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 3779
 --- !u!114 &-3977777538520641592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2194,34 +2296,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-3589326510362196629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LevelSFX/Rod Sounds/Unspool
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/LevelSFX/Rod Sounds/Unspool
-  Guid:
-    Data1: 2066811122
-    Data2: 1314893420
-    Data3: -1916274767
-    Data4: -1599929813
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 156352336944398545}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 441
 --- !u!114 &-3577152716465983911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2450,6 +2524,60 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-3255046765604401564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Seagull/SeagullWarning
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Seagull/SeagullWarning
+  Guid:
+    Data1: 595644067
+    Data2: 1108216077
+    Data3: -730336597
+    Data4: -54611442
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3200733995889427179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/ShopSFX/MoneyEarnt
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/ShopSFX/MoneyEarnt
+  Guid:
+    Data1: 1982487354
+    Data2: 1173658775
+    Data3: 1445627044
+    Data4: -1294180087
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3189806569430415426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2627,6 +2755,34 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: 4860494601797695304}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2988494040472376724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceLines/Shop Scene/Shore/ShopButtons/RodShopButton
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceLines/Shop Scene/Shore/ShopButtons/RodShopButton
+  Guid:
+    Data1: 822187394
+    Data2: 1086794127
+    Data3: 1247003303
+    Data4: -1552696045
+  Banks:
+  - {fileID: -5674214797675166295}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -8799019913155886887}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -3142,6 +3298,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-1608075411920032784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceLines/Shop Scene/Shore/ShopButtons/BaitShopButton
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceLines/Shop Scene/Shore/ShopButtons/BaitShopButton
+  Guid:
+    Data1: 1706060077
+    Data2: 1127479823
+    Data3: 1340699794
+    Data4: -532687059
+  Banks:
+  - {fileID: -5674214797675166295}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 288263730680830749}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1583643400089694543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3251,33 +3435,6 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: 641722642073670184}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-1472736283513982597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LevelSFX/Seagull/Duck
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/LevelSFX/Seagull/Duck
-  Guid:
-    Data1: -1832721167
-    Data2: 1118083288
-    Data3: 918996358
-    Data4: -1012808492
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -3413,33 +3570,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-1205996898118213840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LevelSFX/Seagull/SeagullMiss
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/LevelSFX/Seagull/SeagullMiss
-  Guid:
-    Data1: 999368361
-    Data2: 1223184575
-    Data3: -690521927
-    Data4: -276461464
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-1142919738998197258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3465,6 +3595,33 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: 992992293116388750}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1072858610050055122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Seagull/SeagullMiss
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Seagull/SeagullMiss
+  Guid:
+    Data1: 999368361
+    Data2: 1223184575
+    Data3: -690521927
+    Data4: -276461464
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -3776,7 +3933,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-393171509978276966
+--- !u!114 &-386998325201104337
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3786,14 +3943,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LevelSFX/Splashes/RodLandSplash
+  m_Name: event:/SFX/UI/NavigationError
   m_EditorClassIdentifier: 
-  Path: event:/SFX/LevelSFX/Splashes/RodLandSplash
+  Path: event:/SFX/UI/NavigationError
   Guid:
-    Data1: 1165659761
-    Data2: 1205779008
-    Data3: -640880454
-    Data4: -1017645718
+    Data1: -2021822312
+    Data2: 1191596676
+    Data3: 2125792927
+    Data4: 1366034535
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1203
+--- !u!114 &-227766865754671914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Rod Sounds/ThrowRod
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Rod Sounds/ThrowRod
+  Guid:
+    Data1: 1108943515
+    Data2: 1297155993
+    Data3: 553058722
+    Data4: -1595256626
   Banks:
   - {fileID: 4044576557258915901}
   IsStream: 0
@@ -3901,22 +4085,6 @@ MonoBehaviour:
   - {fileID: 3705013935100039757}
   - {fileID: -7381282543242050014}
   - {fileID: 5885185364263506504}
-  - {fileID: 3998543746356007611}
-  - {fileID: 3288644416124559600}
-  - {fileID: -6621674356098560280}
-  - {fileID: -7380915710591648312}
-  - {fileID: -7151027241018258095}
-  - {fileID: -393171509978276966}
-  - {fileID: -3984256246763343649}
-  - {fileID: -6923229218904469711}
-  - {fileID: 8533266585146180633}
-  - {fileID: 722838868881661896}
-  - {fileID: 3750646667868464174}
-  - {fileID: 210735143966534208}
-  - {fileID: 1765186367294887998}
-  - {fileID: 2049153416611601644}
-  - {fileID: -3589326510362196629}
-  - {fileID: 5746587238490164008}
   - {fileID: -7631959851788757791}
   - {fileID: -668200372296432626}
   - {fileID: -3577152716465983911}
@@ -4048,23 +4216,43 @@ MonoBehaviour:
   - {fileID: -7242636325781042408}
   - {fileID: -7327723531966256427}
   - {fileID: -1583643400089694543}
-  - {fileID: 1964344869953382586}
-  - {fileID: -1472736283513982597}
-  - {fileID: -1205996898118213840}
-  - {fileID: 7333474757277820640}
-  - {fileID: 2371743055081917019}
-  - {fileID: 6249032038967598274}
   - {fileID: 4229632158575620577}
-  - {fileID: 6778013221596843756}
-  - {fileID: 3355624438712499183}
-  - {fileID: 2904734129327376047}
-  - {fileID: 6230098890829791348}
+  - {fileID: 3013189611773945890}
+  - {fileID: -6489527960462970897}
+  - {fileID: 6100047106411518527}
+  - {fileID: -3200733995889427179}
+  - {fileID: 5278192246955809246}
+  - {fileID: 6505136064167030099}
+  - {fileID: 9153302969048438895}
+  - {fileID: 4198117044730330808}
+  - {fileID: 7217007831745603776}
+  - {fileID: 8384652340261471775}
+  - {fileID: -8998512513248077563}
+  - {fileID: -7916245762101021206}
+  - {fileID: -5574456839221313700}
+  - {fileID: -386998325201104337}
+  - {fileID: 915676574969170598}
+  - {fileID: -227766865754671914}
+  - {fileID: -3255046765604401564}
+  - {fileID: -1072858610050055122}
+  - {fileID: -6949461111551426085}
+  - {fileID: 3139046753313724822}
+  - {fileID: 8860636727814168604}
+  - {fileID: -7645307869213621391}
+  - {fileID: -7262778131298741968}
+  - {fileID: 4068566075093667232}
+  - {fileID: 8964327599263844092}
+  - {fileID: 8376574521983218414}
+  - {fileID: -1608075411920032784}
+  - {fileID: 1181330352622375661}
+  - {fileID: -2988494040472376724}
+  - {fileID: 6968665108300989794}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4198817137325428765}
   StringsBanks:
   - {fileID: 1411835401192698514}
-  cacheTime: 639085799984191350
+  cacheTime: 639086182575596022
   cacheVersion: 131624
 --- !u!114 &41380767982811075
 MonoBehaviour:
@@ -4174,30 +4362,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &156352336944398545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Unspool/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 1310734593
-    data2: 3558953973
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &202797313524603999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4222,33 +4386,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &210735143966534208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LevelSFX/Fish Catch
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/LevelSFX/Fish Catch
-  Guid:
-    Data1: -1537860913
-    Data2: 1132541236
-    Data3: -390000235
-    Data4: 469100929
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &236983514275478515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4260,6 +4397,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Perches/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &288263730680830749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BaitShopButton/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -4377,34 +4538,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &722838868881661896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LevelSFX/Splashes/ActivitySplash
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/LevelSFX/Splashes/ActivitySplash
-  Guid:
-    Data1: -202002278
-    Data2: 1292392546
-    Data3: -413234560
-    Data4: -1417980924
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 5523852968597833240}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 96809
 --- !u!114 &729112097252001460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4509,6 +4642,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &915676574969170598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Splashes/ActivitySplash
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Splashes/ActivitySplash
+  Guid:
+    Data1: -202002278
+    Data2: 1292392546
+    Data3: -413234560
+    Data4: -1417980924
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 7052449708748585562}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 140809
 --- !u!114 &983913550138882639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4613,6 +4774,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1181330352622375661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceLines/Shop Scene/Shore/ShopButtons/IcthyologistsButton
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceLines/Shop Scene/Shore/ShopButtons/IcthyologistsButton
+  Guid:
+    Data1: -1166943654
+    Data2: 1283699172
+    Data3: -1804202604
+    Data4: -1192516336
+  Banks:
+  - {fileID: -5674214797675166295}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 5808769603391775848}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &1261581905799633057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4656,10 +4845,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639081675498803578
+  lastModified: 639086182565598071
   FileSizes:
   - Name: Desktop
-    Value: 8892
+    Value: 9124
   Exists: 1
 --- !u!114 &1443842087743583922
 MonoBehaviour:
@@ -4977,33 +5166,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &1765186367294887998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/ShopSFX/ShopEnter
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/ShopSFX/ShopEnter
-  Guid:
-    Data1: -620656940
-    Data2: 1243797251
-    Data3: -2119039865
-    Data4: -214391883
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &1917597685375347095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5056,33 +5218,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &1964344869953382586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LevelSFX/Seagull/SeagullAttack
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/LevelSFX/Seagull/SeagullAttack
-  Guid:
-    Data1: 709301830
-    Data2: 1289651429
-    Data3: 90536069
-    Data4: 2110932389
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &1992443961646256457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5136,33 +5271,6 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: 1719950765563407095}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &2049153416611601644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/ShopSFX/ItemBuy
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/ShopSFX/ItemBuy
-  Guid:
-    Data1: 815617258
-    Data2: 1078289329
-    Data3: 959533475
-    Data4: 1866417758
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -5318,33 +5426,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &2371743055081917019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/UI/NavigationError
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/UI/NavigationError
-  Guid:
-    Data1: -2021822312
-    Data2: 1191596676
-    Data3: 2125792927
-    Data4: 1366034535
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1203
 --- !u!114 &2497333839763162237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5526,33 +5607,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &2904734129327376047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LevelSFX/Flies/FliesIdle
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/LevelSFX/Flies/FliesIdle
-  Guid:
-    Data1: 1819487815
-    Data2: 1105552908
-    Data3: 1056258203
-    Data4: 2089940217
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1973
 --- !u!114 &2962270107877859721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5625,6 +5679,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &3013189611773945890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/BaitSFX/BaitBoxOpen
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/BaitSFX/BaitBoxOpen
+  Guid:
+    Data1: 444266264
+    Data2: 1298998279
+    Data3: -1468737864
+    Data4: -939201927
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3045237082449288414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5757,6 +5838,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &3139046753313724822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/ShopSFX/ShopEnter
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/ShopSFX/ShopEnter
+  Guid:
+    Data1: -620656940
+    Data2: 1243797251
+    Data3: -2119039865
+    Data4: -214391883
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3147908619199351617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5782,33 +5890,6 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: -5364753196825538187}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &3288644416124559600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/BaitSFX/AttatchBait
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/BaitSFX/AttatchBait
-  Guid:
-    Data1: -1561571289
-    Data2: 1177583210
-    Data3: -336593267
-    Data4: 1816793257
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -5889,33 +5970,6 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: 3411298057827991189}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &3355624438712499183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LevelSFX/Flies/FliesAttack
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/LevelSFX/Flies/FliesAttack
-  Guid:
-    Data1: -1322636004
-    Data2: 1178726990
-    Data3: -2089260127
-    Data4: 575393874
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -6043,33 +6097,6 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: 2642114782978721442}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &3750646667868464174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LevelSFX/Rod Sounds/ThrowRod
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/LevelSFX/Rod Sounds/ThrowRod
-  Guid:
-    Data1: 1108943515
-    Data2: 1297155993
-    Data3: 553058722
-    Data4: -1595256626
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -6229,33 +6256,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &3998543746356007611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/BaitSFX/BaitBoxOpen
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/BaitSFX/BaitBoxOpen
-  Guid:
-    Data1: 444266264
-    Data2: 1298998279
-    Data3: -1468737864
-    Data4: -939201927
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &3999866112176554210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6295,11 +6295,38 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639085799984191350
+  lastModified: 639086182570012731
   FileSizes:
   - Name: Desktop
     Value: 1991744
   Exists: 1
+--- !u!114 &4068566075093667232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Seagull/Duck
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Seagull/Duck
+  Guid:
+    Data1: -1832721167
+    Data2: 1118083288
+    Data3: 918996358
+    Data4: -1012808492
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4126877669039242813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6352,6 +6379,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &4198117044730330808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Splashes/StrafeSplash
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Splashes/StrafeSplash
+  Guid:
+    Data1: 78199899
+    Data2: 1158532160
+    Data3: 1302710919
+    Data4: -802973126
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 13949
 --- !u!114 &4198817137325428765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6367,7 +6421,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639081675498763694
+  lastModified: 639086182565558260
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -6784,6 +6838,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &5278192246955809246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Seagull/SeagullAttack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Seagull/SeagullAttack
+  Guid:
+    Data1: 709301830
+    Data2: 1289651429
+    Data3: 90536069
+    Data4: 2110932389
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &5366198028029798985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6804,30 +6885,6 @@ MonoBehaviour:
   ID:
     data1: 4086690009
     data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &5523852968597833240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/ActivitySplash/ActivityLevel
-  m_EditorClassIdentifier: 
-  Name: ActivityLevel
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 3569198777
-    data2: 789260755
   Type: 1
   IsGlobal: 0
   Labels: []
@@ -6856,7 +6913,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &5746587238490164008
+--- !u!114 &5808769603391775848
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6865,24 +6922,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/BaitSFX/WormBaitIdle
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/IcthyologistsButton/ControlScheme
   m_EditorClassIdentifier: 
-  Path: event:/SFX/BaitSFX/WormBaitIdle
-  Guid:
-    Data1: -1751036424
-    Data2: 1219677751
-    Data3: -754223217
-    Data4: -75916562
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 3004
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &5815876402542751641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6986,6 +7040,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &6100047106411518527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/BaitSFX/AttatchBait
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/BaitSFX/AttatchBait
+  Guid:
+    Data1: -1561571289
+    Data2: 1177583210
+    Data3: -336593267
+    Data4: 1816793257
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6156875451364433537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7062,60 +7143,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &6230098890829791348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LevelSFX/Flies/FliesDead
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/LevelSFX/Flies/FliesDead
-  Guid:
-    Data1: -1848672274
-    Data2: 1276233027
-    Data3: 1222757014
-    Data4: 1983304655
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &6249032038967598274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/UI/ClickError
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/UI/ClickError
-  Guid:
-    Data1: 945747673
-    Data2: 1159966070
-    Data3: -645524591
-    Data4: 164685518
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2328
 --- !u!114 &6295824028832555979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7228,6 +7255,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &6505136064167030099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Flies/FliesIdle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Flies/FliesIdle
+  Guid:
+    Data1: 1819487815
+    Data2: 1105552908
+    Data3: 1056258203
+    Data4: 2089940217
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1973
 --- !u!114 &6588072420388940162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7276,33 +7330,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &6778013221596843756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LevelSFX/CorrectSFX
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/LevelSFX/CorrectSFX
-  Guid:
-    Data1: 1746112363
-    Data2: 1116740273
-    Data3: -565658736
-    Data4: 67525630
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &6789282477973437898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7327,6 +7354,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &6968665108300989794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceLines/Shop Scene/Shore/ShopButtons/InventorsLabButton
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceLines/Shop Scene/Shore/ShopButtons/InventorsLabButton
+  Guid:
+    Data1: -425155890
+    Data2: 1083093083
+    Data3: -1494457439
+    Data4: -1257097316
+  Banks:
+  - {fileID: -5674214797675166295}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 7374049203546006585}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7040159615893052037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7355,6 +7410,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &7052449708748585562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ActivitySplash/ActivityLevel
+  m_EditorClassIdentifier: 
+  Name: ActivityLevel
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 3569198777
+    data2: 789260755
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &7063252783171993076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7403,6 +7482,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &7217007831745603776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/CorrectSFX
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/CorrectSFX
+  Guid:
+    Data1: 1746112363
+    Data2: 1116740273
+    Data3: -565658736
+    Data4: 67525630
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7314883643993400809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7427,7 +7533,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &7333474757277820640
+--- !u!114 &7374049203546006585
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7436,24 +7542,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LevelSFX/Seagull/SeagullWarning
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/InventorsLabButton/ControlScheme
   m_EditorClassIdentifier: 
-  Path: event:/SFX/LevelSFX/Seagull/SeagullWarning
-  Guid:
-    Data1: 595644067
-    Data2: 1108216077
-    Data3: -730336597
-    Data4: -54611442
-  Banks:
-  - {fileID: 4044576557258915901}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &7466131690475219232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7790,7 +7893,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &8533266585146180633
+--- !u!114 &8376574521983218414
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7800,14 +7903,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/BaitSFX/LeechBaitIdle
+  m_Name: event:/SFX/BaitSFX/WormBaitIdle
   m_EditorClassIdentifier: 
-  Path: event:/SFX/BaitSFX/LeechBaitIdle
+  Path: event:/SFX/BaitSFX/WormBaitIdle
   Guid:
-    Data1: -2134130286
-    Data2: 1214591248
-    Data3: 585164988
-    Data4: -178165460
+    Data1: -1751036424
+    Data2: 1219677751
+    Data3: -754223217
+    Data4: -75916562
   Banks:
   - {fileID: 4044576557258915901}
   IsStream: 0
@@ -7816,7 +7919,34 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 4022
+  Length: 3004
+--- !u!114 &8384652340261471775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Splashes/RodLandSplash
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Splashes/RodLandSplash
+  Guid:
+    Data1: 1165659761
+    Data2: 1205779008
+    Data3: -640880454
+    Data4: -1017645718
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8693985198394545514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7845,6 +7975,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8860636727814168604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/ClickError
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/ClickError
+  Guid:
+    Data1: 945747673
+    Data2: 1159966070
+    Data3: -645524591
+    Data4: 164685518
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2328
 --- !u!114 &8883027966608856316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7925,6 +8082,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8964327599263844092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Rod Sounds/Unspool
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Rod Sounds/Unspool
+  Guid:
+    Data1: 2066811122
+    Data2: 1314893420
+    Data3: -1916274767
+    Data4: -1599929813
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -5830667529672220941}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 441
 --- !u!114 &9063023470105337383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8033,6 +8218,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &9153302969048438895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/BaitSFX/CricketBaitIdle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/BaitSFX/CricketBaitIdle
+  Guid:
+    Data1: -306073775
+    Data2: 1283962052
+    Data3: -347803755
+    Data4: 818896552
+  Banks:
+  - {fileID: 4044576557258915901}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
 --- !u!114 &9176679071901724185
 MonoBehaviour:
   m_ObjectHideFlags: 0

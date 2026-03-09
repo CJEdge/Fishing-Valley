@@ -13,7 +13,6 @@ public class ShopController : MonoBehaviour
 
 
 	#region Properties
-
 	[field: SerializeField] public Shore Shore { get; set; }
     [field: SerializeField] public BaitShop BaitShop { get; set; }
     [field: SerializeField] public RodShop RodShop { get; set; }

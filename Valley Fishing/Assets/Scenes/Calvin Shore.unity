@@ -378,7 +378,7 @@ MonoBehaviour:
       Data3: -193610308
       Data4: -1712786068
     Path: event:/Music/ShopScene
-  <Shore>k__BackingField: {fileID: 0}
+  <Shore>k__BackingField: {fileID: 1808427007}
   <BaitShop>k__BackingField: {fileID: 895185100}
   <RodShop>k__BackingField: {fileID: 1342948190}
   <Icthyologists>k__BackingField: {fileID: 202954210}
@@ -940,6 +940,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3868821135661395079, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
   m_PrefabInstance: {fileID: 4969248124069907425}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1808427007 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8664658853799117516, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
+  m_PrefabInstance: {fileID: 4969248124069907425}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea12935dd50182449c7289373f2a90b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1819454898
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,9 +1314,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3439270965734018076, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: <CaughtFish>k__BackingField.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3439270965734018076, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: '<CaughtFish>k__BackingField.Array.data[0]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3439270965734018076, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: '<CaughtFish>k__BackingField.Array.data[2]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3439270965734018076, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: '<CaughtFish>k__BackingField.Array.data[6]'
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7393596337781405747, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 9053393668482966408, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: SoldFish.Array.size
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1404,6 +1435,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8664658853799117516, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 1395612272}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1427,27 +1462,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 264999006398803547, guid: 96bb7a73fad534b4c9445d10669096a6, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 264999006398803547, guid: 96bb7a73fad534b4c9445d10669096a6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 264999006398803547, guid: 96bb7a73fad534b4c9445d10669096a6, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 264999006398803547, guid: 96bb7a73fad534b4c9445d10669096a6, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 264999006398803547, guid: 96bb7a73fad534b4c9445d10669096a6, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 264999006398803547, guid: 96bb7a73fad534b4c9445d10669096a6, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 264999006398803547, guid: 96bb7a73fad534b4c9445d10669096a6, type: 3}
       propertyPath: m_LocalPosition.x

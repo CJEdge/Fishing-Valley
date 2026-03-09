@@ -14,7 +14,6 @@ public class BaitShop : Shop {
 	[SerializeField] protected FishBoard fishBoard;
 	[SerializeField] protected BaitBoard baitBoard;
 	[SerializeField] protected EventSystem eventSystem;
-	[SerializeField] private float shopEnterTime;
 	[SerializeField] protected EventReference[] fishboardTutorials;
 	[SerializeField] protected EventReference[] baitboardTutorials;
 	[SerializeField] protected ButtonVoiceOverComponent fishBoardButton;

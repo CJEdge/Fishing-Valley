@@ -3,6 +3,7 @@ using FMODUnity;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Shore : MonoBehaviour
 {
@@ -65,21 +66,29 @@ public class Shore : MonoBehaviour
 
 	public void EnterBaitShop() {
         this.ShopController.Shore.gameObject.SetActive(false);
-        this.ShopController.BaitShop.EnterShop(true);
+		this.ShopController.BaitShop.gameObject.SetActive(true);
 	}
 
 	public void EnterRodShop()
 	{
         this.ShopController.Shore.gameObject.SetActive(false);
-    }
+		this.ShopController.RodShop.gameObject.SetActive(true);
+	}
     public void EnterIcthyologists()
     {
         this.ShopController.Shore.gameObject.SetActive(false);
+		this.ShopController.Icthyologists.gameObject.SetActive(true);
     }
     public void EneterInventorsLab()
     {
         this.ShopController.Shore.gameObject.SetActive(false);
-    }
+		this.ShopController.InventorsLab.gameObject.SetActive(true);
+
+	}
+
+	public void LeaveShore() {
+		SceneManager.LoadScene("04_GameScene");
+	}
 
     public void FinishedInShop(Shop shopType) {
 		if(shopType is BaitShop) {

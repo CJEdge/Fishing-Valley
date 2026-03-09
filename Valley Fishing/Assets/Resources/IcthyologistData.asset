@@ -1,0 +1,267 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b90022076bc67245abba3c7176793c9, type: 3}
+  m_Name: IcthyologistData
+  m_EditorClassIdentifier: 
+  IcthyologistFishDatas:
+  - ButtonHoverEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    ButtonSoldEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    FishInfoEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+  - ButtonHoverEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    ButtonSoldEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    FishInfoEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+  - ButtonHoverEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    ButtonSoldEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    FishInfoEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+  - ButtonHoverEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    ButtonSoldEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    FishInfoEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+  - ButtonHoverEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    ButtonSoldEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    FishInfoEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+  - ButtonHoverEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    ButtonSoldEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    FishInfoEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+  - ButtonHoverEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    ButtonSoldEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    FishInfoEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+  - ButtonHoverEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    ButtonSoldEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    FishInfoEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+  - ButtonHoverEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    ButtonSoldEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    FishInfoEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+  - ButtonHoverEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    ButtonSoldEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    FishInfoEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+  - ButtonHoverEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    ButtonSoldEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    FishInfoEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+  - ButtonHoverEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    ButtonSoldEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait
+    FishInfoEvent:
+      Guid:
+        Data1: -1561571289
+        Data2: 1177583210
+        Data3: -336593267
+        Data4: 1816793257
+      Path: event:/SFX/BaitSFX/AttatchBait

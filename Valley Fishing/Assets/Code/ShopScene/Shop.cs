@@ -1,21 +1,25 @@
 using FMOD.Studio;
 using FMODUnity;
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public abstract class Shop : MonoBehaviour
-{
+public abstract class Shop : MonoBehaviour {
 
 	#region Serialized Fields
 
 	[SerializeField] private float shopEnterTime;
 
-    #endregion
+	#endregion
 
 
-    #region Properties
-
-    public Coroutine RunEnterShop { get; set; }
+	#region Properties
+	[field:SerializeField] public GameObject InitialButton { get; set; }
+	public Coroutine RunEnterShop { get; set; }
+	public Action OnGreeting {get;set;}
+	public Action OnSaleMade { get; set; }
 
     #endregion
 
@@ -46,6 +50,7 @@ public abstract class Shop : MonoBehaviour
 
     public virtual IEnumerator EnterShop(bool enter)
     {
+		this.OnGreeting?.Invoke();
         if (enter)
         {
             AudioManager.Instance.PlayOneShot(FMODManager.Instance.ShopEnter);
