@@ -42,7 +42,7 @@ public class Icthyologists : Shop
 				buttonsToEnable[i] = true;
 			}
 		}
-		if (this.Initialized) {
+		if (!this.Initialized) {
 			for (int i = 0; i < InventoryManager.Instance.FishTypeCatchDatas.Count; i++) {
 				FishDataButton buttonInstance = Instantiate(fishButton, buttonParent);
 				buttonInstance.AssignData(InventoryManager.Instance.FishTypeCatchDatas[i].CaughtFishData);

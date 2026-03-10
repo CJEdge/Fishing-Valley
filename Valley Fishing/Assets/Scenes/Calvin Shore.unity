@@ -1072,6 +1072,17 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &1953143324 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7519358545105026550, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
+  m_PrefabInstance: {fileID: 3059253654963157545}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2668517356498677869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1329,6 +1340,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -145.39722
       objectReference: {fileID: 0}
+    - target: {fileID: 9120850309266698110, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
+      propertyPath: m_Navigation.m_SelectOnLeft
+      value: 
+      objectReference: {fileID: 1953143324}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1342,46 +1357,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 988541708520509280, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: fishDatas
-      value: 
-      objectReference: {fileID: 11400000, guid: 61aa947a85ef66a4a9549ce4ed873bb6, type: 2}
-    - target: {fileID: 988541708520509280, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: FishDatas.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 988541708520509280, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: CaughtFishDatas.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 988541708520509280, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: FishTypeCatchDatas.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 988541708520509280, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: CaughtFishDatas.Array.data[0].FishName
-      value: brown trout
-      objectReference: {fileID: 0}
-    - target: {fileID: 988541708520509280, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: CaughtFishDatas.Array.data[1].FishName
-      value: brown trout
-      objectReference: {fileID: 0}
-    - target: {fileID: 988541708520509280, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: CaughtFishDatas.Array.data[2].FishName
-      value: brown trout
-      objectReference: {fileID: 0}
-    - target: {fileID: 988541708520509280, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: CaughtFishDatas.Array.data[3].FishName
-      value: brown trout
-      objectReference: {fileID: 0}
-    - target: {fileID: 988541708520509280, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: CaughtFishDatas.Array.data[4].FishName
-      value: brown trout
-      objectReference: {fileID: 0}
-    - target: {fileID: 988541708520509280, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: CaughtFishDatas.Array.data[5].FishName
-      value: brown trout
-      objectReference: {fileID: 0}
     - target: {fileID: 2536111126999484089, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1422,29 +1397,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3439270965734018076, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: <CaughtFish>k__BackingField.Array.size
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3439270965734018076, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: '<CaughtFish>k__BackingField.Array.data[0]'
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3439270965734018076, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: '<CaughtFish>k__BackingField.Array.data[2]'
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3439270965734018076, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: '<CaughtFish>k__BackingField.Array.data[6]'
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7393596337781405747, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 9053393668482966408, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: SoldFish.Array.size
-      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1743,7 +1698,15 @@ PrefabInstance:
     - target: {fileID: 1527633463491599356, guid: 96bb7a73fad534b4c9445d10669096a6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1342948190}
+      objectReference: {fileID: 202954210}
+    - target: {fileID: 1527633463491599356, guid: 96bb7a73fad534b4c9445d10669096a6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LeaveShop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527633463491599356, guid: 96bb7a73fad534b4c9445d10669096a6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Icthyologists, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3210480388773624559, guid: 96bb7a73fad534b4c9445d10669096a6, type: 3}
       propertyPath: m_Name
       value: Icthyologists

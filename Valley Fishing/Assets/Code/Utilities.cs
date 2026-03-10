@@ -4,9 +4,9 @@ using UnityEngine.UI;
 
 public static class Utilities
 {
-	public static void DisableUnusedButtons(List<bool> data, List<Button> buttons) {
+	public static void DisableUnusedButtons(List<bool> correspondingEnableList, List<Button> buttons) {
 		for (int i = 0; i < buttons.Count; i++) {
-			if (data[i]) {
+			if (correspondingEnableList[i]) {
 				buttons[i].gameObject.SetActive(true);
 			} else {
 				buttons[i].gameObject.SetActive(false);
@@ -15,25 +15,33 @@ public static class Utilities
 	}
 
 	public static void LinkHorizontalButtons(List<Button> buttons, Button leaveShopButton) {
-		for (int i = 0; i < buttons.Count; i++) {
-			if (buttons[i].gameObject.activeSelf) {
+        List<Button> activeButtons = new List<Button>();
+        for (int i = 0; i < buttons.Count; i++)
+        {
+            if (buttons[i].gameObject.activeSelf)
+            {
+                activeButtons.Add(buttons[i]);
+            }
+        }
+        for (int i = 0; i < activeButtons.Count; i++) {
+			if (activeButtons[i].gameObject.activeSelf) {
 				Navigation navigation = new Navigation();
 				navigation.mode = Navigation.Mode.Explicit;
 				if (i != 0) {
-					navigation.selectOnLeft = buttons[i - 1];
+					navigation.selectOnLeft = activeButtons[i - 1];
 				}
-				if (i != buttons.Count - 1) {
-					navigation.selectOnRight = buttons[i + 1];
+				if (i != activeButtons.Count - 1) {
+					navigation.selectOnRight = activeButtons[i + 1];
 				} else {
 					navigation.selectOnRight = leaveShopButton;
 				}
-				buttons[i].navigation = navigation;
+				activeButtons[i].navigation = navigation;
 			}
 		}
-		if (leaveShopButton != null) {
+		if (leaveShopButton != null && activeButtons.Count > 0) {
 			Navigation leaveShopNavigation = new Navigation();
 			leaveShopNavigation.mode = Navigation.Mode.Explicit;
-			leaveShopNavigation.selectOnLeft = buttons[buttons.Count - 1];
+			leaveShopNavigation.selectOnLeft = activeButtons[activeButtons.Count - 1];
 			leaveShopButton.navigation = leaveShopNavigation;
 		}
 	}
@@ -58,7 +66,7 @@ public static class Utilities
 			}
 			activeButtons[i].navigation = navigation;
 		}
-		if (leaveShopButton != null) {
+		if (leaveShopButton != null && activeButtons.Count > 0) {
 			Navigation leaveShopNavigation = new Navigation();
 			leaveShopNavigation.selectOnUp = activeButtons[activeButtons.Count - 1];
 			leaveShopButton.navigation = leaveShopNavigation;

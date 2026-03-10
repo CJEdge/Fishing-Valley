@@ -77,7 +77,7 @@ MonoBehaviour:
   - {fileID: 5679352621735612818, guid: 8ad5d209cb18e9a43bb4b94d63fcc74f, type: 3}
   <EventSystem>k__BackingField: {fileID: 0}
   <CurrentBaits>k__BackingField: 0000000000000000000000000000000000000000000000000000000000000000
-  <CaughtFish>k__BackingField: 
+  <CaughtFish>k__BackingField: 010000000000000001000000000000000000000000000000010000000000000000000000
   <CurrentBait>k__BackingField: {fileID: 0}
   <Money>k__BackingField: 0
 --- !u!114 &1583213601024685545
@@ -948,6 +948,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e2e84c71fb4158409dfb016a4cd7160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fishDatas: {fileID: 11400000, guid: 61aa947a85ef66a4a9549ce4ed873bb6, type: 2}
+  FishTypeCatchDatas: []
 --- !u!114 &1265457929270212987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -972,3 +974,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 194d0b5a513fc8a4791ff50be79d4718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SoldFish: 000000000000000000000000

@@ -90,13 +90,30 @@ public class AudioManager : Singleton<AudioManager>
 		}
 		this.VoiceLineEventInstance = CreateSFXInstance(voiceLineReference);
 		this.LastVoiceLineEventReference = voiceLineReference;
-		if(Gamepad.current.layout == "XInputController" || Gamepad.current.layout == "XInputControllerWindows" || Gamepad.current.layout == "XboxGamepadMacOS" || Gamepad.current.layout == "XboxOneGamepadMacOSWireless" || Gamepad.current.layout == "XboxOneGamepadiOS") {
-			this.VoiceLineEventInstance.setParameterByName("ControlScheme", 0);
-		} else if (Gamepad.current.layout == "DualShock3GamepadHID" || Gamepad.current.layout == "DualShock4GamepadHID" || Gamepad.current.layout == "DualShock4GamepadiOS" || Gamepad.current.layout == "DualSenseGamepadHID" ) {
-			this.VoiceLineEventInstance.setParameterByName("ControlScheme", 1);
-		} else if (Gamepad.current.layout == "SwitchProControllerHID") {
-			this.VoiceLineEventInstance.setParameterByName("ControlScheme", 1);
+
+		if (Gamepad.current != null)
+		{
+			if (Gamepad.current.layout == "XInputController" || Gamepad.current.layout == "XInputControllerWindows" || Gamepad.current.layout == "XboxGamepadMacOS" || Gamepad.current.layout == "XboxOneGamepadMacOSWireless" || Gamepad.current.layout == "XboxOneGamepadiOS")
+			{
+				this.VoiceLineEventInstance.setParameterByName("ControlScheme", 0);
+			}
+			else if (Gamepad.current.layout == "DualShock3GamepadHID" || Gamepad.current.layout == "DualShock4GamepadHID" || Gamepad.current.layout == "DualShock4GamepadiOS" || Gamepad.current.layout == "DualSenseGamepadHID")
+			{
+				//this.VoiceLineEventInstance.setParameterByName("ControlScheme", 1);
+				//this doesnt work and makes the game break when using dualshock
+				this.VoiceLineEventInstance.setParameterByName("ControlScheme", 0);
+			}
+			else if (Gamepad.current.layout == "SwitchProControllerHID")
+			{
+				this.VoiceLineEventInstance.setParameterByName("ControlScheme", 1);
+			}
 		}
+		else
+		{
+			//default if no controller is detected
+            this.VoiceLineEventInstance.setParameterByName("ControlScheme", 0);
+        }
+
 		this.VoiceLineEventInstance.start();
 		this.VoiceLineInProgress = true;
 		this.OnVoiceLineStarted?.Invoke();
