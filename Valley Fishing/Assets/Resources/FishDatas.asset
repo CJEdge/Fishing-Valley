@@ -13,12 +13,363 @@ MonoBehaviour:
   m_Name: FishDatas
   m_EditorClassIdentifier: 
   Datas:
-  - image: {fileID: 0}
-    FishName: Brown Trout
+  - FishName: Brown Trout
+    Sprite: {fileID: 21300000, guid: dbdd19b0b14af9b448e945aee0ef1319, type: 3}
     SellPrice: 1
-  - image: {fileID: 0}
-    FishName: bfdausjdmas
-    SellPrice: 0
-  - image: {fileID: 0}
-    FishName: saddasdas
-    SellPrice: 0
+    IsFailable: 0
+    ReelInSpeed: 2
+    SwimAwaySpeed: 100
+    StrafedSwimAwaySpeed: 30
+    ActivityLevels: 03000000
+    movementDirections: 00000000
+    fishNameAudio:
+      Guid:
+        Data1: 689430516
+        Data2: 1180275496
+        Data3: -748291173
+        Data4: 816933496
+      Path: event:/VoiceLines/Misc/Captain/Fish Names/BrownTrouts
+    fishCatchAudio:
+      Guid:
+        Data1: 939592733
+        Data2: 1121045764
+        Data3: -1960769622
+        Data4: 191476268
+      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/0_BrownTrout
+    icthyologistInfoAudio:
+      Guid:
+        Data1: 689494142
+        Data2: 1230382014
+        Data3: 675815579
+        Data4: -1486664141
+      Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/BrownTroutInfo
+  - FishName: Common Carp
+    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
+    SellPrice: 1
+    IsFailable: 0
+    ReelInSpeed: 2
+    SwimAwaySpeed: 100
+    StrafedSwimAwaySpeed: 30
+    ActivityLevels: 01000000
+    movementDirections: 00000000
+    fishNameAudio:
+      Guid:
+        Data1: -1444365287
+        Data2: 1183918570
+        Data3: 183735209
+        Data4: 536203139
+      Path: event:/VoiceLines/Misc/Captain/Fish Names/CommonCarps
+    fishCatchAudio:
+      Guid:
+        Data1: -953698523
+        Data2: 1243577777
+        Data3: 1931285390
+        Data4: -315869571
+      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/1_CommonCarp
+    icthyologistInfoAudio:
+      Guid:
+        Data1: 106858057
+        Data2: 1114573127
+        Data3: -1984268899
+        Data4: -494359701
+      Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/CommonCarpInfo
+  - FishName: Stone Loach
+    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
+    SellPrice: 1
+    IsFailable: 0
+    ReelInSpeed: 2
+    SwimAwaySpeed: 100
+    StrafedSwimAwaySpeed: 30
+    ActivityLevels: 02000000
+    movementDirections: 00000000
+    fishNameAudio:
+      Guid:
+        Data1: -1864033762
+        Data2: 1272187679
+        Data3: 1601915028
+        Data4: 1137487123
+      Path: event:/VoiceLines/Misc/Captain/Fish Names/StoneLoaches
+    fishCatchAudio:
+      Guid:
+        Data1: -1519471312
+        Data2: 1103977819
+        Data3: 1588832440
+        Data4: -1687215191
+      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/2_StoneLoach
+    icthyologistInfoAudio:
+      Guid:
+        Data1: -2044789402
+        Data2: 1321984410
+        Data3: 1692203927
+        Data4: -333913488
+      Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/StoneLoach
+  - FishName: Eel
+    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
+    SellPrice: 5
+    IsFailable: 0
+    ReelInSpeed: 2
+    SwimAwaySpeed: 100
+    StrafedSwimAwaySpeed: 30
+    ActivityLevels: 03000000
+    movementDirections: 01000000
+    fishNameAudio:
+      Guid:
+        Data1: 1146006814
+        Data2: 1103422383
+        Data3: 2118669996
+        Data4: -500227148
+      Path: event:/VoiceLines/Misc/Captain/Fish Names/Eels
+    fishCatchAudio:
+      Guid:
+        Data1: -2007728146
+        Data2: 1341215824
+        Data3: -1582757745
+        Data4: -1955610266
+      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/7_Eel
+    icthyologistInfoAudio:
+      Guid:
+        Data1: 1889757249
+        Data2: 1247769562
+        Data3: 1789957793
+        Data4: 351625996
+      Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/EelInfo
+  - FishName: Pike
+    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
+    SellPrice: 5
+    IsFailable: 0
+    ReelInSpeed: 2
+    SwimAwaySpeed: 100
+    StrafedSwimAwaySpeed: 30
+    ActivityLevels: 01000000
+    movementDirections: 02000000
+    fishNameAudio:
+      Guid:
+        Data1: -259922885
+        Data2: 1249522367
+        Data3: 777684923
+        Data4: 1620817878
+      Path: event:/VoiceLines/Misc/Captain/Fish Names/Pikes
+    fishCatchAudio:
+      Guid:
+        Data1: 406005264
+        Data2: 1174642325
+        Data3: 312116871
+        Data4: 1998295607
+      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/8_Pike
+    icthyologistInfoAudio:
+      Guid:
+        Data1: 763025475
+        Data2: 1205276804
+        Data3: 725785259
+        Data4: 1869763058
+      Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/PikeInfo
+  - FishName: Bream
+    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
+    SellPrice: 5
+    IsFailable: 0
+    ReelInSpeed: 2
+    SwimAwaySpeed: 100
+    StrafedSwimAwaySpeed: 30
+    ActivityLevels: 01000000
+    movementDirections: 02000000
+    fishNameAudio:
+      Guid:
+        Data1: -1035222830
+        Data2: 1216350848
+        Data3: 54859155
+        Data4: -819554457
+      Path: event:/VoiceLines/Misc/Captain/Fish Names/Breams
+    fishCatchAudio:
+      Guid:
+        Data1: 90150426
+        Data2: 1283453499
+        Data3: 1560377743
+        Data4: 218248328
+      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/6_Bream
+    icthyologistInfoAudio:
+      Guid:
+        Data1: 158588274
+        Data2: 1183201260
+        Data3: 1540267195
+        Data4: 2029425335
+      Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/BreamInfo
+  - FishName: Chub
+    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
+    SellPrice: 4
+    IsFailable: 0
+    ReelInSpeed: 2
+    SwimAwaySpeed: 100
+    StrafedSwimAwaySpeed: 30
+    ActivityLevels: 0300000002000000
+    movementDirections: 02000000
+    fishNameAudio:
+      Guid:
+        Data1: -1747735741
+        Data2: 1138281000
+        Data3: -1962287998
+        Data4: 680678659
+      Path: event:/VoiceLines/Misc/Captain/Fish Names/Chubs
+    fishCatchAudio:
+      Guid:
+        Data1: 44057314
+        Data2: 1167346606
+        Data3: 1237556103
+        Data4: 160694482
+      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/5_Chub
+    icthyologistInfoAudio:
+      Guid:
+        Data1: 427353103
+        Data2: 1252153494
+        Data3: 1558448516
+        Data4: 1511501718
+      Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/ChubInfo
+  - FishName: Perch
+    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
+    SellPrice: 4
+    IsFailable: 0
+    ReelInSpeed: 2
+    SwimAwaySpeed: 100
+    StrafedSwimAwaySpeed: 30
+    ActivityLevels: 0100000003000000
+    movementDirections: 02000000
+    fishNameAudio:
+      Guid:
+        Data1: 1257171957
+        Data2: 1257535922
+        Data3: 59105195
+        Data4: -970968916
+      Path: event:/VoiceLines/Misc/Captain/Fish Names/Perches
+    fishCatchAudio:
+      Guid:
+        Data1: 1171559235
+        Data2: 1250734834
+        Data3: 808673208
+        Data4: -1169748129
+      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/4_Perch
+    icthyologistInfoAudio:
+      Guid:
+        Data1: 1951225689
+        Data2: 1079492379
+        Data3: -535703114
+        Data4: -1088123410
+      Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/PerchInfo
+  - FishName: Bullhead
+    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
+    SellPrice: 3
+    IsFailable: 0
+    ReelInSpeed: 2
+    SwimAwaySpeed: 100
+    StrafedSwimAwaySpeed: 30
+    ActivityLevels: 01000000
+    movementDirections: 0100000002000000
+    fishNameAudio:
+      Guid:
+        Data1: -1743984045
+        Data2: 1241039516
+        Data3: -1097936752
+        Data4: 640936890
+      Path: event:/VoiceLines/Misc/Captain/Fish Names/BullHeads
+    fishCatchAudio:
+      Guid:
+        Data1: 2124544235
+        Data2: 1327424622
+        Data3: 1035377560
+        Data4: 1234288205
+      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/9_Bullhead
+    icthyologistInfoAudio:
+      Guid:
+        Data1: 1950973070
+        Data2: 1193029891
+        Data3: 1632587696
+        Data4: -2110957817
+      Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/BullheadInfo
+  - FishName: Gudgeon
+    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
+    SellPrice: 3
+    IsFailable: 0
+    ReelInSpeed: 2
+    SwimAwaySpeed: 100
+    StrafedSwimAwaySpeed: 30
+    ActivityLevels: 02000000
+    movementDirections: 0200000001000000
+    fishNameAudio:
+      Guid:
+        Data1: -872550873
+        Data2: 1085466938
+        Data3: -2023241557
+        Data4: 1260402147
+      Path: event:/VoiceLines/Misc/Captain/Fish Names/Gudgeons
+    fishCatchAudio:
+      Guid:
+        Data1: 1911184092
+        Data2: 1167506252
+        Data3: -777308996
+        Data4: 684075747
+      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/10_Gudgeon
+    icthyologistInfoAudio:
+      Guid:
+        Data1: -574446071
+        Data2: 1083987053
+        Data3: -2137742717
+        Data4: 1058223944
+      Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/GudgeonInfo
+  - FishName: Roach
+    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
+    SellPrice: 3
+    IsFailable: 0
+    ReelInSpeed: 2
+    SwimAwaySpeed: 100
+    StrafedSwimAwaySpeed: 30
+    ActivityLevels: 03000000
+    movementDirections: 0200000002000000
+    fishNameAudio:
+      Guid:
+        Data1: 251110404
+        Data2: 1242563578
+        Data3: 1913501118
+        Data4: 63233210
+      Path: event:/VoiceLines/Misc/Captain/Fish Names/Roaches
+    fishCatchAudio:
+      Guid:
+        Data1: 1745003492
+        Data2: 1099190449
+        Data3: -482752625
+        Data4: -875758776
+      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/11_ Roach
+    icthyologistInfoAudio:
+      Guid:
+        Data1: -404707155
+        Data2: 1313917055
+        Data3: -1023547757
+        Data4: -899727657
+      Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/RoachInfo
+  - FishName: LlymLlymSalmon
+    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
+    SellPrice: 3
+    IsFailable: 0
+    ReelInSpeed: 2
+    SwimAwaySpeed: 100
+    StrafedSwimAwaySpeed: 30
+    ActivityLevels: 0200000001000000030000000100000002000000
+    movementDirections: 02000000020000000100000002000000
+    fishNameAudio:
+      Guid:
+        Data1: -449038532
+        Data2: 1280758308
+        Data3: -1433694552
+        Data4: -474234592
+      Path: event:/VoiceLines/Level Scene/Caught Fish/Boss 0/0 Llyn Llyn Salmon
+    fishCatchAudio:
+      Guid:
+        Data1: -449038532
+        Data2: 1280758308
+        Data3: -1433694552
+        Data4: -474234592
+      Path: event:/VoiceLines/Level Scene/Caught Fish/Boss 0/0 Llyn Llyn Salmon
+    icthyologistInfoAudio:
+      Guid:
+        Data1: -361082242
+        Data2: 1103967652
+        Data3: 1512354955
+        Data4: -1186297269
+      Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/LLymLlymSalmonInfo

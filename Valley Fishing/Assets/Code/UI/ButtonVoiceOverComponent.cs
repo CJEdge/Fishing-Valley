@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISelectHandler, IMoveHandler 
+public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISelectHandler, IMoveHandler, ISubmitHandler 
 {
 	#region States
 
@@ -43,7 +43,6 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 	}
 
 	#endregion
-
 
 	public virtual void OnPointerEnter(PointerEventData eventData) {
 		GameManager.Instance.LastSelectedButton = gameObject;
@@ -114,5 +113,9 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 				AudioManager.Instance.PlayOneShot(FMODManager.Instance.NavigationError);
 			}
 		}
+	}
+
+	public virtual void OnSubmit(BaseEventData eventData) {
+
 	}
 }
