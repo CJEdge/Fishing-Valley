@@ -69,7 +69,7 @@ public class GameManager : Singleton<GameManager> {
 			this.CaughtFish.Add(0);
 		}
 		this.CaughtFish[index]++;
-	} 
+	}
 
 	#endregion
 
