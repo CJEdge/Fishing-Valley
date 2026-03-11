@@ -18,13 +18,13 @@ public class SecondTutorialVoiceOverController : VoiceOverController
 			case LevelController.State.ReelingFish:
 				this.CurrentFish.BecameCentered += BecameCentered;
 				if (this.ReelTutorialsCompleted[0] == false) {
-					this.CurrentFish.movementDirections.Clear(); ;
-					this.CurrentFish.movementDirections.Add(Fish.MovementDirection.left);
-					this.CurrentFish.CurrentActivityLevel = Fish.ActivityLevel.active;
+					this.CurrentFish.FishData.MovementDirections.Clear(); ;
+					this.CurrentFish.FishData.MovementDirections.Add(FishDatas.FishData.MovementDirection.left);
+					this.CurrentFish.CurrentActivityLevel = FishDatas.FishData.ActivityLevel.active;
 				} else if (this.ReelTutorialsCompleted[1] == false) {
-					this.CurrentFish.movementDirections.Clear(); ;
-					this.CurrentFish.movementDirections.Add(Fish.MovementDirection.right);
-					this.CurrentFish.CurrentActivityLevel = Fish.ActivityLevel.calm;
+					this.CurrentFish.FishData.MovementDirections.Clear(); ;
+					this.CurrentFish.FishData.MovementDirections.Add(FishDatas.FishData.MovementDirection.right);
+					this.CurrentFish.CurrentActivityLevel = FishDatas.FishData.ActivityLevel.calm;
 				} else if (this.ReelTutorialsCompleted[2] == false) {
 					PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
 					IncrementTutorial(this.ReelTutorialsCompleted);
@@ -50,7 +50,7 @@ public class SecondTutorialVoiceOverController : VoiceOverController
 		return true;
 	}
 
-	public override void FishStrafed(Fish.MovementDirection movementDirection) {
+	public override void FishStrafed(FishDatas.FishData.MovementDirection movementDirection) {
 		if (AllTutorialsCompleted(this.ReelTutorialsCompleted)) {
 			return;
 		}
@@ -60,11 +60,11 @@ public class SecondTutorialVoiceOverController : VoiceOverController
 
 	public override void FishSpawned() {
 		if (this.ReelTutorialsCompleted[0] == false) {
-			this.CurrentFish.ActivityLevels.Clear();
-			this.CurrentFish.ActivityLevels.Add(Fish.ActivityLevel.active);
+			this.CurrentFish.FishData.ActivityLevels.Clear();
+			this.CurrentFish.FishData.ActivityLevels.Add(FishDatas.FishData.ActivityLevel.active);
 		} else if (this.ReelTutorialsCompleted[1] == false) {
-			this.CurrentFish.ActivityLevels.Clear();
-			this.CurrentFish.ActivityLevels.Add(Fish.ActivityLevel.calm);
+			this.CurrentFish.FishData.ActivityLevels.Clear();
+			this.CurrentFish.FishData.ActivityLevels.Add(FishDatas.FishData.ActivityLevel.calm);
 		}
 	}
 

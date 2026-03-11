@@ -189,7 +189,7 @@ public class VoiceOverController : MonoBehaviour
 		}
 	}
 
-	public virtual void FishStrafed(Fish.MovementDirection movementDirection) {
+	public virtual void FishStrafed(FishDatas.FishData.MovementDirection movementDirection) {
 
 	}
 

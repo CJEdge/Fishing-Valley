@@ -46,7 +46,7 @@ public class ThirdTutorialVoiceOver : VoiceOverController
 		return true;
 	}
 
-	public override void FishStrafed(Fish.MovementDirection movementDirection) {
+	public override void FishStrafed(FishDatas.FishData.MovementDirection movementDirection) {
 		//if (AllTutorialsCompleted(this.ReelTutorialsCompleted)) {
 		//	return;
 		//}

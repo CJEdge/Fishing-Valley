@@ -83,7 +83,7 @@ public class LevelController : AbstractState<LevelController.State> {
 	private IEnumerator WaitForBite() {
 		yield return new WaitForSeconds(3); // TODO floating number??
 		SetState(State.ReelingFish);
-		GameManager.Instance.CurrentFish.Initialize();
+		GameManager.Instance.CurrentFish.Initialize(InventoryManager.Instance.FishTypeCatchDatas[0].CaughtFishData);
 	}
 
 	private void SpawnFish() {
@@ -100,7 +100,6 @@ public class LevelController : AbstractState<LevelController.State> {
 		Fish fishInstance = Instantiate(this.Fish[fishIndex], this.FishSpawnTransform.position, Quaternion.identity);
 		fishInstance.name = this.Fish[fishIndex].name;
 		fishInstance.transform.parent = gameplayContainer;
-		fishInstance.IsFailable = this.CurrentBait.Isfailable;
 		fishInstance.IsTutorial = this.CurrentBait.IsTutorial;
 		GameManager.Instance.CurrentFish = fishInstance;
 		this.OnFishSpawned?.Invoke();
