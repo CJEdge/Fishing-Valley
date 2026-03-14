@@ -129,13 +129,13 @@ public class FirstTutorialVoiceOver : VoiceOverController
 				if (AllTutorialsCompleted(this.CaughtFishTutorialsCompleted) || !GameManager.Instance.CurrentFish.IsTutorial) {
 					if (GameManager.Instance.TotalCaughtFish == 8) {
 						List<EventReference> voiceLines = new List<EventReference>();
-						voiceLines.Add(this.CurrentFish.CaughtVoiceLine);
+						voiceLines.Add(this.CurrentFish.FishData.fishCatchAudio);
 						voiceLines.Add(FMODManager.Instance.LeaveBoatPrompts[0]);
 						AudioManager.Instance.PlayVoiceOverChain(voiceLines);
 						this.LevelController.StateLocked = true;
 						break;
 					}
-					AudioManager.Instance.PlayVoiceOver(this.CurrentFish.CaughtVoiceLine);
+					AudioManager.Instance.PlayVoiceOver(this.CurrentFish.FishData.fishCatchAudio);
 					this.CurrentTutorialEventInstance = AudioManager.Instance.VoiceLineEventInstance;
 
 				} else {

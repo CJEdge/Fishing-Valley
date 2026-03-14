@@ -33,14 +33,14 @@ public class FourthTutorialVoiceOver : VoiceOverController
 			case LevelController.State.FishCaught:
 				if (GameManager.Instance.TotalBaitsLeft == 0) {
 					List<EventReference> voiceOverChain = new List<EventReference>();
-					voiceOverChain.Add(this.CurrentFish.CaughtVoiceLine);
+					voiceOverChain.Add(this.CurrentFish.FishData.fishCatchAudio);
 					voiceOverChain.Add(tutorialCatchVoices[0]);
 					AudioManager.Instance.PlayVoiceOverChain(voiceOverChain);
 				} else {
 					if (this.CurrentFish.IsTutorial) {
 						//AudioManager.Instance.PlayVoiceOver(this.CurrentFish.TutorialCaughtVoiceLine);
 					} else {
-						AudioManager.Instance.PlayVoiceOver(this.CurrentFish.CaughtVoiceLine);
+						AudioManager.Instance.PlayVoiceOver(this.CurrentFish.FishData.fishCatchAudio);
 					}
 				}
 				break;

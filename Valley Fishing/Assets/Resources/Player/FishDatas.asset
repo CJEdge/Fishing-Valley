@@ -21,7 +21,7 @@ MonoBehaviour:
     SwimAwaySpeed: 100
     StrafedSwimAwaySpeed: 30
     ActivityLevels: 03000000
-    movementDirections: 00000000
+    MovementDirections: 
     fishNameAudio:
       Guid:
         Data1: 689430516
@@ -51,7 +51,7 @@ MonoBehaviour:
     SwimAwaySpeed: 100
     StrafedSwimAwaySpeed: 30
     ActivityLevels: 01000000
-    movementDirections: 00000000
+    MovementDirections: 
     fishNameAudio:
       Guid:
         Data1: -1444365287
@@ -81,7 +81,7 @@ MonoBehaviour:
     SwimAwaySpeed: 100
     StrafedSwimAwaySpeed: 30
     ActivityLevels: 02000000
-    movementDirections: 00000000
+    MovementDirections: 
     fishNameAudio:
       Guid:
         Data1: -1864033762
@@ -111,7 +111,7 @@ MonoBehaviour:
     SwimAwaySpeed: 100
     StrafedSwimAwaySpeed: 30
     ActivityLevels: 03000000
-    movementDirections: 01000000
+    MovementDirections: 
     fishNameAudio:
       Guid:
         Data1: 1146006814
@@ -141,7 +141,7 @@ MonoBehaviour:
     SwimAwaySpeed: 100
     StrafedSwimAwaySpeed: 30
     ActivityLevels: 01000000
-    movementDirections: 02000000
+    MovementDirections: 
     fishNameAudio:
       Guid:
         Data1: -259922885
@@ -171,7 +171,7 @@ MonoBehaviour:
     SwimAwaySpeed: 100
     StrafedSwimAwaySpeed: 30
     ActivityLevels: 01000000
-    movementDirections: 02000000
+    MovementDirections: 
     fishNameAudio:
       Guid:
         Data1: -1035222830
@@ -201,7 +201,7 @@ MonoBehaviour:
     SwimAwaySpeed: 100
     StrafedSwimAwaySpeed: 30
     ActivityLevels: 0300000002000000
-    movementDirections: 02000000
+    MovementDirections: 
     fishNameAudio:
       Guid:
         Data1: -1747735741
@@ -231,7 +231,7 @@ MonoBehaviour:
     SwimAwaySpeed: 100
     StrafedSwimAwaySpeed: 30
     ActivityLevels: 0100000003000000
-    movementDirections: 02000000
+    MovementDirections: 
     fishNameAudio:
       Guid:
         Data1: 1257171957
@@ -261,7 +261,7 @@ MonoBehaviour:
     SwimAwaySpeed: 100
     StrafedSwimAwaySpeed: 30
     ActivityLevels: 01000000
-    movementDirections: 0100000002000000
+    MovementDirections: 
     fishNameAudio:
       Guid:
         Data1: -1743984045
@@ -291,7 +291,7 @@ MonoBehaviour:
     SwimAwaySpeed: 100
     StrafedSwimAwaySpeed: 30
     ActivityLevels: 02000000
-    movementDirections: 0200000001000000
+    MovementDirections: 
     fishNameAudio:
       Guid:
         Data1: -872550873
@@ -321,7 +321,7 @@ MonoBehaviour:
     SwimAwaySpeed: 100
     StrafedSwimAwaySpeed: 30
     ActivityLevels: 03000000
-    movementDirections: 0200000002000000
+    MovementDirections: 
     fishNameAudio:
       Guid:
         Data1: 251110404
@@ -351,7 +351,7 @@ MonoBehaviour:
     SwimAwaySpeed: 100
     StrafedSwimAwaySpeed: 30
     ActivityLevels: 0200000001000000030000000100000002000000
-    movementDirections: 02000000020000000100000002000000
+    MovementDirections: 
     fishNameAudio:
       Guid:
         Data1: -449038532
@@ -373,3 +373,4 @@ MonoBehaviour:
         Data3: 1512354955
         Data4: -1186297269
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/LLymLlymSalmonInfo
+  BaitDatas: {fileID: 0}

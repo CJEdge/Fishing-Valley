@@ -17,7 +17,6 @@ public class Fish : MonoBehaviour
 
 
 	#region Serialized Fields
-	[SerializeField] private FishDatas fishDatas;
 	[SerializeField] private float centreThreshold;
     [SerializeField] private Rigidbody rb;
 	[SerializeField] private GameObject visuals;
@@ -32,14 +31,13 @@ public class Fish : MonoBehaviour
 	[SerializeField] private Transform lineEnd;
 	[SerializeField] private float unspoolRate;
 
-    #endregion
+	#endregion
 
 
-    #region Properties
+	#region Properties
 
-    public FishDatas.FishData FishData { get; set; }
+	public FishDatas.FishData FishData;
 	public bool IsStrafer { get; set; }
-    public EventReference CaughtVoiceLine { get; set; }
     public int FishIndex { get; set; }
     private bool IsCentred { get; set; } = true;
 	private InputController InputController { get => GameManager.Instance.InputController; }
@@ -103,6 +101,8 @@ public class Fish : MonoBehaviour
 	#region Public Methods
 
 	public void Initialize(FishDatas.FishData fishData) {
+		this.FishData = fishData;
+		name = fishData.FishName;
 		float activityLevelInterval = (reelStart - reelEnd) / this.FishData.ActivityLevels.Count;
 		for (int i = 0; i < this.FishData.ActivityLevels.Count; i++) {
 			this.ActivityLevelIntervals.Add(reelStart - (i * activityLevelInterval));
@@ -123,7 +123,8 @@ public class Fish : MonoBehaviour
 
 	public void FishCaught() {
 		AudioManager.Instance.PlayUnspoolSound(false, 0);
-        GameManager.Instance.AssignNewCaughtFish(ArrayUtility.IndexOf(fishDatas.Datas, this.FishData));
+		Debug.Log(ArrayUtility.IndexOf(InventoryManager.Instance.FishDatas.Datas, this.FishData));
+        GameManager.Instance.AssignNewCaughtFish(ArrayUtility.IndexOf(InventoryManager.Instance.FishDatas.Datas, this.FishData));
 		GameManager.Instance.LevelController.SetState(LevelController.State.FishCaught);
 		AudioManager.Instance.PlayFishActivitySound(this, 0, true);
 		VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);

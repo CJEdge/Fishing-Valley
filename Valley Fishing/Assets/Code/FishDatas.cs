@@ -1,5 +1,8 @@
 using FMODUnity;
 using System.Collections.Generic;
+using System.IO;
+using System.Text;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -36,4 +39,26 @@ public class FishDatas : ScriptableObject {
 
 	public FishData[] Datas;
 
+    public void OnValidate()
+    {
+        List<string> fishNames = new List<string>();
+        for (int i = 0; i < Datas.Length; i++)
+        {
+            fishNames.Add(Datas[i].FishName.Replace(" ", ""));
+        }
+
+        StringBuilder sb = new StringBuilder();
+        sb.AppendLine("public enum FishName");
+        sb.AppendLine("{");
+
+        foreach (var name in fishNames)
+        {
+            sb.AppendLine($"    {name},");
+        }
+
+        sb.AppendLine("}");
+        File.WriteAllText("Assets/Code/FishNames.cs", sb.ToString());
+
+        AssetDatabase.Refresh();
+    }
 }

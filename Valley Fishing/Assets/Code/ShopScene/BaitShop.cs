@@ -87,8 +87,8 @@ public class BaitShop : Shop {
 		}
 		AudioManager.Instance.SkipVoiceOver();
 		for (int i = 0; i < GameManager.Instance.CaughtFish[fishIndex]; i++) {
-			GameManager.Instance.Money += GameManager.Instance.Fish[fishIndex].FishData.SellPrice;
-			this.FishSellPrice += GameManager.Instance.Fish[fishIndex].FishData.SellPrice;
+			GameManager.Instance.Money += InventoryManager.Instance.FishDatas.Datas[fishIndex].SellPrice;
+			this.FishSellPrice += InventoryManager.Instance.FishDatas.Datas[fishIndex].SellPrice;
 		}
 		if (GameManager.Instance.CaughtFish[fishIndex] > 0) {
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.MoneyEarnt);
@@ -113,9 +113,9 @@ public class BaitShop : Shop {
 				continue;
 			}
 			for (int j = GameManager.Instance.CaughtFish[i] - 1; j >= 0; j--) {
-				GameManager.Instance.Money += GameManager.Instance.Fish[i].FishData.SellPrice;
-				this.FishSellPrice += GameManager.Instance.Fish[i].FishData.SellPrice;
-				GameManager.Instance.CaughtFish[i]--;
+				GameManager.Instance.Money += InventoryManager.Instance.FishDatas.Datas[i].SellPrice;
+                this.FishSellPrice += InventoryManager.Instance.FishDatas.Datas[i].SellPrice;
+                GameManager.Instance.CaughtFish[i]--;
 			}
 		}
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.MoneyEarnt);

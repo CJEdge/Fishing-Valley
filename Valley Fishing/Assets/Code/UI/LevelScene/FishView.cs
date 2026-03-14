@@ -47,8 +47,8 @@ public class FishView : MonoBehaviour
 
 	public void EnableFishUI(bool enable) {
 		if (enable) {
-			for (int i = 0; i < GameManager.Instance.Fish.Count; i++) {
-				if (GameManager.Instance.Fish[i].FishData.FishName == GameManager.Instance.CurrentFish.FishData.FishName) {
+			for (int i = 0; i < InventoryManager.Instance.FishDatas.Datas.Length; i++) {
+				if (InventoryManager.Instance.FishDatas.Datas[i].FishName == GameManager.Instance.CurrentFish.FishData.FishName) {
 					fishUis[i].SetActive(enable);
 				}
 			}
@@ -58,7 +58,7 @@ public class FishView : MonoBehaviour
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.FishCatch);
 		}
 		else {
-			for (int i = 0; i < GameManager.Instance.Fish.Count; i++) {
+			for (int i = 0; i < InventoryManager.Instance.FishDatas.Datas.Length; i++) {
 				fishUis[i].SetActive(enable);
 			}
 		fishText.gameObject.SetActive(enable);
@@ -79,7 +79,7 @@ public class FishView : MonoBehaviour
 			return;
 		}
 		bool allreadyDisabled = true;
-		for (int i = 0; i < GameManager.Instance.Fish.Count; i++) {
+		for (int i = 0; i < InventoryManager.Instance.FishDatas.Datas.Length; i++) {
 			if (fishUis[i].activeSelf) {
 				allreadyDisabled = false;
 			}

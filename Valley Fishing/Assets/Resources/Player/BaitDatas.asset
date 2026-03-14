@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05096a27f16d68d469c2de3db90e48cb, type: 3}
+  m_Name: BaitDatas
+  m_EditorClassIdentifier: 
+  datas:
+  - BaitName: Brown Trout Bait
+    BaitImage: {fileID: 0}
+    BaitPrice: 0
+    FishSpawnChances:
+    - FishName: 0
+      SpawnChance: 1
+    - FishName: 0
+      SpawnChance: 1
+  - BaitName: Common Carp Bait
+    BaitImage: {fileID: 0}
+    BaitPrice: 0
+    FishSpawnChances:
+    - FishName: 1
+      SpawnChance: 1
+  - BaitName: Stone Loach Bait
+    BaitImage: {fileID: 0}
+    BaitPrice: 0
+    FishSpawnChances:
+    - FishName: 2
+      SpawnChance: 1
+  - BaitName: Worm Bait
+    BaitImage: {fileID: 0}
+    BaitPrice: 0
+    FishSpawnChances:
+    - FishName: 0
+      SpawnChance: 0.34
+    - FishName: 1
+      SpawnChance: 0.33
+    - FishName: 2
+      SpawnChance: 0.33
+  - BaitName: Cricket Bait
+    BaitImage: {fileID: 0}
+    BaitPrice: 1
+    FishSpawnChances:
+    - FishName: 3
+      SpawnChance: 0.5
+    - FishName: 4
+      SpawnChance: 0.5
+  - BaitName: Leech Bait
+    BaitImage: {fileID: 0}
+    BaitPrice: 2
+    FishSpawnChances:
+    - FishName: 5
+      SpawnChance: 0.33
+    - FishName: 6
+      SpawnChance: 0.33
+    - FishName: 7
+      SpawnChance: 0.34
+  - BaitName: Muscle Bait
+    BaitImage: {fileID: 0}
+    BaitPrice: 2
+    FishSpawnChances:
+    - FishName: 8
+      SpawnChance: 0.33
+    - FishName: 9
+      SpawnChance: 0.33
+    - FishName: 10
+      SpawnChance: 0.34
+  - BaitName: Llyn Lyn Bait
+    BaitImage: {fileID: 0}
+    BaitPrice: 0
+    FishSpawnChances:
+    - FishName: 11
+      SpawnChance: 1

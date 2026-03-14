@@ -13,7 +13,6 @@ public class GameManager : Singleton<GameManager> {
 
 
 	#region Properties
-
 	[field:SerializeField] public EventSystem EventSystem {	get; set; }
 	public GameObject LastSelectedButton { get; set; }
 	public InputController InputController { get; set; }
@@ -21,7 +20,7 @@ public class GameManager : Singleton<GameManager> {
 	public EventController EventController { get; set; }
 	public MainMenuController MainMenuController { get;	set; }
 	public ShopController ShopController { get;	set; }
-	public List<Fish> Fish { get => fish; }
+    [field: SerializeField] public Fish FishPrefab { get; set; }
 	public List<Bait> Baits { get => baits; }
 	[field: SerializeField]	public List<int> CurrentBaits {	get; set; } = new List<int>();
 	public Fish CurrentFish { get; set; }

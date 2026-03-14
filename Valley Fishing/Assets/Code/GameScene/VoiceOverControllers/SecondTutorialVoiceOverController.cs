@@ -34,11 +34,11 @@ public class SecondTutorialVoiceOverController : VoiceOverController
 				if (GameManager.Instance.TotalBaitsLeft == 0) {
 					this.LevelController.StateLocked = true;
 					List<EventReference> voiceOverChain = new List<EventReference>();
-					voiceOverChain.Add(this.CurrentFish.CaughtVoiceLine);
+					voiceOverChain.Add(this.CurrentFish.FishData.fishCatchAudio);
 					voiceOverChain.Add(FMODManager.Instance.LeaveBoatPrompts[0]);
 					AudioManager.Instance.PlayVoiceOverChain(voiceOverChain);
 				} else {
-					AudioManager.Instance.PlayVoiceOver(this.CurrentFish.CaughtVoiceLine);
+					AudioManager.Instance.PlayVoiceOver(this.CurrentFish.FishData.fishCatchAudio);
 				}
 				break;
 			default:

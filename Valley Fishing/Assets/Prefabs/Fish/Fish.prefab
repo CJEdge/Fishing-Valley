@@ -726,25 +726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cfea783698d71e4bbd349cdf5b0cf9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <CurrentState>k__BackingField: 0
-  <CurrentActivityLevel>k__BackingField: 0
-  ActivityLevels: 
-  movementDirections: 00000000
-  fishName: 
-  fishIndex: 0
-  caughtVoiceLine:
-    Guid:
-      Data1: 939592733
-      Data2: 1121045764
-      Data3: -1960769622
-      Data4: 191476268
-    Path: event:/VoiceOver/Levels/CaughtFish/0_BrownTrout
-  sellPrice: 10
-  failable: 0
-  fishSpeed: 2
   centreThreshold: 20
-  swimAwaySpeed: 100
-  strafedSwimAwaySpeed: 30
   rb: {fileID: 6682323996151832369}
   visuals: {fileID: 1885243994461742159}
   activityParticles:
@@ -760,8 +742,37 @@ MonoBehaviour:
   strafeAudio: {fileID: 2211003099072869323}
   lineEnd: {fileID: 5132849399768412513}
   unspoolRate: 0.05
-  <IsStrafer>k__BackingField: 0
-  <MovementIntervalsCompleted>k__BackingField: 0
+  FishData:
+    FishName: Pike
+    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
+    SellPrice: 5
+    IsFailable: 0
+    ReelInSpeed: 2
+    SwimAwaySpeed: 100
+    StrafedSwimAwaySpeed: 30
+    ActivityLevels: 01000000
+    MovementDirections: 
+    fishNameAudio:
+      Guid:
+        Data1: -259922885
+        Data2: 1249522367
+        Data3: 777684923
+        Data4: 1620817878
+      Path: event:/VoiceLines/Misc/Captain/Fish Names/Pikes
+    fishCatchAudio:
+      Guid:
+        Data1: 406005264
+        Data2: 1174642325
+        Data3: 312116871
+        Data4: 1998295607
+      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/8_Pike
+    icthyologistInfoAudio:
+      Guid:
+        Data1: 763025475
+        Data2: 1205276804
+        Data3: 725785259
+        Data4: 1869763058
+      Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/PikeInfo
   <ReelSpeed>k__BackingField: 100
 --- !u!54 &6682323996151832369
 Rigidbody:
@@ -1142,7 +1153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5094252593593451403
 Transform:
   m_ObjectHideFlags: 0

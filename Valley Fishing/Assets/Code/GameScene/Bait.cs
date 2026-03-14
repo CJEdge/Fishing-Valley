@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Bait : MonoBehaviour
 {
+	[SerializeField] BaitDatas bateData;
+
 	[SerializeField]
 	private bool isFailable;
 	

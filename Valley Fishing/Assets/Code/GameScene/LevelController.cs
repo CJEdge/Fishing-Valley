@@ -24,7 +24,6 @@ public class LevelController : AbstractState<LevelController.State> {
 	[field: SerializeField] public Transform LeftStrafeTransform { get; set; }
 	[field: SerializeField] public Transform RightStrafeTransform { get; set; }
 	[field: SerializeField] public Transform FishSpawnTransform { get; set; }
-	public List<Fish> Fish { get => GameManager.Instance.Fish; }
 	public Bait CurrentBait { get => GameManager.Instance.CurrentBait; }
 	public Action OnFishSpawned { get; set; }
 
@@ -97,8 +96,8 @@ public class LevelController : AbstractState<LevelController.State> {
 				break;
 			}
 		}
-		Fish fishInstance = Instantiate(this.Fish[fishIndex], this.FishSpawnTransform.position, Quaternion.identity);
-		fishInstance.name = this.Fish[fishIndex].name;
+		Fish fishInstance = Instantiate(GameManager.Instance.FishPrefab, this.FishSpawnTransform.position, Quaternion.identity);
+        GameManager.Instance.FishPrefab.Initialize(InventoryManager.Instance.FishDatas.Datas[fishIndex]);
 		fishInstance.transform.parent = gameplayContainer;
 		fishInstance.IsTutorial = this.CurrentBait.IsTutorial;
 		GameManager.Instance.CurrentFish = fishInstance;
