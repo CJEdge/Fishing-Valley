@@ -18,20 +18,20 @@ public class FourthTutorialVoiceOver : VoiceOverController
 				}
 				break;
 			case LevelController.State.AttatchBait:
-				if (GameManager.Instance.TotalCaughtFish == 5) {
+				if (InventoryManager.Instance.TotalOwnedFish == 5) {
 					GameManager.Instance.LevelController.FishView.EnableFishUI(false);
 					SceneManager.LoadScene(LevelManager.BossTutorial_00);
 					return false;
 				}
 				break;
 			case LevelController.State.ReelingFish:
-				if (GameManager.Instance.CurrentFish.IsTutorial || GameManager.Instance.TotalCaughtFish < 1) {
+				if (GameManager.Instance.CurrentFish.IsTutorial || InventoryManager.Instance.TotalOwnedFish < 1) {
 				PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
 				IncrementTutorial(this.ReelTutorialsCompleted);
 				}
 				break;
 			case LevelController.State.FishCaught:
-				if (GameManager.Instance.TotalBaitsLeft == 0) {
+				if (InventoryManager.Instance.TotalOwnedBaits == 0) {
 					List<EventReference> voiceOverChain = new List<EventReference>();
 					voiceOverChain.Add(this.CurrentFish.FishData.fishCatchAudio);
 					voiceOverChain.Add(tutorialCatchVoices[0]);

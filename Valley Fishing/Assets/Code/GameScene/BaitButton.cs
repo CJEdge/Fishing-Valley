@@ -28,7 +28,7 @@ public class BaitButton : MonoBehaviour {
 	}
 
 	public void OnEnable() {
-		baitCountText.text = "x" + GameManager.Instance.CurrentBaits[baitIndex];
+		baitCountText.text = "x" + InventoryManager.Instance.BaitDatas.datas[baitIndex];
 	}
 
 	#endregion
@@ -38,14 +38,14 @@ public class BaitButton : MonoBehaviour {
 
 	public void SelectBait() {
 		baitView.BaitSelected(baitIndex);
-		if (!GameManager.Instance.Baits[baitIndex].IsTutorial) {
+		if (!InventoryManager.Instance.BaitDatas.datas[baitIndex].IsTutorial) {
 			if (AudioManager.Instance.VoiceLineInProgress) {
 				return;
 			}
 			List<EventReference> voiceOverChain = new List<EventReference>();
 			voiceOverChain.Add(FMODManager.Instance.BaitNames[baitIndex]);
-			for (int i = 0; i < FMODManager.Instance.GetNumber(GameManager.Instance.CurrentBaits[baitIndex]).Count; i++) {
-				voiceOverChain.Add(FMODManager.Instance.GetNumber(GameManager.Instance.CurrentBaits[baitIndex])[i]);
+			for (int i = 0; i < FMODManager.Instance.GetNumber(InventoryManager.Instance.OwnedBaitTypeDatas[baitIndex].quantity).Count; i++) {
+				voiceOverChain.Add(FMODManager.Instance.GetNumber(InventoryManager.Instance.OwnedBaitTypeDatas[baitIndex].quantity)[i]);
 			}
 			voiceOverChain.Add(FMODManager.Instance.Left);
 			AudioManager.Instance.PlayVoiceOverChain(voiceOverChain);

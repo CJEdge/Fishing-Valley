@@ -11,14 +11,14 @@ public class BossVoiceOver : VoiceOverController
 		}
 		switch (this.LevelController.CurrentState) {
 			case LevelController.State.Idle:
-				GameManager.Instance.CurrentBaits[7] = 1;
+				InventoryManager.Instance.OwnedBaitTypeDatas[7].quantity = 1;
 				if (!AllTutorialsCompleted(this.AttatchBaitTutorialsCompleted)) {
 					PlayNextTutotialVoiceOver(this.AttatchBaitTutorialsCompleted, applyBaitTutorials);
 					IncrementTutorial(this.AttatchBaitTutorialsCompleted);
 				}
 				break;
 			case LevelController.State.AttatchBait:
-				if (GameManager.Instance.TotalBaitsLeft == 0) {
+				if (InventoryManager.Instance.TotalOwnedBaits == 0) {
 					GameManager.Instance.LevelController.FishView.EnableFishUI(false);
 					SceneManager.LoadScene(LevelManager.Menu);
 					return false;

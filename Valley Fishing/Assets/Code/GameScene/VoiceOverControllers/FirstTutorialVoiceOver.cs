@@ -87,23 +87,23 @@ public class FirstTutorialVoiceOver : VoiceOverController
 					PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
 					LevelController.SetState(LevelController.State.ReelingFish);
 				} else {
-					if (this.ReelTutorialsCompleted[7] && GameManager.Instance.CurrentBaits[3] == 0) {
-						GameManager.Instance.CurrentBaits[3] = 4;
+					if (this.ReelTutorialsCompleted[7] && InventoryManager.Instance.OwnedBaitTypeDatas[3].quantity == 0) {
+                        InventoryManager.Instance.OwnedBaitTypeDatas[3].quantity = 4;
 						LevelController.SetState(LevelController.State.AttatchBait);
 						break;
 					}
 					if (this.ReelTutorialsCompleted[6]) {
-						GameManager.Instance.CurrentBait = GameManager.Instance.Baits[3];
+						InventoryManager.Instance.CurrentBait = InventoryManager.Instance.BaitDatas.datas[3];
 						LevelController.SetState(LevelController.State.AttatchBait);
 						break;
 					}
 					if (this.ReelTutorialsCompleted[5]) {
-						GameManager.Instance.CurrentBait = GameManager.Instance.Baits[2];
+                        InventoryManager.Instance.CurrentBait = InventoryManager.Instance.BaitDatas.datas[2];
 						LevelController.SetState(LevelController.State.AttatchBait);
 						break;
 					}
 					if (this.ReelTutorialsCompleted[4]) {
-						GameManager.Instance.CurrentBait = GameManager.Instance.Baits[1];
+						InventoryManager.Instance.CurrentBait = InventoryManager.Instance.BaitDatas.datas[1];
 						LevelController.SetState(LevelController.State.AttatchBait);
 					}
 				}
@@ -127,7 +127,7 @@ public class FirstTutorialVoiceOver : VoiceOverController
 				break;
 			case LevelController.State.FishCaught:
 				if (AllTutorialsCompleted(this.CaughtFishTutorialsCompleted) || !GameManager.Instance.CurrentFish.IsTutorial) {
-					if (GameManager.Instance.TotalCaughtFish == 8) {
+					if (InventoryManager.Instance.TotalOwnedFish == 8) {
 						List<EventReference> voiceLines = new List<EventReference>();
 						voiceLines.Add(this.CurrentFish.FishData.fishCatchAudio);
 						voiceLines.Add(FMODManager.Instance.LeaveBoatPrompts[0]);
@@ -150,7 +150,7 @@ public class FirstTutorialVoiceOver : VoiceOverController
 	}
 	public override void VoiceOverFinished(EventReference eventReference, bool skipped) {
 		if (LevelController.CurrentState == LevelController.State.FishCaught) {
-			if (GameManager.Instance.TotalCaughtFish == 8) {
+			if (InventoryManager.Instance.TotalOwnedFish == 8) {
 				SceneManager.LoadScene(LevelManager.ShopTutorial_00);
 				return;
 			}
@@ -176,7 +176,7 @@ public class FirstTutorialVoiceOver : VoiceOverController
 				if(this.ReelTutorialsCompleted[2]) {
 					IncrementTutorial(this.ReelTutorialsCompleted);
 					PlayNextTutotialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
-					GameManager.Instance.CurrentBait = GameManager.Instance.Baits[0];
+					InventoryManager.Instance.CurrentBait = InventoryManager.Instance.BaitDatas.datas[0];
 					return;
 				}
 				IncrementTutorial(this.ReelTutorialsCompleted);

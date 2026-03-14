@@ -24,7 +24,7 @@ public class LevelController : AbstractState<LevelController.State> {
 	[field: SerializeField] public Transform LeftStrafeTransform { get; set; }
 	[field: SerializeField] public Transform RightStrafeTransform { get; set; }
 	[field: SerializeField] public Transform FishSpawnTransform { get; set; }
-	public Bait CurrentBait { get => GameManager.Instance.CurrentBait; }
+	public BaitDatas.Datas CurrentBait { get => InventoryManager.Instance.CurrentBait; }
 	public Action OnFishSpawned { get; set; }
 
 	#endregion
@@ -82,15 +82,16 @@ public class LevelController : AbstractState<LevelController.State> {
 	private IEnumerator WaitForBite() {
 		yield return new WaitForSeconds(3); // TODO floating number??
 		SetState(State.ReelingFish);
-		GameManager.Instance.CurrentFish.Initialize(InventoryManager.Instance.FishTypeCatchDatas[0].CaughtFishData);
+		GameManager.Instance.CurrentFish.Initialize(InventoryManager.Instance.OwnedFishTypeDatas[0].OwnedFishData);
 	}
 
 	private void SpawnFish() {
 		int fishIndex = 0;
 		float randomValue = UnityEngine.Random.value;
 		float cumulative = 0f;
-		for (int i = 0; i < this.CurrentBait.CatchChances.Length; i++) {
-			cumulative += this.CurrentBait.CatchChances[i];
+		Debug.Log(this.CurrentBait);
+;		for (int i = 0; i < this.CurrentBait.FishSpawnChances.Count; i++) {
+			cumulative += this.CurrentBait.FishSpawnChances[i].SpawnChance;
 			if (randomValue < cumulative) {
 				fishIndex = i;
 				break;

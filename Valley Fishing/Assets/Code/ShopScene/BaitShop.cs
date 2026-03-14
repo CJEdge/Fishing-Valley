@@ -81,16 +81,16 @@ public class BaitShop : Shop {
 	#region Public Methods
 
 	public virtual void SellFish(int fishIndex) {
-		if(GameManager.Instance.CaughtFish[fishIndex] == 0) {
+		if(InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].quantity == 0) {
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
 			return;
 		}
 		AudioManager.Instance.SkipVoiceOver();
-		for (int i = 0; i < GameManager.Instance.CaughtFish[fishIndex]; i++) {
+		for (int i = 0; i < InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].quantity; i++) {
 			GameManager.Instance.Money += InventoryManager.Instance.FishDatas.Datas[fishIndex].SellPrice;
 			this.FishSellPrice += InventoryManager.Instance.FishDatas.Datas[fishIndex].SellPrice;
 		}
-		if (GameManager.Instance.CaughtFish[fishIndex] > 0) {
+		if (InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].quantity > 0) {
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.MoneyEarnt);
 			List<EventReference> voiceOverChain = new List<EventReference>();
 			voiceOverChain.Add(FMODManager.Instance.BaitShopSoldItem[0]);
@@ -104,18 +104,18 @@ public class BaitShop : Shop {
 	}
 
 	public virtual void SellAllFish() {
-		if(GameManager.Instance.TotalCaughtFish == 0) {
+		if(InventoryManager.Instance.TotalOwnedFish == 0) {
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
 			return;
 		}
-		for (int i = 0; i < GameManager.Instance.CaughtFish.Count; i++) {
-			if (GameManager.Instance.CaughtFish[i] == 0) {
+		for (int i = 0; i < InventoryManager.Instance.OwnedFishTypeDatas.Count; i++) {
+			if (InventoryManager.Instance.OwnedFishTypeDatas[i].quantity == 0) {
 				continue;
 			}
-			for (int j = GameManager.Instance.CaughtFish[i] - 1; j >= 0; j--) {
+			for (int j = InventoryManager.Instance.OwnedFishTypeDatas[i].quantity - 1; j >= 0; j--) {
 				GameManager.Instance.Money += InventoryManager.Instance.FishDatas.Datas[i].SellPrice;
                 this.FishSellPrice += InventoryManager.Instance.FishDatas.Datas[i].SellPrice;
-                GameManager.Instance.CaughtFish[i]--;
+                InventoryManager.Instance.OwnedFishTypeDatas[i].quantity--;
 			}
 		}
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.MoneyEarnt);
@@ -135,12 +135,12 @@ public class BaitShop : Shop {
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
 			return;
 		}
-		if (GameManager.Instance.Baits[baitIndex].BaitPrice * sellQuantity > GameManager.Instance.Money) {
+		if (InventoryManager.Instance.BaitDatas.datas[baitIndex].BaitPrice * sellQuantity > GameManager.Instance.Money) {
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
 			return;
 		}
-		GameManager.Instance.Money -= GameManager.Instance.Baits[baitIndex].BaitPrice * sellQuantity;
-		GameManager.Instance.CurrentBaits[baitIndex] += sellQuantity;
+		GameManager.Instance.Money -= InventoryManager.Instance.BaitDatas.datas[baitIndex].BaitPrice * sellQuantity;
+		InventoryManager.Instance.OwnedBaitTypeDatas[baitIndex].quantity += sellQuantity;
 		this.BaitQuantities[baitIndex] -= sellQuantity;
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.MoneyEarnt);
 		List<EventReference> voiceOverChain = new List<EventReference>();
@@ -158,7 +158,7 @@ public class BaitShop : Shop {
 	#region Private Methods
 
 	private void PerformSellFish(int fishIndex) {
-		GameManager.Instance.CaughtFish[fishIndex] = 0;
+		InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].quantity = 0;
 	}
 
 	public virtual IEnumerator WaitOneFrame(Action<int> callback, int integer) {

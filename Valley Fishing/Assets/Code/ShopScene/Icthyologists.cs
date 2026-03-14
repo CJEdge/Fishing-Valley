@@ -30,8 +30,8 @@ public class Icthyologists : Shop
 
 	public void OnEnable() {
 		List<bool> buttonsToEnable = new List<bool>();
-		for (int i = 0; i < InventoryManager.Instance.FishTypeCatchDatas.Count; i++) {
-			if (InventoryManager.Instance.FishTypeCatchDatas[i].quantity > 0) {
+		for (int i = 0; i < InventoryManager.Instance.OwnedFishTypeDatas.Count; i++) {
+			if (InventoryManager.Instance.OwnedFishTypeDatas[i].quantity > 0) {
 				buttonsToEnable.Add(true);
 			} else {
 				buttonsToEnable.Add(false);
@@ -43,10 +43,10 @@ public class Icthyologists : Shop
 			}
 		}
 		if (!this.Initialized) {
-			for (int i = 0; i < InventoryManager.Instance.FishTypeCatchDatas.Count; i++) {
+			for (int i = 0; i < InventoryManager.Instance.OwnedFishTypeDatas.Count; i++) {
 				FishDataButton buttonInstance = Instantiate(fishButton, buttonParent);
-				buttonInstance.AssignData(InventoryManager.Instance.FishTypeCatchDatas[i].CaughtFishData);
-				buttonInstance.name = InventoryManager.Instance.FishTypeCatchDatas[i].CaughtFishData.FishName;
+				buttonInstance.AssignData(InventoryManager.Instance.OwnedFishTypeDatas[i].OwnedFishData);
+				buttonInstance.name = InventoryManager.Instance.OwnedFishTypeDatas[i].OwnedFishData.FishName;
 				Buttons.Add(buttonInstance.Button);
 			}
 		}
@@ -69,17 +69,17 @@ public class Icthyologists : Shop
 
 	public void HoverFish(int fishIndex) {
 		
-		if(GameManager.Instance.CaughtFish[fishIndex] == 0 || IcthyologistManager.Instance.SoldFish[fishIndex]) { 
-			AudioManager.Instance.PlayVoiceOver(InventoryManager.Instance.FishTypeCatchDatas[fishIndex].CaughtFishData.fishNameAudio);
+		if(InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].quantity == 0 || IcthyologistManager.Instance.SoldFish[fishIndex]) { 
+			AudioManager.Instance.PlayVoiceOver(InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].OwnedFishData.fishNameAudio);
 		} else {
-			AudioManager.Instance.PlayVoiceOver(InventoryManager.Instance.FishTypeCatchDatas[fishIndex].CaughtFishData.fishNameAudio);
+			AudioManager.Instance.PlayVoiceOver(InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].OwnedFishData.fishNameAudio);
 		}
 	}
 
 	public void SellFish(int fishIndex) {
 		if (!IcthyologistManager.Instance.SoldFish[fishIndex]) {
-			GameManager.Instance.Money += InventoryManager.Instance.FishTypeCatchDatas[fishIndex].CaughtFishData.SellPrice;
-			InventoryManager.Instance.FishTypeCatchDatas[fishIndex].quantity--;
+			GameManager.Instance.Money += InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].OwnedFishData.SellPrice;
+			InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].quantity--;
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ItemBuy);
 			AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.YouHave);
 			this.LastSoldFish = fishIndex;
@@ -91,7 +91,7 @@ public class Icthyologists : Shop
 	}
 
 	public void PlayFishInfo(int fishIndex) {
-		AudioManager.Instance.PlayVoiceOver(InventoryManager.Instance.FishTypeCatchDatas[fishIndex].CaughtFishData.icthyologistInfoAudio);
+		AudioManager.Instance.PlayVoiceOver(InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].OwnedFishData.icthyologistInfoAudio);
 		this.JustSoldFish = false;
 	}
 

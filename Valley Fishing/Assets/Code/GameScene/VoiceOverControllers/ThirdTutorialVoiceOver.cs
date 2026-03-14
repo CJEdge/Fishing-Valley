@@ -15,7 +15,7 @@ public class ThirdTutorialVoiceOver : VoiceOverController
 				}
 				break;
 			case LevelController.State.AttatchBait:
-				if (GameManager.Instance.TotalBaitsLeft == 0) {
+				if (InventoryManager.Instance.TotalOwnedBaits == 0) {
 					GameManager.Instance.LevelController.FishView.EnableFishUI(false);
 					SceneManager.LoadScene(LevelManager.BossTutorial_00);
 					return false;
@@ -24,7 +24,7 @@ public class ThirdTutorialVoiceOver : VoiceOverController
 			case LevelController.State.ReelingFish:
 				break;
 			case LevelController.State.FishCaught:
-				if (GameManager.Instance.TotalBaitsLeft == 0) {
+				if (InventoryManager.Instance.TotalOwnedBaits == 0) {
 					List<EventReference> voiceOverChain = new List<EventReference>();
 					voiceOverChain.Add(this.CurrentFish.FishData.fishCatchAudio);
 					voiceOverChain.Add(tutorialCatchVoices[0]);

@@ -54,8 +54,8 @@ public class BaitView : MonoBehaviour
 			for (int i = 0; i < baitButtons.Length; i++) {
 				baitButtons[i].gameObject.SetActive(false);
 			}
-			for (int i = 0; i < GameManager.Instance.CurrentBaits.Count; i++) {
-				if (GameManager.Instance.CurrentBaits[i] > 0) {
+			for (int i = 0; i < InventoryManager.Instance.OwnedBaitTypeDatas.Count; i++) {
+				if (InventoryManager.Instance.OwnedBaitTypeDatas[i].quantity > 0) {
 					baitButtons[i].gameObject.SetActive(true);
 					if (!firstButtonSelected) {
 						StartCoroutine(SelectButtonAfterOneFrame(baitButtons[i].gameObject));
@@ -83,8 +83,8 @@ public class BaitView : MonoBehaviour
 	public void BaitClicked(int baitIndex) {
 		AudioManager.Instance.PlayBaitSound(false, 0);
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.AttatchBaitSounds[baitIndex]);
-		GameManager.Instance.CurrentBait = GameManager.Instance.Baits[baitIndex];
-		GameManager.Instance.CurrentBaits[GameManager.Instance.CurrentBait.BaitIndex]--;
+		InventoryManager.Instance.CurrentBait = InventoryManager.Instance.BaitDatas.datas[baitIndex];
+		InventoryManager.Instance.OwnedBaitTypeDatas[baitIndex].quantity--;
 		EnableBaitUI(false);
 	}
 

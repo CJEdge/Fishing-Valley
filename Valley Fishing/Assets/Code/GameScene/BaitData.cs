@@ -20,9 +20,10 @@ public class BaitDatas : ScriptableObject
         public string BaitName;
         public Sprite BaitImage;
         public int BaitPrice;
+        public bool IsTutorial;
         public List<FishSpawnChance> FishSpawnChances = new List<FishSpawnChance>();
     }
-    public List<Datas> datas = new List<Datas>();
+    public Datas[] datas;
 
 
 

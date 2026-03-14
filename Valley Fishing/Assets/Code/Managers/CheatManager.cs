@@ -49,7 +49,7 @@ public class CheatManager : Singleton<CheatManager>
 
 	private void SceneLoaded(Scene scene, LoadSceneMode loadSceneMode) {
 		ScenesLoaded++;
-		if (GameManager.Instance.TotalBaitsLeft == 0) {
+		if (InventoryManager.Instance.TotalOwnedBaits == 0) {
 			ShowThirdCatchTutorialCheats();
 		}
 		if (superFastCatch) {
@@ -91,7 +91,7 @@ public class CheatManager : Singleton<CheatManager>
 	private void ShowSecondCatchTutorialCheats() {
 		if (SceneManager.GetActiveScene().name == LevelManager.CatchTutorial_01) {
 			for (int i = 0; i < level_01_Catch_Tutorial.Baits.Length; i++) {
-				GameManager.Instance.CurrentBaits[level_01_Catch_Tutorial.Baits[i].BaitIndex] = level_01_Catch_Tutorial.Baits[i].BaitAmount;
+				InventoryManager.Instance.OwnedBaitTypeDatas[level_01_Catch_Tutorial.Baits[i].BaitIndex].quantity = level_01_Catch_Tutorial.Baits[i].BaitAmount;
 			}
 		}
 	}
@@ -112,7 +112,7 @@ public class CheatManager : Singleton<CheatManager>
 	private void ShowThirdCatchTutorialCheats() {
 		if (SceneManager.GetActiveScene().name == LevelManager.CatchTutorial_02) {
 			for (int i = 0; i < level_02_Catch_Tutorial.Baits.Length; i++) {
-				GameManager.Instance.CurrentBaits[level_02_Catch_Tutorial.Baits[i].BaitIndex] = level_02_Catch_Tutorial.Baits[i].BaitAmount;
+				InventoryManager.Instance.OwnedBaitTypeDatas[level_02_Catch_Tutorial.Baits[i].BaitIndex].quantity = level_02_Catch_Tutorial.Baits[i].BaitAmount;
 			}
 		}
 	}
@@ -133,7 +133,7 @@ public class CheatManager : Singleton<CheatManager>
 	private void ShowFirstBossTutorialCheats() {
 		if (SceneManager.GetActiveScene().name == LevelManager.BossTutorial_00) {
 			for (int i = 0; i < level_03_Boss.Baits.Length; i++) {
-				GameManager.Instance.CurrentBaits[level_03_Boss.Baits[i].BaitIndex] = level_03_Boss.Baits[i].BaitAmount;
+				InventoryManager.Instance.OwnedBaitTypeDatas[level_03_Boss.Baits[i].BaitIndex].quantity = level_03_Boss.Baits[i].BaitAmount;
 			}
 		}
 	}
@@ -154,7 +154,7 @@ public class CheatManager : Singleton<CheatManager>
 	private void ShowGameScenneCheats() {
 		if (SceneManager.GetActiveScene().name == LevelManager.GameSence) {
 			for (int i = 0; i < gameSceneCheats.Baits.Length; i++) {
-				GameManager.Instance.CurrentBaits[gameSceneCheats.Baits[i].BaitIndex] = gameSceneCheats.Baits[i].BaitAmount;
+                InventoryManager.Instance.OwnedBaitTypeDatas[gameSceneCheats.Baits[i].BaitIndex].quantity = gameSceneCheats.Baits[i].BaitAmount;
 			}
 		}
 	}
@@ -176,10 +176,7 @@ public class CheatManager : Singleton<CheatManager>
 		if (SceneManager.GetActiveScene().name == LevelManager.ShopTutorial_00) {
 			for (int i = 0; i < firstShopTutorialCheats.CaughtFish.Length; i++) {
 				foreach (var fish in firstShopTutorialCheats.CaughtFish) {
-					while (GameManager.Instance.CaughtFish.Count <= fish.FishIndex) {
-						GameManager.Instance.CaughtFish.Add(0);
-					}
-					GameManager.Instance.CaughtFish[fish.FishIndex] = fish.FishAmount;
+					InventoryManager.Instance.OwnedFishTypeDatas[fish.FishIndex].quantity = fish.FishAmount;
 				}
 			}
 		}
@@ -202,10 +199,7 @@ public class CheatManager : Singleton<CheatManager>
 		if (SceneManager.GetActiveScene().name == LevelManager.ShopTutorial_01) {
 			for (int i = 0; i < secondShopTutorialCheats.CaughtFish.Length; i++) {
 				foreach (var fish in secondShopTutorialCheats.CaughtFish) {
-					while (GameManager.Instance.CaughtFish.Count <= fish.FishIndex) {
-						GameManager.Instance.CaughtFish.Add(0);
-					}
-					GameManager.Instance.CaughtFish[fish.FishIndex] = fish.FishAmount;
+					InventoryManager.Instance.OwnedFishTypeDatas[fish.FishIndex].quantity = fish.FishAmount;
 				}
 			}
 		}
@@ -228,10 +222,7 @@ public class CheatManager : Singleton<CheatManager>
 		if (SceneManager.GetActiveScene().name == LevelManager.ShopTutorial_02) {
 			for (int i = 0; i < thirdShopTutorialCheats.CaughtFish.Length; i++) {
 				foreach (var fish in thirdShopTutorialCheats.CaughtFish) {
-					while (GameManager.Instance.CaughtFish.Count <= fish.FishIndex) {
-						GameManager.Instance.CaughtFish.Add(0);
-					}
-					GameManager.Instance.CaughtFish[fish.FishIndex] = fish.FishAmount;
+					InventoryManager.Instance.OwnedFishTypeDatas[fish.FishIndex].quantity = fish.FishAmount;
 				}
 			}
 		}

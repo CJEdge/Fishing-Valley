@@ -10,7 +10,7 @@ public class BaitShopButton : ButtonVoiceOverComponent {
 	[SerializeField] private int sellQuantity;
 
 	public override void DoHoverEffect() {
-		int baitValue = GameManager.Instance.Baits[baitIndex].BaitPrice * sellQuantity;
+		int baitValue = InventoryManager.Instance.BaitDatas.datas[baitIndex].BaitPrice * sellQuantity;
 		List<EventReference> voiceoverChain = new List<EventReference>();
 		voiceoverChain.Add(FMODManager.Instance.BaitNames[baitIndex]);
 		for (int i = 0; i < FMODManager.Instance.GetNumber(baitValue).Count; i++) {
