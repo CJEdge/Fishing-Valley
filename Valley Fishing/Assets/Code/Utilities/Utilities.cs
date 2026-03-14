@@ -46,9 +46,9 @@ public static class Utilities
 		}
 	}
 
-	public static void LinkVerticalButtons(Button[] buttons, Button leaveShopButton) {
+	public static void LinkVerticalButtons(List<Button> buttons, Button leaveShopButton) {
 		List<Button> activeButtons = new List<Button>();
-		for (int i = 0; i < buttons.Length; i++) {
+		for (int i = 0; i < buttons.Count; i++) {
 			if (buttons[i].gameObject.activeSelf) {
 				activeButtons.Add(buttons[i]);
 			}
@@ -61,8 +61,8 @@ public static class Utilities
 			}
 			if (i != activeButtons.Count - 1) {
 				navigation.selectOnDown = activeButtons[i + 1];
-			} else {
-				navigation.selectOnRight = leaveShopButton;
+			} else if (leaveShopButton != null) {
+				navigation.selectOnDown = leaveShopButton;
 			}
 			activeButtons[i].navigation = navigation;
 		}
