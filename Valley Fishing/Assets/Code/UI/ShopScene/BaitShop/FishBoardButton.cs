@@ -9,7 +9,7 @@ public class FishBoardButton : ButtonVoiceOverComponent
 
 	public override void DoHoverEffect() {
 		int fishValue = InventoryManager.Instance.FishDatas.Datas[transform.GetSiblingIndex()].SellPrice;
-		int caughtFishCount = GameManager.Instance.CaughtFish[transform.GetSiblingIndex()];
+		int caughtFishCount = InventoryManager.Instance.OwnedFishTypeDatas[transform.GetSiblingIndex()].quantity;
 
 		List <EventReference> voiceoverChain = new List<EventReference>();
 		voiceoverChain.Add(FMODManager.Instance.FishBoardFish[transform.GetSiblingIndex()]);

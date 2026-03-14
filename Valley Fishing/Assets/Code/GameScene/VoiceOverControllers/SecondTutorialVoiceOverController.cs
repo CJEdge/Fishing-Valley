@@ -31,7 +31,7 @@ public class SecondTutorialVoiceOverController : VoiceOverController
 				}
 				break;
 			case LevelController.State.FishCaught:
-				if (GameManager.Instance.TotalBaitsLeft == 0) {
+				if (InventoryManager.Instance.TotalOwnedBaits == 0) {
 					this.LevelController.StateLocked = true;
 					List<EventReference> voiceOverChain = new List<EventReference>();
 					voiceOverChain.Add(this.CurrentFish.FishData.fishCatchAudio);

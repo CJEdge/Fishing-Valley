@@ -239,7 +239,6 @@ GameObject:
   - component: {fileID: 988541708520509280}
   - component: {fileID: 1265457929270212987}
   - component: {fileID: 9053393668482966408}
-  - component: {fileID: 7560163223257303083}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -275,33 +274,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85be8103c867a0c42a8041f53d94b16c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fish:
-  - {fileID: 3472080174443941622, guid: 56eb2018d3a3480448f2ea67b5b72728, type: 3}
-  - {fileID: 6600018212874257723, guid: 031262a786fb3484a9d9a1131e2e7fed, type: 3}
-  - {fileID: 8874738652398643800, guid: d9a2cdbf59c0d1b4ab186e425e3d8be5, type: 3}
-  - {fileID: 2527023402062999775, guid: ac24d428c36c51b4f8f120e72fdb758d, type: 3}
-  - {fileID: 2527023402062999775, guid: 0b2dd00ecbcb0f24da171d6af4abc201, type: 3}
-  - {fileID: 939318007809733827, guid: f000751d6d587734d824225b212e98d4, type: 3}
-  - {fileID: 939318007809733827, guid: a8cc8612e0a8c114c8d2858421a9922c, type: 3}
-  - {fileID: 939318007809733827, guid: 0aae93f1b2ff9c6468aaaba31d6a2c98, type: 3}
-  - {fileID: 2527023402062999775, guid: 4cd3dc4e28e39004e93a031fb18c6e0d, type: 3}
-  - {fileID: 2527023402062999775, guid: 4a0d91e17fddd2b4b8ba2da45ad40849, type: 3}
-  - {fileID: 2527023402062999775, guid: 2454385763472fc41832f0d8e90dccac, type: 3}
-  - {fileID: 2527023402062999775, guid: d41ca6726843f6c44b624fdf0ff23f80, type: 3}
-  baits:
-  - {fileID: 1264329977150585429, guid: c070571afa0583f429615349cd46c82c, type: 3}
-  - {fileID: 2644793683023306607, guid: deaf0af42497b3a49b1c60dfeb125c58, type: 3}
-  - {fileID: 4581535848558131026, guid: 65de2ea77d29ca7438df5403e0cc0d38, type: 3}
-  - {fileID: 7779104066758528175, guid: b0fe451ad790c044784140f990fb4a6a, type: 3}
-  - {fileID: 7778841989186564110, guid: 142a9d4d143554a4b86112aad1f3a274, type: 3}
-  - {fileID: 5679352621735612818, guid: 3c0861e58491f484199c895cf2758efb, type: 3}
-  - {fileID: 5679352621735612818, guid: 22785c3d167a5f3408b4ddbf8e1444e2, type: 3}
-  - {fileID: 5679352621735612818, guid: 8ad5d209cb18e9a43bb4b94d63fcc74f, type: 3}
   <EventSystem>k__BackingField: {fileID: 0}
   <FishPrefab>k__BackingField: {fileID: 8265546778158016295, guid: 2fd4854caf780eb4797a8c038e747f64, type: 3}
-  <CurrentBaits>k__BackingField: 0000000000000000000000000000000000000000000000000000000000000000
-  <CaughtFish>k__BackingField: 010000000000000001000000000000000000000000000000010000000000000000000000
-  <CurrentBait>k__BackingField: {fileID: 0}
+  <BaitPrefab>k__BackingField: {fileID: 3614361354684212053, guid: 3bb9af89310f9574686d41c346bf7ca7, type: 3}
   <Money>k__BackingField: 0
 --- !u!114 &1583213601024685545
 MonoBehaviour:
@@ -1172,7 +1147,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FishDatas: {fileID: 11400000, guid: 61aa947a85ef66a4a9549ce4ed873bb6, type: 2}
-  FishTypeCatchDatas: []
+  OwnedFishTypeDatas: []
+  BaitDatas: {fileID: 11400000, guid: ee2272021f5492f4fadd7bdb1c4015bf, type: 2}
+  OwnedBaitTypeDatas: []
 --- !u!114 &1265457929270212987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1198,16 +1175,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SoldFish: 000000000000000000000000
---- !u!114 &7560163223257303083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7393596337781405747}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ef98e062772bc84ca2cd836e6d72536, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  consoleText: {fileID: 3755897097907146007}

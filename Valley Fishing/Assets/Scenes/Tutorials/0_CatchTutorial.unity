@@ -667,13 +667,12 @@ MonoBehaviour:
   seagullFailTime: 0
   duckingTime: 0
   duckCooldown: 0
-  avoidanceThreshold: 0
-  <Ducking>k__BackingField: 0
-  <CanDuck>k__BackingField: 1
+  SeagullAvoidanceThreshold: 0
   flies: {fileID: 0}
   fliesIntervalTime: 0
   fliesToSwat: 0
   fliesEffectTime: 0
+  fliesFailTime: 0
 --- !u!1 &816014742 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5340243576401240924, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
@@ -825,6 +824,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5728766699607765735, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6571493593516085787, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -903,6 +906,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6571493593516085787, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263675256124433731, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7999871105705729919, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
