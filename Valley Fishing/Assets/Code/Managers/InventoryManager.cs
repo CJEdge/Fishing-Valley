@@ -19,7 +19,7 @@ public class InventoryManager : Singleton<InventoryManager> {
         get
         {
             int count = 0;
-            for (int i = 0; this.OwnedFishTypeDatas.Count > 0; i++)
+            for (int i = 0; i < this.OwnedFishTypeDatas.Count; i++)
             {
                 count += this.OwnedFishTypeDatas[i].quantity;
             }
@@ -40,7 +40,7 @@ public class InventoryManager : Singleton<InventoryManager> {
 	public int TotalOwnedBaits { get
 		{
 			int count = 0;
-			for (int i = 0; this.OwnedBaitTypeDatas.Count > 0; i++)
+			for (int i = 0; i < this.OwnedBaitTypeDatas.Count; i++)
 			{
 				count += this.OwnedBaitTypeDatas[i].quantity;
 			}
@@ -58,11 +58,11 @@ public class InventoryManager : Singleton<InventoryManager> {
 			fishTypeCatchData.OwnedFishData = this.FishDatas.Datas[i];
             OwnedFishTypeDatas.Add(fishTypeCatchData);
 		}
-		for (int i = 0; i < this.OwnedBaitTypeDatas.Count; i++)
+		for (int i = 0; i < this.BaitDatas.datas.Length; i++)
 		{
 			this.OwnedBaitTypeDatas.Add(new OwnedBaitTypeData());
 		}
-		for(int i = 0; i < this.OwnedFishTypeDatas.Count; i++)
+		for(int i = 0; i < this.FishDatas.Datas.Length; i++)
 		{
 			this.OwnedFishTypeDatas.Add(new OwnedFishTypeData());
 		}

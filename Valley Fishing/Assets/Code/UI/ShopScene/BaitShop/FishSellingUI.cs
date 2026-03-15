@@ -20,9 +20,9 @@ public class FishSellingUI : MonoBehaviour
     public void OnEnable()
     {
         List<bool> buttonsToEnable = new List<bool>();
-        for (int i = 0; i < InventoryManager.Instance.FishTypeCatchDatas.Count; i++)
+        for (int i = 0; i < InventoryManager.Instance.OwnedFishTypeDatas.Count; i++)
         {
-            if (InventoryManager.Instance.FishTypeCatchDatas[i].quantity > 0)
+            if (InventoryManager.Instance.OwnedFishTypeDatas[i].quantity > 0)
             {
                 buttonsToEnable.Add(true);
             }
@@ -34,11 +34,11 @@ public class FishSellingUI : MonoBehaviour
 
         if (!this.Initialized)
         {
-            for (int i = 0; i < InventoryManager.Instance.FishTypeCatchDatas.Count; i++)
+            for (int i = 0; i < InventoryManager.Instance.OwnedFishTypeDatas.Count; i++)
             {
                 FishDataButton buttonInstance = Instantiate(fishButton, buttonParent);
-                buttonInstance.AssignData(InventoryManager.Instance.FishTypeCatchDatas[i].CaughtFishData);
-                buttonInstance.name = InventoryManager.Instance.FishTypeCatchDatas[i].CaughtFishData.FishName;
+                buttonInstance.AssignData(InventoryManager.Instance.OwnedFishTypeDatas[i].OwnedFishData);
+                buttonInstance.name = InventoryManager.Instance.OwnedFishTypeDatas[i].OwnedFishData.FishName;
                 Buttons.Add(buttonInstance.Button);
             }
         }
