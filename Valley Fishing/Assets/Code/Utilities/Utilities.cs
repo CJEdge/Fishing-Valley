@@ -54,6 +54,8 @@ public static class Utilities
 				activeButtons.Add(buttons[i]);
 			}
 		}
+		activeButtons.Add((Button) leaveShopButton);
+
 		for (int i = 0; i < activeButtons.Count; i++) {
 			Navigation navigation = new Navigation();
 			navigation.mode = Navigation.Mode.Explicit;
@@ -67,11 +69,12 @@ public static class Utilities
 			}
 			activeButtons[i].navigation = navigation;
 		}
-		if (leaveShopButton != null && activeButtons.Count > 0) {
-			Navigation leaveShopNavigation = new Navigation();
-			leaveShopNavigation.selectOnUp = activeButtons[activeButtons.Count - 1];
-			leaveShopButton.navigation = leaveShopNavigation;
-		}
+
+		//if (leaveShopButton != null && activeButtons.Count > 0) {
+		//	Navigation leaveShopNavigation = new Navigation();
+		//	leaveShopNavigation.selectOnUp = activeButtons[activeButtons.Count - 1];
+		//	leaveShopButton.navigation = leaveShopNavigation;
+		//}
 	}
 
 	private static IEnumerator SelectButtonAfterOneFrame(GameObject button)

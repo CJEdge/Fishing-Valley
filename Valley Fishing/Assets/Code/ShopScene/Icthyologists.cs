@@ -45,8 +45,8 @@ public class Icthyologists : Shop
 		if (!this.Initialized) {
 			for (int i = 0; i < InventoryManager.Instance.OwnedFishTypeDatas.Count; i++) {
 				ItemDataButton buttonInstance = Instantiate(fishButton, buttonParent);
-				buttonInstance.AssignData(InventoryManager.Instance.OwnedFishTypeDatas[i].OwnedFishData);
-				buttonInstance.name = InventoryManager.Instance.OwnedFishTypeDatas[i].OwnedFishData.ItemName;
+				buttonInstance.AssignData(InventoryManager.Instance.OwnedFishTypeDatas[i].OwnedItemData);
+				buttonInstance.name = InventoryManager.Instance.OwnedFishTypeDatas[i].OwnedItemData.ItemName;
 				Buttons.Add(buttonInstance.Button);
 			}
 		}
@@ -70,15 +70,15 @@ public class Icthyologists : Shop
 	public void HoverFish(int fishIndex) {
 		
 		if(InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].quantity == 0 || IcthyologistManager.Instance.SoldFish[fishIndex]) { 
-			AudioManager.Instance.PlayVoiceOver(InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].OwnedFishData.fishNameAudio);
+			AudioManager.Instance.PlayVoiceOver((InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].OwnedItemData as FishDatas.FishData).fishNameAudio);
 		} else {
-			AudioManager.Instance.PlayVoiceOver(InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].OwnedFishData.fishNameAudio);
+			AudioManager.Instance.PlayVoiceOver((InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].OwnedItemData as FishDatas.FishData).fishNameAudio);
 		}
 	}
 
 	public void SellFish(int fishIndex) {
 		if (!IcthyologistManager.Instance.SoldFish[fishIndex]) {
-			GameManager.Instance.Money += InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].OwnedFishData.ItemSellPrice;
+			GameManager.Instance.Money += InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].OwnedItemData.ItemSellPrice;
 			InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].quantity--;
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ItemBuy);
 			AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.YouHave);
@@ -91,7 +91,7 @@ public class Icthyologists : Shop
 	}
 
 	public void PlayFishInfo(int fishIndex) {
-		AudioManager.Instance.PlayVoiceOver(InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].OwnedFishData.icthyologistInfoAudio);
+		AudioManager.Instance.PlayVoiceOver((InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].OwnedItemData as FishDatas.FishData).icthyologistInfoAudio);
 		this.JustSoldFish = false;
 	}
 

@@ -8,12 +8,14 @@ public class InventoryManager : Singleton<InventoryManager> {
 
 	public FishDatas FishDatas;
 
+	//Can be used for both fish and bait because they are both BaseItemData
 	[System.Serializable]
-	public class OwnedFishTypeData {
+	public class OwnedItemTypeData {
 		public int quantity;
-		public FishDatas.FishData OwnedFishData;
+		public BaseItemData OwnedItemData;
 	}
-	public List<OwnedFishTypeData> OwnedFishTypeDatas;
+
+	public List<OwnedItemTypeData> OwnedFishTypeDatas;
     public int TotalOwnedFish
     {
         get
@@ -28,14 +30,7 @@ public class InventoryManager : Singleton<InventoryManager> {
     }
 
     public BaitDatas BaitDatas;
-
-    [System.Serializable]
-    public class OwnedBaitTypeData
-    {
-        public int quantity;
-        public BaitDatas.Datas OwnedBaitData;
-    }
-	public List<OwnedBaitTypeData> OwnedBaitTypeDatas;
+	public List<OwnedItemTypeData> OwnedBaitTypeDatas;
 
 	public int TotalOwnedBaits { get
 		{
@@ -53,14 +48,14 @@ public class InventoryManager : Singleton<InventoryManager> {
     public override void Awake() {
 		base.Awake();
 		for (int i = 0; i < this.FishDatas.Datas.Length; i++) {
-            OwnedFishTypeData fishTypeCatchData = new OwnedFishTypeData();
+            OwnedItemTypeData fishTypeCatchData = new OwnedItemTypeData();
 			fishTypeCatchData.quantity = 0;
-			fishTypeCatchData.OwnedFishData = this.FishDatas.Datas[i];
+			fishTypeCatchData.OwnedItemData = this.FishDatas.Datas[i];
             OwnedFishTypeDatas.Add(fishTypeCatchData);
 		}
 		for (int i = 0; i < this.BaitDatas.datas.Length; i++)
 		{
-			this.OwnedBaitTypeDatas.Add(new OwnedBaitTypeData());
+			this.OwnedBaitTypeDatas.Add(new OwnedItemTypeData());
 		}
 	}
 

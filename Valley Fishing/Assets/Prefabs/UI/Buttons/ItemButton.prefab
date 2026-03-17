@@ -284,10 +284,10 @@ GameObject:
   - component: {fileID: 5467474923168254401}
   - component: {fileID: 1985930689711814360}
   - component: {fileID: 8467661941528227868}
-  - component: {fileID: 8540662457802201151}
   - component: {fileID: 6699342014290696725}
+  - component: {fileID: 7669740724408832669}
   m_Layer: 0
-  m_Name: SellFishButton
+  m_Name: ItemButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -397,53 +397,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8540662457802201151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3368202782045615545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18ba7f5e6d0a21645877ebc02e31c141, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Button: {fileID: 8467661941528227868}
-  FishName: {fileID: 2780386885982218388}
-  FishImage: {fileID: 0}
-  SellPrice: {fileID: 1795742090389084701}
-  FishData:
-    FishName: 
-    Sprite: {fileID: 0}
-    SellPrice: 0
-    IsFailable: 0
-    ReelInSpeed: 0
-    SwimAwaySpeed: 0
-    StrafedSwimAwaySpeed: 0
-    ActivityLevels: 
-    MovementDirections: 
-    fishNameAudio:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    fishCatchAudio:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    icthyologistInfoAudio:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
 --- !u!114 &6699342014290696725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,6 +423,26 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &7669740724408832669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3368202782045615545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40bff7588286a0942b9d270544673c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: {fileID: 8467661941528227868}
+  ItemName: {fileID: 2780386885982218388}
+  ItemImage: {fileID: 0}
+  ItemSellPrice: {fileID: 1795742090389084701}
+  itemData:
+    ItemName: 
+    ItemSellPrice: 0
+    ItemImage: {fileID: 0}
 --- !u!1 &6208845713181172491
 GameObject:
   m_ObjectHideFlags: 0

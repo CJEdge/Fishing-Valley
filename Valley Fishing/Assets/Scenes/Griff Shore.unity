@@ -130,6 +130,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b64e1ecfa4b8dc4fae5c109382afdc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &49603471 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2773737308474006831, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
+  m_PrefabInstance: {fileID: 8225380504745225335}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &196863433
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,6 +399,17 @@ MonoBehaviour:
   <RodShop>k__BackingField: {fileID: 1342948190}
   <Icthyologists>k__BackingField: {fileID: 202954210}
   <InventorsLab>k__BackingField: {fileID: 1638940043}
+--- !u!114 &1290922395 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 553442450737038275, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
+  m_PrefabInstance: {fileID: 8225380504745225335}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1342948189 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1994541899094531492, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
@@ -962,10 +978,22 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2202537619959494223, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
   m_PrefabInstance: {fileID: 8225380504745225335}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 49603471}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b64e1ecfa4b8dc4fae5c109382afdc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1729054763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49603471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52639b24ce0b2d74980960ac66efd834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &1808427006 stripped
@@ -1105,6 +1133,11 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!224 &2047299870 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8521662334344835328, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
+  m_PrefabInstance: {fileID: 8225380504745225335}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2128313794 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5579805732467908076, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
@@ -1792,6 +1825,10 @@ PrefabInstance:
       propertyPath: fishBoardObject
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 474413473311069678, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
+      propertyPath: <Initialized>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 553442450737038275, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1854,6 +1891,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3627455556352528642, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
       propertyPath: initialButton
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627455556352528642, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
+      propertyPath: baitBoardObject
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4325223149616061134, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
@@ -2197,6 +2238,7 @@ PrefabInstance:
     - {fileID: 1117178266927654405, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
     - {fileID: 4325223149616061134, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
     - {fileID: 7813834513709827752, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
+    - {fileID: 5094688421951681814, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1739723357361479995, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
@@ -2208,6 +2250,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5062855661220624064, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8225380504745225340}
+    - targetCorrespondingSourceObject: {fileID: 5109131454646132563, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8225380504745225342}
+    - targetCorrespondingSourceObject: {fileID: 2773737308474006831, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1729054763}
   m_SourcePrefab: {fileID: 100100000, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
 --- !u!1 &8225380504745225336 stripped
 GameObject:
@@ -2231,9 +2279,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9f3ad90b4504b141b3f4f173fc152dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishButton: {fileID: 8540662457802201151, guid: e8f6c9d921f05dd4b8180b9cce02af1e, type: 3}
+  itemButton: {fileID: 7669740724408832669, guid: e8f6c9d921f05dd4b8180b9cce02af1e, type: 3}
   buttonParent: {fileID: 8225380504745225337}
   leaveShopButton: {fileID: 861066324572463777}
+  listUsed: 0
   Buttons: []
 --- !u!1 &8225380504745225339 stripped
 GameObject:
@@ -2271,6 +2320,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 368191707955293116, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
   m_PrefabInstance: {fileID: 8225380504745225335}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8225380504745225342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8225380504745225339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f3ad90b4504b141b3f4f173fc152dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemButton: {fileID: 7669740724408832669, guid: e8f6c9d921f05dd4b8180b9cce02af1e, type: 3}
+  buttonParent: {fileID: 2047299870}
+  leaveShopButton: {fileID: 1290922395}
+  listUsed: 1
+  Buttons: []
 --- !u!1 &8225380504745225343 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1739723357361479995, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
