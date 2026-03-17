@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -71,5 +72,11 @@ public static class Utilities
 			leaveShopNavigation.selectOnUp = activeButtons[activeButtons.Count - 1];
 			leaveShopButton.navigation = leaveShopNavigation;
 		}
+	}
+
+	private static IEnumerator SelectButtonAfterOneFrame(GameObject button)
+	{
+		yield return new WaitForEndOfFrame();
+		GameManager.Instance.EventSystem.SetSelectedGameObject(button);
 	}
 }

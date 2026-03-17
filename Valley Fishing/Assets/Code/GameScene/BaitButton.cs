@@ -28,7 +28,6 @@ public class BaitButton : MonoBehaviour {
 	}
 
 	public void OnEnable() {
-		//baitCountText.text = "x" + InventoryManager.Instance.BaitDatas.datas[baitIndex];
 		baitCountText.text = "x" + InventoryManager.Instance.OwnedBaitTypeDatas[baitIndex].quantity.ToString();
 	}
 

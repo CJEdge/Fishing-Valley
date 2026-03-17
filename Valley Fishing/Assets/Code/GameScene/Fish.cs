@@ -122,7 +122,7 @@ public class Fish : MonoBehaviour
 	public void FishCaught() {
 		AudioManager.Instance.PlayUnspoolSound(false, 0);
 		Debug.Log(ArrayUtility.IndexOf(InventoryManager.Instance.FishDatas.Datas, this.FishData));
-		InventoryManager.Instance.OwnedBaitTypeDatas[(ArrayUtility.IndexOf(InventoryManager.Instance.FishDatas.Datas, this.FishData))].quantity++;
+		InventoryManager.Instance.OwnedFishTypeDatas[(ArrayUtility.IndexOf(InventoryManager.Instance.FishDatas.Datas, this.FishData))].quantity++;
 		GameManager.Instance.LevelController.SetState(LevelController.State.FishCaught);
 		AudioManager.Instance.PlayFishActivitySound(this, 0, true);
 		VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);

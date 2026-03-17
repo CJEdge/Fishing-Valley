@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class BossVoiceOver : VoiceOverController
 {
+	[SerializeField] private GameObject endScreenUI;
+	[SerializeField] private GameObject initialButton;
+
 	public override bool PerformStateSwitch() {
 		if (!base.PerformStateSwitch()) {
 			return false;
@@ -19,8 +22,10 @@ public class BossVoiceOver : VoiceOverController
 				break;
 			case LevelController.State.AttatchBait:
 				if (InventoryManager.Instance.TotalOwnedBaits == 0) {
-					GameManager.Instance.LevelController.FishView.EnableFishUI(false);
-					SceneManager.LoadScene(LevelManager.Menu);
+                    endScreenUI.SetActive(true);
+
+					SelectUIButton(initialButton);
+                    GameManager.Instance.EventSystem.SetSelectedGameObject(initialButton);
 					return false;
 				}
 				break;
@@ -42,5 +47,11 @@ public class BossVoiceOver : VoiceOverController
 		if (LevelController.CurrentState == LevelController.State.ReelingFish) {
 			GameManager.Instance.InputController.SetState(InputController.State.NotReeling);
 		}
+	}
+
+	public void LoadMenu()
+	{
+		Debug.Log("here");
+		SceneManager.LoadScene("Menu");
 	}
 }
