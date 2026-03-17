@@ -681,6 +681,13 @@ MonoBehaviour:
   CaughtFishTutorialsCompleted: 
   endScreenUI: {fileID: 780784487}
   initialButton: {fileID: 1954502553}
+  thanksForPlayingEvent:
+    Guid:
+      Data1: -449038532
+      Data2: 1280758308
+      Data3: -1433694552
+      Data4: -474234592
+    Path: event:/VoiceLines/Level Scene/Caught Fish/Boss 0/0 Llyn Llyn Salmon
 --- !u!114 &582599909
 MonoBehaviour:
   m_ObjectHideFlags: 0
