@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,15 +30,14 @@ public class ItemDataButtonGenerator : MonoBehaviour
 
     public void OnEnable()
     {
-        List<InventoryManager.OwnedItemTypeData> chosenList;
+        List<OwnedItemTypeData> chosenList;
         switch(listUsed)
         {
             case ListUsed.Fish:
                 chosenList = InventoryManager.Instance.OwnedFishTypeDatas;
                 break;
-            //
             case ListUsed.Bait:
-                chosenList = InventoryManager.Instance.OwnedBaitTypeDatas;
+                chosenList = GetTempBaitListForSelling();
                 break;
             default:
                 chosenList = InventoryManager.Instance.OwnedFishTypeDatas;
@@ -82,5 +82,20 @@ public class ItemDataButtonGenerator : MonoBehaviour
         }
     }
 
+    #endregion
+
+    #region Methods 
+    //This list is representative of the shopkeeper's stock, because we havent figured out representing it proper
+    //This will be removed
+    private List<OwnedItemTypeData> GetTempBaitListForSelling()
+    {
+        List<OwnedItemTypeData> tempList = new();
+        BaitDatas.Datas[] listCopy = InventoryManager.Instance.BaitDatas.datas.ToArray();
+        for (var i = 0; i < listCopy.Length; i++)
+        {
+            tempList.Add(new OwnedItemTypeData(1, listCopy[i]));
+        }
+        return tempList;
+    }
     #endregion
 }

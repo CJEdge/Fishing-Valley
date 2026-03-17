@@ -8,13 +8,6 @@ public class InventoryManager : Singleton<InventoryManager> {
 
 	public FishDatas FishDatas;
 
-	//Can be used for both fish and bait because they are both BaseItemData
-	[System.Serializable]
-	public class OwnedItemTypeData {
-		public int quantity;
-		public BaseItemData OwnedItemData;
-	}
-
 	public List<OwnedItemTypeData> OwnedFishTypeDatas;
     public int TotalOwnedFish
     {
