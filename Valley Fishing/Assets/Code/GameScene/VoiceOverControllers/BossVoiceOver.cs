@@ -1,6 +1,7 @@
 using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class BossVoiceOver : VoiceOverController
@@ -23,9 +24,7 @@ public class BossVoiceOver : VoiceOverController
 			case LevelController.State.AttatchBait:
 				if (InventoryManager.Instance.TotalOwnedBaits == 0) {
                     endScreenUI.SetActive(true);
-
-					SelectUIButton(initialButton);
-                    GameManager.Instance.EventSystem.SetSelectedGameObject(initialButton);
+					InputManager.Instance.SelectButton(initialButton);
 					return false;
 				}
 				break;

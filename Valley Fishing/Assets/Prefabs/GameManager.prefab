@@ -239,6 +239,7 @@ GameObject:
   - component: {fileID: 988541708520509280}
   - component: {fileID: 1265457929270212987}
   - component: {fileID: 9053393668482966408}
+  - component: {fileID: 4158044770492563218}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1150,6 +1151,12 @@ MonoBehaviour:
   OwnedFishTypeDatas: []
   BaitDatas: {fileID: 11400000, guid: ee2272021f5492f4fadd7bdb1c4015bf, type: 2}
   OwnedBaitTypeDatas: []
+  CurrentBait:
+    ItemName: 
+    ItemSellPrice: 0
+    ItemImage: {fileID: 0}
+    IsTutorial: 0
+    FishSpawnChances: []
 --- !u!114 &1265457929270212987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1175,3 +1182,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SoldFish: 000000000000000000000000
+--- !u!114 &4158044770492563218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7393596337781405747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4901287e12d7684ea6a676676e330ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
