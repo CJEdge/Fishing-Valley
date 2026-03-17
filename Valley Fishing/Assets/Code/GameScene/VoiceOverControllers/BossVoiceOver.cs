@@ -8,6 +8,7 @@ public class BossVoiceOver : VoiceOverController
 {
 	[SerializeField] private GameObject endScreenUI;
 	[SerializeField] private GameObject initialButton;
+	[SerializeField] private EventReference thanksForPlayingEvent;
 
 	public override bool PerformStateSwitch() {
 		if (!base.PerformStateSwitch()) {
@@ -46,11 +47,16 @@ public class BossVoiceOver : VoiceOverController
 		if (LevelController.CurrentState == LevelController.State.ReelingFish) {
 			GameManager.Instance.InputController.SetState(InputController.State.NotReeling);
 		}
+		if(LevelController.CurrentState == LevelController.State.FishCaught)
+		{
+            endScreenUI.SetActive(true);
+			AudioManager.Instance.PlayVoiceOver(thanksForPlayingEvent);
+            InputManager.Instance.SelectButton(initialButton);
+        }
 	}
 
 	public void LoadMenu()
 	{
-		Debug.Log("here");
 		SceneManager.LoadScene("Menu");
 	}
 }
