@@ -806,6 +806,10 @@ PrefabInstance:
       propertyPath: eventSystem
       value: 
       objectReference: {fileID: 1015315668}
+    - target: {fileID: 5728766699607765735, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6571493593516085787, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -884,6 +888,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6571493593516085787, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263675256124433731, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9121033386066951445, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}

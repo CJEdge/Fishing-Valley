@@ -36,7 +36,7 @@ public class Fish : MonoBehaviour
 
 	#region Properties
 
-	public FishDatas.FishData FishData;
+	[field: SerializeField] public FishDatas.FishData FishData;
 	public bool IsStrafer { get; set; }
     public int FishIndex { get; set; }
     private bool IsCentred { get; set; } = true;
@@ -100,9 +100,7 @@ public class Fish : MonoBehaviour
 
 	#region Public Methods
 
-	public void Initialize(FishDatas.FishData fishData) {
-		this.FishData = fishData;
-		name = fishData.FishName;
+	public void Initialize() {
 		float activityLevelInterval = (reelStart - reelEnd) / this.FishData.ActivityLevels.Count;
 		for (int i = 0; i < this.FishData.ActivityLevels.Count; i++) {
 			this.ActivityLevelIntervals.Add(reelStart - (i * activityLevelInterval));

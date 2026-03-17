@@ -82,23 +82,23 @@ public class LevelController : AbstractState<LevelController.State> {
 	private IEnumerator WaitForBite() {
 		yield return new WaitForSeconds(3); // TODO floating number??
 		SetState(State.ReelingFish);
-		GameManager.Instance.CurrentFish.Initialize(InventoryManager.Instance.OwnedFishTypeDatas[0].OwnedFishData);
+		GameManager.Instance.CurrentFish.Initialize();
 	}
 
 	private void SpawnFish() {
 		int fishIndex = 0;
 		float randomValue = UnityEngine.Random.value;
 		float cumulative = 0f;
-		Debug.Log(this.CurrentBait);
+		Debug.Log(this.CurrentBait.BaitName);
 ;		for (int i = 0; i < this.CurrentBait.FishSpawnChances.Count; i++) {
 			cumulative += this.CurrentBait.FishSpawnChances[i].SpawnChance;
 			if (randomValue < cumulative) {
-				fishIndex = i;
+				fishIndex = (int)this.CurrentBait.FishSpawnChances[i].FishName;
 				break;
 			}
 		}
 		Fish fishInstance = Instantiate(GameManager.Instance.FishPrefab, this.FishSpawnTransform.position, Quaternion.identity);
-        GameManager.Instance.FishPrefab.Initialize(InventoryManager.Instance.FishDatas.Datas[fishIndex]);
+		fishInstance.FishData = InventoryManager.Instance.FishDatas.Datas[fishIndex];
 		fishInstance.transform.parent = gameplayContainer;
 		fishInstance.IsTutorial = this.CurrentBait.IsTutorial;
 		GameManager.Instance.CurrentFish = fishInstance;
