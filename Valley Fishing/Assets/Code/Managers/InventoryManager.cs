@@ -55,8 +55,12 @@ public class InventoryManager : Singleton<InventoryManager> {
 		}
 		for (int i = 0; i < this.BaitDatas.datas.Length; i++)
 		{
-			this.OwnedBaitTypeDatas.Add(new OwnedItemTypeData());
-		}
+            OwnedItemTypeData baitTypeData = new OwnedItemTypeData();
+            baitTypeData.quantity = 0;
+            baitTypeData.OwnedItemData = this.BaitDatas.datas[i];
+			OwnedBaitTypeDatas.Add(baitTypeData);
+
+        }
 	}
 
 }

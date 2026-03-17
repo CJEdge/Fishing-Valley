@@ -35,6 +35,7 @@ public class ItemDataButtonGenerator : MonoBehaviour
             case ListUsed.Fish:
                 chosenList = InventoryManager.Instance.OwnedFishTypeDatas;
                 break;
+            //
             case ListUsed.Bait:
                 chosenList = InventoryManager.Instance.OwnedBaitTypeDatas;
                 break;
