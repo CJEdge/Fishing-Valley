@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class FishSellingUI : MonoBehaviour
 {
     #region Serialized Fields
-    [SerializeField] private FishDataButton fishButton;
+    [SerializeField] private ItemDataButton fishButton;
     [SerializeField] private Transform buttonParent;
     [SerializeField] private Button leaveShopButton;
     #endregion
@@ -36,9 +36,9 @@ public class FishSellingUI : MonoBehaviour
         {
             for (int i = 0; i < InventoryManager.Instance.OwnedFishTypeDatas.Count; i++)
             {
-                FishDataButton buttonInstance = Instantiate(fishButton, buttonParent);
+                ItemDataButton buttonInstance = Instantiate(fishButton, buttonParent);
                 buttonInstance.AssignData(InventoryManager.Instance.OwnedFishTypeDatas[i].OwnedFishData);
-                buttonInstance.name = InventoryManager.Instance.OwnedFishTypeDatas[i].OwnedFishData.FishName;
+                buttonInstance.name = InventoryManager.Instance.OwnedFishTypeDatas[i].OwnedFishData.ItemName;
                 Buttons.Add(buttonInstance.Button);
             }
         }

@@ -9,7 +9,7 @@ public class Icthyologists : Shop
 	#region Serialized Fields
 
 	[SerializeField] private IcthyologistData icthyologistData;
-	[SerializeField] private FishDataButton fishButton;
+	[SerializeField] private ItemDataButton fishButton;
 	[SerializeField] private Transform buttonParent;
 	[SerializeField] private Button leaveShopButton;
 
@@ -44,9 +44,9 @@ public class Icthyologists : Shop
 		}
 		if (!this.Initialized) {
 			for (int i = 0; i < InventoryManager.Instance.OwnedFishTypeDatas.Count; i++) {
-				FishDataButton buttonInstance = Instantiate(fishButton, buttonParent);
+				ItemDataButton buttonInstance = Instantiate(fishButton, buttonParent);
 				buttonInstance.AssignData(InventoryManager.Instance.OwnedFishTypeDatas[i].OwnedFishData);
-				buttonInstance.name = InventoryManager.Instance.OwnedFishTypeDatas[i].OwnedFishData.FishName;
+				buttonInstance.name = InventoryManager.Instance.OwnedFishTypeDatas[i].OwnedFishData.ItemName;
 				Buttons.Add(buttonInstance.Button);
 			}
 		}
@@ -78,7 +78,7 @@ public class Icthyologists : Shop
 
 	public void SellFish(int fishIndex) {
 		if (!IcthyologistManager.Instance.SoldFish[fishIndex]) {
-			GameManager.Instance.Money += InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].OwnedFishData.SellPrice;
+			GameManager.Instance.Money += InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].OwnedFishData.ItemSellPrice;
 			InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].quantity--;
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ItemBuy);
 			AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.YouHave);

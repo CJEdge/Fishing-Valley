@@ -87,8 +87,8 @@ public class BaitShop : Shop {
 		}
 		AudioManager.Instance.SkipVoiceOver();
 		for (int i = 0; i < InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].quantity; i++) {
-			GameManager.Instance.Money += InventoryManager.Instance.FishDatas.Datas[fishIndex].SellPrice;
-			this.FishSellPrice += InventoryManager.Instance.FishDatas.Datas[fishIndex].SellPrice;
+			GameManager.Instance.Money += InventoryManager.Instance.FishDatas.Datas[fishIndex].ItemSellPrice;
+			this.FishSellPrice += InventoryManager.Instance.FishDatas.Datas[fishIndex].ItemSellPrice;
 		}
 		if (InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].quantity > 0) {
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.MoneyEarnt);
@@ -113,8 +113,8 @@ public class BaitShop : Shop {
 				continue;
 			}
 			for (int j = InventoryManager.Instance.OwnedFishTypeDatas[i].quantity - 1; j >= 0; j--) {
-				GameManager.Instance.Money += InventoryManager.Instance.FishDatas.Datas[i].SellPrice;
-                this.FishSellPrice += InventoryManager.Instance.FishDatas.Datas[i].SellPrice;
+				GameManager.Instance.Money += InventoryManager.Instance.FishDatas.Datas[i].ItemSellPrice;
+                this.FishSellPrice += InventoryManager.Instance.FishDatas.Datas[i].ItemSellPrice;
                 InventoryManager.Instance.OwnedFishTypeDatas[i].quantity--;
 			}
 		}
@@ -135,11 +135,11 @@ public class BaitShop : Shop {
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
 			return;
 		}
-		if (InventoryManager.Instance.BaitDatas.datas[baitIndex].BaitPrice * sellQuantity > GameManager.Instance.Money) {
+		if (InventoryManager.Instance.BaitDatas.datas[baitIndex].ItemSellPrice * sellQuantity > GameManager.Instance.Money) {
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
 			return;
 		}
-		GameManager.Instance.Money -= InventoryManager.Instance.BaitDatas.datas[baitIndex].BaitPrice * sellQuantity;
+		GameManager.Instance.Money -= InventoryManager.Instance.BaitDatas.datas[baitIndex].ItemSellPrice * sellQuantity;
 		InventoryManager.Instance.OwnedBaitTypeDatas[baitIndex].quantity += sellQuantity;
 		this.BaitQuantities[baitIndex] -= sellQuantity;
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.MoneyEarnt);

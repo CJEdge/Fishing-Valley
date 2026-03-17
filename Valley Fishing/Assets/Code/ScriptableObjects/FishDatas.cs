@@ -10,10 +10,7 @@ using UnityEngine.UI;
 public class FishDatas : ScriptableObject { 
 
 	[System.Serializable]
-	public class FishData {
-		public string FishName;
-		public Sprite Sprite;
-		public int SellPrice;
+	public class FishData: BaseItemData {
 		public bool IsFailable;
 		public float ReelInSpeed;
 		public float SwimAwaySpeed;
@@ -44,7 +41,7 @@ public class FishDatas : ScriptableObject {
         List<string> fishNames = new List<string>();
         for (int i = 0; i < Datas.Length; i++)
         {
-            fishNames.Add(Datas[i].FishName.Replace(" ", ""));
+            fishNames.Add(Datas[i].ItemName.Replace(" ", ""));
         }
 
         StringBuilder sb = new StringBuilder();

@@ -48,12 +48,12 @@ public class FishView : MonoBehaviour
 	public void EnableFishUI(bool enable) {
 		if (enable) {
 			for (int i = 0; i < InventoryManager.Instance.FishDatas.Datas.Length; i++) {
-				if (InventoryManager.Instance.FishDatas.Datas[i].FishName == GameManager.Instance.CurrentFish.FishData.FishName) {
+				if (InventoryManager.Instance.FishDatas.Datas[i].ItemName == GameManager.Instance.CurrentFish.FishData.ItemName) {
 					fishUis[i].SetActive(enable);
 				}
 			}
 			int randomCaughtTextIndex = Random.Range(0, fishCaughtTexts.Length);
-			fishText.text = fishCaughtTexts[randomCaughtTextIndex] + " " + GameManager.Instance.CurrentFish.FishData.FishName + "!";
+			fishText.text = fishCaughtTexts[randomCaughtTextIndex] + " " + GameManager.Instance.CurrentFish.FishData.ItemName + "!";
 			fishText.gameObject.SetActive(enable);
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.FishCatch);
 		}

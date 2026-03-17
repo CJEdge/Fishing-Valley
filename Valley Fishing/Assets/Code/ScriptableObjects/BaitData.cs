@@ -15,11 +15,8 @@ public class BaitDatas : ScriptableObject
     }
 
     [System.Serializable]
-    public class Datas
+    public class Datas : BaseItemData
     {
-        public string BaitName;
-        public Sprite BaitImage;
-        public int BaitPrice;
         public bool IsTutorial;
         public List<FishSpawnChance> FishSpawnChances = new List<FishSpawnChance>();
     }

@@ -5,17 +5,17 @@ using UnityEngine.EventSystems;
 public class IcthyologistsFishButton : ButtonVoiceOverComponent {
 
 	[SerializeField] private FishDatas fishDatas;
-	[SerializeField] private FishDataButton fishDataButton;
+	[SerializeField] private ItemDataButton itemDataButton;
 
 	public override void OnSelect(BaseEventData eventData) {
 		base.OnSelect(eventData);
-		int index = ArrayUtility.IndexOf(fishDatas.Datas, fishDataButton.FishData);
-		GameManager.Instance.ShopController.Icthyologists.HoverFish(index);		
+        int index = ArrayUtility.IndexOf(fishDatas.Datas, itemDataButton.itemData);
+        GameManager.Instance.ShopController.Icthyologists.HoverFish(index);
 	}
 
 	public override void OnSubmit(BaseEventData eventData) {
 		base.OnSubmit(eventData);
-		int index = ArrayUtility.IndexOf(fishDatas.Datas, fishDataButton.FishData);
+		int index = ArrayUtility.IndexOf(fishDatas.Datas, itemDataButton.itemData);
 		GameManager.Instance.ShopController.Icthyologists.SellFish(index);
 	}
 }

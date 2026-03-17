@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: FishDatas
   m_EditorClassIdentifier: 
   Datas:
-  - FishName: Brown Trout
-    Sprite: {fileID: 21300000, guid: dbdd19b0b14af9b448e945aee0ef1319, type: 3}
-    SellPrice: 1
+  - ItemName: Brown Trout
+    ItemSellPrice: 1
+    ItemImage: {fileID: 21300000, guid: dbdd19b0b14af9b448e945aee0ef1319, type: 3}
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -43,9 +43,9 @@ MonoBehaviour:
         Data3: 675815579
         Data4: -1486664141
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/BrownTroutInfo
-  - FishName: Common Carp
-    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
-    SellPrice: 1
+  - ItemName: Common Carp
+    ItemSellPrice: 1
+    ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -73,9 +73,9 @@ MonoBehaviour:
         Data3: -1984268899
         Data4: -494359701
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/CommonCarpInfo
-  - FishName: Stone Loach
-    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
-    SellPrice: 1
+  - ItemName: Stone Loach
+    ItemSellPrice: 1
+    ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -103,9 +103,9 @@ MonoBehaviour:
         Data3: 1692203927
         Data4: -333913488
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/StoneLoach
-  - FishName: Eel
-    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
-    SellPrice: 5
+  - ItemName: Eel
+    ItemSellPrice: 5
+    ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -133,9 +133,9 @@ MonoBehaviour:
         Data3: 1789957793
         Data4: 351625996
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/EelInfo
-  - FishName: Pike
-    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
-    SellPrice: 5
+  - ItemName: Pike
+    ItemSellPrice: 5
+    ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -163,9 +163,9 @@ MonoBehaviour:
         Data3: 725785259
         Data4: 1869763058
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/PikeInfo
-  - FishName: Bream
-    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
-    SellPrice: 5
+  - ItemName: Bream
+    ItemSellPrice: 5
+    ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -193,9 +193,9 @@ MonoBehaviour:
         Data3: 1540267195
         Data4: 2029425335
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/BreamInfo
-  - FishName: Chub
-    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
-    SellPrice: 4
+  - ItemName: Chub
+    ItemSellPrice: 4
+    ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -223,9 +223,9 @@ MonoBehaviour:
         Data3: 1558448516
         Data4: 1511501718
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/ChubInfo
-  - FishName: Perch
-    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
-    SellPrice: 4
+  - ItemName: Perch
+    ItemSellPrice: 4
+    ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -253,9 +253,9 @@ MonoBehaviour:
         Data3: -535703114
         Data4: -1088123410
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/PerchInfo
-  - FishName: Bullhead
-    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
-    SellPrice: 3
+  - ItemName: Bullhead
+    ItemSellPrice: 3
+    ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -283,9 +283,9 @@ MonoBehaviour:
         Data3: 1632587696
         Data4: -2110957817
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/BullheadInfo
-  - FishName: Gudgeon
-    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
-    SellPrice: 3
+  - ItemName: Gudgeon
+    ItemSellPrice: 3
+    ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -313,9 +313,9 @@ MonoBehaviour:
         Data3: -2137742717
         Data4: 1058223944
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/GudgeonInfo
-  - FishName: Roach
-    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
-    SellPrice: 3
+  - ItemName: Roach
+    ItemSellPrice: 3
+    ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -343,9 +343,9 @@ MonoBehaviour:
         Data3: -1023547757
         Data4: -899727657
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/RoachInfo
-  - FishName: LlymLlymSalmon
-    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
-    SellPrice: 3
+  - ItemName: Llym Lly Salmon
+    ItemSellPrice: 3
+    ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -373,4 +373,3 @@ MonoBehaviour:
         Data3: 1512354955
         Data4: -1186297269
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/LLymLlymSalmonInfo
-  BaitDatas: {fileID: 0}
