@@ -42,7 +42,6 @@ public class BaitBoard : MonoBehaviour {
 			AudioManager.Instance.SetMusicParameter("BaitBoardVolume", 1);
 			baitBoardObject.SetActive(true);
 			for (int i = 0; i < baitshopComponents.Length; i++) {
-				baitshopComponents[i].SetActive(!baitBoardObject.activeSelf);
 				EventReference eventReference = new EventReference();
 				InitiallizeBaitBoard(eventReference, false);
 			}

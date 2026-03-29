@@ -42,7 +42,6 @@ public class FishBoard : MonoBehaviour
 			AudioManager.Instance.SetMusicParameter("FishBoardVolume", 1);
 			fishBoardObject.SetActive(true);			
 			for (int i = 0; i < baitshopComponents.Length; i++) {
-				baitshopComponents[i].SetActive(!fishBoardObject.activeSelf);
 				EventReference eventReference = new EventReference();
 				InitiallizeFishBoard(eventReference, false);
 			}

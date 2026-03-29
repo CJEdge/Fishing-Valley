@@ -8,6 +8,7 @@ public class ShopController : MonoBehaviour
 
 	[SerializeField] private EventSystem eventSystem;
 	[SerializeField] private EventReference levelMusic;
+	[SerializeField] private bool isTutorial;
 
 	#endregion
 
@@ -29,6 +30,9 @@ public class ShopController : MonoBehaviour
         GameManager.Instance.ShopController = this;
         GameManager.Instance.EventSystem = eventSystem;
         AudioManager.Instance.PlayMusic(levelMusic);
+		if (isTutorial) {
+			return;
+		}
         this.Shore.gameObject.SetActive(true);
         this.BaitShop.gameObject.SetActive(false);
     }

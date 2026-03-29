@@ -1,6 +1,8 @@
 using FMODUnity;
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FirstTutorialBaitShop : BaitShop {
 
@@ -106,10 +108,13 @@ public class FirstTutorialBaitShop : BaitShop {
 		yield return StartCoroutine(base.EnterShop(enter));
 		if (enter) {
 			AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopIntros[0]);
+		} else {
+			SceneManager.LoadScene(LevelManager.CatchTutorial_01);
 		}
 	}
 
 	public override void FishBoardSelected() {
+		base.FishBoardSelected();
 		if (this.PlayFishBoardIntro) {
 			AudioManager.Instance.PlayVoiceOver(fishBoardIntroEvent);
 			this.PlayFishBoardIntro = false;
@@ -119,6 +124,7 @@ public class FirstTutorialBaitShop : BaitShop {
 	}
 
 	public override void FishBasketSelected() {
+		base.FishBasketSelected();
 		if (this.PlayFishBasketIntro) {
 			AudioManager.Instance.PlayVoiceOver(fishBasketIntroEvent);
 			this.PlayFishBasketIntro = false;
@@ -128,6 +134,7 @@ public class FirstTutorialBaitShop : BaitShop {
 	}
 
 	public override void BaitBoardSelected() {
+		base.BaitBoardSelected();
 		if (this.PlayBaitBoardIntro) {
 			AudioManager.Instance.PlayVoiceOver(baitBoardIntroEvent);
 			this.PlayBaitBoardIntro = false;
@@ -136,6 +143,7 @@ public class FirstTutorialBaitShop : BaitShop {
 		AudioManager.Instance.PlayVoiceOver(baitBoardEvent);
 	}
 	public override void LeaveShopSelected() {
+		base.LeaveShopSelected();
 		AudioManager.Instance.PlayVoiceOver(leaveShopEvent);
 	}
 
@@ -148,4 +156,5 @@ public class FirstTutorialBaitShop : BaitShop {
 			OpenBaitBoard();
 		}
 	}
+
 }

@@ -50,18 +50,21 @@ public abstract class Shop : MonoBehaviour {
 
     public virtual IEnumerator EnterShop(bool enter)
     {
-		this.OnGreeting?.Invoke();
-        if (enter)
+		if (enter)
         {
-            AudioManager.Instance.PlayOneShot(FMODManager.Instance.ShopEnter);
-            yield return new WaitForSeconds(shopEnterTime);
+			yield return new WaitForSeconds(shopEnterTime);
+			this.OnGreeting?.Invoke();			
+			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ShopEnter);
         }
         else
         {
-            AudioManager.Instance.PlayOneShot(FMODManager.Instance.ShopEnter);
-            GameManager.Instance.ShopController.Shore.FinishedInShops[0] = true;
-            GameManager.Instance.ShopController.Shore.gameObject.SetActive(true);
+			this.OnGreeting?.Invoke();
+			yield return new WaitForSeconds(shopEnterTime);
+			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ShopEnter);
+            //GameManager.Instance.ShopController.Shore.FinishedInShops[0] = true;
+            //GameManager.Instance.ShopController.Shore.gameObject.SetActive(true);
         }
+		this.OnGreeting?.Invoke();
         gameObject.SetActive(enter);
     }
 
