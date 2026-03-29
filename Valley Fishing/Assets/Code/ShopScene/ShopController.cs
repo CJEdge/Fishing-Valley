@@ -33,8 +33,10 @@ public class ShopController : MonoBehaviour
 		if (isTutorial) {
 			return;
 		}
-        this.Shore.gameObject.SetActive(true);
-        this.BaitShop.gameObject.SetActive(false);
+		if (this.Shore != null) {
+			this.Shore.gameObject.SetActive(true);
+			this.BaitShop.gameObject.SetActive(false);
+		}        
     }
 
 	#endregion

@@ -5,7 +5,7 @@ public class LerpObjectToPosition : MonoBehaviour
 {
 	[SerializeField] private string lerpName;
 	[SerializeField] private float lerpDuration;
-	[SerializeField] private Transform destination;
+	public Transform destination;
 
 	public void BeginLerp() {
 		StartCoroutine(RunBeginLerp());

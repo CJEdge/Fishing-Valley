@@ -22,7 +22,8 @@ public class BaitShopButton : ButtonVoiceOverComponent {
 			AudioManager.Instance.PlayVoiceOverChain(voiceoverChain);
 			return;
 		}
-
+		Debug.Log(baitIndex);
+		Debug.Log(baitBoard.BaitQuantities[baitIndex]);
 		for (int i = 0; i < FMODManager.Instance.GetNumber(baitBoard.BaitQuantities[baitIndex]).Count; i++) {
 			voiceoverChain.Add(FMODManager.Instance.GetNumber(baitBoard.BaitQuantities[baitIndex])[i]);
 		}

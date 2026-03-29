@@ -10,7 +10,7 @@ public abstract class Shop : MonoBehaviour {
 
 	#region Serialized Fields
 
-	[SerializeField] private float shopEnterTime;
+	public float shopEnterTime;
 
 	#endregion
 
@@ -44,8 +44,12 @@ public abstract class Shop : MonoBehaviour {
 	}
 
 	public virtual void OnDestroy() {
-		AudioManager.Instance.OnVoiceLineOver -= VoiceLineOver;
-		GameManager.Instance.InputController.OnSkip -= Skip;
+		if (AudioManager.Instance != null) {
+			AudioManager.Instance.OnVoiceLineOver -= VoiceLineOver;
+		}
+		if (GameManager.Instance != null) {
+			GameManager.Instance.InputController.OnSkip -= Skip;
+		}
 	}
 
     public virtual IEnumerator EnterShop(bool enter)
@@ -58,13 +62,12 @@ public abstract class Shop : MonoBehaviour {
         }
         else
         {
+			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ShopEnter);
 			this.OnGreeting?.Invoke();
 			yield return new WaitForSeconds(shopEnterTime);
-			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ShopEnter);
             //GameManager.Instance.ShopController.Shore.FinishedInShops[0] = true;
             //GameManager.Instance.ShopController.Shore.gameObject.SetActive(true);
         }
-		this.OnGreeting?.Invoke();
         gameObject.SetActive(enter);
     }
 

@@ -133,7 +133,6 @@ public class BaitShop : Shop {
 	}
 
 	public virtual void BuyBait(int baitIndex, int sellQuantity) {
-		Debug.Log(this.BaitQuantities[baitIndex]);
 		if(this.BaitQuantities[baitIndex] == 0) {
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
 			return;
@@ -184,6 +183,7 @@ public class BaitShop : Shop {
 	}
 
 	public virtual void FishBoardSelected() {
+		Debug.Log("here");
 		lerpObjectToPositions[1].BeginLerp();
 	}
 

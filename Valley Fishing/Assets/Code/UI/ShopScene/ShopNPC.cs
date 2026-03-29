@@ -29,12 +29,10 @@ public class ShopNPC : MonoBehaviour
 	#region Private Methods
 
 	private void Greeting() {
-		Debug.Log("Greeting");
 		animator.Play("Greeting");
 	}
 
 	private void SaleMade() {
-		Debug.Log("ddalse");
 		animator.Play("Sale");
 	}
 

@@ -60,25 +60,6 @@ public class Shore : MonoBehaviour
 		this.ShopController.Shore.gameObject.SetActive(true);
 	}
 
-	//public virtual void Initialize() {
-	//	if(this.FinishedInShops.Count == 0) {
-	//		for (int i = 0; i < shopButtons.Length - 1; i++) {
-	//			this.FinishedInShops.Add(false);
-	//		}
-	//		AudioManager.Instance.OnVoiceLineOver += VoiceLineOver;
-	//	}
-	//	bool allShopsFinished = true;
-	//	for (int i = 0; i < this.FinishedInShops.Count; i++) {
-	//		if (!this.FinishedInShops[i]) {
-	//			allShopsFinished = false;
-	//			break;
-	//		}
-	//	}
-	//	this.AllShopsFinished = allShopsFinished;
-	//	this.TimesSkipped = 0;
-	//	this.ShopController.Shore.gameObject.SetActive(true);
-	//}
-
 	public void OnDestroy() {
 		AudioManager.Instance.OnVoiceLineOver -= VoiceLineOver;
 	}
