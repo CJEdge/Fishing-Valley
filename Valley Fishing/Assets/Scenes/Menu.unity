@@ -1253,6 +1253,7 @@ GameObject:
   - component: {fileID: 603940066}
   - component: {fileID: 603940065}
   - component: {fileID: 603940069}
+  - component: {fileID: 603940070}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -1407,6 +1408,100 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+--- !u!114 &603940070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603940063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbc1396696dc03447848ba16dd8f5bf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startSelected: 1
+  button: {fileID: 603940066}
+  selectObject: {fileID: 0}
+  clickObject: {fileID: 0}
+  <ButtonImage>k__BackingField: {fileID: 0}
+  <ScaleAnimation>k__BackingField:
+    EnableCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnableAnimationInProgress: 0
+    IdleCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: -0.0020637512
+        value: 1.0026855
+        inSlope: 0.3336239
+        outSlope: 0.3336239
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.1661035
+      - serializedVersion: 3
+        time: 1.0040007
+        value: 1.0001209
+        inSlope: -0.36101347
+        outSlope: -0.36101347
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.13644697
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    SelectCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    SelectAnimationInProgress: 0
+    EnalbeIdleAnimation: 0
+    IdleSelectCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: -0.0020637512
+        value: 1.0026855
+        inSlope: 0.3336239
+        outSlope: 0.3336239
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.1661035
+      - serializedVersion: 3
+        time: 1.0040007
+        value: 1.0001209
+        inSlope: -0.36101347
+        outSlope: -0.36101347
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.13644697
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    ClickCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    ClickAnimationInProgress: 0
+    IdleClickCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
 --- !u!1 &754988094
 GameObject:
   m_ObjectHideFlags: 0

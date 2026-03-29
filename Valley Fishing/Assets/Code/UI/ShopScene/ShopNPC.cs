@@ -13,7 +13,7 @@ public class ShopNPC : MonoBehaviour
 
 	#region Mono Behaviours
 
-	public void Start() {
+	public void Awake() {
 		shop.OnGreeting += Greeting;
 		shop.OnSaleMade += SaleMade;
 	}
@@ -29,10 +29,12 @@ public class ShopNPC : MonoBehaviour
 	#region Private Methods
 
 	private void Greeting() {
+		Debug.Log("Greeting");
 		animator.Play("Greeting");
 	}
 
 	private void SaleMade() {
+		Debug.Log("ddalse");
 		animator.Play("Sale");
 	}
 

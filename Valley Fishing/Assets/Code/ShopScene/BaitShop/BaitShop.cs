@@ -24,6 +24,7 @@ public class BaitShop : Shop {
 	[SerializeField] protected EventReference fishBasketEvent;
 	[SerializeField] protected EventReference baitBoardEvent;
 	[SerializeField] protected EventReference leaveShopEvent;
+	[SerializeField] protected LerpObjectToPosition[] lerpObjectToPositions;
 
 	#endregion
 
@@ -100,6 +101,7 @@ public class BaitShop : Shop {
 			voiceOverChain.Add(FMODManager.Instance.Gold);
 			AudioManager.Instance.PlayVoiceOverChain(voiceOverChain);
 		}
+		this.OnSaleMade?.Invoke();
 		StartCoroutine(WaitOneFrame(PerformSellFish, fishIndex));
 	}
 
@@ -126,6 +128,7 @@ public class BaitShop : Shop {
 			voiceOverChain.Add(FMODManager.Instance.GetNumber(GameManager.Instance.Money)[i]);
 		}
 		voiceOverChain.Add(FMODManager.Instance.Gold);
+		this.OnSaleMade?.Invoke();
 		AudioManager.Instance.PlayVoiceOverChain(voiceOverChain);
 	}
 
@@ -149,6 +152,7 @@ public class BaitShop : Shop {
 			voiceOverChain.Add(FMODManager.Instance.GetNumber(GameManager.Instance.Money)[i]);
 		}
 		voiceOverChain.Add(FMODManager.Instance.Gold);
+		this.OnSaleMade?.Invoke();
 		AudioManager.Instance.PlayVoiceOverChain(voiceOverChain);
 	}
 
@@ -167,6 +171,7 @@ public class BaitShop : Shop {
 	}
 
 	public virtual void OpenFishBoard() {
+		lerpObjectToPositions[1].BeginLerp();
 		fishBoard.OpenFishBoard();
 	}
 	public virtual void OpenBaitBoard() {
@@ -179,17 +184,18 @@ public class BaitShop : Shop {
 	}
 
 	public virtual void FishBoardSelected() {
+		lerpObjectToPositions[1].BeginLerp();
 	}
 
 	public virtual void FishBasketSelected() {
-
+		lerpObjectToPositions[0].BeginLerp();
 	}
 
 	public virtual void BaitBoardSelected() {
-
+		lerpObjectToPositions[2].BeginLerp();
 	}
 	public virtual void LeaveShopSelected() {
-
+		lerpObjectToPositions[3].BeginLerp();
 	}
 
 	#endregion
