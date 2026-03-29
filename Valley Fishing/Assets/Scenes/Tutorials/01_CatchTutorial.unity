@@ -951,6 +951,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 678207496438668995, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 678207496438668995, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[23].m_ActionId
+      value: 415c6e78-7416-46ef-a1e8-5ba110d0cc89
+      objectReference: {fileID: 0}
+    - target: {fileID: 678207496438668995, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[24].m_ActionId
+      value: 46fad9ae-031d-42b9-9ee2-a086aa1a7801
+      objectReference: {fileID: 0}
+    - target: {fileID: 678207496438668995, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[23].m_ActionName
+      value: 'Player/RT[/XInputControllerWindows/rightTrigger]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 678207496438668995, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[24].m_ActionName
+      value: 'Player/Replay Line[/XInputControllerWindows/buttonWest]'
+      objectReference: {fileID: 0}
     - target: {fileID: 1827627906022144295, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
       propertyPath: blurObject
       value: 
@@ -964,7 +984,8 @@ PrefabInstance:
       value: '[Gameplay]'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2754001739683791842, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
