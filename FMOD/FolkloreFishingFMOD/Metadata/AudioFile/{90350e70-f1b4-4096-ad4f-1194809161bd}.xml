@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{90350e70-f1b4-4096-ad4f-1194809161bd}">
+		<property name="assetPath">
+			<value>Voice Over/Captain/Game Introduction/1 - Gameplay Tutorial 1/7 You_re ready.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.75</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8947bfd8-85a4-4658-892e-65752c94929b}</destination>
+		</relationship>
+	</object>
+</objects>

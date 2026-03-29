@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c4aa777e-122d-4a65-afd2-4b3f0b294b3f}">
+		<property name="assetPath">
+			<value>Voice Over/Captain/Game Introduction/4 - Bait Shop Tutorial 2/2 Get some more bait.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.3749886621315195</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8947bfd8-85a4-4658-892e-65752c94929b}</destination>
+		</relationship>
+	</object>
+</objects>

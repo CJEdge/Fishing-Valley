@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b6112a83-dc2f-4d1b-a6d6-022beb678612}">
+		<property name="assetPath">
+			<value>Voice Over/Captain/Fish Lines/Common Carp/Common Carp Catch Line 1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.1249886621315193</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8947bfd8-85a4-4658-892e-65752c94929b}</destination>
+		</relationship>
+	</object>
+</objects>

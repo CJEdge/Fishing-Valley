@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{909c265b-c425-4c0b-906d-2d1281a171a6}">
+		<property name="assetPath">
+			<value>Voice Over/Captain/Game Introduction/2- Bait Shop Tutorial 1/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8947bfd8-85a4-4658-892e-65752c94929b}</destination>
+		</relationship>
+	</object>
+</objects>
