@@ -472,6 +472,7 @@ MonoBehaviour:
       Data3: -193610308
       Data4: -1712786068
     Path: event:/Music/ShopScene
+  isTutorial: 0
   <Shore>k__BackingField: {fileID: 1808427007}
   <BaitShop>k__BackingField: {fileID: 895185100}
   <RodShop>k__BackingField: {fileID: 1342948190}
@@ -1212,6 +1213,26 @@ PrefabInstance:
     - target: {fileID: 2536111126999484089, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: MenuGreeting.Path
+      value: event:/VoiceOver/Captain/FolkloreFishing!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: MenuGreeting.Guid.Data1
+      value: 751111704
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: MenuGreeting.Guid.Data2
+      value: 1309586920
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: MenuGreeting.Guid.Data3
+      value: -113407324
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472528235016745865, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: MenuGreeting.Guid.Data4
+      value: -772827154
       objectReference: {fileID: 0}
     - target: {fileID: 7393596337781405747, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: m_Name
@@ -1970,7 +1991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8914233228798586828, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -28.914978
+      value: -28.91504
       objectReference: {fileID: 0}
     - target: {fileID: 9061242871995775079, guid: 58eb77cd9f27070478a850972cfe0c3c, type: 3}
       propertyPath: m_text

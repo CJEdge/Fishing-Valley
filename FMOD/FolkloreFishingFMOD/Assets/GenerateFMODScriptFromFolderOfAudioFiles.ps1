@@ -1,10 +1,17 @@
 param(
     [Parameter(Mandatory = $true)]
-    [string]$RootFolder
+    [Alias("RootFolder")]
+    [string]$SourceFolder,
+
+    [Parameter(Mandatory = $false)]
+    [string]$EventRootPath
 )
 
-$root = (Resolve-Path $RootFolder).Path
-$rootFolderName = Split-Path $root -Leaf
+$root = (Resolve-Path $SourceFolder).Path
+if (-not $PSBoundParameters.ContainsKey("EventRootPath") -or [string]::IsNullOrWhiteSpace($EventRootPath)) {
+    $EventRootPath = Split-Path $root -Leaf
+}
+
 $scriptsDir = Join-Path $env:LOCALAPPDATA "FMOD Studio\Scripts"
 
 if (-not (Test-Path $scriptsDir)) {
@@ -14,11 +21,36 @@ if (-not (Test-Path $scriptsDir)) {
 function Sanitize-Name {
     param([string]$Text)
     if ($null -eq $Text) { return "" }
-    return ($Text -replace "[\'’]", "" -replace "\s+", "")
+    return ($Text -replace "[_'\u2019]", "" -replace "\s+", "")
 }
 
-$sanitizedRootFolderName = Sanitize-Name $rootFolderName
-$outputFileName = "GENERATE-$sanitizedRootFolderName.js"
+function Sanitize-Path {
+    param([string]$Path)
+
+    if ([string]::IsNullOrWhiteSpace($Path)) {
+        return ""
+    }
+
+    $segments = @()
+    foreach ($seg in ($Path -split '[\\/]+')) {
+        if (-not [string]::IsNullOrWhiteSpace($seg)) {
+            $sanitized = Sanitize-Name $seg
+            if ($sanitized -ne "") {
+                $segments += $sanitized
+            }
+        }
+    }
+
+    return ($segments -join '/')
+}
+
+$sanitizedEventRootPath = Sanitize-Path $EventRootPath
+if ($sanitizedEventRootPath -eq "") {
+    throw "EventRootPath must contain at least one valid folder name."
+}
+
+$outputFileSafePath = $sanitizedEventRootPath -replace '/', '-'
+$outputFileName = "GENERATE-$outputFileSafePath.js"
 $outputPath = Join-Path $scriptsDir $outputFileName
 
 $result = @()
@@ -36,16 +68,7 @@ Get-ChildItem -Path $root -Recurse -File -Filter *.wav |
             $relativeFolder = ""
         }
 
-        $folderSegments = @()
-        if ($relativeFolder -ne "") {
-            foreach ($seg in ($relativeFolder -split '/')) {
-                if ($seg -ne "") {
-                    $folderSegments += (Sanitize-Name $seg)
-                }
-            }
-        }
-
-        $sanitizedRelativeFolder = ($folderSegments -join '/')
+        $sanitizedRelativeFolder = Sanitize-Path $relativeFolder
         $eventName = Sanitize-Name ([System.IO.Path]::GetFileNameWithoutExtension($_.Name))
 
         $result += [PSCustomObject]@{
@@ -56,25 +79,29 @@ Get-ChildItem -Path $root -Recurse -File -Filter *.wav |
     }
 
 $json = $result | ConvertTo-Json -Depth 10 -Compress
-$escapedRoot = $sanitizedRootFolderName.Replace('\','\\').Replace('"','\"')
-#HARDCODED, NEEDS CHANGING TO WHATEVER TEMPLATE 
+$menuPath = $sanitizedEventRootPath -replace '/', '\'
+$escapedRootPath = $sanitizedEventRootPath.Replace('\','\\').Replace('"','\"')
+$escapedMenuPath = $menuPath.Replace('\','\\').Replace('"','\"')
+#HARDCODED, NEEDS CHANGING TO WHATEVER TEMPLATE
 $templatePath = "event:/_Templates/VO_Template"
 $escapedTemplatePath = $templatePath.Replace('\','\\').Replace('"','\"')
 
 $js = @"
-var FMOD_GENERATED_IMPORT_ROOT_FOLDER = "$escapedRoot";
+var FMOD_GENERATED_IMPORT_ROOT_PATH = "$escapedRootPath";
 var FMOD_GENERATED_IMPORT_TEMPLATE_PATH = "$escapedTemplatePath";
 var FMOD_GENERATED_IMPORT_DATA = $json;
 
 studio.menu.addMenuItem({
-    name: "Generated Import\\$sanitizedRootFolderName",
+    name: "Generated Import\\$escapedMenuPath",
     execute: function() {
 
-        var ROOT_EVENT_FOLDER_NAME = FMOD_GENERATED_IMPORT_ROOT_FOLDER;
+        var ROOT_EVENT_FOLDER_PATH = FMOD_GENERATED_IMPORT_ROOT_PATH;
         var TEMPLATE_EVENT_PATH = FMOD_GENERATED_IMPORT_TEMPLATE_PATH;
         //ALSO HARDCODED, NEEDS CHANGING
         var TARGET_BANK_PATH = "bank:/VoiceLines";
         var PARAM_NAME = "ControlScheme";
+        var createdCount = 0;
+        var skippedExistingCount = 0;
 
         var masterEventFolder = studio.project.workspace.masterEventFolder;
         var targetBank = studio.project.lookup(TARGET_BANK_PATH);
@@ -103,6 +130,17 @@ studio.menu.addMenuItem({
             f.name = name;
             f.folder = parent;
             return f;
+        }
+
+        function findOrCreateFolderPath(parent, path) {
+            var current = parent;
+            var parts = split(path);
+
+            for (var i = 0; i < parts.length; i++) {
+                current = findOrCreateFolder(current, parts[i]);
+            }
+
+            return current;
         }
 
         function findEvent(folder, name) {
@@ -201,7 +239,7 @@ studio.menu.addMenuItem({
             }
         }
 
-        var rootFolder = findOrCreateFolder(masterEventFolder, ROOT_EVENT_FOLDER_NAME);
+        var rootFolder = findOrCreateFolderPath(masterEventFolder, ROOT_EVENT_FOLDER_PATH);
 
         for (var i = 0; i < FMOD_GENERATED_IMPORT_DATA.length; i++) {
             var item = FMOD_GENERATED_IMPORT_DATA[i];
@@ -215,12 +253,17 @@ studio.menu.addMenuItem({
 
             var eventObj = findEvent(currentFolder, item.name);
 
-            if (!eventObj) {
-                eventObj = createEventFromTemplate(currentFolder, item.name);
-                if (!eventObj) {
-                    continue;
-                }
+            if (eventObj) {
+                skippedExistingCount++;
+                continue;
             }
+
+            eventObj = createEventFromTemplate(currentFolder, item.name);
+            if (!eventObj) {
+                continue;
+            }
+
+            createdCount++;
 
             assignBank(eventObj);
 
@@ -239,7 +282,7 @@ studio.menu.addMenuItem({
             addAudioAcrossParameter(track, eventParam, audio);
         }
 
-        alert("Done.");
+        alert("Done.\nCreated: " + createdCount + "\nSkipped existing: " + skippedExistingCount);
     }
 });
 "@
@@ -250,8 +293,14 @@ Write-Host ""
 Write-Host "Generated FMOD script:"
 Write-Host $outputPath
 Write-Host ""
+Write-Host "Source folder:"
+Write-Host $root
+Write-Host ""
+Write-Host "Target event path:"
+Write-Host $sanitizedEventRootPath
+Write-Host ""
 Write-Host "Expected template path:"
 Write-Host $templatePath
 Write-Host ""
 Write-Host "Run it inside FMOD:"
-Write-Host "Scripts -> Generated Import -> $sanitizedRootFolderName"
+Write-Host "Scripts -> Generated Import -> $menuPath"
