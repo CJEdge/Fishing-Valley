@@ -44,6 +44,7 @@ public class BaitView : MonoBehaviour
 	#region Public Methods
 
 	public void EnableBaitUI(bool enable) {
+		Debug.Log("here");
 		buttonsGameobject.SetActive(enable);
 		if (enable == false) {
 			GameManager.Instance.LevelController.SetState(LevelController.State.IdleWithBait);
@@ -81,6 +82,7 @@ public class BaitView : MonoBehaviour
 	}
 
 	public void BaitClicked(int baitIndex) {
+		Debug.Log("click");
 		AudioManager.Instance.PlayBaitSound(false, 0);
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.AttatchBaitSounds[baitIndex]);
 		InventoryManager.Instance.CurrentBait = InventoryManager.Instance.BaitDatas.datas[baitIndex];

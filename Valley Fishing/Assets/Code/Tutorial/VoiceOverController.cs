@@ -115,12 +115,8 @@ public class VoiceOverController : MonoBehaviour
 				if (AllTutorialsCompleted(this.CastRodTutorialsCompleted)) {
 					return false;
 				}
-				if(PlayNextTutotialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials)) {
-					return false;
-				}
 				return true;
 			case LevelController.State.WaitingForBite:
-				IncrementTutorial(this.CastRodTutorialsCompleted);
 				break;
 			case LevelController.State.ReelingFish:
 				if (this.CurrentFish != null) {
