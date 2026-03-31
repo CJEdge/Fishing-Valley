@@ -314,11 +314,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MenuGreeting:
     Guid:
-      Data1: 432922459
-      Data2: 1340342605
-      Data3: -954455115
-      Data4: -221744988
-    Path: event:/VoiceLines/MainMenu/MenuIntro
+      Data1: 751111704
+      Data2: 1309586920
+      Data3: -113407324
+      Data4: -772827154
+    Path: event:/VoiceOver/Captain/FolkloreFishing!
   MenuPlay:
     Guid:
       Data1: 421587335
@@ -342,36 +342,36 @@ MonoBehaviour:
     Path: event:/VoiceLines/MainMenu/MenuMainMenu
   IntroCutscenes:
   - Guid:
-      Data1: -2051325276
-      Data2: 1285507992
-      Data3: -1565593455
-      Data4: 1931711181
-    Path: event:/VoiceLines/Level Scene/Intro Cutscenes/Level 0
+      Data1: 1567598266
+      Data2: 1115362916
+      Data3: -461855609
+      Data4: -1277669855
+    Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/1WelcomeAboard
   - Guid:
-      Data1: 34057961
-      Data2: 1159149749
-      Data3: -2031331445
-      Data4: -799445008
-    Path: event:/VoiceLines/Level Scene/Intro Cutscenes/Level 1
+      Data1: -529485050
+      Data2: 1135418676
+      Data3: -827329615
+      Data4: 2039422990
+    Path: event:/VoiceOver/Captain/GameIntroduction/3-GameplayTutorial2/1Backontheboat
   - Guid:
-      Data1: -1427230422
-      Data2: 1180601217
-      Data3: 221454254
-      Data4: -35801480
-    Path: event:/VoiceLines/Level Scene/Intro Cutscenes/Level 2
+      Data1: -1942920685
+      Data2: 1087190550
+      Data3: -731685731
+      Data4: -957246452
+    Path: event:/VoiceOver/Captain/GameIntroduction/5-GameplayTutorial3/1Hopethesenewbaitsareworthit
   - Guid:
-      Data1: 1906869585
-      Data2: 1233512109
-      Data3: -1325823104
-      Data4: 1120191466
-    Path: event:/VoiceLines/Level Scene/Intro Cutscenes/Boss 0
+      Data1: 1466461725
+      Data2: 1255486407
+      Data3: 1750010551
+      Data4: -988656913
+    Path: event:/VoiceOver/Captain/GameIntroduction/6-BossEncounter/1Therainispickingup
   LeaveBoatPrompts:
   - Guid:
-      Data1: -1663164235
-      Data2: 1260862910
-      Data3: -482018403
-      Data4: -192290849
-    Path: event:/VoiceLines/Level Scene/LeaveBoatPrompt/0 Head Back To Shore
+      Data1: -1500428130
+      Data2: 1259848348
+      Data3: -667063148
+      Data4: -1348337181
+    Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/15You_regettingthehangofthis
   ShoreIntros:
   - Guid:
       Data1: -996136634

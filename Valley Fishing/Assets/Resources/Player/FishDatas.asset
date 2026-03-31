@@ -24,18 +24,18 @@ MonoBehaviour:
     MovementDirections: 
     fishNameAudio:
       Guid:
-        Data1: 689430516
-        Data2: 1180275496
-        Data3: -748291173
-        Data4: 816933496
-      Path: event:/VoiceLines/Misc/Captain/Fish Names/BrownTrouts
+        Data1: 1772953255
+        Data2: 1332014131
+        Data3: 698798234
+        Data4: -1070912240
+      Path: event:/VoiceOver/Captain/FishLines/BrownTrout/BrownTroutQuip
     fishCatchAudio:
       Guid:
-        Data1: 939592733
-        Data2: 1121045764
-        Data3: -1960769622
-        Data4: 191476268
-      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/0_BrownTrout
+        Data1: -423763100
+        Data2: 1282895005
+        Data3: 1214496385
+        Data4: 449069052
+      Path: event:/VoiceOver/Captain/FishLines/BrownTrout/BrownTroutCatch1
     icthyologistInfoAudio:
       Guid:
         Data1: 689494142
@@ -54,18 +54,18 @@ MonoBehaviour:
     MovementDirections: 
     fishNameAudio:
       Guid:
-        Data1: -1444365287
-        Data2: 1183918570
-        Data3: 183735209
-        Data4: 536203139
-      Path: event:/VoiceLines/Misc/Captain/Fish Names/CommonCarps
+        Data1: -84499398
+        Data2: 1116992498
+        Data3: 809728438
+        Data4: 1339775578
+      Path: event:/VoiceOver/Captain/FishLines/CommonCarp/CommonCarpQuip
     fishCatchAudio:
       Guid:
-        Data1: -953698523
-        Data2: 1243577777
-        Data3: 1931285390
-        Data4: -315869571
-      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/1_CommonCarp
+        Data1: 1024480681
+        Data2: 1226900684
+        Data3: 31860413
+        Data4: -1971332819
+      Path: event:/VoiceOver/Captain/FishLines/CommonCarp/CommonCarpCatchLine1
     icthyologistInfoAudio:
       Guid:
         Data1: 106858057
@@ -84,18 +84,18 @@ MonoBehaviour:
     MovementDirections: 
     fishNameAudio:
       Guid:
-        Data1: -1864033762
-        Data2: 1272187679
-        Data3: 1601915028
-        Data4: 1137487123
-      Path: event:/VoiceLines/Misc/Captain/Fish Names/StoneLoaches
+        Data1: 1791469117
+        Data2: 1100665960
+        Data3: -1799515458
+        Data4: 464448179
+      Path: event:/VoiceOver/Captain/FishLines/StoneLoach/StoneloachQuip
     fishCatchAudio:
       Guid:
-        Data1: -1519471312
-        Data2: 1103977819
-        Data3: 1588832440
-        Data4: -1687215191
-      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/2_StoneLoach
+        Data1: 1037275791
+        Data2: 1291659433
+        Data3: -1399280207
+        Data4: 1682857083
+      Path: event:/VoiceOver/Captain/FishLines/StoneLoach/StoneloachCatchLine1
     icthyologistInfoAudio:
       Guid:
         Data1: -2044789402
@@ -114,18 +114,18 @@ MonoBehaviour:
     MovementDirections: 
     fishNameAudio:
       Guid:
-        Data1: 1146006814
-        Data2: 1103422383
-        Data3: 2118669996
-        Data4: -500227148
-      Path: event:/VoiceLines/Misc/Captain/Fish Names/Eels
+        Data1: 132512088
+        Data2: 1155906857
+        Data3: 954972827
+        Data4: 1217961034
+      Path: event:/VoiceOver/Captain/FishLines/Eel/EelQuip
     fishCatchAudio:
       Guid:
-        Data1: -2007728146
-        Data2: 1341215824
-        Data3: -1582757745
-        Data4: -1955610266
-      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/7_Eel
+        Data1: -924942623
+        Data2: 1108407820
+        Data3: -717259100
+        Data4: 1071063031
+      Path: event:/VoiceOver/Captain/FishLines/Eel/EelCatchLine1
     icthyologistInfoAudio:
       Guid:
         Data1: 1889757249
@@ -144,18 +144,18 @@ MonoBehaviour:
     MovementDirections: 
     fishNameAudio:
       Guid:
-        Data1: -259922885
-        Data2: 1249522367
-        Data3: 777684923
-        Data4: 1620817878
-      Path: event:/VoiceLines/Misc/Captain/Fish Names/Pikes
+        Data1: -2032667337
+        Data2: 1292211375
+        Data3: 1005852041
+        Data4: -659921996
+      Path: event:/VoiceOver/Captain/FishLines/Pike/PikeQuip
     fishCatchAudio:
       Guid:
-        Data1: 406005264
-        Data2: 1174642325
-        Data3: 312116871
-        Data4: 1998295607
-      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/8_Pike
+        Data1: 800947069
+        Data2: 1297980189
+        Data3: -1892671870
+        Data4: -455398263
+      Path: event:/VoiceOver/Captain/FishLines/Pike/PikeCatchLine1
     icthyologistInfoAudio:
       Guid:
         Data1: 763025475
@@ -174,18 +174,18 @@ MonoBehaviour:
     MovementDirections: 
     fishNameAudio:
       Guid:
-        Data1: -1035222830
-        Data2: 1216350848
-        Data3: 54859155
-        Data4: -819554457
-      Path: event:/VoiceLines/Misc/Captain/Fish Names/Breams
+        Data1: 804210720
+        Data2: 1244236878
+        Data3: 795514808
+        Data4: 286585773
+      Path: event:/VoiceOver/Captain/FishLines/Bream/BreamQuip
     fishCatchAudio:
       Guid:
-        Data1: 90150426
-        Data2: 1283453499
-        Data3: 1560377743
-        Data4: 218248328
-      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/6_Bream
+        Data1: -157128073
+        Data2: 1080162048
+        Data3: 628441753
+        Data4: -1272950714
+      Path: event:/VoiceOver/Captain/FishLines/Bream/BreamCatchLine1
     icthyologistInfoAudio:
       Guid:
         Data1: 158588274
@@ -204,18 +204,18 @@ MonoBehaviour:
     MovementDirections: 
     fishNameAudio:
       Guid:
-        Data1: -1747735741
-        Data2: 1138281000
-        Data3: -1962287998
-        Data4: 680678659
-      Path: event:/VoiceLines/Misc/Captain/Fish Names/Chubs
+        Data1: 863069756
+        Data2: 1075734344
+        Data3: 221294482
+        Data4: -445472425
+      Path: event:/VoiceOver/Captain/FishLines/Chub/ChubQuip
     fishCatchAudio:
       Guid:
-        Data1: 44057314
-        Data2: 1167346606
-        Data3: 1237556103
-        Data4: 160694482
-      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/5_Chub
+        Data1: -1684984929
+        Data2: 1274900748
+        Data3: 642843533
+        Data4: -1881994003
+      Path: event:/VoiceOver/Captain/FishLines/Chub/ChubCatchLine1
     icthyologistInfoAudio:
       Guid:
         Data1: 427353103
@@ -234,18 +234,18 @@ MonoBehaviour:
     MovementDirections: 
     fishNameAudio:
       Guid:
-        Data1: 1257171957
-        Data2: 1257535922
-        Data3: 59105195
-        Data4: -970968916
-      Path: event:/VoiceLines/Misc/Captain/Fish Names/Perches
+        Data1: 1054531516
+        Data2: 1210998529
+        Data3: 982860703
+        Data4: -176280440
+      Path: event:/VoiceOver/Captain/FishLines/Perch/PerchQuip
     fishCatchAudio:
       Guid:
-        Data1: 1171559235
-        Data2: 1250734834
-        Data3: 808673208
-        Data4: -1169748129
-      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/4_Perch
+        Data1: 1752140011
+        Data2: 1290870739
+        Data3: 2104935830
+        Data4: -1993415754
+      Path: event:/VoiceOver/Captain/FishLines/Perch/PerchCatchLine1
     icthyologistInfoAudio:
       Guid:
         Data1: 1951225689
@@ -264,18 +264,18 @@ MonoBehaviour:
     MovementDirections: 
     fishNameAudio:
       Guid:
-        Data1: -1743984045
-        Data2: 1241039516
-        Data3: -1097936752
-        Data4: 640936890
-      Path: event:/VoiceLines/Misc/Captain/Fish Names/BullHeads
+        Data1: 1872826772
+        Data2: 1258222702
+        Data3: 160286347
+        Data4: 1885634629
+      Path: event:/VoiceOver/Captain/FishLines/Bullhead/BullheadQuip
     fishCatchAudio:
       Guid:
-        Data1: 2124544235
-        Data2: 1327424622
-        Data3: 1035377560
-        Data4: 1234288205
-      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/9_Bullhead
+        Data1: -1623541071
+        Data2: 1331316769
+        Data3: 1026867090
+        Data4: -1457498563
+      Path: event:/VoiceOver/Captain/FishLines/Bullhead/BullheadCatchLine1
     icthyologistInfoAudio:
       Guid:
         Data1: 1950973070
@@ -294,18 +294,18 @@ MonoBehaviour:
     MovementDirections: 
     fishNameAudio:
       Guid:
-        Data1: -872550873
-        Data2: 1085466938
-        Data3: -2023241557
-        Data4: 1260402147
-      Path: event:/VoiceLines/Misc/Captain/Fish Names/Gudgeons
+        Data1: 33109951
+        Data2: 1278714760
+        Data3: 376133261
+        Data4: 406690212
+      Path: event:/VoiceOver/Captain/FishLines/Gudgeon/GudgeonQuip
     fishCatchAudio:
       Guid:
-        Data1: 1911184092
-        Data2: 1167506252
-        Data3: -777308996
-        Data4: 684075747
-      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/10_Gudgeon
+        Data1: 1357527018
+        Data2: 1220975800
+        Data3: 216604324
+        Data4: 33438085
+      Path: event:/VoiceOver/Captain/FishLines/Gudgeon/GudgeonCatchLine1
     icthyologistInfoAudio:
       Guid:
         Data1: -574446071
@@ -324,18 +324,18 @@ MonoBehaviour:
     MovementDirections: 
     fishNameAudio:
       Guid:
-        Data1: 251110404
-        Data2: 1242563578
-        Data3: 1913501118
-        Data4: 63233210
-      Path: event:/VoiceLines/Misc/Captain/Fish Names/Roaches
+        Data1: 166212081
+        Data2: 1109052769
+        Data3: -1733264230
+        Data4: 1720562992
+      Path: event:/VoiceOver/Captain/FishLines/Roach/RoachQuip
     fishCatchAudio:
       Guid:
-        Data1: 1745003492
-        Data2: 1099190449
-        Data3: -482752625
-        Data4: -875758776
-      Path: event:/VoiceLines/Level Scene/Caught Fish/Indivisual Fish/11_ Roach
+        Data1: -1111605991
+        Data2: 1086477345
+        Data3: -517002569
+        Data4: 311797409
+      Path: event:/VoiceOver/Captain/FishLines/Roach/RoachCatchLine1
     icthyologistInfoAudio:
       Guid:
         Data1: -404707155
@@ -354,18 +354,18 @@ MonoBehaviour:
     MovementDirections: 
     fishNameAudio:
       Guid:
-        Data1: -449038532
-        Data2: 1280758308
-        Data3: -1433694552
-        Data4: -474234592
-      Path: event:/VoiceLines/Level Scene/Caught Fish/Boss 0/0 Llyn Llyn Salmon
+        Data1: 1371665244
+        Data2: 1206316476
+        Data3: 1173289150
+        Data4: 360893564
+      Path: event:/VoiceOver/Captain/GameIntroduction/6-BossEncounter/4BigJesusisthat
     fishCatchAudio:
       Guid:
-        Data1: -449038532
-        Data2: 1280758308
-        Data3: -1433694552
-        Data4: -474234592
-      Path: event:/VoiceLines/Level Scene/Caught Fish/Boss 0/0 Llyn Llyn Salmon
+        Data1: 1371665244
+        Data2: 1206316476
+        Data3: 1173289150
+        Data4: 360893564
+      Path: event:/VoiceOver/Captain/GameIntroduction/6-BossEncounter/4BigJesusisthat
     icthyologistInfoAudio:
       Guid:
         Data1: -361082242

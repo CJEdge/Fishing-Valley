@@ -120,6 +120,8 @@ public class InputController : AbstractState<InputController.State> {
 	public Action OnClick { get; set; }
 	public Action OnSkip { get; set; }
 	public Action OnPause { get; set; }
+	public Action<int> OnStrafe { get; set; }
+	public int StrafeDirection { get; set; }
 	[field:SerializeField] public bool SelectionManuallySet { get; set; }
 	public Vector2 HorizontalInput { get; set; }
 	private Vector2 PreviousRightStickInput { get; set; }
@@ -153,6 +155,7 @@ public class InputController : AbstractState<InputController.State> {
 
 	public void MoveHorizontalMouse(InputAction.CallbackContext context) {
 		this.HorizontalInput = context.ReadValue<Vector2>() * mouse.HorizontalSpeed;
+		HadleStrafing();
 	}
 
 	public void ReelMouse(InputAction.CallbackContext context) {
@@ -185,6 +188,8 @@ public class InputController : AbstractState<InputController.State> {
 
 	public void MoveHorizontalController(InputAction.CallbackContext context) {
 		this.HorizontalInput = context.ReadValue<Vector2>() * controller.HorizontalSpeed;
+		HadleStrafing();
+		
 	}
 
 	public void Pause(InputAction.CallbackContext context) {
@@ -296,6 +301,20 @@ public class InputController : AbstractState<InputController.State> {
 		}
 		if (allInputTypesNotReeling) {
 			SetState(State.NotReeling);
+		}
+	}
+
+	private void HadleStrafing() {
+		int laststrafedirection = this.StrafeDirection;
+		if (this.HorizontalInput.x > 0.3f) {
+			this.StrafeDirection = 1;
+		} else if (this.HorizontalInput.x < -0.3f) {
+			this.StrafeDirection = -1;
+		} else {
+			this.StrafeDirection = 0;
+		}
+		if (laststrafedirection != this.StrafeDirection) {
+			this.OnStrafe?.Invoke(StrafeDirection);
 		}
 	}
 

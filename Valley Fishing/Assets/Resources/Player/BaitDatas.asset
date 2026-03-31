@@ -16,10 +16,7 @@ MonoBehaviour:
   - ItemName: Brown Trout Bait
     ItemSellPrice: 0
     ItemImage: {fileID: 21300000, guid: e2cee560b45bbb242bc4e3de37bb237e, type: 3}
-    BaitName: Brown Trout Bait
-    BaitImage: {fileID: 0}
-    BaitPrice: 0
-    IsTutorial: 0
+    IsTutorial: 1
     FishSpawnChances:
     - FishName: 0
       SpawnChance: 1
@@ -28,29 +25,20 @@ MonoBehaviour:
   - ItemName: Common Carp Bait
     ItemSellPrice: 0
     ItemImage: {fileID: 21300000, guid: e2cee560b45bbb242bc4e3de37bb237e, type: 3}
-    BaitName: Common Carp Bait
-    BaitImage: {fileID: 0}
-    BaitPrice: 0
-    IsTutorial: 0
+    IsTutorial: 1
     FishSpawnChances:
     - FishName: 1
       SpawnChance: 1
   - ItemName: Stone Loach Bait
     ItemSellPrice: 0
     ItemImage: {fileID: 21300000, guid: e2cee560b45bbb242bc4e3de37bb237e, type: 3}
-    BaitName: Stone Loach Bait
-    BaitImage: {fileID: 0}
-    BaitPrice: 0
-    IsTutorial: 0
+    IsTutorial: 1
     FishSpawnChances:
     - FishName: 2
       SpawnChance: 1
   - ItemName: Worm Bait
     ItemSellPrice: 0
     ItemImage: {fileID: 21300000, guid: e2cee560b45bbb242bc4e3de37bb237e, type: 3}
-    BaitName: Worm Bait
-    BaitImage: {fileID: 0}
-    BaitPrice: 0
     IsTutorial: 0
     FishSpawnChances:
     - FishName: 0
@@ -62,9 +50,6 @@ MonoBehaviour:
   - ItemName: Cricket Bait
     ItemSellPrice: 1
     ItemImage: {fileID: 21300000, guid: e2cee560b45bbb242bc4e3de37bb237e, type: 3}
-    BaitName: Cricket Bait
-    BaitImage: {fileID: 0}
-    BaitPrice: 1
     IsTutorial: 0
     FishSpawnChances:
     - FishName: 3
@@ -74,9 +59,6 @@ MonoBehaviour:
   - ItemName: Leech Bait
     ItemSellPrice: 2
     ItemImage: {fileID: 21300000, guid: e2cee560b45bbb242bc4e3de37bb237e, type: 3}
-    BaitName: Leech Bait
-    BaitImage: {fileID: 0}
-    BaitPrice: 2
     IsTutorial: 0
     FishSpawnChances:
     - FishName: 5
@@ -88,9 +70,6 @@ MonoBehaviour:
   - ItemName: Muscle Bait
     ItemSellPrice: 2
     ItemImage: {fileID: 21300000, guid: e2cee560b45bbb242bc4e3de37bb237e, type: 3}
-    BaitName: Muscle Bait
-    BaitImage: {fileID: 0}
-    BaitPrice: 2
     IsTutorial: 0
     FishSpawnChances:
     - FishName: 8
@@ -102,9 +81,6 @@ MonoBehaviour:
   - ItemName: Llyn Llyn Bait
     ItemSellPrice: 0
     ItemImage: {fileID: 21300000, guid: e2cee560b45bbb242bc4e3de37bb237e, type: 3}
-    BaitName: Llyn Lyn Bait
-    BaitImage: {fileID: 0}
-    BaitPrice: 0
     IsTutorial: 0
     FishSpawnChances:
     - FishName: 11

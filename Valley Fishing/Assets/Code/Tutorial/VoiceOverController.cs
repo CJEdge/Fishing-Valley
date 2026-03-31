@@ -41,6 +41,7 @@ public class VoiceOverController : MonoBehaviour
 	[field:SerializeField]
 	protected bool[] CastRodTutorialsCompleted;
 
+	[field: SerializeField]
 	protected bool[] ReelTutorialsCompleted;
 
 	[field:SerializeField]

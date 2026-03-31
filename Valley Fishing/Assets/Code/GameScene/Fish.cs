@@ -64,7 +64,7 @@ public class Fish : MonoBehaviour
 	[field:SerializeField] public float ReelSpeed { get; set; }
 	public bool HitBySeagull { get; set; }
 
-	private bool Initialized { get; set; }
+	private bool Caught { get; set; }
 	public bool HitByFlies { get; set; }
 
 	#endregion
@@ -120,14 +120,16 @@ public class Fish : MonoBehaviour
 	}
 
 	public void FishCaught() {
+		if (this.Caught) {
+			return;
+		}
+		this.Caught = true;
 		AudioManager.Instance.PlayUnspoolSound(false, 0);
-		Debug.Log(ArrayUtility.IndexOf(InventoryManager.Instance.FishDatas.Datas, this.FishData));
 		InventoryManager.Instance.OwnedFishTypeDatas[(ArrayUtility.IndexOf(InventoryManager.Instance.FishDatas.Datas, this.FishData))].quantity++;
 		GameManager.Instance.LevelController.SetState(LevelController.State.FishCaught);
 		AudioManager.Instance.PlayFishActivitySound(this, 0, true);
 		VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);
 		VibrationManager.Instance.SetVibrationFrequency(false, 0, Mathf.Infinity);
-        //SetActivityLevel(ActivityLevel.none);
         Destroy(gameObject);
 	}
 

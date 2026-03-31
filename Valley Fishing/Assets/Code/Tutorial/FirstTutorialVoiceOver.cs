@@ -7,18 +7,10 @@ using UnityEngine.SceneManagement;
 
 public class FirstTutorialVoiceOver : VoiceOverController
 {
-	[SerializeField]
-	private float initialPracticeReelTime;
-
-	[SerializeField]
-	private float reelPracticeTime;
-
-	[SerializeField]
-	private float reelFailTime;
-
-	[SerializeField]
-	private float CurrentPracticeReelTime;
-
+	[SerializeField] private float initialPracticeReelTime;
+	[SerializeField] private float reelPracticeTime;
+	[SerializeField] private float reelFailTime;
+	[SerializeField] private float CurrentPracticeReelTime;
 	private int LastReelLevel;
 
 
@@ -28,14 +20,14 @@ public class FirstTutorialVoiceOver : VoiceOverController
 	}
 
 	public void Update() {
-		if (!this.ReelTutorialsCompleted[0]) {
+		if (!this.ReelTutorialsCompleted[1]) {
 			if (GameManager.Instance.InputController.ReelLevel > 0) {
 				if (this.CurrentPracticeReelTime < initialPracticeReelTime) {
 					this.CurrentPracticeReelTime += Time.deltaTime;
 				} else {
 					this.CurrentPracticeReelTime = 0;
-					IncrementTutorial(this.ReelTutorialsCompleted);
 					PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
+					IncrementTutorial(this.ReelTutorialsCompleted);
 				}
 			}
 		}
@@ -55,14 +47,14 @@ public class FirstTutorialVoiceOver : VoiceOverController
 						break;
 				}
 			}
-			if (this.ReelTutorialsCompleted[3]) {
+			if (this.ReelTutorialsCompleted[4]) {
 				return;
 			}
-			if (!this.ReelTutorialsCompleted[1]) {
+			if (!this.ReelTutorialsCompleted[2]) {
 				CountReelInput(3);
-			} else if (!this.ReelTutorialsCompleted[2]) {
-				CountReelInput(1);
 			} else if (!this.ReelTutorialsCompleted[3]) {
+				CountReelInput(1);
+			} else if (!this.ReelTutorialsCompleted[4]) {
 				CountReelInput(2);
 			}
 		} else {
@@ -73,7 +65,7 @@ public class FirstTutorialVoiceOver : VoiceOverController
 
 	public override bool PerformStateSwitch() {
 		if(LevelController.CurrentState == LevelController.State.IdleWithBait) {
-			if (this.CastRodTutorialsCompleted[0]) {
+			if (this.CastRodTutorialsCompleted[0] && InventoryManager.Instance.CurrentBait != InventoryManager.Instance.BaitDatas.datas[2]) {
 				PlayNextTutotialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
 			}
 			return false;
@@ -83,44 +75,35 @@ public class FirstTutorialVoiceOver : VoiceOverController
 		}
 		switch (this.LevelController.CurrentState) {
 			case LevelController.State.Idle:
-				if (!this.ReelTutorialsCompleted[2]) {
+				if (!this.ReelTutorialsCompleted[0]) {
 					PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
+					IncrementTutorial(this.ReelTutorialsCompleted);
 					LevelController.SetState(LevelController.State.ReelingFish);
-				} else {
-					if (this.ReelTutorialsCompleted[7] && InventoryManager.Instance.OwnedBaitTypeDatas[3].quantity == 0) {
-                        InventoryManager.Instance.OwnedBaitTypeDatas[3].quantity = 4;
-						LevelController.SetState(LevelController.State.AttatchBait);
-						break;
-					}
-					if (this.ReelTutorialsCompleted[6]) {
-						InventoryManager.Instance.CurrentBait = InventoryManager.Instance.BaitDatas.datas[3];
-						LevelController.SetState(LevelController.State.AttatchBait);
-						break;
-					}
-					if (this.ReelTutorialsCompleted[5]) {
-                        InventoryManager.Instance.CurrentBait = InventoryManager.Instance.BaitDatas.datas[2];
-						LevelController.SetState(LevelController.State.AttatchBait);
-						break;
-					}
-					if (this.ReelTutorialsCompleted[4]) {
-						InventoryManager.Instance.CurrentBait = InventoryManager.Instance.BaitDatas.datas[1];
-						LevelController.SetState(LevelController.State.AttatchBait);
-					}
-				}
+				} 
+				//else {
+				//	if (this.ReelTutorialsCompleted[6] && InventoryManager.Instance.OwnedBaitTypeDatas[3].quantity == 0) {
+    //                    InventoryManager.Instance.OwnedBaitTypeDatas[3].quantity = 4;
+				//		LevelController.SetState(LevelController.State.AttatchBait);
+				//		break;
+				//	}
+				//}
 				break;
-
 			case LevelController.State.AttatchBait:
+				if (!AllTutorialsCompleted(this.AttatchBaitTutorialsCompleted)) {
+					PlayNextTutotialVoiceOver(this.AttatchBaitTutorialsCompleted, applyBaitTutorials);
+					IncrementTutorial(this.AttatchBaitTutorialsCompleted);
+				}
 				if (!this.ReelTutorialsCompleted[reelTutorials.Length - 1]) {
 					this.LevelController.SetState(LevelController.State.IdleWithBait);
 				}
 				break;
 			case LevelController.State.IdleWithBait:
-				if (this.CastRodTutorialsCompleted[0]) {
+				if (this.CastRodTutorialsCompleted[0] && InventoryManager.Instance.CurrentBait != InventoryManager.Instance.BaitDatas.datas[2]) {
 					PlayNextTutotialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
 				}
 				break;
 			case LevelController.State.ReelingFish:
-				if (this.ReelTutorialsCompleted[2]) {
+				if (this.ReelTutorialsCompleted[3]) {
 					PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
 					IncrementTutorial(this.ReelTutorialsCompleted);
 				}
@@ -142,6 +125,18 @@ public class FirstTutorialVoiceOver : VoiceOverController
 					PlayNextTutotialVoiceOver(this.CaughtFishTutorialsCompleted, tutorialCatchVoices);
 					IncrementTutorial(this.CaughtFishTutorialsCompleted);
 				}
+				if (this.CaughtFishTutorialsCompleted[2]) {
+					InventoryManager.Instance.OwnedBaitTypeDatas[3].quantity = 5;
+					break;
+				}
+				if (this.CaughtFishTutorialsCompleted[1]) {
+					InventoryManager.Instance.CurrentBait = InventoryManager.Instance.BaitDatas.datas[2];
+					break;
+				}
+				if (this.CaughtFishTutorialsCompleted[0]) {
+					InventoryManager.Instance.CurrentBait = InventoryManager.Instance.BaitDatas.datas[1];
+					break;
+				}
 				break;
 			default:
 				break;
@@ -150,6 +145,7 @@ public class FirstTutorialVoiceOver : VoiceOverController
 	}
 	public override void VoiceOverFinished(EventReference eventReference, bool skipped) {
 		if (LevelController.CurrentState == LevelController.State.FishCaught) {
+			Debug.Log(InventoryManager.Instance.TotalOwnedFish);
 			if (InventoryManager.Instance.TotalOwnedFish == 8) {
 				SceneManager.LoadScene(LevelManager.ShopTutorial_00);
 				return;
@@ -158,9 +154,9 @@ public class FirstTutorialVoiceOver : VoiceOverController
 		base.VoiceOverFinished(eventReference, skipped);
 		if (LevelController.CurrentState == LevelController.State.ReelingFish) {
 			GameManager.Instance.InputController.SetState(InputController.State.NotReeling);
-			if (this.ReelTutorialsCompleted[3] && !this.ReelTutorialsCompleted[4]) {
-				LevelController.SetState(LevelController.State.AttatchBait);
-			}
+			//if (this.ReelTutorialsCompleted[4] && !this.ReelTutorialsCompleted[5]) {
+			//	LevelController.SetState(LevelController.State.AttatchBait);
+			//}
 		}
 	}
 
@@ -170,17 +166,15 @@ public class FirstTutorialVoiceOver : VoiceOverController
 				this.CurrentPracticeReelTime += Time.deltaTime;
 			} else {
 				this.CurrentPracticeReelTime = 0;
-				if (GameManager.Instance.CurrentFish != null) {
-					return;
-				}
-				if(this.ReelTutorialsCompleted[2]) {
-					IncrementTutorial(this.ReelTutorialsCompleted);
-					PlayNextTutotialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
+				if (this.ReelTutorialsCompleted[3] && !this.ReelTutorialsCompleted[4]) {
 					InventoryManager.Instance.CurrentBait = InventoryManager.Instance.BaitDatas.datas[0];
+					LevelController.SetState(LevelController.State.AttatchBait);
 					return;
 				}
-				IncrementTutorial(this.ReelTutorialsCompleted);
-				PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
+				if (GameManager.Instance.CurrentFish == null) {
+					PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
+					IncrementTutorial(this.ReelTutorialsCompleted);
+				}
 			}
 		} else {
 			if (this.CurrentPracticeReelTime < reelFailTime) {

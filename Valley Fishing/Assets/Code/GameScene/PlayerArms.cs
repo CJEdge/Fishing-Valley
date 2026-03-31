@@ -13,36 +13,25 @@ public class PlayerArms : MonoBehaviour
 	private const string SlowReel = "SlowReel";
 	private const string MediumReel = "MediumReel";
 	private const string FastReel = "FastReel";
+	private const string StrafeLeft = "StrafeLeft";
+	private const string StrafeRight = "StrafeRight";
 
 	#endregion
 
 
 	#region Serialized Fields
 
-	[SerializeField]
-	private Animator animator;
-
-	[SerializeField]
-	private float windUpLength;
-
-	[SerializeField]
-	private float throwWait;
+	[SerializeField] private Animator animator;
+	[SerializeField] private float windUpLength;
+	[SerializeField] private float throwWait;
 
 	#endregion
 
 
 	#region Properties
 
-	private LevelController LevelController {
-		get {
-			return GameManager.Instance.LevelController;
-		}
-	}
-
-	private bool IsCasting {
-		get;
-		set;
-	}
+	private LevelController LevelController => GameManager.Instance.LevelController;
+	private bool IsCasting { get; set; }
 
 	#endregion
 
@@ -52,6 +41,7 @@ public class PlayerArms : MonoBehaviour
 	public void Start() {
 		GameManager.Instance.InputController.OnClick += Click;
 		GameManager.Instance.InputController.OnStateChanged += Reel;
+		GameManager.Instance.InputController.OnStrafe += Strafe;
 	}
 
 	public void OnDestroy() {
@@ -60,6 +50,7 @@ public class PlayerArms : MonoBehaviour
 		}
 		GameManager.Instance.InputController.OnClick -= Click;
 		GameManager.Instance.InputController.OnStateChanged -= Reel;
+		GameManager.Instance.InputController.OnStrafe -= Strafe;
 	}
 
 	#endregion
@@ -135,6 +126,18 @@ public class PlayerArms : MonoBehaviour
 		GameManager.Instance.LevelController.SetState(LevelController.State.WaitingForBite);
 		AudioManager.Instance.PlayReelSound(FMODManager.Instance.ReelSound);
 		this.IsCasting = false;
+		animator.Play(IdleReel);
 	}
 
+	private void Strafe(int direction) {
+		if(direction == -1) {
+			animator.Play(StrafeLeft);
+		}
+		if (direction == 1) {
+			animator.Play(StrafeRight);
+		}
+		if (direction == 0) {
+			animator.Play(IdleReel);
+		}
+	}
 }
