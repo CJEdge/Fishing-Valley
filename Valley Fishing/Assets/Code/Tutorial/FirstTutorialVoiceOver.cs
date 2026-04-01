@@ -136,8 +136,21 @@ public class FirstTutorialVoiceOver : VoiceOverController
 				return;
 			}
 		}
+		if (LevelController.CurrentState == LevelController.State.Idle) {
+			if (!this.AttatchBaitTutorialsCompleted[0] && this.ReelTutorialsCompleted[3]) {
+				PlayNextTutotialVoiceOver(this.AttatchBaitTutorialsCompleted, applyBaitTutorials);
+				IncrementTutorial(this.AttatchBaitTutorialsCompleted);
+				return;
+			}
+		}
 		base.VoiceOverFinished(eventReference, skipped);
 		if (LevelController.CurrentState == LevelController.State.ReelingFish) {
+			Debug.Log("here");
+			if (!this.AttatchBaitTutorialsCompleted[0] && this.ReelTutorialsCompleted[4]) {
+				PlayNextTutotialVoiceOver(this.AttatchBaitTutorialsCompleted, applyBaitTutorials);
+				IncrementTutorial(this.AttatchBaitTutorialsCompleted);
+				return;
+			}
 			GameManager.Instance.InputController.SetState(InputController.State.NotReeling);
 		}
 	}

@@ -29,6 +29,10 @@ public class BossVoiceOver : VoiceOverController
 					return false;
 				}
 				break;
+			case LevelController.State.IdleWithBait:
+				PlayNextTutotialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
+				IncrementTutorial(this.CastRodTutorialsCompleted);
+				break;
 			case LevelController.State.ReelingFish:				
 				PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
 				IncrementTutorial(this.ReelTutorialsCompleted);

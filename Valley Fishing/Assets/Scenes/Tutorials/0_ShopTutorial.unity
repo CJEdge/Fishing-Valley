@@ -1746,82 +1746,62 @@ MonoBehaviour:
   eventSystem: {fileID: 1395612272}
   fishboardTutorials:
   - Guid:
-      Data1: -1686980007
-      Data2: 1285526235
-      Data3: 1583455378
-      Data4: -342189943
-    Path: event:/VoiceLines/Shop Scene/BaitShop/Fishboard/Level 0/0 Sell Your Fish
-  - Guid:
-      Data1: 1109056035
-      Data2: 1075299665
-      Data3: -672395852
-      Data4: 498068483
-    Path: event:/VoiceLines/Shop Scene/BaitShop/Fishboard/Level 0/1 Sell Rest Of
-      Fish
-  - Guid:
-      Data1: 1509312250
-      Data2: 1238939494
-      Data3: -1003653235
-      Data4: -28165236
-    Path: event:/VoiceLines/Shop Scene/BaitShop/Fishboard/Level 0/2 Close Fishboard
-  - Guid:
-      Data1: 262338640
-      Data2: 1198091345
-      Data3: 475926688
-      Data4: 1443995794
-    Path: event:/VoiceLines/Shop Scene/BaitShop/Fishboard/Level 0/3 Navigate Shop
-      Prompt
+      Data1: 2059814064
+      Data2: 1305622309
+      Data3: -2115094118
+      Data4: -407241771
+    Path: event:/VoiceOver/BaitShopkeep/ShopTutorial/1baitShopTutorial1/2Heresthefishboard
   baitboardTutorials:
   - Guid:
-      Data1: -2105820423
-      Data2: 1296560324
-      Data3: 1631715500
-      Data4: 686516017
-    Path: event:/VoiceLines/Shop Scene/BaitShop/BaitBoard/Level 0/0 Bait Board Intro
+      Data1: -746234071
+      Data2: 1094630259
+      Data3: -166988664
+      Data4: -1121616553
+    Path: event:/VoiceOver/Captain/GameIntroduction/2-BaitShopTutorial1/2We_llneedfivecricketbait
   - Guid:
-      Data1: 1391125017
-      Data2: 1247958866
-      Data3: 1624352956
-      Data4: -1889466952
-    Path: event:/VoiceLines/Shop Scene/BaitShop/BaitBoard/Level 0/1 Close Bait Board
+      Data1: 208066340
+      Data2: 1097301008
+      Data3: -778688896
+      Data4: 1488136846
+    Path: event:/VoiceOver/Captain/GameIntroduction/2-BaitShopTutorial1/3Great,We_vesoldallourfish
   - Guid:
-      Data1: -23352881
-      Data2: 1127104183
-      Data3: -654195039
-      Data4: 304391295
-    Path: event:/VoiceLines/Shop Scene/BaitShop/BaitBoard/Level 0/2 Leave Shop Prompt
+      Data1: 208066340
+      Data2: 1097301008
+      Data3: -778688896
+      Data4: 1488136846
+    Path: event:/VoiceOver/Captain/GameIntroduction/2-BaitShopTutorial1/3Great,We_vesoldallourfish
   fishBoardButton: {fileID: 1909034982}
   fishBasketButton: {fileID: 276873569}
   baitBoardButton: {fileID: 2063497091}
   leaveShopButton: {fileID: 656606137}
   fishBoardEvent:
     Guid:
-      Data1: 1618088636
-      Data2: 1108728784
-      Data3: 1645138069
-      Data4: 1741957200
-    Path: event:/VoiceLines/Shop Scene/BaitShop/ShopButtons/Fish Board
+      Data1: -1121983338
+      Data2: 1332014771
+      Data3: 613597590
+      Data4: 1834513874
+    Path: event:/VoiceOver/BaitShopkeep/Buttons/Fishboard
   fishBasketEvent:
     Guid:
-      Data1: -1324407597
-      Data2: 1271517343
-      Data3: -346564938
-      Data4: -46228974
-    Path: event:/VoiceLines/Shop Scene/BaitShop/ShopButtons/Fish Basket
+      Data1: -1810839440
+      Data2: 1190833303
+      Data3: 1325553301
+      Data4: 122302985
+    Path: event:/VoiceOver/BaitShopkeep/Buttons/Fishbasket
   baitBoardEvent:
     Guid:
-      Data1: -1406226894
-      Data2: 1306948120
-      Data3: 1913142187
-      Data4: -1831792824
-    Path: event:/VoiceLines/Shop Scene/BaitShop/ShopButtons/Bait Board
+      Data1: 193982054
+      Data2: 1125355496
+      Data3: 144938908
+      Data4: 1109169038
+    Path: event:/VoiceOver/BaitShopkeep/Buttons/Baitbaord
   leaveShopEvent:
     Guid:
-      Data1: 346608475
-      Data2: 1207315551
-      Data3: 1520277140
-      Data4: -317672406
-    Path: event:/VoiceLines/Shop Scene/BaitShop/ShopButtons/Leave Shop
+      Data1: 317892465
+      Data2: 1321305716
+      Data3: -1149953378
+      Data4: 884722905
+    Path: event:/VoiceOver/BaitShopkeep/Buttons/Leavemyshop.alp
   lerpObjectToPositions:
   - {fileID: 895185099}
   - {fileID: 895185102}
@@ -1830,11 +1810,11 @@ MonoBehaviour:
   <BaitQuantities>k__BackingField: 0000000000000000000000000000000005000000
   fishBoardIntroEvent:
     Guid:
-      Data1: 1356769856
-      Data2: 1172588522
-      Data3: 1527931269
-      Data4: 798157878
-    Path: event:/VoiceLines/Shop Scene/BaitShop/Button Prompts/FishBoardPrompt
+      Data1: 2059814064
+      Data2: 1305622309
+      Data3: -2115094118
+      Data4: -407241771
+    Path: event:/VoiceOver/BaitShopkeep/ShopTutorial/1baitShopTutorial1/2Heresthefishboard
   fishBasketIntroEvent:
     Guid:
       Data1: 1523279106
@@ -1844,11 +1824,11 @@ MonoBehaviour:
     Path: event:/VoiceLines/Shop Scene/BaitShop/Button Prompts/Fish BasketPrompt
   baitBoardIntroEvent:
     Guid:
-      Data1: -123846913
-      Data2: 1250198378
-      Data3: -645149766
-      Data4: -1274126869
-    Path: event:/VoiceLines/Shop Scene/BaitShop/Button Prompts/Bait Board Prompt
+      Data1: 1004402848
+      Data2: 1127844182
+      Data3: -1101795446
+      Data4: 171015467
+    Path: event:/VoiceOver/BaitShopkeep/ShopTutorial/1baitShopTutorial1/3Heresthebaitboard
   lockedFishBoardButton: {fileID: 619114412}
 --- !u!114 &895185099
 MonoBehaviour:
@@ -4713,7 +4693,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -23.874573}
+  m_AnchoredPosition: {x: 0, y: -23.87445}
   m_SizeDelta: {x: 883.5879, y: 496.9672}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1832298216

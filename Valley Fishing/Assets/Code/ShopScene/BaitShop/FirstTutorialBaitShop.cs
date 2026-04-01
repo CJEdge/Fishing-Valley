@@ -51,10 +51,10 @@ public class FirstTutorialBaitShop : BaitShop {
 				IncrementTutorial(this.FishboardTutorialsCompleted);
 			}
 		}
-		if(this.FishSold && !this.FishboardTutorialsCompleted[1]) {
-			PlayNextTutotialVoiceOver(this.FishboardTutorialsCompleted, fishboardTutorials);
-			IncrementTutorial(this.FishboardTutorialsCompleted);
-		}
+		//if(this.FishSold && !this.FishboardTutorialsCompleted[1]) {
+		//	PlayNextTutotialVoiceOver(this.FishboardTutorialsCompleted, fishboardTutorials);
+		//	IncrementTutorial(this.FishboardTutorialsCompleted);
+		//}
 		if (InventoryManager.Instance.TotalOwnedFish == 0) {
 			if (!FishBoardNotClosedForFirstTime) {
 				PlayNextTutotialVoiceOver(this.FishboardTutorialsCompleted, fishboardTutorials);

@@ -506,7 +506,17 @@ MonoBehaviour:
     Path: event:/VoiceLines/Level Scene/Reel/ReelPrompts/Too Slow
   levelIndex: 3
   CastRodTutorialsCompleted: 
+  ReelTutorialsCompleted: 
   CaughtFishTutorialsCompleted: 
+  endScreenUI: {fileID: 0}
+  initialButton: {fileID: 0}
+  thanksForPlayingEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &582599909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -923,12 +933,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4636233528580456071, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5794655492895963625, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
       propertyPath: m_Name
       value: '[Gameplay]'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2754001739683791842, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 854055ca5fe87dc4981440c052de869d, type: 3}

@@ -24,18 +24,18 @@ MonoBehaviour:
     MovementDirections: 
     fishNameAudio:
       Guid:
-        Data1: 1772953255
-        Data2: 1332014131
-        Data3: 698798234
-        Data4: -1070912240
-      Path: event:/VoiceOver/Captain/FishLines/BrownTrout/BrownTroutQuip
-    fishCatchAudio:
-      Guid:
         Data1: -423763100
         Data2: 1282895005
         Data3: 1214496385
         Data4: 449069052
       Path: event:/VoiceOver/Captain/FishLines/BrownTrout/BrownTroutCatch1
+    fishCatchAudio:
+      Guid:
+        Data1: 1772953255
+        Data2: 1332014131
+        Data3: 698798234
+        Data4: -1070912240
+      Path: event:/VoiceOver/Captain/FishLines/BrownTrout/BrownTroutQuip
     icthyologistInfoAudio:
       Guid:
         Data1: 689494142
@@ -54,18 +54,18 @@ MonoBehaviour:
     MovementDirections: 
     fishNameAudio:
       Guid:
-        Data1: -84499398
-        Data2: 1116992498
-        Data3: 809728438
-        Data4: 1339775578
-      Path: event:/VoiceOver/Captain/FishLines/CommonCarp/CommonCarpQuip
-    fishCatchAudio:
-      Guid:
         Data1: 1024480681
         Data2: 1226900684
         Data3: 31860413
         Data4: -1971332819
       Path: event:/VoiceOver/Captain/FishLines/CommonCarp/CommonCarpCatchLine1
+    fishCatchAudio:
+      Guid:
+        Data1: -84499398
+        Data2: 1116992498
+        Data3: 809728438
+        Data4: 1339775578
+      Path: event:/VoiceOver/Captain/FishLines/CommonCarp/CommonCarpQuip
     icthyologistInfoAudio:
       Guid:
         Data1: 106858057
@@ -84,18 +84,18 @@ MonoBehaviour:
     MovementDirections: 
     fishNameAudio:
       Guid:
-        Data1: 1791469117
-        Data2: 1100665960
-        Data3: -1799515458
-        Data4: 464448179
-      Path: event:/VoiceOver/Captain/FishLines/StoneLoach/StoneloachQuip
-    fishCatchAudio:
-      Guid:
         Data1: 1037275791
         Data2: 1291659433
         Data3: -1399280207
         Data4: 1682857083
       Path: event:/VoiceOver/Captain/FishLines/StoneLoach/StoneloachCatchLine1
+    fishCatchAudio:
+      Guid:
+        Data1: 1791469117
+        Data2: 1100665960
+        Data3: -1799515458
+        Data4: 464448179
+      Path: event:/VoiceOver/Captain/FishLines/StoneLoach/StoneloachQuip
     icthyologistInfoAudio:
       Guid:
         Data1: -2044789402
@@ -110,22 +110,22 @@ MonoBehaviour:
     ReelInSpeed: 2
     SwimAwaySpeed: 100
     StrafedSwimAwaySpeed: 30
-    ActivityLevels: 03000000
-    MovementDirections: 
+    ActivityLevels: 01000000
+    MovementDirections: 02000000
     fishNameAudio:
-      Guid:
-        Data1: 132512088
-        Data2: 1155906857
-        Data3: 954972827
-        Data4: 1217961034
-      Path: event:/VoiceOver/Captain/FishLines/Eel/EelQuip
-    fishCatchAudio:
       Guid:
         Data1: -924942623
         Data2: 1108407820
         Data3: -717259100
         Data4: 1071063031
       Path: event:/VoiceOver/Captain/FishLines/Eel/EelCatchLine1
+    fishCatchAudio:
+      Guid:
+        Data1: 132512088
+        Data2: 1155906857
+        Data3: 954972827
+        Data4: 1217961034
+      Path: event:/VoiceOver/Captain/FishLines/Eel/EelQuip
     icthyologistInfoAudio:
       Guid:
         Data1: 1889757249
@@ -140,22 +140,22 @@ MonoBehaviour:
     ReelInSpeed: 2
     SwimAwaySpeed: 100
     StrafedSwimAwaySpeed: 30
-    ActivityLevels: 01000000
-    MovementDirections: 
+    ActivityLevels: 03000000
+    MovementDirections: 01000000
     fishNameAudio:
-      Guid:
-        Data1: -2032667337
-        Data2: 1292211375
-        Data3: 1005852041
-        Data4: -659921996
-      Path: event:/VoiceOver/Captain/FishLines/Pike/PikeQuip
-    fishCatchAudio:
       Guid:
         Data1: 800947069
         Data2: 1297980189
         Data3: -1892671870
         Data4: -455398263
       Path: event:/VoiceOver/Captain/FishLines/Pike/PikeCatchLine1
+    fishCatchAudio:
+      Guid:
+        Data1: -2032667337
+        Data2: 1292211375
+        Data3: 1005852041
+        Data4: -659921996
+      Path: event:/VoiceOver/Captain/FishLines/Pike/PikeQuip
     icthyologistInfoAudio:
       Guid:
         Data1: 763025475
@@ -174,18 +174,18 @@ MonoBehaviour:
     MovementDirections: 
     fishNameAudio:
       Guid:
-        Data1: 804210720
-        Data2: 1244236878
-        Data3: 795514808
-        Data4: 286585773
-      Path: event:/VoiceOver/Captain/FishLines/Bream/BreamQuip
-    fishCatchAudio:
-      Guid:
         Data1: -157128073
         Data2: 1080162048
         Data3: 628441753
         Data4: -1272950714
       Path: event:/VoiceOver/Captain/FishLines/Bream/BreamCatchLine1
+    fishCatchAudio:
+      Guid:
+        Data1: 804210720
+        Data2: 1244236878
+        Data3: 795514808
+        Data4: 286585773
+      Path: event:/VoiceOver/Captain/FishLines/Bream/BreamQuip
     icthyologistInfoAudio:
       Guid:
         Data1: 158588274
@@ -204,18 +204,18 @@ MonoBehaviour:
     MovementDirections: 
     fishNameAudio:
       Guid:
-        Data1: 863069756
-        Data2: 1075734344
-        Data3: 221294482
-        Data4: -445472425
-      Path: event:/VoiceOver/Captain/FishLines/Chub/ChubQuip
-    fishCatchAudio:
-      Guid:
         Data1: -1684984929
         Data2: 1274900748
         Data3: 642843533
         Data4: -1881994003
       Path: event:/VoiceOver/Captain/FishLines/Chub/ChubCatchLine1
+    fishCatchAudio:
+      Guid:
+        Data1: 863069756
+        Data2: 1075734344
+        Data3: 221294482
+        Data4: -445472425
+      Path: event:/VoiceOver/Captain/FishLines/Chub/ChubQuip
     icthyologistInfoAudio:
       Guid:
         Data1: 427353103
@@ -234,18 +234,18 @@ MonoBehaviour:
     MovementDirections: 
     fishNameAudio:
       Guid:
-        Data1: 1054531516
-        Data2: 1210998529
-        Data3: 982860703
-        Data4: -176280440
-      Path: event:/VoiceOver/Captain/FishLines/Perch/PerchQuip
-    fishCatchAudio:
-      Guid:
         Data1: 1752140011
         Data2: 1290870739
         Data3: 2104935830
         Data4: -1993415754
       Path: event:/VoiceOver/Captain/FishLines/Perch/PerchCatchLine1
+    fishCatchAudio:
+      Guid:
+        Data1: 1054531516
+        Data2: 1210998529
+        Data3: 982860703
+        Data4: -176280440
+      Path: event:/VoiceOver/Captain/FishLines/Perch/PerchQuip
     icthyologistInfoAudio:
       Guid:
         Data1: 1951225689
@@ -264,18 +264,18 @@ MonoBehaviour:
     MovementDirections: 
     fishNameAudio:
       Guid:
-        Data1: 1872826772
-        Data2: 1258222702
-        Data3: 160286347
-        Data4: 1885634629
-      Path: event:/VoiceOver/Captain/FishLines/Bullhead/BullheadQuip
-    fishCatchAudio:
-      Guid:
         Data1: -1623541071
         Data2: 1331316769
         Data3: 1026867090
         Data4: -1457498563
       Path: event:/VoiceOver/Captain/FishLines/Bullhead/BullheadCatchLine1
+    fishCatchAudio:
+      Guid:
+        Data1: 1872826772
+        Data2: 1258222702
+        Data3: 160286347
+        Data4: 1885634629
+      Path: event:/VoiceOver/Captain/FishLines/Bullhead/BullheadQuip
     icthyologistInfoAudio:
       Guid:
         Data1: 1950973070
@@ -294,18 +294,18 @@ MonoBehaviour:
     MovementDirections: 
     fishNameAudio:
       Guid:
-        Data1: 33109951
-        Data2: 1278714760
-        Data3: 376133261
-        Data4: 406690212
-      Path: event:/VoiceOver/Captain/FishLines/Gudgeon/GudgeonQuip
-    fishCatchAudio:
-      Guid:
         Data1: 1357527018
         Data2: 1220975800
         Data3: 216604324
         Data4: 33438085
       Path: event:/VoiceOver/Captain/FishLines/Gudgeon/GudgeonCatchLine1
+    fishCatchAudio:
+      Guid:
+        Data1: 33109951
+        Data2: 1278714760
+        Data3: 376133261
+        Data4: 406690212
+      Path: event:/VoiceOver/Captain/FishLines/Gudgeon/GudgeonQuip
     icthyologistInfoAudio:
       Guid:
         Data1: -574446071
@@ -324,18 +324,18 @@ MonoBehaviour:
     MovementDirections: 
     fishNameAudio:
       Guid:
-        Data1: 166212081
-        Data2: 1109052769
-        Data3: -1733264230
-        Data4: 1720562992
-      Path: event:/VoiceOver/Captain/FishLines/Roach/RoachQuip
-    fishCatchAudio:
-      Guid:
         Data1: -1111605991
         Data2: 1086477345
         Data3: -517002569
         Data4: 311797409
       Path: event:/VoiceOver/Captain/FishLines/Roach/RoachCatchLine1
+    fishCatchAudio:
+      Guid:
+        Data1: 166212081
+        Data2: 1109052769
+        Data3: -1733264230
+        Data4: 1720562992
+      Path: event:/VoiceOver/Captain/FishLines/Roach/RoachQuip
     icthyologistInfoAudio:
       Guid:
         Data1: -404707155
