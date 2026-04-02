@@ -17,7 +17,7 @@ public class MainMenuController : MonoBehaviour
 
 
 
-	public void Awake()
+	public void Start()
     {
 		GameManager.Instance.MainMenuController = this;
 		GameManager.Instance.EventSystem = eventSystem;
