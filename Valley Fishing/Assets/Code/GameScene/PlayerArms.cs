@@ -116,7 +116,7 @@ public class PlayerArms : MonoBehaviour
 	private IEnumerator StartThrowRod() {
 		this.IsCasting = true;
 		animator.Play(Throw);
-		AudioManager.Instance.PlayBaitSound(false, ArrayUtility.IndexOf(InventoryManager.Instance.BaitDatas.datas,InventoryManager.Instance.CurrentBait));
+		AudioManager.Instance.PlayBaitSound(false, System.Array.IndexOf(InventoryManager.Instance.BaitDatas.datas,InventoryManager.Instance.CurrentBait));
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.ThrowRod,transform.position);
 		yield return new WaitForSeconds(windUpLength);
 		AudioManager.Instance.SkipVoiceOver();
