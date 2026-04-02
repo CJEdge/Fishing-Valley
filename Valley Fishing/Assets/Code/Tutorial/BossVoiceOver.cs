@@ -8,9 +8,19 @@ public class BossVoiceOver : VoiceOverController
 {
 	[SerializeField] private GameObject endScreenUI;
 	[SerializeField] private GameObject initialButton;
-	[SerializeField] private EventReference thanksForPlayingEvent;
+	[SerializeField] private EventReference[] thanksForPlayingEvent;
 
 	public override bool PerformStateSwitch() {
+		switch (this.LevelController.CurrentState) {
+			case LevelController.State.Idle:
+				if(InventoryManager.Instance.TotalOwnedFish == 1) {
+					endScreenUI.SetActive(true);
+					InputManager.Instance.SelectButton(initialButton);
+					AudioManager.Instance.PlayVoiceOver(thanksForPlayingEvent[1]);
+					GameManager.Instance.LevelController.StateLocked = true;
+				}
+				break;
+		}
 		if (!base.PerformStateSwitch()) {
 			return false;
 		}
@@ -23,11 +33,6 @@ public class BossVoiceOver : VoiceOverController
 				}
 				break;
 			case LevelController.State.AttatchBait:
-				if (InventoryManager.Instance.TotalOwnedBaits == 0) {
-                    endScreenUI.SetActive(true);
-					InputManager.Instance.SelectButton(initialButton);
-					return false;
-				}
 				break;
 			case LevelController.State.IdleWithBait:
 				PlayNextTutotialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
@@ -53,10 +58,8 @@ public class BossVoiceOver : VoiceOverController
 		}
 		if(LevelController.CurrentState == LevelController.State.FishCaught)
 		{
-            endScreenUI.SetActive(true);
-			AudioManager.Instance.PlayVoiceOver(thanksForPlayingEvent);
-            InputManager.Instance.SelectButton(initialButton);
-        }
+			GameManager.Instance.LevelController.SetState(LevelController.State.Idle);
+		}
 	}
 
 	public void LoadMenu()

@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -5,20 +6,12 @@ public class MainMenuController : MonoBehaviour
 {
 	#region Serialized Fields
 
-	[SerializeField]
-	private EventSystem eventSystem;
-
-	[SerializeField]
-	private GameObject mainMenuObject;
-
-	[SerializeField]
-	private GameObject initialMenuButton;
-
-	[SerializeField]
-	private GameObject initialSettingsMenuButton;
-
-	[SerializeField]
-	private GameObject settingsMenuObject;
+	[SerializeField] private EventSystem eventSystem;
+	[SerializeField] private GameObject mainMenuObject;
+	[SerializeField] private GameObject initialMenuButton;
+	[SerializeField] private GameObject initialSettingsMenuButton;
+	[SerializeField] private GameObject settingsMenuObject;
+	[SerializeField] private EventReference menuMusic;
 
 	#endregion
 
@@ -30,6 +23,7 @@ public class MainMenuController : MonoBehaviour
 		GameManager.Instance.EventSystem = eventSystem;
 		GameManager.Instance.InputController.SelectButton(initialMenuButton);
 		AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.MenuGreeting);
+		AudioManager.Instance.PlayMusic(menuMusic);
     }
 
 	public void EnterMainMenu() {

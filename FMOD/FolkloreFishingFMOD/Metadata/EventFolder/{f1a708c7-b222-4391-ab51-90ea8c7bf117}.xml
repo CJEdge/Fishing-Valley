@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EventFolder" id="{f1a708c7-b222-4391-ab51-90ea8c7bf117}">
+		<property name="name">
+			<value>Fishing Prompts</value>
+		</property>
+		<relationship name="folder">
+			<destination>{26b8a4d8-8431-42a6-90c6-bd3aa3983560}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -73,11 +73,16 @@ public class FirstTutorialVoiceOver : VoiceOverController
 					PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
 					IncrementTutorial(this.ReelTutorialsCompleted);
 					LevelController.SetState(LevelController.State.ReelingFish);
-				}
-				if (!this.CastRodTutorialsCompleted[3] && this.ReelTutorialsCompleted[3]) {
+				} else {
 					PlayNextTutotialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
 					IncrementTutorial(this.CastRodTutorialsCompleted);
-				} else if (this.CastRodTutorialsCompleted[3]) {
+					//LevelController.SetState(LevelController.State.AttatchBait);
+				}
+				//if (!this.CastRodTutorialsCompleted[3] && this.ReelTutorialsCompleted[3]) {
+				//	PlayNextTutotialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
+				//	IncrementTutorial(this.CastRodTutorialsCompleted);
+				//} 
+				if (this.CastRodTutorialsCompleted[3]) {
 					LevelController.SetState(LevelController.State.AttatchBait);
 				}
 				break;

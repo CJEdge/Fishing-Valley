@@ -51,10 +51,6 @@ public class FirstTutorialBaitShop : BaitShop {
 				IncrementTutorial(this.FishboardTutorialsCompleted);
 			}
 		}
-		//if(this.FishSold && !this.FishboardTutorialsCompleted[1]) {
-		//	PlayNextTutotialVoiceOver(this.FishboardTutorialsCompleted, fishboardTutorials);
-		//	IncrementTutorial(this.FishboardTutorialsCompleted);
-		//}
 		if (InventoryManager.Instance.TotalOwnedFish == 0) {
 			if (!FishBoardNotClosedForFirstTime) {
 				PlayNextTutotialVoiceOver(this.FishboardTutorialsCompleted, fishboardTutorials);
@@ -96,7 +92,6 @@ public class FirstTutorialBaitShop : BaitShop {
 		}
 		if (InventoryManager.Instance.OwnedBaitTypeDatas[4].quantity == 5) {
 			GameManager.Instance.InputController.SelectButton(baitBoardButton.gameObject);
-
 			GameManager.Instance.InputController.SelectionManuallySet = false;
 		}
 		base.OpenBaitBoard();
@@ -156,5 +151,11 @@ public class FirstTutorialBaitShop : BaitShop {
 			OpenBaitBoard();
 		}
 	}
-
+	public override void LeaveShop() {
+		if (InventoryManager.Instance.TotalOwnedBaits == 5) {
+			SceneManager.LoadScene(LevelManager.CatchTutorial_01);
+		} else {
+			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
+		}
+	}
 }

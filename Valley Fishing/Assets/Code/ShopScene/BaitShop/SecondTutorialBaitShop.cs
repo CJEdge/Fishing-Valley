@@ -1,6 +1,7 @@
 using FMODUnity;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SecondTutorialBaitShop : BaitShop {
 
@@ -24,12 +25,10 @@ public class SecondTutorialBaitShop : BaitShop {
 	public override void VoiceLineOver(EventReference eventReference, bool skipped) {
 		base.VoiceLineOver(eventReference, skipped);
 		if (InventoryManager.Instance.OwnedBaitTypeDatas[5].quantity == 5 && InventoryManager.Instance.OwnedBaitTypeDatas[6].quantity == 5 && baitBoard.Initialized && !this.BaitboardTutorialsCompleted[2]) {
-			Debug.Log("here");
 			PlayNextTutotialVoiceOver(this.BaitboardTutorialsCompleted, baitboardTutorials);
 			IncrementTutorial(this.BaitboardTutorialsCompleted);
 		}
 		if (InventoryManager.Instance.OwnedBaitTypeDatas[5].quantity == 5 && InventoryManager.Instance.OwnedBaitTypeDatas[6].quantity == 5 && !baitBoard.Initialized && !this.BaitboardTutorialsCompleted[3]) {
-			Debug.Log("here");
 			PlayNextTutotialVoiceOver(this.BaitboardTutorialsCompleted, baitboardTutorials);
 			IncrementTutorial(this.BaitboardTutorialsCompleted);
 		}
@@ -43,10 +42,10 @@ public class SecondTutorialBaitShop : BaitShop {
 				IncrementTutorial(this.BaitboardTutorialsCompleted);
 				FishBoardNotClosedForFirstTime = true;
 		}
-		if (InventoryManager.Instance.TotalOwnedFish == 0 && !this.BaitboardTutorialsCompleted[0] && fishBoard.gameObject.activeSelf) {
-			PlayNextTutotialVoiceOver(this.FishboardTutorialsCompleted, fishboardTutorials);
-			IncrementTutorial(this.FishboardTutorialsCompleted);
-		}
+		//if (InventoryManager.Instance.TotalOwnedFish == 0 && !this.BaitboardTutorialsCompleted[0] && fishBoard.gameObject.activeSelf) {
+		//	PlayNextTutotialVoiceOver(this.FishboardTutorialsCompleted, fishboardTutorials);
+		//	IncrementTutorial(this.FishboardTutorialsCompleted);
+		//}
 	}
 
 	public override void SellFish(int fishIndex) {
@@ -126,6 +125,14 @@ public class SecondTutorialBaitShop : BaitShop {
 		}
 		if (InventoryManager.Instance.OwnedBaitTypeDatas[5].quantity == 5 && InventoryManager.Instance.OwnedBaitTypeDatas[6].quantity == 5 && baitBoard.Initialized) {
 			OpenBaitBoard();
+		}
+	}
+
+	public override void LeaveShop() {
+		if(InventoryManager.Instance.TotalOwnedBaits == 10) {
+			SceneManager.LoadScene(LevelManager.CatchTutorial_02);
+		} else {
+			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
 		}
 	}
 }

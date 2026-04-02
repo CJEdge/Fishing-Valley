@@ -464,25 +464,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   applyBaitTutorials:
   - Guid:
-      Data1: 1853584114
-      Data2: 1321168871
-      Data3: 711349933
-      Data4: -315404842
-    Path: event:/VoiceLines/Level Scene/Attatch Bait/Boss 0/0 Hardest Fish
+      Data1: 1897020937
+      Data2: 1098993638
+      Data3: -144721280
+      Data4: -48055372
+    Path: event:/VoiceOver/Captain/GameIntroduction/6-BossEncounter/2Don_tforgetwhatyouhavelearnt
   castRodTutorials:
   - Guid:
-      Data1: 1296854281
-      Data2: 1273810558
-      Data3: -1442321992
-      Data4: 751147981
-    Path: event:/VoiceLines/Level Scene/Cast Rod/Boss 0/0 Youve Got This
-  reelTutorials:
-  - Guid:
-      Data1: -920332497
-      Data2: 1278699893
-      Data3: -1822985085
-      Data4: -119660938
-    Path: event:/VoiceLines/Level Scene/Reel/Boss 0/0 First Boss
+      Data1: -1619988193
+      Data2: 1295411151
+      Data3: 1255521409
+      Data4: 1968769829
+    Path: event:/VoiceOver/Captain/GameIntroduction/6-BossEncounter/3Castyourrod
+  reelTutorials: []
   tutorialCatchVoices:
   - Guid:
       Data1: -449038532
@@ -492,18 +486,18 @@ MonoBehaviour:
     Path: event:/VoiceLines/Level Scene/Caught Fish/Boss 0/0 Llyn Llyn Salmon
   tooFastPrompt:
     Guid:
-      Data1: 1660095589
-      Data2: 1230346209
-      Data3: 784428195
-      Data4: -364368937
-    Path: event:/VoiceLines/Level Scene/Reel/ReelPrompts/Too Fast
+      Data1: -1540413782
+      Data2: 1194833894
+      Data3: -1875334778
+      Data4: 1597380477
+    Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/Help2-Easyboy,you_rereelingtofast
   tooSlowPrompt:
     Guid:
-      Data1: -614330866
-      Data2: 1322106238
-      Data3: 623403159
-      Data4: -1650983258
-    Path: event:/VoiceLines/Level Scene/Reel/ReelPrompts/Too Slow
+      Data1: -818729371
+      Data2: 1266573359
+      Data3: 863739279
+      Data4: -924373461
+    Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/Help1-Putyourbackintoit
   levelIndex: 3
   CastRodTutorialsCompleted: 
   ReelTutorialsCompleted: 
@@ -791,6 +785,10 @@ PrefabInstance:
     - target: {fileID: 2912664980422327928, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
       propertyPath: buttonType
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928103611394656900, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6571493593516085787, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
       propertyPath: m_Pivot.x

@@ -261,7 +261,7 @@ MonoBehaviour:
     SwimAwaySpeed: 100
     StrafedSwimAwaySpeed: 30
     ActivityLevels: 01000000
-    MovementDirections: 
+    MovementDirections: 0100000002000000
     fishNameAudio:
       Guid:
         Data1: -1623541071
@@ -291,7 +291,7 @@ MonoBehaviour:
     SwimAwaySpeed: 100
     StrafedSwimAwaySpeed: 30
     ActivityLevels: 02000000
-    MovementDirections: 
+    MovementDirections: 0100000001000000
     fishNameAudio:
       Guid:
         Data1: 1357527018
@@ -321,7 +321,7 @@ MonoBehaviour:
     SwimAwaySpeed: 100
     StrafedSwimAwaySpeed: 30
     ActivityLevels: 03000000
-    MovementDirections: 
+    MovementDirections: 0200000002000000
     fishNameAudio:
       Guid:
         Data1: -1111605991
@@ -350,8 +350,8 @@ MonoBehaviour:
     ReelInSpeed: 2
     SwimAwaySpeed: 100
     StrafedSwimAwaySpeed: 30
-    ActivityLevels: 0200000001000000030000000100000002000000
-    MovementDirections: 
+    ActivityLevels: 010000000200000003000000
+    MovementDirections: 0100000002000000
     fishNameAudio:
       Guid:
         Data1: 1371665244

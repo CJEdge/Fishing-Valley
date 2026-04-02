@@ -45,22 +45,4 @@ public class ThirdTutorialVoiceOver : VoiceOverController
 		}
 		return true;
 	}
-
-	public override void FishStrafed(FishDatas.FishData.MovementDirection movementDirection) {
-		//if (AllTutorialsCompleted(this.ReelTutorialsCompleted)) {
-		//	return;
-		//}
-		//PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
-		//IncrementTutorial(this.ReelTutorialsCompleted);
-	}
-
-	public override void FishSpawned() {
-		//if (this.ReelTutorialsCompleted[0] == false) {
-		//	this.CurrentFish.ActivityLevels.Clear();
-		//	this.CurrentFish.ActivityLevels.Add(Fish.ActivityLevel.active);
-		//} else if (this.ReelTutorialsCompleted[1] == false) {
-		//	this.CurrentFish.ActivityLevels.Clear();
-		//	this.CurrentFish.ActivityLevels.Add(Fish.ActivityLevel.calm);
-		//}
-	}
 }

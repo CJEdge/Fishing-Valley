@@ -1,44 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class FadeManager : MonoBehaviour
+public class FadeManager : Singleton<FadeManager>
 {
-    #region Singleton Behaviour
-
-    public static FadeManager Instance;
-
-    private void Awake() {
-        if (Instance != null && Instance != this) {
-            Destroy(gameObject);
-        } else {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-    }
-
-    #endregion
-
 
     #region Serialized Fields
 
-    [SerializeField]
-    private Image image;
+    [SerializeField] private Image image;
+    [SerializeField] private float fadeDuration;
+	[SerializeField] private AnimationCurve fadeInCurve;
+	[SerializeField] private AnimationCurve fadeOutCurve;
 
-    [SerializeField]
-    private float fadeDuration;
-
-    #endregion
+	#endregion
 
 
-    #region Public Methods
+	#region Mono Behaviours
 
-    public void FadeToBlack() {
+	public override void Awake() {
+		base.Awake();
+		SceneManager.sceneUnloaded += FadeToBlack;
+		SceneManager.sceneLoaded += FadeToClear;
+	}
+
+	#endregion
+
+	#region Public Methods
+
+	public void FadeToBlack(Scene scene) {
         StartCoroutine(FadeImageToBlack());
     }
 
-    public void FadeToClear() {
+    public void FadeToClear(Scene scene, LoadSceneMode loadSceneMode) {
         StartCoroutine(FadeImageToClear());
     }
 
@@ -53,10 +48,12 @@ public class FadeManager : MonoBehaviour
         Color endColor = Color.black;
 
         while (elapsedTime < fadeDuration) {
-            elapsedTime += Time.deltaTime;
-            image.color = Color.Lerp(startColor, endColor, elapsedTime / fadeDuration);
-            yield return null;
-        }
+			elapsedTime += Time.deltaTime;
+			float t = elapsedTime / fadeDuration;
+			float curvedT = fadeOutCurve.Evaluate(t);
+			image.color = Color.Lerp(startColor, endColor, curvedT);
+			yield return null;
+		}
 
         image.color = endColor;
     }
@@ -68,7 +65,9 @@ public class FadeManager : MonoBehaviour
 
         while (elapsedTime < fadeDuration) {
             elapsedTime += Time.deltaTime;
-            image.color = Color.Lerp(startColor, endColor, elapsedTime / fadeDuration);
+			float t = elapsedTime / fadeDuration;
+			float curvedT = fadeInCurve.Evaluate(t);
+			image.color = Color.Lerp(startColor, endColor, curvedT);
             yield return null;
         }
 

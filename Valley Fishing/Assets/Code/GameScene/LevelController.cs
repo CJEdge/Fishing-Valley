@@ -73,7 +73,6 @@ public class LevelController : AbstractState<LevelController.State> {
 				break;
 		}
 	}
-
 	#endregion
 
 

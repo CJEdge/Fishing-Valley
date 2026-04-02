@@ -587,6 +587,13 @@ MonoBehaviour:
   initialMenuButton: {fileID: 603940063}
   initialSettingsMenuButton: {fileID: 3093303}
   settingsMenuObject: {fileID: 1212904327}
+  menuMusic:
+    Guid:
+      Data1: -672558036
+      Data2: 1170473754
+      Data3: -1836899668
+      Data4: -1899820657
+    Path: event:/Music/Menu Music
 --- !u!4 &187781219
 Transform:
   m_ObjectHideFlags: 0

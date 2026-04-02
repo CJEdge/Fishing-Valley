@@ -469,12 +469,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   applyBaitTutorials:
   - Guid:
-      Data1: -1942920685
-      Data2: 1087190550
-      Data3: -731685731
-      Data4: -957246452
-    Path: event:/VoiceOver/Captain/GameIntroduction/5-GameplayTutorial3/1Hopethesenewbaitsareworthit
-  castRodTutorials: []
+      Data1: 1139386465
+      Data2: 1111903822
+      Data3: 567393448
+      Data4: 349957048
+    Path: event:/VoiceOver/Narrator/Fishing Prompts/Use the left stick to...
+  castRodTutorials:
+  - Guid:
+      Data1: -1687440807
+      Data2: 1321411644
+      Data3: -1629747283
+      Data4: 1530815386
+    Path: event:/VoiceOver/Narrator/Fishing Prompts/Cast rod prompt
   reelTutorials: []
   tutorialCatchVoices:
   - Guid:
@@ -704,10 +710,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5253065142394802842, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
-      propertyPath: useCheats
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7393596337781405747, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -781,10 +783,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4378699412491670689, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
-      propertyPath: eventSystem
-      value: 
-      objectReference: {fileID: 1015315668}
     - target: {fileID: 6571493593516085787, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
       propertyPath: m_Pivot.x
       value: 0
