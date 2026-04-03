@@ -1934,8 +1934,8 @@ MonoBehaviour:
   CastRodTutorialsCompleted: 
   ReelTutorialsCompleted: 
   CaughtFishTutorialsCompleted: 
-  initialPracticeReelTime: 1
-  reelPracticeTime: 1
+  initialPracticeReelTime: 3
+  reelPracticeTime: 3
   reelFailTime: 2
   CurrentPracticeReelTime: 0
 --- !u!114 &582599909
