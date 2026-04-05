@@ -82,6 +82,9 @@ public class Fish : MonoBehaviour
 				FailedCatch();
 			}
 		}
+		if (DistanceAsPercentage() < 0.01f) {
+			AudioManager.Instance.PlayUnspoolSound(false, 0);
+		}
 		ChangeActivityLevels();
 		ChangeMovementDirection();
 	}
@@ -174,6 +177,7 @@ public class Fish : MonoBehaviour
 			VibrationManager.Instance.SetVibrationFrequency(true, DistanceAsPercentage(), Mathf.Infinity);
 			VibrationManager.Instance.SetVibrationFrequency(false, 0, Mathf.Infinity);
 			rb.AddForce(0, 0, -this.ReelSpeed);
+			AudioManager.Instance.PlayUnspoolSound(false, 0);
 			this.IsUnspooling = false;
 		} else {
 			this.RodLineComponent.CurveAmount = Mathf.MoveTowards(this.RodLineComponent.CurveAmount, 1, Time.deltaTime);
@@ -187,6 +191,9 @@ public class Fish : MonoBehaviour
 				rb.AddForce(0, 0, this.FishData.SwimAwaySpeed);
 			} else {
 				rb.AddForce(0, 0, this.FishData.StrafedSwimAwaySpeed);
+			}
+			if (!this.IsUnspooling) {
+				AudioManager.Instance.PlayUnspoolSound(true, 1);
 			}
 			this.IsUnspooling = true;
 		}
