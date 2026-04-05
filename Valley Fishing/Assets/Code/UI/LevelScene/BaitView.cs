@@ -60,7 +60,6 @@ public class BaitView : MonoBehaviour
 	public void BaitClicked(int baitIndex) {
 		AudioManager.Instance.PlayBaitSound(false, 0);
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.AttatchBaitSounds[baitIndex]);
-		Debug.Log("here");
 		InventoryManager.Instance.CurrentBait = InventoryManager.Instance.BaitDatas.datas[baitIndex];
 		InventoryManager.Instance.OwnedBaitTypeDatas[baitIndex].quantity--;
 		EnableBaitUI(false);
@@ -116,7 +115,6 @@ public class BaitView : MonoBehaviour
 	}
 
 	private void SkipBaitSelection(EventReference eventReference, bool value) {
-		Debug.Log("skip");
 		if (!buttonsGameobject.activeSelf) {
 			return;
 		}
@@ -127,11 +125,9 @@ public class BaitView : MonoBehaviour
 			return;
 		}
 		if (InventoryManager.Instance.CurrentBait.IsTutorial) {
-			Debug.Log("tutorial");
 			BaitClicked(this.BaitIndex);
 		}
 		if (InventoryManager.Instance.OneBaitTypeLeft) {
-			Debug.Log("one bait");
 			BaitClicked(this.BaitIndex);
 		}
 	}

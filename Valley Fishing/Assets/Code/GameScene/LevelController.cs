@@ -88,6 +88,8 @@ public class LevelController : AbstractState<LevelController.State> {
 		int fishIndex = 0;
 		float randomValue = UnityEngine.Random.value;
 		float cumulative = 0f;
+		Debug.Log(this.CurrentBait);
+		Debug.Log(this.CurrentBait.FishSpawnChances);
 ;		for (int i = 0; i < this.CurrentBait.FishSpawnChances.Count; i++) {
 			cumulative += this.CurrentBait.FishSpawnChances[i].SpawnChance;
 			if (randomValue < cumulative) {
@@ -99,6 +101,7 @@ public class LevelController : AbstractState<LevelController.State> {
 		fishInstance.FishData = InventoryManager.Instance.FishDatas.Datas[fishIndex];
 		fishInstance.transform.parent = gameplayContainer;
 		fishInstance.IsTutorial = this.CurrentBait.IsTutorial;
+		InventoryManager.Instance.CurrentBait = null;
 		GameManager.Instance.CurrentFish = fishInstance;
 		this.OnFishSpawned?.Invoke();
 		StartCoroutine(WaitForBite());
