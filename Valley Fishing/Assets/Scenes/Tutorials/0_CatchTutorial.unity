@@ -1570,6 +1570,10 @@ PrefabInstance:
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].outWeight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6733652964442507225, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7616792196916014777, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
       propertyPath: m_IsActive
       value: 0
