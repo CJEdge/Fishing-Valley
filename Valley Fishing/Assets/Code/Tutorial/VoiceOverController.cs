@@ -8,26 +8,13 @@ public class VoiceOverController : MonoBehaviour
 
 	#region Serialized Fields
 
-	[SerializeField]
-	protected EventReference[] applyBaitTutorials;
-
-	[SerializeField]
-	protected EventReference[] castRodTutorials;
-
-	[SerializeField]
-	protected EventReference[] reelTutorials;
-
-	[SerializeField]
-	protected EventReference[] tutorialCatchVoices;
-
-	[SerializeField]
-	protected EventReference tooFastPrompt;
-
-	[SerializeField]
-	protected EventReference tooSlowPrompt;
-
-	[SerializeField]
-	protected int levelIndex;
+	[SerializeField] protected EventReference[] applyBaitTutorials;
+	[SerializeField] protected EventReference[] castRodTutorials;
+	[SerializeField] protected EventReference[] reelTutorials;
+	[SerializeField] protected EventReference[] tutorialCatchVoices;
+	[SerializeField] protected EventReference tooFastPrompt;
+	[SerializeField] protected EventReference tooSlowPrompt;
+	[SerializeField] protected int levelIndex;
 
 	#endregion
 
@@ -52,17 +39,8 @@ public class VoiceOverController : MonoBehaviour
 
 	#region Properties
 
-	public LevelController LevelController {
-		get {
-			return GameManager.Instance.LevelController;
-		}
-	}
-
-	public Fish CurrentFish {
-		get {
-			return GameManager.Instance.CurrentFish;
-		}
-	}
+	public LevelController LevelController => GameManager.Instance.LevelController;
+	public Fish CurrentFish => GameManager.Instance.CurrentFish;
 
 	#endregion
 

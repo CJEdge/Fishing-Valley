@@ -38,6 +38,21 @@ public class InventoryManager : Singleton<InventoryManager> {
 
 	public BaitDatas.Datas CurrentBait;
 
+	public bool OneBaitTypeLeft {
+		get {
+			int typesOfBait = 0;
+			for (int i = 0; i < this.OwnedBaitTypeDatas.Count; i++) {
+				if(this.OwnedBaitTypeDatas[i].quantity > 0) {
+					typesOfBait++;
+				}
+				if(typesOfBait == 2) {
+
+				}
+			}
+			return false;
+		}
+	}
+
     public override void Awake() {
 		base.Awake();
 		for (int i = 0; i < this.FishDatas.Datas.Length; i++) {
