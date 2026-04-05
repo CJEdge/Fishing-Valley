@@ -1,29 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9215734932678712224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/CricketBait/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-9086971846704761132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,7 +28,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-9086167405224990487
+--- !u!114 &-9065623793086926196
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -62,83 +38,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fishboard/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-9083688114101853793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Baitbaordalt/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-9013286526538203515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Misc/...and...
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Misc/...and...
-  Guid:
-    Data1: -990207253
-    Data2: 1333496774
-    Data3: -104190825
-    Data4: -11474332
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 8971261574464957775}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-9013069525548438171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/InicknamedthatoneJeremy/ControlScheme
+  m_Name: parameter:/Chub/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -200,6 +100,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-8876760587974985636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/4/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-8854829924548479165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,6 +152,78 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8821489272758087323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Quit/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-8821095326547979690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/0/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-8737308878303655605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/8/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-8718376298457564300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,34 +251,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4022
---- !u!114 &-8653313468555441033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/Buttons/Baitbaordalt
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/Buttons/Baitbaordalt
-  Guid:
-    Data1: 2022277837
-    Data2: 1307242376
-    Data3: 744271802
-    Data4: 863457344
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -9083688114101853793}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-8639760379595987593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,7 +279,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-8566443500494935493
+--- !u!114 &-8611464132222327314
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -321,21 +289,97 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/DemoEndScreen/Quit
+  m_Name: event:/VoiceOver/Narrator/Numbers/5
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/DemoEndScreen/Quit
+  Path: event:/VoiceOver/Narrator/Numbers/5
   Guid:
-    Data1: -52675017
-    Data2: 1149963125
-    Data3: 954960030
-    Data4: -1457171384
+    Data1: 634948813
+    Data2: 1325824833
+    Data3: 2109596033
+    Data4: 838508717
   Banks:
   - {fileID: 644752073199801212}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -1561608053554834023}
+  - {fileID: 8281323700684278368}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-8600787838439985581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CrankBait/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-8545424332269786703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Eel/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-8529643120044903989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Numbers/4
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Numbers/4
+  Guid:
+    Data1: -1784437835
+    Data2: 1263718513
+    Data3: -1348592716
+    Data4: 1368363330
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -8876760587974985636}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -415,7 +459,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-8233066397777330709
+--- !u!114 &-8215509282022600057
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -424,21 +468,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/...gold/ControlScheme
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Fish Lines/Perch
   m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
+  Path: event:/VoiceOver/Narrator/Fish Lines/Perch
+  Guid:
+    Data1: 653878105
+    Data2: 1150155430
+    Data3: -25473661
+    Data4: 534657013
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -7157911036081857859}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8214069253463111450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,58 +515,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-8206940791818151778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Numbers/10
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Numbers/10
-  Guid:
-    Data1: -686406334
-    Data2: 1333177220
-    Data3: 1156498346
-    Data4: -1688856603
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 4393432439611552076}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-8106427693945422171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/3/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-8065231252284989152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,7 +590,35 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-7803198985475685805
+--- !u!114 &-7886366356077733429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/BaitShopkeep/ShopTutorial/2BaitShopTutorial2/1Ohthere
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/BaitShopkeep/ShopTutorial/2BaitShopTutorial2/1Ohthere
+  Guid:
+    Data1: 228747134
+    Data2: 1218933998
+    Data3: 1013130651
+    Data4: 475849921
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 5064410385032019636}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7885567871810438053
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -604,7 +628,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/CommonCarp/ControlScheme
+  m_Name: parameter:/20/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -666,7 +690,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-7609818095626939789
+--- !u!114 &-7665914200549717272
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -676,7 +700,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Theyregoingtoabetterplace/ControlScheme
+  m_Name: parameter:/CommonCarp/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -690,33 +714,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-7502473012783517772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Menu Music
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Menu Music
-  Guid:
-    Data1: -672558036
-    Data2: 1170473754
-    Data3: -1836899668
-    Data4: -1899820657
-  Banks:
-  - {fileID: -2505363372462143274}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 96253
 --- !u!114 &-7460723538794452283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -784,39 +781,11 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639106874725579957
+  lastModified: 639107358908384833
   FileSizes:
   - Name: Desktop
     Value: 1991744
   Exists: 1
---- !u!114 &-7351991767775883628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/Buttons/Fishbasket
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/Buttons/Fishbasket
-  Guid:
-    Data1: -1810839440
-    Data2: 1190833303
-    Data3: 1325553301
-    Data4: 122302985
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 709125535008406113}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-7344018685762948976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -845,7 +814,31 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-7058287326327687893
+--- !u!114 &-7157911036081857859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Perch/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-7120802409369843128
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -855,77 +848,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/DemoEndScreen/ThanksForPlaying
+  m_Name: event:/VoiceOver/Narrator/Misc/Quay Games presents...
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/DemoEndScreen/ThanksForPlaying
+  Path: event:/VoiceOver/Narrator/Misc/Quay Games presents...
   Guid:
-    Data1: 1038272160
-    Data2: 1079516469
-    Data3: 991179952
-    Data4: -1141465174
+    Data1: 516181656
+    Data2: 1283359365
+    Data3: -495615826
+    Data4: -1921879266
   Banks:
   - {fileID: 644752073199801212}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 1731655084628174473}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-7058058515033859954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Fish Lines/Bullhead
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Fish Lines/Bullhead
-  Guid:
-    Data1: -2132406012
-    Data2: 1212000205
-    Data3: 1794812046
-    Data4: 211428531
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 5933173200773837511}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-7049279152825848161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/BaitLines/CrankBait
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/BaitLines/CrankBait
-  Guid:
-    Data1: -1283472119
-    Data2: 1231152839
-    Data3: 2002223751
-    Data4: 2078664347
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 672450109837373340}
+  - {fileID: -1774691964537571384}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -953,7 +890,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-6955410594861323307
+--- !u!114 &-6984717782158274802
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -963,25 +900,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Fish Lines/Gudgeon
+  m_Name: event:/VoiceOver/Narrator/Numbers/2
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Fish Lines/Gudgeon
+  Path: event:/VoiceOver/Narrator/Numbers/2
   Guid:
-    Data1: -1015813678
-    Data2: 1319407989
-    Data3: 770984579
-    Data4: -474347472
+    Data1: 675293747
+    Data2: 1198580105
+    Data3: 405563575
+    Data4: 1401455846
   Banks:
   - {fileID: 644752073199801212}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -6377871672636503948}
+  - {fileID: 6686559230994537545}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-6904441481606140878
+--- !u!114 &-6847227857495021424
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -990,45 +927,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/1Ohthere/ControlScheme
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/BaitShopkeep/Buttons/Baitbaordalt
   m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-6866837322207360916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Roach/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
+  Path: event:/VoiceOver/BaitShopkeep/Buttons/Baitbaordalt
+  Guid:
+    Data1: 2022277837
+    Data2: 1307242376
+    Data3: 744271802
+    Data4: 863457344
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -3007605356149685656}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6811683406825730848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1054,6 +971,34 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: -2221861631985482044}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6759033544135003978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/BaitShopkeep/ShopTutorial/1baitShopTutorial1/2Heresthefishboard
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/BaitShopkeep/ShopTutorial/1baitShopTutorial1/2Heresthefishboard
+  Guid:
+    Data1: 2059814064
+    Data2: 1305622309
+    Data3: -2115094118
+    Data4: -407241771
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -163057049202246983}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -1165,7 +1110,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-6576311387500405515
+--- !u!114 &-6543545167687920624
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1175,7 +1120,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/BrownTrout/ControlScheme
+  m_Name: parameter:/...left/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -1216,35 +1161,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-6474213598348252833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/BuyLines/InicknamedthatoneJeremy
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/BuyLines/InicknamedthatoneJeremy
-  Guid:
-    Data1: -1780778380
-    Data2: 1152155833
-    Data3: 659819139
-    Data4: -1235957993
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -9013069525548438171}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-6394756126755806370
+--- !u!114 &-6471259267176675378
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1254,31 +1171,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/4/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-6377871672636503948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Gudgeon/ControlScheme
+  m_Name: parameter:/SellLines/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -1316,7 +1209,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-6154509629018222966
+--- !u!114 &-6075336319621061998
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1326,73 +1219,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Fish Lines/Roach
+  m_Name: event:/VoiceOver/Narrator/Numbers/10
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Fish Lines/Roach
+  Path: event:/VoiceOver/Narrator/Numbers/10
   Guid:
-    Data1: -1734479862
-    Data2: 1230855147
-    Data3: -939878499
-    Data4: -1008191392
+    Data1: -686406334
+    Data2: 1333177220
+    Data3: 1156498346
+    Data4: -1688856603
   Banks:
   - {fileID: 644752073199801212}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -6866837322207360916}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-6125865736008972209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Leavemyshop.alp/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-6086442301467710391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Misc/Quay Games presents...
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Misc/Quay Games presents...
-  Guid:
-    Data1: 516181656
-    Data2: 1283359365
-    Data3: -495615826
-    Data4: -1921879266
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -4698061654892749988}
+  - {fileID: -2270030721779876862}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -1424,6 +1265,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5951717253570334493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Numbers/0
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Numbers/0
+  Guid:
+    Data1: -438280932
+    Data2: 1126840325
+    Data3: -1049066586
+    Data4: 273881939
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -8821095326547979690}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5933290671339747912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1452,30 +1321,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-5917142257617909335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/1/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-5893598423043826401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1504,6 +1349,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5870660740283085543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/...and.../ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-5851451898949660874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1532,7 +1401,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-5840611240716708022
+--- !u!114 &-5643461536186420121
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1542,132 +1411,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Misc/...gold
+  m_Name: event:/VoiceOver/Narrator/Numbers/3
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Misc/...gold
+  Path: event:/VoiceOver/Narrator/Numbers/3
   Guid:
-    Data1: 1142967246
-    Data2: 1314125609
-    Data3: 427611530
-    Data4: -607725951
+    Data1: -22214601
+    Data2: 1176005101
+    Data3: 751580075
+    Data4: 74950927
   Banks:
   - {fileID: 644752073199801212}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -8233066397777330709}
+  - {fileID: 1717440362102420732}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-5767875203672173502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/BaitLines/WormBait
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/BaitLines/WormBait
-  Guid:
-    Data1: 49789276
-    Data2: 1251480174
-    Data3: 4451746
-    Data4: -1714487945
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 658665361082897551}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-5759909853965903487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Misc/Youhave...
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Misc/Youhave...
-  Guid:
-    Data1: 1531927737
-    Data2: 1337188846
-    Data3: 1211108771
-    Data4: 104239554
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 2697269022921269376}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-5689147608737694128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/BaitLines/CricketBait
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/BaitLines/CricketBait
-  Guid:
-    Data1: -405547891
-    Data2: 1105749996
-    Data3: -304369528
-    Data4: 2045004071
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -9215734932678712224}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-5675755294236221613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Wishlist/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-5641132570180854340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1696,30 +1457,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-5609097401198706385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Cast rod prompt/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-5575552102911679440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1748,7 +1485,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-5537111796996532932
+--- !u!114 &-5569834334034416799
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1757,25 +1494,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/BuyLines/Thatwillcatchsomethingforsure
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cast rod prompt/ControlScheme
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/BuyLines/Thatwillcatchsomethingforsure
-  Guid:
-    Data1: -1235743973
-    Data2: 1265808723
-    Data3: -1677105784
-    Data4: -474650113
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 265810841010796450}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-5519234059214491658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1787,6 +1520,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/ChubQuip/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-5486108614665260600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fishbasket/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -1855,34 +1612,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 180501
---- !u!114 &-5345041286298276541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/ShopTutorial/1baitShopTutorial1/1MorningLove
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/ShopTutorial/1baitShopTutorial1/1MorningLove
-  Guid:
-    Data1: 1419819765
-    Data2: 1161433934
-    Data3: 675836337
-    Data4: 590462655
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -646806263517689833}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-5319174531575280531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1935,7 +1664,35 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-5099193881970812258
+--- !u!114 &-5201014209782338511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Fishing Prompts/Cast rod prompt
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Fishing Prompts/Cast rod prompt
+  Guid:
+    Data1: -1687440807
+    Data2: 1321411644
+    Data3: -1629747283
+    Data4: 1530815386
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5569834334034416799}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5171392297687949372
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1945,7 +1702,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/StoneLoach/ControlScheme
+  m_Name: parameter:/MussleBait/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -1983,7 +1740,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-4911031659424057525
+--- !u!114 &-4906192875994259529
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1992,22 +1749,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/7/ControlScheme
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Numbers/9
   m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-4905101917840193253
+  Path: event:/VoiceOver/Narrator/Numbers/9
+  Guid:
+    Data1: 1899431639
+    Data2: 1144386646
+    Data3: 1889718431
+    Data4: -1293107333
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 7504151449076315084}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4901455299646235352
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2017,7 +1778,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/...left/ControlScheme
+  m_Name: parameter:/1/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -2058,30 +1819,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1973
---- !u!114 &-4814141613804345895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/16IllAttactchSomebait/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-4800420765331328457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2110,6 +1847,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4790581153392820376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/6/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-4730505583459256784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2134,31 +1895,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-4698061654892749988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Quay Games presents.../ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-4599403040319399626
+--- !u!114 &-4644465576786360990
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2168,21 +1905,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Numbers/7
+  m_Name: event:/VoiceOver/Narrator/BaitLines/CricketBait
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Numbers/7
+  Path: event:/VoiceOver/Narrator/BaitLines/CricketBait
   Guid:
-    Data1: -1244390290
-    Data2: 1173677283
-    Data3: -894968922
-    Data4: 2081555303
+    Data1: -405547891
+    Data2: 1105749996
+    Data3: -304369528
+    Data4: 2045004071
   Banks:
   - {fileID: 644752073199801212}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -4911031659424057525}
+  - {fileID: 698499620670203447}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -2241,30 +1978,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-4435906428708474020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/6/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-4348324833469857068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2337,6 +2050,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-4140186990945296018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ThanksForPlaying/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-4118565296876877437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2392,30 +2129,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-4056845138123627357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/8/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-4026617427958491220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2468,7 +2181,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-3887341708360799570
+--- !u!114 &-3968103190248998677
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2478,21 +2191,49 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Fish Lines/Perch
+  m_Name: event:/VoiceOver/BaitShopkeep/ShopTutorial/2BaitShopTutorial2/2Icantellyoullbecomingandgoingalot
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Fish Lines/Perch
+  Path: event:/VoiceOver/BaitShopkeep/ShopTutorial/2BaitShopTutorial2/2Icantellyoullbecomingandgoingalot
   Guid:
-    Data1: 653878105
-    Data2: 1150155430
-    Data3: -25473661
-    Data4: 534657013
+    Data1: -149211432
+    Data2: 1309465557
+    Data3: 620238254
+    Data4: 289319092
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 5504866446836350507}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3893779971370223810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Fish Lines/Roach
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Fish Lines/Roach
+  Guid:
+    Data1: -1734479862
+    Data2: 1230855147
+    Data3: -939878499
+    Data4: -1008191392
   Banks:
   - {fileID: 644752073199801212}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 1647386908801695455}
+  - {fileID: 8747219835259280069}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -2576,6 +2317,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-3461095166095205688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/BaitShopkeep/ItemLines/BuyLines
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/BaitShopkeep/ItemLines/BuyLines
+  Guid:
+    Data1: -1780778380
+    Data2: 1152155833
+    Data3: 659819139
+    Data4: -1235957993
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 3499946447758208938}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3457608351454428273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2600,58 +2369,6 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-3434186170671462785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Pleasureasalways/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-3422636922003496282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/SellLines/Oh,youshouldnthave
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/SellLines/Oh,youshouldnthave
-  Guid:
-    Data1: 1136717574
-    Data2: 1081548287
-    Data3: -1201757529
-    Data4: -1400384886
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 8910285275500242433}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -2710,30 +2427,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-3308198527560749723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/5/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-3301830350320691375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2869,6 +2562,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-3007605356149685656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Baitbaordalt/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-2812511944410738947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2893,7 +2610,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-2704566522266437145
+--- !u!114 &-2753942039387354325
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2903,21 +2620,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Fish Lines/Eel
+  m_Name: event:/VoiceOver/Narrator/Fish Lines/Bullhead
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Fish Lines/Eel
+  Path: event:/VoiceOver/Narrator/Fish Lines/Bullhead
   Guid:
-    Data1: -695118607
-    Data2: 1338661594
-    Data3: 1339246760
-    Data4: 1755121227
+    Data1: -2132406012
+    Data2: 1212000205
+    Data3: 1794812046
+    Data4: 211428531
   Banks:
   - {fileID: 644752073199801212}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 7118910990699276252}
+  - {fileID: 3084928488541697649}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -2948,7 +2665,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-2514030277959612742
+--- !u!114 &-2553685493477478852
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2958,24 +2675,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Fish Lines/StoneLoach
+  m_Name: event:/Music/Menu Music
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Fish Lines/StoneLoach
+  Path: event:/Music/Menu Music
   Guid:
-    Data1: -48010821
-    Data2: 1154299586
-    Data3: 1941041314
-    Data4: -157560319
+    Data1: -672558036
+    Data2: 1170473754
+    Data3: -1836899668
+    Data4: -1899820657
   Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
+  - {fileID: -2505363372462143274}
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
-  Parameters:
-  - {fileID: -5099193881970812258}
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 96253
 --- !u!114 &-2505363372462143274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2991,7 +2707,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639106862507363163
+  lastModified: 639107358903029405
   FileSizes:
   - Name: Desktop
     Value: 7597024
@@ -3020,6 +2736,58 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-2479705313632814581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Leavemyshopalt/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-2445486609237963983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/DemoEndScreen/Quit
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/DemoEndScreen/Quit
+  Guid:
+    Data1: -52675017
+    Data2: 1149963125
+    Data3: 954960030
+    Data4: -1457171384
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -8821489272758087323}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2401575568964721219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3097,6 +2865,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-2332294941504214534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/BaitShopkeep/Buttons/Fishbasketalt
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/BaitShopkeep/Buttons/Fishbasketalt
+  Guid:
+    Data1: -1544168350
+    Data2: 1186852093
+    Data3: -69538155
+    Data4: -381418415
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 5803877663891411394}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2318369503628856738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3153,7 +2949,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-2267786351701899222
+--- !u!114 &-2270030721779876862
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3162,25 +2958,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Numbers/5
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/10/ControlScheme
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Numbers/5
-  Guid:
-    Data1: 634948813
-    Data2: 1325824833
-    Data3: 2109596033
-    Data4: 838508717
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -3308198527560749723}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-2221861631985482044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3232,7 +3024,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3004
---- !u!114 &-2052736080088319399
+--- !u!114 &-1899142538288539883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3241,21 +3033,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Younowhave.../ControlScheme
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/BaitShopkeep/ShopTutorial/1baitShopTutorial1/3Heresthebaitboard
   m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
+  Path: event:/VoiceOver/BaitShopkeep/ShopTutorial/1baitShopTutorial1/3Heresthebaitboard
+  Guid:
+    Data1: 1004402848
+    Data2: 1127844182
+    Data3: -1101795446
+    Data4: 171015467
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 4436571333251553898}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1845519203993761371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3307,7 +3103,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-1742943173513970482
+--- !u!114 &-1774691964537571384
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3316,25 +3112,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/DemoEndScreen/Wishlist
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Quay Games presents.../ControlScheme
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/DemoEndScreen/Wishlist
-  Guid:
-    Data1: -1666214807
-    Data2: 1123251471
-    Data3: 248153747
-    Data4: -607383618
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -5675755294236221613}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-1685966296104940638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3360,34 +3152,6 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: -8938629408011745929}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-1675697143895637308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Fish Lines/Chub
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Fish Lines/Chub
-  Guid:
-    Data1: -1039960511
-    Data2: 1329663963
-    Data3: -1556194655
-    Data4: -1180710536
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 256422428825502021}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -3429,30 +3193,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/EelCatchLine1/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-1626609140319341800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Leavemyshopalt/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -3521,7 +3261,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 140624
---- !u!114 &-1561608053554834023
+--- !u!114 &-1554143282884114958
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3530,21 +3270,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Quit/ControlScheme
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/BaitShopkeep/Buttons/Fishboard
   m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
+  Path: event:/VoiceOver/BaitShopkeep/Buttons/Fishboard
+  Guid:
+    Data1: -1121983338
+    Data2: 1332014771
+    Data3: 613597590
+    Data4: 1834513874
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -1147418864175153947}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1521402227166261918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3617,7 +3361,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-1450767571395428708
+--- !u!114 &-1434026866822570836
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3627,21 +3371,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Fish Lines/Bream
+  m_Name: event:/VoiceOver/Narrator/Fish Lines/Chub
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Fish Lines/Bream
+  Path: event:/VoiceOver/Narrator/Fish Lines/Chub
   Guid:
-    Data1: 1372683697
-    Data2: 1281640004
-    Data3: 1092782733
-    Data4: 599508672
+    Data1: -1039960511
+    Data2: 1329663963
+    Data3: -1556194655
+    Data4: -1180710536
   Banks:
   - {fileID: 644752073199801212}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 5047710470034204849}
+  - {fileID: -9065623793086926196}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -3751,6 +3495,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1147418864175153947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fishboard/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-1024020787209026019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3779,7 +3547,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-837634847473392252
+--- !u!114 &-907041459754882297
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3788,53 +3556,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Misc/Younowhave...
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LeechBait/ControlScheme
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Misc/Younowhave...
-  Guid:
-    Data1: 304597834
-    Data2: 1315180818
-    Data3: 523716779
-    Data4: 345504680
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -2052736080088319399}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-836757721480451274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Fishing Prompts/Cast rod prompt
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Fishing Prompts/Cast rod prompt
-  Guid:
-    Data1: -1687440807
-    Data2: 1321411644
-    Data3: -1629747283
-    Data4: 1530815386
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -5609097401198706385}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-815344424293764856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3863,7 +3599,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-799677869473384568
+--- !u!114 &-771209419238874887
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3872,25 +3608,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/ShopTutorial/1baitShopTutorial1/2Heresthefishboard
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Gudgeon/ControlScheme
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/ShopTutorial/1baitShopTutorial1/2Heresthefishboard
-  Guid:
-    Data1: 2059814064
-    Data2: 1305622309
-    Data3: -2115094118
-    Data4: -407241771
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 3965399806827490072}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-732394025377053733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3939,7 +3671,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-646806263517689833
+--- !u!114 &-652203949535653430
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3949,7 +3681,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/1MorningLove/ControlScheme
+  m_Name: parameter:/Play again/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -3987,6 +3719,58 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-513087125055432491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Younowhave.../ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-458982892284702969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/DemoEndScreen/ThanksForPlaying
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/DemoEndScreen/ThanksForPlaying
+  Guid:
+    Data1: 1038272160
+    Data2: 1079516469
+    Data3: 991179952
+    Data4: -1141465174
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -4140186990945296018}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-448509371565259218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4011,6 +3795,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-422515216322433538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/BaitLines/CrankBait
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/BaitLines/CrankBait
+  Guid:
+    Data1: -1283472119
+    Data2: 1231152839
+    Data3: 2002223751
+    Data4: 2078664347
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -8600787838439985581}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-363835405091271854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4039,7 +3851,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-331458572520175024
+--- !u!114 &-335953249921831725
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4049,7 +3861,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Use the left stick to.../ControlScheme
+  m_Name: parameter:/Pike/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -4091,7 +3903,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-205496084511106460
+--- !u!114 &-163057049202246983
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4101,7 +3913,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fishboardalt/ControlScheme
+  m_Name: parameter:/2Heresthefishboard/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -4284,77 +4096,71 @@ MonoBehaviour:
   - {fileID: -8639760379595987593}
   - {fileID: -815344424293764856}
   - {fileID: -3301830350320691375}
-  - {fileID: 4566097459785113041}
-  - {fileID: -3422636922003496282}
-  - {fileID: -7049279152825848161}
-  - {fileID: 82174976960933273}
-  - {fileID: -5537111796996532932}
-  - {fileID: 1854330237115051565}
-  - {fileID: 3624842654582878570}
-  - {fileID: 3749406335915200828}
-  - {fileID: 6153107054212789941}
-  - {fileID: -8206940791818151778}
-  - {fileID: 1661567439163672425}
-  - {fileID: -837634847473392252}
-  - {fileID: 6995628702554877205}
-  - {fileID: -5767875203672173502}
-  - {fileID: 2857996409180214978}
-  - {fileID: 8438592613727430673}
-  - {fileID: 2040019145694581601}
-  - {fileID: 62462830776466457}
-  - {fileID: -4599403040319399626}
-  - {fileID: 7808573428514548461}
-  - {fileID: -7351991767775883628}
-  - {fileID: 8092337383133862147}
-  - {fileID: -6474213598348252833}
-  - {fileID: 6006606645898746007}
-  - {fileID: 5952949114603616131}
-  - {fileID: 2599652362681086827}
-  - {fileID: -5689147608737694128}
-  - {fileID: 4941942744867451713}
-  - {fileID: 3471971806413308115}
-  - {fileID: -799677869473384568}
-  - {fileID: 6238427026573547773}
-  - {fileID: 3371576885097160498}
-  - {fileID: -5759909853965903487}
-  - {fileID: -8653313468555441033}
-  - {fileID: -2267786351701899222}
-  - {fileID: -5840611240716708022}
-  - {fileID: 834516164170023772}
-  - {fileID: 1512112526291654825}
-  - {fileID: 4976251586194062062}
-  - {fileID: 2196686690815636092}
-  - {fileID: -9013286526538203515}
-  - {fileID: 4849405827257958820}
-  - {fileID: -5345041286298276541}
-  - {fileID: -6086442301467710391}
-  - {fileID: 1929591262481033324}
-  - {fileID: -836757721480451274}
-  - {fileID: -7502473012783517772}
-  - {fileID: -7058058515033859954}
-  - {fileID: -6154509629018222966}
-  - {fileID: -1675697143895637308}
-  - {fileID: 766275217211309971}
-  - {fileID: 7384497468822789457}
-  - {fileID: -3887341708360799570}
-  - {fileID: -1450767571395428708}
-  - {fileID: -2514030277959612742}
-  - {fileID: -6955410594861323307}
-  - {fileID: -2704566522266437145}
-  - {fileID: 1633878605431071315}
-  - {fileID: -8566443500494935493}
-  - {fileID: 5196663055449747295}
-  - {fileID: -1742943173513970482}
-  - {fileID: -7058287326327687893}
-  - {fileID: 3663596201386514092}
+  - {fileID: -2553685493477478852}
+  - {fileID: -2753942039387354325}
+  - {fileID: -422515216322433538}
+  - {fileID: -3893779971370223810}
+  - {fileID: 4962631340925396170}
+  - {fileID: -5951717253570334493}
+  - {fileID: 7438632615739416931}
+  - {fileID: -6984717782158274802}
+  - {fileID: -5643461536186420121}
+  - {fileID: -2445486609237963983}
+  - {fileID: -1434026866822570836}
+  - {fileID: -6075336319621061998}
+  - {fileID: 1985298808643702275}
+  - {fileID: 1224374492912903932}
+  - {fileID: 3987203434864281729}
+  - {fileID: 7562270724408458047}
+  - {fileID: 1713833903961940741}
+  - {fileID: 6444952595477396893}
+  - {fileID: -8215509282022600057}
+  - {fileID: -5201014209782338511}
+  - {fileID: 4384276366236929594}
+  - {fileID: 35697624734509599}
+  - {fileID: -2332294941504214534}
+  - {fileID: 3762636281687012260}
+  - {fileID: 8962085872163816769}
+  - {fileID: 8043408319163295933}
+  - {fileID: 6062162210610671551}
+  - {fileID: 2466035896857176561}
+  - {fileID: 5669837546147210289}
+  - {fileID: 3182833188990951361}
+  - {fileID: 5450745329410502693}
+  - {fileID: -7886366356077733429}
+  - {fileID: -4644465576786360990}
+  - {fileID: -1554143282884114958}
+  - {fileID: -7120802409369843128}
+  - {fileID: -458982892284702969}
+  - {fileID: -1899142538288539883}
+  - {fileID: -6759033544135003978}
+  - {fileID: 8593331392891883146}
+  - {fileID: 192278264895567741}
+  - {fileID: -8529643120044903989}
+  - {fileID: 1977232290557984950}
+  - {fileID: 1116222540818604228}
+  - {fileID: -6847227857495021424}
+  - {fileID: -8611464132222327314}
+  - {fileID: 3374362167711924858}
+  - {fileID: 3447962094640778100}
+  - {fileID: -4906192875994259529}
+  - {fileID: -3968103190248998677}
+  - {fileID: 9142483672743356240}
+  - {fileID: 1049117516232939421}
+  - {fileID: 3459333292609530738}
+  - {fileID: 1140973021283731905}
+  - {fileID: 5086390856938081348}
+  - {fileID: 4302720488961550470}
+  - {fileID: -3461095166095205688}
+  - {fileID: 7586852542759811758}
   EditorParameters: []
   MasterBanks:
   - {fileID: 8145067681192383883}
   StringsBanks:
   - {fileID: 4870658529232763954}
-  cacheTime: 639106966445718740
+  cacheTime: 639110110889304648
   cacheVersion: 131624
---- !u!114 &62462830776466457
+--- !u!114 &35697624734509599
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4364,49 +4170,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/Buttons/Leavemyshopalt
+  m_Name: event:/VoiceOver/Narrator/Fishing Prompts/Use the left stick to...
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/Buttons/Leavemyshopalt
+  Path: event:/VoiceOver/Narrator/Fishing Prompts/Use the left stick to...
   Guid:
-    Data1: -908910996
-    Data2: 1281000809
-    Data3: -553183553
-    Data4: 675443858
+    Data1: 1139386465
+    Data2: 1111903822
+    Data3: 567393448
+    Data4: 349957048
   Banks:
   - {fileID: 644752073199801212}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -1626609140319341800}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &82174976960933273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Numbers/8
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Numbers/8
-  Guid:
-    Data1: 583714063
-    Data2: 1337190194
-    Data3: 839260566
-    Data4: -18012673
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -4056845138123627357}
+  - {fileID: 8779090171441918786}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -4434,6 +4212,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &192278264895567741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Fish Lines/Bream
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Fish Lines/Bream
+  Guid:
+    Data1: 1372683697
+    Data2: 1281640004
+    Data3: 1092782733
+    Data4: 599508672
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 2461919409934024204}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &224832004701129490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4445,78 +4251,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/ChubCatchLine1/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &256422428825502021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Chub/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &265810841010796450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Thatwillcatchsomethingforsure/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &418493103723739186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/2Icantellyoullbecomingandgoingalot/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -4621,58 +4355,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/VoiceLines.bank
   Name: VoiceLines
   StudioPath: bank:/VoiceLines
-  lastModified: 639106966445718740
+  lastModified: 639110110889304648
   FileSizes:
   - Name: Desktop
-    Value: 7262624
-  Exists: 1
---- !u!114 &658665361082897551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/WormBait/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &672450109837373340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/CrankBait/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
+    Value: 7257824
   Exists: 1
 --- !u!114 &693127420855351029
 MonoBehaviour:
@@ -4702,7 +4388,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 557
---- !u!114 &709125535008406113
+--- !u!114 &698499620670203447
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4712,7 +4398,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fishbasket/ControlScheme
+  m_Name: parameter:/CricketBait/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -4754,62 +4440,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &766275217211309971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Fish Lines/CommonCarp
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Fish Lines/CommonCarp
-  Guid:
-    Data1: -144873139
-    Data2: 1131788272
-    Data3: 1084993983
-    Data4: -2089778651
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -7803198985475685805}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &834516164170023772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Numbers/9
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Numbers/9
-  Guid:
-    Data1: 1899431639
-    Data2: 1144386646
-    Data3: 1889718431
-    Data4: -1293107333
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 3182485954104257734}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &933095608650639736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4835,6 +4465,82 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: -4181204408142597806}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &997534971933698288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/...gold/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &1044006908821274108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/16IllAttactchSomebait/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &1049117516232939421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Misc/...and...
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Misc/...and...
+  Guid:
+    Data1: -990207253
+    Data2: 1333496774
+    Data3: -104190825
+    Data4: -11474332
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5870660740283085543}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -4886,6 +4592,90 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &1116222540818604228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Fish Lines/StoneLoach
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Fish Lines/StoneLoach
+  Guid:
+    Data1: -48010821
+    Data2: 1154299586
+    Data3: 1941041314
+    Data4: -157560319
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 1956241913830094380}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1140973021283731905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Fish Lines/Eel
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Fish Lines/Eel
+  Guid:
+    Data1: -695118607
+    Data2: 1338661594
+    Data3: 1339246760
+    Data4: 1755121227
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -8545424332269786703}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1224374492912903932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Misc/Younowhave...
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Misc/Younowhave...
+  Guid:
+    Data1: 304597834
+    Data2: 1315180818
+    Data3: 523716779
+    Data4: 345504680
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -513087125055432491}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &1256622522799879128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4938,34 +4728,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &1512112526291654825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/ShopTutorial/2BaitShopTutorial2/2Icantellyoullbecomingandgoingalot
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/ShopTutorial/2BaitShopTutorial2/2Icantellyoullbecomingandgoingalot
-  Guid:
-    Data1: -149211432
-    Data2: 1309465557
-    Data3: 620238254
-    Data4: 289319092
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 418493103723739186}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &1522478486202886222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4990,7 +4752,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &1633878605431071315
+--- !u!114 &1713833903961940741
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5000,25 +4762,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Fish Lines/BrownTrout
+  m_Name: event:/VoiceOver/BaitShopkeep/Buttons/Fishboardalt
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Fish Lines/BrownTrout
+  Path: event:/VoiceOver/BaitShopkeep/Buttons/Fishboardalt
   Guid:
-    Data1: -626313478
-    Data2: 1106181808
-    Data3: -1103576929
-    Data4: -1050338756
+    Data1: 1679541075
+    Data2: 1204957529
+    Data3: -414913905
+    Data4: -881796888
   Banks:
   - {fileID: 644752073199801212}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -6576311387500405515}
+  - {fileID: 6896467364614767137}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &1647386908801695455
+--- !u!114 &1717440362102420732
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5028,59 +4790,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Perch/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &1661567439163672425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/BuyLines/Treatemright
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/BuyLines/Treatemright
-  Guid:
-    Data1: -1756694712
-    Data2: 1218041628
-    Data3: -1761126756
-    Data4: 1603702085
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 5938965948397502438}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &1731655084628174473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/ThanksForPlaying/ControlScheme
+  m_Name: parameter:/3/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -5122,7 +4832,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &1842719738589250892
+--- !u!114 &1943122418803585008
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5132,7 +4842,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/2/ControlScheme
+  m_Name: parameter:/RoachQuip/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -5146,63 +4856,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &1854330237115051565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Numbers/20
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Numbers/20
-  Guid:
-    Data1: 1720019748
-    Data2: 1169252553
-    Data3: -885482617
-    Data4: 1828381571
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 9092515715115434061}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &1929591262481033324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Numbers/0
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Numbers/0
-  Guid:
-    Data1: -438280932
-    Data2: 1126840325
-    Data3: -1049066586
-    Data4: 273881939
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 3055064817542909751}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &1943122418803585008
+--- !u!114 &1956241913830094380
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5212,7 +4866,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/RoachQuip/ControlScheme
+  m_Name: parameter:/StoneLoach/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -5250,6 +4904,62 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &1977232290557984950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Misc/Youhave...
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Misc/Youhave...
+  Guid:
+    Data1: 1531927737
+    Data2: 1337188846
+    Data3: 1211108771
+    Data4: 104239554
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 8231991233023875817}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1985298808643702275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/16IllAttactchSomebait
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/16IllAttactchSomebait
+  Guid:
+    Data1: 2060521289
+    Data2: 1084490047
+    Data3: -1742524026
+    Data4: -134080709
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 1044006908821274108}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2010637792725190681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5275,62 +4985,6 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: 1943122418803585008}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &2040019145694581601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/Buttons/Baitbaord
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/Buttons/Baitbaord
-  Guid:
-    Data1: 193982054
-    Data2: 1125355496
-    Data3: 144938908
-    Data4: 1109169038
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 7489502365055976359}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &2196686690815636092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/SellLines/Thatllbemydinnertonight
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/SellLines/Thatllbemydinnertonight
-  Guid:
-    Data1: 458831336
-    Data2: 1139098375
-    Data3: 1473202351
-    Data4: -441801796
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 2419220765941500850}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -5382,7 +5036,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &2419220765941500850
+--- !u!114 &2461919409934024204
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5392,7 +5046,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Thatllbemydinnertonight/ControlScheme
+  m_Name: parameter:/Bream/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -5406,6 +5060,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &2466035896857176561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Numbers/1
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Numbers/1
+  Guid:
+    Data1: 444505966
+    Data2: 1326350182
+    Data3: -330216276
+    Data4: -949198486
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -4901455299646235352}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2469080244811281873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5490,58 +5172,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &2599652362681086827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/BuyLines/Theyregoingtoabetterplace
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/BuyLines/Theyregoingtoabetterplace
-  Guid:
-    Data1: 645335435
-    Data2: 1254036059
-    Data3: -519452741
-    Data4: -775178265
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -7609818095626939789}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &2697269022921269376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Youhave.../ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &2704308756361332636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5621,7 +5251,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &2857996409180214978
+--- !u!114 &2912256254098550108
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5630,25 +5260,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/SellLines/Pleasureasalways
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wishlist/ControlScheme
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/SellLines/Pleasureasalways
-  Guid:
-    Data1: 234709090
-    Data2: 1151625943
-    Data3: -1483737177
-    Data4: -466067637
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -3434186170671462785}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &2956273255664759061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5676,54 +5302,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2328
---- !u!114 &3017309530157546871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Play again/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &3055064817542909751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/0/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &3065039397133458101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5776,7 +5354,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &3182485954104257734
+--- !u!114 &3084928488541697649
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5786,7 +5364,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/9/ControlScheme
+  m_Name: parameter:/Bullhead/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -5800,6 +5378,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &3182833188990951361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/BaitShopkeep/Buttons/Leavemyshop.alp
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/BaitShopkeep/Buttons/Leavemyshop.alp
+  Guid:
+    Data1: 317892465
+    Data2: 1321305716
+    Data3: -1149953378
+    Data4: 884722905
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 7772902285077283359}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3198238965839172345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5876,7 +5482,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &3371576885097160498
+--- !u!114 &3374362167711924858
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5886,21 +5492,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Numbers/4
+  m_Name: event:/VoiceOver/Narrator/Misc/...gold
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Numbers/4
+  Path: event:/VoiceOver/Narrator/Misc/...gold
   Guid:
-    Data1: -1784437835
-    Data2: 1263718513
-    Data3: -1348592716
-    Data4: 1368363330
+    Data1: 1142967246
+    Data2: 1314125609
+    Data3: 427611530
+    Data4: -607725951
   Banks:
   - {fileID: 644752073199801212}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -6394756126755806370}
+  - {fileID: 997534971933698288}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -5928,7 +5534,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &3471971806413308115
+--- !u!114 &3447962094640778100
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5938,53 +5544,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/ShopTutorial/1baitShopTutorial1/3Heresthebaitboard
+  m_Name: event:/VoiceOver/Narrator/Fish Lines/Gudgeon
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/ShopTutorial/1baitShopTutorial1/3Heresthebaitboard
+  Path: event:/VoiceOver/Narrator/Fish Lines/Gudgeon
   Guid:
-    Data1: 1004402848
-    Data2: 1127844182
-    Data3: -1101795446
-    Data4: 171015467
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 5995326247140787552}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &3624842654582878570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/SellLines/BrilliantScore
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/SellLines/BrilliantScore
-  Guid:
-    Data1: -1489707222
-    Data2: 1282472858
-    Data3: 935126442
-    Data4: -1424828954
+    Data1: -1015813678
+    Data2: 1319407989
+    Data3: 770984579
+    Data4: -474347472
   Banks:
   - {fileID: 644752073199801212}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 8403822684579456677}
+  - {fileID: -771209419238874887}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &3663596201386514092
+--- !u!114 &3459333292609530738
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5994,24 +5572,48 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Fishing Prompts/Use the left stick to...
+  m_Name: event:/VoiceOver/Narrator/Numbers/6
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Fishing Prompts/Use the left stick to...
+  Path: event:/VoiceOver/Narrator/Numbers/6
   Guid:
-    Data1: 1139386465
-    Data2: 1111903822
-    Data3: 567393448
-    Data4: 349957048
+    Data1: -1782645269
+    Data2: 1201429249
+    Data3: 1339650693
+    Data4: 465168926
   Banks:
   - {fileID: 644752073199801212}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -331458572520175024}
+  - {fileID: -4790581153392820376}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &3499946447758208938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BuyLines/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &3673066463264545480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6067,7 +5669,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &3749406335915200828
+--- !u!114 &3762636281687012260
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6077,21 +5679,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Numbers/2
+  m_Name: event:/VoiceOver/BaitShopkeep/Buttons/Baitbaord
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Numbers/2
+  Path: event:/VoiceOver/BaitShopkeep/Buttons/Baitbaord
   Guid:
-    Data1: 675293747
-    Data2: 1198580105
-    Data3: 405563575
-    Data4: 1401455846
+    Data1: 193982054
+    Data2: 1125355496
+    Data3: 144938908
+    Data4: 1109169038
   Banks:
   - {fileID: 644752073199801212}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 1842719738589250892}
+  - {fileID: 7239244003649003009}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -6202,30 +5804,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &3965399806827490072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/2Heresthefishboard/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &3981173041098724716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6250,6 +5828,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &3987203434864281729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Fish Lines/CommonCarp
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Fish Lines/CommonCarp
+  Guid:
+    Data1: -144873139
+    Data2: 1131788272
+    Data3: 1084993983
+    Data4: -2089778651
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -7665914200549717272}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4030298303625921111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6361,6 +5967,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &4302720488961550470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Fish Lines/BrownTrout
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Fish Lines/BrownTrout
+  Guid:
+    Data1: -626313478
+    Data2: 1106181808
+    Data3: -1103576929
+    Data4: -1050338756
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 5766966800027352776}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4352488817840912767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6385,7 +6019,35 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &4393432439611552076
+--- !u!114 &4384276366236929594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/BaitLines/WormBait
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/BaitLines/WormBait
+  Guid:
+    Data1: 49789276
+    Data2: 1251480174
+    Data3: 4451746
+    Data4: -1714487945
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 6643346322205652713}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4436571333251553898
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6395,7 +6057,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/10/ControlScheme
+  m_Name: parameter:/3Heresthebaitboard/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -6437,62 +6099,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &4566097459785113041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/16IllAttactchSomebait
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/16IllAttactchSomebait
-  Guid:
-    Data1: 2060521289
-    Data2: 1084490047
-    Data3: -1742524026
-    Data4: -134080709
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -4814141613804345895}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &4849405827257958820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Numbers/6
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Numbers/6
-  Guid:
-    Data1: -1782645269
-    Data2: 1201429249
-    Data3: 1339650693
-    Data4: 465168926
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -4435906428708474020}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &4870658529232763954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6508,10 +6114,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639106966442818239
+  lastModified: 639110110882453327
   FileSizes:
   - Name: Desktop
-    Value: 9332
+    Value: 8940
   Exists: 1
 --- !u!114 &4891491981458493215
 MonoBehaviour:
@@ -6540,7 +6146,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &4941942744867451713
+--- !u!114 &4962631340925396170
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6550,53 +6156,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/Buttons/Fishboard
+  m_Name: event:/VoiceOver/Narrator/Numbers/8
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/Buttons/Fishboard
+  Path: event:/VoiceOver/Narrator/Numbers/8
   Guid:
-    Data1: -1121983338
-    Data2: 1332014771
-    Data3: 613597590
-    Data4: 1834513874
+    Data1: 583714063
+    Data2: 1337190194
+    Data3: 839260566
+    Data4: -18012673
   Banks:
   - {fileID: 644752073199801212}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -9086167405224990487}
+  - {fileID: -8737308878303655605}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &4976251586194062062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/BaitLines/LeechBait
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/BaitLines/LeechBait
-  Guid:
-    Data1: 795249115
-    Data2: 1197985167
-    Data3: 1198171017
-    Data4: -418920671
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 7746556755525692427}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &5047710470034204849
+--- !u!114 &5064410385032019636
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6606,7 +6184,59 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bream/ControlScheme
+  m_Name: parameter:/1Ohthere/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &5086390856938081348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/BaitShopkeep/ShopTutorial/1baitShopTutorial1/1MorningLove
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/BaitShopkeep/ShopTutorial/1baitShopTutorial1/1MorningLove
+  Guid:
+    Data1: 1419819765
+    Data2: 1161433934
+    Data3: 675836337
+    Data4: 590462655
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 5096410539959737229}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5096410539959737229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/1MorningLove/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -6644,34 +6274,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &5196663055449747295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/DemoEndScreen/Play again
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/DemoEndScreen/Play again
-  Guid:
-    Data1: 817297751
-    Data2: 1261230421
-    Data3: -46185570
-    Data4: 966585440
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 3017309530157546871}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &5222442824663665125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6780,6 +6382,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &5450745329410502693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/BaitLines/MussleBait
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/BaitLines/MussleBait
+  Guid:
+    Data1: 327485309
+    Data2: 1173509868
+    Data3: -1608766811
+    Data4: 440353508
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5171392297687949372}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &5483686921704880301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6808,6 +6438,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &5504866446836350507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/2Icantellyoullbecomingandgoingalot/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &5658418221136345555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6833,6 +6487,34 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: -1457114683808585146}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5669837546147210289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/BaitShopkeep/Buttons/Fishbasket
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/BaitShopkeep/Buttons/Fishbasket
+  Guid:
+    Data1: -1810839440
+    Data2: 1190833303
+    Data3: 1325553301
+    Data4: 122302985
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5486108614665260600}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -6884,7 +6566,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &5933173200773837511
+--- !u!114 &5766966800027352776
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6894,7 +6576,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bullhead/ControlScheme
+  m_Name: parameter:/BrownTrout/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -6908,7 +6590,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &5938965948397502438
+--- !u!114 &5803877663891411394
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6918,7 +6600,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Treatemright/ControlScheme
+  m_Name: parameter:/Fishbasketalt/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -6932,86 +6614,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &5952949114603616131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/ShopTutorial/2BaitShopTutorial2/1Ohthere
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/ShopTutorial/2BaitShopTutorial2/1Ohthere
-  Guid:
-    Data1: 228747134
-    Data2: 1218933998
-    Data3: 1013130651
-    Data4: 475849921
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -6904441481606140878}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &5995326247140787552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/3Heresthebaitboard/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &6006606645898746007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/BaitLines/MussleBait
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/BaitLines/MussleBait
-  Guid:
-    Data1: 327485309
-    Data2: 1173509868
-    Data3: -1608766811
-    Data4: 440353508
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 7963688013264648888}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &6054226391709174956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7036,7 +6638,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &6153107054212789941
+--- !u!114 &6062162210610671551
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7046,21 +6648,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Numbers/3
+  m_Name: event:/VoiceOver/Narrator/Numbers/7
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Numbers/3
+  Path: event:/VoiceOver/Narrator/Numbers/7
   Guid:
-    Data1: -22214601
-    Data2: 1176005101
-    Data3: 751580075
-    Data4: 74950927
+    Data1: -1244390290
+    Data2: 1173677283
+    Data3: -894968922
+    Data4: 2081555303
   Banks:
   - {fileID: 644752073199801212}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -8106427693945422171}
+  - {fileID: 6268134779645849363}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -7091,7 +6693,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &6238427026573547773
+--- !u!114 &6268134779645849363
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7100,25 +6702,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Misc/...left
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/7/ControlScheme
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Misc/...left
-  Guid:
-    Data1: 1120720304
-    Data2: 1112090316
-    Data3: -144843128
-    Data4: 233343037
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -4905101917840193253}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &6331578949978596574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7171,6 +6769,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &6444952595477396893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/DemoEndScreen/Play again
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/DemoEndScreen/Play again
+  Guid:
+    Data1: 817297751
+    Data2: 1261230421
+    Data3: -46185570
+    Data4: 966585440
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -652203949535653430}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6614026443769997059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7182,6 +6808,54 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/2Here,takemyoldrod/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &6643346322205652713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/WormBait/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &6686559230994537545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/2/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -7243,6 +6917,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &6896467364614767137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fishboardalt/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &6994460797825833110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7270,35 +6968,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &6995628702554877205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/Buttons/Fishboardalt
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/Buttons/Fishboardalt
-  Guid:
-    Data1: 1679541075
-    Data2: 1204957529
-    Data3: -414913905
-    Data4: -881796888
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -205496084511106460}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &7118910990699276252
+--- !u!114 &7239244003649003009
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7308,7 +6978,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Eel/ControlScheme
+  m_Name: parameter:/Baitbaord/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -7374,31 +7044,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &7333513012312730162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Pike/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &7384497468822789457
+--- !u!114 &7438632615739416931
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7408,25 +7054,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Fish Lines/Pike
+  m_Name: event:/VoiceOver/Narrator/Numbers/20
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Fish Lines/Pike
+  Path: event:/VoiceOver/Narrator/Numbers/20
   Guid:
-    Data1: -1991886510
-    Data2: 1310961888
-    Data3: 1977143970
-    Data4: -534126160
+    Data1: 1720019748
+    Data2: 1169252553
+    Data3: -885482617
+    Data4: 1828381571
   Banks:
   - {fileID: 644752073199801212}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 7333513012312730162}
+  - {fileID: -7885567871810438053}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &7489502365055976359
+--- !u!114 &7504151449076315084
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7436,7 +7082,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Baitbaord/ControlScheme
+  m_Name: parameter:/9/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -7474,6 +7120,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &7562270724408458047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Fish Lines/Pike
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Fish Lines/Pike
+  Guid:
+    Data1: -1991886510
+    Data2: 1310961888
+    Data3: 1977143970
+    Data4: -534126160
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -335953249921831725}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7584280162067873800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7499,6 +7173,34 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: -2812511944410738947}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7586852542759811758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/BaitShopkeep/ItemLines/SellLines
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/BaitShopkeep/ItemLines/SellLines
+  Guid:
+    Data1: 458831336
+    Data2: 1139098375
+    Data3: 1473202351
+    Data4: -441801796
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -6471259267176675378}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -7530,7 +7232,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &7746556755525692427
+--- !u!114 &7772902285077283359
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7540,7 +7242,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/LeechBait/ControlScheme
+  m_Name: parameter:/Leavemyshop.alp/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -7554,34 +7256,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &7808573428514548461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/Narrator/Numbers/1
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/Narrator/Numbers/1
-  Guid:
-    Data1: 444505966
-    Data2: 1326350182
-    Data3: -330216276
-    Data4: -949198486
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -5917142257617909335}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &7901850066567831499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7606,31 +7280,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &7963688013264648888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/MussleBait/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &8092337383133862147
+--- !u!114 &8043408319163295933
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7640,21 +7290,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/Buttons/Leavemyshop.alp
+  m_Name: event:/VoiceOver/BaitShopkeep/Buttons/Leavemyshopalt
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/Buttons/Leavemyshop.alp
+  Path: event:/VoiceOver/BaitShopkeep/Buttons/Leavemyshopalt
   Guid:
-    Data1: 317892465
-    Data2: 1321305716
-    Data3: -1149953378
-    Data4: 884722905
+    Data1: -908910996
+    Data2: 1281000809
+    Data3: -553183553
+    Data4: 675443858
   Banks:
   - {fileID: 644752073199801212}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -6125865736008972209}
+  - {fileID: -2479705313632814581}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -7701,7 +7351,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639106966442778358
+  lastModified: 639110110882403930
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -7717,6 +7367,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/4Nice,hearhowfasttherod/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &8231991233023875817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Youhave.../ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -7758,6 +7432,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8281323700684278368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/5/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &8384487413308254092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7782,31 +7480,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &8403822684579456677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/BrilliantScore/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &8438592613727430673
+--- !u!114 &8593331392891883146
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7816,48 +7490,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/Buttons/Fishbasketalt
+  m_Name: event:/VoiceOver/Narrator/Misc/...left
   m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/Buttons/Fishbasketalt
+  Path: event:/VoiceOver/Narrator/Misc/...left
   Guid:
-    Data1: -1544168350
-    Data2: 1186852093
-    Data3: -69538155
-    Data4: -381418415
+    Data1: 1120720304
+    Data2: 1112090316
+    Data3: -144843128
+    Data4: 233343037
   Banks:
   - {fileID: 644752073199801212}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 8487339022228434290}
+  - {fileID: -6543545167687920624}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &8487339022228434290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fishbasketalt/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &8633879958838015857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7938,7 +7588,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &8910285275500242433
+--- !u!114 &8747219835259280069
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7948,7 +7598,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Oh,youshouldnthave/ControlScheme
+  m_Name: parameter:/Roach/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -7962,7 +7612,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &8971261574464957775
+--- !u!114 &8779090171441918786
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7972,7 +7622,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/...and.../ControlScheme
+  m_Name: parameter:/Use the left stick to.../ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -7986,7 +7636,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &9092515715115434061
+--- !u!114 &8962085872163816769
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7995,21 +7645,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/20/ControlScheme
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/DemoEndScreen/Wishlist
   m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
+  Path: event:/VoiceOver/Narrator/DemoEndScreen/Wishlist
+  Guid:
+    Data1: -1666214807
+    Data2: 1123251471
+    Data3: 248153747
+    Data4: -607383618
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 2912256254098550108}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &9116613322101578416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8034,3 +7688,31 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &9142483672743356240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/BaitLines/LeechBait
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/BaitLines/LeechBait
+  Guid:
+    Data1: 795249115
+    Data2: 1197985167
+    Data3: 1198171017
+    Data4: -418920671
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -907041459754882297}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0

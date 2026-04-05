@@ -1104,6 +1104,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: FMODManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8801547982616051495, guid: 795ecf8c96d56404cbe199c4ed693d71, type: 3}
+      propertyPath: BaitShopSoldFish.Path
+      value: event:/VoiceOver/BaitShopkeep/ItemLines/SellLines
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801547982616051495, guid: 795ecf8c96d56404cbe199c4ed693d71, type: 3}
+      propertyPath: BaitShopBoughtBait.Path
+      value: event:/VoiceOver/BaitShopkeep/ItemLines/BuyLines
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801547982616051495, guid: 795ecf8c96d56404cbe199c4ed693d71, type: 3}
+      propertyPath: BaitShopSoldFish.Guid.Data1
+      value: 458831336
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801547982616051495, guid: 795ecf8c96d56404cbe199c4ed693d71, type: 3}
+      propertyPath: BaitShopSoldFish.Guid.Data2
+      value: 1139098375
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801547982616051495, guid: 795ecf8c96d56404cbe199c4ed693d71, type: 3}
+      propertyPath: BaitShopSoldFish.Guid.Data3
+      value: 1473202351
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801547982616051495, guid: 795ecf8c96d56404cbe199c4ed693d71, type: 3}
+      propertyPath: BaitShopSoldFish.Guid.Data4
+      value: -441801796
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801547982616051495, guid: 795ecf8c96d56404cbe199c4ed693d71, type: 3}
+      propertyPath: BaitShopBoughtBait.Guid.Data1
+      value: -1780778380
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801547982616051495, guid: 795ecf8c96d56404cbe199c4ed693d71, type: 3}
+      propertyPath: BaitShopBoughtBait.Guid.Data2
+      value: 1152155833
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801547982616051495, guid: 795ecf8c96d56404cbe199c4ed693d71, type: 3}
+      propertyPath: BaitShopBoughtBait.Guid.Data3
+      value: 659819139
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801547982616051495, guid: 795ecf8c96d56404cbe199c4ed693d71, type: 3}
+      propertyPath: BaitShopBoughtBait.Guid.Data4
+      value: -1235957993
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
