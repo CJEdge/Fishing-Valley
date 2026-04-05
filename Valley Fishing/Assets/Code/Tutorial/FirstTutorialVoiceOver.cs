@@ -64,6 +64,13 @@ public class FirstTutorialVoiceOver : VoiceOverController
 	}
 
 	public override bool PerformStateSwitch() {
+		if(this.LevelController.CurrentState == LevelController.State.Idle) {
+			if (this.CastRodTutorialsCompleted[2] && !this.CastRodTutorialsCompleted[3]) {
+				PlayNextTutotialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
+				IncrementTutorial(this.CastRodTutorialsCompleted);
+				return false;
+			}
+		}
 		if (!base.PerformStateSwitch()) {
 			return false;
 		}
@@ -76,19 +83,15 @@ public class FirstTutorialVoiceOver : VoiceOverController
 				} else {
 					PlayNextTutotialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
 					IncrementTutorial(this.CastRodTutorialsCompleted);
-					//LevelController.SetState(LevelController.State.AttatchBait);
-				}
-				//if (!this.CastRodTutorialsCompleted[3] && this.ReelTutorialsCompleted[3]) {
-				//	PlayNextTutotialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
-				//	IncrementTutorial(this.CastRodTutorialsCompleted);
-				//} 
-				if (this.CastRodTutorialsCompleted[3]) {
-					LevelController.SetState(LevelController.State.AttatchBait);
 				}
 				break;
 			case LevelController.State.AttatchBait:
 				break;
 			case LevelController.State.IdleWithBait:
+				if (this.ReelTutorialsCompleted[4]) {
+					PlayNextTutotialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
+					IncrementTutorial(this.CastRodTutorialsCompleted);
+				}
 				break;
 			case LevelController.State.ReelingFish:
 				if (this.ReelTutorialsCompleted[3]) {

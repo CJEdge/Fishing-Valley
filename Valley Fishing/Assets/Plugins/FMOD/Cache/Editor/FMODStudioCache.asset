@@ -781,7 +781,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639107358908384833
+  lastModified: 639106874725579957
   FileSizes:
   - Name: Desktop
     Value: 1991744
@@ -974,6 +974,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6809788496756903357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/BaitShopkeep/SellLines/BrilliantScore
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/BaitShopkeep/SellLines/BrilliantScore
+  Guid:
+    Data1: -1489707222
+    Data2: 1282472858
+    Data3: 935126442
+    Data4: -1424828954
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 4426606870301234733}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6759033544135003978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1161,7 +1189,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-6471259267176675378
+--- !u!114 &-6362115858857230739
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1170,21 +1198,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SellLines/ControlScheme
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/BaitShopkeep/SellLines/Pleasureasalways
   m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
+  Path: event:/VoiceOver/BaitShopkeep/SellLines/Pleasureasalways
+  Guid:
+    Data1: 234709090
+    Data2: 1151625943
+    Data3: -1483737177
+    Data4: -466067637
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 1215781702025929597}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6243148455120786628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2002,6 +2034,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-4268721406542520007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/BaitShopkeep/BuyLines/InicknamedthatoneJeremy
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/BaitShopkeep/BuyLines/InicknamedthatoneJeremy
+  Guid:
+    Data1: -1780778380
+    Data2: 1152155833
+    Data3: 659819139
+    Data4: -1235957993
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 3402804653767815119}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4181204408142597806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2037,6 +2097,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/1Backondryland/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-4142739211960134340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Theyregoingtoabetterplace/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -2317,34 +2401,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-3461095166095205688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/ItemLines/BuyLines
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/ItemLines/BuyLines
-  Guid:
-    Data1: -1780778380
-    Data2: 1152155833
-    Data3: 659819139
-    Data4: -1235957993
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 3499946447758208938}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-3457608351454428273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2480,6 +2536,34 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: -732394025377053733}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3176005325790660876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/BaitShopkeep/SellLines/Thatllbemydinnertonight
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/BaitShopkeep/SellLines/Thatllbemydinnertonight
+  Guid:
+    Data1: 458831336
+    Data2: 1139098375
+    Data3: 1473202351
+    Data4: -441801796
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 2522984358598951577}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -2707,7 +2791,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639107358903029405
+  lastModified: 639106862507363163
   FileSizes:
   - Name: Desktop
     Value: 7597024
@@ -2736,6 +2820,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-2482669831534245033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/BaitShopkeep/BuyLines/Treatemright
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/BaitShopkeep/BuyLines/Treatemright
+  Guid:
+    Data1: -1756694712
+    Data2: 1218041628
+    Data3: -1761126756
+    Data4: 1603702085
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 3667184843700722850}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2479705313632814581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4151,14 +4263,20 @@ MonoBehaviour:
   - {fileID: 1140973021283731905}
   - {fileID: 5086390856938081348}
   - {fileID: 4302720488961550470}
-  - {fileID: -3461095166095205688}
-  - {fileID: 7586852542759811758}
+  - {fileID: 4123682936807799305}
+  - {fileID: 8722720226000320334}
+  - {fileID: -6809788496756903357}
+  - {fileID: -2482669831534245033}
+  - {fileID: -6362115858857230739}
+  - {fileID: -4268721406542520007}
+  - {fileID: 9211002750967517505}
+  - {fileID: -3176005325790660876}
   EditorParameters: []
   MasterBanks:
   - {fileID: 8145067681192383883}
   StringsBanks:
   - {fileID: 4870658529232763954}
-  cacheTime: 639110110889304648
+  cacheTime: 639106966445718740
   cacheVersion: 131624
 --- !u!114 &35697624734509599
 MonoBehaviour:
@@ -4355,10 +4473,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/VoiceLines.bank
   Name: VoiceLines
   StudioPath: bank:/VoiceLines
-  lastModified: 639110110889304648
+  lastModified: 639106966445718740
   FileSizes:
   - Name: Desktop
-    Value: 7257824
+    Value: 7262624
   Exists: 1
 --- !u!114 &693127420855351029
 MonoBehaviour:
@@ -4440,6 +4558,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &833355808259313955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Oh,youshouldnthave/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &933095608650639736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4648,6 +4790,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1215781702025929597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Pleasureasalways/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &1224374492912903932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5172,6 +5338,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &2522984358598951577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Thatllbemydinnertonight/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &2704308756361332636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5510,6 +5700,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &3402804653767815119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/InicknamedthatoneJeremy/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &3440919681698943629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5590,7 +5804,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &3499946447758208938
+--- !u!114 &3667184843700722850
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5600,7 +5814,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/BuyLines/ControlScheme
+  m_Name: parameter:/Treatemright/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -5967,6 +6181,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &4123682936807799305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/BaitShopkeep/SellLines/Oh,youshouldnthave
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/BaitShopkeep/SellLines/Oh,youshouldnthave
+  Guid:
+    Data1: 1136717574
+    Data2: 1081548287
+    Data3: -1201757529
+    Data4: -1400384886
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 833355808259313955}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4302720488961550470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6047,6 +6289,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &4426606870301234733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BrilliantScore/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &4436571333251553898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6114,10 +6380,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639110110882453327
+  lastModified: 639106966442818239
   FileSizes:
   - Name: Desktop
-    Value: 8940
+    Value: 9332
   Exists: 1
 --- !u!114 &4891491981458493215
 MonoBehaviour:
@@ -6968,6 +7234,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &7145227912231925417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Thatwillcatchsomethingforsure/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &7239244003649003009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7176,34 +7466,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &7586852542759811758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/ItemLines/SellLines
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/ItemLines/SellLines
-  Guid:
-    Data1: 458831336
-    Data2: 1139098375
-    Data3: 1473202351
-    Data4: -441801796
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -6471259267176675378}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &7670900187235486950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7351,7 +7613,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639110110882403930
+  lastModified: 639106966442778358
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -7560,6 +7822,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8722720226000320334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/BaitShopkeep/BuyLines/Thatwillcatchsomethingforsure
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/BaitShopkeep/BuyLines/Thatwillcatchsomethingforsure
+  Guid:
+    Data1: -1235743973
+    Data2: 1265808723
+    Data3: -1677105784
+    Data4: -474650113
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 7145227912231925417}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8728324001678331158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7713,6 +8003,34 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: -907041459754882297}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &9211002750967517505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/BaitShopkeep/BuyLines/Theyregoingtoabetterplace
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/BaitShopkeep/BuyLines/Theyregoingtoabetterplace
+  Guid:
+    Data1: 645335435
+    Data2: 1254036059
+    Data3: -519452741
+    Data4: -775178265
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -4142739211960134340}
   MinDistance: 1
   MaxDistance: 20
   Length: 0

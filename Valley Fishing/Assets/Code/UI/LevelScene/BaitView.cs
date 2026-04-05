@@ -44,12 +44,56 @@ public class BaitView : MonoBehaviour
 	#region Public Methods
 
 	public void EnableBaitUI(bool enable) {
-		buttonsGameobject.SetActive(enable);
+		StartCoroutine(EnableUI(enable));
+		return;
+	}
+
+	public void BaitSelected(int baitIndex) {
+		if(baitIndex == this.BaitIndex) {
+			return;
+		}
+		AudioManager.Instance.PlayBaitSound(false, this.BaitIndex);
+		this.BaitIndex = baitIndex;
+		AudioManager.Instance.PlayBaitSound(true, this.BaitIndex);
+	}
+
+	public void BaitClicked(int baitIndex) {
+		AudioManager.Instance.PlayBaitSound(false, 0);
+		AudioManager.Instance.PlayOneShot(FMODManager.Instance.AttatchBaitSounds[baitIndex]);
+		Debug.Log("here");
+		InventoryManager.Instance.CurrentBait = InventoryManager.Instance.BaitDatas.datas[baitIndex];
+		InventoryManager.Instance.OwnedBaitTypeDatas[baitIndex].quantity--;
+		EnableBaitUI(false);
+	}
+
+	#endregion
+
+	#region Private Methods
+	
+	private IEnumerator EnableUI(bool enable) {
+		yield return new WaitForEndOfFrame();
 		if (enable == false) {
+			buttonsGameobject.SetActive(enable);
 			GameManager.Instance.LevelController.SetState(LevelController.State.IdleWithBait);
 			GameManager.Instance.EventSystem.SetSelectedGameObject(null);
-			return;
+			yield break;
 		} else {
+			bool allBaitsAreTutorials = true;
+			for (int i = 0; i < InventoryManager.Instance.OwnedBaitTypeDatas.Count; i++) {
+				BaitDatas.Datas bait = InventoryManager.Instance.OwnedBaitTypeDatas[i].OwnedItemData as BaitDatas.Datas;
+				if (InventoryManager.Instance.OwnedBaitTypeDatas[i].quantity > 0 && !bait.IsTutorial) {
+					allBaitsAreTutorials = false;
+				}
+			}
+			if (allBaitsAreTutorials) {
+				for (int i = 0; i < InventoryManager.Instance.OwnedBaitTypeDatas.Count; i++) {
+					if (InventoryManager.Instance.OwnedBaitTypeDatas[i].quantity > 0) {
+						BaitClicked(i);
+					}
+				}				
+				yield break;
+			}
+			buttonsGameobject.SetActive(enable);
 			bool firstButtonSelected = false;
 			for (int i = 0; i < baitButtons.Length; i++) {
 				baitButtons[i].gameObject.SetActive(false);
@@ -71,44 +115,25 @@ public class BaitView : MonoBehaviour
 		StartCoroutine(WaitToOpenBaitBox());
 	}
 
-	public void BaitSelected(int baitIndex) {
-		if(baitIndex == this.BaitIndex) {
+	private void SkipBaitSelection(EventReference eventReference, bool value) {
+		Debug.Log("skip");
+		if (!buttonsGameobject.activeSelf) {
 			return;
 		}
-		AudioManager.Instance.PlayBaitSound(false, this.BaitIndex);
-		this.BaitIndex = baitIndex;
-		AudioManager.Instance.PlayBaitSound(true, this.BaitIndex);
-	}
-
-	public void BaitClicked(int baitIndex) {
-		AudioManager.Instance.PlayBaitSound(false, 0);
-		AudioManager.Instance.PlayOneShot(FMODManager.Instance.AttatchBaitSounds[baitIndex]);
-		InventoryManager.Instance.CurrentBait = InventoryManager.Instance.BaitDatas.datas[baitIndex];
-		InventoryManager.Instance.OwnedBaitTypeDatas[baitIndex].quantity--;
-		EnableBaitUI(false);
-	}
-
-	#endregion
-
-	#region Private Methods
-
-	private void SkipBaitSelection(EventReference eventReference, bool value) {
 		if(GameManager.Instance.LevelController.CurrentState != LevelController.State.AttatchBait) {
 			return;
 		}
 		if (AudioManager.Instance.VoiceLineInProgress){
 			return;
 		}
-		int activeButtons = 0;
-		for (int i = 0; i < baitButtons.Length; i++) {
-			if (baitButtons[i].isActiveAndEnabled) {
-				activeButtons++;
-			}
+		if (InventoryManager.Instance.CurrentBait.IsTutorial) {
+			Debug.Log("tutorial");
+			BaitClicked(this.BaitIndex);
 		}
-		if (activeButtons > 1) {
-			return;
+		if (InventoryManager.Instance.OneBaitTypeLeft) {
+			Debug.Log("one bait");
+			BaitClicked(this.BaitIndex);
 		}
-		BaitClicked(this.BaitIndex);
 	}
 
 	private IEnumerator SelectButtonAfterOneFrame(GameObject button) {

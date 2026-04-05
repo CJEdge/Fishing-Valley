@@ -157,7 +157,6 @@ public class VoiceOverController : MonoBehaviour
 				LevelController.SetState(LevelController.State.Idle);
 				break;
 			case LevelController.State.Idle:
-				Debug.Log("here");
 				LevelController.SetState(LevelController.State.AttatchBait);
 				break;
 			default:

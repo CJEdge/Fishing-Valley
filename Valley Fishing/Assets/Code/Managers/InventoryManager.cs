@@ -46,10 +46,10 @@ public class InventoryManager : Singleton<InventoryManager> {
 					typesOfBait++;
 				}
 				if(typesOfBait == 2) {
-
+					return false;
 				}
 			}
-			return false;
+			return true;
 		}
 	}
 
