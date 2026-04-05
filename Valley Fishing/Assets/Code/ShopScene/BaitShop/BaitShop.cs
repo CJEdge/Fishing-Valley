@@ -94,7 +94,7 @@ public class BaitShop : Shop {
 		if (InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].quantity > 0) {
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.MoneyEarnt);
 			List<EventReference> voiceOverChain = new List<EventReference>();
-			voiceOverChain.Add(FMODManager.Instance.BaitShopSoldItem[0]);
+			voiceOverChain.Add(FMODManager.Instance.BaitShopSoldFish);
 			for (int i = 0; i < FMODManager.Instance.GetNumber(GameManager.Instance.Money).Count; i++) {
 				voiceOverChain.Add(FMODManager.Instance.GetNumber(GameManager.Instance.Money)[i]);
 			}
@@ -123,7 +123,7 @@ public class BaitShop : Shop {
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.MoneyEarnt);
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.MoneyEarnt);
 		List<EventReference> voiceOverChain = new List<EventReference>();
-		voiceOverChain.Add(FMODManager.Instance.BaitShopSoldItem[0]);
+		voiceOverChain.Add(FMODManager.Instance.BaitShopSoldFish);
 		for (int i = 0; i < FMODManager.Instance.GetNumber(GameManager.Instance.Money).Count; i++) {
 			voiceOverChain.Add(FMODManager.Instance.GetNumber(GameManager.Instance.Money)[i]);
 		}
@@ -146,7 +146,7 @@ public class BaitShop : Shop {
 		this.BaitQuantities[baitIndex] -= sellQuantity;
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.MoneyEarnt);
 		List<EventReference> voiceOverChain = new List<EventReference>();
-		voiceOverChain.Add(FMODManager.Instance.BaitShopSoldItem[0]);
+		voiceOverChain.Add(FMODManager.Instance.BaitShopBoughtBait);
 		for (int i = 0; i < FMODManager.Instance.GetNumber(GameManager.Instance.Money).Count; i++) {
 			voiceOverChain.Add(FMODManager.Instance.GetNumber(GameManager.Instance.Money)[i]);
 		}

@@ -23,12 +23,14 @@ public class FMODManager : Singleton<FMODManager>
 	public EventReference[] ShoreIntros;
 	public EventReference[] LeaveShorePrompts;
 	public EventReference[] BaitShopIntros;
-	public EventReference[] BaitShopSoldItem;
 	public EventReference[] BaitNames;
 	public EventReference[] FishBoardFish;
+    public EventReference BaitShopBoughtBait;
+    public EventReference BaitShopSoldFish;
 
-	//captain
-	public EventReference YouHave;
+
+    //captain
+    public EventReference YouHave;
 
 	//shop keeper
 	public EventReference Left;
