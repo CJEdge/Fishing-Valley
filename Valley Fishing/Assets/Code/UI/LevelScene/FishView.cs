@@ -55,8 +55,9 @@ public class FishView : MonoBehaviour
 			int randomCaughtTextIndex = Random.Range(0, fishCaughtTexts.Length);
 			fishText.text = fishCaughtTexts[randomCaughtTextIndex] + " " + GameManager.Instance.CurrentFish.FishData.ItemName + "!";
 			fishText.gameObject.SetActive(enable);
-			AudioManager.Instance.PlayOneShot(FMODManager.Instance.FishCatch);
-		}
+
+			PlayCorrectFishCatchSFX();
+        }
 		else {
 			for (int i = 0; i < InventoryManager.Instance.FishDatas.Datas.Length; i++) {
 				fishUis[i].SetActive(enable);
@@ -94,6 +95,19 @@ public class FishView : MonoBehaviour
 			GameManager.Instance.LevelController.SetState(LevelController.State.Idle);
 		}
 	}
+
+	private void PlayCorrectFishCatchSFX()
+	{
+		switch(GameManager.Instance.CurrentFish.FishData.catchSFX)
+		{
+			case FishDatas.FishData.CatchSFX.DEFAULT:
+                AudioManager.Instance.PlayOneShot(FMODManager.Instance.FishCatch);
+				break;
+			case FishDatas.FishData.CatchSFX.BOSS:
+                AudioManager.Instance.PlayOneShot(FMODManager.Instance.BossCatch);
+                break;
+        }
+    }
 
 	#endregion
 

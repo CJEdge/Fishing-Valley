@@ -143,13 +143,6 @@ MonoBehaviour:
       Data3: 638291110
       Data4: 222862762
     Path: event:/VoiceOver/Captain/GameIntroduction/4-BaitShopTutorial2/1Backondryland
-  BaitShopSoldItem:
-  - Guid:
-      Data1: 234709090
-      Data2: 1151625943
-      Data3: -1483737177
-      Data4: -466067637
-    Path: event:/VoiceOver/BaitShopkeep/SellLines/Pleasureasalways
   BaitNames:
   - Guid:
       Data1: 49789276
@@ -272,6 +265,20 @@ MonoBehaviour:
       Data3: -939878499
       Data4: -1008191392
     Path: event:/VoiceOver/Narrator/Fish Lines/Roach
+  BaitShopBoughtBait:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  BaitShopSoldFish:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   YouHave:
     Guid:
       Data1: 1531927737
@@ -688,7 +695,14 @@ MonoBehaviour:
       Data2: 1132541236
       Data3: -390000235
       Data4: 469100929
-    Path: event:/SFX/LevelSFX/Fish Catch
+    Path: event:/SFX/LevelSFX/Catch Sounds/Fish Catch
+  BossCatch:
+    Guid:
+      Data1: 1649584802
+      Data2: 1095380526
+      Data3: -527014002
+      Data4: 627297732
+    Path: event:/SFX/LevelSFX/Catch Sounds/Boss Catch
   Unspool:
     Guid:
       Data1: 2066811122

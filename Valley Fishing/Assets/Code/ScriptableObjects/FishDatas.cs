@@ -32,6 +32,13 @@ public class FishDatas : ScriptableObject {
 		public EventReference fishNameAudio;
 		public EventReference fishCatchAudio;
 		public EventReference icthyologistInfoAudio;
+
+		public enum CatchSFX
+		{
+			DEFAULT,
+			BOSS
+		}
+		public CatchSFX catchSFX;
 	}
 
 	public FishData[] Datas;
