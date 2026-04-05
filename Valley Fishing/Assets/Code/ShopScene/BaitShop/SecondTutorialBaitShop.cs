@@ -28,10 +28,10 @@ public class SecondTutorialBaitShop : BaitShop {
 			PlayNextTutotialVoiceOver(this.BaitboardTutorialsCompleted, baitboardTutorials);
 			IncrementTutorial(this.BaitboardTutorialsCompleted);
 		}
-		if (InventoryManager.Instance.OwnedBaitTypeDatas[5].quantity == 5 && InventoryManager.Instance.OwnedBaitTypeDatas[6].quantity == 5 && !baitBoard.Initialized && !this.BaitboardTutorialsCompleted[3]) {
-			PlayNextTutotialVoiceOver(this.BaitboardTutorialsCompleted, baitboardTutorials);
-			IncrementTutorial(this.BaitboardTutorialsCompleted);
-		}
+		//if (InventoryManager.Instance.OwnedBaitTypeDatas[5].quantity == 5 && InventoryManager.Instance.OwnedBaitTypeDatas[6].quantity == 5 && !baitBoard.Initialized && !this.BaitboardTutorialsCompleted[3]) {
+		//	PlayNextTutotialVoiceOver(this.BaitboardTutorialsCompleted, baitboardTutorials);
+		//	IncrementTutorial(this.BaitboardTutorialsCompleted);
+		//}
 		if (baitBoard.Initialized && !this.BaitboardTutorialsCompleted[1]) {
 			PlayNextTutotialVoiceOver(this.BaitboardTutorialsCompleted, baitboardTutorials);
 			IncrementTutorial(this.BaitboardTutorialsCompleted);
