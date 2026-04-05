@@ -117,6 +117,7 @@ public class PlayerArms : MonoBehaviour
 		this.IsCasting = true;
 		animator.Play(Throw);
 		AudioManager.Instance.PlayBaitSound(false, System.Array.IndexOf(InventoryManager.Instance.BaitDatas.datas,InventoryManager.Instance.CurrentBait));
+		InventoryManager.Instance.CurrentBait = null;
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.ThrowRod,transform.position);
 		yield return new WaitForSeconds(windUpLength);
 		AudioManager.Instance.SkipVoiceOver();
@@ -130,7 +131,11 @@ public class PlayerArms : MonoBehaviour
 	}
 
 	private void Strafe(int direction) {
-		if(direction == -1) {
+		if (GameManager.Instance.InputController.CurrentState == InputController.State.ReelingLocked) {
+			animator.Play(IdleReel);
+			return;
+		}
+		if (direction == -1) {
 			animator.Play(StrafeLeft);
 		}
 		if (direction == 1) {
