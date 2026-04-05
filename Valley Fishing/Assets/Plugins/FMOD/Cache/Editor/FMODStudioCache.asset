@@ -1607,11 +1607,11 @@ MonoBehaviour:
   - {fileID: -2505363372462143274}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 164000
+  Length: 68000
 --- !u!114 &-5346110687929469791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2758,10 +2758,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639107358903029405
+  lastModified: 639110286682430907
   FileSizes:
   - Name: Desktop
-    Value: 7597024
+    Value: 4982528
   Exists: 1
 --- !u!114 &-2494538842542823968
 MonoBehaviour:
@@ -3307,11 +3307,11 @@ MonoBehaviour:
   - {fileID: -2505363372462143274}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 140624
+  Length: 46357
 --- !u!114 &-1554143282884114958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4048,6 +4048,7 @@ MonoBehaviour:
   - {fileID: -2505363372462143274}
   - {fileID: -7367136770462161699}
   - {fileID: 644752073199801212}
+  - {fileID: 104381689466576650}
   EditorEvents:
   - {fileID: -1566599626178045608}
   - {fileID: -2401575568964721219}
@@ -4205,12 +4206,14 @@ MonoBehaviour:
   - {fileID: -3479317067666906657}
   - {fileID: -8650591194176827430}
   - {fileID: 770095894166370614}
+  - {fileID: 6671056939705022658}
+  - {fileID: 2367936317959883354}
   EditorParameters: []
   MasterBanks:
   - {fileID: 8145067681192383883}
   StringsBanks:
   - {fileID: 4870658529232763954}
-  cacheTime: 639110270228376353
+  cacheTime: 639110287941477550
   cacheVersion: 131624
 --- !u!114 &35697624734509599
 MonoBehaviour:
@@ -4240,6 +4243,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &104381689466576650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Ambience.bank
+  Name: Ambience
+  StudioPath: bank:/Ambience
+  lastModified: 639110287941477550
+  FileSizes:
+  - Name: Desktop
+    Value: 3997568
+  Exists: 1
 --- !u!114 &187036962655783586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5116,6 +5139,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &2367936317959883354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Sea Ambience
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Sea Ambience
+  Guid:
+    Data1: 1146189055
+    Data2: 1179138557
+    Data3: -694918237
+    Data4: -674369810
+  Banks:
+  - {fileID: 104381689466576650}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 164000
 --- !u!114 &2461919409934024204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6170,10 +6220,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639110225749859907
+  lastModified: 639110287905696241
   FileSizes:
   - Name: Desktop
-    Value: 9006
+    Value: 9154
   Exists: 1
 --- !u!114 &4891491981458493215
 MonoBehaviour:
@@ -6901,6 +6951,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &6671056939705022658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Rain Ambience
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Rain Ambience
+  Guid:
+    Data1: -738560791
+    Data2: 1079106617
+    Data3: 1567875226
+    Data4: 1675653154
+  Banks:
+  - {fileID: 104381689466576650}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 142624
 --- !u!114 &6686559230994537545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7379,7 +7456,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639110225749819572
+  lastModified: 639110287905635841
   FileSizes:
   - Name: Desktop
     Value: 1036
