@@ -10,6 +10,7 @@ public class PauseMenuUI : MonoBehaviour
 
 	#endregion
 
+	FMOD.Studio.Bus masterBus;
 
 	#region Mono Behaviours
 
@@ -17,6 +18,7 @@ public class PauseMenuUI : MonoBehaviour
 		GameManager.Instance.InputController.OnPause -= PauseGame;
 		GameManager.Instance.InputController.OnPause += PauseGame;
 		pauseMenuObject.SetActive(false);
+		masterBus = FMODUnity.RuntimeManager.GetBus("bus:/");
 	}
 
 	public void OnDestroy() {
@@ -33,6 +35,13 @@ public class PauseMenuUI : MonoBehaviour
 
 	public void PauseGame() {
 		pauseMenuObject.SetActive(!pauseMenuObject.activeSelf);
+		if (pauseMenuObject.activeInHierarchy) {
+			Time.timeScale = 0;
+			masterBus.setPaused(true);
+		} else {
+			Time.timeScale = 1;
+			masterBus.setPaused(false);
+		}
 	}
 
 	public void ReturnToMenu() {
