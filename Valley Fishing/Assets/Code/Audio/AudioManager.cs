@@ -13,6 +13,7 @@ public class AudioManager : Singleton<AudioManager>
 	#region Properties
 
 	public EventInstance MusicEventInstance;
+	public EventInstance AmbienceEventInstance;
 	public EventInstance VoiceLineEventInstance;
 	public EventReference LastVoiceLineEventReference;
 	public EventInstance CurrentReelInstance;
@@ -23,8 +24,9 @@ public class AudioManager : Singleton<AudioManager>
 	[field:SerializeField]
 	public StudioEventEmitter FishActivityLevelInstance { get; set;	}
 	private List<EventInstance> SFXEventInstances {	get; set; } = new List<EventInstance>();
-	private List<EventInstance> MusicEventInstances { get; set; } = new List<EventInstance>();
-	public Action<EventReference,bool> OnVoiceLineOver { get; set; }
+	//private List<EventInstance> MusicEventInstances { get; set; } = new List<EventInstance>();
+ //   private List<EventInstance> AmbienceEventInstances { get; set; } = new List<EventInstance>();
+    public Action<EventReference,bool> OnVoiceLineOver { get; set; }
 	public Action OnVoiceLineStarted { get; set; }
 	public bool VoiceLineInProgress { get; set;	}
 	public bool LastVoiceLineWasInChain { get; set; }
@@ -174,17 +176,30 @@ public class AudioManager : Singleton<AudioManager>
 		return eventInstance;
 	}
 
-	public EventInstance CreateMusicInstance(EventReference eventReference) {
-		EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
-		MusicEventInstances.Add(eventInstance);
-		return eventInstance;
+	//public EventInstance CreateMusicInstance(EventReference eventReference) {
+	//	EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
+	//	//MusicEventInstances.Add(eventInstance);
+	//	return eventInstance;
+	//}
+ //   public EventInstance CreateAmbienceInstance(EventReference eventReference)
+ //   {
+ //       EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
+ //       //AmbienceEventInstance.Add(eventInstance);
+ //       return eventInstance;
+ //   }
+
+    public void InitializeMusic(EventReference musicEventReference) {
+        CleanUpMusic();
+		this.MusicEventInstance = RuntimeManager.CreateInstance(musicEventReference);
+        this.MusicEventInstance.start();
 	}
 
-	public void InitializeMusic(EventReference musicEventReference) {
-		CleanUpMusic();
-		this.MusicEventInstance = CreateMusicInstance(musicEventReference);
-		this.MusicEventInstance.start();
-	}
+	public void InitializeAmbience(EventReference ambienceEventReference)
+	{
+		CleanUpAmbience();
+		this.AmbienceEventInstance = RuntimeManager.CreateInstance(ambienceEventReference);
+		this.AmbienceEventInstance.start();
+    }
 
 	public void SetMusicParameter(string name, float value) {
 		this.MusicEventInstance.setParameterByName(name, value);
@@ -193,6 +208,7 @@ public class AudioManager : Singleton<AudioManager>
 	public void CleanUpEverything() {
 		CleanUpSFX();
 		CleanUpMusic();
+		CleanUpAmbience();
 		CleanUpVoiceOver();
 	}
 
@@ -209,10 +225,16 @@ public class AudioManager : Singleton<AudioManager>
 	}
 
 	private void CleanUpMusic() {
-		foreach (EventInstance eventInstance in MusicEventInstances) {
-			eventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-			eventInstance.release();
-		}
+		//foreach (EventInstance eventInstance in MusicEventInstances) {
+		MusicEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+		MusicEventInstance.release();
+		//}
+	}
+
+	private void CleanUpAmbience()
+	{
+		AmbienceEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+		AmbienceEventInstance.release();
 	}
 
 	private void CleanUpVoiceOver() {
@@ -262,6 +284,11 @@ public class AudioManager : Singleton<AudioManager>
 
 	public void PlayMusic(EventReference musicReference) {
 		InitializeMusic(musicReference);
+	}
+
+	public void PlayAmbience(EventReference ambienceReference)
+	{
+		InitializeAmbience(ambienceReference);
 	}
 
 	#endregion

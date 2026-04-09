@@ -1242,6 +1242,13 @@ MonoBehaviour:
       Data3: 1985929359
       Data4: 942631019
     Path: event:/Music/Boss Music
+  levelAmbience:
+    Guid:
+      Data1: -738560791
+      Data2: 1079106617
+      Data3: 1567875226
+      Data4: 1675653154
+    Path: event:/Ambience/Rain Ambience
   gameplayContainer: {fileID: 641266736}
   VoiceOverController: {fileID: 582599908}
   <FishView>k__BackingField: {fileID: 723462215}

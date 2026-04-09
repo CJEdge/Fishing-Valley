@@ -11,6 +11,7 @@ public class LevelController : AbstractState<LevelController.State> {
 	
 	[SerializeField] private EventSystem eventSystem;
 	[SerializeField] private EventReference levelMusic;
+	[SerializeField] private EventReference levelAmbience;
 	[SerializeField] private Transform gameplayContainer;
 
 	#endregion
@@ -49,6 +50,7 @@ public class LevelController : AbstractState<LevelController.State> {
 				GameManager.Instance.LevelController = this;
 				GameManager.Instance.EventSystem = eventSystem;
 				AudioManager.Instance.PlayMusic(levelMusic);
+				AudioManager.Instance.PlayAmbience(levelAmbience);
 				SetState(State.Cutscene);
 				break;
 			case State.Cutscene:
