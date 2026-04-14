@@ -2090,6 +2090,12 @@ MonoBehaviour:
       Data3: -2115094118
       Data4: -407241771
     Path: event:/VoiceOver/BaitShopkeep/ShopTutorial/1baitShopTutorial1/2Heresthefishboard
+  - Guid:
+      Data1: 502385430
+      Data2: 1202244157
+      Data3: 755313063
+      Data4: 1725565598
+    Path: event:/VoiceOver/Narrator/Shop Prompts/Close Menu
   baitboardTutorials:
   - Guid:
       Data1: -746234071
@@ -2103,6 +2109,12 @@ MonoBehaviour:
       Data3: -778688896
       Data4: 1488136846
     Path: event:/VoiceOver/Captain/GameIntroduction/2-BaitShopTutorial1/3Great,We_vesoldallourfish
+  - Guid:
+      Data1: 1897283032
+      Data2: 1306888824
+      Data3: 1730168463
+      Data4: -1967625427
+    Path: event:/VoiceOver/Narrator/Shop Prompts/LeaveShop
   fishBoardButton: {fileID: 1909034982}
   fishBasketButton: {fileID: 276873569}
   baitBoardButton: {fileID: 2063497091}
@@ -4222,6 +4234,63 @@ RectTransform:
   m_AnchoredPosition: {x: 659.3673, y: -73.0925}
   m_SizeDelta: {x: 49.083, y: 112.01}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1632467254
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6663090804494182391, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663090804494182391, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663090804494182391, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663090804494182391, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663090804494182391, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663090804494182391, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663090804494182391, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663090804494182391, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663090804494182391, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663090804494182391, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135747875273214858, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: m_Name
+      value: CheatManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
 --- !u!1 &1663309059
 GameObject:
   m_ObjectHideFlags: 0
@@ -6540,3 +6609,4 @@ SceneRoots:
   - {fileID: 965918120}
   - {fileID: 2102042973}
   - {fileID: 745754964}
+  - {fileID: 1632467254}

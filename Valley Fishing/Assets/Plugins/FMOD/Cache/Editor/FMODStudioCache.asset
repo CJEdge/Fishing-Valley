@@ -251,34 +251,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6585
---- !u!114 &-8650591194176827430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/ItemLines/BuyLines
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/ItemLines/BuyLines
-  Guid:
-    Data1: -1780778380
-    Data2: 1152155833
-    Data3: 659819139
-    Data4: -1235957993
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -3504933021607348175}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-8639760379595987593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -742,30 +714,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-7617980227884174356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SellLines/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-7460723538794452283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -833,11 +781,39 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639110270228376353
+  lastModified: 639117864247430189
   FileSizes:
   - Name: Desktop
     Value: 2459616
   Exists: 1
+--- !u!114 &-7354441255615529450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/BaitShopkeep/ItemLines/BuyLines
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/BaitShopkeep/ItemLines/BuyLines
+  Guid:
+    Data1: -1780778380
+    Data2: 1152155833
+    Data3: 659819139
+    Data4: -1235957993
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 7306896549085224589}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7344018685762948976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1744,6 +1720,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-5171346624250701916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SellLines/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-4952316480863020867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2003,33 +2003,6 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: -8065231252284989152}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-4395424720212077365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LevelSFX/Catch Sounds/Boss Catch
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/LevelSFX/Catch Sounds/Boss Catch
-  Guid:
-    Data1: 1649584802
-    Data2: 1095380526
-    Data3: -527014002
-    Data4: 627297732
-  Banks:
-  - {fileID: -7367136770462161699}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -2317,31 +2290,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-3504933021607348175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/BuyLines/ControlScheme
-  m_EditorClassIdentifier: 
-  Name: ControlScheme
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4086690009
-    data2: 3914322847
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-3479317067666906657
+--- !u!114 &-3593318274552521289
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2351,20 +2300,75 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LevelSFX/Catch Sounds/Fish Catch
+  m_Name: event:/Ambience/Rain Ambience
   m_EditorClassIdentifier: 
-  Path: event:/SFX/LevelSFX/Catch Sounds/Fish Catch
+  Path: event:/Ambience/Rain Ambience
   Guid:
-    Data1: -1537860913
-    Data2: 1132541236
-    Data3: -390000235
-    Data4: 469100929
+    Data1: -738560791
+    Data2: 1079106617
+    Data3: 1567875226
+    Data4: 1675653154
   Banks:
-  - {fileID: -7367136770462161699}
+  - {fileID: 1752698486959571251}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 142624
+--- !u!114 &-3549207643513356326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Sea Ambience
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Sea Ambience
+  Guid:
+    Data1: 1146189055
+    Data2: 1179138557
+    Data3: -694918237
+    Data4: -674369810
+  Banks:
+  - {fileID: 1752698486959571251}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 164000
+--- !u!114 &-3476069634019195543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/BaitShopkeep/ItemLines/SellLines
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/BaitShopkeep/ItemLines/SellLines
+  Guid:
+    Data1: 458831336
+    Data2: 1139098375
+    Data3: 1473202351
+    Data4: -441801796
+  Banks:
+  - {fileID: 644752073199801212}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -5171346624250701916}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -2758,7 +2762,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639110286682430907
+  lastModified: 639117864246833042
   FileSizes:
   - Name: Desktop
     Value: 4982528
@@ -3570,6 +3574,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-1052969902951436005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Close Menu/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-1024020787209026019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4048,7 +4076,7 @@ MonoBehaviour:
   - {fileID: -2505363372462143274}
   - {fileID: -7367136770462161699}
   - {fileID: 644752073199801212}
-  - {fileID: 104381689466576650}
+  - {fileID: 1752698486959571251}
   EditorEvents:
   - {fileID: -1566599626178045608}
   - {fileID: -2401575568964721219}
@@ -4202,18 +4230,20 @@ MonoBehaviour:
   - {fileID: 1140973021283731905}
   - {fileID: 5086390856938081348}
   - {fileID: 4302720488961550470}
-  - {fileID: -4395424720212077365}
-  - {fileID: -3479317067666906657}
-  - {fileID: -8650591194176827430}
-  - {fileID: 770095894166370614}
-  - {fileID: 6671056939705022658}
-  - {fileID: 2367936317959883354}
+  - {fileID: -3593318274552521289}
+  - {fileID: -3549207643513356326}
+  - {fileID: 4886964923200836264}
+  - {fileID: 3182362377891412682}
+  - {fileID: -7354441255615529450}
+  - {fileID: -3476069634019195543}
+  - {fileID: 4278800423232360368}
+  - {fileID: 8380282054442729605}
   EditorParameters: []
   MasterBanks:
   - {fileID: 8145067681192383883}
   StringsBanks:
   - {fileID: 4870658529232763954}
-  cacheTime: 639110287941477550
+  cacheTime: 639117887172301895
   cacheVersion: 131624
 --- !u!114 &35697624734509599
 MonoBehaviour:
@@ -4243,26 +4273,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &104381689466576650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ambience.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Ambience.bank
-  Name: Ambience
-  StudioPath: bank:/Ambience
-  lastModified: 639110287941477550
-  FileSizes:
-  - Name: Desktop
-    Value: 3997568
-  Exists: 1
 --- !u!114 &187036962655783586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4430,10 +4440,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/VoiceLines.bank
   Name: VoiceLines
   StudioPath: bank:/VoiceLines
-  lastModified: 639110110889304648
+  lastModified: 639117887172301895
   FileSizes:
   - Name: Desktop
-    Value: 7257824
+    Value: 7569440
   Exists: 1
 --- !u!114 &693127420855351029
 MonoBehaviour:
@@ -4512,34 +4522,6 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: 2273924480012368943}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &770095894166370614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VoiceOver/BaitShopkeep/ItemLines/SellLines
-  m_EditorClassIdentifier: 
-  Path: event:/VoiceOver/BaitShopkeep/ItemLines/SellLines
-  Guid:
-    Data1: 458831336
-    Data2: 1139098375
-    Data3: 1473202351
-    Data4: -441801796
-  Banks:
-  - {fileID: 644752073199801212}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -7617980227884174356}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -4907,6 +4889,26 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &1752698486959571251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Ambience.bank
+  Name: Ambience
+  StudioPath: bank:/Ambience
+  lastModified: 639117864246224451
+  FileSizes:
+  - Name: Desktop
+    Value: 3997568
+  Exists: 1
 --- !u!114 &1762430538635127639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5139,33 +5141,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &2367936317959883354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Sea Ambience
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience/Sea Ambience
-  Guid:
-    Data1: 1146189055
-    Data2: 1179138557
-    Data3: -694918237
-    Data4: -674369810
-  Banks:
-  - {fileID: 104381689466576650}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 164000
 --- !u!114 &2461919409934024204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5508,6 +5483,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &3182362377891412682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Catch Sounds/Fish Catch
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Catch Sounds/Fish Catch
+  Guid:
+    Data1: -1537860913
+    Data2: 1132541236
+    Data3: -390000235
+    Data4: 469100929
+  Banks:
+  - {fileID: -7367136770462161699}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3182833188990951361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6073,6 +6075,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &4278800423232360368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Shop Prompts/Close Menu
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Shop Prompts/Close Menu
+  Guid:
+    Data1: 502385430
+    Data2: 1202244157
+    Data3: 755313063
+    Data4: 1725565598
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -1052969902951436005}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4302720488961550470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6220,11 +6250,38 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639110287905696241
+  lastModified: 639117887166926081
   FileSizes:
   - Name: Desktop
-    Value: 9154
+    Value: 9332
   Exists: 1
+--- !u!114 &4886964923200836264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Catch Sounds/Boss Catch
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Catch Sounds/Boss Catch
+  Guid:
+    Data1: 1649584802
+    Data2: 1095380526
+    Data3: -527014002
+    Data4: 627297732
+  Banks:
+  - {fileID: -7367136770462161699}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4891491981458493215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6475,6 +6532,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/3Let_sPracticeReeling/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &5405470440241027446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LeaveShop/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -6951,33 +7032,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &6671056939705022658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Rain Ambience
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience/Rain Ambience
-  Guid:
-    Data1: -738560791
-    Data2: 1079106617
-    Data3: 1567875226
-    Data4: 1675653154
-  Banks:
-  - {fileID: 104381689466576650}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 142624
 --- !u!114 &6686559230994537545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7153,6 +7207,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &7306896549085224589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BuyLines/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &7312359892874704568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7456,10 +7534,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639110287905635841
+  lastModified: 639117887166896153
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 1340
   Exists: 1
 --- !u!114 &8167019131263051008
 MonoBehaviour:
@@ -7561,6 +7639,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &8380282054442729605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Shop Prompts/LeaveShop
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Shop Prompts/LeaveShop
+  Guid:
+    Data1: 1897283032
+    Data2: 1306888824
+    Data3: 1730168463
+    Data4: -1967625427
+  Banks:
+  - {fileID: 644752073199801212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 5405470440241027446}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8384487413308254092
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,7 +19,7 @@ public class FirstTutorialBaitShop : BaitShop {
 	#region Properties
 	public bool AllFishSold { get => InventoryManager.Instance.TotalOwnedFish > 0; }
 	private bool FishBoardNotClosedForFirstTime { get; set; }
-	private bool PlayFishBoardIntro { get; set; } = true;
+	private bool PlayFishBoardIntro { get; set; } = false;
 	private bool PlayFishBasketIntro { get; set; } = true;
 	private bool PlayBaitBoardIntro { get; set; } = true;
 	private bool FishSold { get; set; }

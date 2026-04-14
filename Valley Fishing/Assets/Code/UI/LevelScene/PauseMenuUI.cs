@@ -5,12 +5,12 @@ public class PauseMenuUI : MonoBehaviour
 {
 	#region Serialized Fields
 
-	[SerializeField]
-	private GameObject pauseMenuObject;
+	[SerializeField] private GameObject pauseMenuObject;
+	[SerializeField] private GameObject initialButton;
 
 	#endregion
 
-	FMOD.Studio.Bus masterBus;
+	FMOD.Studio.Bus	gameplayBus;
 
 	#region Mono Behaviours
 
@@ -18,7 +18,7 @@ public class PauseMenuUI : MonoBehaviour
 		GameManager.Instance.InputController.OnPause -= PauseGame;
 		GameManager.Instance.InputController.OnPause += PauseGame;
 		pauseMenuObject.SetActive(false);
-		masterBus = FMODUnity.RuntimeManager.GetBus("bus:/");
+		gameplayBus = FMODUnity.RuntimeManager.GetBus("bus:/Gameplay");
 	}
 
 	public void OnDestroy() {
@@ -36,16 +36,31 @@ public class PauseMenuUI : MonoBehaviour
 	public void PauseGame() {
 		pauseMenuObject.SetActive(!pauseMenuObject.activeSelf);
 		if (pauseMenuObject.activeInHierarchy) {
+			GameManager.Instance.EventSystem.SetSelectedGameObject(initialButton);
 			Time.timeScale = 0;
-			masterBus.setPaused(true);
+			gameplayBus.setPaused(true);
 		} else {
 			Time.timeScale = 1;
-			masterBus.setPaused(false);
+			gameplayBus.setPaused(false);
 		}
 	}
 
 	public void ReturnToMenu() {
 		SceneManager.LoadScene("Menu");
+	}
+
+	#endregion
+
+
+	#region Private Methods
+
+	private void OnApplicationFocus(bool hasFocus) {
+		if (!hasFocus) {
+			return;
+		}
+		if (pauseMenuObject.activeInHierarchy) {
+			gameplayBus.setPaused(true);
+		}
 	}
 
 	#endregion

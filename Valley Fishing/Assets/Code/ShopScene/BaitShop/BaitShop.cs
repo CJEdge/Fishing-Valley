@@ -183,7 +183,6 @@ public class BaitShop : Shop {
 	}
 
 	public virtual void FishBoardSelected() {
-		Debug.Log("here");
 		lerpObjectToPositions[1].BeginLerp();
 	}
 

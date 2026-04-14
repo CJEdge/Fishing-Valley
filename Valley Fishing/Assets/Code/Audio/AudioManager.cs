@@ -34,11 +34,22 @@ public class AudioManager : Singleton<AudioManager>
 	public int VoiceOverChainPosition {	get; set; }
 	[field:SerializeField] public bool InVoiceOverChain { get; set;	}
 	private bool CanSkip { get; set; } = true;
+	private bool Paused { get {
+			bool paused;
+			gameplayBus.getPaused(out paused);
+			return paused;
+		} }
+	FMOD.Studio.Bus gameplayBus;
 
 	#endregion
 
 
 	#region Mono Behaviours
+
+	public override void Awake() {
+		base.Awake();
+		gameplayBus = FMODUnity.RuntimeManager.GetBus("bus:/Gameplay");
+	}
 
 	public void OnDestroy() {
 		CleanUpSFX();
@@ -90,7 +101,7 @@ public class AudioManager : Singleton<AudioManager>
 			this.VoiceLineEventInstance.release();
 			this.VoiceLineEventInstance.clearHandle();
 		}
-		this.VoiceLineEventInstance = CreateSFXInstance(voiceLineReference);
+		this.VoiceLineEventInstance = CreateSFXInstance(voiceLineReference);		
 		this.LastVoiceLineEventReference = voiceLineReference;
 
 		if (Gamepad.current != null)
@@ -130,7 +141,9 @@ public class AudioManager : Singleton<AudioManager>
 		this.VoiceLineEventInstance.release();
 		this.VoiceLineEventInstance.clearHandle();
 		this.VoiceLineInProgress = false;
-		this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventReference, true);
+		if (!this.Paused) {
+			this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventReference, true);
+		}
 		if (this.InVoiceOverChain) {
 			this.VoiceOverChainPosition = this.VoiceOverChain.Count;
 			this.InVoiceOverChain = false;
@@ -244,10 +257,16 @@ public class AudioManager : Singleton<AudioManager>
 
 	private IEnumerator WaitForVoiceLineEnd() {
 		PLAYBACK_STATE playbackState;
-		while (true) {
+		while (true) {			
 			if (!this.VoiceLineEventInstance.isValid()) {
 				this.VoiceLineInProgress = false;
 				yield break;
+			}
+
+			bool paused;
+			this.VoiceLineEventInstance.getPaused(out paused);
+			if (paused) {
+				yield return null;
 			}
 
 			this.VoiceLineEventInstance.getPlaybackState(out playbackState);
@@ -267,12 +286,16 @@ public class AudioManager : Singleton<AudioManager>
 			if (this.VoiceOverChainPosition < this.VoiceOverChain.Count) {
 				yield return new WaitForEndOfFrame();
 				PlayVoiceOver(this.VoiceOverChain[this.VoiceOverChainPosition]);
-			} else {				
-				this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventReference, false);
-				this.InVoiceOverChain = false;
+			} else {
+				if (!this.Paused) {
+					this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventReference, false);
+					this.InVoiceOverChain = false;
+				}
 			}
-		} else { 
-			this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventReference, false);
+		} else {
+			if (!this.Paused) {
+				this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventReference, false);
+			}
 		}
 	}
 
@@ -290,7 +313,6 @@ public class AudioManager : Singleton<AudioManager>
 	{
 		InitializeAmbience(ambienceReference);
 	}
+}
 
 	#endregion
-
-}
