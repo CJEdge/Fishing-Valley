@@ -30,6 +30,7 @@ public class ShopController : MonoBehaviour
         GameManager.Instance.ShopController = this;
         GameManager.Instance.EventSystem = eventSystem;
         AudioManager.Instance.PlayMusic(levelMusic);
+		AudioManager.Instance.CleanUpAmbience();
 		if (isTutorial) {
 			return;
 		}

@@ -43,6 +43,7 @@ MonoBehaviour:
         Data3: 675815579
         Data4: -1486664141
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/BrownTroutInfo
+    catchSFX: 0
   - ItemName: Common Carp
     ItemSellPrice: 1
     ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
@@ -73,6 +74,7 @@ MonoBehaviour:
         Data3: -1984268899
         Data4: -494359701
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/CommonCarpInfo
+    catchSFX: 0
   - ItemName: Stone Loach
     ItemSellPrice: 1
     ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
@@ -103,6 +105,7 @@ MonoBehaviour:
         Data3: 1692203927
         Data4: -333913488
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/StoneLoach
+    catchSFX: 0
   - ItemName: Eel
     ItemSellPrice: 5
     ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
@@ -110,8 +113,8 @@ MonoBehaviour:
     ReelInSpeed: 2
     SwimAwaySpeed: 100
     StrafedSwimAwaySpeed: 30
-    ActivityLevels: 03000000
-    MovementDirections: 01000000
+    ActivityLevels: 01000000
+    MovementDirections: 02000000
     fishNameAudio:
       Guid:
         Data1: -924942623
@@ -133,6 +136,7 @@ MonoBehaviour:
         Data3: 1789957793
         Data4: 351625996
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/EelInfo
+    catchSFX: 0
   - ItemName: Pike
     ItemSellPrice: 5
     ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
@@ -163,6 +167,7 @@ MonoBehaviour:
         Data3: 725785259
         Data4: 1869763058
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/PikeInfo
+    catchSFX: 0
   - ItemName: Bream
     ItemSellPrice: 5
     ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
@@ -170,7 +175,7 @@ MonoBehaviour:
     ReelInSpeed: 2
     SwimAwaySpeed: 100
     StrafedSwimAwaySpeed: 30
-    ActivityLevels: 01000000
+    ActivityLevels: 0100000003000000
     MovementDirections: 
     fishNameAudio:
       Guid:
@@ -193,6 +198,7 @@ MonoBehaviour:
         Data3: 1540267195
         Data4: 2029425335
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/BreamInfo
+    catchSFX: 0
   - ItemName: Chub
     ItemSellPrice: 4
     ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
@@ -223,6 +229,7 @@ MonoBehaviour:
         Data3: 1558448516
         Data4: 1511501718
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/ChubInfo
+    catchSFX: 0
   - ItemName: Perch
     ItemSellPrice: 4
     ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
@@ -253,6 +260,7 @@ MonoBehaviour:
         Data3: -535703114
         Data4: -1088123410
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/PerchInfo
+    catchSFX: 0
   - ItemName: Bullhead
     ItemSellPrice: 3
     ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
@@ -283,6 +291,7 @@ MonoBehaviour:
         Data3: 1632587696
         Data4: -2110957817
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/BullheadInfo
+    catchSFX: 0
   - ItemName: Gudgeon
     ItemSellPrice: 3
     ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
@@ -313,6 +322,7 @@ MonoBehaviour:
         Data3: -2137742717
         Data4: 1058223944
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/GudgeonInfo
+    catchSFX: 0
   - ItemName: Roach
     ItemSellPrice: 3
     ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
@@ -343,6 +353,7 @@ MonoBehaviour:
         Data3: -1023547757
         Data4: -899727657
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/RoachInfo
+    catchSFX: 0
   - ItemName: Llym Lly Salmon
     ItemSellPrice: 3
     ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
@@ -373,3 +384,4 @@ MonoBehaviour:
         Data3: 1512354955
         Data4: -1186297269
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/LLymLlymSalmonInfo
+    catchSFX: 0

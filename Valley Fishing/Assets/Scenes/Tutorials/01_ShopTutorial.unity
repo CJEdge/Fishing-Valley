@@ -1948,63 +1948,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404218677}
   m_CullTransparentMesh: 1
---- !u!1001 &424022602
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3115471859111581157, guid: 32fec91cf1bd2ca4aa9dbcfe28b3ac9a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3115471859111581157, guid: 32fec91cf1bd2ca4aa9dbcfe28b3ac9a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3115471859111581157, guid: 32fec91cf1bd2ca4aa9dbcfe28b3ac9a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3115471859111581157, guid: 32fec91cf1bd2ca4aa9dbcfe28b3ac9a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3115471859111581157, guid: 32fec91cf1bd2ca4aa9dbcfe28b3ac9a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3115471859111581157, guid: 32fec91cf1bd2ca4aa9dbcfe28b3ac9a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3115471859111581157, guid: 32fec91cf1bd2ca4aa9dbcfe28b3ac9a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3115471859111581157, guid: 32fec91cf1bd2ca4aa9dbcfe28b3ac9a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3115471859111581157, guid: 32fec91cf1bd2ca4aa9dbcfe28b3ac9a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3115471859111581157, guid: 32fec91cf1bd2ca4aa9dbcfe28b3ac9a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7245469774262023083, guid: 32fec91cf1bd2ca4aa9dbcfe28b3ac9a, type: 3}
-      propertyPath: m_Name
-      value: FadeManager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 32fec91cf1bd2ca4aa9dbcfe28b3ac9a, type: 3}
 --- !u!1001 &524100149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3520,6 +3463,12 @@ MonoBehaviour:
       Data3: -2115094118
       Data4: -407241771
     Path: event:/VoiceOver/BaitShopkeep/ShopTutorial/1baitShopTutorial1/2Heresthefishboard
+  - Guid:
+      Data1: 502385430
+      Data2: 1202244157
+      Data3: 755313063
+      Data4: 1725565598
+    Path: event:/VoiceOver/Narrator/Shop Prompts/Close Menu
   baitboardTutorials:
   - Guid:
       Data1: 1004402848
@@ -3528,17 +3477,24 @@ MonoBehaviour:
       Data4: 171015467
     Path: event:/VoiceOver/BaitShopkeep/ShopTutorial/1baitShopTutorial1/3Heresthebaitboard
   - Guid:
-      Data1: 1790919730
-      Data2: 1273595437
-      Data3: -1991362175
-      Data4: 1438179345
-    Path: event:/VoiceOver/Captain/GameIntroduction/4-BaitShopTutorial2/2Getsomemorebait
-  - Guid:
       Data1: 208066340
       Data2: 1097301008
       Data3: -778688896
       Data4: 1488136846
     Path: event:/VoiceOver/Captain/GameIntroduction/2-BaitShopTutorial1/3Great,We_vesoldallourfish
+  - Guid:
+      Data1: 1897283032
+      Data2: 1306888824
+      Data3: 1730168463
+      Data4: -1967625427
+    Path: event:/VoiceOver/Narrator/Shop Prompts/LeaveShop
+  fishBasketTutorials:
+  - Guid:
+      Data1: 1790919730
+      Data2: 1273595437
+      Data3: -1991362175
+      Data4: 1438179345
+    Path: event:/VoiceOver/Captain/GameIntroduction/4-BaitShopTutorial2/2Getsomemorebait
   fishBoardButton: {fileID: 70307220}
   fishBasketButton: {fileID: 1830595052}
   baitBoardButton: {fileID: 671691907}
@@ -8421,5 +8377,4 @@ SceneRoots:
   - {fileID: 758783158}
   - {fileID: 711696518}
   - {fileID: 929355429}
-  - {fileID: 424022602}
   - {fileID: 930670275}

@@ -267,18 +267,18 @@ MonoBehaviour:
     Path: event:/VoiceOver/Narrator/Fish Lines/Roach
   BaitShopBoughtBait:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1780778380
+      Data2: 1152155833
+      Data3: 659819139
+      Data4: -1235957993
+    Path: event:/VoiceOver/BaitShopkeep/ItemLines/BuyLines
   BaitShopSoldFish:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 458831336
+      Data2: 1139098375
+      Data3: 1473202351
+      Data4: -441801796
+    Path: event:/VoiceOver/BaitShopkeep/ItemLines/SellLines
   YouHave:
     Guid:
       Data1: 1531927737
@@ -406,11 +406,11 @@ MonoBehaviour:
       Data4: -1794947585
     Path: event:/VoiceLines/Misc/Captain/Numbers/14
   - Guid:
-      Data1: 2102567865
-      Data2: 1335303068
-      Data3: 68543384
-      Data4: 1197692114
-    Path: event:/VoiceLines/Misc/Captain/Numbers/15
+      Data1: -1421866527
+      Data2: 1277445430
+      Data3: -782315384
+      Data4: 412724681
+    Path: event:/VoiceOver/Narrator/Numbers/15
   - Guid:
       Data1: 1297408707
       Data2: 1119361569
@@ -616,17 +616,17 @@ MonoBehaviour:
       Data4: -455227078
     Path: event:/SFX/BaitSFX/Mussel
   - Guid:
-      Data1: -1751036424
-      Data2: 1219677751
-      Data3: -754223217
-      Data4: -75916562
-    Path: event:/SFX/BaitSFX/WormBaitIdle
+      Data1: -1027771423
+      Data2: 1197377779
+      Data3: -1223549301
+      Data4: 1237785201
+    Path: event:/SFX/BaitSFX/CrankBaitIdle
   - Guid:
-      Data1: 1812193420
-      Data2: 1175040479
-      Data3: 1880725685
-      Data4: -455227078
-    Path: event:/SFX/BaitSFX/Mussel
+      Data1: -1027771423
+      Data2: 1197377779
+      Data3: -1223549301
+      Data4: 1237785201
+    Path: event:/SFX/BaitSFX/CrankBaitIdle
   AttatchBaitSounds:
   - Guid:
       Data1: -1561571289

@@ -16,6 +16,7 @@ public class BaitShop : Shop {
 	[SerializeField] protected EventSystem eventSystem;
 	[SerializeField] protected EventReference[] fishboardTutorials;
 	[SerializeField] protected EventReference[] baitboardTutorials;
+	[SerializeField] protected EventReference[] fishBasketTutorials;
 	[SerializeField] protected ButtonVoiceOverComponent fishBoardButton;
 	[SerializeField] protected ButtonVoiceOverComponent fishBasketButton;
 	[SerializeField] protected ButtonVoiceOverComponent baitBoardButton;
@@ -35,6 +36,7 @@ public class BaitShop : Shop {
 	public bool TutorialBaitBought { get; set; }
 	public bool[] FishboardTutorialsCompleted { get; set; }
 	public bool[] BaitboardTutorialsCompleted { get; set; }
+	public bool[] FishBasketTutorialsCompleted { get; set; }
 	[field:SerializeField] public int[] BaitQuantities { get; set; }
 
     #endregion
@@ -45,13 +47,14 @@ public class BaitShop : Shop {
     public override void Awake()
     {
 		base.Start();
-		for (int i = 0; i < fishboardTutorials.Length; i++)
-		{
+		for (int i = 0; i < fishboardTutorials.Length; i++)	{
 			this.FishboardTutorialsCompleted = new bool[fishboardTutorials.Length];
 		}
-		for (int i = 0; i < baitboardTutorials.Length; i++)
-		{
+		for (int i = 0; i < baitboardTutorials.Length; i++)	{
 			this.BaitboardTutorialsCompleted = new bool[baitboardTutorials.Length];
+		}
+		for (int i = 0; i < fishBasketTutorials.Length; i++) {
+			this.FishBasketTutorialsCompleted = new bool[fishBasketTutorials.Length];
 		}
 		fishBoardButton.SelectAction += FishBoardSelected;
 		fishBasketButton.SelectAction += FishBasketSelected;
@@ -121,13 +124,14 @@ public class BaitShop : Shop {
 			}
 		}
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.MoneyEarnt);
-		AudioManager.Instance.PlayOneShot(FMODManager.Instance.MoneyEarnt);
 		List<EventReference> voiceOverChain = new List<EventReference>();
 		voiceOverChain.Add(FMODManager.Instance.BaitShopSoldFish);
 		for (int i = 0; i < FMODManager.Instance.GetNumber(GameManager.Instance.Money).Count; i++) {
 			voiceOverChain.Add(FMODManager.Instance.GetNumber(GameManager.Instance.Money)[i]);
 		}
 		voiceOverChain.Add(FMODManager.Instance.Gold);
+		for (int i = 0; i < voiceOverChain.Count; i++) {
+		}
 		this.OnSaleMade?.Invoke();
 		AudioManager.Instance.PlayVoiceOverChain(voiceOverChain);
 	}

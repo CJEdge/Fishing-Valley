@@ -244,7 +244,7 @@ public class AudioManager : Singleton<AudioManager>
 		//}
 	}
 
-	private void CleanUpAmbience()
+	public void CleanUpAmbience()
 	{
 		AmbienceEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 		AmbienceEventInstance.release();
