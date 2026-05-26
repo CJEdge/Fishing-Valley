@@ -9,13 +9,13 @@ public class IcthyologistsFishButton : ButtonVoiceOverComponent {
 
 	public override void OnSelect(BaseEventData eventData) {
 		base.OnSelect(eventData);
-        int index = System.Array.IndexOf(fishDatas.Datas, itemDataButton.itemData);
+        int index = System.Array.IndexOf(fishDatas.Datas, itemDataButton.ItemData);
         GameManager.Instance.ShopController.Icthyologists.HoverFish(index);
 	}
 
 	public override void OnSubmit(BaseEventData eventData) {
 		base.OnSubmit(eventData);
-		int index = System.Array.IndexOf(fishDatas.Datas, itemDataButton.itemData);
+		int index = System.Array.IndexOf(fishDatas.Datas, itemDataButton.ItemData);
 		GameManager.Instance.ShopController.Icthyologists.SellFish(index);
 	}
 }

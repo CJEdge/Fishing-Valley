@@ -1,13 +1,12 @@
 using FMODUnity;
 using UnityEngine;
 
-public class FishBoard : MonoBehaviour
+public class FishBoard : ItemDataButtonGenerator
 {
 
 	#region Serialized Fields
 
 	[SerializeField] private GameObject fishBoardObject;
-	[SerializeField] private GameObject initialButton;
 	[SerializeField] private GameObject[] baitshopComponents;
 
 	#endregion
@@ -68,10 +67,7 @@ public class FishBoard : MonoBehaviour
 		if (this.Initialized) {
 			return;
 		}
-		if (fishBoardObject.activeSelf) {
-			GameManager.Instance.EventSystem.SetSelectedGameObject(initialButton);
-		}
-		this.Initialized = true;
+        this.Initialized = true;
 	}
 
 	#endregion

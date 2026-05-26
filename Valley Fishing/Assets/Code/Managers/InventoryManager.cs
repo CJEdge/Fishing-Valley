@@ -36,7 +36,7 @@ public class InventoryManager : Singleton<InventoryManager> {
 		} 
 	}
 
-	public BaitDatas.Datas CurrentBait;
+	public BaitDatas.BaitData CurrentBait;
 
 	public bool OneBaitTypeLeft {
 		get {
@@ -61,11 +61,11 @@ public class InventoryManager : Singleton<InventoryManager> {
 			fishTypeCatchData.OwnedItemData = this.FishDatas.Datas[i];
             OwnedFishTypeDatas.Add(fishTypeCatchData);
 		}
-		for (int i = 0; i < this.BaitDatas.datas.Length; i++)
+		for (int i = 0; i < this.BaitDatas.baitDatas.Length; i++)
 		{
             OwnedItemTypeData baitTypeData = new OwnedItemTypeData();
             baitTypeData.quantity = 0;
-            baitTypeData.OwnedItemData = this.BaitDatas.datas[i];
+            baitTypeData.OwnedItemData = this.BaitDatas.baitDatas[i];
 			OwnedBaitTypeDatas.Add(baitTypeData);
 
         }

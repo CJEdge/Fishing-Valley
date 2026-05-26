@@ -32,7 +32,7 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 
     public Action SelectAction { get; set; }
 	private Button ButtonReference { get; set; }
-	private Button Button {
+	public Button Button {
 		get {
 			if (this.ButtonReference == null)
 				this.ButtonReference = GetComponent<Button>();

@@ -25,7 +25,7 @@ public class LevelController : AbstractState<LevelController.State> {
 	[field: SerializeField] public Transform LeftStrafeTransform { get; set; }
 	[field: SerializeField] public Transform RightStrafeTransform { get; set; }
 	[field: SerializeField] public Transform FishSpawnTransform { get; set; }
-	public BaitDatas.Datas CurrentBait { get => InventoryManager.Instance.CurrentBait; }
+	public BaitDatas.BaitData CurrentBait { get => InventoryManager.Instance.CurrentBait; }
 	public Action OnFishSpawned { get; set; }
 
 	#endregion

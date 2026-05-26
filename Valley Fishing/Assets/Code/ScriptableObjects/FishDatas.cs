@@ -29,7 +29,6 @@ public class FishDatas : ScriptableObject {
 			right
 		}
 		public List<MovementDirection> MovementDirections;
-		public EventReference fishNameAudio;
 		public EventReference fishCatchAudio;
 		public EventReference icthyologistInfoAudio;
 

@@ -3,7 +3,7 @@ using UnityEngine;
 public class Bait : MonoBehaviour
 {
 	
-	public BaitDatas.Datas BaitData;
+	public BaitDatas.BaitData BaitData;
 
 	[SerializeField]
 	private bool isFailable;

@@ -10,10 +10,10 @@ public class BaitDatas : ScriptableObject {
 	}
 
 	[System.Serializable]
-	public class Datas : BaseItemData {
+	public class BaitData : BaseItemData {
 		public bool IsTutorial;
 		public List<FishSpawnChance> FishSpawnChances = new List<FishSpawnChance>();
 	}
 
-	public Datas[] datas;
+	public BaitData[] baitDatas;
 }

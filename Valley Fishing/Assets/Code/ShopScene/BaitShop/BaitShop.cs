@@ -38,6 +38,8 @@ public class BaitShop : Shop {
 	public bool[] BaitboardTutorialsCompleted { get; set; }
 	public bool[] FishBasketTutorialsCompleted { get; set; }
 	[field:SerializeField] public int[] BaitQuantities { get; set; }
+	public BaitBoard BaitBoard => baitBoard;
+	public FishBoard FishBoard => fishBoard;
 
     #endregion
 
@@ -141,11 +143,11 @@ public class BaitShop : Shop {
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
 			return;
 		}
-		if (InventoryManager.Instance.BaitDatas.datas[baitIndex].ItemSellPrice * sellQuantity > GameManager.Instance.Money) {
+		if (InventoryManager.Instance.BaitDatas.baitDatas[baitIndex].ItemSellPrice * sellQuantity > GameManager.Instance.Money) {
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
 			return;
 		}
-		GameManager.Instance.Money -= InventoryManager.Instance.BaitDatas.datas[baitIndex].ItemSellPrice * sellQuantity;
+		GameManager.Instance.Money -= InventoryManager.Instance.BaitDatas.baitDatas[baitIndex].ItemSellPrice * sellQuantity;
 		InventoryManager.Instance.OwnedBaitTypeDatas[baitIndex].quantity += sellQuantity;
 		this.BaitQuantities[baitIndex] -= sellQuantity;
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.MoneyEarnt);

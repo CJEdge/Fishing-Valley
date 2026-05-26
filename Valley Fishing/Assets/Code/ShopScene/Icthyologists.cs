@@ -70,9 +70,9 @@ public class Icthyologists : Shop
 	public void HoverFish(int fishIndex) {
 		
 		if(InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].quantity == 0 || IcthyologistManager.Instance.SoldFish[fishIndex]) { 
-			AudioManager.Instance.PlayVoiceOver((InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].OwnedItemData as FishDatas.FishData).fishNameAudio);
+			AudioManager.Instance.PlayVoiceOver((InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].OwnedItemData as FishDatas.FishData).ItemNameEvent);
 		} else {
-			AudioManager.Instance.PlayVoiceOver((InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].OwnedItemData as FishDatas.FishData).fishNameAudio);
+			AudioManager.Instance.PlayVoiceOver((InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].OwnedItemData as FishDatas.FishData).ItemNameEvent);
 		}
 	}
 

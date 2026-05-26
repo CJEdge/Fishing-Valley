@@ -60,7 +60,7 @@ public class BaitView : MonoBehaviour
 	public void BaitClicked(int baitIndex) {
 		AudioManager.Instance.PlayBaitSound(false, 0);
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.AttatchBaitSounds[baitIndex]);
-		InventoryManager.Instance.CurrentBait = InventoryManager.Instance.BaitDatas.datas[baitIndex];
+		InventoryManager.Instance.CurrentBait = InventoryManager.Instance.BaitDatas.baitDatas[baitIndex];
 		InventoryManager.Instance.OwnedBaitTypeDatas[baitIndex].quantity--;
 		EnableBaitUI(false);
 	}
@@ -79,7 +79,7 @@ public class BaitView : MonoBehaviour
 		} else {
 			bool allBaitsAreTutorials = true;
 			for (int i = 0; i < InventoryManager.Instance.OwnedBaitTypeDatas.Count; i++) {
-				BaitDatas.Datas bait = InventoryManager.Instance.OwnedBaitTypeDatas[i].OwnedItemData as BaitDatas.Datas;
+				BaitDatas.BaitData bait = InventoryManager.Instance.OwnedBaitTypeDatas[i].OwnedItemData as BaitDatas.BaitData;
 				if (InventoryManager.Instance.OwnedBaitTypeDatas[i].quantity > 0 && !bait.IsTutorial) {
 					allBaitsAreTutorials = false;
 				}
