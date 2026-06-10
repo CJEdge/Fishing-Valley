@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,7 @@ public class PauseMenuUI : MonoBehaviour
 
 	[SerializeField] private GameObject pauseMenuObject;
 	[SerializeField] private GameObject initialButton;
+	[SerializeField] private EventReference pauseLine;
 
 	#endregion
 
@@ -36,6 +38,7 @@ public class PauseMenuUI : MonoBehaviour
 	public void PauseGame() {
 		pauseMenuObject.SetActive(!pauseMenuObject.activeSelf);
 		if (pauseMenuObject.activeInHierarchy) {
+			AudioManager.Instance.PlayVoiceOver(pauseLine);
 			GameManager.Instance.EventSystem.SetSelectedGameObject(initialButton);
 			Time.timeScale = 0;
 			gameplayBus.setPaused(true);

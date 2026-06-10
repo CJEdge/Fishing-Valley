@@ -76,7 +76,7 @@ public class BaitShop : Shop {
 
 	#region Private Methods
 
-	public override void VoiceLineOver(EventReference eventReference, bool skipped) {
+	public override void VoiceLineOver(bool skipped) {
 	}
 
 	#endregion

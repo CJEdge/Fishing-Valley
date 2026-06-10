@@ -236,6 +236,12 @@ public class InputController : AbstractState<InputController.State> {
 		}
 	}
 
+	public void RepeatLine(InputAction.CallbackContext context) {
+		if (context.performed) {
+			AudioManager.Instance.ReplayVoiceLine();
+		}
+	}
+
 	public void SelectButton(GameObject button) {
 		this.SelectionManuallySet = true;
 		GameManager.Instance.EventSystem.SetSelectedGameObject(button);

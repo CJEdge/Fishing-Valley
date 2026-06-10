@@ -384,4 +384,4 @@ MonoBehaviour:
         Data3: 1512354955
         Data4: -1186297269
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/LLymLlymSalmonInfo
-    catchSFX: 0
+    catchSFX: 1

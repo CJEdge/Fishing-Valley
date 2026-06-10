@@ -22,8 +22,8 @@ public class SecondTutorialBaitShop : BaitShop {
 		transform.position = lerpObjectToPositions[0].destination.position;
 	}
 
-	public override void VoiceLineOver(EventReference eventReference, bool skipped) {
-		base.VoiceLineOver(eventReference, skipped);
+	public override void VoiceLineOver(bool skipped) {
+		base.VoiceLineOver(skipped);
 		if (InventoryManager.Instance.OwnedBaitTypeDatas[5].quantity == 5 && InventoryManager.Instance.OwnedBaitTypeDatas[6].quantity == 5 && baitBoard.Initialized && !this.BaitboardTutorialsCompleted[1]) {
 			PlayNextTutotialVoiceOver(this.BaitboardTutorialsCompleted, baitboardTutorials);
 			IncrementTutorial(this.BaitboardTutorialsCompleted);

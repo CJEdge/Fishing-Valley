@@ -4723,6 +4723,30 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 03ae1626-d35f-4b26-a031-69397df16c16
     m_ActionName: 'UI/NorthButton[/XInputControllerWindows/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f826465d-658a-4fc7-a069-6b0bd14e05ae
+    m_ActionName: 'Player/Button South[/XInputControllerWindows/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 415c6e78-7416-46ef-a1e8-5ba110d0cc89
+    m_ActionName: 'Player/RT[/XInputControllerWindows/rightTrigger]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1709173822}
+        m_TargetAssemblyTypeName: InputController, Assembly-CSharp
+        m_MethodName: RepeatLine
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 46fad9ae-031d-42b9-9ee2-a086aa1a7801
+    m_ActionName: 'Player/Replay Line[/XInputControllerWindows/buttonWest]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player

@@ -84,7 +84,7 @@ public class RodShop : Shop {
 
 	#region Shop
 
-	public override void VoiceLineOver(EventReference eventReference, bool skipped) {
+	public override void VoiceLineOver(bool skipped) {
 
 	}
 

@@ -68,9 +68,9 @@ public class SecondTutorialVoiceOverController : VoiceOverController
 		}
 	}
 
-	public override void VoiceOverFinished(EventReference eventReference, bool skipped) {
+	public override void VoiceOverFinished(bool skipped) {
 
-		base.VoiceOverFinished(eventReference, skipped);
+		base.VoiceOverFinished(skipped);
 		if (LevelController.CurrentState == LevelController.State.ReelingFish) {
 			GameManager.Instance.InputController.SetState(InputController.State.NotReeling);
 		}

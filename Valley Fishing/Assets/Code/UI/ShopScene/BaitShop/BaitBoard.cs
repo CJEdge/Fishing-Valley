@@ -43,7 +43,7 @@ public class BaitBoard : MonoBehaviour {
 			baitBoardObject.SetActive(true);
 			for (int i = 0; i < baitshopComponents.Length; i++) {
 				EventReference eventReference = new EventReference();
-				InitiallizeBaitBoard(eventReference, false);
+				InitiallizeBaitBoard(false);
 			}
 		} else {
 			AudioManager.Instance.SetMusicParameter("BaitBoardVolume", 0);
@@ -54,6 +54,7 @@ public class BaitBoard : MonoBehaviour {
 			this.Initialized = false;
 			baitBoardObject.SetActive(false);
 		}
+		AudioManager.Instance.PlayOneShot(FMODManager.Instance.BaitBoardOpenClose);
 	}
 
 	#endregion
@@ -61,7 +62,7 @@ public class BaitBoard : MonoBehaviour {
 
 	#region Private Methods
 
-	private void InitiallizeBaitBoard(EventReference eventReference, bool skipped) {
+	private void InitiallizeBaitBoard(bool skipped) {
 		if (!baitBoardObject.activeSelf) {
 			return;
 		}

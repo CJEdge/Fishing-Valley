@@ -114,7 +114,7 @@ public class BaitView : MonoBehaviour
 		StartCoroutine(WaitToOpenBaitBox());
 	}
 
-	private void SkipBaitSelection(EventReference eventReference, bool value) {
+	private void SkipBaitSelection(bool value) {
 		if (!buttonsGameobject.activeSelf) {
 			return;
 		}

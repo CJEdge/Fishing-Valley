@@ -15,7 +15,7 @@ public class AudioManager : Singleton<AudioManager>
 	public EventInstance MusicEventInstance;
 	public EventInstance AmbienceEventInstance;
 	public EventInstance VoiceLineEventInstance;
-	public EventReference LastVoiceLineEventReference;
+	public List<EventReference> LastVoiceLine = new List<EventReference>();
 	public EventInstance CurrentReelInstance;
 	public EventInstance BaitEventInstance;
 	public EventInstance UnspoolEventInstance;
@@ -24,12 +24,9 @@ public class AudioManager : Singleton<AudioManager>
 	[field:SerializeField]
 	public StudioEventEmitter FishActivityLevelInstance { get; set;	}
 	private List<EventInstance> SFXEventInstances {	get; set; } = new List<EventInstance>();
-	//private List<EventInstance> MusicEventInstances { get; set; } = new List<EventInstance>();
- //   private List<EventInstance> AmbienceEventInstances { get; set; } = new List<EventInstance>();
-    public Action<EventReference,bool> OnVoiceLineOver { get; set; }
+    public Action<bool> OnVoiceLineOver { get; set; }
 	public Action OnVoiceLineStarted { get; set; }
 	public bool VoiceLineInProgress { get; set;	}
-	public bool LastVoiceLineWasInChain { get; set; }
 	public List<EventReference> VoiceOverChain { get; set; } = new List<EventReference>();
 	public int VoiceOverChainPosition {	get; set; }
 	[field:SerializeField] public bool InVoiceOverChain { get; set;	}
@@ -95,15 +92,19 @@ public class AudioManager : Singleton<AudioManager>
 		}
 	}
 
-	public void PlayVoiceOver(EventReference voiceLineReference) {
-		if (this.VoiceLineEventInstance.isValid()) {
+	public void PlayVoiceOver(EventReference voiceLineReference) {		
+		if (!this.InVoiceOverChain) {
+			List<EventReference> voicelines = new List<EventReference>();
+			voicelines.Add(voiceLineReference);
+			this.LastVoiceLine.Clear();
+			this.LastVoiceLine = voicelines;
+		}
+		if (this.VoiceLineEventInstance.isValid()) {			
 			this.VoiceLineEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 			this.VoiceLineEventInstance.release();
 			this.VoiceLineEventInstance.clearHandle();
 		}
-		this.VoiceLineEventInstance = CreateSFXInstance(voiceLineReference);		
-		this.LastVoiceLineEventReference = voiceLineReference;
-
+		this.VoiceLineEventInstance = CreateSFXInstance(voiceLineReference);	
 		if (Gamepad.current != null)
 		{
 			if (Gamepad.current.layout == "XInputController" || Gamepad.current.layout == "XInputControllerWindows" || Gamepad.current.layout == "XboxGamepadMacOS" || Gamepad.current.layout == "XboxOneGamepadMacOSWireless" || Gamepad.current.layout == "XboxOneGamepadiOS")
@@ -142,7 +143,7 @@ public class AudioManager : Singleton<AudioManager>
 		this.VoiceLineEventInstance.clearHandle();
 		this.VoiceLineInProgress = false;
 		if (!this.Paused) {
-			this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventReference, true);
+			this.OnVoiceLineOver?.Invoke(true);
 		}
 		if (this.InVoiceOverChain) {
 			this.VoiceOverChainPosition = this.VoiceOverChain.Count;
@@ -157,9 +158,28 @@ public class AudioManager : Singleton<AudioManager>
 
 	public void PlayVoiceOverChain(List<EventReference> voiceOverChain) {
 		this.VoiceOverChainPosition = 0;
-		this.VoiceOverChain = voiceOverChain;
+		this.VoiceOverChain = voiceOverChain;		
 		this.InVoiceOverChain = true;
+		this.LastVoiceLine = this.VoiceOverChain;
 		PlayVoiceOver(voiceOverChain[0]);
+	}
+
+	public void ReplayVoiceLine() {
+		this.VoiceLineEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+		this.VoiceLineEventInstance.release();
+		this.VoiceLineEventInstance.clearHandle();
+		this.VoiceLineInProgress = false;
+		if (this.InVoiceOverChain) {
+			this.VoiceOverChainPosition = this.VoiceOverChain.Count;
+			this.InVoiceOverChain = false;
+		}
+		StopCoroutine(WaitForVoiceLineEnd());
+		if (this.LastVoiceLine.Count == 1) {
+			PlayVoiceOver(this.LastVoiceLine[0]);
+		}
+		if (this.LastVoiceLine.Count > 1) {
+			PlayVoiceOverChain(this.LastVoiceLine);
+		}
 	}
 
 	public void PlayFishActivitySound(Fish fish, int activityLevel, bool play) {
@@ -288,13 +308,13 @@ public class AudioManager : Singleton<AudioManager>
 				PlayVoiceOver(this.VoiceOverChain[this.VoiceOverChainPosition]);
 			} else {
 				if (!this.Paused) {
-					this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventReference, false);
+					this.OnVoiceLineOver?.Invoke(false);
 					this.InVoiceOverChain = false;
 				}
 			}
 		} else {
 			if (!this.Paused) {
-				this.OnVoiceLineOver?.Invoke(this.LastVoiceLineEventReference, false);
+				this.OnVoiceLineOver?.Invoke(false);
 			}
 		}
 	}

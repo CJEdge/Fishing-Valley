@@ -71,7 +71,7 @@ public class FishView : MonoBehaviour
 
 	#region Private Methods
 
-	private void DisableUI(EventReference eventReference, bool value) {
+	private void DisableUI(bool value) {
 		DisableFishUI();
 	}
 
