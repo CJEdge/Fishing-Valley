@@ -4454,7 +4454,7 @@ MonoBehaviour:
   - {fileID: 8145067681192383883}
   StringsBanks:
   - {fileID: 4870658529232763954}
-  cacheTime: 639164518817852829
+  cacheTime: 639167190504918883
   cacheVersion: 131624
 --- !u!114 &35697624734509599
 MonoBehaviour:
@@ -4651,10 +4651,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/VoiceLines.bank
   Name: VoiceLines
   StudioPath: bank:/VoiceLines
-  lastModified: 639164518817852829
+  lastModified: 639167190504918883
   FileSizes:
   - Name: Desktop
-    Value: 8169248
+    Value: 8236864
   Exists: 1
 --- !u!114 &693127420855351029
 MonoBehaviour:
