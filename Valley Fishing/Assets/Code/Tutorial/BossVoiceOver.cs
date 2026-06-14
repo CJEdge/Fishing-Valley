@@ -13,7 +13,7 @@ public class BossVoiceOver : VoiceOverController
 	public override bool PerformStateSwitch() {
 		switch (this.LevelController.CurrentState) {
 			case LevelController.State.Idle:
-				if(InventoryManager.Instance.TotalOwnedFish == 1) {
+				if(InventoryManager.Instance.GetNumberOfSpecificFish("Llym Llyw Salmon") == 1) {
 					endScreenUI.SetActive(true);
 					InputManager.Instance.SelectButton(initialButton);
 					AudioManager.Instance.PlayVoiceOver(thanksForPlayingEvent[1]);

@@ -53,6 +53,17 @@ public class InventoryManager : Singleton<InventoryManager> {
 		}
 	}
 
+	public int GetNumberOfSpecificFish(string fishName)
+	{
+        foreach (var fish in OwnedFishTypeDatas)
+        {
+            if(fish.OwnedItemData.ItemName.Equals(fishName))
+			{
+				return fish.quantity;
+			}
+        }
+		return -1;
+    }
     public override void Awake() {
 		base.Awake();
 		for (int i = 0; i < this.FishDatas.Datas.Length; i++) {
