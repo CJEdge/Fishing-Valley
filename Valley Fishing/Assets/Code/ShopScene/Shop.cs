@@ -74,13 +74,18 @@ public abstract class Shop : MonoBehaviour {
 
     #region Public Methods
 
-    public abstract void VoiceLineOver(bool skipped);
+    public virtual void VoiceLineOver(bool skipped)
+	{
+        //This below line represents the barrier to skipping tutorial lines being lifted
+        AudioManager.Instance.SetInTutorialVoiceOver(false);
+    }
 
-	public bool PlayNextTutotialVoiceOver(bool[] tutorialsCompleted, EventReference[] tutorialVoiceLines) {
+	public bool PlayNextTutorialVoiceOver(bool[] tutorialsCompleted, EventReference[] tutorialVoiceLines) {
 		if(tutorialsCompleted == null) {
 			return false;
 		}
-		for (int i = 0; i < tutorialsCompleted.Length; i++) {
+        AudioManager.Instance.SetInTutorialVoiceOver(true);
+        for (int i = 0; i < tutorialsCompleted.Length; i++) {
 			if (!tutorialsCompleted[i]) {
 				AudioManager.Instance.PlayVoiceOver(tutorialVoiceLines[i]);
 				this.CurrentTutorialEventInstance = AudioManager.Instance.VoiceLineEventInstance;

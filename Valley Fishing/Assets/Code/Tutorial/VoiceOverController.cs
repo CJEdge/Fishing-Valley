@@ -33,7 +33,6 @@ public class VoiceOverController : MonoBehaviour
 
 	[field:SerializeField]
 	protected bool[] CaughtFishTutorialsCompleted;
-
 	#endregion
 
 
@@ -131,10 +130,11 @@ public class VoiceOverController : MonoBehaviour
 		return allTutorialsComplete;
 	}
 
-	public bool PlayNextTutotialVoiceOver(bool[] tutorialsCompleted, EventReference[] tutorialVoiceLines) {
+	public bool PlayNextTutorialVoiceOver(bool[] tutorialsCompleted, EventReference[] tutorialVoiceLines) {
+		AudioManager.Instance.SetInTutorialVoiceOver(true);
 		for (int i = 0; i < tutorialsCompleted.Length; i++) {
 			if (!tutorialsCompleted[i]) {
-				AudioManager.Instance.PlayVoiceOver(tutorialVoiceLines[i]);
+				AudioManager.Instance.PlayVoiceOver(tutorialVoiceLines[i],true);
 				this.CurrentTutorialEventInstance = AudioManager.Instance.VoiceLineEventInstance;
 				return true;
 			}
@@ -152,6 +152,8 @@ public class VoiceOverController : MonoBehaviour
 	}
 
 	public virtual void VoiceOverFinished(bool skipped) {
+		//This below line represents the barrier to skipping tutorial lines being lifted
+		AudioManager.Instance.SetInTutorialVoiceOver(false);
 		switch (this.LevelController.CurrentState) {
 			case LevelController.State.Cutscene:
 				LevelController.SetState(LevelController.State.Idle);

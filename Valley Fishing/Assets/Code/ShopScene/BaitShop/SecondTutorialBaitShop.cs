@@ -25,15 +25,15 @@ public class SecondTutorialBaitShop : BaitShop {
 	public override void VoiceLineOver(bool skipped) {
 		base.VoiceLineOver(skipped);
 		if (InventoryManager.Instance.OwnedBaitTypeDatas[5].quantity == 5 && InventoryManager.Instance.OwnedBaitTypeDatas[6].quantity == 5 && baitBoard.Initialized && !this.BaitboardTutorialsCompleted[1]) {
-			PlayNextTutotialVoiceOver(this.BaitboardTutorialsCompleted, baitboardTutorials);
+			PlayNextTutorialVoiceOver(this.BaitboardTutorialsCompleted, baitboardTutorials);
 			IncrementTutorial(this.BaitboardTutorialsCompleted);
 		}
 		if(!fishBoard.Initialized && InventoryManager.Instance.TotalOwnedFish == 0) {
-			PlayNextTutotialVoiceOver(this.FishBasketTutorialsCompleted, fishBasketTutorials);
+			PlayNextTutorialVoiceOver(this.FishBasketTutorialsCompleted, fishBasketTutorials);
 			IncrementTutorial(this.FishBasketTutorialsCompleted);
 		}
 		if (fishBoard.Initialized && InventoryManager.Instance.TotalOwnedFish == 0) {
-			PlayNextTutotialVoiceOver(this.FishboardTutorialsCompleted, fishboardTutorials);
+			PlayNextTutorialVoiceOver(this.FishboardTutorialsCompleted, fishboardTutorials);
 			IncrementTutorial(this.FishboardTutorialsCompleted);
 		}
 	}
@@ -59,18 +59,18 @@ public class SecondTutorialBaitShop : BaitShop {
 			leaveShopButton.gameObject.SetActive(false);
 		}
 		if (InventoryManager.Instance.TotalOwnedFish == 0) {
-			PlayNextTutotialVoiceOver(this.FishboardTutorialsCompleted, fishboardTutorials);
+			PlayNextTutorialVoiceOver(this.FishboardTutorialsCompleted, fishboardTutorials);
 			IncrementTutorial(this.FishboardTutorialsCompleted);
 			FishBoardNotClosedForFirstTime = true;
 		}
-		PlayNextTutotialVoiceOver(this.FishboardTutorialsCompleted, fishboardTutorials);
+		PlayNextTutorialVoiceOver(this.FishboardTutorialsCompleted, fishboardTutorials);
 		IncrementTutorial(this.FishboardTutorialsCompleted);
 	}
 
 	public override void OpenBaitBoard() {
 		base.OpenBaitBoard();
 		if ((InventoryManager.Instance.TotalOwnedFish == 0)) {
-			PlayNextTutotialVoiceOver(this.BaitboardTutorialsCompleted, baitboardTutorials);
+			PlayNextTutorialVoiceOver(this.BaitboardTutorialsCompleted, baitboardTutorials);
 			IncrementTutorial(this.BaitboardTutorialsCompleted);
 		}
 	}

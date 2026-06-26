@@ -10,7 +10,7 @@ public class ThirdTutorialVoiceOver : VoiceOverController
 		switch (this.LevelController.CurrentState) {
 			case LevelController.State.Idle:
 				if (!AllTutorialsCompleted(this.AttatchBaitTutorialsCompleted)) {
-					PlayNextTutotialVoiceOver(this.AttatchBaitTutorialsCompleted, applyBaitTutorials);
+					PlayNextTutorialVoiceOver(this.AttatchBaitTutorialsCompleted, applyBaitTutorials);
 					IncrementTutorial(this.AttatchBaitTutorialsCompleted);
 				}
 				break;

@@ -12,7 +12,7 @@ public class SecondTutorialVoiceOverController : VoiceOverController
 				LevelController.SetState(LevelController.State.AttatchBait);
 				break;
 			case LevelController.State.IdleWithBait:
-				PlayNextTutotialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
+				PlayNextTutorialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
 				IncrementTutorial(this.CastRodTutorialsCompleted);
 				break;
 			case LevelController.State.ReelingFish:
@@ -26,7 +26,7 @@ public class SecondTutorialVoiceOverController : VoiceOverController
 					this.CurrentFish.FishData.MovementDirections.Add(FishDatas.FishData.MovementDirection.right);
 					this.CurrentFish.CurrentActivityLevel = FishDatas.FishData.ActivityLevel.calm;
 				} else if (this.ReelTutorialsCompleted[2] == false) {
-					PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
+					PlayNextTutorialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
 					IncrementTutorial(this.ReelTutorialsCompleted);
 				}
 				break;
@@ -54,7 +54,7 @@ public class SecondTutorialVoiceOverController : VoiceOverController
 		if (AllTutorialsCompleted(this.ReelTutorialsCompleted)) {
 			return;
 		}
-		PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
+		PlayNextTutorialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
 		IncrementTutorial(this.ReelTutorialsCompleted);
 	}
 

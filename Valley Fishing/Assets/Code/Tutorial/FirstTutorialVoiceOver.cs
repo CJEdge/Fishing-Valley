@@ -26,7 +26,7 @@ public class FirstTutorialVoiceOver : VoiceOverController
 					this.CurrentPracticeReelTime += Time.deltaTime;
 				} else {
 					this.CurrentPracticeReelTime = 0;
-					PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
+					PlayNextTutorialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
 					IncrementTutorial(this.ReelTutorialsCompleted);
 				}
 			}
@@ -66,7 +66,7 @@ public class FirstTutorialVoiceOver : VoiceOverController
 	public override bool PerformStateSwitch() {
 		if(this.LevelController.CurrentState == LevelController.State.Idle) {
 			if (this.CastRodTutorialsCompleted[2] && !this.CastRodTutorialsCompleted[3]) {
-				PlayNextTutotialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
+				PlayNextTutorialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
 				IncrementTutorial(this.CastRodTutorialsCompleted);
 				return false;
 			}
@@ -77,11 +77,11 @@ public class FirstTutorialVoiceOver : VoiceOverController
 		switch (this.LevelController.CurrentState) {
 			case LevelController.State.Idle:
 				if (!this.ReelTutorialsCompleted[0]) {
-					PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
+					PlayNextTutorialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
 					IncrementTutorial(this.ReelTutorialsCompleted);
 					LevelController.SetState(LevelController.State.ReelingFish);
 				} else {
-					PlayNextTutotialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
+					PlayNextTutorialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
 					IncrementTutorial(this.CastRodTutorialsCompleted);
 				}
 				break;
@@ -89,13 +89,13 @@ public class FirstTutorialVoiceOver : VoiceOverController
 				break;
 			case LevelController.State.IdleWithBait:
 				if (this.ReelTutorialsCompleted[4]) {
-					PlayNextTutotialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
+					PlayNextTutorialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
 					IncrementTutorial(this.CastRodTutorialsCompleted);
 				}
 				break;
 			case LevelController.State.ReelingFish:
 				if (this.ReelTutorialsCompleted[3]) {
-					PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
+					PlayNextTutorialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
 					IncrementTutorial(this.ReelTutorialsCompleted);
 				}
 				break;
@@ -113,7 +113,7 @@ public class FirstTutorialVoiceOver : VoiceOverController
 					this.CurrentTutorialEventInstance = AudioManager.Instance.VoiceLineEventInstance;
 
 				} else {
-					PlayNextTutotialVoiceOver(this.CaughtFishTutorialsCompleted, tutorialCatchVoices);
+					PlayNextTutorialVoiceOver(this.CaughtFishTutorialsCompleted, tutorialCatchVoices);
 					IncrementTutorial(this.CaughtFishTutorialsCompleted);
 				}
 				if (this.CaughtFishTutorialsCompleted[2] && InventoryManager.Instance.TotalOwnedFish == 3) {
@@ -146,16 +146,15 @@ public class FirstTutorialVoiceOver : VoiceOverController
 		}
 		if (LevelController.CurrentState == LevelController.State.Idle) {
 			if (!this.AttatchBaitTutorialsCompleted[0] && this.ReelTutorialsCompleted[3]) {
-				PlayNextTutotialVoiceOver(this.AttatchBaitTutorialsCompleted, applyBaitTutorials);
+				PlayNextTutorialVoiceOver(this.AttatchBaitTutorialsCompleted, applyBaitTutorials);
 				IncrementTutorial(this.AttatchBaitTutorialsCompleted);
 				return;
 			}
 		}
 		base.VoiceOverFinished(skipped);
 		if (LevelController.CurrentState == LevelController.State.ReelingFish) {
-			Debug.Log("here");
 			if (!this.AttatchBaitTutorialsCompleted[0] && this.ReelTutorialsCompleted[4]) {
-				PlayNextTutotialVoiceOver(this.AttatchBaitTutorialsCompleted, applyBaitTutorials);
+				PlayNextTutorialVoiceOver(this.AttatchBaitTutorialsCompleted, applyBaitTutorials);
 				IncrementTutorial(this.AttatchBaitTutorialsCompleted);
 				return;
 			}
@@ -175,7 +174,7 @@ public class FirstTutorialVoiceOver : VoiceOverController
 					return;
 				}
 				if (GameManager.Instance.CurrentFish == null) {
-					PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
+					PlayNextTutorialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
 					IncrementTutorial(this.ReelTutorialsCompleted);
 				}
 			}

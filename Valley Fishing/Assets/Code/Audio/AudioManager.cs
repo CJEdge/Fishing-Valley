@@ -31,6 +31,7 @@ public class AudioManager : Singleton<AudioManager>
 	public int VoiceOverChainPosition {	get; set; }
 	[field:SerializeField] public bool InVoiceOverChain { get; set;	}
 	private bool CanSkip { get; set; } = true;
+	private bool InTutorialLine { get; set; } = false;
 	private bool Paused { get {
 			bool paused;
 			gameplayBus.getPaused(out paused);
@@ -92,7 +93,11 @@ public class AudioManager : Singleton<AudioManager>
 		}
 	}
 
-	public void PlayVoiceOver(EventReference voiceLineReference) {		
+	public void PlayVoiceOver(EventReference voiceLineReference, bool isTutorialLine = false) {	
+		if(InTutorialLine && !isTutorialLine)
+		{
+			return;
+		}
 		if (!this.InVoiceOverChain) {
 			List<EventReference> voicelines = new List<EventReference>();
 			voicelines.Add(voiceLineReference);
@@ -135,7 +140,7 @@ public class AudioManager : Singleton<AudioManager>
 	}
 
 	public void SkipVoiceOver() {
-		if (!this.CanSkip) {
+		if (!this.CanSkip || this.InTutorialLine) {
 			return;
 		}
 		this.VoiceLineEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
@@ -154,6 +159,11 @@ public class AudioManager : Singleton<AudioManager>
 
 	public void DisableSkipping() {
 		StartCoroutine(RunDisableSkipping());
+	}
+
+	public void SetInTutorialVoiceOver(bool value)
+	{
+		this.InTutorialLine = value;
 	}
 
 	public void PlayVoiceOverChain(List<EventReference> voiceOverChain) {

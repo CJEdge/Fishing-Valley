@@ -13,7 +13,7 @@ public class FourthTutorialVoiceOver : VoiceOverController
 		switch (this.LevelController.CurrentState) {
 			case LevelController.State.Idle:
 				if (!AllTutorialsCompleted(this.AttatchBaitTutorialsCompleted)) {
-					PlayNextTutotialVoiceOver(this.AttatchBaitTutorialsCompleted, applyBaitTutorials);
+					PlayNextTutorialVoiceOver(this.AttatchBaitTutorialsCompleted, applyBaitTutorials);
 					IncrementTutorial(this.AttatchBaitTutorialsCompleted);
 				}
 				break;
@@ -26,7 +26,7 @@ public class FourthTutorialVoiceOver : VoiceOverController
 				break;
 			case LevelController.State.ReelingFish:
 				if (GameManager.Instance.CurrentFish.IsTutorial || InventoryManager.Instance.TotalOwnedFish < 1) {
-				PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
+				PlayNextTutorialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
 				IncrementTutorial(this.ReelTutorialsCompleted);
 				}
 				break;

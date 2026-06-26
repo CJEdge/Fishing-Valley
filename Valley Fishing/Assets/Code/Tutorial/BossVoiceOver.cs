@@ -28,18 +28,18 @@ public class BossVoiceOver : VoiceOverController
 			case LevelController.State.Idle:
 				InventoryManager.Instance.OwnedBaitTypeDatas[7].quantity = 1;
 				if (!AllTutorialsCompleted(this.AttatchBaitTutorialsCompleted)) {
-					PlayNextTutotialVoiceOver(this.AttatchBaitTutorialsCompleted, applyBaitTutorials);
+					PlayNextTutorialVoiceOver(this.AttatchBaitTutorialsCompleted, applyBaitTutorials);
 					IncrementTutorial(this.AttatchBaitTutorialsCompleted);
 				}
 				break;
 			case LevelController.State.AttatchBait:
 				break;
 			case LevelController.State.IdleWithBait:
-				PlayNextTutotialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
+				PlayNextTutorialVoiceOver(this.CastRodTutorialsCompleted, castRodTutorials);
 				IncrementTutorial(this.CastRodTutorialsCompleted);
 				break;
 			case LevelController.State.ReelingFish:				
-				PlayNextTutotialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
+				PlayNextTutorialVoiceOver(this.ReelTutorialsCompleted, reelTutorials);
 				IncrementTutorial(this.ReelTutorialsCompleted);
 				break;
 			case LevelController.State.FishCaught:

@@ -37,23 +37,27 @@ public class FirstTutorialBaitShop : BaitShop {
 
 	public override void VoiceLineOver(bool skipped) {
 		base.VoiceLineOver(skipped);
+		if(!GameManager.Instance.InputController.enabled)
+		{
+			GameManager.Instance.InputController.enabled = true;
+		}
 		if (InventoryManager.Instance.OwnedBaitTypeDatas[4].quantity == 5 && !baitBoard.Initialized) {
-			PlayNextTutotialVoiceOver(this.BaitboardTutorialsCompleted, baitboardTutorials);
+			PlayNextTutorialVoiceOver(this.BaitboardTutorialsCompleted, baitboardTutorials);
 			IncrementTutorial(this.BaitboardTutorialsCompleted);
 		}
 		if (InventoryManager.Instance.OwnedBaitTypeDatas[4].quantity == 5 && !this.BaitboardTutorialsCompleted[1]) {
-			PlayNextTutotialVoiceOver(this.BaitboardTutorialsCompleted, baitboardTutorials);
+			PlayNextTutorialVoiceOver(this.BaitboardTutorialsCompleted, baitboardTutorials);
 			IncrementTutorial(this.BaitboardTutorialsCompleted);
 		}
 		if (InventoryManager.Instance.TotalOwnedFish > 0 && InventoryManager.Instance.TotalOwnedFish < 9 && fishBoard.Initialized) {
 			if (!this.FishboardTutorialsCompleted[0]) {
-				PlayNextTutotialVoiceOver(this.FishboardTutorialsCompleted, fishboardTutorials);
+				PlayNextTutorialVoiceOver(this.FishboardTutorialsCompleted, fishboardTutorials);
 				IncrementTutorial(this.FishboardTutorialsCompleted);
 			}
 		}
 		if (InventoryManager.Instance.TotalOwnedFish == 0) {
 			if (!FishBoardNotClosedForFirstTime) {
-				PlayNextTutotialVoiceOver(this.FishboardTutorialsCompleted, fishboardTutorials);
+				PlayNextTutorialVoiceOver(this.FishboardTutorialsCompleted, fishboardTutorials);
 				IncrementTutorial(this.FishboardTutorialsCompleted);
 				FishBoardNotClosedForFirstTime = true;
 			}
@@ -82,7 +86,7 @@ public class FirstTutorialBaitShop : BaitShop {
 			leaveShopButton.gameObject.SetActive(false);
 		}
 		lockedFishBoardButton.gameObject.SetActive(false);
-		PlayNextTutotialVoiceOver(this.FishboardTutorialsCompleted,fishboardTutorials);
+		PlayNextTutorialVoiceOver(this.FishboardTutorialsCompleted,fishboardTutorials);
 		IncrementTutorial(this.FishboardTutorialsCompleted);
 	}
 
@@ -95,7 +99,7 @@ public class FirstTutorialBaitShop : BaitShop {
 			GameManager.Instance.InputController.SelectionManuallySet = false;
 		}
 		base.OpenBaitBoard();
-		PlayNextTutotialVoiceOver(this.BaitboardTutorialsCompleted, baitboardTutorials);
+		PlayNextTutorialVoiceOver(this.BaitboardTutorialsCompleted, baitboardTutorials);
 		IncrementTutorial(this.BaitboardTutorialsCompleted);
 	}
 
@@ -103,6 +107,8 @@ public class FirstTutorialBaitShop : BaitShop {
 		yield return StartCoroutine(base.EnterShop(enter));
 		if (enter) {
 			AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.BaitShopIntros[0]);
+			//THE BELOW LINE DOESNT DO WHAT I THINK IT DOES, WE NEED TO DISABLE INPUT
+			GameManager.Instance.InputController.enabled = false;
 		} else {
 			SceneManager.LoadScene(LevelManager.CatchTutorial_01);
 		}

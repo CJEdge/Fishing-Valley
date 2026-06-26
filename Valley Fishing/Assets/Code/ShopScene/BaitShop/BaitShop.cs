@@ -77,6 +77,7 @@ public class BaitShop : Shop {
 	#region Private Methods
 
 	public override void VoiceLineOver(bool skipped) {
+		base.VoiceLineOver(skipped);
 	}
 
 	#endregion
