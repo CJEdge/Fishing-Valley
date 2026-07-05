@@ -13,9 +13,12 @@ public class IcthyologistsFishButton : ButtonVoiceOverComponent {
         GameManager.Instance.ShopController.Icthyologists.HoverFish(index);
 	}
 
-	public override void OnSubmit(BaseEventData eventData) {
-		base.OnSubmit(eventData);
+	public override bool ButtonClicked(bool buttonInteractable) {
+		if (base.ButtonClicked(buttonInteractable)) {
+			return false;
+		}
 		int index = System.Array.IndexOf(fishDatas.Datas, itemDataButton.itemData);
 		GameManager.Instance.ShopController.Icthyologists.SellFish(index);
+		return false;
 	}
 }

@@ -31,8 +31,12 @@ public class BaitShopButton : ButtonVoiceOverComponent {
 		AudioManager.Instance.PlayVoiceOverChain(voiceoverChain);
 	}
 
-	public void OnClick() {
+	public override bool ButtonClicked(bool buttonInteractable) {
+		if (base.ButtonClicked(buttonInteractable)) {
+			return false;
+		}
 		GameManager.Instance.ShopController.BaitShop.BuyBait(baitIndex, sellQuantity);
+		return false;
 	}
 	
 }

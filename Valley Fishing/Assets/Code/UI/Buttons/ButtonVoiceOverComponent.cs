@@ -6,21 +6,6 @@ using UnityEngine.UI;
 
 public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISelectHandler, IMoveHandler, ISubmitHandler 
 {
-	#region States
-
-	public enum ButtonType {
-		None,
-		Play,
-		Settings,
-		MainMenu,
-		LevelBaitButton
-	}
-
-	public ButtonType buttonType;
-
-	#endregion
-
-
 	#region Serialised Fields
 
     [SerializeField] protected EventReference HoverButtonSoundEventReference;
@@ -49,9 +34,6 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 	}
 
 	public virtual void OnSelect(BaseEventData eventData) {
-		if (buttonType == ButtonType.LevelBaitButton) {
-			this.SelectAction?.Invoke();
-		}
 		if (GameManager.Instance.InputController.SelectionManuallySet) {
 			GameManager.Instance.InputController.SelectionManuallySet = false;
 			return;
@@ -62,25 +44,9 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 	}
 
 	public virtual void DoHoverEffect() {
-		switch (buttonType) {
-			case ButtonType.None:
-				if(!HoverButtonSoundEventReference.IsNull)
-				{
-					AudioManager.Instance.PlayVoiceOver(HoverButtonSoundEventReference);
-				}
-				break;
-			case ButtonType.Play:
-				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.MenuPlay);
-				break;
-			case ButtonType.Settings:
-				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.MenuSettings);
-				break;
-			case ButtonType.MainMenu:
-				AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.MainMenu);
-				break;
-			default:
-				break;
-		}
+		if (!HoverButtonSoundEventReference.IsNull) {
+			AudioManager.Instance.PlayVoiceOver(HoverButtonSoundEventReference);
+		}		
 	}
 
 	public void OnMove(AxisEventData eventData) {
@@ -115,6 +81,11 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 	}
 
 	public virtual void OnSubmit(BaseEventData eventData) {
+		Debug.Log(!InputManager.Instance.InputSwitched);
+		ButtonClicked(!InputManager.Instance.InputSwitched);
+	}
 
+	public virtual bool ButtonClicked(bool buttonInteractable) {
+		return buttonInteractable;
 	}
 }

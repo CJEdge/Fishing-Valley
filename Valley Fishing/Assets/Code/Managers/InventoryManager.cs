@@ -57,8 +57,10 @@ public class InventoryManager : Singleton<InventoryManager> {
 	{
         foreach (var fish in OwnedFishTypeDatas)
         {
+			Debug.Log(fish.OwnedItemData.ItemName);
             if(fish.OwnedItemData.ItemName.Equals(fishName))
 			{
+				Debug.Log(fish.quantity);
 				return fish.quantity;
 			}
         }

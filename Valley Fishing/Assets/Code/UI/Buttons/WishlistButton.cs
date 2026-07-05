@@ -1,8 +1,12 @@
 using UnityEngine;
 
-public class WishlistButton : MonoBehaviour
+public class WishlistButton : ButtonVoiceOverComponent
 {
-    public void Wishlist() {
+	public override bool ButtonClicked(bool buttonInteractable) {
+		if (base.ButtonClicked(buttonInteractable)) {
+			return false;
+		}
 		Application.OpenURL("https://store.steampowered.com/app/3702720/Folklore_Fishing/");
+		return false;
 	}
 }

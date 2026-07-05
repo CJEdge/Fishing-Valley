@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ButtonInteractionComponent : MonoBehaviour, ISelectHandler, IDeselectHandler
+public class ButtonInteractionComponent : MonoBehaviour, ISelectHandler, IDeselectHandler, ISubmitHandler
 {
 
 	#region Button Animation
@@ -50,9 +50,6 @@ public class ButtonInteractionComponent : MonoBehaviour, ISelectHandler, IDesele
 	#region Mono Behaviours
 
 	public void Start() {
-		if (button != null) {
-			button.onClick.AddListener(ButtonClicked);
-		}
 		if (startSelected) {
 			OnSelect(null);
 		}
@@ -76,8 +73,7 @@ public class ButtonInteractionComponent : MonoBehaviour, ISelectHandler, IDesele
 	public void OnDestroy() {
 		if (button == null) {
 			return;
-		}
-		button.onClick.RemoveAllListeners();
+		} 
 	}
 
 
@@ -86,7 +82,21 @@ public class ButtonInteractionComponent : MonoBehaviour, ISelectHandler, IDesele
 
 	#region Public Methods
 
+	public void OnSubmit(BaseEventData eventData) {
+		if (clickObject != null) {
+			clickObject.SetActive(!clickObject.activeSelf);
+		}
+		this.Clicked = !this.Clicked;
+		if (ScaleAnimation.ClickCurve.length == 0) {
+			return;
+		}
+		StartCoroutine(PlayClickAnimation());
+	}
+
 	public void OnSelect(BaseEventData eventData) {
+		if (InputManager.Instance.InputSwitched) {
+			return;
+		}
 		if (selectObject != null) {
 			selectObject.SetActive(true);
 		}
@@ -114,17 +124,6 @@ public class ButtonInteractionComponent : MonoBehaviour, ISelectHandler, IDesele
 
 
 	#region Private Methods
-
-	private void ButtonClicked() {
-		if (clickObject != null) {
-			clickObject.SetActive(!clickObject.activeSelf);
-		}
-		this.Clicked = !this.Clicked;
-		if(ScaleAnimation.ClickCurve.length == 0) {
-			return;
-		}
-		StartCoroutine(PlayClickAnimation());
-	}
 
 	private IEnumerator PlayEnableAnimation() {
 		if (ScaleAnimation.EnableCurve.length > 0) {

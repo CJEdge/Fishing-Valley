@@ -186,6 +186,14 @@ public class InputController : AbstractState<InputController.State> {
 		StartCoroutine(SetLastReelInput());
 	}
 
+	public void ReelRightArrow(InputAction.CallbackContext context) {
+
+	}
+
+	public void ReelLeftArrow(InputAction.CallbackContext context) {
+
+	}
+
 	public void MoveHorizontalController(InputAction.CallbackContext context) {
 		this.HorizontalInput = context.ReadValue<Vector2>() * controller.HorizontalSpeed;
 		HadleStrafing();
