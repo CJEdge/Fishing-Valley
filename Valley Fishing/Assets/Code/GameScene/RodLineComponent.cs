@@ -2,41 +2,29 @@ using UnityEngine;
 
 public class RodLineComponent : MonoBehaviour
 {
-	[SerializeField]
-	private Transform startPoint;
+	#region Serialized Fields
 
-	[SerializeField]
-	private int segmentCount = 20;
+	[SerializeField] private Transform startPoint;
+	[SerializeField] private int segmentCount = 20;
+	[SerializeField] private float curveHeight = 2f;
+	[SerializeField] private float peakPosition;
+	[SerializeField] private LineRenderer lineRenderer;
+	[SerializeField] private Vector3 curveDirection = Vector3.right;
+	[SerializeField, Range(0f, 1f)] private float curveAmount = 1f;
 
-	[SerializeField]
-	private float curveHeight = 2f;
+	#endregion
 
-	[SerializeField]
-	private float peakPosition;
 
-	[SerializeField]
-	private LineRenderer lineRenderer;
+	#region Properties
 
-	[SerializeField]
-	private Vector3 curveDirection = Vector3.right;
+	public float CurveAmount { get => curveAmount; set => curveAmount = Mathf.Clamp01(value); }
+	public bool IsStraight { get; set; }
+	public bool IsVisible { get; set; }
 
-	[SerializeField, Range(0f, 1f)]
-	private float curveAmount = 1f;
+	#endregion
 
-	public float CurveAmount {
-		get => curveAmount;
-		set => curveAmount = Mathf.Clamp01(value);
-	}
 
-	public bool IsStraight {
-		get;
-		set;
-	}
-
-	public bool IsVisible {
-		get;
-		set;
-	}
+	#region Mon Behaviours
 
 	public void Start() {
 		GameManager.Instance.LevelController.OnFishSpawned -= AssignToFish;
@@ -49,17 +37,25 @@ public class RodLineComponent : MonoBehaviour
 	}
 
 	public void Update() {
-		if (GameManager.Instance.CurrentFish == null) {
+		if (GameManager.Instance.CurrentFish == null || GameManager.Instance.CurrentFish.Caught) {
 			this.IsVisible = false;
-		} else {
+		}
+		else {
 			this.IsVisible = true;
 		}
 		if (this.IsVisible) {
 			DrawCurve();
-		} else {
+		}
+		else {
 			lineRenderer.enabled = false;
 		}
 	}
+
+
+	#endregion
+
+
+	#region Private Methods
 
 	private void DrawCurve() {
 		lineRenderer.enabled = true;
@@ -107,4 +103,7 @@ public class RodLineComponent : MonoBehaviour
 			lineRenderer.SetPosition(i, blended);
 		}
 	}
+
+	#endregion
+
 }

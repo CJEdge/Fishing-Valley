@@ -51,6 +51,20 @@ MonoBehaviour:
       Data3: -113407324
       Data4: -772827154
     Path: event:/VoiceOver/Captain/FolkloreFishing!
+  ReplayVoiceLine:
+    Guid:
+      Data1: 1001210754
+      Data2: 1276853941
+      Data3: 336968124
+      Data4: 173268719
+    Path: event:/VoiceOver/Narrator/Menus/ReplayVoiceLine
+  SkipVoiceLine:
+    Guid:
+      Data1: -1413926345
+      Data2: 1167231682
+      Data3: 1875658403
+      Data4: -833868703
+    Path: event:/VoiceOver/Narrator/Menus/SkipVoiceLine
   MenuPlay:
     Guid:
       Data1: 421587335
@@ -689,6 +703,13 @@ MonoBehaviour:
       Data3: -565658736
       Data4: 67525630
     Path: event:/SFX/LevelSFX/CorrectSFX
+  CatchSplash:
+    Guid:
+      Data1: -204911619
+      Data2: 1308377120
+      Data3: 275212943
+      Data4: -2005881874
+    Path: event:/SFX/LevelSFX/Catch Sounds/Rod Catch Sound
   FishCatch:
     Guid:
       Data1: -1537860913
@@ -794,6 +815,13 @@ MonoBehaviour:
       Data3: -2119039865
       Data4: -214391883
     Path: event:/SFX/ShopSFX/ShopEnter
+  BaitBoardOpenClose:
+    Guid:
+      Data1: 944131615
+      Data2: 1200731949
+      Data3: -1916424778
+      Data4: -1970939162
+    Path: event:/SFX/ShopSFX/BaitBoardOpenClose
   BaitShopButton:
     Guid:
       Data1: 1706060077

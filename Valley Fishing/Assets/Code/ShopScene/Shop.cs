@@ -74,7 +74,7 @@ public abstract class Shop : MonoBehaviour {
 
     #region Public Methods
 
-    public abstract void VoiceLineOver(EventReference eventReference, bool skipped);
+    public abstract void VoiceLineOver(bool skipped);
 
 	public bool PlayNextTutotialVoiceOver(bool[] tutorialsCompleted, EventReference[] tutorialVoiceLines) {
 		if(tutorialsCompleted == null) {

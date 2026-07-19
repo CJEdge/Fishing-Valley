@@ -35,8 +35,8 @@ public class FirstTutorialBaitShop : BaitShop {
         GameManager.Instance.InputController.SelectButton(lockedFishBoardButton.gameObject);
     }
 
-	public override void VoiceLineOver(EventReference eventReference, bool skipped) {
-		base.VoiceLineOver(eventReference, skipped);
+	public override void VoiceLineOver(bool skipped) {
+		base.VoiceLineOver(skipped);
 		if (InventoryManager.Instance.OwnedBaitTypeDatas[4].quantity == 5 && !baitBoard.Initialized) {
 			PlayNextTutotialVoiceOver(this.BaitboardTutorialsCompleted, baitboardTutorials);
 			IncrementTutorial(this.BaitboardTutorialsCompleted);

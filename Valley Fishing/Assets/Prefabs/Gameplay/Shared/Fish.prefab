@@ -742,10 +742,11 @@ MonoBehaviour:
   strafeAudio: {fileID: 2211003099072869323}
   lineEnd: {fileID: 5132849399768412513}
   unspoolRate: 0.05
+  uiAppearTime: 0.7
   FishData:
-    FishName: Common Carp
-    Sprite: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
-    SellPrice: 1
+    ItemName: 
+    ItemSellPrice: 0
+    ItemImage: {fileID: 0}
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -773,6 +774,7 @@ MonoBehaviour:
         Data3: -1984268899
         Data4: -494359701
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/CommonCarpInfo
+    catchSFX: 0
   <ReelSpeed>k__BackingField: 100
 --- !u!54 &6682323996151832369
 Rigidbody:

@@ -9,6 +9,8 @@ public class FMODManager : Singleton<FMODManager>
 	[Header("MenuVoiceOver")]
 
 	public EventReference MenuGreeting;
+	public EventReference ReplayVoiceLine;
+	public EventReference SkipVoiceLine;
 	public EventReference MenuPlay;
 	public EventReference MenuSettings;
 	public EventReference MainMenu;
@@ -80,6 +82,7 @@ public class FMODManager : Singleton<FMODManager>
 	public EventReference[] BaitSounds;
 	public EventReference[] AttatchBaitSounds;
 	public EventReference CorrectSFX;
+	public EventReference CatchSplash;
 	public EventReference FishCatch;
 	public EventReference BossCatch;
 	public EventReference Unspool;
@@ -98,6 +101,7 @@ public class FMODManager : Singleton<FMODManager>
 	public EventReference NavigationError;
 	public EventReference ClickError;
 	public EventReference ShopEnter;
+	public EventReference BaitBoardOpenClose;
 
 	[Header("ShoreMenuButtons")]
 	public EventReference BaitShopButton;

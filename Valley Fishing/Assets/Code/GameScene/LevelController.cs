@@ -68,8 +68,7 @@ public class LevelController : AbstractState<LevelController.State> {
 			case State.ReelingFish:
 				GameManager.Instance.InputController.SetState(InputController.State.NotReeling);
 				break;
-			case State.FishCaught:
-				GameManager.Instance.InputController.SetState(InputController.State.ReelingLocked);
+			case State.FishCaught:	
 				GameManager.Instance.EventController.FishCaught();
 				this.FishView.EnableFishUI(true);
 				break;
@@ -90,8 +89,6 @@ public class LevelController : AbstractState<LevelController.State> {
 		int fishIndex = 0;
 		float randomValue = UnityEngine.Random.value;
 		float cumulative = 0f;
-		Debug.Log(this.CurrentBait);
-		Debug.Log(this.CurrentBait.FishSpawnChances);
 ;		for (int i = 0; i < this.CurrentBait.FishSpawnChances.Count; i++) {
 			cumulative += this.CurrentBait.FishSpawnChances[i].SpawnChance;
 			if (randomValue < cumulative) {

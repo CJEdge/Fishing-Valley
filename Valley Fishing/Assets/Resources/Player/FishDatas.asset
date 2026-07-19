@@ -354,7 +354,7 @@ MonoBehaviour:
         Data4: -899727657
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/RoachInfo
     catchSFX: 0
-  - ItemName: Llym Lly Salmon
+  - ItemName: Llym Llyw Salmon
     ItemSellPrice: 3
     ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
     IsFailable: 0
@@ -384,4 +384,4 @@ MonoBehaviour:
         Data3: 1512354955
         Data4: -1186297269
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/LLymLlymSalmonInfo
-    catchSFX: 0
+    catchSFX: 1

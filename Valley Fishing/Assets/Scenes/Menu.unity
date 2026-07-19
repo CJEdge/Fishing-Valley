@@ -1545,7 +1545,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b64e1ecfa4b8dc4fae5c109382afdc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 2
   HoverButtonSoundEventReference:
     Guid:
       Data1: 0
@@ -1566,7 +1565,6 @@ GameObject:
   - component: {fileID: 603940067}
   - component: {fileID: 603940066}
   - component: {fileID: 603940065}
-  - component: {fileID: 603940069}
   - component: {fileID: 603940070}
   m_Layer: 5
   m_Name: Play
@@ -1607,6 +1605,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05880924bac352544a27967ee7337503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HoverButtonSoundEventReference:
+    Guid:
+      Data1: -647395532
+      Data2: 1228328780
+      Data3: -547370820
+      Data4: -1273160417
+    Path: event:/VoiceOver/Narrator/Menus/Play
   <LevelToLoad>k__BackingField: 1
 --- !u!114 &603940066
 MonoBehaviour:
@@ -1651,19 +1656,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 603940067}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 603940065}
-        m_TargetAssemblyTypeName: PlayButton, Assembly-CSharp
-        m_MethodName: LoadGameLevel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &603940067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1702,26 +1695,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603940063}
   m_CullTransparentMesh: 1
---- !u!114 &603940069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603940063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b64e1ecfa4b8dc4fae5c109382afdc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonType: 1
-  HoverButtonSoundEventReference:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
 --- !u!114 &603940070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3133,7 +3106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b64e1ecfa4b8dc4fae5c109382afdc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 2
   HoverButtonSoundEventReference:
     Guid:
       Data1: 0
@@ -3843,6 +3815,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2efe742fed2fa5745abf17f397eb3525, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HoverButtonSoundEventReference:
+    Guid:
+      Data1: -1666214807
+      Data2: 1123251471
+      Data3: 248153747
+      Data4: -607383618
+    Path: event:/VoiceOver/Narrator/DemoEndScreen/Wishlist
 --- !u!114 &2024738962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3949,7 +3928,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b64e1ecfa4b8dc4fae5c109382afdc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 0
   HoverButtonSoundEventReference:
     Guid:
       Data1: -1666214807
@@ -4000,19 +3978,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2024738965}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2024738961}
-        m_TargetAssemblyTypeName: WishlistButton, Assembly-CSharp
-        m_MethodName: Wishlist
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2024738965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4157,6 +4123,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2085541159}
   - component: {fileID: 2085541158}
+  - component: {fileID: 2085541160}
   m_Layer: 0
   m_Name: InputController
   m_TagString: Untagged
@@ -4178,8 +4145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <CurrentState>k__BackingField: 0
   clickVibration: {x: 0, y: 0}
-  reelCalculationTime: 0
-  playerInput: {fileID: 0}
+  contrllerReelCalculationTime: 0
+  playerInput: {fileID: 2085541160}
   blurObject: {fileID: 0}
   blackObject: {fileID: 0}
   playerArms: {fileID: 0}
@@ -4211,6 +4178,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2085541160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085541157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &2114180489
 GameObject:
   m_ObjectHideFlags: 0

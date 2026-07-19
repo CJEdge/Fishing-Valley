@@ -13,7 +13,7 @@ public class BossVoiceOver : VoiceOverController
 	public override bool PerformStateSwitch() {
 		switch (this.LevelController.CurrentState) {
 			case LevelController.State.Idle:
-				if(InventoryManager.Instance.TotalOwnedFish == 1) {
+				if(InventoryManager.Instance.GetNumberOfSpecificFish("Llym Llyw Salmon") == 1) {
 					endScreenUI.SetActive(true);
 					InputManager.Instance.SelectButton(initialButton);
 					AudioManager.Instance.PlayVoiceOver(thanksForPlayingEvent[1]);
@@ -51,8 +51,8 @@ public class BossVoiceOver : VoiceOverController
 		return true;
 	}
 
-	public override void VoiceOverFinished(EventReference eventReference, bool skipped) {
-		base.VoiceOverFinished(eventReference, skipped);
+	public override void VoiceOverFinished(bool skipped) {
+		base.VoiceOverFinished(skipped);
 		if (LevelController.CurrentState == LevelController.State.ReelingFish) {
 			GameManager.Instance.InputController.SetState(InputController.State.NotReeling);
 		}

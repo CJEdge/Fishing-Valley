@@ -100,7 +100,7 @@ public class Shore : MonoBehaviour
 		this.CurrentButtonIndex = buttonIndex;
 	}
 
-	public virtual void VoiceLineOver(EventReference eventReference, bool skipped) {
+	public virtual void VoiceLineOver(bool skipped) {
 		if (!gameObject.activeInHierarchy) {
 			return;
 		}

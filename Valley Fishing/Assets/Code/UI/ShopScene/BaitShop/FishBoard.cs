@@ -41,8 +41,7 @@ public class FishBoard : ItemDataButtonGenerator
 			AudioManager.Instance.SetMusicParameter("FishBoardVolume", 1);
 			fishBoardObject.SetActive(true);			
 			for (int i = 0; i < baitshopComponents.Length; i++) {
-				EventReference eventReference = new EventReference();
-				InitiallizeFishBoard(eventReference, false);
+				InitiallizeFishBoard(false);
 			}
 		} else {
 			AudioManager.Instance.SetMusicParameter("FishBoardVolume", 0);
@@ -53,6 +52,7 @@ public class FishBoard : ItemDataButtonGenerator
 			this.Initialized = false;
 			fishBoardObject.SetActive(false);
 		}
+		AudioManager.Instance.PlayOneShot(FMODManager.Instance.BaitBoardOpenClose);
 	}
 
 	#endregion
@@ -60,7 +60,7 @@ public class FishBoard : ItemDataButtonGenerator
 
 	#region Private Methods
 
-	private void InitiallizeFishBoard(EventReference eventReference, bool skipped) {
+	private void InitiallizeFishBoard(bool skipped) {
 		if (!fishBoardObject.activeSelf) {
 			return;
 		}

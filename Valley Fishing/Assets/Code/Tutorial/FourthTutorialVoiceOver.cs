@@ -50,7 +50,7 @@ public class FourthTutorialVoiceOver : VoiceOverController
 		return true;
 	}
 
-	public override void VoiceOverFinished(EventReference eventReference, bool skipped) {
-		base.VoiceOverFinished(eventReference, skipped);
+	public override void VoiceOverFinished(bool skipped) {
+		base.VoiceOverFinished(skipped);
 	}
 }

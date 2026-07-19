@@ -1331,6 +1331,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3632942378419223150, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4378699412491670689, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
       propertyPath: eventSystem
       value: 
@@ -1519,6 +1523,10 @@ PrefabInstance:
     - target: {fileID: 6733652964442507225, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165407761711252546, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
+      propertyPath: contrllerReelCalculationTime
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

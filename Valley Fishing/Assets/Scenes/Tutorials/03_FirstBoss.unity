@@ -1342,6 +1342,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3632942378419223150, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.00012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 3955268219762971401, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1511,73 +1515,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 678207496438668995, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 678207496438668995, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[23].m_ActionId
-      value: 415c6e78-7416-46ef-a1e8-5ba110d0cc89
-      objectReference: {fileID: 0}
-    - target: {fileID: 678207496438668995, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[23].m_ActionName
-      value: 'Player/RT[/XInputControllerWindows/rightTrigger]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 678207496438668995, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[22].m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 678207496438668995, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[23].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 678207496438668995, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[23].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 678207496438668995, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[23].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 678207496438668995, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[23].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 678207496438668995, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[23].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RT
-      objectReference: {fileID: 0}
-    - target: {fileID: 678207496438668995, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[23].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: InputController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 678207496438668995, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[23].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011191726621647169, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.1427
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011191726621647169, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.1496
-      objectReference: {fileID: 0}
-    - target: {fileID: 4636233528580456071, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5794655492895963625, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
       propertyPath: m_Name
       value: '[Gameplay]'
       objectReference: {fileID: 0}
-    - target: {fileID: 6733652964442507225, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 2754001739683791842, guid: 854055ca5fe87dc4981440c052de869d, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 854055ca5fe87dc4981440c052de869d, type: 3}

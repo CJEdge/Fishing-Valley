@@ -55,7 +55,6 @@ public class FishView : MonoBehaviour
 			int randomCaughtTextIndex = Random.Range(0, fishCaughtTexts.Length);
 			fishText.text = fishCaughtTexts[randomCaughtTextIndex] + " " + GameManager.Instance.CurrentFish.FishData.ItemName + "!";
 			fishText.gameObject.SetActive(enable);
-
 			PlayCorrectFishCatchSFX();
         }
 		else {
@@ -71,7 +70,7 @@ public class FishView : MonoBehaviour
 
 	#region Private Methods
 
-	private void DisableUI(EventReference eventReference, bool value) {
+	private void DisableUI(bool value) {
 		DisableFishUI();
 	}
 

@@ -1,4 +1,5 @@
 using FMODUnity;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -22,6 +23,11 @@ public class MainMenuController : MonoBehaviour
 		GameManager.Instance.MainMenuController = this;
 		GameManager.Instance.EventSystem = eventSystem;
 		GameManager.Instance.InputController.SelectButton(initialMenuButton);
+		List<EventReference> voiceOverChain = new List<EventReference>();
+		voiceOverChain.Add(FMODManager.Instance.MenuGreeting);
+		voiceOverChain.Add(FMODManager.Instance.ReplayVoiceLine);
+		voiceOverChain.Add(FMODManager.Instance.SkipVoiceLine);
+		//AudioManager.Instance.PlayVoiceOverChain(voiceOverChain);
 		AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.MenuGreeting);
 		AudioManager.Instance.PlayMusic(menuMusic);
     }

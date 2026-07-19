@@ -1,8 +1,8 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class PlayButton : MonoBehaviour
-{
+public class PlayButton : ButtonVoiceOverComponent {
 	#region Levels
 
 	public enum Level {
@@ -32,7 +32,10 @@ public class PlayButton : MonoBehaviour
 
 	#region Public Methods
 
-	public void LoadGameLevel() {
+	public override bool ButtonClicked(bool buttonInteractable) {
+		if (!buttonInteractable) {
+			return false;
+		}
 		switch (LevelToLoad) {
 			case Level.Menu:
 				SceneManager.LoadScene(LevelManager.Menu);
@@ -59,6 +62,7 @@ public class PlayButton : MonoBehaviour
 			default:
 				break;
 		}
+		return false;
 	}
 
 	#endregion

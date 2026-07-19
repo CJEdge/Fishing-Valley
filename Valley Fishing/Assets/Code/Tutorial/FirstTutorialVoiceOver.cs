@@ -137,7 +137,7 @@ public class FirstTutorialVoiceOver : VoiceOverController
 		}
 		return true;
 	}
-	public override void VoiceOverFinished(EventReference eventReference, bool skipped) {
+	public override void VoiceOverFinished(bool skipped) {
 		if (LevelController.CurrentState == LevelController.State.FishCaught) {
 			if (InventoryManager.Instance.TotalOwnedFish == 8) {
 				SceneManager.LoadScene(LevelManager.ShopTutorial_00);
@@ -151,7 +151,7 @@ public class FirstTutorialVoiceOver : VoiceOverController
 				return;
 			}
 		}
-		base.VoiceOverFinished(eventReference, skipped);
+		base.VoiceOverFinished(skipped);
 		if (LevelController.CurrentState == LevelController.State.ReelingFish) {
 			Debug.Log("here");
 			if (!this.AttatchBaitTutorialsCompleted[0] && this.ReelTutorialsCompleted[4]) {
