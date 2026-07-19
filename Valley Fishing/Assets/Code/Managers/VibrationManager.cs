@@ -11,10 +11,12 @@ public class VibrationManager : Singleton<VibrationManager>
 
     public void Update()
     {
-		if(Gamepad.current == null) {
-			return;
+		if (InputManager.Instance.CurrentDevice is Gamepad) {
+			Gamepad.current.SetMotorSpeeds(this.Vibrations.x, this.Vibrations.y);
 		}
-		Gamepad.current.SetMotorSpeeds(this.Vibrations.x, this.Vibrations.y);
+		else if(Gamepad.current != null) {
+			Gamepad.current.SetMotorSpeeds(0,0);
+		}
     }
 
 	public void OnDestroy() {

@@ -30,6 +30,7 @@ public class Fish : MonoBehaviour
 	[SerializeField] private GameObject strafeAudio;
 	[SerializeField] private Transform lineEnd;
 	[SerializeField] private float unspoolRate;
+	[SerializeField] private float uiAppearTime;
 
 	#endregion
 
@@ -63,8 +64,7 @@ public class Fish : MonoBehaviour
 	public RodLineComponent RodLineComponent { get; set; }
 	[field:SerializeField] public float ReelSpeed { get; set; }
 	public bool HitBySeagull { get; set; }
-
-	private bool Caught { get; set; }
+	public bool Caught { get; set; }
 	public bool HitByFlies { get; set; }
 
 	#endregion
@@ -73,6 +73,9 @@ public class Fish : MonoBehaviour
 	#region Mono Behaviours
 
 	public void Update() {
+		if (this.Caught) {
+			return;
+		}
         HandleCentering();
 		if(this.InputController.ReelLevel > 0) {
 			this.CatchStarted = true;
@@ -91,6 +94,9 @@ public class Fish : MonoBehaviour
 
 
     public void FixedUpdate() {
+		if (this.Caught) {
+			return;
+		}
 		if (this.HitBySeagull) {
 			ReelingSuccesfully(false);
 			return;
@@ -128,18 +134,26 @@ public class Fish : MonoBehaviour
 		}
 		this.Caught = true;
 		AudioManager.Instance.PlayUnspoolSound(false, 0);
-		InventoryManager.Instance.OwnedFishTypeDatas[(System.Array.IndexOf(InventoryManager.Instance.FishDatas.Datas, this.FishData))].quantity++;
-		GameManager.Instance.LevelController.SetState(LevelController.State.FishCaught);
+		InventoryManager.Instance.OwnedFishTypeDatas[(System.Array.IndexOf(InventoryManager.Instance.FishDatas.Datas, this.FishData))].quantity++;		
 		AudioManager.Instance.PlayFishActivitySound(this, 0, true);
+		AudioManager.Instance.PlayOneShot(FMODManager.Instance.CatchSplash);
+		GameManager.Instance.InputController.SetState(InputController.State.ReelingLocked);
 		VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);
 		VibrationManager.Instance.SetVibrationFrequency(false, 0, Mathf.Infinity);
-        Destroy(gameObject);
+		StartCoroutine(SetCaughtFishState());
+		
 	}
 
 	#endregion
 
 
 	#region Private Methods
+
+	private IEnumerator SetCaughtFishState() {
+		yield return new WaitForSeconds(uiAppearTime);
+		GameManager.Instance.LevelController.SetState(LevelController.State.FishCaught);
+		Destroy(gameObject);
+	}
 
 	private void Move() {
         rb.AddForce(this.InputController.HorizontalInput.x * this.FishData.ReelInSpeed, 0, 0);

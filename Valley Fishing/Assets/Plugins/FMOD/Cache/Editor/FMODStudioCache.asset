@@ -805,10 +805,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639170802321874462
+  lastModified: 639195854128396967
   FileSizes:
   - Name: Desktop
-    Value: 2476896
+    Value: 2521408
   Exists: 1
 --- !u!114 &-7354441255615529450
 MonoBehaviour:
@@ -2105,6 +2105,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4526631637521272631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LevelSFX/Catch Sounds/Rod Catch Sound
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LevelSFX/Catch Sounds/Rod Catch Sound
+  Guid:
+    Data1: -204911619
+    Data2: 1308377120
+    Data3: 275212943
+    Data4: -2005881874
+  Banks:
+  - {fileID: -7367136770462161699}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4505621240207751421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3312,7 +3339,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 8090
+  Length: 3375
 --- !u!114 &-1817893054221518694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4449,12 +4476,13 @@ MonoBehaviour:
   - {fileID: 5685669021949755549}
   - {fileID: -4473146229751753029}
   - {fileID: 8052956465241328979}
+  - {fileID: -4526631637521272631}
   EditorParameters: []
   MasterBanks:
   - {fileID: 8145067681192383883}
   StringsBanks:
   - {fileID: 4870658529232763954}
-  cacheTime: 639170802328831224
+  cacheTime: 639195854128396967
   cacheVersion: 131624
 --- !u!114 &35697624734509599
 MonoBehaviour:
@@ -6489,10 +6517,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639164518811942969
+  lastModified: 639194759208311225
   FileSizes:
   - Name: Desktop
-    Value: 9714
+    Value: 9760
   Exists: 1
 --- !u!114 &4886964923200836264
 MonoBehaviour:
@@ -7884,7 +7912,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639164518811901337
+  lastModified: 639194759208281312
   FileSizes:
   - Name: Desktop
     Value: 1340

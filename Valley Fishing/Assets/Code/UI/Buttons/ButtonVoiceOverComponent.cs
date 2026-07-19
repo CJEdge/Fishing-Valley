@@ -81,7 +81,6 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 	}
 
 	public virtual void OnSubmit(BaseEventData eventData) {
-		Debug.Log(!InputManager.Instance.InputSwitched);
 		ButtonClicked(!InputManager.Instance.InputSwitched);
 	}
 

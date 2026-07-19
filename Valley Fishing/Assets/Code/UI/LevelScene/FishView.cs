@@ -55,7 +55,6 @@ public class FishView : MonoBehaviour
 			int randomCaughtTextIndex = Random.Range(0, fishCaughtTexts.Length);
 			fishText.text = fishCaughtTexts[randomCaughtTextIndex] + " " + GameManager.Instance.CurrentFish.FishData.ItemName + "!";
 			fishText.gameObject.SetActive(enable);
-
 			PlayCorrectFishCatchSFX();
         }
 		else {

@@ -703,6 +703,13 @@ MonoBehaviour:
       Data3: -565658736
       Data4: 67525630
     Path: event:/SFX/LevelSFX/CorrectSFX
+  CatchSplash:
+    Guid:
+      Data1: -204911619
+      Data2: 1308377120
+      Data3: 275212943
+      Data4: -2005881874
+    Path: event:/SFX/LevelSFX/Catch Sounds/Rod Catch Sound
   FishCatch:
     Guid:
       Data1: -1537860913
