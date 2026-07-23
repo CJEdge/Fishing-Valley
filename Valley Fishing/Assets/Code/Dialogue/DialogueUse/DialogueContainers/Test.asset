@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 632440f1395265642a70e59b49fbd4a4, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  NodeLinkDatas:
+  - BaseNodeGuid: 9563801c-d501-40a9-9245-2339f5904cb2
+    BasePortName: Output
+    TargetNodeGuid: 226479cd-d6b1-4cec-89db-0fed71f15b46
+    TargetPortName: Input
+  - BaseNodeGuid: ab1b8a2c-93b2-48be-b4c7-619cf8aae4ed
+    BasePortName: Continue
+    TargetNodeGuid: 9f2e6fa5-cee3-4eb3-8380-f1bf7a47bd75
+    TargetPortName: Input
+  - BaseNodeGuid: 226479cd-d6b1-4cec-89db-0fed71f15b46
+    BasePortName: Continue
+    TargetNodeGuid: 00f787b9-fde0-4f8b-b2cb-5da1ced7396e
+    TargetPortName: Input
+  - BaseNodeGuid: 00f787b9-fde0-4f8b-b2cb-5da1ced7396e
+    BasePortName: Continue
+    TargetNodeGuid: ab1b8a2c-93b2-48be-b4c7-619cf8aae4ed
+    TargetPortName: Input
+  DialogueDatas: []
+  NPCDialogueDatas:
+  - NodeGuid: 226479cd-d6b1-4cec-89db-0fed71f15b46
+    Position: {x: 181, y: 254}
+    VoiceEvent:
+      Guid:
+        Data1: 1567598266
+        Data2: 1115362916
+        Data3: -461855609
+        Data4: -1277669855
+      Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/1WelcomeAboard
+    DialogueText:
+      ID:
+        Value: 0
+      GuidID:
+        Value: f6cbe986-c6fa-45c2-a009-46a051dcbc5e
+      Text:
+      - LanguageType: 1
+        LanguageGenericType: welccome aboard
+      - LanguageType: 2
+        LanguageGenericType: 
+      - LanguageType: 3
+        LanguageGenericType: 
+      - LanguageType: 4
+        LanguageGenericType: 
+      - LanguageType: 5
+        LanguageGenericType: 
+      - LanguageType: 6
+        LanguageGenericType: 
+      - LanguageType: 7
+        LanguageGenericType: 
+      - LanguageType: 8
+        LanguageGenericType: 
+      - LanguageType: 9
+        LanguageGenericType: 
+  - NodeGuid: ab1b8a2c-93b2-48be-b4c7-619cf8aae4ed
+    Position: {x: 1024, y: 232}
+    VoiceEvent:
+      Guid:
+        Data1: 1422009774
+        Data2: 1244345562
+        Data3: 526257796
+        Data4: 1042754500
+      Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/2Here,takemyoldrod
+    DialogueText:
+      ID:
+        Value: 0
+      GuidID:
+        Value: 9d87b5db-89d8-4df8-a9c1-4352079eed96
+      Text:
+      - LanguageType: 1
+        LanguageGenericType: test
+      - LanguageType: 2
+        LanguageGenericType: 
+      - LanguageType: 3
+        LanguageGenericType: 
+      - LanguageType: 4
+        LanguageGenericType: 
+      - LanguageType: 5
+        LanguageGenericType: 
+      - LanguageType: 6
+        LanguageGenericType: 
+      - LanguageType: 7
+        LanguageGenericType: 
+      - LanguageType: 8
+        LanguageGenericType: 
+      - LanguageType: 9
+        LanguageGenericType: 
+  ResponceDatas: []
+  EndDatas:
+  - NodeGuid: 9f2e6fa5-cee3-4eb3-8380-f1bf7a47bd75
+    Position: {x: 1405, y: 271}
+    EndNodeType:
+      Value: 1
+  StartDatas:
+  - NodeGuid: 9563801c-d501-40a9-9245-2339f5904cb2
+    Position: {x: 8, y: 247}
+  EventDatas: []
+  ConditionDatas: []
+  BranchDatas: []
+  ChoiceDatas: []
+  ListenDatas:
+  - NodeGuid: 00f787b9-fde0-4f8b-b2cb-5da1ced7396e
+    Position: {x: 563, y: 289}
+    Container_ListenEventSOs:
+    - ListenEventSO: {fileID: 11400000, guid: 56a63408418c1e04a851fcf9a8b6ffe6, type: 2}
