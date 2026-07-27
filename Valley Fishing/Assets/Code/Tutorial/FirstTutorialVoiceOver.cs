@@ -21,6 +21,10 @@ public class FirstTutorialVoiceOver : VoiceOverController
 
 	public void Update() {
 		if (!this.ReelTutorialsCompleted[1]) {
+			if (AudioManager.Instance.VoiceLineInProgress) {
+				this.CurrentPracticeReelTime = 0;
+				return;
+			}
 			if (GameManager.Instance.InputController.ReelLevel > 0) {
 				if (this.CurrentPracticeReelTime < initialPracticeReelTime) {
 					this.CurrentPracticeReelTime += Time.deltaTime;
@@ -153,7 +157,6 @@ public class FirstTutorialVoiceOver : VoiceOverController
 		}
 		base.VoiceOverFinished(skipped);
 		if (LevelController.CurrentState == LevelController.State.ReelingFish) {
-			Debug.Log("here");
 			if (!this.AttatchBaitTutorialsCompleted[0] && this.ReelTutorialsCompleted[4]) {
 				PlayNextTutotialVoiceOver(this.AttatchBaitTutorialsCompleted, applyBaitTutorials);
 				IncrementTutorial(this.AttatchBaitTutorialsCompleted);
@@ -164,6 +167,10 @@ public class FirstTutorialVoiceOver : VoiceOverController
 	}
 
 	private void CountReelInput(int desiredReelLevel) {
+		if (AudioManager.Instance.VoiceLineInProgress) {
+			this.CurrentPracticeReelTime = 0;
+			return;
+		}
 		if (GameManager.Instance.InputController.ReelLevel == desiredReelLevel) {
 			if (this.CurrentPracticeReelTime < reelPracticeTime) {
 				this.CurrentPracticeReelTime += Time.deltaTime;
@@ -183,10 +190,7 @@ public class FirstTutorialVoiceOver : VoiceOverController
 			if (this.CurrentPracticeReelTime < reelFailTime) {
 				this.CurrentPracticeReelTime += Time.deltaTime;
 			} else {
-				if(GameManager.Instance.InputController.ReelLevel < desiredReelLevel) {
-					if (AudioManager.Instance.VoiceLineInProgress) {
-						return;
-					}
+				if (GameManager.Instance.InputController.ReelLevel < desiredReelLevel) {
 					AudioManager.Instance.PlayVoiceOver(tooSlowPrompt);
 				} else {
 					AudioManager.Instance.PlayVoiceOver(tooFastPrompt);

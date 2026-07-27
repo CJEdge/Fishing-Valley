@@ -21,7 +21,7 @@ public class BaitView : MonoBehaviour
 
 	#region Properties
 
-	private int BaitIndex {	get; set; }
+	[field:SerializeField]private int BaitIndex {	get; set; }
 
 	#endregion
 
@@ -58,14 +58,16 @@ public class BaitView : MonoBehaviour
 	}
 
 	public void BaitClicked(int baitIndex) {
+		Debug.Log(baitIndex);
 		AudioManager.Instance.PlayBaitSound(false, 0);
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.AttatchBaitSounds[baitIndex]);
-		InventoryManager.Instance.CurrentBait = InventoryManager.Instance.BaitDatas.baitDatas[baitIndex];
+		InventoryManager.Instance.CurrentBait = InventoryManager.Instance.BaitDatas.Datas[baitIndex];
 		InventoryManager.Instance.OwnedBaitTypeDatas[baitIndex].quantity--;
 		EnableBaitUI(false);
 	}
 
 	#endregion
+
 
 	#region Private Methods
 	
@@ -76,39 +78,40 @@ public class BaitView : MonoBehaviour
 			GameManager.Instance.LevelController.SetState(LevelController.State.IdleWithBait);
 			GameManager.Instance.EventSystem.SetSelectedGameObject(null);
 			yield break;
-		} else {
-			bool allBaitsAreTutorials = true;
-			for (int i = 0; i < InventoryManager.Instance.OwnedBaitTypeDatas.Count; i++) {
-				BaitDatas.BaitData bait = InventoryManager.Instance.OwnedBaitTypeDatas[i].OwnedItemData as BaitDatas.BaitData;
-				if (InventoryManager.Instance.OwnedBaitTypeDatas[i].quantity > 0 && !bait.IsTutorial) {
-					allBaitsAreTutorials = false;
-				}
-			}
-			if (allBaitsAreTutorials) {
-				for (int i = 0; i < InventoryManager.Instance.OwnedBaitTypeDatas.Count; i++) {
-					if (InventoryManager.Instance.OwnedBaitTypeDatas[i].quantity > 0) {
-						BaitClicked(i);
-					}
-				}				
-				yield break;
-			}
+		} 
+		else {
+		//	bool allBaitsAreTutorials = true;
+		//	for (int i = 0; i < InventoryManager.Instance.OwnedBaitTypeDatas.Count; i++) {
+		//		BaitDatas.BaitData bait = InventoryManager.Instance.OwnedBaitTypeDatas[i].OwnedItemData as BaitDatas.BaitData;
+		//		if (InventoryManager.Instance.OwnedBaitTypeDatas[i].quantity > 0 && !bait.IsTutorial) {
+		//			allBaitsAreTutorials = false;
+		//		}
+		//	}
+		//	if (allBaitsAreTutorials) {
+		//		for (int i = 0; i < InventoryManager.Instance.OwnedBaitTypeDatas.Count; i++) {
+		//			if (InventoryManager.Instance.OwnedBaitTypeDatas[i].quantity > 0) {
+		//				BaitClicked(i);
+		//			}
+		//		}				
+		//		yield break;
+		//	}
 			buttonsGameobject.SetActive(enable);
-			bool firstButtonSelected = false;
-			for (int i = 0; i < baitButtons.Length; i++) {
-				baitButtons[i].gameObject.SetActive(false);
-			}
-			for (int i = 0; i < InventoryManager.Instance.OwnedBaitTypeDatas.Count; i++) {
-				if (InventoryManager.Instance.OwnedBaitTypeDatas[i].quantity > 0) {
-					baitButtons[i].gameObject.SetActive(true);
-					if (!firstButtonSelected) {
-						StartCoroutine(SelectButtonAfterOneFrame(baitButtons[i].gameObject));
-						GameManager.Instance.InputController.SelectButton(baitButtons[i].gameObject);
-						firstButtonSelected = true;
-					}
-				}
-			}
+		//	bool firstButtonSelected = false;
+		//	for (int i = 0; i < baitButtons.Length; i++) {
+		//		baitButtons[i].gameObject.SetActive(false);
+		//	}
+		//	for (int i = 0; i < InventoryManager.Instance.OwnedBaitTypeDatas.Count; i++) {
+		//		if (InventoryManager.Instance.OwnedBaitTypeDatas[i].quantity > 0) {
+		//			baitButtons[i].gameObject.SetActive(true);
+		//			if (!firstButtonSelected) {
+		//				StartCoroutine(SelectButtonAfterOneFrame(baitButtons[i].gameObject));
+		//				GameManager.Instance.InputController.SelectButton(baitButtons[i].gameObject);
+		//				firstButtonSelected = true;
+		//			}
+		//		}
+		//	}
 		}
-		GameManager.Instance.InputController.SelectButton(baitButtons[0].gameObject);
+		//GameManager.Instance.InputController.SelectButton(baitButtons[0].gameObject);
 		AudioManager.Instance.PlayBaitSound(false, 0);
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.BaitBoxOpen);
 		StartCoroutine(WaitToOpenBaitBox());

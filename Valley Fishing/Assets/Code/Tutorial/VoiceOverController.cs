@@ -22,17 +22,10 @@ public class VoiceOverController : MonoBehaviour
 	#region Protected Variables
 
 	protected EventInstance CurrentTutorialEventInstance;
-
 	protected bool[] AttatchBaitTutorialsCompleted;
-
-	[field:SerializeField]
-	protected bool[] CastRodTutorialsCompleted;
-
-	[field: SerializeField]
-	protected bool[] ReelTutorialsCompleted;
-
-	[field:SerializeField]
-	protected bool[] CaughtFishTutorialsCompleted;
+	[field:SerializeField] protected bool[] CastRodTutorialsCompleted;
+	[field: SerializeField] protected bool[] ReelTutorialsCompleted;
+	[field:SerializeField] protected bool[] CaughtFishTutorialsCompleted;
 
 	#endregion
 

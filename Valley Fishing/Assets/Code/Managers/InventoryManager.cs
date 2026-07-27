@@ -74,11 +74,11 @@ public class InventoryManager : Singleton<InventoryManager> {
 			fishTypeCatchData.OwnedItemData = this.FishDatas.Datas[i];
             OwnedFishTypeDatas.Add(fishTypeCatchData);
 		}
-		for (int i = 0; i < this.BaitDatas.baitDatas.Length; i++)
+		for (int i = 0; i < this.BaitDatas.Datas.Length; i++)
 		{
             OwnedItemTypeData baitTypeData = new OwnedItemTypeData();
             baitTypeData.quantity = 0;
-            baitTypeData.OwnedItemData = this.BaitDatas.baitDatas[i];
+            baitTypeData.OwnedItemData = this.BaitDatas.Datas[i];
 			OwnedBaitTypeDatas.Add(baitTypeData);
 
         }

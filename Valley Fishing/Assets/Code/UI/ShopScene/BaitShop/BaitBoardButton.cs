@@ -23,7 +23,7 @@ public class BaitBoardButton : ButtonVoiceOverComponent {
 
     public override void DoHoverEffect()
     {
-        int baitValue = InventoryManager.Instance.BaitDatas.baitDatas[baitIndex].ItemSellPrice * sellQuantity;
+        int baitValue = InventoryManager.Instance.BaitDatas.Datas[baitIndex].ItemSellPrice * sellQuantity;
         List<EventReference> voiceoverChain = new List<EventReference>();
         voiceoverChain.Add(FMODManager.Instance.BaitNames[baitIndex]);
         for (int i = 0; i < FMODManager.Instance.GetNumber(baitValue).Count; i++)

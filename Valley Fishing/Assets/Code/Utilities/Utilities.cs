@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public static class Utilities
 {
 	public static void DisableUnusedButtons(List<bool> correspondingEnableList, List<Button> buttons) {
-		for (int i = 0; i < buttons.Count; i++) {
+		for (int i = 0; i < buttons.Count - 1; i++) {
 			if (correspondingEnableList[i]) {
 				buttons[i].gameObject.SetActive(true);
 			} else {
@@ -56,7 +56,7 @@ public static class Utilities
 		}
 		activeButtons.Add((Button) leaveShopButton);
 
-		for (int i = 0; i < activeButtons.Count; i++) {
+		for (int i = 0; i < activeButtons.Count - 1; i++) {
 			Navigation navigation = new Navigation();
 			navigation.mode = Navigation.Mode.Explicit;
 			if (i != 0) {

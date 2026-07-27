@@ -45,7 +45,7 @@ public class Icthyologists : Shop
 		if (!this.Initialized) {
 			for (int i = 0; i < InventoryManager.Instance.OwnedFishTypeDatas.Count; i++) {
 				ItemDataButton buttonInstance = Instantiate(fishButton, buttonParent);
-				buttonInstance.AssignData(InventoryManager.Instance.OwnedFishTypeDatas[i].OwnedItemData);
+				buttonInstance.AssignData(InventoryManager.Instance.OwnedFishTypeDatas[i]);
 				buttonInstance.name = InventoryManager.Instance.OwnedFishTypeDatas[i].OwnedItemData.ItemName;
 				Buttons.Add(buttonInstance.Button);
 			}

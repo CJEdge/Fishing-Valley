@@ -38,7 +38,7 @@ public class BaitButton : MonoBehaviour {
 
 	public void SelectBait() {
 		baitView.BaitSelected(baitIndex);
-		if (!InventoryManager.Instance.BaitDatas.baitDatas[baitIndex].IsTutorial) {
+		if (!InventoryManager.Instance.BaitDatas.Datas[baitIndex].IsTutorial) {
 			if (AudioManager.Instance.VoiceLineInProgress) {
 				return;
 			}

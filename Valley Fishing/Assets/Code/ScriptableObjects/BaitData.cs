@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,5 +16,5 @@ public class BaitDatas : ScriptableObject {
 		public List<FishSpawnChance> FishSpawnChances = new List<FishSpawnChance>();
 	}
 
-	public BaitData[] baitDatas;
+	public BaitData[] Datas;
 }

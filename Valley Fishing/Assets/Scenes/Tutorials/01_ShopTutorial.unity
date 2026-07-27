@@ -237,7 +237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b64e1ecfa4b8dc4fae5c109382afdc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 0
   HoverButtonSoundEventReference:
     Guid:
       Data1: 0
@@ -584,7 +583,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83782efc943219a4aa2d8cf4b8db185e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 0
   HoverButtonSoundEventReference:
     Guid:
       Data1: 0
@@ -595,6 +593,9 @@ MonoBehaviour:
   baitBoard: {fileID: 2075049568}
   baitIndex: 6
   sellQuantity: 5
+  itemImage: {fileID: 0}
+  itemName: {fileID: 0}
+  itemSellPrice: {fileID: 0}
 --- !u!114 &135143684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1198,7 +1199,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b64e1ecfa4b8dc4fae5c109382afdc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 0
   HoverButtonSoundEventReference:
     Guid:
       Data1: 0
@@ -1577,7 +1577,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b64e1ecfa4b8dc4fae5c109382afdc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 0
   HoverButtonSoundEventReference:
     Guid:
       Data1: 0
@@ -2245,7 +2244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33bf0c7662c02b14ba9846d7dda1e935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 0
   HoverButtonSoundEventReference:
     Guid:
       Data1: 0
@@ -2697,7 +2695,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b64e1ecfa4b8dc4fae5c109382afdc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 0
   HoverButtonSoundEventReference:
     Guid:
       Data1: 0
@@ -3215,7 +3212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83782efc943219a4aa2d8cf4b8db185e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 0
   HoverButtonSoundEventReference:
     Guid:
       Data1: 0
@@ -3226,6 +3222,9 @@ MonoBehaviour:
   baitBoard: {fileID: 2075049568}
   baitIndex: 5
   sellQuantity: 5
+  itemImage: {fileID: 0}
+  itemName: {fileID: 0}
+  itemSellPrice: {fileID: 0}
 --- !u!114 &805857696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3682,7 +3681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33bf0c7662c02b14ba9846d7dda1e935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 0
   HoverButtonSoundEventReference:
     Guid:
       Data1: 0
@@ -4326,7 +4324,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33bf0c7662c02b14ba9846d7dda1e935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 0
   HoverButtonSoundEventReference:
     Guid:
       Data1: 0
@@ -5690,7 +5687,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33bf0c7662c02b14ba9846d7dda1e935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 0
   HoverButtonSoundEventReference:
     Guid:
       Data1: 0
@@ -6284,7 +6280,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33bf0c7662c02b14ba9846d7dda1e935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 0
   HoverButtonSoundEventReference:
     Guid:
       Data1: 0
@@ -6630,8 +6625,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2ee5d736c4e70e4db06944604cbb8ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishBoardObject: {fileID: 664993571}
+  itemButton: {fileID: 0}
+  buttonParent: {fileID: 0}
   initialButton: {fileID: 1898949532}
+  leaveShopButton: {fileID: 0}
+  listUsed: 0
+  fishBoardObject: {fileID: 664993571}
   baitshopComponents:
   - {fileID: 70307217}
   - {fileID: 671691904}
@@ -6854,17 +6853,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <CurrentState>k__BackingField: 0
+  lastKeyboardReelInput: 0
   clickVibration: {x: 0.06, y: 0.01}
-  reelCalculationTime: 0
+  contrllerReelCalculationTime: 0
   playerInput: {fileID: 1709173823}
   blurObject: {fileID: 0}
   blackObject: {fileID: 0}
   playerArms: {fileID: 0}
   rodLineComponent: {fileID: 0}
-  mouse:
-    reelStateThresholds:
-    - 8
-    - 40
+  keyboard:
+    reelStateThresholds: []
     HorizontalSpeed: 0
     ReelInput: 0
     ReelSpeed: 0
@@ -7311,7 +7309,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b64e1ecfa4b8dc4fae5c109382afdc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 0
   HoverButtonSoundEventReference:
     Guid:
       Data1: 0

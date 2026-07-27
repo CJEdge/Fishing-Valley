@@ -12,76 +12,85 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05096a27f16d68d469c2de3db90e48cb, type: 3}
   m_Name: BaitDatas
   m_EditorClassIdentifier: 
-  datas:
-  - ItemName: Brown Trout Bait
+  Datas:
+  - ItemName: Worm Bait
+    ItemNameEvent:
+      Guid:
+        Data1: 49789276
+        Data2: 1251480174
+        Data3: 4451746
+        Data4: -1714487945
+      Path: event:/VoiceOver/Narrator/BaitLines/WormBait
     ItemSellPrice: 0
-    ItemImage: {fileID: 21300000, guid: e2cee560b45bbb242bc4e3de37bb237e, type: 3}
+    ItemImage: {fileID: 21300000, guid: 173b29e031601f646b14bed1ac5b6b20, type: 3}
+    ItemQuantity: 0
     IsTutorial: 1
     FishSpawnChances:
     - FishName: 0
       SpawnChance: 1
-    - FishName: 0
-      SpawnChance: 1
-  - ItemName: Common Carp Bait
+  - ItemName: Worm Bait
+    ItemNameEvent:
+      Guid:
+        Data1: 49789276
+        Data2: 1251480174
+        Data3: 4451746
+        Data4: -1714487945
+      Path: event:/VoiceOver/Narrator/BaitLines/WormBait
     ItemSellPrice: 0
-    ItemImage: {fileID: 21300000, guid: e2cee560b45bbb242bc4e3de37bb237e, type: 3}
+    ItemImage: {fileID: 21300000, guid: 173b29e031601f646b14bed1ac5b6b20, type: 3}
+    ItemQuantity: 0
     IsTutorial: 1
     FishSpawnChances:
     - FishName: 1
       SpawnChance: 1
-  - ItemName: Stone Loach Bait
+  - ItemName: Worm Bait
+    ItemNameEvent:
+      Guid:
+        Data1: 49789276
+        Data2: 1251480174
+        Data3: 4451746
+        Data4: -1714487945
+      Path: event:/VoiceOver/Narrator/BaitLines/WormBait
     ItemSellPrice: 0
-    ItemImage: {fileID: 21300000, guid: e2cee560b45bbb242bc4e3de37bb237e, type: 3}
+    ItemImage: {fileID: 21300000, guid: 173b29e031601f646b14bed1ac5b6b20, type: 3}
+    ItemQuantity: 0
     IsTutorial: 1
     FishSpawnChances:
     - FishName: 2
       SpawnChance: 1
   - ItemName: Worm Bait
+    ItemNameEvent:
+      Guid:
+        Data1: 49789276
+        Data2: 1251480174
+        Data3: 4451746
+        Data4: -1714487945
+      Path: event:/VoiceOver/Narrator/BaitLines/WormBait
     ItemSellPrice: 0
-    ItemImage: {fileID: 21300000, guid: e2cee560b45bbb242bc4e3de37bb237e, type: 3}
-    IsTutorial: 0
+    ItemImage: {fileID: 21300000, guid: 173b29e031601f646b14bed1ac5b6b20, type: 3}
+    ItemQuantity: 0
+    IsTutorial: 1
     FishSpawnChances:
     - FishName: 0
-      SpawnChance: 0.34
+      SpawnChance: 0.33
     - FishName: 1
       SpawnChance: 0.33
     - FishName: 2
-      SpawnChance: 0.33
+      SpawnChance: 0.34
   - ItemName: Cricket Bait
-    ItemSellPrice: 1
-    ItemImage: {fileID: 21300000, guid: e2cee560b45bbb242bc4e3de37bb237e, type: 3}
-    IsTutorial: 0
+    ItemNameEvent:
+      Guid:
+        Data1: -405547891
+        Data2: 1105749996
+        Data3: -304369528
+        Data4: 2045004071
+      Path: event:/VoiceOver/Narrator/BaitLines/CricketBait
+    ItemSellPrice: 5
+    ItemImage: {fileID: 21300000, guid: 740693aaf7561694eb4134fa998e79c4, type: 3}
+    ItemQuantity: 0
+    IsTutorial: 1
     FishSpawnChances:
     - FishName: 3
       SpawnChance: 0.5
     - FishName: 4
       SpawnChance: 0.5
-  - ItemName: Leech Bait
-    ItemSellPrice: 2
-    ItemImage: {fileID: 21300000, guid: e2cee560b45bbb242bc4e3de37bb237e, type: 3}
-    IsTutorial: 0
-    FishSpawnChances:
-    - FishName: 5
-      SpawnChance: 0.33
-    - FishName: 6
-      SpawnChance: 0.33
-    - FishName: 7
-      SpawnChance: 0.34
-  - ItemName: Muscle Bait
-    ItemSellPrice: 2
-    ItemImage: {fileID: 21300000, guid: e2cee560b45bbb242bc4e3de37bb237e, type: 3}
-    IsTutorial: 0
-    FishSpawnChances:
-    - FishName: 8
-      SpawnChance: 0.33
-    - FishName: 9
-      SpawnChance: 0.33
-    - FishName: 10
-      SpawnChance: 0.34
-  - ItemName: Llyn Llyn Bait
-    ItemSellPrice: 0
-    ItemImage: {fileID: 21300000, guid: e2cee560b45bbb242bc4e3de37bb237e, type: 3}
-    IsTutorial: 0
-    FishSpawnChances:
-    - FishName: 11
-      SpawnChance: 1

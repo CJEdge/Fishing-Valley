@@ -204,6 +204,10 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8761951626391674412, guid: 8dc265e4d2d7e0d479dbbf6705714bf2, type: 3}
+      propertyPath: contrllerReelCalculationTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761951626391674412, guid: 8dc265e4d2d7e0d479dbbf6705714bf2, type: 3}
       propertyPath: keyboard.reelStateThresholds.Array.size
       value: 3
       objectReference: {fileID: 0}

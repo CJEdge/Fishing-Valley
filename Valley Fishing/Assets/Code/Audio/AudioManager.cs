@@ -26,7 +26,7 @@ public class AudioManager : Singleton<AudioManager>
 	private List<EventInstance> SFXEventInstances {	get; set; } = new List<EventInstance>();
     public Action<bool> OnVoiceLineOver { get; set; }
 	public Action OnVoiceLineStarted { get; set; }
-	public bool VoiceLineInProgress { get; set;	}
+	[field: SerializeField] public bool VoiceLineInProgress { get; set;	}
 	public List<EventReference> VoiceOverChain { get; set; } = new List<EventReference>();
 	public int VoiceOverChainPosition {	get; set; }
 	[field:SerializeField] public bool InVoiceOverChain { get; set;	}
@@ -62,6 +62,7 @@ public class AudioManager : Singleton<AudioManager>
 	}
 
 	public void PlayBaitSound(bool play, int index) {
+		Debug.Log(index);
 		if (play) {
 			this.BaitEventInstance = CreateSFXInstance(FMODManager.Instance.BaitSounds[index]);
 			this.BaitEventInstance.start();
@@ -185,6 +186,9 @@ public class AudioManager : Singleton<AudioManager>
 	public void PlayFishActivitySound(Fish fish, int activityLevel, bool play) {
 		this.FishActivityLevelInstance = fish.ActivitySplashSFX;
 		this.FishActivityLevelInstance.SetParameter("ActivityLevel", activityLevel);
+		if (this.FishActivityLevelInstance.IsPlaying()) {
+			StartCoroutine(RunQuietReelSound());
+		}
 		if (play && !this.FishActivityLevelInstance.IsPlaying()) {
 			this.FishActivityLevelInstance.Play();
 		} else if(!play) {
@@ -276,9 +280,11 @@ public class AudioManager : Singleton<AudioManager>
 	}
 
 	private IEnumerator WaitForVoiceLineEnd() {
+		this.CurrentReelInstance.setVolume(0.25f);
 		PLAYBACK_STATE playbackState;
 		while (true) {			
 			if (!this.VoiceLineEventInstance.isValid()) {
+				this.CurrentReelInstance.setVolume(1f);
 				this.VoiceLineInProgress = false;
 				yield break;
 			}
@@ -295,12 +301,9 @@ public class AudioManager : Singleton<AudioManager>
 
 			yield return null;
 		}
-
 		this.VoiceLineEventInstance.release();
 		this.VoiceLineEventInstance.clearHandle();
-
-		this.VoiceLineInProgress = false;
-
+		this.CurrentReelInstance.setVolume(1f);
 		if (this.InVoiceOverChain) {
 			this.VoiceOverChainPosition++;
 			if (this.VoiceOverChainPosition < this.VoiceOverChain.Count) {
@@ -315,6 +318,7 @@ public class AudioManager : Singleton<AudioManager>
 		} else {
 			if (!this.Paused) {
 				this.OnVoiceLineOver?.Invoke(false);
+				this.VoiceLineInProgress = false;
 			}
 		}
 	}
@@ -323,6 +327,12 @@ public class AudioManager : Singleton<AudioManager>
 		this.CanSkip = false;
 		yield return new WaitForEndOfFrame();
 		this.CanSkip = true;
+	}
+
+	private IEnumerator RunQuietReelSound() {
+		this.CurrentReelInstance.setVolume(0.25f);
+		yield return new WaitForSeconds(0.2f);
+		this.CurrentReelInstance.setVolume(1f);
 	}
 
 	public void PlayMusic(EventReference musicReference) {
