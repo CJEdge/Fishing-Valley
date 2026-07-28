@@ -885,6 +885,7 @@ MonoBehaviour:
   baitButtons: []
   buttonMoveTime: 0.1
   baitBoxOpeningTime: 0
+  <BaitIndex>k__BackingField: 0
 --- !u!1 &1531050889209216032
 GameObject:
   m_ObjectHideFlags: 0
@@ -4975,11 +4976,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9f3ad90b4504b141b3f4f173fc152dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemButton: {fileID: 4867928617280849124, guid: 56386c2720357f14f943ef8c19323f51, type: 3}
+  itemButton: {fileID: 4867928617280849124, guid: b273168ea8c5bc846a5038a82ac85516, type: 3}
   buttonParent: {fileID: 7066979999804064706}
   initialButton: {fileID: 0}
   leaveShopButton: {fileID: 0}
   listUsed: 1
+  navigationType: 0
+  ItemDataButtons: []
+  Buttons: []
 --- !u!1 &7171147847660244922
 GameObject:
   m_ObjectHideFlags: 0
@@ -5175,7 +5179,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5432508444583580248

@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public static class Utilities
 {
 	public static void DisableUnusedButtons(List<bool> correspondingEnableList, List<Button> buttons) {
-		for (int i = 0; i < buttons.Count - 1; i++) {
+		for (int i = 0; i < buttons.Count; i++) {
 			if (correspondingEnableList[i]) {
+				Debug.Log(buttons[i]);
 				buttons[i].gameObject.SetActive(true);
 			} else {
+				Debug.Log(buttons[i]);
 				buttons[i].gameObject.SetActive(false);
 			}
 		}

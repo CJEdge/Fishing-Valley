@@ -14,6 +14,11 @@ public class ItemDataButtonGenerator : MonoBehaviour
         Junk
     }
 
+	enum NavigationType {
+		Horizontal,
+		Vertical
+	}
+
     #endregion
 
 
@@ -24,6 +29,7 @@ public class ItemDataButtonGenerator : MonoBehaviour
     [SerializeField] private Button initialButton;
     [SerializeField] private Button leaveShopButton;
     [SerializeField] private ListUsed listUsed = ListUsed.Fish;
+	[SerializeField] private NavigationType navigationType;
 
 	#endregion
 
@@ -65,6 +71,8 @@ public class ItemDataButtonGenerator : MonoBehaviour
         List<bool> buttonsToEnable = new List<bool>();
         for (int i = 0; i < chosenList.Count; i++) {
             if (chosenList[i].quantity > 0) {
+				Debug.Log(chosenList[i].quantity);
+				Debug.Log(chosenList[i].OwnedItemData.ItemName);
                 buttonsToEnable.Add(true);
             }
             else
@@ -91,8 +99,16 @@ public class ItemDataButtonGenerator : MonoBehaviour
 				this.ItemDataButtons[i].AssignData(chosenList[i]);
 			}
 		}
-        Utilities.DisableUnusedButtons(buttonsToEnable, this.Buttons);
-        Utilities.LinkVerticalButtons(this.Buttons, leaveShopButton);
+		for (int i = 0; i < buttonsToEnable.Count; i++) {
+			Debug.Log(buttonsToEnable[i]);
+		}
+			Utilities.DisableUnusedButtons(buttonsToEnable, this.Buttons);
+		if (navigationType == NavigationType.Horizontal) {
+			Utilities.LinkHorizontalButtons(this.Buttons, leaveShopButton);
+		}
+		else {
+			Utilities.LinkVerticalButtons(this.Buttons, leaveShopButton);
+		}
         if (leaveShopButton != null)
         {
             leaveShopButton.transform.SetAsLastSibling();
