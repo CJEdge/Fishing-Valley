@@ -66,8 +66,8 @@
 			<destination>{f269d4ea-5ee0-47e4-bc4e-d56dae296bb5}</destination>
 			<destination>{9b7ebd81-1193-43c0-b974-94a8f6c38340}</destination>
 			<destination>{7f896ea2-ed2f-465f-be18-0e5b4d9db55b}</destination>
-			<destination>{479ef4a2-bc09-4cab-bdae-dd972d50329c}</destination>
 			<destination>{26defe5a-8d1f-4c0c-a5e9-b557439fb56a}</destination>
+			<destination>{dd60531b-b05e-4d0e-ad51-f3b350ae474c}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{65a76ff3-2547-43f0-842e-413cdc48fb9f}</destination>
@@ -83,8 +83,8 @@
 			<destination>{f269d4ea-5ee0-47e4-bc4e-d56dae296bb5}</destination>
 			<destination>{9b7ebd81-1193-43c0-b974-94a8f6c38340}</destination>
 			<destination>{7f896ea2-ed2f-465f-be18-0e5b4d9db55b}</destination>
-			<destination>{479ef4a2-bc09-4cab-bdae-dd972d50329c}</destination>
 			<destination>{26defe5a-8d1f-4c0c-a5e9-b557439fb56a}</destination>
+			<destination>{dd60531b-b05e-4d0e-ad51-f3b350ae474c}</destination>
 		</relationship>
 		<relationship name="preset">
 			<destination>{2c9a9bb5-adcd-4ce7-8026-5c92b5e4d926}</destination>
@@ -128,20 +128,20 @@
 			<destination>{76787341-43fd-4e86-9e7c-9f62ee32a15e}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{479ef4a2-bc09-4cab-bdae-dd972d50329c}">
-		<property name="start">
-			<value>3</value>
-		</property>
-		<relationship name="audioFile">
-			<destination>{76787341-43fd-4e86-9e7c-9f62ee32a15e}</destination>
-		</relationship>
-	</object>
 	<object class="SingleSound" id="{26defe5a-8d1f-4c0c-a5e9-b557439fb56a}">
 		<property name="start">
 			<value>4</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{76787341-43fd-4e86-9e7c-9f62ee32a15e}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{dd60531b-b05e-4d0e-ad51-f3b350ae474c}">
+		<property name="start">
+			<value>3</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{47fa6892-fe3a-45c9-a007-8d6e71801076}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{65a76ff3-2547-43f0-842e-413cdc48fb9f}">
