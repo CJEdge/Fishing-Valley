@@ -2813,7 +2813,7 @@ MonoBehaviour:
     Data4: 1042754500
   Banks:
   - {fileID: 2197604407405510459}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
@@ -3359,7 +3359,7 @@ MonoBehaviour:
     Data4: -1936340460
   Banks:
   - {fileID: 2197604407405510459}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
@@ -4530,7 +4530,7 @@ MonoBehaviour:
   - {fileID: -6716361391410530883}
   StringsBanks:
   - {fileID: 7888339581714095944}
-  cacheTime: 639195854128396967
+  cacheTime: 639208633888120155
   cacheVersion: 131624
 --- !u!114 &160373513521069307
 MonoBehaviour:
@@ -5351,10 +5351,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/VoiceLines.bank
   Name: VoiceLines
   StudioPath: bank:/VoiceLines
-  lastModified: 639170802328831224
+  lastModified: 639208633888120155
   FileSizes:
   - Name: Desktop
-    Value: 8273472
+    Value: 10006912
   Exists: 1
 --- !u!114 &2239498554853499246
 MonoBehaviour:
@@ -5640,7 +5640,7 @@ MonoBehaviour:
     Data4: -957246452
   Banks:
   - {fileID: 2197604407405510459}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:

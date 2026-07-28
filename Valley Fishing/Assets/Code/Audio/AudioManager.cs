@@ -62,7 +62,6 @@ public class AudioManager : Singleton<AudioManager>
 	}
 
 	public void PlayBaitSound(bool play, int index) {
-		Debug.Log(index);
 		if (play) {
 			this.BaitEventInstance = CreateSFXInstance(FMODManager.Instance.BaitSounds[index]);
 			this.BaitEventInstance.start();
@@ -105,28 +104,23 @@ public class AudioManager : Singleton<AudioManager>
 			this.VoiceLineEventInstance.release();
 			this.VoiceLineEventInstance.clearHandle();
 		}
-		this.VoiceLineEventInstance = CreateSFXInstance(voiceLineReference);	
-		if (Gamepad.current != null)
-		{
-			if (Gamepad.current.layout == "XInputController" || Gamepad.current.layout == "XInputControllerWindows" || Gamepad.current.layout == "XboxGamepadMacOS" || Gamepad.current.layout == "XboxOneGamepadMacOSWireless" || Gamepad.current.layout == "XboxOneGamepadiOS")
+		this.VoiceLineEventInstance = CreateSFXInstance(voiceLineReference);
+		if (InputManager.Instance.CurrentDevice is Gamepad) {
 			{
-				this.VoiceLineEventInstance.setParameterByName("ControlScheme", 0);
-			}
-			else if (Gamepad.current.layout == "DualShock3GamepadHID" || Gamepad.current.layout == "DualShock4GamepadHID" || Gamepad.current.layout == "DualShock4GamepadiOS" || Gamepad.current.layout == "DualSenseGamepadHID")
-			{
-				//this.VoiceLineEventInstance.setParameterByName("ControlScheme", 1);
-				//this doesnt work and makes the game break when using dualshock
-				this.VoiceLineEventInstance.setParameterByName("ControlScheme", 0);
-			}
-			else if (Gamepad.current.layout == "SwitchProControllerHID")
-			{
-				this.VoiceLineEventInstance.setParameterByName("ControlScheme", 1);
+				Gamepad gamepad = InputManager.Instance.CurrentDevice as Gamepad;
+				if (gamepad.layout == "XInputController" || gamepad.layout == "XInputControllerWindows" || gamepad.layout == "XboxGamepadMacOS" || gamepad.layout == "XboxOneGamepadMacOSWireless" || gamepad.layout == "XboxOneGamepadiOS") {
+					this.VoiceLineEventInstance.setParameterByName("ControlScheme", 0);
+				}
+				else if (gamepad.layout == "DualShock3GamepadHID" || gamepad.layout == "DualShock4GamepadHID" || gamepad.layout == "DualShock4GamepadiOS" || gamepad.layout == "DualSenseGamepadHID") {
+					this.VoiceLineEventInstance.setParameterByName("ControlScheme", 1);
+				}
+				else if (Gamepad.current.layout == "SwitchProControllerHID") {
+					this.VoiceLineEventInstance.setParameterByName("ControlScheme", 2);
+				}
 			}
 		}
-		else
-		{
-			//default if no controller is detected
-            this.VoiceLineEventInstance.setParameterByName("ControlScheme", 0);
+		if(InputManager.Instance.CurrentDevice is Keyboard) {
+            this.VoiceLineEventInstance.setParameterByName("ControlScheme", 3);
         }
 
 		this.VoiceLineEventInstance.start();
